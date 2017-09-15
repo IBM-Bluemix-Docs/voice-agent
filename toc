@@ -1,0 +1,32 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="voice-agent" audience="service" href="/docs/services/voice-agent/getting-started.html"}
+IBM Voice Agent with Watson
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    about.md
+    [Voice Agent with Watson samples](https://github.com/WASdev/sample.voice.gateway){: new_window}
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [IBM Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/welcome_voicegateway.html){: new_window}
+
+    {: .topicgroup}
+    Watson services
+        [Conversation](https://console.bluemix.net/docs/services/conversation/index.htmll){: new_window}
+        [Speech to Text](https://console.bluemix.net/docs/services/speech-to-text/index.html){: new_window}
+        [Text to Speech](https://console.bluemix.net/docs/services/text-to-speech/index.html){: new_window}
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    creating.md
+    managing.md
+    api.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    troubleshooting.md
+    limitations.md
+    {: .navgroup-end}
