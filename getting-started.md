@@ -58,21 +58,22 @@ This experimental release was tested with a Twilio&reg; SIP trunk.
 
 Create Watson service instances.
 
-1. Create each of the following Watson services: [Watson {{site.data.keyword.speechtotextshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/services/speech-to-text/), [Watson {{site.data.keyword.texttospeechshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/services/text-to-speech/), and [Watson {{site.data.keyword.conversationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/services/conversation/).
+1. Create each of the following Watson services: [{{site.data.keyword.speechtotextshort}}](https://console.bluemix.net/catalog/services/speech-to-text), [{{site.data.keyword.texttospeechshort}}](https://console.bluemix.net/catalog/services/text-to-speech), and [{{site.data.keyword.conversationshort}}](https://console.bluemix.net/catalog/services/conversation).
 
-   1. Click **Catalog** on the navigation bar.
-   2. Under **Watson**, search for the service.
-   3. Choose your pricing plan.
-   4. Click **Create**.
+   1. In the [{{site.data.keyword.Bluemix_notm}} catalog](https://console.bluemix.net/catalog/){: new_window}, go to the **Watson** category and select the service.
+   2. Choose your pricing plan.
+   3. Click **Create**.
 
    **Note:** If you already created these services, you can use your existing service instances to set up {{site.data.keyword.iva_short}}.
 
 2. Add a dialog to your Watson {{site.data.keyword.conversationshort}} service.
 
-   After you create the Watson {{site.data.keyword.conversationshort}} service, add a dialog so that you can test your voice agent. You can [build your own dialog](https://console.bluemix.net/docs/services/conversation/dialog-build.html) to simulate your production environment. Or, to quickly get started, clone the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub and then [import the sample](https://console.bluemix.net/docs/services/conversation/configure-workspace.html#creating-workspaces) as a workspace:
+   After you create the Watson {{site.data.keyword.conversationshort}} service, add a dialog so that you can test your voice agent.  To quickly get started, clone the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub and then [import the sample](https://console.bluemix.net/docs/services/conversation/configure-workspace.html#creating-workspaces) as a workspace:
 
    1. On the sample conversation GitHub page, click the `1` line number and select **... > Copy line**. Paste the copied text into a file, and save it as a JSON file such as `voice-gateway-conversation-en.json`.
    2. Launch the {{site.data.keyword.conversationshort}} tool. On the Workspaces page, click the ![Import workspace](../conversation/images/workspace_import.png) icon and import the JSON file.
+
+  Alternatively, you can [build your own dialog](https://console.bluemix.net/docs/services/conversation/dialog-build.html) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and node with a default response.
 
 ## Step 4: Create and configure your voice agent
 {: #step4}
