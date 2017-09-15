@@ -25,7 +25,7 @@ Create a [{{site.data.keyword.Bluemix_short}} account](https://console.bluemix.n
 ## Step 1: Create a {{site.data.keyword.iva_short}} service instance on {{site.data.keyword.Bluemix_notm}}
 {: #step1}
 
-From the [{{site.data.keyword.iva_short}} catalog page](https://console.bluemix.net/catalog/services/voice-agent-with-watson), review the service information, and then click **Create**.
+From the [{{site.data.keyword.iva_short}} catalog page](https://console.bluemix.net/catalog/services/ibm-voice-agent-with-watson), review the service information, and then click **Create**.
 
 After you create the service, make note of the voice agent endpoint on the _Getting started_ page. You need the endpoint SIP URI to configure your SIP trunk.
 
