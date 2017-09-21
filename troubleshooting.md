@@ -23,8 +23,8 @@ Having trouble with {{site.data.keyword.iva_full}}? Review the troubleshooting t
 {: #help}
 
 If you need help, join our developer community by posting your questions or comments to any of the following places, which are all actively monitored:
-* Post on the [dwAnswers forum ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/voice_agent/) with the `voice_agent` tag
-* Post on [StackOverflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/tagged/voice_agent){: new_window} with the `voice_agent` tag
+* Post on the [dwAnswers forum ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/voice-agent/) with the `voice-agent` tag
+* Post on [StackOverflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/tagged/voice-agent){: new_window} with the `voice-agent` tag
 * Find us on Slack in the [IBM Cloud Technology ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W1559b1be149d_43b0_881e_9783f38faaff/page/Slack%20channel%20%28IBM%20Cloud%20technology%29%20sign%20up%20page) team under the `#ibmvoicegateway` channel
 
 ## Troubleshooting tips
@@ -36,7 +36,7 @@ Your call likely didn't connect to the services. This problem occurs when the {{
 
 * Verify that the phone number on the voice agent _Manage_ page is the same phone number from Twilio.
 
-   **Note:** Phone numbers from Twilio include a country code such as `+1`. Include the country code when you specify the phone number on the voice agent _Manage_ page; for example: `18884253968`.
+   **Note:** Phone numbers from Twilio include a country code such as `+1`. Include the country and area code when you specify the phone number on the voice agent _Manage_ page; for example: `18884253968`.
 * Verify that the Watson service credentials, URLs, and the {{site.data.keyword.conversationshort}} workspace ID are all valid.
 * Verify that the dialog in your {{site.data.keyword.conversationshort}} workspace was created correctly.
   * You can import the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub for a pre-built workspace. See [Step 3 in *Getting started tutorial*](getting-started.html#step3) for details on how to save the sample conversation as a JSON file and then import the file as a workspace in the {{site.data.keyword.conversationshort}} tool.
@@ -45,4 +45,4 @@ Your call likely didn't connect to the services. This problem occurs when the {{
 
 ### Why can't I specify a phone number when I create a voice agent?
 
-See if the phone number you specified is used by an existing voice agent. You can have only one voice agent for a phone number. You can provision another phone number from Twilio and use it to create another voice agent. Or [delete the existing voice agent on the _Manage_ page](manage.html#delete_instance) to free up the phone number and then create a new voice agent.
+See if the phone number you specified is used by an existing voice agent. You can have only one voice agent for a phone number. You can provision another phone number from Twilio and use it to create another voice agent. Or [delete the existing voice agent on the _Manage_ page](managing.html#delete_instance) to free up the phone number and then create a new voice agent.

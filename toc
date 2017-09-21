@@ -15,7 +15,7 @@ IBM Voice Agent with Watson
 
     {: .topicgroup}
     Watson services
-        [Conversation](https://console.bluemix.net/docs/services/conversation/index.htmll){: new_window}
+        [Conversation](https://console.bluemix.net/docs/services/conversation/index.html){: new_window}
         [Speech to Text](https://console.bluemix.net/docs/services/speech-to-text/index.html){: new_window}
         [Text to Speech](https://console.bluemix.net/docs/services/text-to-speech/index.html){: new_window}
     {: .navgroup-end}
