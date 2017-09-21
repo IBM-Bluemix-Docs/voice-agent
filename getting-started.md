@@ -32,7 +32,7 @@ After you create the service, make note of the voice agent endpoint on the _Gett
 ## Step 2: Set up a SIP trunk to forward calls to {{site.data.keyword.iva_short}}
 {: #step2}
 
-This experimental release was tested with a Twilio&reg; SIP trunk.
+This experimental release was tested with a [Twilio&reg; ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.twilio.com/){: new_window} SIP trunk.
 
 1. Create an account on the [Twilio website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.twilio.com/try-twilio){: new_window}.
 
@@ -81,7 +81,7 @@ Create Watson service instances.
 1. Go to the _Manage_ page on the {{site.data.keyword.iva_short}} dashboard, and click **Add a Voice Agent**.
 2. Enter the basic settings for your voice agent:
   * **Name:** An optional unique name for your voice agent, such as `Customer Support`
-  * **Phone number:** The phone number that you associated with your SIP trunk
+  * **Phone number:** The full phone number that you associated with your SIP trunk, including the country and area codes
   * **Description:** An optional description of its use
 3. For each Watson service, review the default credentials and configuration options, and change any values as needed.
 

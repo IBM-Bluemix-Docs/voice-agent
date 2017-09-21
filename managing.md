@@ -28,7 +28,7 @@ You can add, edit, and remove voice agents on the _Manage_ page.
 
 3. Optionally, for **Name**, specify a unique name for your voice agent. For example, `Customer Support - North America`.
 
-4. For **Phone number**, add the number from your SIP trunk. For example, a United States 800 number uses the `18883334444` format. The phone number can have spaces and `+ ( ) -` characters.
+4. For **Phone number**, add the number from your SIP trunk, including the country and area codes. For example, for a United States 800 number, specify the phone number as `18883334444`. The phone number can have spaces and `+ ( ) -` characters.
 
 5. Optionally, describe your voice agent.
 
