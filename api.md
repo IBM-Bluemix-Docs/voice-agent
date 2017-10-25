@@ -16,10 +16,10 @@ lastupdated: "2017-09-06"
 # Programming voice agents using the API
 {: #api}
 
-You can control the behavior of {{site.data.keyword.iva_full}} by defining action tags and state variables from within the {{site.data.keyword.conversationfull}} service. Action tags initiate one-time actions in your voice agent from the dialog node where they're defined. In contrast, state variables change the voice agent state, and it persists throughout the conversation unless otherwise changed.
+You can control the behavior of your voice agent by defining action tags and state variables from within the {{site.data.keyword.conversationfull}} service. Action tags initiate actions that your voice agent takes during a conversation session, and state variables define voice agent characteristics that persist throughout the conversation unless otherwise changed.
 {: shortdesc}
 
-Because {{site.data.keyword.iva_short}} is based on IBM Voice Gateway, the API works the same way. If you're familiar with Voice Gateway, you can use the same actions and state variables in your {{site.data.keyword.conversationshort}} dialogs with {{site.data.keyword.iva_short}}, subject to the [limitations](limitations.html) for this release.
+Because {{site.data.keyword.iva_full}} is based on IBM Voice Gateway, the API works the same way. If you're familiar with Voice Gateway, you can use the same actions and state variables in your {{site.data.keyword.conversationshort}} dialogs with {{site.data.keyword.iva_short}}, subject to the [limitations](limitations.html) for this release.
 {: tip}
 
 ## Editing JSON in the dialog response
@@ -38,9 +38,7 @@ Within the JSON editor, you can define actions on the `output` property and stat
 ## Initiating actions
 {: #defining-actions}
 
-To initiate actions in the voice agent during a call, you can define action tags on a {{site.data.keyword.conversationshort}} dialog node in JSON format on the `output` property. Actions apply only on the node on which they're defined, rather than persisting in subsequent conversation turns.
-
-You can define either a single action on the `vgwAction` tag or a sequence of actions on the `vgwActionSequence` tag. Each action consists of a `command` property, followed by an optional `parameter` property to define attributes for commands that require them.
+To initiate actions in the voice agent during a call, you can define action tags on a {{site.data.keyword.conversationshort}} dialog node in JSON format on the `output` property. You can define either a single action on the `vgwAction` tag or a sequence of actions on the `vgwActionSequence` tag. Each action consists of a `command` property, followed by an optional `parameter` property to define attributes for commands that require them.
 
 ### Single actions
 {: #single-actions}
@@ -150,7 +148,7 @@ The following table lists the actions that you can specify in the {{site.data.ke
 
 To indicate a change of state that remains between conversation turns, the voice agent exchanges state variables with the configured {{site.data.keyword.conversationfull}} service. These state variables are defined on a {{site.data.keyword.conversationshort}} dialog node as [context variables](https://console.bluemix.net/docs/services/conversation/dialog-build.html#context) in JSON format.
 
-For example, you can define following state variable to tell the voice agent that when the node response is triggered, dual-tone multi-frequency signaling (DTMF) input is not allowed.
+For example, you can define following state variable to set the message that is streamed to the caller if the connection to the  {{site.data.keyword.conversationshort}} service fails.
 
 ```json
 {

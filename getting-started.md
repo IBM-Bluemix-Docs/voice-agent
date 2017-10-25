@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-12"
+lastupdated: "2017-10-20"
 
 ---
 
@@ -80,7 +80,7 @@ Create Watson service instances.
 
 1. Go to the _Manage_ page on the {{site.data.keyword.iva_short}} dashboard, and click **Add a Voice Agent**.
 2. Enter the basic settings for your voice agent:
-  * **Name:** An optional unique name for your voice agent, such as `Customer Support`
+  * **Name:** A unique name for your voice agent, such as `Customer Support`
   * **Phone number:** The full phone number that you associated with your SIP trunk, including the country and area codes
   * **Description:** An optional description of its use
 3. For each Watson service, review the default credentials and configuration options, and change any values as needed.
