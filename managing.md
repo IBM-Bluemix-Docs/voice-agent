@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-08"
+lastupdated: "2017-10-23"
 
 ---
 
@@ -21,26 +21,46 @@ You can add, edit, and remove voice agents on the _Manage_ page.
 {: shortdesc}
 
 <!-- Title should be task oriented and descriptive-->
-## Adding a {{site.data.keyword.iva_short}} service instance
+## Adding a voice agent
 {: #config_instance}
+
+When you add a voice agent, {{site.data.keyword.iva_short}} automatically searches for any available Watson service instances that you can use.
 
 1. Click **Add a Voice Agent**.
 
-3. Optionally, for **Name**, specify a unique name for your voice agent. For example, `Customer Support - North America`.
+1. For **Name**, specify a unique name for your voice agent. For example, `Customer Support - North America`.
 
-4. For **Phone number**, add the number from your SIP trunk, including the country and area codes. For example, for a United States 800 number, specify the phone number as `18883334444`. The phone number can have spaces and `+ ( ) -` characters.
+1. For **Phone number**, add the number from your SIP trunk, including the country and area codes. For example, for a United States 800 number, specify the phone number as `18883334444`. The phone number can have spaces and `+ ( ) -` characters.
 
-5. Optionally, describe your voice agent.
+1. Optionally describe your voice agent.
 
-6. Under **{{site.data.keyword.conversationshort}}**, configure the connection to the {{site.data.keyword.conversationshort}} service.
-   * To use an SOE, select **Connect to service orchestration engine (SOE)** and provide a URL, user name, and password. An SOE intercepts messages to and from the {{site.data.keyword.conversationshort}} service so that you can modify them by using third-party APIs. For more information, see [Architecture with a service orchestration engine](about.html#arch-soe).
-   * To use Watson {{site.data.keyword.conversationshort}}, select your Watson {{site.data.keyword.conversationshort}} service instance, the service credentials, and a workspace. For the workspace, [create new intents and entries](../conversation/configure-workspace.html#configuring-a-conversation-workspace) with the {{site.data.keyword.conversationshort}} tool or by uploading a JSON or text file. Or, to quickly get a workspace, [import our sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json){: new_window}.
+1. Under **{{site.data.keyword.conversationshort}}**, configure the connection to your {{site.data.keyword.conversationshort}} service instance. You can use {{site.data.keyword.conversationshort}} instances under your or others' {{site.data.keyword.Bluemix_short}} accounts, {{site.data.keyword.virtualagentfull}}, or connect to any of these through a service orchestration engine.
 
-7. Under **{{site.data.keyword.speechtotextshort}}**, select your Watson {{site.data.keyword.speechtotextshort}} service instance, the service credentials, and a model.
+  If you already have a {{site.data.keyword.conversationshort}} workspace on your {{site.data.keyword.Bluemix_short}} account, the {{site.data.keyword.conversationshort}} service credentials and workspace ID are selected by default. You can change the selections to a different service instance or workspace.
 
-6. Under **{{site.data.keyword.texttospeechshort}}**, select your Watson {{site.data.keyword.texttospeechshort}} service instance, the service credentials, and a voice.
+  If you do not have a {{site.data.keyword.conversationshort}} service instance, you can create one from the catalog. Be sure to add a workspace with a dialog so you can test your voice agent. To quickly get started, copy and save the [sample conversation JSON file ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) and then [import it as a workspace](https://console.bluemix.net/docs/services/conversation/configure-workspace.html#creating-workspaces).
 
-7. Click **Save changes**.
+  Alternatively, you can connect to other sources of a {{site.data.keyword.conversationshort}} dialog by changing the **Service type**:
+   * **Other {{site.data.keyword.conversationshort}} service instance**: Connect to a {{site.data.keyword.conversationshort}} workspace that is not under your {{site.data.keyword.Bluemix_short}} account.
+
+     In the **URL**, **User name**, and **Password** fields, configure the credentials for the {{site.data.keyword.conversationshort}} service instance. To find these values, go to the  {{site.data.keyword.conversationshort}} service instance that you want to configure, and select **Service credentials** and then **View credentials**. In the **Workspace ID** field, enter the ID of the workspace with the dialog to use for this voice agent. To find the workspace ID, launch the {{site.data.keyword.conversationshort}} tool, and on the workspace that you want to integrate, click the Actions icon (**&vellip;**) and select **View details**.
+
+     The credentials are not your {{site.data.keyword.Bluemix_short}} user name and password, but rather encrypted credentials for the specific service instance.
+     {:tip}
+   * **Service orchestration engine**: Connect to a {{site.data.keyword.conversationshort}} workspace or {{site.data.keyword.virtualagentshort}} through a [service orchestration engine (SOE)](about.html#arch-soe). An SOE intercepts messages to and from the service so that you can modify them by using third-party APIs.
+
+     In the **URL** field, enter the full URL to your SOE workspace, such as `https://iva-soesample.myorg.net/SOE/myWorkspace`. If your SOE requires authentication (recommended), enter the user name and password in the respective fields.
+   * **Watson {{site.data.keyword.virtualagentshort}}**: Connect to a {{site.data.keyword.virtualagentshort}} chatbot instead of a {{site.data.keyword.conversationshort}} workspace. [{{site.data.keyword.virtualagentshort}}](https://console.bluemix.net/docs/services/virtual-agent/getting-started.html#getting-started) is built on the {{site.data.keyword.conversationshort}} service, but it provides pre-trained capabilities so you can get started with zero machine-learning experience.
+
+     In the **URL** field, enter the URL credential for {{site.data.keyword.virtualagentshort}}, such as `https://api.ibm.com/virtualagent/run/api`. For the **Client ID** and **Client secret** fields, enter the authentication keys, which map to the `X-IBM-Client-Id` and `X-IBM-Client-Secret` header fields for API calls. In the **Bot ID** field, enter the ID for the bot to use for this voice agent. For information about how to find these values, see [Publishing the agent](../virtual-agent/publish.html) in the {{site.data.keyword.virtualagentshort}} documentation.
+
+  For **Service connection error response**, you can optionally change the default message that is streamed to callers if the configured service encounters an error during a call.
+
+1. Under **{{site.data.keyword.speechtotextshort}}**, review the default configuration for your {{site.data.keyword.speechtotextshort}} service instance. If you do not have a {{site.data.keyword.speechtotextshort}} service instance, create one from the catalog.
+
+1. Under **{{site.data.keyword.speechtotextshort}}**, review the default configuration for your {{site.data.keyword.texttospeechshort}} service instance. If you do not have a {{site.data.keyword.texttospeechshort}} service instance, create one from the catalog.
+
+1. Click **Save changes** to add your voice agent.
 
 ### Next steps
 {: #next}
