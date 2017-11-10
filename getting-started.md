@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-10-20"
+lastupdated: "2017-11-07"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-10-20"
 ## Before you begin
 {: #prereqs}
 
-Create a [{{site.data.keyword.Bluemix_short}} account](https://console.bluemix.net/), or log in to an existing one.
+Create an [{{site.data.keyword.Bluemix_short}} account](https://console.bluemix.net/), or log in to an existing one.
 
 ## Step 1: Create a {{site.data.keyword.iva_short}} service instance on {{site.data.keyword.Bluemix_notm}}
 {: #step1}
@@ -53,42 +53,28 @@ This experimental release was tested with a [Twilio&reg; ![External link icon](.
    On the Numbers page, click **Buy a Number** or, if you already have a number, click the **+** icon. A panel displays where you can provision a new phone number in your region. Assign the number to the SIP trunk you created by going back to the SIP trunk and clicking the Number icon.
 
 
-## Step 3: Create Watson services in {{site.data.keyword.Bluemix_notm}}
+## Step 3: Create and configure your voice agent
 {: #step3}
-
-Create Watson service instances.
-
-1. Create each of the following Watson services: [{{site.data.keyword.speechtotextshort}}](https://console.bluemix.net/catalog/services/speech-to-text), [{{site.data.keyword.texttospeechshort}}](https://console.bluemix.net/catalog/services/text-to-speech), and [{{site.data.keyword.conversationshort}}](https://console.bluemix.net/catalog/services/conversation).
-
-   1. In the [{{site.data.keyword.Bluemix_notm}} catalog](https://console.bluemix.net/catalog/){: new_window}, go to the **Watson** category and select the service.
-   2. Choose your pricing plan.
-   3. Click **Create**.
-
-   **Note:** If you already created these services, you can use your existing service instances to set up {{site.data.keyword.iva_short}}.
-
-2. Add a dialog to your Watson {{site.data.keyword.conversationshort}} service.
-
-   After you create the Watson {{site.data.keyword.conversationshort}} service, add a dialog so that you can test your voice agent.  To quickly get started, clone the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub and then [import the sample](https://console.bluemix.net/docs/services/conversation/configure-workspace.html#creating-workspaces) as a workspace:
-
-   1. On the sample conversation GitHub page, click the `1` line number and select **... > Copy line**. Paste the copied text into a file, and save it as a JSON file such as `voice-gateway-conversation-en.json`.
-   2. Launch the {{site.data.keyword.conversationshort}} tool. On the Workspaces page, click the ![Import workspace](../conversation/images/workspace_import.png) icon and import the JSON file.
-
-  Alternatively, you can [build your own dialog](https://console.bluemix.net/docs/services/conversation/dialog-build.html) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and node with a default response.
-
-## Step 4: Create and configure your voice agent
-{: #step4}
 
 1. Go to the _Manage_ page on the {{site.data.keyword.iva_short}} dashboard, and click **Add a Voice Agent**.
 2. Enter the basic settings for your voice agent:
   * **Name:** A unique name for your voice agent, such as `Customer Support`
   * **Phone number:** The full phone number that you associated with your SIP trunk, including the country and area codes
   * **Description:** An optional description of its use
-3. For each Watson service, review the default credentials and configuration options, and change any values as needed.
+3. Create the Watson {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, and {{site.data.keyword.texttospeechshort}} service instances for your voice agent.
+  * Click **Create for me** to create all of the services and a voice agent with the default configuration.
+  * Click **Go to catalog** to create the services yourself, and then return to {{site.data.keyword.iva_short}} and add a voice agent separately.
 
+   If you manually created a {{site.data.keyword.conversationshort}} service instance, add a dialog so that you can test your voice agent.  To quickly get started, clone the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub and then [import the sample](../conversation/configure-workspace.html#creating-workspaces) as a workspace:
+
+   1. On the sample conversation GitHub page, click the `1` line number and select **... > Copy line**. Paste the copied text into a file, and save it as a JSON file such as `voice-gateway-conversation-en.json`.
+   2. Launch the {{site.data.keyword.conversationshort}} tool. On the Workspaces page, click the ![Import workspace](../conversation/images/workspace_import.png) icon and import the JSON file.
+
+  Alternatively, you can [build your own dialog](https://console.bluemix.net/docs/services/conversation/dialog-build.html) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and node with a default response.
 
 ## Next steps
 {: #next}
 
-Test your voice agent by calling its associated phone number.
+Test your voice agent by calling its associated phone number. If you hear a response, your voice agent is active!
 
 You can edit the settings for your voice agent and add or remove voice agents from the _Manage_ page. For more information, see [Managing voice agents](managing.html).

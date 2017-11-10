@@ -25,7 +25,7 @@ Having trouble with {{site.data.keyword.iva_full}}? Review the troubleshooting t
 If you need help, join our developer community by posting your questions or comments to any of the following places, which are all actively monitored:
 * Post on the [dwAnswers forum ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/voice-agent/) with the `voice-agent` tag
 * Post on [StackOverflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/tagged/voice-agent){: new_window} with the `voice-agent` tag
-* Find us on Slack in the [IBM Cloud Technology ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W1559b1be149d_43b0_881e_9783f38faaff/page/Slack%20channel%20%28IBM%20Cloud%20technology%29%20sign%20up%20page) team under the `#ibmvoicegateway` channel
+* Find us on Slack in the [IBM Cloud Technology ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://slack-invite-ibm-cloud-tech.mybluemix.net/) team under the `#ibmvoicegateway` channel
 
 ## Troubleshooting tips
 {: #troubleshooting-tips}
