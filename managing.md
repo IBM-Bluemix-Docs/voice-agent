@@ -56,7 +56,7 @@ When you add a voice agent, {{site.data.keyword.iva_short}} automatically search
 
 1. Under **{{site.data.keyword.speechtotextshort}}**, review the default configuration for your {{site.data.keyword.speechtotextshort}} service instance. If you do not have a {{site.data.keyword.speechtotextshort}} service instance, you can select to create one from the **Service instance** menu.
 
-1. Under **{{site.data.keyword.speechtotextshort}}**, review the default configuration for your {{site.data.keyword.texttospeechshort}} service instance. If you do not have a {{site.data.keyword.texttospeechshort}} service instance, you can select to create one from the **Service instance** menu.
+1. Under **{{site.data.keyword.texttospeechshort}}**, review the default configuration for your {{site.data.keyword.texttospeechshort}} service instance. If you do not have a {{site.data.keyword.texttospeechshort}} service instance, you can select to create one from the **Service instance** menu.
 
 1. Click **Save changes** to add your voice agent and any new services.
 
