@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-23"
+  years: 2017, 2018
+lastupdated: "2018-03-15"
 
 ---
 
@@ -51,7 +51,7 @@ The following diagram shows how {{site.data.keyword.iva_short}} orchestrates the
 ### Architecture with a SIP trunk
 {: #arch-sip}
 
-You can use SIP trunks to quickly set up and test your environment from the public telephone network. When you connect to a voice agent through a SIP trunk, you must configure your SIP trunk to forward INVITE requests to the voice agent based on its IP address. You can find your {{site.data.keyword.iva_short}} server IP address on the **Getting started** page.
+You can use SIP trunks to quickly set up and test your environment from the public telephone network. When you connect to a voice agent through a SIP trunk, you must configure your SIP trunk to forward INVITE requests to the voice agent based on its IP address. You can find your {{site.data.keyword.iva_short}} server IP address on the _Getting started_ page.
 
 ![Calls flow through a SIP trunk to the voice agent, which communicates with Watson services though the API.](images/arch-sip.png)
 
@@ -76,7 +76,7 @@ To learn more about how to implement a service orchestration engine, see the [se
 {: #features}
 
 * **Barge-in:** Callers can interrupt Watson if the utterance Watson is sending to the caller is not relevant to the context of the conversation.
-* **Call hang-up:** The voice agent can be signaled to end a call from the Watson {{site.data.keyword.conversationshort}} service by setting an action tag.
+* **Call hang-up:** The voice agent can be signaled to end a call from the {{site.data.keyword.conversationshort}} service by setting an action tag.
 * **Music on hold:** The voice agent can play an audio file that is specified by the {{site.data.keyword.conversationshort}} for some period of time or until processing in the {{site.data.keyword.conversationshort}} completes.
 * **SSML tagging:** Speech Synthesis Markup Language (SSML) tags are used to control how {{site.data.keyword.texttospeechshort}} synthesizes utterances into audio. {{site.data.keyword.iva_short}} supports passing these tags through to {{site.data.keyword.texttospeechshort}} when received from the {{site.data.keyword.conversationshort}} service.
 * **DTMF support:** {{site.data.keyword.iva_short}} supports [RFC 4733 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://tools.ietf.org/html/rfc4733), RTP Payload for DTMF Digits, Telephony Tones, and Telephony Signals. Dual-tone multi-frequency (DTMF) signals are converted into single digit text utterances that are sent to the Watson services.
@@ -84,7 +84,8 @@ To learn more about how to implement a service orchestration engine, see the [se
 ## Supported languages
 {: #supported-languages}
 
-{{site.data.keyword.iva_full_notm}} supports the following languages with Watson speech services:
+For a language to be supported, it must be supported by all Watson services that you configure in your voice agent. Using the {{site.data.keyword.speechtotextshort}} and {{site.data.keyword.texttospeechshort}} services and either {{site.data.keyword.conversationshort}} or {{site.data.keyword.virtualagentshort}}, the following languages are supported:
+
 * Brazilian Portuguese
 * Japanese
 * Spanish
