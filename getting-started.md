@@ -53,7 +53,7 @@ This release was tested with a [Twilio&reg; ![External link icon](../../icons/la
 
     5. Select **Origination** from the navigation bar for your SIP trunk and configure the origination SIP URI. You can include multiple host names to prevent service failures by selecting  the **+** icon.
 
-    The IP address or the host name is the value that you noted on the _Getting Started_ dashboard of your {{site.data.keyword.iva_short}} service instance. When you configure the origination URI, it must be in SIP URI format, such as `sip:23.246.192.240`. By including multiple host names or IP addresses, if the first host endpoint fails or is out of service, your SIP trunk provider directs calls to the next host name on the list.
+    The IP address or the host name is the value that you noted on the _Getting Started_ dashboard of your {{site.data.keyword.iva_short}} service instance. When you configure the origination URI, it must be in SIP URI format, such as `sip:http://us-south.voiceagent.cloud.ibm.com/`. By including multiple host names or IP addresses, if the first host endpoint fails or is out of service, your SIP trunk provider directs calls to the next host name on the list.
 
 1. Create a phone number from your SIP provider, and assign it to your SIP trunk.
      1. Select **Numbers** from the navigation bar for your SIP trunk. Then, create a phone number and assign it to your SIP trunk.
