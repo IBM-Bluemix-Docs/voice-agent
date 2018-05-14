@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-12"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -87,7 +87,7 @@ To learn more about working in the {{site.data.keyword.conversationshort}} servi
    "vgwAction": {
      "command": "vgwActTransfer",
      "parameters": {
-       "transferTarget": "<sip:phone-number/@termination-uri>"
+       "transferTarget": "sip:18889990000\\@mysiptrunk.pstn.twilio.com"
      }
    }
  }
@@ -95,7 +95,7 @@ To learn more about working in the {{site.data.keyword.conversationshort}} servi
   ```
 {: codeblock}
 
-1. Replace `<sip:phone-number/@termination-uri>` with the SIP URI of the transfer target, which includes a telephone number and the termination URI that you created. For example, if the telephone number is `1888777999` and your termination URI is `test.pstn.twilio.com`, the full SIP URI is `sip:18887779999/@test.pstn.twilio.com`.
+**Note**: The SIP URI of the transfer target includes a telephone number and the termination URI that you created. For example, if the telephone number is `18889990000` and your termination URI is `mysiptrunk.pstn.twilio.com`, the full SIP URI is `sip:18889990000\\@mysiptrunk.pstn.twilio.com`.
 
 ## Next steps
 {: #Next}
