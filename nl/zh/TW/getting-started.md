@@ -1,0 +1,75 @@
+---
+
+copyright:
+  years: 2017, 2018
+lastupdated: "2018-06-14"
+
+---
+
+{:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
+
+# 入門指導教學
+{{site.data.keyword.iva_full}} 可協助您使用「階段作業起始通訊協定 (SIP)」，將一組編排的 Watson 服務與電話網路整合。本指導教學說明如何設定從任何電話通話的認知語音代理程式。
+{: shortdesc}
+
+觀看本 [{{site.data.keyword.iva_full_notm}} 指導教學 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/tv/building-voice-enabled-cognitive-applications-with-watson/) 中如何建立第一個語音代理程式的示範。
+{: tip}
+
+## 開始之前
+{: #prereqs}
+
+建立新帳戶，或在 [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/) 登入現有帳戶。
+
+## 步驟 1：在 {{site.data.keyword.Bluemix_notm}} 上建立 {{site.data.keyword.iva_short}} 服務實例
+{: #step1}
+
+從 [{{site.data.keyword.iva_short}} 型錄頁面](https://console.bluemix.net/catalog/services/voice-agent-with-watson)中，檢閱服務資訊，然後按一下**建立**。
+
+建立服務之後，請記下_開始使用_ 儀表板上的語音代理程式端點。您需要端點 SIP URI，才能配置 SIP 幹線。
+
+## 步驟 2：建立 SIP 幹線，以將通話轉遞至 {{site.data.keyword.iva_short}}
+{: #step2}
+
+1. 從下列任何支援的提供者建立 SIP 幹線。然後，將電話號碼與您的 SIP 幹線相關聯。
+
+  * [NetFoundry](connect-SIP.html#NetFoundry-setup)
+  * [Twilio](connect-SIP.html#twilio-setup)
+  * [AT&T 及其他 SIP 幹線提供者](connect-SIP.html#att-other)
+  * [與 {{site.data.keyword.iva_short}}](connect-SIP.html#peering) 對等
+
+## 步驟 3：建立及連接語音代理程式
+{: #step3}
+
+1. 移至 {{site.data.keyword.iva_short}} 儀表板上的_管理_ 儀表板，然後按一下**建立語音代理程式**。
+
+2. 輸入語音代理程式的基本設定：
+  * **名稱：**語音代理程式的唯一名稱，例如 `Customer Support`
+  * **電話號碼：**您與 SIP 幹線相關聯的完整電話號碼（包括國碼及區域碼）。例如，若為美國 800 號碼，請將電話號碼指定為 18883334444。電話號碼可以有空格及 + ( ) - 字元。
+  * **說明：**其用法的選用性說明
+
+3. 建立語音代理程式的 {{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}} 及 {{site.data.keyword.texttospeechshort}} 服務實例。您可以選擇使用下列一種方法來建立語音代理程式：
+  * 按一下**建立語音代理程式**，透過單一步驟以使用預設配置來建立所有服務及語音代理程式。
+  * 或者，按一下每一個服務名稱以自行建立服務。然後，回到 {{site.data.keyword.iva_short}} 並分別建立語音代理程式。
+
+   如果您已手動建立 {{site.data.keyword.conversationshort}} 服務實例，則請新增對話，以測試語音代理程式。若要快速開始使用，請從 GitHub 複製[範例交談 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)，然後[匯入範例](../conversation/configure-workspace.html#creating-workspaces)作為工作區：
+
+   1. 在範例交談 GitHub 頁面上，按一下行號 `1`，然後選取 **... > 複製行**。將複製的文字貼入檔案中，並將其儲存為 JSON 檔案，例如 `voice-gateway-conversation-en.json`。
+   2. 啟動 {{site.data.keyword.conversationshort}} 工具。在_工作區_ 頁面上，按一下 ![匯入工作區](../conversation/images/workspace_import.png) 圖示，然後匯入 JSON 檔案。
+
+  或者，您也可以[建置自己的對話](https://console.bluemix.net/docs/services/conversation/dialog-build.html)來模擬正式作業環境。您的對話至少必須包含具有 `conversation_start` 條件的節點，以及具有預設回應的節點。
+
+## 後續步驟
+{: #next}
+
+藉由與其相關聯的電話號碼通話，來測試語音代理程式。如果您聽到回應，表示您的語音代理程式作用中！
+
+如果您未聽到回應，則可以在_用量_ 儀表板上檢查通話日誌及語音代理程式使用情形。請參閱[檢視用量及通話日誌](logging.html)。
+
+您可以編輯語音代理程式的設定、建立或移除語音代理程式，以及從_管理_ 儀表板中將多個 Watson 服務位置新增至語音代理程式。如需相關資訊，請參閱[管理語音代理程式](managing.html)。
+
+您也可以從 Twilio 帳戶配置進階設定（例如保護 SIP 連線安全）。請參閱[保護連線安全](secure-trunking.html)。
