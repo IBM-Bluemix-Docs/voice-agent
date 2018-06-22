@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-15"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -24,9 +24,9 @@ You can view the usage history and call logs for your voice agents from the {{si
 
 Logging is automatically enabled for {{site.data.keyword.iva_full}}. You can view your voice agent call logs in the _Usage_ dashboard.
 
-The _Usage_ dashboard shows you quick stats about your service use for the current month and remaining resources available in your plan. This information includes the maximum number of concurrent calls encountered in the current month and the maximum number of concurrent calls available in your plan. You can also see the number of free minutes included in the plan and the number of minutes that you have already used. The _Call logs_ section follows your  _Quick stats_.
+The _Usage_ dashboard shows you quick stats about your service use for the current month and remaining resources available in your plan. This information includes the maximum number of concurrent connections that are encountered in the current month and the maximum number of concurrent connections available in your plan. You can also see the number of free minutes included in the plan and the number of used minutes. The _Call logs_ section follows your _Quick stats_.
 
-In the _Call logs_ section, you can filter call logs by date and voice agent name to reduce the number of calls displayed and isolate the specific call logs that you're interested in.
+In the _Call logs_ section, you can filter call logs by date and voice agent name to reduce the number of displayed calls and isolate specific call logs.
 
 To learn more about creating and editing voice agents, see [Managing voice agents](managing.html).
 
@@ -38,15 +38,15 @@ To learn more about creating and editing voice agents, see [Managing voice agent
 
 1.  You can filter the list of calls by viewing calls on a specific date or filtering calls by voice agent name.
 
-1. To access the call logs for an individual call, click the **Logs** icon in the **Logs** column for that call.
+1. To access the call failure logs for an individual call, click the **Logs** icon in the **Failure Logs** column for that call.
 
 1. You can examine the detailed list of message logs in the new view by using the following methods:
-  * Search the logs
-  * Filter messages based on the log type: **Error**, **Warn**, or **Info**
+  * Search the failure logs
+  * Filter messages based on the log type, either **Error** or **Warn**
   * Download your data set
-  * Sort the logs by ascending or descending timestamp
+  * Sort the failure logs by ascending or descending timestamp
 
-1. To view any log message in detail, click the arrow at the beginning of the row you are interested in to expand the view. You can view more detailed information about log messages in [Voice Gateway system messages](https://www.ibm.com/support/knowledgecenter/SS4U29/messages.html){:new_window}.
+1. To view any failure log message in detail, click the arrow at the beginning of the row you are interested in to expand the view. You can view more detailed information about log messages in [Voice Gateway system messages](https://www.ibm.com/support/knowledgecenter/SS4U29/messages.html){:new_window}.
 
 1. Click the back arrow at the beginning of the page to return to the _Usage_ dashboard.
 

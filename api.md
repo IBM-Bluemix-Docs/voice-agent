@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2017-09-06"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2017-09-06"
 You can control the behavior of your voice agent by defining action tags and state variables from within the {{site.data.keyword.conversationfull}} service. Action tags initiate actions that your voice agent takes during a conversation session, and state variables define voice agent characteristics that persist throughout the conversation unless otherwise changed.
 {: shortdesc}
 
-Because {{site.data.keyword.iva_full}} is based on IBM Voice Gateway, the API works the same way. If you're familiar with Voice Gateway, you can use the same actions and state variables in your {{site.data.keyword.conversationshort}} dialogs with {{site.data.keyword.iva_short}}.
+Because {{site.data.keyword.iva_full}} is based on IBM Voice Gateway, the API works the same way. If you're familiar with Voice Gateway, you can use the same actions and state variables in your {{site.data.keyword.conversationshort}} dialogs with {{site.data.keyword.iva_short}}. See [Action tags and state variables in the Voice Gateway API](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html).
 {: tip}
 
 ## Editing JSON in the dialog response
@@ -57,7 +57,7 @@ The following single action on the `vgwAction` tag tells the voice agent to hang
 ```
 {: codeblock}
 
-The following action tells the voice agent to collect dual-tone multi-frequency signaling (DTMF) input while playing the defined text to the caller.
+The following action tells the voice agent to collect dual-tone multi-frequency signaling (DTMF) input and to play the defined text to the caller.
 
 ```json
 {
@@ -86,7 +86,7 @@ To perform one or more actions on a single conversation turn, you can define a s
 Unlike single actions, for the voice agent to play an utterance when using the `vgwActionSequence` tag, the list of actions must contain the `vgwActPlayText` action. In contrast to the `vgwAction` tag, an utterance in the `output.text` field is not automatically played.
 {: tip}
 
-In the following more complex example, the actions defined on the `vgwActionSequence` tag tell the voice agent to disable speech-to-text processing and collect DTMF input while playing an utterance.
+In the following more complex example, the defined actions on the `vgwActionSequence` tag tell the voice agent to disable speech-to-text processing and collect DTMF input as it plays an utterance.
 
 ```json
 {
@@ -124,15 +124,15 @@ The following table lists the actions that you can specify in the {{site.data.ke
 
 | Action command | Description | Attributes |
 | ----- | ----- | ----- |
-| `vgwActPlayText`| Plays an utterance that is converted to speech by the {{site.data.keyword.texttospeechshort}} service. | <ul><li>`text`: A list of utterances to play. Optional. <p>For example:<br/><code>"text": [<br/>&nbsp;&nbsp;&nbsp;"Hello. How can I help you today?"<br/>&nbsp;&nbsp;&nbsp;]</code><p> By default, the action plays a list of utterances configured in the `output.text` field. </li><li>`errAudioURL`: A URL to an audio file that is played if the voice agent cannot contact the {{site.data.keyword.texttospeechshort}} service to complete the action. The audio file must be in WAV format.</li></ul>|
+| `vgwActPlayText`| Plays an utterance that is converted to speech by the {{site.data.keyword.texttospeechshort}} service. | <ul><li>`text`: A list of utterances to play. Optional. <p>For example:<br/><code>"text": [<br/>&nbsp;&nbsp;&nbsp;"Hello. How can I help you today?"<br/>&nbsp;&nbsp;&nbsp;]</code><p> By default, the action plays a list of utterances that are configured in the `output.text` field. </li><li>`errAudioURL`: A URL to an audio file that is played if the voice agent cannot contact the {{site.data.keyword.texttospeechshort}} service to complete the action. The audio file must be in WAV format.</li></ul>|
 | `vgwActPlayUrl` | Plays an audio file as soon as the included text is played back, such as for playing music on hold (MOH) or common one-time utterances. If no text is included, the audio is played immediately. The file must be single channel (mono), PCM-encoded, and have a 8,000 Hz sampling rate with 16 bits per sample. | <ul><li>`url`: The URL to play. Required.</li><li> `playURLInLoop`: Optionally set to `Yes` or `No` to indicate whether to play the URL in a loop. The default value is `No`.</li></ul> |
 | `vgwActHangup` | Hangs up the call. | No attributes. |
 | `vgwActSetSTTConfig` | Applies a set of parameters for the voice agent to pass to the Watson {{site.data.keyword.speechtotextshort}} service. The {{site.data.keyword.conversationshort}} service dynamically defines the parameters based on the call. | Attributes are transparently passed as JSON properties to the {{site.data.keyword.speechtotextshort}} service. |
 | `vgwActSetTTSConfig` | Applies a set of parameters for the voice agent to pass to the Watson {{site.data.keyword.texttospeechshort}} service. The {{site.data.keyword.conversationshort}} service dynamically defines the parameters based on the call. |  Attributes are transparently passed as JSON properties to the {{site.data.keyword.texttospeechshort}} service.  |
 | `vgwActSetConversationConfig` | Applies a set of parameters for the voice agent to define a {{site.data.keyword.conversationshort}} workspace. The {{site.data.keyword.conversationshort}} service dynamically defines the parameters based on the call. | <ul><li>`url`: The `url` credential for the {{site.data.keyword.conversationshort}} service API.</li><li>`workspaceID`: {{site.data.keyword.conversationshort}} workspace ID</li><li>`username`: The `username` credential for the {{site.data.keyword.conversationshort}} service.</li><li>`password`: The `password` credential for the {{site.data.keyword.conversationshort}} service.</li></ul> |
 | `vgwActCollectDtmf` | Instructs the voice agent to collect dual-tone multi-frequency signaling (DTMF) input. | One of the following attributes must be defined. <ul><li> `dtmfTermKey`: The DTMF termination key, which signals the end of DTMF input. For example, "`#`". </li><li> `dtmfCount`: The number of DTMF digits to collect.</li></ul> When either of these conditions is met, the voice agent stops collecting DTMF input. |
-| `vgwActPauseDTMF` | Disables DTMF input. All DTMF input is ignored until it is re-enabled by the `vgwActUnPauseDTMF` action. | No attributes. |
-| `vgwActUnPauseDTMF` | Re-enables DTMF input that was disabled by the `vgwActPauseDTMF` action. | No attributes. |
+| `vgwActPauseDTMF` | Disables DTMF input. All DTMF input is ignored until it is reenabled by the `vgwActUnPauseDTMF` action. | No attributes. |
+| `vgwActUnPauseDTMF` | Enables the DTMF input that was disabled by the `vgwActPauseDTMF` action. | No attributes. |
 | `vgwActExcludeFromTTSCache` | Instructs the voice agent to not cache the response from the {{site.data.keyword.texttospeechshort}} service. For example, responses that contain sensitive PHI, PII, and PCI DSS data or dynamic information such as customer names or birth dates should be excluded. <br/>This action tag must be set on the {{site.data.keyword.conversationshort}} dialog node for each utterance that you do not want to cache. | No attributes. |
 | `vgwActPauseSTT` | Pauses speech-to-text processing until it is reenabled by the `vgwActUnPauseSTT` action. If recording is enabled and speech-to-text processing is paused, the audio from the caller is not captured. | No attributes. |
 | `vgwActUnPauseSTT` | Resumes speech-to-text processing that was previously paused by the `vgwActPauseSTT` action. | No attributes. |
@@ -159,7 +159,7 @@ For example, you can define following state variable to set the message that is 
 ```
 {: codeblock}
 
-The voice agent assumes that the {{site.data.keyword.conversationshort}} service is stateless and that all state is maintained at the voice agent between exchanges with the {{site.data.keyword.conversationshort}} service. This means that for each conversation turn within a call, the state is passed to the {{site.data.keyword.conversationshort}} service and received back from the service in the `context` section of the REST messages.
+The voice agent assumes that the {{site.data.keyword.conversationshort}} service is stateless and that all state is maintained at the voice agent between exchanges with the {{site.data.keyword.conversationshort}} service. For each conversation turn within a call, the state is passed to the {{site.data.keyword.conversationshort}} service and received back from the service in the `context` section of the REST messages.
 
 ### State variables set in the {{site.data.keyword.conversationshort}} dialog
 {: #state-variables-conv}
@@ -181,15 +181,15 @@ You can set the following state variables within the {{site.data.keyword.convers
 
 | State variable name | Expected value | Description |
 | -------------- | ----- | ----------- |
-| `vgwSessionID`   | User defined <br/><br/> Default: `Call-ID` | A custom session ID header pulled from the SIP INVITE request. The value represents the global session ID that is used in all the voice agent audit logs related to the session. |
+| `vgwSessionID`   | User defined <br/><br/> Default: `Call-ID` | A custom session ID header that is pulled from the SIP INVITE request. The value represents the global session ID that is used in all the voice agent audit logs related to the session. |
 | `vgwSIPCallID` | SIP `Call-ID` | The SIP call ID associated with the call. |
 | `vgwSIPRequestURI` | SIP `Request-URI` | The SIP request URI that started the call. |
 | `vgwSIPToURI` | SIP `To` URI | The SIP `To` URI associated with the call. |
 | `vgwSIPFromURI` | SIP `From` URI | The SIP `From` URI associated with the call. |
 | `vgwBargeInOccurred` | `Yes` / `No` | Indicates whether or not barge-in occurred. |
 | `vgwHangUp` | `Yes` / `No` | Indicates whether the conversation was ended. |
-| `vgwHangupReason` | String | When a hangup is initiated either by the caller or because of an error, this variable is sent to the {{site.data.keyword.conversationshort}} service to indicate why the call was disconnected. The text in the message request that is sent to the {{site.data.keyword.conversationshort}} service also includes "vgwHangUp". |
+| `vgwHangupReason` | String | When a hang up is initiated either by the caller or because of an error, this variable is sent to the {{site.data.keyword.conversationshort}} service to indicate why the call was disconnected. The text in the message request that is sent to the {{site.data.keyword.conversationshort}} service also includes "vgwHangUp". |
 | `vgwConversationResponseTimeout` | Time in seconds<br/><br/>Default: `5`  | The time in seconds that the voice agent waits for a response from the {{site.data.keyword.conversationshort}} service. If the time is exceeded, the voice agent reattempts to contact the {{site.data.keyword.conversationshort}} service. If the service still cannot be reached, the call fails. |
-| `vgwSTTResponse` | JSON object | The final response from the {{site.data.keyword.speechtotextshort}} service in JSON format, including the transcript and confidence score for the top hypothesis and any alternatives. <p>The format matches exactly the format that is received from the {{site.data.keyword.speechtotextshort}} service:</p><p><code>{<br/>&nbsp;&nbsp;"result_index": 0,<br/>&nbsp;&nbsp;"warnings": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;"Unknown arguments: continuous."<br/>&nbsp;&nbsp;],<br/>&nbsp;&nbsp;"results": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"final": true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"alternatives": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello world",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.758<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello wooled",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.358<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;]<br/>}.</code></p> |
+| `vgwSTTResponse` | JSON object | The final response from the {{site.data.keyword.speechtotextshort}} service in JSON format, including the transcript and confidence score for the preferred hypothesis and any alternatives. <p>For example, the following format matches exactly the format that is received from the {{site.data.keyword.speechtotextshort}} service:</p><p><code>{<br/>&nbsp;&nbsp;"result_index": 0,<br/>&nbsp;&nbsp;"warnings": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;"Unknown arguments: continuous."<br/>&nbsp;&nbsp;],<br/>&nbsp;&nbsp;"results": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"final": true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"alternatives": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello world",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.758<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello wooled",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.358<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;]<br/>}.</code></p> |
 | `vgwIsDTMF` | `Yes` / `No` | Indicates whether the input to the {{site.data.keyword.conversationshort}} service is dual-tone multi-frequency signaling (DTMF). |
 {: caption="Table 3. Variables set by the voice agent" caption-side="top"}

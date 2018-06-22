@@ -11,6 +11,7 @@ IBM Voice Agent with Watson
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    default-settings.md
     [IBM Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/welcome_voicegateway.html){: new_window}
 
     {: .topicgroup}
@@ -22,8 +23,10 @@ IBM Voice Agent with Watson
 
     {: .navgroup id="howto"}
     creating.md
+    connect-SIP.md
     managing.md
     api.md
+    secure-trunking.md
     call-transfer.md
     event-forwarding.md
     logging.md

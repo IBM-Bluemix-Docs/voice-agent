@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-15"
+lastupdated: "2018-06-11"
 ---
 
 {:shortdesc: .shortdesc}
@@ -16,10 +16,10 @@ lastupdated: "2018-03-15"
 # Enabling event forwarding for voice agents
 {: #event_forwarding}
 
-You can enable event forwarding to collect information about calls handled by your voice agents in {{site.data.keyword.iva_full}} by using a {{site.data.keyword.cloudantfull}} database service.
+You can enable event forwarding to collect information about calls that are handled by your voice agents in {{site.data.keyword.iva_full}} by using a {{site.data.keyword.cloudantfull}} database service.
 {: shortdesc}
 
-You might want to collect and analyze call data from {{site.data.keyword.iva_short}} to improve how natural the conversation feels to the caller. Each voice agent that you create can forward event reports to a specified {{site.data.keyword.cloudant_short_notm}} that you manage. Reported events include the call detail record (CDR) events, transcription events, and turn events reports. You can learn more about the types of events you can forward in [Reporting events](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}.
+You might want to collect and analyze call data from {{site.data.keyword.iva_short}} to improve how natural the conversation feels to the caller. Each voice agent that you create can forward event reports to a specified {{site.data.keyword.cloudant_short_notm}} that you manage. Reported events include the call detail record (CDR) events, transcription events, and turn events reports. You can learn more about the types of events that you can forward in [Reporting events](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}.
 
 Analyzing data from these events can help you adjust dialogs, refine intents, and improve overall caller experience.
 
@@ -37,7 +37,7 @@ You can enable event forwarding when you are creating or editing your voice agen
 
 1. Select either **My {{site.data.keyword.cloudant_short_notm}} service instance** or **Other {{site.data.keyword.cloudant_short_notm}} service instance**.
   * If you are using **My {{site.data.keyword.cloudant_short_notm}} service instance**, select the **{{site.data.keyword.cloudant_short_notm}} account** name and username from the lists.
-  * If you are using **Other {{site.data.keyword.cloudant_short_notm}} service instnace**, enter the {{site.data.keyword.cloudant_short_notm}} user name and password for the account.
+  * If you are using **Other {{site.data.keyword.cloudant_short_notm}} service instance**, enter the {{site.data.keyword.cloudant_short_notm}} user name and password for the account.
 
 1. Select **Enable** for each type of event that you want to forward, and then choose the database where you want to forward the events.
   * Call detail record (CDR) events
