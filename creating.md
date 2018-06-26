@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-15"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -17,15 +17,14 @@ lastupdated: "2018-03-15"
 # Creating the service
 
 {: shortdesc}
-You can create an {{site.data.keyword.iva_full}} service instance by using the {{site.data.keyword.Bluemix_short}} catalog or a {{site.data.keyword.Bluemix_notm}} `bx` command.
+You can create an {{site.data.keyword.iva_full}} service instance by using the {{site.data.keyword.Bluemix_short}} catalog or an {{site.data.keyword.Bluemix_notm}} `ibmcloud` command.
 
-<!-- Title should be task oriented and descriptive-->
 ## Creating the service from the catalog
 {: #catalog_create}
 
 1. Go to the [{{site.data.keyword.iva_short}} catalog page](https://console.bluemix.net/catalog/services/voice-agent-with-watson).
 
-   The catalog page has information about the service and its pricing plans. You can change the **Service name** value. For this release, the Trial plan is no charge.
+   The catalog page has information about the service and its pricing plans. You can change the **Service name** value.
 
 2. Click **Create**.
 
@@ -34,10 +33,10 @@ You can create an {{site.data.keyword.iva_full}} service instance by using the {
 
 1. [Install the {{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/get_started.html).
 
-2. Run the [`bx` command](../../cli/reference/bluemix_cli/bx_cli.html#bluemix_cli) that creates your VoiceAgent service instance with the Trial plan:
+2. Run the [`ibmcloud` command](../../cli/reference/bluemix_cli/bx_cli.html#bluemix_cli) that creates your VoiceAgent service instance with the _Trial_ plan:
 
    ```
-   bx service create VoiceAgent Trial "My Voice Agent Service"
+   ibmcloud service create VoiceAgent _Trial_ "My Voice Agent Service"
    ```
    {: codeblock}
 
