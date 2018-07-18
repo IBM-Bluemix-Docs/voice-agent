@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 
 ---
@@ -36,6 +36,8 @@ Quando crei un agent vocale, {{site.data.keyword.iva_short}} automaticamente ric
 
 1. Facoltativamente descrivi il tuo agent vocale.
 
+1. Se vuoi abilitare il trasferimento di chiamata, puoi configurare un URI di terminazione per la tua **Transfer Target**. Consulta [Configurazione del trasferimento di chiamata](call-transfer.html). Non utilizzare un numero di telefono personale per la tua destinazione di trasferimento. 
+
 1. Configura le connessioni alle tue istanze del servizio Watson. Puoi collegarti a più istanze del servizio Watson configurando le connessioni per **Location 1** e **Location 2**. Disporre di connessioni a più istanze del servizio consente al tuo agent vocale di passare a un'istanza del servizio alternativa se si verifica un'interruzione. Consulta [Aggiunta di più ubicazioni del servizio Watson](#add_location).
 
 **Importante**: gli account _Trial_ e _Lite_ possono collegarsi solo all'ubicazione in cui è stata creata la tua istanza del servizio {{site.data.keyword.iva_short}}. La tua seconda ubicazione non è un secondo agent vocale. Agisce solo da backup per il ripristino di emergenza.
@@ -60,7 +62,7 @@ Quando crei un agent vocale, {{site.data.keyword.iva_short}} automaticamente ric
 
 Dopo aver creato l'agent vocale, verificalo chiamandone il numero di telefono. Puoi visualizzare i dettagli sulla tua chiamata telefonica nel dashboard _Usage_.  
 
-## Modifica del numero massimo di connessioni simultanee 
+## Modifica del numero massimo di connessioni simultanee
 {: #edit_concurrency}
 
 Se utilizzi il piano _Standard_, puoi modificare il numero massimo di connessioni simultanee dalle impostazioni predefinite. In tutti i piani, ricevi 2 connessioni simultanee gratuitamente. Per ulteriori informazioni, vedi i [Piani dei prezzi](https://console.bluemix.net/catalog/services/voice-agent-with-watson).

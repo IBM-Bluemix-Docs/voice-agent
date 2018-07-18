@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-06-14"
 ## 通話中転送について
 {: #about-ct}
 
-通話中転送を有効にすると、発信者が会話の途中でライブ・エージェントと話すことを要求した場合に、ボイス・エージェントが自動的に通話をリダイレクトします。 SIP プロバイダー構成で終了 URI を設定することで、通話中転送を有効にすることができます。 次に、{{site.data.keyword.conversationshort}} インスタンスのダイアログ・ノードで API アクションに転送ターゲットを定義します。 転送ターゲットは、終了 URI と電話番号が含まれた SIP URI です。サポートされているアクションとボイス・エージェントのカスタマイズ方法について詳しくは、[API を使用したボイス・エージェントのプログラミング](api.html)を参照してください。
+通話中転送を有効にすると、発信者が会話の途中でライブ・エージェントと話すことを要求した場合に、ボイス・エージェントが自動的に通話をリダイレクトします。 SIP プロバイダー構成で終了 URI を設定することで、通話中転送を有効にすることができます。 次に、{{site.data.keyword.conversationshort}} インスタンスのダイアログ・ノードで API アクションに転送ターゲットを定義します。 転送ターゲットは、終了 URI と電話番号が含まれた SIP URI です。 サポートされているアクションとボイス・エージェントのカスタマイズ方法について詳しくは、[API を使用したボイス・エージェントのプログラミング](api.html)を参照してください。
 
 ## ステップ 1: 終了 URI のセットアップ
 {: #termination-setup}
@@ -31,7 +31,9 @@ lastupdated: "2018-06-14"
 ### NetFoundry での終了 URI のセットアップ
 {: #termination-netfoundry}
 
-転送先の [NetFoundry アカウント ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://watson.netfoundry.io/watson-login){: new_window} の電話番号をメモします。後で、{{site.data.keyword.conversationshort}} ダイアログでこの電話番号と終了 URI を転送先として指定できます。以下の NetFoundry 終了 URI をコピーして、転送ターゲットに使用できます。
+転送先の [NetFoundry アカウント ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://watson.netfoundry.io/watson-login){: new_window} の電話番号をメモします。 後で、{{site.data.keyword.conversationshort}} ダイアログでこの電話番号と終了 URI を転送先として指定できます。 個人の電話番号を使用しないでください。
+
+以下の NetFoundry 終了 URI をコピーして、転送ターゲットに使用できます。
 
 ```
 dal.watson-va.netfoundry.net
@@ -61,7 +63,7 @@ dal.watson-va.netfoundry.net
 
 1. **「保存」**をクリックして、終了 URI の構成を完了します。
 
-転送先の電話番号と終了 URI をメモします。 後で、{{site.data.keyword.conversationshort}} ダイアログでそれらを転送先として指定できます。
+転送先の電話番号と終了 URI をメモします。 電話番号が、個人の電話番号でないことを確認してください。この電話番号と終了 URI は、{{site.data.keyword.conversationshort}} ダイアログで転送ターゲットを指定するために使用できます。
 
 
 ## ステップ 2: 通話中転送のための {{site.data.keyword.conversationshort}} の構成
@@ -105,7 +107,7 @@ dal.watson-va.netfoundry.net
 ```
 {: codeblock}
 
-**注**: 転送ターゲットの SIP URI には、電話番号と作成した終了 URI が含まれます。 例えば、電話番号が `18889990000` で終了 URI が `mysiptrunk.pstn.twilio.com` の場合、完全な SIP URI は `sip:18889990000\\@mysiptrunk.pstn.twilio.com` となります。Netfoundry を使用し、電話番号が `18889990000` である場合、完全な SIP URI は `sip:18889990000\\@dal.watson-va.netfoundry.net` となります。
+**注**: 転送ターゲットの SIP URI には、電話番号と作成した終了 URI が含まれます。転送ターゲットで、個人の電話番号を使用しないでください。例えば、電話番号が `18889990000` で終了 URI が `mysiptrunk.pstn.twilio.com` の場合、完全な SIP URI は `sip:18889990000\\@mysiptrunk.pstn.twilio.com` となります。 Netfoundry を使用し、電話番号が `18889990000` である場合、完全な SIP URI は `sip:18889990000\\@dal.watson-va.netfoundry.net` となります。
 
 ## 次のステップ
 {: #Next}

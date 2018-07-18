@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 
 ---
@@ -36,13 +36,15 @@ Lorsque vous créez un agent vocal, {{site.data.keyword.iva_short}} recherche au
 
 1. Décrivez éventuellement votre agent vocal.
 
+1. Si vous souhaitez activer le transfert d'appel, vous pouvez configurer un URI d'arrêt pour votre **cible de transfert**. Voir [Configuration du transfert d'appel](call-transfer.html). N'utilisez pas de numéro de téléphone personnel pour votre cible de transfert.
+
 1. Configurez les connexions à vos instances de service Watson. Vous pouvez établir des connexions à plusieurs instances de service Watson en configurant des connexions pour **Emplacement 1** et pour **Emplacement 2**. Lorsque des connexions sont établies avec plusieurs instances de service, votre agent vocal peut passer à une autre instance de service si une indisponibilité se produit. Voir [Ajout de plusieurs emplacements de service Watson](#add_location).
 
-**Important** : les comptes _Trial_ et _Lite_ peuvent uniquement se connecter à l'emplacement où votre instance de service {{site.data.keyword.iva_short}} est créée. Votre second emplacement n'est pas un second agent vocal. Il agit uniquement comme sauvegarde pour la reprise après incident. 
+**Important** : les comptes _Trial_ et _Lite_ peuvent uniquement se connecter à l'emplacement où votre instance de service {{site.data.keyword.iva_short}} est créée. Votre second emplacement n'est pas un second agent vocal. Il agit uniquement comme sauvegarde pour la reprise après incident.
 
 1. Sous **{{site.data.keyword.conversationshort}}**, configurez la connexion à votre instance de service {{site.data.keyword.conversationshort}} en cliquant sur **Activer l'emplacement 1** ou **Activer l'emplacement 2**. Vous pouvez utiliser des instances {{site.data.keyword.conversationshort}} ou des instances {{site.data.keyword.virtualagentfull}} dans des comptes {{site.data.keyword.Bluemix_notm}} que vous possédez ou qui sont la propriété de quelqu'un d'autre. Vous pouvez également vous connecter à l'une de ces options via un moteur d'orchestration de service.
 
-    * Si vous créez un agent vocal dans la région Sud des Etats-Unis alors que vous ne disposez d'aucune instance de service {{site.data.keyword.conversationshort}}, vous pouvez en créer une dans le menu **Instance de service**. 
+    * Si vous créez un agent vocal dans la région Sud des Etats-Unis alors que vous ne disposez d'aucune instance de service {{site.data.keyword.conversationshort}}, vous pouvez en créer une dans le menu **Instance de service**.
     * Sinon, vous pouvez vous connecter à d'autres sources d'un dialogue {{site.data.keyword.conversationshort}} en modifiant le [**type de service**](#other_service).
     * Si vous souhaitez configurer plusieurs emplacements de service, cliquez sur l'autre option d'emplacement et sélectionnez **Activer l'emplacement** afin de configurer la connexion à votre autre instance {{site.data.keyword.conversationshort}}. Voir [Ajout de plusieurs emplacements de service Watson](#add_location).
 
@@ -65,19 +67,19 @@ Une fois l'agent vocal créé, testez-le en appelant le numéro de téléphone q
 
 Si vous utilisez le plan _Standard_, vous pouvez modifier le nombre maximal de connexions simultanées défini par défaut. Dans tous les plans, vous recevez gratuitement 2 connexions simultanées. Pour plus d'informations, voir [Plans de tarification](https://console.bluemix.net/catalog/services/voice-agent-with-watson).
 
-Sur le tableau de bord _Gestion_, le nombre maximal de connexions simultanées autorisées dans votre plan figure dans la zone **Nombre maximal de connexions simultanées**. En outre, le nombre maximal de connexions simultanées qui sont utilisées par vos agents vocaux durant le mois en cours figure dans la zone **Nombre maximal de connexions simultanées utilisées**. 
+Sur le tableau de bord _Gestion_, le nombre maximal de connexions simultanées autorisées dans votre plan figure dans la zone **Nombre maximal de connexions simultanées**. En outre, le nombre maximal de connexions simultanées qui sont utilisées par vos agents vocaux durant le mois en cours figure dans la zone **Nombre maximal de connexions simultanées utilisées**.
 
 Si vous souhaitez modifier le nombre maximal de connexions simultanées de votre plan, cliquez sur l'icône **Editer**. Dans la fenêtre _Editer le nombre maximal de connexions simultanées_, choisissez le nombre maximal de connexions simultanées, puis cliquez sur **Sauvegarder**. Vous pouvez définir entre 10 et 50 connexions simultanées en libre-service. Si vous avez besoin de plus de 50 connexions simultanées pour votre agent vocal, voir [Demande de configuration réseau assistée](connect-SIP.html#request-setup).
 
 ### Informations de tarification relatives aux connexions simultanées
 {: #concurrent-charge}
 
-  * Les plans _Lite_, _Trial_ et _Standard_ incluent 2 connexions simultanées gratuites. 
-  * Les plans _Premium_ sont personnalisés par instance. 
-  * Dans un compte _Standard_, vous disposez d'une capacité minimale de 10 connexions simultanées. 
-  * L'utilisation des connexions simultanées est répartie au prorata mois par mois. Si vous utilisez plus de 2 connexions simultanées dans une même journée, un tarif quotidien vous est facturé. 
-  * Si vous disposez d'un plan _Standard_ ou _Premium_, vous pouvez acheter une capacité de connexions simultanées supérieure. 
-  * Un tarif quotidien vous est facturé pour la capacité maximale de connexions simultanées que vous utilisez dans une journée. Par exemple, votre plan prend en charge 2 connexions simultanées gratuites et vous définissez une limite maximale de 12 connexions. Si vous utilisez uniquement 5 connexions simultanées dans une journée, 3 connexions simultanées vous sont facturées. 
+  * Les plans _Lite_, _Trial_ et _Standard_ incluent 2 connexions simultanées gratuites.
+  * Les plans _Premium_ sont personnalisés par instance.
+  * Dans un compte _Standard_, vous disposez d'une capacité minimale de 10 connexions simultanées.
+  * L'utilisation des connexions simultanées est répartie au prorata mois par mois. Si vous utilisez plus de 2 connexions simultanées dans une même journée, un tarif quotidien vous est facturé.
+  * Si vous disposez d'un plan _Standard_ ou _Premium_, vous pouvez acheter une capacité de connexions simultanées supérieure.
+  * Un tarif quotidien vous est facturé pour la capacité maximale de connexions simultanées que vous utilisez dans une journée. Par exemple, votre plan prend en charge 2 connexions simultanées gratuites et vous définissez une limite maximale de 12 connexions. Si vous utilisez uniquement 5 connexions simultanées dans une journée, 3 connexions simultanées vous sont facturées.
 
 Pour plus d'informations sur les plans, les tarifs et les fonctions, voir [Plans de tarification](https://console.bluemix.net/catalog/services/voice-agent-with-watson).
 
@@ -104,23 +106,23 @@ Pour supprimer un agent vocal, cliquez sur **Supprimer un agent** dans la liste 
 ### Configuration des options avancées
 {: #config-advanced}
 
-Lorsque vous créez ou clonez un agent vocal, vous pouvez cliquer sur **Afficher les paramètres avancés** pour afficher les options de configuration avancées présentées ci-après. 
+Lorsque vous créez ou clonez un agent vocal, vous pouvez cliquer sur **Afficher les paramètres avancés** pour afficher les options de configuration avancées présentées ci-après.
 
 * **Message de réponse en cas d'échec de {{site.data.keyword.conversationshort}} (facultatif)** : message de réponse par défaut qui est envoyé au récepteur de messagerie si l'appel ne peut pas se connecter à {{site.data.keyword.conversationshort}}.
-* **Message de réponse en cas d'échec du transfert (facultatif)** : message de réponse par défaut qui est diffusé à l'appelant si le transfert d'appel échoue. 
-* **Envoyer une réponse provisoire par téléphone depuis {{site.data.keyword.iva_short}}** : envoie une réponse `180 ringing` durant le traitement d'un appel entrant par {{site.data.keyword.iva_short}}. Activée par défaut. 
-* **Placer l'appelant en attente lors du transfert** : l'appelant est placé en attente durant le transfert. Activée par défaut. 
-* **Déconnecter l'appel en cas d'échec du transfert** : détermine s'il convient ou non de déconnecter l'appel en cas d'échec du transfert d'appel. Activée par défaut. Si  le paramètre est désactivé et qu'un transfert d'appel échoue, {{site.data.keyword.iva_short}} initie un échange de conversation. Ensuite, {{site.data.keyword.conversationshort}} peut déconnecter l'appel ou le transférer vers une autre destination, selon la configuration dans le dialogue. 
-* **Notifier {{site.data.keyword.conversationshort}} lors d'événements de réseau** : lorsque cette option est activée et qu'une erreur réseau est détectée, {{site.data.keyword.iva_short}} initie un échange avec le service {{site.data.keyword.conversationshort}} avec le texte "vgwNetworkWarningMessage". La variable d'état `vgwNetworkWarnings` contient une liste d'événements de réseau qui se sont produits durant l'échange en cours. Si cette option est désactivée, une liste des événements de réseau qui se sont produits durant l'échange en cours est envoyée à l'événement d'échange suivant dans la variable d'état `vgwNetworkWarning`. Activée par défaut. 
+* **Message de réponse en cas d'échec du transfert (facultatif)** : message de réponse par défaut qui est diffusé à l'appelant si le transfert d'appel échoue.
+* **Envoyer une réponse provisoire par téléphone depuis {{site.data.keyword.iva_short}}** : envoie une réponse `180 ringing` durant le traitement d'un appel entrant par {{site.data.keyword.iva_short}}. Activée par défaut.
+* **Placer l'appelant en attente lors du transfert** : l'appelant est placé en attente durant le transfert. Activée par défaut.
+* **Déconnecter l'appel en cas d'échec du transfert** : détermine s'il convient ou non de déconnecter l'appel en cas d'échec du transfert d'appel.  Activée par défaut. Si  le paramètre est désactivé et qu'un transfert d'appel échoue, {{site.data.keyword.iva_short}} initie un échange de conversation. Ensuite, {{site.data.keyword.conversationshort}} peut déconnecter l'appel ou le transférer vers une autre destination, selon la configuration dans le dialogue.
+* **Notifier {{site.data.keyword.conversationshort}} lors d'événements de réseau** : lorsque cette option est activée et qu'une erreur réseau est détectée, {{site.data.keyword.iva_short}} initie un échange avec le service {{site.data.keyword.conversationshort}} avec le texte "vgwNetworkWarningMessage". La variable d'état `vgwNetworkWarnings` contient une liste d'événements de réseau qui se sont produits durant l'échange en cours. Si cette option est désactivée, une liste des événements de réseau qui se sont produits durant l'échange en cours est envoyée à l'événement d'échange suivant dans la variable d'état `vgwNetworkWarning`. Activée par défaut.
 
 ### Ajout de plusieurs emplacements de service Watson
 {: #add_location}
 
-Si vous disposez d'un compte _Standard_ ou _Premium_, vous pouvez connecter votre agent vocal à plusieurs services Watson dans différents emplacements pour la redondance de service. Les comptes _Trial_ et _Lite_ peuvent uniquement se connecter à l'emplacement où votre instance de service {{site.data.keyword.iva_short}} est créée. Votre second emplacement n'est pas un second agent vocal. Il agit uniquement comme sauvegarde pour la reprise après incident. 
+Si vous disposez d'un compte _Standard_ ou _Premium_, vous pouvez connecter votre agent vocal à plusieurs services Watson dans différents emplacements pour la redondance de service. Les comptes _Trial_ et _Lite_ peuvent uniquement se connecter à l'emplacement où votre instance de service {{site.data.keyword.iva_short}} est créée. Votre second emplacement n'est pas un second agent vocal. Il agit uniquement comme sauvegarde pour la reprise après incident.
 
 Votre agent vocal utilise les instances de service Watson par ordre de distance géographique. Par exemple, vous pouvez créer un agent vocal dans la région Est des Etats-Unis alors que vos service {{site.data.keyword.conversationshort}} se trouvent dans la région Sud des Etats-Unis et à Sydney, en Australie. Votre agent vocal utilise la région {{site.data.keyword.conversationshort}} Sud des Etats-Unis, car cette dernière est plus proche géographiquement de la région Est des Etats-Unis que Sydney. Lorsque vous établissez des connexions à des services Watson situés dans plusieurs régions, si un service Watson est hors service à un emplacement, votre agent vocal peut utiliser le service redondant.
 
-Vous pouvez à tout moment ajouter un emplacement de service Watson à votre configuration d'agent vocal. Pour savoir comment connecter plusieurs instances d'emplacement de service lors de la création de votre agent vocal, voir [Création d'un agent vocal](#creating). 
+Vous pouvez à tout moment ajouter un emplacement de service Watson à votre configuration d'agent vocal. Pour savoir comment connecter plusieurs instances d'emplacement de service lors de la création de votre agent vocal, voir [Création d'un agent vocal](#creating).
 
 Afin d'ajouter un emplacement de service Watson à un agent vocal existant, cliquez sur **Editer un agent** pour l'agent vocal que vous souhaitez configurer. Choisissez**Emplacement 1** ou **Emplacement 2** pour l'instance {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}} ou {{site.data.keyword.speechtotextshort}} que vous souhaitez connecter, puis ajoutez vos informations de configuration. Vous pouvez utiliser une instance de service Watson dans votre espace de travail ou dans d'autres espaces de travail. Voir [Utilisation d'instances de service dans d'autres espaces de travail {{site.data.keyword.Bluemix_notm}}](#other_services).
 

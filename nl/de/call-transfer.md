@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 ---
 
@@ -31,7 +31,9 @@ Wenn die Anrufübergabe aktiviert ist und ein Anrufer während eines Dialogs anf
 ### Beendigungs-URI in NetFoundry einrichten
 {: #termination-netfoundry}
 
-Notieren Sie sich die Telefonnummer, an die der Anruf übergeben werden soll, in Ihrem [NetFoundry-Konto![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://watson.netfoundry.io/watson-login){: new_window}. Später können Sie diese Telefonnummer und den Beendigungs-URI als Ziel der Anrufübergabe im {{site.data.keyword.conversationshort}}-Dialog angeben. Sie können den folgenden NetFoundry-Beendigungs-URI zur Verwendung im Übergabeziel kopieren.
+Notieren Sie sich die Telefonnummer, an die der Anruf übergeben werden soll, in Ihrem [NetFoundry-Konto![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://watson.netfoundry.io/watson-login){: new_window}. Später können Sie diese Telefonnummer und den Beendigungs-URI als Ziel der Anrufübergabe im {{site.data.keyword.conversationshort}}-Dialog angeben. Verwenden Sie keine persönliche Telefonnummer.
+
+Sie können den folgenden NetFoundry-Beendigungs-URI zur Verwendung im Übergabeziel kopieren.
 
 ```
 dal.watson-va.netfoundry.net
@@ -61,7 +63,7 @@ Sie müssen den Beendigungs-URI in Ihrem NetFoundry-Konto nicht manuell konfigur
 
 1. Klicken Sie auf **Speichern**, um die Konfiguration Ihres Beendigungs-URI zu beenden.
 
-Notieren Sie sich die Telefonnummer, an die der Anruf übergeben werden soll, und den Beendigungs-URI. Später können Sie diese als Ziel der Anrufübergabe im {{site.data.keyword.conversationshort}}-Dialog angeben.
+Notieren Sie sich die Telefonnummer, an die der Anruf übergeben werden soll, und den Beendigungs-URI. Stellen Sie sicher, dass es sich bei der Telefonnummer nicht um eine persönliche Telefonnummer handelt. Sie können die Telefonnummer und den Beendigungs-URI verwenden, um das Übergabeziel im {{site.data.keyword.conversationshort}}-Dialog anzugeben.
 
 
 ## Schritt 2: {{site.data.keyword.conversationshort}} für die Anrufübergabe konfigurieren
@@ -105,7 +107,7 @@ Weitere Informationen zum Arbeiten mit dem {{site.data.keyword.conversationshort
 ```
 {: codeblock}
 
-**Hinweis**: Der SIP-URI des Übertragungsziels enthält eine Telefonnummer und den von Ihnen erstellten Beendigungs-URI. Wenn z. B. die Telefonnummer `18889990000` und Ihr Beendigungs-URI `mysiptrunk.pstn.twilio.com` ist, lautet der vollständige SIP-URI `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. Bei der Verwendung von Netfoundry und der Telefonnummer `18889990000` lautet der vollständige SIP-URI `sip:18889990000\\@dal.watson-va.netfoundry.net`. 
+**Denken Sie daran**: Der SIP-URI des Übertragungsziels enthält eine Telefonnummer und den von Ihnen erstellten Beendigungs-URI. Verwenden Sie keine persönliche Telefonnummer für das Übergabeziel. Wenn z. B. die Telefonnummer `18889990000` und Ihr Beendigungs-URI `mysiptrunk.pstn.twilio.com` ist, lautet der vollständige SIP-URI `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. Bei der Verwendung von Netfoundry und der Telefonnummer `18889990000` lautet der vollständige SIP-URI `sip:18889990000\\@dal.watson-va.netfoundry.net`.
 
 ## Nächste Schritte
 {: #Next}

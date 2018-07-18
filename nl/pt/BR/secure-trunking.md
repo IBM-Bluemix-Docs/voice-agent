@@ -32,8 +32,7 @@ criptografia de mensagem SRTP e SIP separadamente.
 1. Escolha o tronco que você deseja proteger com o SRTP selecionando um tronco existente ou criando um novo clicando no ícone
 **+**.
 
-  * Se você criar um novo tronco, será necessário configurar a _URI de Tronco SIP_ no painel **Origem**.  
-Para obter mais informações, consulte [Conectando um tronco SIP](connect-SIP.html).
+  * Se você criar um novo tronco, será necessário configurar a _URI de Tronco SIP_ no painel **Origem**.  Para obter mais informações, consulte [Conectando um tronco SIP](connect-SIP.html).
 
 1. No painel _Geral_, localize a seção _Entroncamento seguro_. Clique em
 **Desativado** para mudar a configuração de entroncamento seguro para **Ativado** e salve

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 ---
 
@@ -31,7 +31,9 @@ Al habilitar la transferencia de llamada, si un interlocutor solicita hablar con
 ### Configuración de un URI de terminación en NetFoundry
 {: #termination-netfoundry}
 
-Anote el número de teléfono de su [cuenta de NetFoundry ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://watson.netfoundry.io/watson-login){: new_window} que desea transferir. Posteriormente, puede especificar este número de teléfono y el URI de terminación como destino de transferencia en el diálogo de {{site.data.keyword.conversationshort}}. Puede copiar el siguiente URI de terminación de NetFoundry para utilizarlo en el destino de transferencia.
+Anote el número de teléfono de su [cuenta de NetFoundry ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://watson.netfoundry.io/watson-login){: new_window} que desea transferir. Posteriormente, puede especificar este número de teléfono y el URI de terminación como destino de transferencia en el diálogo de {{site.data.keyword.conversationshort}}. No utilice un número de teléfono personal.
+
+Puede copiar el siguiente URI de terminación de NetFoundry para utilizarlo en el destino de transferencia.
 
 ```
 dal.watson-va.netfoundry.net
@@ -61,7 +63,7 @@ No es necesario configurar manualmente el URI de terminación en su cuenta de Ne
 
 1. Pulse **Guardar** para acabar de configurar el URI de terminación.
 
-Anote el número de teléfono y el URI de terminación que desea transferir. Posteriormente, puede especificarlos como destino de transferencia en el diálogo de {{site.data.keyword.conversationshort}}.
+Anote el número de teléfono y el URI de terminación que desea transferir. Asegúrese de que el número de teléfono no sea un número de teléfono personal. Puede utilizar el número de teléfono y el URI de terminación para especificar el destino de transferencia en el diálogo de {{site.data.keyword.conversationshort}}.
 
 
 ## Paso 2: Configuración de {{site.data.keyword.conversationshort}} para la transferencia de llamada
@@ -105,7 +107,7 @@ Para obtener más información sobre cómo trabajar en el servicio {{site.data.k
 ```
 {: codeblock}
 
-**Nota**: El URI SIP del destino de transferencia incluye un número de teléfono y el URI de terminación que ha creado. Por ejemplo, si el número de teléfono es `18889990000` y el URI de terminación es `mysiptrunk.pstn.twilio.com`, el URI SIP completo es `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. Si utiliza Netfoundry y tiene el número de teléfono `18889990000`, el URI SIP completo es `sip:18889990000\\@dal.watson-va.netfoundry.net`.
+**Recuerde**: El URI SIP del destino de transferencia incluye un número de teléfono y el URI de terminación que ha creado. No utilice un número de teléfono personal como destino de transferencia. Por ejemplo, si el número de teléfono es `18889990000` y el URI de terminación es `mysiptrunk.pstn.twilio.com`, el URI SIP completo es `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. Si utiliza Netfoundry y tiene el número de teléfono `18889990000`, el URI SIP completo es `sip:18889990000\\@dal.watson-va.netfoundry.net`.
 
 ## Pasos siguientes
 {: #Next}

@@ -32,7 +32,7 @@ Dalla [pagina di catalogo {{site.data.keyword.iva_short}}](https://console.bluem
 
 Dopo aver creato il servizio, prendi nota dell'endpoint dell'agent vocale nel dashboard _Getting started_. Hai bisogno dell'URI SIP endpoint per configurare il tuo trunk SIP.
 
-## Passo 2: creazione di un trunk SIP per inoltrare le chiamate a {{site.data.keyword.iva_short}} 
+## Passo 2: creazione di un trunk SIP per inoltrare le chiamate a {{site.data.keyword.iva_short}}
 {: #step2}
 
 1. Crea un trunk SIP da uno dei seguenti provider supportati. Quindi, associa un numero di telefono al tuo trunk SIP.
@@ -54,7 +54,7 @@ Dopo aver creato il servizio, prendi nota dell'endpoint dell'agent vocale nel da
 
 3. Crea le istanze del servizio {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} e {{site.data.keyword.texttospeechshort}} del tuo agent vocale. Puoi scegliere di creare un agent vocale con uno dei seguenti metodi:
   * Fai clic su **Create a voice agent** per creare tutti i servizi e un agent vocale con la configurazione predefinita in un solo passo.
-  * Oppure, fai clic sui nomi del servizio per creare i servizi personalmente. Successivamente ritorna in {{site.data.keyword.iva_short}} e crea un agent vocale separatamente. 
+  * Oppure, fai clic sui nomi del servizio per creare i servizi personalmente. Successivamente ritorna in {{site.data.keyword.iva_short}} e crea un agent vocale separatamente.
 
    Se hai creato manualmente l'istanza del servizio {{site.data.keyword.conversationshort}}, aggiungi un dialogo in modo da poter verificare il tuo agent vocale.  Per un'introduzione rapida, clona la [conversazione di esempio ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) da GitHub e poi [importa l'esempio](../conversation/configure-workspace.html#creating-workspaces) come uno spazio di lavoro:
 

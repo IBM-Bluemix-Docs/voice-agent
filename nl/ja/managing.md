@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 
 ---
@@ -36,9 +36,11 @@ _「管理」_ダッシュボードでボイス・エージェントを作成、
 
 1. オプションで、ボイス・エージェントの説明を入力します。
 
-1. Watson サービス・インスタンスへの接続を構成します。 **「ロケーション 1 (Location 1)」**と**「ロケーション 2 (Location 2)」**の両方に接続を構成して、複数の Watson サービス・インスタンスに接続することができます。複数のサービス・インスタンスに接続できるので、障害発生時には、ボイス・エージェントを別のサービス・インスタンスに切り替えることができます。[複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
+1. 通話中転送を有効にする場合は、**「転送ターゲット (Transfer Target)」**で終了 URI を構成することができます。[通話中転送のセットアップ](call-transfer.html)を参照してください。転送ターゲットに個人の電話番号を使用しないでください。
 
-**重要**: _トライアル_・アカウントと_ライト_・アカウントは、{{site.data.keyword.iva_short}} サービス・インスタンスが作成されている場所にのみ接続できます。2 番目の場所は、2 番目のボイス・エージェントではありません。災害復旧用のバックアップとしてのみ機能します。
+1. Watson サービス・インスタンスへの接続を構成します。 **「ロケーション 1 (Location 1)」**と**「ロケーション 2 (Location 2)」**の両方に接続を構成して、複数の Watson サービス・インスタンスに接続することができます。複数のサービス・インスタンスに接続できるので、障害発生時には、ボイス・エージェントを別のサービス・インスタンスに切り替えることができます。 [複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
+
+**重要**: _トライアル_・アカウントと_ライト_・アカウントは、{{site.data.keyword.iva_short}} サービス・インスタンスが作成されている場所にのみ接続できます。 2 番目の場所は、2 番目のボイス・エージェントではありません。 災害復旧用のバックアップとしてのみ機能します。
 
 1. **{{site.data.keyword.conversationshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.conversationshort}} サービス・インスタンスへの接続を構成します。自分自身または他の人が所有する {{site.data.keyword.Bluemix_notm}} アカウントの {{site.data.keyword.conversationshort}} インスタンスまたは {{site.data.keyword.virtualagentfull}} インスタンスを使用することができます。 サービス・オーケストレーション・エンジンを使用してこれらのオプションのいずれかに接続することもできます。
 
@@ -46,11 +48,11 @@ _「管理」_ダッシュボードでボイス・エージェントを作成、
     * あるいは、[**「サービス・タイプ (Service type)」**](#other_service)を変更することによって {{site.data.keyword.conversationshort}} ダイアログの他のソースに接続することもできます。
     * 複数のサービス・ロケーションを構成する場合は、他のロケーション・オプションをクリックし、**「ロケーションの有効化 (Enable location)」**を選択して、他の {{site.data.keyword.conversationshort}} インスタンスへの接続を構成します。 [複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
 
-1. **{{site.data.keyword.speechtotextshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.speechtotextshort}} サービス・インスタンスのデフォルト構成を確認します。米国南部地域でボイス・エージェントを作成する場合、{{site.data.keyword.speechtotextshort}} サービス・インスタンスがなければ、**「サービス・インスタンス (Service instance)」**メニューから作成できます。あるいは、[**「サービス・タイプ (Service type)」**](#other_service)を変更することによって別の {{site.data.keyword.Bluemix_notm}} アカウント・スペースの {{site.data.keyword.speechtotextshort}} インスタンスにボイス・エージェントを接続することもできます。 {{site.data.keyword.iva_short}} では、狭周波数帯域モデルのみがサポートされています。
+1. **{{site.data.keyword.speechtotextshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.speechtotextshort}} サービス・インスタンスのデフォルト構成を確認します。米国南部地域でボイス・エージェントを作成する場合、{{site.data.keyword.speechtotextshort}} サービス・インスタンスがなければ、**「サービス・インスタンス (Service instance)」**メニューから作成できます。 あるいは、[**「サービス・タイプ (Service type)」**](#other_service)を変更することによって別の {{site.data.keyword.Bluemix_notm}} アカウント・スペースの {{site.data.keyword.speechtotextshort}} インスタンスにボイス・エージェントを接続することもできます。 {{site.data.keyword.iva_short}} では、狭周波数帯域モデルのみがサポートされています。
 
     複数のサービス・ロケーションを構成する場合は、他のロケーション・オプションをクリックし、**「ロケーションの有効化 (Enable location)」**を選択して、他の {{site.data.keyword.speechtotextshort}} インスタンスへの接続を構成します。 [複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
 
-1. **{{site.data.keyword.texttospeechshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.texttospeechshort}} サービス・インスタンスのデフォルト構成を確認します。米国南部地域でボイス・エージェントを作成しようとしており、{{site.data.keyword.texttospeechshort}} サービス・インスタンスがない場合には、**「サービス・インスタンス (Service instance)」**メニューから作成することができます。あるいは、[**「サービス・タイプ (Service type)」**](#other_service)を変更することによって別の {{site.data.keyword.Bluemix_notm}} アカウント・スペースの {{site.data.keyword.texttospeechshort}} インスタンスにボイス・エージェントを接続することもできます。
+1. **{{site.data.keyword.texttospeechshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.texttospeechshort}} サービス・インスタンスのデフォルト構成を確認します。米国南部地域でボイス・エージェントを作成しようとしており、{{site.data.keyword.texttospeechshort}} サービス・インスタンスがない場合には、**「サービス・インスタンス (Service instance)」**メニューから作成することができます。 あるいは、[**「サービス・タイプ (Service type)」**](#other_service)を変更することによって別の {{site.data.keyword.Bluemix_notm}} アカウント・スペースの {{site.data.keyword.texttospeechshort}} インスタンスにボイス・エージェントを接続することもできます。
 
     複数のサービス・ロケーションを構成する場合は、他のロケーション・オプションをクリックし、**「ロケーションの有効化 (Enable location)」**を選択して、他の {{site.data.keyword.texttospeechshort}} インスタンスへの接続を構成します。 [複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
 
@@ -63,11 +65,11 @@ _「管理」_ダッシュボードでボイス・エージェントを作成、
 ## 同時接続最大数の編集
 {: #edit_concurrency}
 
-_標準_ プランを使用している場合は、同時接続の最大数をデフォルト設定から変更できます。どのプランでも、2 つの同時接続を無料で受け取ります。詳しくは、[価格プラン](https://console.bluemix.net/catalog/services/voice-agent-with-watson)を参照してください。
+_標準_ プランを使用している場合は、同時接続の最大数をデフォルト設定から変更できます。 どのプランでも、2 つの同時接続を無料で受け取ります。 詳しくは、[価格プラン](https://console.bluemix.net/catalog/services/voice-agent-with-watson)を参照してください。
 
-_「管理」_ ダッシュボードの**「同時接続最大数 (Maximum concurrent connections)」**に、ご利用プランで許可されている同時接続の最大数がリストされます。また、**「使用された同時接続最大数 (Maximum concurrent connections used)」**には、当月にボイス・エージェントによって使用された同時接続の最大数も表示されます。
+_「管理」_ ダッシュボードの**「同時接続最大数 (Maximum concurrent connections)」**に、ご利用プランで許可されている同時接続の最大数がリストされます。 また、**「使用された同時接続最大数 (Maximum concurrent connections used)」**には、当月にボイス・エージェントによって使用された同時接続の最大数も表示されます。
 
-プランの同時接続最大数を変更するには、**「編集」**アイコンをクリックします。_「同時接続最大数の編集 (Edit maximum concurrent connections)」_ ウィンドウで、同時接続の最大数を選択し、**「保存」**をクリックします。セルフサービスによって設定可能な同時接続数の最小値は 10 で、最大値は 50 です。ボイス・エージェントで 50 を超える同時接続が必要な場合は、[要補助ネットワーク・セットアップの要求](connect-SIP.html#request-setup)を参照してください。
+プランの同時接続最大数を変更するには、**「編集」**アイコンをクリックします。 _「同時接続最大数の編集 (Edit maximum concurrent connections)」_ ウィンドウで、同時接続の最大数を選択し、**「保存」**をクリックします。 セルフサービスによって設定可能な同時接続数の最小値は 10 で、最大値は 50 です。 ボイス・エージェントで 50 を超える同時接続が必要な場合は、[要補助ネットワーク・セットアップの要求](connect-SIP.html#request-setup)を参照してください。
 
 ### 同時接続の価格設定情報
 {: #concurrent-charge}
@@ -75,9 +77,9 @@ _「管理」_ ダッシュボードの**「同時接続最大数 (Maximum concu
   * _ライト_、_トライアル_、および_標準_ の各プランには、2 つの同時接続が無料で含まれています。
   * _プレミアム_・プランは、インスタンスごとにカスタマイズされています。
   * _標準_ アカウントでは、同時接続容量は最低 10 です。
-  * 同時接続の使用は、月単位で日割り計算されます。2 つを超える同時接続を 1 日で使用すると、1 日分の料金が請求されます。
+  * 同時接続の使用は、月単位で日割り計算されます。 2 つを超える同時接続を 1 日で使用すると、1 日分の料金が請求されます。
   * _標準_ プランまたは_プレミアム_・プランでは、より多くの同時接続容量を購入できます。
-  * 1 日の料金は、1 日に使用した最大同時接続容量について請求されます。例えば、プランで 2 つの無料同時接続がサポートされていて、接続の上限を 12 に設定したとします。1 日に 5 つのみを使用した場合は、3 つ分が請求されます。
+  * 1 日の料金は、1 日に使用した最大同時接続容量について請求されます。 例えば、プランで 2 つの無料同時接続がサポートされていて、接続の上限を 12 に設定したとします。 1 日に 5 つのみを使用した場合は、3 つ分が請求されます。
 
 プラン、料金、および機能について詳しくは、[価格プラン](https://console.bluemix.net/catalog/services/voice-agent-with-watson)を参照してください。
 
@@ -107,20 +109,18 @@ _「管理」_ ダッシュボードの**「同時接続最大数 (Maximum concu
 ボイス・エージェントを作成または複製するときに、**「詳細の表示 (Show advanced)」**をクリックすると、以下の拡張構成オプションを表示できます。
 
 * **{{site.data.keyword.conversationshort}} 失敗応答メッセージ (オプション) ({{site.data.keyword.conversationshort}} failure reply message (optional))**: 通話が {{site.data.keyword.conversationshort}} に接続できない場合にメッセージ受信者に送信されるデフォルトの応答メッセージ。
-
 * **転送失敗応答メッセージ (オプション)(Transfer failure reply message (optional))**: 通話中転送が失敗した場合に発信者に対して流されるデフォルトの応答メッセージ。
-* **{{site.data.keyword.iva_short}} から仮のリンギング応答を送信する (Send provisional ringing response from {{site.data.keyword.iva_short}})**: {{site.data.keyword.iva_short}} が着信を処理する間に `180 リンギング`応答を送信します。デフォルトでは有効です。
-* **転送時に発信者を保留にする (Put caller on hold on transfer)**: 転送時に発信者を保留にします。デフォルトでは有効です。
-* **転送が失敗したときに通話を切断する (Disconnect call on transfer failure)**: 通話中転送が失敗した場合に通話を切断するかどうかを指定します。デフォルトでは有効です。この設定を無効にした場合に通話中転送が失敗すると、{{site.data.keyword.iva_short}} が会話のターンを開始します。その後、ダイアログでの構成に応じて、{{site.data.keyword.conversationshort}} は通話を切断することも、別の宛先に転送することもできます。
-* **ネットワーク・イベント時に {{site.data.keyword.conversationshort}} に通知する (Notify {{site.data.keyword.conversationshort}} on network events)**: このオプションを有効にした場合、ネットワーク・エラーが検出されると、{{site.data.keyword.iva_short}} は "vgwNetworkWarningMessage" というテキストで {{site.data.keyword.conversationshort}} へのターンを開始します。`vgwNetworkWarnings` 状態変数には、現在のターンで発生したネットワーク・イベントのリストが入ります。このオプションを無効にした場合、現在のターンで発生したネットワーク・イベントのリストは、次のターン・イベントで `vgwNetworkWarnings` 状態変数に入れて送信されます。デフォルトでは有効です。
+* **{{site.data.keyword.iva_short}} から仮のリンギング応答を送信する (Send provisional ringing response from {{site.data.keyword.iva_short}})**: {{site.data.keyword.iva_short}} が着信を処理する間に `180 リンギング`応答を送信します。 デフォルトでは有効です。
+* **転送時に発信者を保留にする (Put caller on hold on transfer)**: 転送時に発信者を保留にします。 デフォルトでは有効です。
+* **転送が失敗したときに通話を切断する (Disconnect call on transfer failure)**: 通話中転送が失敗した場合に通話を切断するかどうかを指定します。  デフォルトでは有効です。 この設定を無効にした場合に通話中転送が失敗すると、{{site.data.keyword.iva_short}} が会話のターンを開始します。 その後、ダイアログでの構成に応じて、{{site.data.keyword.conversationshort}} は通話を切断することも、別の宛先に転送することもできます。
+* **ネットワーク・イベント時に {{site.data.keyword.conversationshort}} に通知する (Notify {{site.data.keyword.conversationshort}} on network events)**: このオプションを有効にした場合、ネットワーク・エラーが検出されると、{{site.data.keyword.iva_short}} は "vgwNetworkWarningMessage" というテキストで {{site.data.keyword.conversationshort}} へのターンを開始します。 `vgwNetworkWarnings` 状態変数には、現在のターンで発生したネットワーク・イベントのリストが入ります。 このオプションを無効にした場合、現在のターンで発生したネットワーク・イベントのリストは、次のターン・イベントで `vgwNetworkWarnings` 状態変数に入れて送信されます。 デフォルトでは有効です。
 
 ### 複数の Watson サービス・ロケーションの追加
 {: #add_location}
 
-_標準_ アカウントまたは_プレミアム_・アカウントをお持ちの場合は、異なるロケーションの複数の Watson サービスにボイス・エージェントを接続して、サービスを冗長化することができます。
-_トライアル_・アカウントと_ライト_・アカウントは、{{site.data.keyword.iva_short}} サービス・インスタンスが作成されている場所にのみ接続できます。2 番目の場所は、2 番目のボイス・エージェントではありません。災害復旧用のバックアップとしてのみ機能します。
+_標準_ アカウントまたは_プレミアム_・アカウントをお持ちの場合は、異なるロケーションの複数の Watson サービスにボイス・エージェントを接続して、サービスを冗長化することができます。 _トライアル_・アカウントと_ライト_・アカウントは、{{site.data.keyword.iva_short}} サービス・インスタンスが作成されている場所にのみ接続できます。 2 番目の場所は、2 番目のボイス・エージェントではありません。 災害復旧用のバックアップとしてのみ機能します。
 
-ボイス・エージェントは、Watson サービス・インスタンスを地理的な距離の順序で使用します。例えば、ボイス・エージェントを米国東部地域で作成し、{{site.data.keyword.conversationshort}} サービスは米国南部とオーストラリアのシドニーにあるとします。この場合、ボイス・エージェントは、{{site.data.keyword.conversationshort}} 米国南部地域を使用します。米国南部の方がシドニーより地理的に米国東部に近いからです。複数の地域の Watson サービスに接続しているなら、あるロケーションで Watson サービスがオフラインになっても、ボイス・エージェントは予備のサービスを使用できます。
+ボイス・エージェントは、Watson サービス・インスタンスを地理的な距離の順序で使用します。 例えば、ボイス・エージェントを米国東部地域で作成し、{{site.data.keyword.conversationshort}} サービスは米国南部とオーストラリアのシドニーにあるとします。 この場合、ボイス・エージェントは、{{site.data.keyword.conversationshort}} 米国南部地域を使用します。米国南部の方がシドニーより地理的に米国東部に近いからです。 複数の地域の Watson サービスに接続しているなら、あるロケーションで Watson サービスがオフラインになっても、ボイス・エージェントは予備のサービスを使用できます。
 
 ボイス・エージェント構成に Watson サービス・ロケーションをいつでも追加できます。 ボイス・エージェントの作成時に複数のサービス・ロケーション・インスタンスを接続する方法については、[ボイス・エージェントの作成](#creating)を参照してください。
 

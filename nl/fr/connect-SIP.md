@@ -31,15 +31,15 @@ Vous pouvez choisir dans la liste présentée ci-après le fournisseur de liaiso
 
 **Remarque :** la création d'un compte nécessite une carte de crédit, périodiquement facturée en fonction de votre utilisation. Si vous disposez déjà d'un compte NetFoundry, vous pouvez l'utiliser.
 
-1. Créez un compte sur le site Web [NetFoundry![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://watson.netfoundry.io/watson-login){: new_window}. 
+1. Créez un compte sur le site Web [NetFoundry![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://watson.netfoundry.io/watson-login){: new_window}.
 
 1. Accédez à la page principale du _compte Watson_.
 
-1. Sélectionnez une région d'origine du numéro. 
+1. Sélectionnez une région d'origine du numéro.
 
-  **Remarque :** consultez le site Web Netfoundry pour connaître les régions disponibles. De nouvelles régions sont continuellement ajoutées. 
+  **Remarque :** consultez le site Web Netfoundry pour connaître les régions disponibles. De nouvelles régions sont continuellement ajoutées.
 
-1. Cliquez sur **Purchase** et suivez les instructions affichées pour réaliser l'achat. 
+1. Cliquez sur **Purchase** et suivez les instructions affichées pour réaliser l'achat.
 
 1. Une fois le traitement du paiement terminé, votre numéro de téléphone de liaison SIP apparaît dans votre compte.
 
@@ -85,7 +85,7 @@ Vous avez besoin de ce numéro de téléphone pour installer et configurer votre
 ## Demande de configuration assistée
 {: #request-setup}
 
-Vous pouvez demander une configuration réseau assistée pour vous connecter à AT&T ou à d'autres fournisseurs de liaison SIP, de pair à pair avec {{site.data.keyword.iva_short}}, ou pour demander plus de 50 connexions simultanées à l'aide du processus ci-après. 
+Vous pouvez demander une configuration réseau assistée pour vous connecter à AT&T ou à d'autres fournisseurs de liaison SIP, de pair à pair avec {{site.data.keyword.iva_short}}, ou pour demander plus de 50 connexions simultanées à l'aide du processus ci-après.
 
 1. Ouvrez un nouveau [ticket de demande de service {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/unifiedsupport/tickets/add)
 

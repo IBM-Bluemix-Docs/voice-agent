@@ -77,8 +77,7 @@ contém um nó com a condição `conversation_start` e um nó com uma resposta p
 
 ### Por que eu não posso especificar um número de telefone quando crio um agente de voz?
 
-Veja se o número do telefone especificado é usado por um agente de voz existente. É possível ter apenas um agente de voz para um número de telefone. 
-É possível fornecer outro número de telefone do seu provedor de entroncamento SIP e usá-lo para criar outro agente de voz. Ou [exclua o agente de voz existente no painel _Gerenciar_](managing.html#delete_va) para liberar o
+Veja se o número do telefone especificado é usado por um agente de voz existente. É possível ter apenas um agente de voz para um número de telefone. É possível fornecer outro número de telefone do seu provedor de entroncamento SIP e usá-lo para criar outro agente de voz. Ou [exclua o agente de voz existente no painel _Gerenciar_](managing.html#delete_va) para liberar o
 número do telefone e, em seguida, criar um novo agente de voz.
 
 ### Por que meus telefonemas falhando frequentemente?

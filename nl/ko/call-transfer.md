@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 ---
 
@@ -31,7 +31,9 @@ lastupdated: "2018-06-14"
 ### NetFoundry에서 종료 URI 설정
 {: #termination-netfoundry}
 
-[NetFoundry 계정![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://watson.netfoundry.io/watson-login){: new_window}의 전송할 대상 전화번호를 기록하십시오. 나중에 {{site.data.keyword.conversationshort}} 대화 상자에서 이 전화번호 및 종료 URI를 전송 대상으로 지정할 수 있습니다. 전송 대상에서 사용할 다음 NetFoundry 종료 URI를 복사할 수 있습니다.
+[NetFoundry 계정![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://watson.netfoundry.io/watson-login){: new_window}의 전송할 대상 전화번호를 기록하십시오. 나중에 {{site.data.keyword.conversationshort}} 대화 상자에서 이 전화번호 및 종료 URI를 전송 대상으로 지정할 수 있습니다. 개인 전화번호를 사용하지 마십시오.
+
+전송 대상에서 사용할 다음 NetFoundry 종료 URI를 복사할 수 있습니다.
 
 ```
 dal.watson-va.netfoundry.net
@@ -61,7 +63,7 @@ dal.watson-va.netfoundry.net
 
 1. **저장**을 클릭하여 종료 URI 구성을 완료하십시오.
 
-전송할 대상 전화번호와 종료 URI를 기록하십시오. 나중에 {{site.data.keyword.conversationshort}} 대화 상자에서 이를 전송 대상으로 지정할 수 있습니다. 
+전송할 대상 전화번호와 종료 URI를 기록하십시오. 전화번호가 개인 전화번호가 아닌지 확인하십시오. 전화번호와 종료 URI를 사용하여 전송 대상을 {{site.data.keyword.conversationshort}} 대화상자에 지정할 수 있습니다. 
 
 
 ## 2단계: 호출 전송을 위한 {{site.data.keyword.conversationshort}} 구성
@@ -105,7 +107,7 @@ dal.watson-va.netfoundry.net
 ```
 {: codeblock}
 
-**참고**: 전송 대상의 SIP URI에는 전화번호와 사용자가 작성한 종료 URI가 포함됩니다. 예를 들어, 전화번호가 `18889990000`이고 종료 URI가 `mysiptrunk.pstn.twilio.com`인 경우 전체 SIP URI는 `sip:18889990000\\@mysiptrunk.pstn.twilio.com`입니다. Netfoundry를 사용하며 전화번호가 `18889990000`인 경우 전체 SIP URI는 `sip:18889990000\\@dal.watson-va.netfoundry.net`입니다.
+**중요**: 전송 대상의 SIP URI에는 전화번호와 사용자가 작성한 종료 URI가 포함됩니다. 전송 대상에 개인 전화번호를 사용하지 마십시오. 예를 들어, 전화번호가 `18889990000`이고 종료 URI가 `mysiptrunk.pstn.twilio.com`인 경우 전체 SIP URI는 `sip:18889990000\\@mysiptrunk.pstn.twilio.com`입니다. Netfoundry를 사용하며 전화번호가 `18889990000`인 경우 전체 SIP URI는 `sip:18889990000\\@dal.watson-va.netfoundry.net`입니다.
 
 ## 다음 단계
 {: #Next}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-06-19"
 
 ---
 
@@ -26,10 +26,9 @@ lastupdated: "2018-06-13"
 | {{site.data.keyword.virtualagentshort}}-Tokenauthentifizierung| Inaktiviert |
 | {{site.data.keyword.speechtotextshort}}-Tokenauthentifizierung| Aktiviert |
 | Schimpfwortfilter | Aktiviert |
-| Verstärkung - Sprechpause | `1` |
 | Intelligente Formatierung | Aktiviert |
 | Schwellenwert für Konfidenzscore | `0,2` |
-| Wiederaufnehmen der Wiedergabe beim Einsprechen (in die laufende Bandansage)| Aktiviert |
+| Wiederaufnehmen der Wiedergabe beim Einsprechen (in die laufende Bandansage) | Aktiviert |
 | Echounterdrückung | Aktiviert |
 | Cache-Lebensdauer | 336 Stunden |
 | SIP-Anruf-ID an {{site.data.keyword.conversationshort}} senden | Aktiviert |

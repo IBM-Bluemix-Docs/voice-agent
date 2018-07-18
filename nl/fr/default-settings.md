@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-06-19"
 
 ---
 
@@ -17,16 +17,15 @@ lastupdated: "2018-06-13"
 # Paramètres de {{site.data.keyword.iva_short}} par défaut
 {: #default-settings}
 
-{{site.data.keyword.iva_full}} utilise les paramètres par défaut présentés ci-après. 
+{{site.data.keyword.iva_full}} utilise les paramètres par défaut présentés ci-après.
 
-|Nom de paramètre| Valeur par défaut |
+| Nom de paramètre | Valeur par défaut |
 |------|---------------|
 | {{site.data.keyword.conversationshort}} token authentication| Activé |
 | Service Orchestration Engine (SOE) token authentication| Désactivé |
 | {{site.data.keyword.virtualagentshort}} token authentication| Désactivé |
 | {{site.data.keyword.speechtotextshort}} token authentication| Activé |
 | Profanity filter | Activé |
-| Firmup Silence Time | `1` |
 | Smart formatting | Activé |
 | Confidence score threshold | `0.2` |
 | Barge-in playback resume | Activé |

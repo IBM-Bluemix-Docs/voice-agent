@@ -24,26 +24,26 @@ lastupdated: "2018-06-13"
 * [Twilio](#twilio-setup)
 * [AT&T 以及其他提供者](#att-other)
 * [与 {{site.data.keyword.iva_short}}](#peering) 对等 
-* [请求协助进行设置](#request-setup)
+* [请求设置协助](#request-setup)
 
 ## 创建 NetFoundry SIP 中继和电话号码
 {: #NetFoundry-setup}
 
 **注：**创建帐户需要信用卡，并根据使用情况定期收取费用。如果您已经拥有 NetFoundry 帐户，可以使用现有帐户。
 
-1. 在 [NetFoundry![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://watson.netfoundry.io/watson-login){: new_window} Web 站点上创建帐户。
+1. 在 [NetFoundry ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://watson.netfoundry.io/watson-login){: new_window} Web 站点上创建帐户。
 
 1. 转至 _Watson 帐户_ 主页。
 
-1. 选择号码所在区域。
+1. 选择您希望号码来自哪个区域。
 
-  **注：**请检查 Netfoundry Web 站点以查找可用区域。将持续添加新区域。
+  **注：**有关可用的区域，请查看 Netfoundry Web 站点。新的区域会不断增加。
 
-1. 单击**购买**，按照屏幕上的指示信息完成购买。
+1. 单击**购买**，然后按照屏幕上的指示信息完成购买过程。
 
 1. 成功付款后，您的帐户中将显示 SIP 中继电话号码。
 
-您需要使用此电话号码设置语音代理程序和配置呼叫转移，包括国家和地区编码。请参阅[创建和连接语音代理程序](getting-started.html#step3)。
+您需要使用此电话号码来设置语音代理程序和配置呼叫转移，包括国家和地区代码。请参阅[创建和连接语音代理程序](getting-started.html#step3)。
 
 
 ## 创建 Twilio SIP 中继
@@ -69,23 +69,23 @@ lastupdated: "2018-06-13"
 
   在“号码”页面上，单击**购买号码**。如果您有号码，请单击 **+** 图标。在显示的面板上，可以提供您所在区域的新电话号码。返回到所创建的 SIP 中继，然后单击“号码”图标，将该号码分配给该 SIP 中继。
 
-  您需要使用此电话号码设置语音代理程序，包括国家和地区编码。请参阅[创建和连接语音代理程序](getting-started.html#step3)。
+  您需要使用此电话号码设置语音代理程序，包括国家和地区代码。请参阅[创建和连接语音代理程序](getting-started.html#step3)。
 
 
 ## 连接 AT&T 以及其他提供者
 {: #att-other}
 
-{{site.data.keyword.iva_short}} 支持连接 AT&T&reg; 以及其他 SIP 中继提供者。但是，这些连接不是自助服务设置，需要额外协助。请参阅[请求协助进行设置](#request-setup)。
+{{site.data.keyword.iva_short}} 支持连接 AT&T&reg; 以及其他 SIP 中继提供者。但是，这些连接不是自助服务设置，需要额外的协助。请参阅[请求设置协助](#request-setup)。
 
 ## 与 {{site.data.keyword.iva_short}} 对等
 {: #peering}
 
-{{site.data.keyword.iva_short}} 支持对等连接，例如 IPSec 隧道。但是，这些连接不是自助服务设置，需要额外协助。请参阅[请求协助进行设置](#request-setup)。
+{{site.data.keyword.iva_short}} 支持对等连接，例如 IPSec 隧道。但是，这些连接不是自助服务设置，需要额外的协助。请参阅[请求设置协助](#request-setup)。
 
-## 请求协助进行设置
+## 请求设置协助
 {: #request-setup}
 
-您可以请求协助进行网络设置以与 AT&T 或其他 SIP 中继提供商连接、与 {{site.data.keyword.iva_short}} 进行配对或者使用以下过程请求超过 50 个并发连接。
+要请求网络设置协助以与 AT&T 或其他 SIP 中继提供者连接、与 {{site.data.keyword.iva_short}} 进行配对或者请求 50 个以上的并发连接，可以使用以下过程。
 
 1. 开一个新的 [{{site.data.keyword.Bluemix_notm}} 支持凭单](https://console.bluemix.net/unifiedsupport/tickets/add)
 
@@ -101,6 +101,6 @@ lastupdated: "2018-06-13"
 
 1. 对于**严重性**，选择**严重性 4 - 影响最小**。
 
-1. 对于**主题**，输入 `{{site.data.keyword.iva_short}} 协助进行的网络设置`。
+1. 对于**主题**，输入 `{{site.data.keyword.iva_short}} 协助网络设置`。
 
-1. 在**简要描述**部分，描述您打算如何连接 {{site.data.keyword.iva_short}} 服务或者对于语音代理程序请求 50 个以上的并发连接。您可以通过使用 SIP 中继提供者或者对等连接来进行连接，例如 IPSec 隧道。在您的凭单中，您可以随附一个 PDF 或图像格式的网络图，描述网络拓扑。您还可以随附任何白皮书，详细描写您想要的服务功能。
+1. 在**简要描述**部分，描述您打算如何连接 {{site.data.keyword.iva_short}} 服务或者如何为语音代理程序请求 50 个以上的并发连接。您可以通过使用 SIP 中继提供者或者对等连接来进行连接，例如 IPSec 隧道。在您的凭单中，您可以随附一个 PDF 或图像格式的网络图，描述网络拓扑。您还可以随附任何白皮书，详细描写您想要的服务功能。

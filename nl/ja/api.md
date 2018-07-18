@@ -19,8 +19,7 @@ lastupdated: "2018-06-14"
 {{site.data.keyword.conversationfull}} サービスからアクション・タグと状態変数を定義することによって、ボイス・エージェントの動作を制御できます。 アクション・タグは、会話セッション中にボイス・エージェントが実行するアクションを開始します。状態変数は、ボイス・エージェントの特性を定義し、この定義は特に変更されない限り、その会話中維持されます。
 {: shortdesc}
 
-{{site.data.keyword.iva_full}} は IBM Voice Gateway に基づいているため、API は同じ仕方で機能します。 Voice Gateway を使い慣れている場合は、{{site.data.keyword.iva_short}} でも {{site.data.keyword.conversationshort}} ダイアログで同じアクションと状態変数を使用できます。
-[Voice Gateway API のアクション・タグおよび状態変数](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html)を参照してください。
+{{site.data.keyword.iva_full}} は IBM Voice Gateway に基づいているため、API は同じ仕方で機能します。 Voice Gateway を使い慣れている場合は、{{site.data.keyword.iva_short}} でも {{site.data.keyword.conversationshort}} ダイアログで同じアクションと状態変数を使用できます。 [Voice Gateway API のアクション・タグおよび状態変数](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html)を参照してください。
 {: tip}
 
 ## ダイアログ応答での JSON の編集
@@ -182,7 +181,7 @@ lastupdated: "2018-06-14"
 
 | 状態変数名 | 予期される値 | 説明 |
 | -------------- | ----- | ----------- |
-| `vgwSessionID`   | ユーザー定義 <br/><br/> デフォルト: `Call-ID` |SIP INVITE 要求からプルされるカスタム・セッション ID ヘッダー。この値は、セッションに関連するすべてのボイス・エージェント監査ログで使用されるグローバル・セッション ID を表します。 |
+| `vgwSessionID`   | ユーザー定義 <br/><br/> デフォルト: `Call-ID` | SIP INVITE 要求からプルされるカスタム・セッション ID ヘッダー。 この値は、セッションに関連するすべてのボイス・エージェント監査ログで使用されるグローバル・セッション ID を表します。 |
 | `vgwSIPCallID` | SIP `Call-ID` | 通話に関連付けられた SIP 通話 ID。 |
 | `vgwSIPRequestURI` | SIP `Request-URI` | 通話を開始した SIP 要求 URI。 |
 | `vgwSIPToURI` | SIP `To` URI | 通話に関連付けられた SIP `To` URI。 |
@@ -191,6 +190,6 @@ lastupdated: "2018-06-14"
 | `vgwHangUp` | `Yes` / `No` | 会話が終了したかどうかを指定します。 |
 | `vgwHangupReason` | 文字列 | 発信者によって、またはエラーのためにハングアップが始まったときに、通話が切断された理由を示すため、この変数が {{site.data.keyword.conversationshort}} サービスに送信されます。 {{site.data.keyword.conversationshort}} サービスに送信されるメッセージ要求のテキストには、「vgwHangUp」も含まれます。 |
 | `vgwConversationResponseTimeout` | 時間 (秒数)<br/><br/>デフォルト: `5`  | {{site.data.keyword.conversationshort}} サービスからの応答をボイス・エージェントが待機する秒数。 この時間を過ぎると、ボイス・エージェントは {{site.data.keyword.conversationshort}} サービスとの通信を再試行します。 それでもサービスに到達できない場合、通話は失敗します。 |
-| `vgwSTTResponse` | JSON オブジェクト |JSON 形式の {{site.data.keyword.speechtotextshort}} サービスからの最終応答。これには、推奨候補および代替候補のトランスクリプトと信頼性スコアが含まれます。<p>例えば、次の形式は、{{site.data.keyword.speechtotextshort}} サービスから受け取る形式と正確に一致します。</p><p><code>{<br/>&nbsp;&nbsp;"result_index": 0,<br/>&nbsp;&nbsp;"warnings": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;"Unknown arguments: continuous."<br/>&nbsp;&nbsp;],<br/>&nbsp;&nbsp;"results": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"final": true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"alternatives": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello world",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.758<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello wooled",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.358<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;]<br/>}.</code></p> |
+| `vgwSTTResponse` | JSON オブジェクト | JSON 形式の {{site.data.keyword.speechtotextshort}} サービスからの最終応答。これには、推奨候補および代替候補のトランスクリプトと信頼性スコアが含まれます。 <p>例えば、次の形式は、{{site.data.keyword.speechtotextshort}} サービスから受け取る形式と正確に一致します。</p><p><code>{<br/>&nbsp;&nbsp;"result_index": 0,<br/>&nbsp;&nbsp;"warnings": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;"Unknown arguments: continuous."<br/>&nbsp;&nbsp;],<br/>&nbsp;&nbsp;"results": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"final": true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"alternatives": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello world",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.758<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello wooled",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.358<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;]<br/>}.</code></p> |
 | `vgwIsDTMF` | `Yes` / `No` | {{site.data.keyword.conversationshort}} サービスへの入力がデュアルトーン複数周波数 (DTMF) かどうかを示します。 |
 {: caption="表 3. ボイス・エージェントによって設定される変数" caption-side="top"}

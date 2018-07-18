@@ -19,8 +19,7 @@ lastupdated: "2018-06-14"
 可以通过在 {{site.data.keyword.conversationfull}} 服务中定义操作标记和状态变量来控制语音代理程序的行为。操作标记用于启动语音代理程序在对话会话期间执行的操作。状态变量用于定义语音代理程序在整个对话期间持续保持的特征（除非另有更改）。
 {: shortdesc}
 
-{{site.data.keyword.iva_full}} 基于 IBM Voice Gateway，因此 API 的工作方式与之相同。如果您熟悉 Voice Gateway，那么可以在 {{site.data.keyword.conversationshort}} 对话中使用与 {{site.data.keyword.iva_short}} 相同的操作和状态变量。
-请参阅 [Voice Gateway API 中的操作标记和状态变量](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html)。
+{{site.data.keyword.iva_full}} 基于 IBM Voice Gateway，因此 API 的工作方式与之相同。如果您熟悉 Voice Gateway，那么可以在 {{site.data.keyword.conversationshort}} 对话中使用与 {{site.data.keyword.iva_short}} 相同的操作和状态变量。请参阅 [Voice Gateway API 中的操作标记和状态变量](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html)。
 {: tip}
 
 ## 在对话响应中编辑 JSON
@@ -87,7 +86,7 @@ lastupdated: "2018-06-14"
 与单个操作不同，在使用 `vgwActionSequence` 标记时，操作列表必须包含 `vgwActPlayText` 操作，语音代理程序才能播放话语。与 `vgwAction` 标记相反，`output.text` 字段中的话语不会自动播放。
 {: tip}
 
-在以下更复杂的示例中，`vgwActionSequence` 标记中定义的操作会指示语音代理程序在播放话语期间，禁用语音转文字处理并收集 DTMF 输入。
+在以下较为复杂的示例中，`vgwActionSequence` 标记中定义的操作会指示语音代理程序在播放话语期间，禁用语音转文字处理并收集 DTMF 输入。
 
 ```json
 {
@@ -192,6 +191,6 @@ lastupdated: "2018-06-14"
 |`vgwHangUp`|`Yes`/`No`|指示对话是否已结束。|
 |`vgwHangupReason`|字符串|如果呼叫被呼叫者挂断或由于错误被挂断，那么系统会将此变量发送给 {{site.data.keyword.conversationshort}} 服务，以指示呼叫连接断开的原因。在发送给 {{site.data.keyword.conversationshort}} 服务的消息请求文本中，还会包含“vgwHangUp”。|
 |`vgwConversationResponseTimeout`|时间（秒）<br/><br/>缺省值：`5`|语音代理程序等待 {{site.data.keyword.conversationshort}} 服务响应的时间（以秒为单位）。如果超过此时间，语音代理程序会重新尝试联系 {{site.data.keyword.conversationshort}} 服务。如果仍无法联系服务，那么呼叫失败。|
-|`vgwSTTResponse`|JSON 对象|来自 {{site.data.keyword.speechtotextshort}} 服务的最终响应（JSON 格式），内容包首选假设及任何备选假设的脚本和置信度分数。<p>例如，以下格式与从 {{site.data.keyword.speechtotextshort}} 服务收到的格式完全一致：</p><p><code>{<br/>&nbsp;&nbsp;"result_index": 0,<br/>&nbsp;&nbsp;"warnings": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;"Unknown arguments: continuous."<br/>&nbsp;&nbsp;],<br/>&nbsp;&nbsp;"results": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"final": true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"alternatives": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello world",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.758<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello wooled",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.358<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;]<br/>}.</code></p> |
+|`vgwSTTResponse`|JSON 对象|来自 {{site.data.keyword.speechtotextshort}} 服务的最终响应（JSON 格式），内容包含首选假设及任何备选假设的脚本和置信度分数。<p>例如，以下格式与从 {{site.data.keyword.speechtotextshort}} 服务收到的格式完全一致：</p><p><code>{<br/>&nbsp;&nbsp;"result_index": 0,<br/>&nbsp;&nbsp;"warnings": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;"Unknown arguments: continuous."<br/>&nbsp;&nbsp;],<br/>&nbsp;&nbsp;"results": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"final": true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"alternatives": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello world",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.758<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello wooled",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.358<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;]<br/>}.</code></p> |
 |`vgwIsDTMF`|`Yes`/`No`|指示 {{site.data.keyword.conversationshort}} 服务的输入是否为双音多频信号 (DTMF)。|
 {: caption="表 3. 语音代理程序设置的变量" caption-side="top"}

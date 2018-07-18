@@ -24,8 +24,7 @@ lastupdated: "2018-06-13"
 
 A criação de log é automaticamente ativada para o {{site.data.keyword.iva_full}}. É possível visualizar os logs de chamada do agente de voz no painel _Uso_.
 
-O painel _Uso_ mostra estatísticas rápidas sobre o uso do serviço para o mês atual e os outros recursos disponíveis em seu plano. 
-Essas informações incluem o número máximo de conexões simultâneas que são encontradas no mês atual e o número máximo de conexões
+O painel _Uso_ mostra estatísticas rápidas sobre o uso do serviço para o mês atual e os outros recursos disponíveis em seu plano. Essas informações incluem o número máximo de conexões simultâneas que são encontradas no mês atual e o número máximo de conexões
 simultâneas disponíveis em seu plano. Também é possível ver o número de minutos grátis incluídos no plano e o número de minutos usados. A seção _Logs de chamada_ segue suas _Estatísticas rápidas_.
 
 Na seção _Logs de chamada_, é possível filtrar os logs de chamada por data e nome do agente de voz para
