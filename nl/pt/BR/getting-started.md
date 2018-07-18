@@ -52,8 +52,7 @@ tronco SIP.
 2. Insira as configurações básicas para seu agente de voz:
   * **Nome:** um nome exclusivo para seu agente de voz, como `Suporte ao cliente`
   * **Número do telefone:** o número do telefone completo que você associou ao seu tronco SIP, incluindo
-os códigos de país e de área. Por exemplo, para um número 800 dos Estados Unidos, especifique o número de telefone como 18883334444. 
-O número do telefone pode ter espaços e caracteres + ( ) -.
+os códigos de país e de área. Por exemplo, para um número 800 dos Estados Unidos, especifique o número de telefone como 18883334444. O número do telefone pode ter espaços e caracteres + ( ) -.
   * **Descrição:** uma descrição opcional de seu uso
 
 3. Crie as instâncias de serviço {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} e {{site.data.keyword.texttospeechshort}} para seu agente de voz. Você pode optar por criar um agente de voz com qualquer um dos métodos a seguir:

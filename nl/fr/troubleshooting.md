@@ -22,15 +22,15 @@ Vous rencontrez des problèmes avec {{site.data.keyword.iva_full}} ? Passez en r
 ## Traitement des problèmes liés à {{site.data.keyword.iva_short}}
 {: #how-to}
 
-Pour traiter les problèmes liés à vos agents vocaux, vous pouvez utiliser la consignation, l'utilisation et la transmission d'événements afin de trouver des enregistrements d'erreurs et d'incidents. Ces enregistrements peuvent vous aider à diagnostiquer et résoudre des problèmes liés à vos agents vocaux. Si vous rencontrez des difficultés liées à {{site.data.keyword.iva_short}}, exécutez les étapes décrites ci-après. 
+Pour traiter les problèmes liés à vos agents vocaux, vous pouvez utiliser la consignation, l'utilisation et la transmission d'événements afin de trouver des enregistrements d'erreurs et d'incidents. Ces enregistrements peuvent vous aider à diagnostiquer et résoudre des problèmes liés à vos agents vocaux. Si vous rencontrez des difficultés liées à {{site.data.keyword.iva_short}}, exécutez les étapes décrites ci-après.
 
 1. En cas d'échec d'un appel, l'échange de {{site.data.keyword.conversationshort}} final peut être à l'origine de cette défaillance.
 
 1. Les journaux d'utilisation contiennent les erreurs qui peuvent s'être produites durant un appel en particulier. Voir [Affichage des informations d'utilisation et des journaux d'appels](logging.html).
 
-1. Recherchez d'éventuelles erreurs dans vos journaux de fournisseur de services. Par exemple, Twilio fournit des journaux pour chaque liaison SIP qu'il héberge. 
+1. Recherchez d'éventuelles erreurs dans vos journaux de fournisseur de services. Par exemple, Twilio fournit des journaux pour chaque liaison SIP qu'il héberge.
 
-1. En [activant la transmission d'événements pour les agents vocaux](event-forwarding.html), vous pouvez configurer votre agent vocal pour la transmission d'enregistrements CDR à une base de données Cloudant, puis déterminer la raison pour laquelle un appel a échoué. D'autres événements, tels que des événements d'échange {{site.data.keyword.conversationshort}}, peuvent fournir des détails sur chaque échange de conversation dans un appel. 
+1. En [activant la transmission d'événements pour les agents vocaux](event-forwarding.html), vous pouvez configurer votre agent vocal pour la transmission d'enregistrements CDR à une base de données Cloudant, puis déterminer la raison pour laquelle un appel a échoué. D'autres événements, tels que des événements d'échange {{site.data.keyword.conversationshort}}, peuvent fournir des détails sur chaque échange de conversation dans un appel.
 
 **Important :** Les événements d'enregistrement des détails d'appel, de transcription et d'échange incluent des informations fournies par vos utilisateurs pouvant potentiellement contenir des renseignements médicaux protégés (PHI), des informations personnelles identifiables (PII) ou des données PCI DSS (norme de sécurité de l'industrie des cartes de paiement). Pour empêcher que les informations personnelles ne soient exposées, vous devez faire en sorte que votre instance {{site.data.keyword.cloudant_short_notm}} protège correctement les informations confidentielles partagées par vos utilisateurs ou divulguées durant une conversation.
 
@@ -38,13 +38,13 @@ Pour traiter les problèmes liés à vos agents vocaux, vous pouvez utiliser la 
 ## Accès à l'aide
 {: #help}
 
-Si vous avez besoin d'aide, joignez notre communauté de développeurs en publiant des questions ou des commentaires aux emplacements suivants, tous activement surveillés. 
+Si vous avez besoin d'aide, joignez notre communauté de développeurs en publiant des questions ou des commentaires aux emplacements suivants, tous activement surveillés.
 
 * Publiez votre question sur le [forum dwAnswers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/topics/voice-agent/) en y ajoutant la balise `voice-agent`.
 * Publiez votre question sur [StackOverflow ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://stackoverflow.com/questions/tagged/voice-agent){: new_window} en y ajoutant la balise `voice-agent`.
 * Rejoignez-nous sur Slack, dans l'équipe [IBM Cloud Technology ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://slack-invite-ibm-cloud-tech.mybluemix.net/) sous le canal `#ibmvoicegateway`.
 
-**N'oubliez pas** : avant de publier des journaux ou des enregistrements d'appels, retirez toutes les informations personnelles que vos appelants et utilisateurs ont pu partager durant la conversation. 
+**N'oubliez pas** : avant de publier des journaux ou des enregistrements d'appels, retirez toutes les informations personnelles que vos appelants et utilisateurs ont pu partager durant la conversation.
 
 ## Astuces relatives au traitement des incidents
 {: #troubleshooting-tips}

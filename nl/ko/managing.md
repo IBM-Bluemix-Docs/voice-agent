@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 
 ---
@@ -35,6 +35,8 @@ _관리_ 대시보드에서 음성 에이전트를 작성, 편집, 복제, 구�
 1. **전화번호**에는 국가 및 지역 코드가 포함된 SIP 트렁크의 번호를 추가하십시오. 예를 들어, 미국 800 번호의 경우 전화번호를 `18883334444`로 지정하십시오. 전화번호에는 공백 및 `+ ( ) -` 문자가 포함될 수 있습니다.
 
 1. 선택적으로 음성 에이전트에 대해 설명하십시오.
+
+1. 호출 전송을 사용으로 설정하려면 **전송 대상**에 대한 종료 URI를 구성할 수 있습니다. [호출 전송 설정](call-transfer.html)을 참조하십시오. 전송 대상에 개인 전화번호를 사용하지 마십시오. 
 
 1. Watson 서비스 인스턴스에 대한 연결을 구성하십시오. **위치 1** 및 **위치 2** 모두에 대한 연결을 구성하여 다중 Watson 서비스 인스턴스에 연결할 수 있습니다. 다중 서비스 인스턴스에 연결하면 가동 중단 시에 음성 에이전트가 대체 서비스 인스턴스로 전환할 수 있습니다. [다중 Watson 서비스 위치 추가](#add_location)를 참조하십시오. 
 
@@ -124,7 +126,7 @@ _표준_ 또는 _프리미엄_ 계정이 있는 경우 서비스 중복성을 �
 
 기존 음성 에이전트에 Watson 서비스 위치를 추가하려면 구성할 음성 에이전트에 대해 **에이전트 편집**을 클릭하십시오. 연결할 {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}} 또는 {{site.data.keyword.speechtotextshort}} 인스턴스에 대해 **위치 1** 또는 **위치 2**를 선택하고 구성 정보를 추가하십시오. 자신의 작업공간이나 기타 작업공간에서 Watson 서비스 인스턴스를 사용할 수 있습니다. [기타 {{site.data.keyword.Bluemix_notm}} 작업공간에서 서비스 인스턴스 사용](#other_services)을 참조하십시오. 
 
-**참고:** 서비스 중복성을 원하는 경우에는 서로 다른 위치에 대해 서로 다른 서비스 지역에서 Watson 서비스 인스턴스를 사용해야 합니다. 
+**중요:** 서비스 중복성을 원하는 경우에는 서로 다른 위치에 대해 서로 다른 서비스 지역에서 Watson 서비스 인스턴스를 사용해야 합니다. 
 
 **위치 사용** 상자를 사용하여 위치를 사용 또는 사용 안함으로 설정할 수 있습니다. **위치 1**은 기본적으로 사용되며 **위치 2**는 기본적으로 사용되지 않습니다. 각 Watson 서비스마다 최소한 하나의 위치를 사용해야 합니다. 
 
@@ -152,7 +154,7 @@ _표준_ 또는 _프리미엄_ 계정이 있는 경우 서비스 중복성을 �
 
   * **{{site.data.keyword.texttospeechshort}}:** **음성** 필드에서 서비스가 사용하는 언어 및 음성을 선택하십시오. 서비스에 대한 음성을 지정해야 합니다. 
 
-**참고:** 음성 에이전트가 작동하려면 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 및 {{site.data.keyword.texttospeechshort}}를 동일한 언어로 구성해야 합니다. [지원되는 언어](about.html#supported-languages)를 참조하십시오.
+**중요:** 음성 에이전트가 작동하려면 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 및 {{site.data.keyword.texttospeechshort}}를 동일한 언어로 구성해야 합니다. [지원되는 언어](about.html#supported-languages)를 참조하십시오.
 
 ### 음성 에이전트에 대한 {{site.data.keyword.conversationshort}} 구성
 {: #conversation_va}

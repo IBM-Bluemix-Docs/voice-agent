@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 
 ---
@@ -35,6 +35,8 @@ When you create a voice agent, {{site.data.keyword.iva_short}} automatically sea
 1. For **Phone number**, add the number from your SIP trunk, including the country and area codes. For example, for a United States 800 number, specify the phone number as `18883334444`. The phone number can have spaces and `+ ( ) -` characters.
 
 1. Optionally describe your voice agent.
+
+1. If you want to enable call transfer, you can configure a termination URI for your **Transfer Target**. See [Setting up call transfer](call-transfer.html). Do not use a personal phone number for your transfer target.
 
 1. Configure the connections to your Watson service instances. You can connect to multiple Watson services instances by configuring connections for both **Location 1** and **Location 2**. Having connections to multiple service instances enables your voice agent to switch to an alternate service instance if an outage occurs. See [Adding multiple Watson service locations](#add_location).
 

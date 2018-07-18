@@ -66,7 +66,7 @@ Quando configuri il servizio {{site.data.keyword.conversationshort}}, puoi inclu
 
 Potresti voler incorporare un motore di orchestrazione del servizio nella tua distribuzione {{site.data.keyword.iva_full_notm}} per i seguenti motivi:
 
-* Per annullare l'identità delle richieste e rimuovere le informazioni personali come PHI, PII e PCI prima che vengano inviate al servizio {{site.data.keyword.conversationshort}} 
+* Per annullare l'identità delle richieste e rimuovere le informazioni personali come PHI, PII e PCI prima che vengano inviate al servizio {{site.data.keyword.conversationshort}}
 * Per personalizzare le risposte dal servizio {{site.data.keyword.conversationshort}}, ad esempio utilizzando le informazioni di ubicazione del cliente per fornire una previsione meteo personale
 * Per abilitare le funzioni di telefonia, come l'inclusione di un ID del chiamante o la raccolta delle cifre DTMF dei numeri dell'account
 * Per personalizzare le interazioni con i clienti utilizzando le API
@@ -79,7 +79,7 @@ Per ulteriori informazioni su come implementare un motore di orchestrazione del 
 
 * **Interruzione:** i chiamanti possono interrompere Watson se l'espressione Watson che sta venendo inviata al chiamante non è rilevante nel contesto della conversazione.
 * **Riaggancio della chiamata:** all'agent vocale può essere segnalato di terminare la chiamata dal servizio {{site.data.keyword.conversationshort}} impostando una tag di azione.
-* **Musica in attesa:** l'agent vocale può riprodurre un file audio specificato da {{site.data.keyword.conversationshort}} per un periodo di tempo o finché l'elaborazione in {{site.data.keyword.conversationshort}} non è completa. 
+* **Musica in attesa:** l'agent vocale può riprodurre un file audio specificato da {{site.data.keyword.conversationshort}} per un periodo di tempo o finché l'elaborazione in {{site.data.keyword.conversationshort}} non è completa.
 * **Inserimento di tag SSML:** le tag Speech Synthesis Markup Language (SSML) vengono utilizzate per controllare come {{site.data.keyword.texttospeechshort}} sintetizza le espressioni in audio. {{site.data.keyword.iva_short}} supporta il passaggio di queste tag tramite {{site.data.keyword.texttospeechshort}} quando ricevute dal servizio {{site.data.keyword.conversationshort}}.
 * **Supporto DTMF:** {{site.data.keyword.iva_short}} supporta [RFC 4733 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://tools.ietf.org/html/rfc4733), il payload RTP per le cifre DTMF, i toni e le trasmissioni di telefonia. Le trasmissioni Dual-tone multi-frequency (DTMF) vengono convertite in espressioni di testo a singola cifra che vengono inviate ai servizi Watson.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 
 ---
@@ -36,14 +36,15 @@ Quando você cria um agente de voz, o {{site.data.keyword.iva_short}} procura au
 
 1. Opcionalmente, descreva seu agente de voz.
 
+1. Se deseja ativar a transferência de chamada, é possível configurar um URI de finalização para o **Destino de transferência**. Veja [Configurando a transferência de chamada](call-transfer.html). Não use um número de telefone pessoal para o destino de transferência.
+
 1. Configure as conexões para as suas instâncias de serviço do Watson. É possível se conectar a múltiplas instâncias de serviços
 do Watson configurando conexões para o **Local 1** e o **Local 2**. Ter conexões com
 múltiplas instâncias de serviço permite que o seu agente de voz alterne para uma instância de serviço alternativa se uma
 indisponibilidade ocorrer. Consulte [Incluindo vários locais de serviço Watson](#add_location).
 
 **Importante**: as contas de _Avaliação_ e _Lite_ podem se conectar apenas ao
-local em que a sua instância do serviço {{site.data.keyword.iva_short}} é criada. O seu segundo local não é um
-segundo agente de voz. Ele atua apenas como um backup para recuperação de desastre.
+local em que a sua instância do serviço {{site.data.keyword.iva_short}} é criada. O seu segundo local não é um segundo agente de voz. Ele atua apenas como um backup para recuperação de desastre.
 
 1. Em **{{site.data.keyword.conversationshort}}**, configure a conexão com a sua instância de
 serviço do {{site.data.keyword.conversationshort}} clicando em **Ativar local 1** ou
@@ -97,8 +98,7 @@ plano listado em **Máximo de conexões simultâneas**. Também é possível ver
 que são usadas por seus agentes de voz durante o mês atual em **Máximo de conexões simultâneas usadas**.
 
 Se você deseja mudar o número máximo de conexões simultâneas em seu plano, clique no ícone **Editar**. Na
-janela _Editar máximo de conexões simultâneas_, escolha o número máximo de conexões simultâneas e clique em **Salvar**. 
-O número mínimo de conexões simultâneas que pode ser configurado por meio de autoatendimento é 10 e o máximo é 50. Se você precisar
+janela _Editar máximo de conexões simultâneas_, escolha o número máximo de conexões simultâneas e clique em **Salvar**. O número mínimo de conexões simultâneas que pode ser configurado por meio de autoatendimento é 10 e o máximo é 50. Se você precisar
 de mais de 50 conexões simultâneas para o seu agente de voz, consulte [Solicitando
 configuração de rede assistida](connect-SIP.html#request-setup).
 
@@ -155,7 +155,7 @@ resposta `180 ringing` enquanto o {{site.data.keyword.iva_short}} processa uma c
 * **Colocar o responsável pela chamada em espera na transferência**: coloca o responsável pela chamada
 em espera durante a transferência. Ativado por padrão.
 * **Desconectar chamada na falha de transferência**: determina se a chamada será ou não desconectada se
-uma transferência de chamada falhar. Ativado por padrão. Se a configuração estiver desativada e uma transferência de chamada falhar,
+uma transferência de chamada falhar.  Ativado por padrão. Se a configuração estiver desativada e uma transferência de chamada falhar,
 o {{site.data.keyword.iva_short}} iniciará um turno de conversa. Em seguida, o {{site.data.keyword.conversationshort}}
 poderá desconectar a chamada ou transferi-la para um destino diferente, conforme configurado no diálogo.
 * **Notificar o {{site.data.keyword.conversationshort}} sobre eventos da rede**: quando ativado, e

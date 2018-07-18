@@ -38,7 +38,7 @@ Per risolvere i problemi con i tuoi agent vocali, puoi utilizzare la registrazio
 ## Come ottenere supporto
 {: #help}
 
-Se necessiti aiuto, unisciti alla nostra community di sviluppatori inserendo le tue domande o i tuoi commenti in una qualsiasi delle seguenti posizioni, che sono tutte monitorate in modo attivo. 
+Se necessiti aiuto, unisciti alla nostra community di sviluppatori inserendo le tue domande o i tuoi commenti in una qualsiasi delle seguenti posizioni, che sono tutte monitorate in modo attivo.
 
 * Pubblica in [dwAnswers forum ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/answers/topics/voice-agent/) con la tag `voice-agent`
 * Pubblica in [StackOverflow ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://stackoverflow.com/questions/tagged/voice-agent){: new_window} con la tag `voice-agent`

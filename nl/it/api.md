@@ -57,7 +57,7 @@ La seguente azione singola nella tag `vgwAction` dice all'agent vocale di riagga
 ```
 {: codeblock}
 
-La seguente azione dice all'agent vocale di raccogliere l'input della trasmissione dual-tone multi-frequency (DTMF) e riproduce il testo definito al chiamante. 
+La seguente azione dice all'agent vocale di raccogliere l'input della trasmissione dual-tone multi-frequency (DTMF) e riproduce il testo definito al chiamante.
 
 ```json
 {
@@ -86,7 +86,7 @@ Per eseguire una o più azioni in un solo turno di conversazione, puoi definire 
 Diversamente dalle azioni singole, perché un agent vocale riproduca un'espressione quando utilizzi la tag `vgwActionSequence`, l'elenco delle azioni deve contenere l'azione `vgwActPlayText`. A differenza della tag `vgwAction`, un'espressione nel campo `output.text` non viene automaticamente riprodotta.
 {: tip}
 
-Nel seguente esempio più complesso, le azioni definite nella tag `vgwActionSequence` dicono all'agent vocale di disabilitare l'elaborazione da voce a testo e raccogliere l'input DTMF quando riproduce un'espressione. 
+Nel seguente esempio più complesso, le azioni definite nella tag `vgwActionSequence` dicono all'agent vocale di disabilitare l'elaborazione da voce a testo e raccogliere l'input DTMF quando riproduce un'espressione.
 
 ```json
 {
@@ -159,7 +159,7 @@ Ad esempio, puoi definire la seguente variabile di stato per impostare il messag
 ```
 {: codeblock}
 
-L'agent vocale assume che il servizio {{site.data.keyword.conversationshort}} è senza stato e che tutti gli stati vengono conservati dall'agent vocale tra gli scambi con il servizio {{site.data.keyword.conversationshort}}. Per ogni turno di conversazione in una chiamata, lo stato viene trasmesso al servizio {{site.data.keyword.conversationshort}} e restituito dal servizio nella sezione `context` dei messaggi REST. 
+L'agent vocale assume che il servizio {{site.data.keyword.conversationshort}} è senza stato e che tutti gli stati vengono conservati dall'agent vocale tra gli scambi con il servizio {{site.data.keyword.conversationshort}}. Per ogni turno di conversazione in una chiamata, lo stato viene trasmesso al servizio {{site.data.keyword.conversationshort}} e restituito dal servizio nella sezione `context` dei messaggi REST.
 
 ### Le variabili di stato impostate nel dialogo {{site.data.keyword.conversationshort}}
 {: #state-variables-conv}
@@ -181,7 +181,7 @@ Puoi impostare le seguenti variabili di stato all'interno del dialogo {{site.dat
 
 | Nome variabile stato | Valore previsto | Descrizione |
 | -------------- | ----- | ----------- |
-| `vgwSessionID`   | Definito dall'utente <br/><br/> Valore predefinito: `Call-ID` |Un'intestazione dell'ID della sessione personalizzata estratta dalla richiesta SIP INVITE. Il valore rappresenta l'ID di sessione globale utilizzato in tutti i log di controllo dell'agent vocale correlati alla sessione. |
+| `vgwSessionID`   | Definito dall'utente <br/><br/> Valore predefinito: `Call-ID` | Un'intestazione dell'ID della sessione personalizzata estratta dalla richiesta SIP INVITE. Il valore rappresenta l'ID di sessione globale utilizzato in tutti i log di controllo dell'agent vocale correlati alla sessione. |
 | `vgwSIPCallID` | SIP `Call-ID` | L'ID della chiamata SIP associato alla chiamata. |
 | `vgwSIPRequestURI` | SIP `Request-URI` | L'URI della richiesta SIP che ha avviato la chiamata. |
 | `vgwSIPToURI` | SIP `To` URI | Il SIP `To` URI associato alla chiamata. |
@@ -190,6 +190,6 @@ Puoi impostare le seguenti variabili di stato all'interno del dialogo {{site.dat
 | `vgwHangUp` | `Sì` / `No` | Indica se la conversazione è stata terminata. |
 | `vgwHangupReason` | Stringa | Quando viene eseguito un riaggancio dal chiamante o a causa di un errore, questa variabile viene inviata al servizio {{site.data.keyword.conversationshort}} per indicare il motivo della disconnessione della chiamata. Il testo nella richiesta di messaggio che viene inviato al servizio {{site.data.keyword.conversationshort}} include inoltre "vgwHangUp". |
 | `vgwConversationResponseTimeout` | Tempo in secondi<br/><br/>Valore predefinito: `5`  | Il tempo in secondi in cui l'agent vocale attende una risposta dal servizio {{site.data.keyword.conversationshort}}. Se il tempo viene superato, l'agent vocale ritenta di contattare il servizio {{site.data.keyword.conversationshort}}. Se il servizio non può ancora essere raggiunto, la chiamata non riesce. |
-| `vgwSTTResponse` | Oggetto JSON |La risposta finale dal servizio {{site.data.keyword.speechtotextshort}} nel formato JSON, che include la trascrizione e il punteggio di affidabilità per le ipotesi preferite e tutte le alternative. <p>Ad esempio, il seguente formato corrisponde esattamente al formato ricevuto dal servizio {{site.data.keyword.speechtotextshort}}. </p><p><code>{<br/>&nbsp;&nbsp;"result_index": 0,<br/>&nbsp;&nbsp;"warnings": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;"Unknown arguments: continuous."<br/>&nbsp;&nbsp;],<br/>&nbsp;&nbsp;"results": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"final": true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"alternatives": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello world",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.758<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello wooled",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.358<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;]<br/>}.</code></p> |
+| `vgwSTTResponse` | Oggetto JSON | La risposta finale dal servizio {{site.data.keyword.speechtotextshort}} nel formato JSON, che include la trascrizione e il punteggio di affidabilità per le ipotesi preferite e tutte le alternative. <p>Ad esempio, il seguente formato corrisponde esattamente al formato ricevuto dal servizio {{site.data.keyword.speechtotextshort}}.</p><p><code>{<br/>&nbsp;&nbsp;"result_index": 0,<br/>&nbsp;&nbsp;"warnings": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;"Unknown arguments: continuous."<br/>&nbsp;&nbsp;],<br/>&nbsp;&nbsp;"results": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"final": true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"alternatives": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello world",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.758<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello wooled",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.358<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;]<br/>}.</code></p> |
 | `vgwIsDTMF` | `Sì` / `No` | Indica se l'input al servizio {{site.data.keyword.conversationshort}} è una trasmissione dual-tone multi-frequency (DTMF). |
 {: caption="Tabella 3. Le variabili impostate dall'agent vocale" caption-side="top"}

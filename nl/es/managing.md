@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 
 ---
@@ -35,6 +35,8 @@ Cuando crea un agente de voz, {{site.data.keyword.iva_short}} busca automáticam
 1. Para **Número de teléfono**, añada el número de su conexión troncal SIP, incluidos los códigos de país y de área. Por ejemplo, para un número 800 de Estados Unidos, especifique el número de teléfono como `18883334444`. El número de teléfono puede tener espacios y caracteres `+ ( ) -`.
 
 1. Describa opcionalmente el agente de voz.
+
+1. Si desea habilitar la transferencia de llamada, puede configurar un URI de terminación para su **Destino de transferencia**. Consulte [Configuración de transferencia de llamada](call-transfer.html). No utilice un número de teléfono personal como destino de transferencia.
 
 1. Configure las conexiones a sus instancias de servicio de Watson. Puede conectarse a varias instancias de servicio de Watson configurando las conexiones tanto para la **Ubicación 1** como para la **Ubicación 2**. Disponer de conexiones a varias instancias de servicio permite al agente de voz conmutar a una instancia de servicio alternativa si se produce una interrupción del servicio. Consulte [Adición de varias ubicaciones de servicio de Watson](#add_location).
 

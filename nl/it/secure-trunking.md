@@ -17,7 +17,7 @@ lastupdated: "2018-06-14"
 # Protezione delle connessioni
 {: #securing}
 
-Puoi abilitare SRTP (Secure Real Time Transport Protocol) e la codifica utilizzando TLS (Transport Layer Security) per i tuoi trunk SIP per proteggere le connessioni effettuate con {{site.data.keyword.iva_full}}. 
+Puoi abilitare SRTP (Secure Real Time Transport Protocol) e la codifica utilizzando TLS (Transport Layer Security) per i tuoi trunk SIP per proteggere le connessioni effettuate con {{site.data.keyword.iva_full}}.
 
 ## Configurazione di SRTP in Twilio
 {: #SRTP}
@@ -32,7 +32,7 @@ Puoi abilitare SRTP (Secure Real Time Transport Protocol) e la codifica utilizza
 
 1. Nel dashboard _General_, trova la sezione _Secure Trunking_. Fai clic su **Disabled** per modificare l'impostazione di trunking protetto con **Enabled** e salva le tue modifiche.
 
-## Abilitazione della codifica solo per i messaggi SIP utilizzando TLS in Twilio 
+## Abilitazione della codifica solo per i messaggi SIP utilizzando TLS in Twilio
 {: #TLS}
 
 Se vuoi codificare soltanto i messaggi SIP in {{site.agent.keyword.iva_short}} senza SRTP, puoi selezionare un endpoint URI che utilizza TLS (Transport Layer Security) in Twilio.

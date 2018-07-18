@@ -19,8 +19,7 @@ lastupdated: "2018-06-14"
 É possível controlar o comportamento do seu agente de voz definindo tags de ação e variáveis de estado de dentro do serviço {{site.data.keyword.conversationfull}}. As tags de ação iniciam as ações realizadas pelo agente de voz durante uma sessão de conversa e as variáveis de estado definem as características do agente de voz que persistem durante toda a conversa, a menos que sofram mudanças.
 {: shortdesc}
 
-Como o {{site.data.keyword.iva_full}} é baseado no IBM Voice Gateway, a API funciona da mesma maneira. Se você estiver familiarizado com o Voice Gateway, poderá usar as mesmas ações e variáveis de estado em seus diálogos {{site.data.keyword.conversationshort}} com {{site.data.keyword.iva_short}}. 
-Consulte [Tags de ação e variáveis de estado na API do
+Como o {{site.data.keyword.iva_full}} é baseado no IBM Voice Gateway, a API funciona da mesma maneira. Se você estiver familiarizado com o Voice Gateway, poderá usar as mesmas ações e variáveis de estado em seus diálogos {{site.data.keyword.conversationshort}} com {{site.data.keyword.iva_short}}. Consulte [Tags de ação e variáveis de estado na API do
 Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html).
 {: tip}
 
@@ -163,8 +162,7 @@ Por exemplo, é possível definir a seguinte variável de estado para configurar
 ```
 {: codeblock}
 
-O agente de voz assume que o serviço {{site.data.keyword.conversationshort}} é stateless e que todo o estado é mantido no agente de voz entre trocas com o serviço {{site.data.keyword.conversationshort}}. 
-Para cada turno de conversa dentro de uma chamada, o estado é transmitido para o serviço {{site.data.keyword.conversationshort}}
+O agente de voz assume que o serviço {{site.data.keyword.conversationshort}} é stateless e que todo o estado é mantido no agente de voz entre trocas com o serviço {{site.data.keyword.conversationshort}}. Para cada turno de conversa dentro de uma chamada, o estado é transmitido para o serviço {{site.data.keyword.conversationshort}}
 e recebido de volta do serviço na seção `context` das mensagens REST.
 
 ### Variáveis de estado configuradas no diálogo {{site.data.keyword.conversationshort}}

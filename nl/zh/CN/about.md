@@ -39,7 +39,7 @@ lastupdated: "2018-06-13"
 <div style="float: right; padding-left: 1em; padding-bottom: 1em">
 <img src="images/conversation-flow.png" alt="{{site.data.keyword.iva_short}} 充当主数据中心，呼叫者和每个 Watson 服务通过它来进行通信。"/></div>
 
-以下步骤概述对话流。
+以下步骤概括说明了对话流。
 
 1. 呼叫者提出问题。
 1. 问题被传送到 {{site.data.keyword.speechtotextshort}} 服务。
@@ -60,13 +60,13 @@ lastupdated: "2018-06-13"
 ### 具有服务编排引擎的体系结构
 {: #arch-soe}
 
-在配置 {{site.data.keyword.conversationshort}} 服务时，可以包含服务编排引擎 (SOE) 以定制 {{site.data.keyword.iva_short}} 与服务之间的通信。服务编排引擎通过拦截消息请求和响应，并使用第三方 API 对它们进行修改，充当 {{site.data.keyword.conversationshort}} 服务的代理。{{site.data.keyword.iva_short}} 通过 {{site.data.keyword.conversationshort}} 服务的 REST API 与 {{site.data.keyword.conversationshort}} 服务进行通信，它会使用 `MessageRequest` 方法发送请求数据和接收相应的 JSON 响应。您还可以将 SOE 用作 {{site.data.keyword.virtualagentshort}} 的代理，具体的运行方式与上述情况相同。
+在配置 {{site.data.keyword.conversationshort}} 服务时，可以将服务编排引擎 (SOE) 包含在内，以定制 {{site.data.keyword.iva_short}} 与服务之间的通信。服务编排引擎将充当 {{site.data.keyword.conversationshort}} 服务的代理，它可以拦截消息请求和响应，以便您使用第三方 API 对它们进行修改。{{site.data.keyword.iva_short}} 通过 {{site.data.keyword.conversationshort}} 服务的 REST API 与 {{site.data.keyword.conversationshort}} 服务进行通信，它会使用 `MessageRequest` 方法发送请求数据和接收相应的 JSON 响应。您还可以将 SOE 用作 {{site.data.keyword.virtualagentshort}} 的代理，具体的运行方式与上述情况相同。
 
 ![{{site.data.keyword.iva_short}} 和 {{site.data.keyword.conversationshort}} 服务之间的消息请求和响应会传入服务编排引擎中，经过该引擎的修改后再传出去。](images/arch-soe.png)
 
 出于以下原因，您可能想要将服务编排引擎包含在您的 {{site.data.keyword.iva_full_notm}} 部署中：
 
-* 要在请求传送到 {{site.data.keyword.conversationshort}} 服务之前对请求执行去识别化处理并除去个人信息，例如 PHI、PII 和 PCI
+* 在请求传送到 {{site.data.keyword.conversationshort}} 服务之前，通过去识别化处理除去请求中的个人信息，例如 PHI、PII 和 PCI
 * 对来自 {{site.data.keyword.conversationshort}} 服务的响应进行个性化处理，例如使用客户位置信息来提供个性化天气预报
 * 启用电话功能，例如包含呼叫者标识或针对帐号收集 DTMF 数字
 * 使用 API 来定制与客户的交互

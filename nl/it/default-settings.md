@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-06-19"
 
 ---
 
@@ -21,12 +21,11 @@ lastupdated: "2018-06-13"
 
 | Nome impostazione | Valore predefinito |
 |------|---------------|
-| Autenticazione token {{site.data.keyword.conversationshort}} | Abilitato |
+| Autenticazione token {{site.data.keyword.conversationshort}}| Abilitato |
 | Autenticazione token motore di orchestrazione del servizio (SOE)| Disabilitato |
-| Autenticazione token {{site.data.keyword.virtualagentshort}} | Disabilitato |
-| Autenticazione token {{site.data.keyword.speechtotextshort}} | Abilitato |
+| Autenticazione token {{site.data.keyword.virtualagentshort}}| Disabilitato |
+| Autenticazione token {{site.data.keyword.speechtotextshort}}| Abilitato |
 | Filtro volgarità | Abilitato |
-| Ora silenzio definita | `1` |
 | Formattazione smart | Abilitato |
 | Soglia punteggio confidenza | `0.2` |
 | Ripresa della riproduzione dall'interruzione | Abilitato |

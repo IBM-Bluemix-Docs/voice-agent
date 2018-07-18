@@ -34,8 +34,7 @@ O {{site.data.keyword.iva_short}} é um dos vários componentes na arquitetura g
 ### Orquestração de serviços do Watson
 {: #watson}
 
-O diagrama a seguir mostra como o {{site.data.keyword.iva_short}} orquestra os vários serviços do Watson para criar um agente de voz. 
-Em segundos, as elocuções fluem entre os serviços para resultar em uma conversa que soe natural com o responsável pela chamada.
+O diagrama a seguir mostra como o {{site.data.keyword.iva_short}} orquestra os vários serviços do Watson para criar um agente de voz. Em segundos, as elocuções fluem entre os serviços para resultar em uma conversa que soe natural com o responsável pela chamada.
 
 <div style="float: right; padding-left: 1em; padding-bottom: 1em">
 <img src="images/conversation-flow.png" alt="{{site.data.keyword.iva_short}} acts as a hub through which the caller and each Watson service communicate."/></div>

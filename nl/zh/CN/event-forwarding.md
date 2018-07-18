@@ -16,7 +16,7 @@ lastupdated: "2018-06-11"
 # 为语音代理程序启用事件转发
 {: #event_forwarding}
 
-您可以启用事件转发，以使用 {{site.data.keyword.cloudantfull}} 数据库服务来收集 {{site.data.keyword.iva_full}} 中语音代理程序所处理的呼叫的相关信息。
+要启用事件转发来收集 {{site.data.keyword.iva_full}} 中语音代理程序所处理的呼叫的相关信息，可以使用 {{site.data.keyword.cloudantfull}} 数据库服务。
 {: shortdesc}
 
 您可能想要从 {{site.data.keyword.iva_short}} 中收集呼叫数据并加以分析，让对话给呼叫者一种更自然的感觉。您创建的每个语音代理程序都可以将事件报告转发给您管理的指定 {{site.data.keyword.cloudant_short_notm}}。事件报告包括呼叫详细记录 (CDR) 事件、转录事件和轮次事件报告。有关可转发的事件类型的更多信息，请参阅[报告事件](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}。

@@ -24,7 +24,7 @@ lastupdated: "2018-06-13"
 
 1. [{{site.data.keyword.iva_short}}カタログ・ページ](https://console.bluemix.net/catalog/services/voice-agent-with-watson)に移動します。
 
-   カタログ・ページにはサービスと価格プランに関する情報があります。 **サービス名**の値は変更可能です。 
+   カタログ・ページにはサービスと価格プランに関する情報があります。 **サービス名**の値は変更可能です。
 
 2. **「作成」**をクリックします。
 

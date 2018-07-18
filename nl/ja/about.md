@@ -60,7 +60,7 @@ SIP トランクを使用して、公衆電話網から環境を素早くセッ�
 ### サービス・オーケストレーション・エンジンを使用するアーキテクチャー
 {: #arch-soe}
 
-{{site.data.keyword.conversationshort}} サービスの構成時にサービス・オーケストレーション・エンジン (SOE) を組み込んで、{{site.data.keyword.iva_short}} とサービスの間の通信をカスタマイズすることができます。メッセージ要求と応答を代行受信し、それらをサード・パーティー API を使用して変更することで、サービス・オーケストレーション・エンジンは {{site.data.keyword.conversationshort}} サービスのプロキシーとして機能します。 {{site.data.keyword.iva_short}} と {{site.data.keyword.conversationshort}} サービスは、{{site.data.keyword.conversationshort}} サービスの REST API を介して通信し、`MessageRequest` 方式を使用して要求データを送信し、対応する JSON 応答を受信します。 SOE を {{site.data.keyword.virtualagentshort}} のプロキシーとして使用することもできます。その場合は SOE によって同様の機能が実行されます。
+{{site.data.keyword.conversationshort}} サービスの構成時にサービス・オーケストレーション・エンジン (SOE) を組み込んで、{{site.data.keyword.iva_short}} とサービスの間の通信をカスタマイズすることができます。 メッセージ要求と応答を代行受信し、それらをサード・パーティー API を使用して変更することで、サービス・オーケストレーション・エンジンは {{site.data.keyword.conversationshort}} サービスのプロキシーとして機能します。 {{site.data.keyword.iva_short}} と {{site.data.keyword.conversationshort}} サービスは、{{site.data.keyword.conversationshort}} サービスの REST API を介して通信し、`MessageRequest` 方式を使用して要求データを送信し、対応する JSON 応答を受信します。 SOE を {{site.data.keyword.virtualagentshort}} のプロキシーとして使用することもできます。その場合は SOE によって同様の機能が実行されます。
 
 ![{{site.data.keyword.iva_short}} と {{site.data.keyword.conversationshort}} サービスの間のメッセージ要求と応答はサービス・オーケストレーション・エンジンを通ってフローし、そこで変更されます。](images/arch-soe.png)
 

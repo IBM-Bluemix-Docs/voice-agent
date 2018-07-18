@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-06-19"
 
 ---
 
@@ -26,7 +26,6 @@ lastupdated: "2018-06-13"
 | {{site.data.keyword.virtualagentshort}} 토큰 인증| 사용 안함 |
 | {{site.data.keyword.speechtotextshort}} 토큰 인증| 사용 |
 | 비속어 필터 | 사용 |
-| 확정된 무음 시간 | `1` |
 | 스마트 포맷 | 사용 |
 | 신뢰 점수 임계값 | `0.2` |
 | 끼어들기 재생 재개 | 사용 |

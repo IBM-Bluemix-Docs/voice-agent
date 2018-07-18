@@ -49,12 +49,12 @@ Une fois que vous avez créé le service, notez le noeud final d'agent vocal sur
 
 2. Entrez les paramètres de base pour votre agent vocal :
   * **Nom :** Nom unique pour votre agent vocal, par exemple, `Customer Support`
-  * **Numéro de téléphone :** Numéro de téléphone complet que vous avez associé à votre liaison SIP, y compris le code pays et l'indicatif régional. Par exemple, pour un numéro 800 aux Etats-Unis, spécifiez le numéro de téléphone sous la forme suivante : 18883334444. Le numéro de téléphone peut comporter des espaces et les caractères + ( ) -. 
+  * **Numéro de téléphone :** Numéro de téléphone complet que vous avez associé à votre liaison SIP, y compris le code pays et l'indicatif régional. Par exemple, pour un numéro 800 aux Etats-Unis, spécifiez le numéro de téléphone sous la forme suivante : 18883334444. Le numéro de téléphone peut comporter des espaces et les caractères + ( ) -.
   * **Description :** Description facultative de son utilisation
 
 3. Créez les instances de service {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} et {{site.data.keyword.texttospeechshort}} pour votre agent vocal. Vous pouvez choisir de créer un agent vocal avec l'une ou l'autre des méthodes suivantes :
   * Cliquez sur **Créer un agent vocal** pour créer en une seule étape tous les services et un agent vocal avec la configuration par défaut.
-  * Ou, cliquez sur chacun des noms de service pour créer vous-même les services. Revenez ensuite à {{site.data.keyword.iva_short}} et créez un agent vocal séparément. 
+  * Ou, cliquez sur chacun des noms de service pour créer vous-même les services. Revenez ensuite à {{site.data.keyword.iva_short}} et créez un agent vocal séparément.
 
    Si vous avez créé manuellement une instance de service {{site.data.keyword.conversationshort}}, ajoutez un dialogue afin de pouvoir tester votre agent vocal.  Pour commencer rapidement, clonez l'[exemple de conversation ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) à partir de GitHub, puis [importez l'exemple](../conversation/configure-workspace.html#creating-workspaces) en tant qu'espace de travail :
 

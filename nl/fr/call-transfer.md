@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 ---
 
@@ -31,7 +31,9 @@ Lorsque le transfert d'appel est configuré, si un appelant demande à parler à
 ### Configuration d'un URI d'arrêt dans NetFoundry
 {: #termination-netfoundry}
 
-Notez le numéro de téléphone dans votre [compte NetFoundry![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien extern")](https://watson.netfoundry.io/watson-login){: new_window} vers lequel le transfert doit s'effectuer. Vous pouvez ensuite spécifier ce numéro de téléphone et l'URI d'arrêt comme cible de transfert dans votre dialogue {{site.data.keyword.conversationshort}}. Vous pouvez copier l'URI d'arrêt NetFoundry à utiliser dans la cible de transfert. 
+Notez le numéro de téléphone dans votre [compte NetFoundry![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien extern")](https://watson.netfoundry.io/watson-login){: new_window} vers lequel le transfert doit s'effectuer. Vous pouvez ensuite spécifier ce numéro de téléphone et l'URI d'arrêt comme cible de transfert dans votre dialogue {{site.data.keyword.conversationshort}}. N'utilisez pas un numéro de téléphone personnel.
+
+Vous pouvez copier l'URI d'arrêt NetFoundry à utiliser dans la cible de transfert.
 
 ```
 dal.watson-va.netfoundry.net
@@ -51,7 +53,7 @@ Vous n'avez pas besoin de configurer manuellement l'URI d'arrêt dans votre comp
 
 1. Sélectionnez **Termination** sur votre barre de navigation et entrez un nom pour votre URI d'arrêt.
 
-  * Les noms d'URI d'arrêt doivent être uniques. Twilio vérifie automatiquement si le nom que vous avez choisi est disponible. Pour plus de détails sur les services Twilio, voir [Paramètres d'arrêt de liaison SIP![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.twilio.com/docs/api/sip-trunking/getting-started#termination){: new_window}. 
+  * Les noms d'URI d'arrêt doivent être uniques. Twilio vérifie automatiquement si le nom que vous avez choisi est disponible. Pour plus de détails sur les services Twilio, voir [Paramètres d'arrêt de liaison SIP![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.twilio.com/docs/api/sip-trunking/getting-started#termination){: new_window}.
 
 1. Dans la section _Authentication_, cliquez sur l'icône **+** pour ajouter une adresse IP d'agent vocal à la liste d'adresses IP de contrôle d'accès.
 
@@ -61,7 +63,7 @@ Vous n'avez pas besoin de configurer manuellement l'URI d'arrêt dans votre comp
 
 1. Cliquez sur **Save** pour finaliser la configuration de votre URI d'arrêt.
 
-Notez le numéro de téléphone et l'URI d'arrêt vers lesquels le transfert doit s'effectuer. Vous pouvez ensuite les spécifier comme cible de transfert dans votre dialogue {{site.data.keyword.conversationshort}}.
+Notez le numéro de téléphone et l'URI d'arrêt vers lesquels le transfert doit s'effectuer. Assurez-vous que le numéro de téléphone n'est pas un numéro personnel. Vous pouvez utiliser le numéro de téléphone et l'URI d'arrêt pour indiquer la cible du transfert dans votre dialogue {{site.data.keyword.conversationshort}}.
 
 
 ## Etape 2 : Configuration de {{site.data.keyword.conversationshort}} pour le transfert d'appel
@@ -105,7 +107,7 @@ Pour en apprendre davantage sur l'utilisation du service {{site.data.keyword.con
 ```
 {: codeblock}
 
-**Remarque** : L'URI SIP du cible de transfert inclut un numéro de téléphone et l'URI d'arrêt que vous avez créé. Par exemple, si le numéro de téléphone est `18889990000` et que votre URI d'arrêt est `mysiptrunk.pstn.twilio.com`, l'URI SIP complet est `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. Si vous utilisez NetFoundry et que votre numéro de téléphone est `18889990000`, l'URI SIP complet est `sip:18889990000\\@dal.watson-va.netfoundry.net`.
+**N'oubliez pas** : L'URI SIP du cible de transfert inclut un numéro de téléphone et l'URI d'arrêt que vous avez créé. N'utilisez pas de numéro de téléphone personnel dans votre cible de transfert. Par exemple, si le numéro de téléphone est `18889990000` et que votre URI d'arrêt est `mysiptrunk.pstn.twilio.com`, l'URI SIP complet est `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. Si vous utilisez NetFoundry et que votre numéro de téléphone est `18889990000`, l'URI SIP complet est `sip:18889990000\\@dal.watson-va.netfoundry.net`.
 
 ## Etapes suivantes
 {: #Next}

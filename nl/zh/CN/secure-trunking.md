@@ -17,7 +17,7 @@ lastupdated: "2018-06-14"
 # 保护连接
 {: #securing}
 
-您可以通过对 SIP 中继使用传输层安全性 (TLS) 来启用安全实时传输协议 (SRTP) 和加密，从而保护使用 {{site.data.keyword.iva_full}} 建立的连接。
+要保护使用 {{site.data.keyword.iva_full}} 建立的连接，可以使用传输层安全性 (TLS) 为您的 SIP 中继启用安全实时传输协议 (SRTP) 和加密。
 
 ## 在 Twilio 中设置 SRTP
 {: #SRTP}
@@ -26,16 +26,16 @@ lastupdated: "2018-06-14"
 
 1. 在 Twilio 帐户中，浏览至_弹性 SIP 中继_仪表板，然后选择**中继**。
 
-1. 通过选择现有中继或者创建一个新中继（单击 **+** 图标），创建要使用 SRTP 保护的中继。
+1. 选择要使用 SRTP 保护的中继（您可以选择现有中继，也可以单击 **+** 图标来创建新中继）。
 
   * 要创建新中继，需要在**来源**仪表板中配置 _SIP 中继 URI_。有关更多信息，请参阅[连接 SIP 中继](connect-SIP.html)。
 
 1. 在_一般_仪表板上，查找_保护中继_部分。单击**已禁用**将安全中继设置更改为**已启用**，并保存更改。
 
-## 通过在 Twilio 中使用 TLS 启用仅 SIP 消息的加密
+## 在 Twilio 中使用 TLS 仅对 SIP 消息启用加密
 {: #TLS}
 
-如果您只想在 {{site.agent.keyword.iva_short}} 中加密 SIP 消息，而不使用 SRTP，那么可以选择在 Twilio 中使用传输层安全性 (TLS) 的 URI 端点。
+如果只想加密 {{site.agent.keyword.iva_short}} 中的 SIP 消息，而不使用 SRTP，那么可以在 Twilio 中选择使用传输层安全性 (TLS) 的 URI 端点。
 
 1. 在 Twilio 帐户中，浏览至_弹性 SIP 中继_仪表板，然后选择**中继**。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 
 ---
@@ -36,6 +36,8 @@ Wenn Sie einen Sprachagenten erstellen, sucht {{site.data.keyword.iva_short}} au
 
 1. Optional beschreiben Sie Ihren Sprachagenten.
 
+1. Wenn Sie die Anrufübergabe aktivieren möchten, können Sie einen Beendigungs-URI für das **Übergabeziel** konfigurieren. Weitere Informationen finden Sie in [Anrufübergabe einrichten](call-transfer.html). Verwenden Sie keine persönliche Telefonnummer für das Übergabeziel.
+
 1. Konfigurieren Sie die Verbindungen zu Ihren Watson-Serviceinstanzen. Sie können Verbindungen zu mehreren Watson-Serviceinstanzen herstellen, indem Sie sowohl für **Standort 1** als auch für **Standort 2** Verbindungen konfigurieren. Wenn Verbindungen zu mehreren Serviceinstanzen vorhanden sind, kann der Sprachagent bei einem Ausfall zu einer alternativen Serviceinstanz wechseln. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](#add_location).
 
 **Wichtig**: Bei Konten des Typs _Trial_ und _Lite_ ist eine Verbindung nur zu dem Standort möglich, an dem die {{site.data.keyword.iva_short}}-Serviceinstanz erstellt wurde. Beim zweiten Standort handelt es sich nicht um einen zweiten Sprachagenten. Er dient nur als Sicherung für Disaster-Recovery-Situationen.
@@ -65,7 +67,7 @@ Nach dem Erstellen des Sprachagenten testen Sie Ihren Sprachagenten, indem Sie e
 
 Wenn Sie den _Standardplan_ verwenden, können Sie die maximale Anzahl gleichzeitiger Verbindungen gegenüber den Standardeinstellungen ändern. In allen Plänen sind zwei gleichzeitige Verbindungen kostenfrei enthalten. Weitere Informationen finden Sie in [Preisstrukturpläne](https://console.bluemix.net/catalog/services/voice-agent-with-watson).
 
-Im Dashboard _Verwalten_ wird die maximale Anzahl gleichzeitiger Verbindungen, die im Rahmen Ihres aufgeführten Plans zulässig sind, im Feld **Maximale Anzahl gleichzeitiger Verbindungen** angezeigt. Darüber hinaus wird die maximale Anzahl gleichzeitiger Verbindungen, die von Ihren Sprachagenten im laufenden Monat genutzt wurden, im Feld _Genutzte maximale Anzahl gleichzeitiger Verbindungen_ angezeigt. 
+Im Dashboard _Verwalten_ wird die maximale Anzahl gleichzeitiger Verbindungen, die im Rahmen Ihres aufgeführten Plans zulässig sind, im Feld **Maximale Anzahl gleichzeitiger Verbindungen** angezeigt. Darüber hinaus wird die maximale Anzahl gleichzeitiger Verbindungen, die von Ihren Sprachagenten im laufenden Monat genutzt wurden, im Feld _Genutzte maximale Anzahl gleichzeitiger Verbindungen_ angezeigt.
 
 Wenn Sie die maximale Anzahl gleichzeitiger Verbindungen in Ihrem Plan ändern möchten, klicken Sie auf das Symbol **Bearbeiten**. Wählen Sie im Fenster _Maximale Anzahl gleichzeitiger Verbindungen bearbeiten_ die gewünschte maximale Anzahl gleichzeitiger Verbindungen aus und klicken Sie auf **Speichern**. Der Mindestwert für die Anzahl gleichzeitiger Anrufe, der im Self-Service-Verfahren festgelegt werden kann, ist 10, der Höchstwert 50. Wenn Sie mehr als 50 gleichzeitige Verbindungen für den Sprachagenten benötigen, lesen Sie die Informationen in [Unterstützung für Netzkonfiguration anfordern](connect-SIP.html#request-setup).
 
@@ -110,7 +112,7 @@ Beim Erstellen oder Klonen eines Sprachagenten können Sie auf **Erweiterte Opti
 * **Antwortnachricht bei Anrufübergabefehler (optional)**: Die Standardantwortnachricht, die an den Anrufer gestreamt wird, falls die Anrufübergabe fehlschlägt.
 * **Vorläufige Antwort mit dem Statuscode 'Ringing' von {{site.data.keyword.iva_short}}** senden: Sendet eine Antwort mit dem Statuscode `180 - Ringing`, während {{site.data.keyword.iva_short}} einen eingehenden Anruf verarbeitet. Standardmäßig aktiviert.
 * **Anruf während der Übergabe in die Warteschleife legen**: Legt den Anruf während der Übergabe in die Warteschleife. Standardmäßig aktiviert.
-* **Anruf bei fehlgeschlagener Übergabe unterbrechen**: Bestimmt, ob der Anruf bei einer fehlgeschlagenen Anrufübergabe unterbrochen werden soll. Standardmäßig aktiviert. Wenn die Einstellung inaktiviert ist und eine Anrufübergabe fehlschlägt, initiiert {{site.data.keyword.iva_short}} einen Dialogwechsel. Dann kann {{site.data.keyword.conversationshort}} den Anruf entweder unterbrechen oder an ein anderes Ziel übergeben, abhängig von der Dialogkonfiguration.
+* **Anruf bei fehlgeschlagener Übergabe unterbrechen**: Bestimmt, ob der Anruf bei einer fehlgeschlagenen Anrufübergabe unterbrochen werden soll.  Standardmäßig aktiviert. Wenn die Einstellung inaktiviert ist und eine Anrufübergabe fehlschlägt, initiiert {{site.data.keyword.iva_short}} einen Dialogwechsel. Dann kann {{site.data.keyword.conversationshort}} den Anruf entweder unterbrechen oder an ein anderes Ziel übergeben, abhängig von der Dialogkonfiguration.
 * **{{site.data.keyword.conversationshort}} bei Netzereignissen benachrichtigen**: Wenn diese Option aktiviert ist und ein Netzfehler festgestellt wird, initiiert {{site.data.keyword.iva_short}} einen Wechsel zum {{site.data.keyword.conversationshort}}-Service mit dem Text "vgwNetworkWarningMessage". Die Statusvariable `vgwNetworkWarnings` enthält eine Liste der Netzereignisse, die während des aktuellen Dialogwechsels aufgetreten sind. Wenn diese Option inaktiviert ist, wird eine Liste der Netzereignisse, die während des aktuellen Dialogwechsels aufgetreten sind, in der Statusvariablen `vgwNetworkWarning` des nächsten Wechselereignisses gesendet. Standardmäßig aktiviert.
 
 ### Mehrere Watson-Servicestandorte hinzufügen

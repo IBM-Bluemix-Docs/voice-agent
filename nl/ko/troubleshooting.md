@@ -44,7 +44,7 @@ lastupdated: "2018-06-14"
 * `voice-agent` 태그를 포함하여 [StackOverflow ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://stackoverflow.com/questions/tagged/voice-agent){: new_window}에 게시
 * [IBM Cloud Technology ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://slack-invite-ibm-cloud-tech.mybluemix.net/) 팀 Slack의 `#ibmvoicegateway` 채널에서 찾기
 
-**기억**: 호출의 로그 또는 레코드를 게시하기 전에 호출자 및 사용자가 대화 중에 공유한 개인 정보를 모두 제거하십시오.
+**중요**: 호출의 로그 또는 레코드를 게시하기 전에 호출자 및 사용자가 대화 중에 공유한 개인 정보를 모두 제거하십시오.
 
 ## 문제점 해결 팁
 {: #troubleshooting-tips}

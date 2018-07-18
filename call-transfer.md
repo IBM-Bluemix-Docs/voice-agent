@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 ---
 
@@ -31,7 +31,9 @@ By enabling call transfer, if a caller requests to speak with a live agent durin
 ### Setting up a termination URI in NetFoundry
 {: #termination-netfoundry}
 
-Make note of the phone number in your [NetFoundry account![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson.netfoundry.io/watson-login){: new_window} that you want to transfer to. Later, you can specify this phone number and the termination URI as the transfer target in your {{site.data.keyword.conversationshort}} dialog. You can copy the following NetFoundry termination URI to use in the transfer target.
+Make note of the phone number in your [NetFoundry account![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson.netfoundry.io/watson-login){: new_window} that you want to transfer to. Later, you can specify this phone number and the termination URI as the transfer target in your {{site.data.keyword.conversationshort}} dialog. Do not use a personal phone number.
+
+You can copy the following NetFoundry termination URI to use in the transfer target.
 
 ```
 dal.watson-va.netfoundry.net
@@ -61,7 +63,7 @@ You do not need to manually configure the termination URI in your NetFoundry acc
 
 1. Click **Save** to finish configuring your termination URI.
 
-Make note of the phone number and termination URI that you want to transfer to. Later, you can specify them as the transfer target in your {{site.data.keyword.conversationshort}} dialog.
+Make note of the phone number and termination URI that you want to transfer to. Make sure that the phone number is not a personal phone number. You can use the phone number and termination URI to specify the transfer target in your {{site.data.keyword.conversationshort}} dialog.
 
 
 ## Step 2: Configuring {{site.data.keyword.conversationshort}} for call transfer
@@ -105,7 +107,7 @@ To learn more about working in the {{site.data.keyword.conversationshort}} servi
 ```
 {: codeblock}
 
-**Note**: The SIP URI of the transfer target includes a telephone number and the termination URI that you created. For example, if the telephone number is `18889990000` and your termination URI is `mysiptrunk.pstn.twilio.com`, the full SIP URI is `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. If you use Netfoundry, and have a telephone number of `18889990000`, the full SIP URI is `sip:18889990000\\@dal.watson-va.netfoundry.net`.
+**Remember**: The SIP URI of the transfer target includes a telephone number and the termination URI that you created. Do not use a personal telephone number in your transfer target. For example, if the telephone number is `18889990000` and your termination URI is `mysiptrunk.pstn.twilio.com`, the full SIP URI is `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. If you use Netfoundry, and have a telephone number of `18889990000`, the full SIP URI is `sip:18889990000\\@dal.watson-va.netfoundry.net`.
 
 ## Next steps
 {: #Next}

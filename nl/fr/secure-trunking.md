@@ -26,7 +26,7 @@ Vous pouvez activer le protocole SRTP (Secure Real Time Transport Protocol) et l
 
 1. Dans votre compte Twilio, accédez au tableau de bord _Elastic SIP Trunking_ et sélectionnez **Trunks**.
 
-1. Choisissez la liaison que vous souhaitez sécuriser avec SRTP en sélectionnant une liaison existante ou en créant une nouvelle liaison en cliquant sur l'icône **+**. 
+1. Choisissez la liaison que vous souhaitez sécuriser avec SRTP en sélectionnant une liaison existante ou en créant une nouvelle liaison en cliquant sur l'icône **+**.
 
   * Si vous créez une nouvelle liaison, vous devez configurer l'_URI de liaison SIP_ dans le tableau de bord **Origination**.  Pour plus d'informations, voir [Connexion d'une liaison SIP](connect-SIP.html).
 

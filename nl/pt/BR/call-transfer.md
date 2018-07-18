@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 ---
 
@@ -24,8 +24,7 @@ lastupdated: "2018-06-14"
 {: #about-ct}
 
 Ao ativar a transferência de chamada, se um responsável pela chamada solicitar falar com um agente em tempo real durante a conversa, o agente de voz redirecionará a chamada. É possível ativar a transferência de chamada configurando um URI de finalização na configuração do provedor SIP. Em seguida, defina
-o destino de transferência em uma ação de API em um nó de diálogo da instância do {{site.data.keyword.conversationshort}}. 
-O seu destino de transferência é um URI do SIP que contém o URI de finalização e o número do telefone. Para obter mais informações sobre ações suportadas e a customização dos agentes de voz, consulte [Programando
+o destino de transferência em uma ação de API em um nó de diálogo da instância do {{site.data.keyword.conversationshort}}. O seu destino de transferência é um URI do SIP que contém o URI de finalização e o número do telefone. Para obter mais informações sobre ações suportadas e a customização dos agentes de voz, consulte [Programando
 agentes de voz usando a API](api.html).
 
 ## Etapa 1: Configurando o URI de finalização
@@ -34,7 +33,9 @@ agentes de voz usando a API](api.html).
 ### Configurando um URI de finalização no NetFoundry
 {: #termination-netfoundry}
 
-Anote o número do telefone em sua [conta do NetFoundry ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://watson.netfoundry.io/watson-login){: new_window} para o qual deseja transferir. Posteriormente, é possível especificar esse número do telefone e o URI de finalização como o destino de transferência em seu diálogo de {{site.data.keyword.conversationshort}}. É possível copiar o URI de finalização do NetFoundry a seguir para usá-lo no destino de transferência.
+Anote o número do telefone em sua [conta do NetFoundry ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://watson.netfoundry.io/watson-login){: new_window} para o qual deseja transferir. Posteriormente, é possível especificar esse número do telefone e o URI de finalização como o destino de transferência em seu diálogo de {{site.data.keyword.conversationshort}}. Não use um número de telefone pessoal.
+
+É possível copiar o URI de finalização do NetFoundry a seguir para usá-lo no destino de transferência.
 
 ```
 Dal.watson-va.netfoundry.net
@@ -50,8 +51,7 @@ Não é necessário configurar manualmente o URI de finalização na sua conta d
 
 1. Escolha o tronco no qual deseja incluir a transferência de chamada selecionando um tronco existente ou criando um novo clicando no ícone **+**.
 
-  * Se você criar um novo tronco, será necessário configurar a _URI de Tronco SIP_ no painel **Origem**.  
-Para obter mais informações, consulte [Conectando um tronco SIP](connect-SIP.html).
+  * Se você criar um novo tronco, será necessário configurar a _URI de Tronco SIP_ no painel **Origem**.  Para obter mais informações, consulte [Conectando um tronco SIP](connect-SIP.html).
 
 1. Selecione **Finalização** na barra de navegação e insira um nome para o URI de finalização.
 
@@ -65,8 +65,7 @@ Para obter mais informações, consulte [Conectando um tronco SIP](connect-SIP.h
 
 1. Clique em **Salvar** para concluir a configuração do seu URI de finalização.
 
-Anote o número do telefone e o URI de finalização para o qual você deseja transferir. Posteriormente, é possível especificá-los
-como o destino de transferência no diálogo do {{site.data.keyword.conversationshort}}.
+Anote o número do telefone e o URI de finalização para o qual você deseja transferir. Certifique-se de que o número de telefone não é um número de telefone pessoal. É possível usar o número de telefone e o URI de finalização para especificar o destino de transferência no diálogo {{site.data.keyword.conversationshort}}.
 
 
 ## Etapa 2: Configurando o {{site.data.keyword.conversationshort}} para transferência de chamada
@@ -110,8 +109,7 @@ Para saber mais sobre como trabalhar no serviço {{site.data.keyword.conversatio
 ```
 {: codeblock}
 
-**Nota**: o URI SIP do destino de transferência inclui um número de telefone e o URI de finalização que você criou. Por exemplo, se o número de telefone for `18889990000` e seu URI de finalização for `mysiptrunk.pstn.twilio.com`, o URI SIP completo será `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. 
-Se você usar o NetFoundry e tiver um número de telefone do `18889990000`, o URI do SIP completo será `sip:18889990000\\@dal.watson-va.netfoundry.net`.
+**Nota**: o URI SIP do destino de transferência inclui um número de telefone e o URI de finalização criados. Não use um número de telefone pessoal no destino de transferência. Por exemplo, se o número de telefone for `18889990000` e seu URI de finalização for `mysiptrunk.pstn.twilio.com`, o URI SIP completo será `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. Se você usar o NetFoundry e tiver um número de telefone do `18889990000`, o URI do SIP completo será `sip:18889990000\\@dal.watson-va.netfoundry.net`.
 
 ## Próximas etapas
 {: #Next}

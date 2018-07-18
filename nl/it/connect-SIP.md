@@ -35,11 +35,11 @@ Puoi scegliere il provider del trunk SIP che utilizzi per l'integrazione con {{s
 
 1. Vai alla pagina principale _Watson account_.
 
-1. Seleziona una regione da cui vuoi il numero. 
+1. Seleziona una regione da cui vuoi il numero.
 
   **Nota:** controlla il sito web Netfoundry per le regioni disponibili. Nuove regioni vengono aggiunte di continuo.
 
-1. Fai clic su **Purchase** e segui le istruzioni sullo schermo per completare l'acquisto. 
+1. Fai clic su **Purchase** e segui le istruzioni sullo schermo per completare l'acquisto.
 
 1. Una volta che il pagamento è stato elaborato correttamente, il tuo numero di telefono trunk SIP viene visualizzato nel tuo account.
 
@@ -75,14 +75,14 @@ Hai bisogno di questo numero di telefono per configurare il tuo agent vocale e i
 ## Connessione con AT&T e altri provider
 {: #att-other}
 
-{{site.data.keyword.iva_short}} supporta le connessioni con AT&T&reg; e altri provider di trunking SIP. Tuttavia, queste connessioni non sono configurate in modalità self-service e richiedono ulteriore assistenza. Consulta [Richiesta di configurazione assistita](#request-setup). 
+{{site.data.keyword.iva_short}} supporta le connessioni con AT&T&reg; e altri provider di trunking SIP. Tuttavia, queste connessioni non sono configurate in modalità self-service e richiedono ulteriore assistenza. Consulta [Richiesta di configurazione assistita](#request-setup).
 
 ## Peering con {{site.data.keyword.iva_short}}
 {: #peering}
 
-{{site.data.keyword.iva_short}} supporta le connessioni peer, come un tunnel IPSec. Tuttavia, queste connessioni non sono configurate in modalità self-service e richiedono ulteriore assistenza. Consulta [Richiesta di configurazione assistita](#request-setup). 
+{{site.data.keyword.iva_short}} supporta le connessioni peer, come un tunnel IPSec. Tuttavia, queste connessioni non sono configurate in modalità self-service e richiedono ulteriore assistenza. Consulta [Richiesta di configurazione assistita](#request-setup).
 
-## Richiesta di configurazione assistita 
+## Richiesta di configurazione assistita
 {: #request-setup}
 
 Puoi richiedere la configurazione di rete assistita per collegarti con AT&T o altri provider di trunking SIP, eseguire il peer con {{site.data.keyword.iva_short}} o per richiedere più di 50 connessioni simultanee utilizzando il seguente processo.

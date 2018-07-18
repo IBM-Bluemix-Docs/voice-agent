@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 
 ---
@@ -32,26 +32,27 @@ lastupdated: "2018-06-14"
 
 1. 对于**名称**，请为语音代理程序指定唯一名称。例如，`Customer Support - North America`。
 
-1. 对于**电话号码**，请从 SIP 中继添加号码，包括国家或地区代码。例如，对于美国 800 号码，请将电话号码指定为 `18883334444`。电话号码可以包含空格和 `+ ( ) -` 字符。
+1. 对于**电话号码**，请从 SIP 中继添加号码，包括国家和地区代码。例如，对于美国 800 号码，请将电话号码指定为 `18883334444`。电话号码可以包含空格和 `+ ( ) -` 字符。
 
 1. （可选）对语音代理程序进行描述。
 
-1. 配置 Watson 服务实例的连接。您可以通过配置**位置 1** 和**位置 2** 的连接来连接到多个 Watson 服务实例。连接到多个服务实例之后您的语音代理程序可以在发生宕机时切换到其他服务实例。请参阅[添加多个 Watson 服务位置](#add_location)。
+1. 如果要启用呼叫转移，您可以为**转移目标**配置终止 URI。请参阅[设置呼叫转移](call-transfer.html)。不要对转移目标使用个人电话号码。
 
-**重要信息**：_试用_和_轻量_帐户只能连接到创建 {{site.data.keyword.iva_short}} 服务实例的位置。第二个位置不是第二个语音代理程序。其仅充当灾难恢复的备份。
+1. 配置 Watson 服务实例的连接。您可以通过配置**位置 1** 和**位置 2** 的连接来连接到多个 Watson 服务实例。连接到多个服务实例之后，您的语音代理程序可以在发生宕机时切换到其他服务实例。请参阅[添加多个 Watson 服务位置](#add_location)。
+
+**重要信息**：_试用_和_轻量_帐户只能连接到创建 {{site.data.keyword.iva_short}} 服务实例的位置。第二个位置不是第二个语音代理程序。该位置仅充当灾难恢复的备份。
 
 1. 在 **{{site.data.keyword.conversationshort}}** 下，通过单击**启用位置 1** 或**启用位置 2** 配置 {{site.data.keyword.conversationshort}} 服务实例的连接。您可以在您或其他人的 {{site.data.keyword.Bluemix_notm}} 帐户下使用 {{site.data.keyword.conversationshort}} 实例或 {{site.data.keyword.virtualagentfull}} 实例。还可以通过服务编排引擎连接到其中任一实例。
 
-    * 如果您在美国南部地区创建语音代理程序，并且没有 {{site.data.keyword.conversationshort}} 服务实例，那么您可以在**服务实例**菜单中创建一个服务实例。
+    * 如果要在美国南部地区创建语音代理程序，但没有 {{site.data.keyword.conversationshort}} 服务实例，那么可以在**服务实例**菜单中创建一个服务实例。
     * 或者，可以通过更改[**服务类型**](#other_service)来连接到 {{site.data.keyword.conversationshort}} 对话的其他源。
     * 如果您想要配置多个服务位置，请单击其他位置选项，并选择**启用位置**以配置到其他 {{site.data.keyword.conversationshort}} 实例的连接。请参阅[添加多个 Watson 服务位置](#add_location)。
 
-1. 在 **{{site.data.keyword.speechtotextshort}}** 下，通过单击**启用位置 1** 或**启用位置 2** 复查
-{{site.data.keyword.speechtotextshort}} 服务实例的缺省配置。如果您在美国南部地区创建语音代理程序，并且没有 {{site.data.keyword.speechtotextshort}} 服务实例，那么从**服务实例**菜单中创建一个服务实例。或者，可以更改[**服务类型**](#other_service)，将语音代理程序连接到其他 {{site.data.keyword.Bluemix_notm}} 帐户空间中的 {{site.data.keyword.speechtotextshort}} 实例。{{site.data.keyword.iva_short}} 仅支持窄带模型。
+1. 在 **{{site.data.keyword.speechtotextshort}}** 下，通过单击**启用位置 1** 或**启用位置 2** 查看 {{site.data.keyword.speechtotextshort}} 服务实例的缺省配置。如果要在美国南部地区创建语音代理程序，但没有 {{site.data.keyword.speechtotextshort}} 服务实例，那么可以从**服务实例**菜单中创建一个服务实例。或者，可以更改[**服务类型**](#other_service)，将语音代理程序连接到其他 {{site.data.keyword.Bluemix_notm}} 帐户空间中的 {{site.data.keyword.speechtotextshort}} 实例。{{site.data.keyword.iva_short}} 仅支持窄带模型。
 
     如果您想要配置多个服务位置，请单击其他位置选项，并选择**启用位置**以配置到其他 {{site.data.keyword.speechtotextshort}} 实例的连接。请参阅[添加多个 Watson 服务位置](#add_location)。
 
-1. 在 **{{site.data.keyword.texttospeechshort}}** 下，通过单击**启用位置 1** 或**启用位置 2** 复查 {{site.data.keyword.texttospeechshort}} 服务实例的缺省配置。如果您在美国南部地区创建语音代理程序，并且没有 {{site.data.keyword.texttospeechshort}} 服务实例，那么可以从**服务实例**菜单中创建一个服务实例。或者，可以更改[**服务类型**](#other_service)，将语音代理程序连接到其他 {{site.data.keyword.Bluemix_notm}} 帐户空间中的 {{site.data.keyword.texttospeechshort}} 实例。
+1. 在 **{{site.data.keyword.texttospeechshort}}** 下，通过单击**启用位置 1** 或**启用位置 2** 查看 {{site.data.keyword.texttospeechshort}} 服务实例的缺省配置。如果要在美国南部地区创建语音代理程序，但没有 {{site.data.keyword.texttospeechshort}} 服务实例，那么可以从**服务实例**菜单中创建一个服务实例。或者，可以更改[**服务类型**](#other_service)，将语音代理程序连接到其他 {{site.data.keyword.Bluemix_notm}} 帐户空间中的 {{site.data.keyword.texttospeechshort}} 实例。
 
     如果您想要配置多个服务位置，请单击其他位置选项，并选择**启用位置**以配置到其他 {{site.data.keyword.texttospeechshort}} 实例的连接。请参阅[添加多个 Watson 服务位置](#add_location)。
 
@@ -64,23 +65,23 @@ lastupdated: "2018-06-14"
 ## 编辑最大并发连接数
 {: #edit_concurrency}
 
-如果您使用_标准_套餐，那么可以通过缺省设置更改最大并发连接数。在所有套餐中，您可以免费获取 2 个并发连接。有关更多信息，请参阅[价格套餐](https://console.bluemix.net/catalog/services/voice-agent-with-watson)。
+如果使用_标准_套餐，那么可以通过缺省设置更改最大并发连接数。所有套餐都可以免费获取 2 个并发连接。有关更多信息，请参阅[价格套餐](https://console.bluemix.net/catalog/services/voice-agent-with-watson)。
 
-在_管理_仪表板上，可以在**最大并发连接数**中看到您的列出的套餐中允许的并发连接的最大数量。您还可以在**已使用的最大并发连接数**中看到本月语音代理程序使用的并发连接的最大数量。
+在_管理_仪表板上，可以在**最大并发连接数**中查看您的所列套餐中允许的最大并发连接数。还可以在**已使用的最大并发连接数**中查看您的语音代理程序当月使用的最大并发连接数。
 
-如果想要更改套餐中最大并发连接数，请单击**编辑**图标。在_编辑最大并发连接数_窗口中，选择并发连接的最大数量，并单击**保存**。您可以通过自助服务将最小并发连接数设置为 10，最大并发连接数设置为 50。如果语音代理程序需要的并发连接数超过 50，请参阅[请求协助进行网络设置](connect-SIP.html#request-setup)。
+如果想要更改套餐中的最大并发连接数，请单击**编辑**图标。在_编辑最大并发连接数_窗口中，选择最大并发连接数，然后单击**保存**。可通过自助服务设置的最小并发连接数为 10，最大并发连接数为 50。如果语音代理程序需要 50 个以上的并发连接，请参阅[请求网络设置协助](connect-SIP.html#request-setup)。
 
 ### 并发连接定价信息
 {: #concurrent-charge}
 
-  * _轻量_、_试用_和_标准_套餐包含 2 个免费的并行连接。
+  * _轻量_、_试用_和_标准_套餐都包含 2 个免费的并行连接。
   * _高端_套餐可按实例进行定制。
   * 在_标准_帐户中，最小容量为 10 个并发连接。
-  * 并发连接使用量按月分派。如果某一天使用的并发连接数超过 2 个，那么将按每日费率进行收费。
-  * 如果您使用_标准_或_高端_套餐，那么可购买更大的并发套餐容量。
-  * 对于某一天使用的最大并发连接容量，将按每日费率进行收费。例如，因为套餐免费支持 2 个并发连接，并且您设置了 12 个连接的最大限制。如果某一天只使用 5 个，那么将收取 3 个的费用。
+  * 并发连接的使用量是按月分派的。如果某一天的使用量超过 2 个并发连接，那么将按每日费率进行收费。
+  * 如果使用_标准_或_高端_套餐，那么可以购买更大的并发连接容量。
+  * 系统会按每日费率对您在一天内使用的最大并发连接容量进行收费。例如，您的套餐免费支持 2 个并发连接，而您设置的最大限制为 12 个连接。如果某一天只使用 5 个，那么将收取 3 个的费用。
 
-有关套餐、费率和特色的更多信息，请参阅[价格套餐](https://console.bluemix.net/catalog/services/voice-agent-with-watson)。
+有关套餐、费率和特色服务的更多信息，请参阅[价格套餐](https://console.bluemix.net/catalog/services/voice-agent-with-watson)。
 
 ## 编辑语音代理程序
 {: #edit_va}
@@ -105,21 +106,21 @@ lastupdated: "2018-06-14"
 ### 配置高级选项
 {: #config-advanced}
 
-在创建或克隆语音代理程序时，可单击**显示高级**以查看以下高级配置选项。
+在创建或克隆语音代理程序时，可以单击**显示高级**以查看以下高级配置选项。
 
 * **{{site.data.keyword.conversationshort}} 失败回复消息（可选）**：在呼叫无法连接到 {{site.data.keyword.conversationshort}} 时发送给消息接收方的缺省响应消息。
 * **转移失败回复消息（可选）**：在呼叫转移失败时向呼叫者传送的缺省响应消息。
-* **从 {{site.data.keyword.iva_short}} 发送临时响铃响应**：在 {{site.data.keyword.iva_short}} 处理入局呼叫时，发送 `180 ringing` 响应。缺省情况下，将启用此功能。
-* **转移时呼叫者等待**：在转移时使呼叫者等待。缺省情况下，将启用此功能。
-* **转移失败时挂断呼叫**：确定在呼叫转移失败时是否挂断呼叫。缺省情况下，将启用此功能。如果禁用此设置并且呼叫转移失败，那么 {{site.data.keyword.iva_short}} 启动一轮对话。然后，{{site.data.keyword.conversationshort}} 可断开呼叫连接或者将其转移到对话框中配置的其他目标。
-* **发生网络事件时通知 {{site.data.keyword.conversationshort}}**：在启用时，如果检测到网络错误，那么 {{site.data.keyword.iva_short}} 向 {{site.data.keyword.conversationshort}} 服务返回文本“vgwNetworkWarningMessage”。`vgwNetworkWarnings` 状态变量包含在当前轮次中发生的网络事件的列表。如果禁用，那么将在 `vgwNetworkWarning`s 状态变量中的下一个轮次事件中发送当前轮次期间发生的网络事件的列表。缺省情况下，将启用此功能。
+* **从 {{site.data.keyword.iva_short}} 发送临时响铃响应**：在 {{site.data.keyword.iva_short}} 处理入局呼叫时，发送 `180 ringing` 响应。缺省情况下，会启用此设置。
+* **转移时让呼叫者等待**：在转移期间让呼叫者等待。缺省情况下，会启用此设置。
+* **转移失败时断开呼叫**：用于确定在呼叫转移失败时是否断开呼叫。缺省情况下，会启用此设置。如果禁用此设置，那么当呼叫转移失败时，{{site.data.keyword.iva_short}} 会启动一轮对话。然后，{{site.data.keyword.conversationshort}} 可以断开呼叫或将其转移到对话中配置的其他目标。
+* **发生网络事件时通知 {{site.data.keyword.conversationshort}}**：启用此设置后，如果检测到网络错误，那么 {{site.data.keyword.iva_short}} 会使用文本“vgwNetworkWarningMessage”向 {{site.data.keyword.conversationshort}} 服务启动一轮对话。`vgwNetworkWarnings` 状态变量包含在当前轮次中发生的网络事件的列表。如果禁用此设置，那么会在 `vgwNetworkWarnings` 状态变量中的下一个轮次事件中发送当前轮次期间发生的网络事件的列表。缺省情况下，会启用此设置。
 
 ### 添加多个 Watson 服务位置
 {: #add_location}
 
-如果您使用_标准_或_高端_帐户，那么可以将语音代理程序连接到不同位置的多个 Watson 服务中，以实现服务冗余。_试用_和_轻量_帐户只能连接到创建 {{site.data.keyword.iva_short}} 服务实例的位置。第二个位置不是第二个语音代理程序。其仅充当灾难恢复的备份。
+如果使用_标准_或_高端_帐户，那么可以将语音代理程序连接到不同位置的多个 Watson 服务来实现服务冗余。_试用_和_轻量_帐户只能连接到创建 {{site.data.keyword.iva_short}} 服务实例的位置。第二个位置不是第二个语音代理程序。该位置仅充当灾难恢复的备份。
 
-语音代理程序按地理位置的远近使用 Watson 服务实例。例如，您可以在美国东部区域中创建语音代理程序，并在美国南部和澳大利亚的悉尼创建 {{site.data.keyword.conversationshort}} 服务。 语音代理程序使用 {{site.data.keyword.conversationshort}} 美国南部区域，因为在地理上美国南部更靠近美国东部，而不是悉尼。在多个地区连接 Watson 服务时，如果一个位置的 Watson 服务脱机，您的语音代理程序可以使用冗余服务。
+语音代理程序按地理位置的远近使用 Watson 服务实例。例如，您可以在美国东部区域创建语音代理程序，而在美国南部和澳大利亚的悉尼创建 {{site.data.keyword.conversationshort}} 服务。 语音代理程序会使用 {{site.data.keyword.conversationshort}} 美国南部区域，因为美国南部在地理上比悉尼更靠近美国东部。在多个地区连接 Watson 服务时，如果一个位置的 Watson 服务脱机，您的语音代理程序可以使用冗余服务。
 
 您可以随时将 Watson 服务位置添加到语音代理程序配置中。有关在创建语音代理程序时连接多个服务位置实例的信息，请参阅[创建语音代理程序](#creating)。
 

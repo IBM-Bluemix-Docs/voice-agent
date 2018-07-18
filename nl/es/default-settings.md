@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-06-19"
 
 ---
 
@@ -26,7 +26,6 @@ lastupdated: "2018-06-13"
 | {{site.data.keyword.virtualagentshort}} token authentication| Inhabilitado |
 | {{site.data.keyword.speechtotextshort}} token authentication| Habilitado |
 | Profanity filter | Habilitado |
-| Firmup Silence Time | `1` |
 | Smart formatting | Habilitado |
 | Confidence score threshold | `0.2` |
 | Barge-in playback resume | Habilitado |

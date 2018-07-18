@@ -23,7 +23,7 @@ lastupdated: "2018-06-14"
 ## 开始之前
 {: #prereqs}
 
-在 [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/) 上创建新帐户或者登录现有帐户。
+在 [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/) 上创建新帐户或登录到现有帐户。
 
 ## 步骤 1：在 {{site.data.keyword.Bluemix_notm}} 上创建 {{site.data.keyword.iva_short}} 服务实例
 {: #step1}
@@ -49,12 +49,12 @@ lastupdated: "2018-06-14"
 
 2. 输入语音代理程序的基本设置：
   * **名称**：语音代理程序的唯一名称，例如 `Customer Support`
-  * **电话号码**：与 SIP 中继相关联的完整电话号码，包括国家或地区代码。例如，对于美国 800 号码，请将电话号码指定为 18883334444。电话号码可以包含空格和 + ( ) - 字符。
+  * **电话号码**：与 SIP 中继相关联的完整电话号码，包括国家和地区代码。例如，对于美国 800 号码，请将电话号码指定为 18883334444。电话号码可以包含空格和 + ( ) - 字符。
   * **描述**：用途的相关描述（非必填）
 
 3. 为语音代理程序创建 {{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}} 和 {{site.data.keyword.texttospeechshort}} 服务实例。您可以选择使用以下任一方法来创建语音代理程序：
   * 单击**创建语音代理程序**，以使用缺省配置一步创建语音代理程序和所有服务。
-  * 或者，分别单击每个服务名称来自行创建服务。然后返回到 {{site.data.keyword.iva_short}} 并单独创建语音代理程序。
+  * 或者，分别单击每个服务名称来自行创建服务。然后，返回到 {{site.data.keyword.iva_short}} 并单独创建语音代理程序。
 
    如果手动创建了 {{site.data.keyword.conversationshort}} 服务实例，请添加对话来测试语音代理程序。要快速开始测试，请从 GitHub 克隆[样本对话 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)，然后将该[样本作为工作空间导入](../conversation/configure-workspace.html#creating-workspaces)：
 

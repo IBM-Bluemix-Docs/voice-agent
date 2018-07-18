@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-19"
 
 ---
 
@@ -31,7 +31,9 @@ lastupdated: "2018-06-14"
 ### 在 NetFoundry 中設定終止 URI
 {: #termination-netfoundry}
 
-記下 [NetFoundry 帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://watson.netfoundry.io/watson-login){: new_window} 中您要轉接到的電話號碼。稍後，您可以在 {{site.data.keyword.conversationshort}} 對話中將此電話號碼及終止 URI 指定為轉接目標。您可以複製下列 NetFoundry 終止 URI，以用於轉接目標。
+記下 [NetFoundry 帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://watson.netfoundry.io/watson-login){: new_window} 中您要轉接到的電話號碼。稍後，您可以在 {{site.data.keyword.conversationshort}} 對話中將此電話號碼及終止 URI 指定為轉接目標。請不要使用個人電話號碼。
+
+您可以複製下列 NetFoundry 終止 URI，以用於轉接目標。
 
 ```
 dal.watson-va.netfoundry.net
@@ -61,7 +63,7 @@ dal.watson-va.netfoundry.net
 
 1. 按一下**儲存**，完成終止 URI 的配置。
 
-請記下您要轉接到的電話號碼及終止 URI。稍後，您可以在 {{site.data.keyword.conversationshort}} 對話中將它們指定為轉接目標。
+請記下您要轉接到的電話號碼及終止 URI。請確定電話號碼不是個人電話號碼。您可以在 {{site.data.keyword.conversationshort}} 對話中，使用電話號碼及終止 URI 來指定轉接目標。
 
 
 ## 步驟 2：配置 {{site.data.keyword.conversationshort}} 以進行通話轉接
@@ -105,7 +107,7 @@ dal.watson-va.netfoundry.net
 ```
 {: codeblock}
 
-**附註**：轉接目標的 SIP URI 包括一個電話號碼及您建立的終止 URI。例如，如果電話號碼是 `18889990000`，而終止 URI 是 `mysiptrunk.pstn.twilio.com`，則完整 SIP URI 是 `sip:18889990000\\@mysiptrunk.pstn.twilio.com`。如果您使用 Netfoundry，而且電話號碼為 `18889990000`，則完整 SIP URI 是 `sip:18889990000\\@dal.watson-va.netfoundry.net`。
+**請記住**：轉接目標的 SIP URI 包括一個電話號碼及您建立的終止 URI。請不要在轉接目標中使用個人電話號碼。例如，如果電話號碼是 `18889990000`，而終止 URI 是 `mysiptrunk.pstn.twilio.com`，則完整 SIP URI 是 `sip:18889990000\\@mysiptrunk.pstn.twilio.com`。如果您使用 Netfoundry，而且電話號碼為 `18889990000`，則完整 SIP URI 是 `sip:18889990000\\@dal.watson-va.netfoundry.net`。
 
 ## 後續步驟
 {: #Next}
