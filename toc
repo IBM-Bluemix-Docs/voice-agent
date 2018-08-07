@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="voice-agent" audience="service" href="/docs/services/voice-agent/getting-started.html"}
+{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent/getting-started.html"}
 IBM Voice Agent with Watson
 
     {: .navgroup id="learn"}
