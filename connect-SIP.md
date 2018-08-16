@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -103,4 +103,13 @@ You can request assisted network setup to connect with AT&T or other SIP trunkin
 
 1. For **Subject**, enter `{{site.data.keyword.iva_short}} assisted network setup`.
 
-1. In the **Brief description** section, describe how you intend to connect to your {{site.data.keyword.iva_short}} service or to request more than 50 concurrent connections for your voice agent. You can connect by using either a SIP trunking provider or a Peer connection, such as an IPSec tunnel. In your ticket, you can attach a network diagram that describes your network topology in a PDF or image format. You can also attach any white papers that describe the service capabilities that you want in detail.
+1. In the **Brief description** section, describe how you intend to connect to your {{site.data.keyword.iva_short}} service or to request more than 50 concurrent connections for your voice agent. Peer connection is available to users with _Standard_ or _Premium_ plans. If you switch your instance from either a _Standard_ or _Premium_ plan to a _Lite_ plan, or if you delete your instance, peer connection is disabled.
+
+  You can connect by using either a SIP trunking provider or a peer connection, such as an IPSec tunnel. In your ticket, you can attach a network diagram that describes your network topology in a PDF or image format. You can also attach any white papers that describe the service capabilities that you want in detail.
+
+  Please include the following information in your **Brief description**:
+  * Company Name
+  * {{site.data.keyword.Bluemix_notm}} account ID
+  * Your {{site.data.keyword.iva_short}} service dashboard URL
+  * Use Case
+  * Network diagram with IP address or SIP trunk provider info
