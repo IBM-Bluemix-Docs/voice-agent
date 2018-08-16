@@ -35,7 +35,7 @@ You can enable Secure Real Time Transport Protocol (SRTP) and encryption by usin
 ## Enabling encryption for only SIP messages by using TLS in Twilio
 {: #TLS}
 
-If you want to encrypt only SIP messages in {{site.agent.keyword.iva_short}} without SRTP, you can select a URI endpoint that uses Transport Layer Security (TLS) in Twilio.
+If you want to encrypt only SIP messages in {{site.data.keyword.iva_short}} without SRTP, you can select a URI endpoint that uses Transport Layer Security (TLS) in Twilio.
 
 1. In your Twilio account, navigate to the _Elastic SIP Trunking_ dashboard and select **Trunks**.
 
