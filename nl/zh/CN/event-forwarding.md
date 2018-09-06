@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-11"
+lastupdated: "2018-08-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -37,7 +37,7 @@ lastupdated: "2018-06-11"
 
 1. 选择**我的 {{site.data.keyword.cloudant_short_notm}} 服务实例**或**其他 {{site.data.keyword.cloudant_short_notm}} 服务实例**。
   * 如果使用**我的 {{site.data.keyword.cloudant_short_notm}} 服务实例**，请从列表中选择 **{{site.data.keyword.cloudant_short_notm}} 帐户**名称和用户名。
-  * 如果使用**其他 {{site.data.keyword.cloudant_short_notm}} 服务实例**，请输入帐户的 {{site.data.keyword.cloudant_short_notm}} 用户名和密码。
+  * 如果使用**其他 {{site.data.keyword.cloudant_short_notm}} 服务实例**，请输入帐户的 {{site.data.keyword.cloudant_short_notm}} 用户名和密码或 API 密钥。
 
 1. 针对要转发的每种类型的事件选择**启用**，然后选择要将事件转发给哪个数据库。
   * 呼叫详细记录 (CDR) 事件

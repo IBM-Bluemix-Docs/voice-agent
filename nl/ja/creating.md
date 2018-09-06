@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -31,9 +31,9 @@ lastupdated: "2018-06-13"
 ## コマンド・ラインからのサービスの作成
 {: #command_create}
 
-1. [{{site.data.keyword.Bluemix_notm}} CLI をインストールします](../../cli/reference/bluemix_cli/get_started.html)。
+1. [{{site.data.keyword.Bluemix_notm}} CLI をインストールします](../../cli/index.html#overview)。
 
-2. [`ibmcloud` コマンド](../../cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)を実行して、_トライアル_・プランで VoiceAgent サービス・インスタンスを作成します。
+2. [`ibmcloud` コマンド](../../cli/idt/commands.html#idt-cli)を実行して、_トライアル_・プランで Voice Agent サービス・インスタンスを作成します。
 
    ```
    ibmcloud service create VoiceAgent _Trial_ "My Voice Agent Service"

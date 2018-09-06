@@ -35,7 +35,7 @@ Puoi abilitare SRTP (Secure Real Time Transport Protocol) e la codifica utilizza
 ## Abilitazione della codifica solo per i messaggi SIP utilizzando TLS in Twilio
 {: #TLS}
 
-Se vuoi codificare soltanto i messaggi SIP in {{site.agent.keyword.iva_short}} senza SRTP, puoi selezionare un endpoint URI che utilizza TLS (Transport Layer Security) in Twilio.
+Se vuoi codificare soltanto i messaggi SIP in {{site.data.keyword.iva_short}} senza SRTP, puoi selezionare un endpoint URI che utilizza TLS (Transport Layer Security) in Twilio.
 
 1. Nel tuo account Twilio, passa al dashboard _Elastic SIP Trunking_ e seleziona **Trunks**.
 

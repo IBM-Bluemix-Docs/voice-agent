@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -31,9 +31,9 @@ lastupdated: "2018-06-13"
 ## 從指令行建立服務
 {: #command_create}
 
-1. [安裝 {{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/get_started.html)。
+1. [安裝 {{site.data.keyword.Bluemix_notm}} CLI](../../cli/index.html#overview)。
 
-2. 執行 [`ibmcloud` 指令](../../cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)，以使用_試用_ 方案建立 VoiceAgent 服務實例：
+2. 執行 [`ibmcloud` 指令](../../cli/idt/commands.html#idt-cli)，以使用_試用_ 方案建立 Voice Agent 服務實例：
 
    ```
    ibmcloud service create VoiceAgent _Trial_ "My Voice Agent Service"

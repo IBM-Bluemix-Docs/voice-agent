@@ -35,7 +35,7 @@ Sie können SRTP (Secure Real Time Transport Protocol) und die Verschlüsselung 
 ## Verschlüsselung nur für SIP-Nachrichten mit TLS in Twilio aktivieren
 {: #TLS}
 
-Wenn Sie nur SIP-Nachrichten in {{site.agent.keyword.iva_short}} verschlüsseln möchten, ohne SRTP zu verwenden, können Sie einen URI-Endpunkt, der TLS (Transport Layer Security) verwendet, in Twilio auswählen.
+Wenn Sie nur SIP-Nachrichten in {{site.data.keyword.iva_short}} verschlüsseln möchten, ohne SRTP zu verwenden, können Sie einen URI-Endpunkt, der TLS (Transport Layer Security) verwendet, in Twilio auswählen.
 
 1. Navigieren Sie in Ihrem Twilio-Konto zum Dashboard _Elastisches SIP-Trunking_ und wählen Sie **Trunks**.
 

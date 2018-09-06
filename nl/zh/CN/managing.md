@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-08-16"
 
 
 ---
@@ -44,15 +44,15 @@ lastupdated: "2018-06-19"
 
 1. 在 **{{site.data.keyword.conversationshort}}** 下，通过单击**启用位置 1** 或**启用位置 2** 配置 {{site.data.keyword.conversationshort}} 服务实例的连接。您可以在您或其他人的 {{site.data.keyword.Bluemix_notm}} 帐户下使用 {{site.data.keyword.conversationshort}} 实例或 {{site.data.keyword.virtualagentfull}} 实例。还可以通过服务编排引擎连接到其中任一实例。
 
-    * 如果要在美国南部地区创建语音代理程序，但没有 {{site.data.keyword.conversationshort}} 服务实例，那么可以在**服务实例**菜单中创建一个服务实例。
+    * 如果要在美国南部或美国东部区域创建语音代理程序，但没有 {{site.data.keyword.conversationshort}} 服务实例，那么可以在**服务实例**菜单中创建一个服务实例。
     * 或者，可以通过更改[**服务类型**](#other_service)来连接到 {{site.data.keyword.conversationshort}} 对话的其他源。
     * 如果您想要配置多个服务位置，请单击其他位置选项，并选择**启用位置**以配置到其他 {{site.data.keyword.conversationshort}} 实例的连接。请参阅[添加多个 Watson 服务位置](#add_location)。
 
-1. 在 **{{site.data.keyword.speechtotextshort}}** 下，通过单击**启用位置 1** 或**启用位置 2** 查看 {{site.data.keyword.speechtotextshort}} 服务实例的缺省配置。如果要在美国南部地区创建语音代理程序，但没有 {{site.data.keyword.speechtotextshort}} 服务实例，那么可以从**服务实例**菜单中创建一个服务实例。或者，可以更改[**服务类型**](#other_service)，将语音代理程序连接到其他 {{site.data.keyword.Bluemix_notm}} 帐户空间中的 {{site.data.keyword.speechtotextshort}} 实例。{{site.data.keyword.iva_short}} 仅支持窄带模型。
+1. 在 **{{site.data.keyword.speechtotextshort}}** 下，通过单击**启用位置 1** 或**启用位置 2** 查看 {{site.data.keyword.speechtotextshort}} 服务实例的缺省配置。如果要在美国南部或美国东部区域创建语音代理程序，但没有 {{site.data.keyword.speechtotextshort}} 服务实例，那么可以从**服务实例**菜单中创建一个服务实例。或者，可以更改[**服务类型**](#other_service)，将语音代理程序连接到其他 {{site.data.keyword.Bluemix_notm}} 帐户空间中的 {{site.data.keyword.speechtotextshort}} 实例。{{site.data.keyword.iva_short}} 仅支持窄带模型。
 
     如果您想要配置多个服务位置，请单击其他位置选项，并选择**启用位置**以配置到其他 {{site.data.keyword.speechtotextshort}} 实例的连接。请参阅[添加多个 Watson 服务位置](#add_location)。
 
-1. 在 **{{site.data.keyword.texttospeechshort}}** 下，通过单击**启用位置 1** 或**启用位置 2** 查看 {{site.data.keyword.texttospeechshort}} 服务实例的缺省配置。如果要在美国南部地区创建语音代理程序，但没有 {{site.data.keyword.texttospeechshort}} 服务实例，那么可以从**服务实例**菜单中创建一个服务实例。或者，可以更改[**服务类型**](#other_service)，将语音代理程序连接到其他 {{site.data.keyword.Bluemix_notm}} 帐户空间中的 {{site.data.keyword.texttospeechshort}} 实例。
+1. 在 **{{site.data.keyword.texttospeechshort}}** 下，通过单击**启用位置 1** 或**启用位置 2** 查看 {{site.data.keyword.texttospeechshort}} 服务实例的缺省配置。如果要在美国南部或美国东部区域创建语音代理程序，但没有 {{site.data.keyword.texttospeechshort}} 服务实例，那么可以从**服务实例**菜单中创建一个服务实例。或者，可以更改[**服务类型**](#other_service)，将语音代理程序连接到其他 {{site.data.keyword.Bluemix_notm}} 帐户空间中的 {{site.data.keyword.texttospeechshort}} 实例。
 
     如果您想要配置多个服务位置，请单击其他位置选项，并选择**启用位置**以配置到其他 {{site.data.keyword.texttospeechshort}} 实例的连接。请参阅[添加多个 Watson 服务位置](#add_location)。
 
@@ -110,6 +110,7 @@ lastupdated: "2018-06-19"
 
 * **{{site.data.keyword.conversationshort}} 失败回复消息（可选）**：在呼叫无法连接到 {{site.data.keyword.conversationshort}} 时发送给消息接收方的缺省响应消息。
 * **转移失败回复消息（可选）**：在呼叫转移失败时向呼叫者传送的缺省响应消息。
+* **定制 SIP INVITE 标题（可选）**：指定要从入局 SIP INVITE 请求中抽取的定制 SIP 标题
 * **从 {{site.data.keyword.iva_short}} 发送临时响铃响应**：在 {{site.data.keyword.iva_short}} 处理入局呼叫时，发送 `180 ringing` 响应。缺省情况下，会启用此设置。
 * **转移时让呼叫者等待**：在转移期间让呼叫者等待。缺省情况下，会启用此设置。
 * **转移失败时断开呼叫**：用于确定在呼叫转移失败时是否断开呼叫。缺省情况下，会启用此设置。如果禁用此设置，那么当呼叫转移失败时，{{site.data.keyword.iva_short}} 会启动一轮对话。然后，{{site.data.keyword.conversationshort}} 可以断开呼叫或将其转移到对话中配置的其他目标。

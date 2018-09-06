@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -31,9 +31,9 @@ Sie können mithilfe des {{site.data.keyword.Bluemix_short}}-Katalogs oder eines
 ## Service über die Befehlszeile erstellen
 {: #command_create}
 
-1. [Installieren Sie die {{site.data.keyword.Bluemix_notm}}-CLI](../../cli/reference/bluemix_cli/get_started.html).
+1. [Installieren Sie die {{site.data.keyword.Bluemix_notm}}-CLI](../../cli/index.html#overview).
 
-2. Führen Sie den [`ibmcloud`-Befehl](../../cli/reference/bluemix_cli/bx_cli.html#bluemix_cli) aus, mit dem Ihre VoiceAgent-Serviceinstanz im Rahmen des Testplans (_Trial_) erstellt wird:
+2. Führen Sie den [`ibmcloud`-Befehl](../../cli/idt/commands.html#idt-cli) aus, mit dem Ihre Voice Agent-Serviceinstanz im Rahmen des Testplans (_Trial_) erstellt wird:
 
    ```
    ibmcloud service create VoiceAgent _Trial_ "My Voice Agent Service"

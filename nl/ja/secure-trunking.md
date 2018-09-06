@@ -35,7 +35,7 @@ Secure Real Time Transport Protocol (SRTP) を有効にしたり、SIP トラン
 ## Twilio で TLS を使用して SIP メッセージの暗号化のみを有効にする
 {: #TLS}
 
-SRTP を使用せずに {{site.agent.keyword.iva_short}} の SIP メッセージのみを暗号化する場合は、Twilio で Transport Layer Security (TLS) を使用する URI エンドポイントを選択します。
+SRTP を使用せずに {{site.data.keyword.iva_short}} の SIP メッセージのみを暗号化する場合は、Twilio で Transport Layer Security (TLS) を使用する URI エンドポイントを選択します。
 
 1. Twilio アカウントで、_「弾力的な SIP トランクの接続 (Elastic SIP Trunking)」_ダッシュボードにナビゲートして**「トランク (Trunks)」**を選択します。
 

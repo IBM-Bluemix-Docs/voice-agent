@@ -35,14 +35,14 @@ lastupdated: "2018-06-14"
 ## 2단계: SIP 트렁크를 작성하여 {{site.data.keyword.iva_short}}에 호출 전달
 {: #step2}
 
-1. 다음의 지원되는 제공자 중에서 SIP 트렁크를 작성하십시오. 그리고 전화번호를 SIP 트렁크와 연관시키십시오. 
+1. 다음의 지원되는 제공자 중에서 SIP 트렁크를 작성하십시오. 그리고 전화번호를 SIP 트렁크와 연관시키십시오.
 
   * [NetFoundry](connect-SIP.html#NetFoundry-setup)
   * [Twilio](connect-SIP.html#twilio-setup)
   * [AT&T 및 기타 SIP 트렁크 제공자](connect-SIP.html#att-other)
   * [{{site.data.keyword.iva_short}}과의 피어링](connect-SIP.html#peering)
 
-## 3단계: 음성 에이전트 작성 및 연결 
+## 3단계: 음성 에이전트 작성 및 연결
 {: #step3}
 
 1. {{site.data.keyword.iva_short}} 대시보드의 _관리_ 대시보드로 이동하여 **음성 에이전트 작성**을 클릭하십시오.
@@ -56,10 +56,10 @@ lastupdated: "2018-06-14"
   * **음성 에이전트 작성**을 클릭하여 하나의 단계로 기본 구성을 사용하여 모든 서비스 및 음성 에이전트를 작성하십시오.
   * 또는 각 서비스 이름을 클릭하여 서비스를 직접 작성하십시오. 그런 다음 {{site.data.keyword.iva_short}}로 돌아가서 음성 에이전트를 별도로 작성하십시오.
 
-   수동으로 {{site.data.keyword.conversationshort}} 서비스 인스턴스를 작성한 경우 음성 에이전트를 테스트할 수 있도록 대화를 추가하십시오. 빠르게 시작하려면 GitHub에서 [샘플 대화 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)를 복제한 후 [샘플을 작업공간으로 가져오십시오](../conversation/configure-workspace.html#creating-workspaces).
+   수동으로 {{site.data.keyword.conversationshort}} 서비스 인스턴스를 작성한 경우 음성 에이전트를 테스트할 수 있도록 대화를 추가하십시오.  빠르게 시작하려면 GitHub에서 [샘플 대화 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)를 복제한 후 [샘플을 작업공간으로 가져오십시오](../conversation/configure-workspace.html#creating-workspaces).
 
    1. 동일한 대화 GitHub 페이지에서 행 번호 `1`을 클릭하고 **... > 행 복사**를 선택하십시오. 복사된 텍스트를 파일에 붙여넣고 JSON 파일(예: `voice-gateway-conversation-en.json`)로 저장하십시오.
-   2. {{site.data.keyword.conversationshort}} 도구를 실행하십시오. _작업공간_ 페이지에서 ![작업공간 가져오기](../conversation/images/workspace_import.png) 아이콘을 클릭하고 JSON 파일을 가져오십시오. 
+   2. {{site.data.keyword.conversationshort}} 도구를 실행하십시오. _작업공간_ 페이지에서 ![작업공간 가져오기](../conversation/images/workspace_import.png) 아이콘을 클릭하고 JSON 파일을 가져오십시오.
 
   또는 프로덕션 환경을 시뮬레이션하기 위한 [고유한 대화를 빌드](https://console.bluemix.net/docs/services/conversation/dialog-build.html)할 수 있습니다. 최소한 `conversation_start` 조건이 있는 노드와 기본 응답이 있는 노드가 대화에 포함되어야 합니다.
 
@@ -72,4 +72,4 @@ lastupdated: "2018-06-14"
 
 _관리_ 대시보드에서 음성 에이전트에 대한 설정을 편집하고 음성 에이전트를 작성 또는 제거하며 다중 Watson 서비스 위치를 음성 에이전트에 추가할 수 있습니다. 자세한 정보는 [음성 에이전트 관리](managing.html)를 참조하십시오.
 
-또한 Twilio 계정에서 SIP 연결 보호 등의 고급 설정을 구성할 수도 있습니다. [연결 보호](secure-trunking.html)를 참조하십시오. 
+또한 Twilio 계정에서 SIP 연결 보호 등의 고급 설정을 구성할 수도 있습니다. [연결 보호](secure-trunking.html)를 참조하십시오.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -103,4 +103,13 @@ O {{site.data.keyword.iva_short}} suporta conexões peer, como um túnel IPSec. 
 
 1. Para **Assunto**, insira `{{site.data.keyword.iva_short}} assisted network setup`.
 
-1. Na seção **Descrição breve**, descreva como pretende se conectar ao seu serviço {{site.data.keyword.iva_short}} ou solicitar mais de 50 conexões simultâneas ao seu agente de voz. É possível se conectar usando um provedor de entroncamento SIP ou uma conexão peer, como um túnel IPSec. Em seu chamado, é possível anexar um diagrama de rede que descreve a topologia de sua rede em um formato PDF ou de imagem. Também é possível anexar quaisquer White Papers que descrevam em detalhes as competências de serviços que você deseja.
+1. Na seção **Descrição breve**, descreva como pretende se conectar ao seu serviço {{site.data.keyword.iva_short}} ou solicitar mais de 50 conexões simultâneas ao seu agente de voz. A conexão peer está disponível para os usuários com planos _Padrão_ ou _Premium_. Se você alternar sua instância de um plano _Padrão_ ou _Premium_ para um plano _Lite_ ou se você excluir sua instância, a conexão peer será desativada.
+
+  É possível se conectar usando um provedor de entroncamento SIP ou uma conexão peer, como um túnel IPSec. Em seu chamado, é possível anexar um diagrama de rede que descreve a topologia de sua rede em um formato PDF ou de imagem. Também é possível anexar quaisquer White Papers que descrevam em detalhes as competências de serviços que você deseja.
+
+  Inclua as informações a seguir em sua **Descrição breve**:
+  * Nome da Empresa
+  * ID da conta {{site.data.keyword.Bluemix_notm}}
+  * URL do seu painel de serviços do {{site.data.keyword.iva_short}}
+  * Caso de Uso
+  * Diagrama de rede com endereço IP ou informações do provedor de tronco SIP

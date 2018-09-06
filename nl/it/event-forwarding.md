@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-11"
+lastupdated: "2018-08-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -37,7 +37,7 @@ Puoi abilitare l'inoltro dell'evento quando stai creando o modificando i tuoi ag
 
 1. Seleziona **My {{site.data.keyword.cloudant_short_notm}} service instance** o **Other {{site.data.keyword.cloudant_short_notm}} service instance**.
   * Se stai utilizzando **My {{site.data.keyword.cloudant_short_notm}} service instance**, seleziona il nome dell'**account {{site.data.keyword.cloudant_short_notm}}** e il nome utente dagli elenchi.
-  * Se stai utilizzando **Other {{site.data.keyword.cloudant_short_notm}} service instance**, immetti il nome utente e la password {{site.data.keyword.cloudant_short_notm}} dell'account.
+  * Se stai utilizzando **Other {{site.data.keyword.cloudant_short_notm}} service instance**, immetti il nome utente e la password {{site.data.keyword.cloudant_short_notm}} o la chiave API per l'account.
 
 1. Seleziona **Enable** per ogni tipo di evento che vuoi inoltrare e poi scegli il database a cui vuoi inoltrare gli eventi.
   * Eventi CDR (Call detail record)

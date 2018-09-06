@@ -36,4 +36,4 @@ lastupdated: "2018-06-19"
 | {{site.data.keyword.conversationshort}}으로 SIP TO URI 전송 | 사용 |
 | {{site.data.keyword.conversationshort}}으로 SIP FROM URI 전송 | 사용 |
 | 사용자 정의 SIP 초대 헤더 | 사용자 대 사용자 |
-{: caption="표 1. {{site.data.keyword.iva_short}} 기본 설정 " caption-side="top"}
+{: caption="표 1. {{site.data.keyword.iva_short}} 기본 설정" caption-side="top"}

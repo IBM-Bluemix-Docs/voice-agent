@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-08-16"
 
 
 ---
@@ -44,15 +44,15 @@ Cuando crea un agente de voz, {{site.data.keyword.iva_short}} busca automáticam
 
 1. En **{{site.data.keyword.conversationshort}}**, configure la conexión a su instancia de servicio de {{site.data.keyword.conversationshort}} pulsando **Habilitar ubicación 1** o **Habilitar ubicación 2**. Puede utilizar instancias de {{site.data.keyword.conversationshort}} o instancias de {{site.data.keyword.virtualagentfull}} en cuentas de {{site.data.keyword.Bluemix_notm}} que posee usted u otra persona. También puede conectarse a cualquiera de estas opciones mediante un motor de orquestación de servicio.
 
-    * Si está creando un agente de voz en la región EE.UU. sur y no tiene una instancia de servicio de {{site.data.keyword.conversationshort}}, puede crear una desde el menú **Instancia de servicio**.
+    * Si está creando un agente de voz en las regiones EE.UU. sur o EE.UU. este y no tiene una instancia de servicio de {{site.data.keyword.conversationshort}}, puede crear una desde el menú **Instancia de servicio**.
     * Como alternativa, puede conectarse a otros orígenes de un diálogo de {{site.data.keyword.conversationshort}} cambiando el [**Tipo de servicio**](#other_service).
     * Si desea configurar varias ubicaciones de servicio, pulse la opción de la otra ubicación y seleccione **Habilitar ubicación** para configurar la conexión a su otra instancia de {{site.data.keyword.conversationshort}}. Consulte [Adición de varias ubicaciones de servicio de Watson](#add_location).
 
-1. En **{{site.data.keyword.speechtotextshort}}**, revise la configuración predeterminada para su instancia de servicio de {{site.data.keyword.speechtotextshort}} pulsando **Habilitar ubicación 1** o **Habilitar ubicación 2**. Si está creando un agente de voz en la región EE.UU. sur y no tiene una instancia de servicio de {{site.data.keyword.speechtotextshort}}, puede crear una desde el menú **Instancia de servicio**. O bien, puede conectar su agente de voz a una instancia de {{site.data.keyword.speechtotextshort}} en un espacio de cuenta diferente de {{site.data.keyword.Bluemix_notm}} cambiando el [**Tipo de servicio**](#other_service). {{site.data.keyword.iva_short}} sólo admite modelos de banda estrecha.
+1. En **{{site.data.keyword.speechtotextshort}}**, revise la configuración predeterminada para su instancia de servicio de {{site.data.keyword.speechtotextshort}} pulsando **Habilitar ubicación 1** o **Habilitar ubicación 2**. Si está creando un agente de voz en las regiones EE.UU. sur o EE.UU. este y no tiene una instancia de servicio de {{site.data.keyword.speechtotextshort}}, puede crear una desde el menú **Instancia de servicio**. O bien, puede conectar su agente de voz a una instancia de {{site.data.keyword.speechtotextshort}} en un espacio de cuenta diferente de {{site.data.keyword.Bluemix_notm}} cambiando el [**Tipo de servicio**](#other_service). {{site.data.keyword.iva_short}} sólo admite modelos de banda estrecha.
 
     Si desea configurar varias ubicaciones de servicio, pulse la opción de la otra ubicación y seleccione **Habilitar ubicación** para configurar la conexión a su otra instancia de {{site.data.keyword.speechtotextshort}}. Consulte [Adición de varias ubicaciones de servicio de Watson](#add_location).
 
-1. En **{{site.data.keyword.texttospeechshort}}**, revise la configuración predeterminada para su instancia de servicio de {{site.data.keyword.texttospeechshort}} pulsando **Habilitar ubicación 1** o **Habilitar ubicación 2**. Si está creando un agente de voz en la región EE.UU. sur y no tiene una instancia de servicio de {{site.data.keyword.texttospeechshort}}, puede crear una desde el menú **Instancia de servicio**. O bien, puede conectar su agente de voz a una instancia de {{site.data.keyword.texttospeechshort}} en un espacio de cuenta diferente de {{site.data.keyword.Bluemix_notm}} cambiando el [**Tipo de servicio**](#other_service).
+1. En **{{site.data.keyword.texttospeechshort}}**, revise la configuración predeterminada para su instancia de servicio de {{site.data.keyword.texttospeechshort}} pulsando **Habilitar ubicación 1** o **Habilitar ubicación 2**. Si está creando un agente de voz en las regiones EE.UU. sur o EE.UU. este y no tiene una instancia de servicio de {{site.data.keyword.texttospeechshort}}, puede crear una desde el menú **Instancia de servicio**. O bien, puede conectar su agente de voz a una instancia de {{site.data.keyword.texttospeechshort}} en un espacio de cuenta diferente de {{site.data.keyword.Bluemix_notm}} cambiando el [**Tipo de servicio**](#other_service).
 
     Si desea configurar varias ubicaciones de servicio, pulse la opción de la otra ubicación y seleccione **Habilitar ubicación** para configurar la conexión a su otra instancia de {{site.data.keyword.texttospeechshort}}. Consulte [Adición de varias ubicaciones de servicio de Watson](#add_location).
 
@@ -110,6 +110,7 @@ Al crear o clonar un agente de voz, puede pulsar **Mostrar avanzadas** para ver 
 
 * **Mensaje de respuesta de error de {{site.data.keyword.conversationshort}} (opcional)**: El mensaje de respuesta predeterminado que se envía al receptor del mensaje si la llamada no puede conectarse a {{site.data.keyword.conversationshort}}.
 * **Mensaje de respuesta de error de transferencia (opcional)**: El mensaje de respuesta predeterminado que se transmite al interlocutor si falla la transferencia de la llamada.
+* **Cabecera SIP INVITE personalizada (opcional)**: especifica una cabecera SIP personalizada para extraer de las solicitudes SIP INVITE entrantes
 * **Enviar respuesta de tono de llamada provisional desde {{site.data.keyword.iva_short}}**: Envía una respuesta `180 llamando` mientras {{site.data.keyword.iva_short}} procesa una llamada entrante. Está habilitado de forma predeterminada.
 * **Poner el interlocutor en espera durante la transferencia**: Pone el interlocutor en espera durante la transferencia. Está habilitado de forma predeterminada.
 * **Desconectar la llamada si falla la transferencia**: Determina si se desconecta o no la llamada cuando falla la transferencia de una llamada.  Está habilitado de forma predeterminada. Si el valor está inhabilitado y falla la transferencia de una llamada, {{site.data.keyword.iva_short}} inicia un turno de conversación. A continuación, {{site.data.keyword.conversationshort}} puede desconectar la llamada o enviarla a otro destino, tal como esté configurado en el diálogo.

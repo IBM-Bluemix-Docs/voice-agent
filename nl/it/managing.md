@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-08-16"
 
 
 ---
@@ -36,7 +36,7 @@ Quando crei un agent vocale, {{site.data.keyword.iva_short}} automaticamente ric
 
 1. Facoltativamente descrivi il tuo agent vocale.
 
-1. Se vuoi abilitare il trasferimento di chiamata, puoi configurare un URI di terminazione per la tua **Transfer Target**. Consulta [Configurazione del trasferimento di chiamata](call-transfer.html). Non utilizzare un numero di telefono personale per la tua destinazione di trasferimento. 
+1. Se vuoi abilitare il trasferimento di chiamata, puoi configurare un URI di terminazione per la tua **Transfer Target**. Consulta [Configurazione del trasferimento di chiamata](call-transfer.html). Non utilizzare un numero di telefono personale per la tua destinazione di trasferimento.
 
 1. Configura le connessioni alle tue istanze del servizio Watson. Puoi collegarti a più istanze del servizio Watson configurando le connessioni per **Location 1** e **Location 2**. Disporre di connessioni a più istanze del servizio consente al tuo agent vocale di passare a un'istanza del servizio alternativa se si verifica un'interruzione. Consulta [Aggiunta di più ubicazioni del servizio Watson](#add_location).
 
@@ -44,15 +44,15 @@ Quando crei un agent vocale, {{site.data.keyword.iva_short}} automaticamente ric
 
 1. In **{{site.data.keyword.conversationshort}}**, configura la connessione alla tua istanza del servizio {{site.data.keyword.conversationshort}} facendo clic su **Enable location 1** o **Enable location 2**. Puoi utilizzare le istanze {{site.data.keyword.conversationshort}} o {{site.data.keyword.virtualagentfull}} negli account {{site.data.keyword.Bluemix_notm}} che gestisci tu o qualcun altro. Puoi anche collegare una qualsiasi di queste opzioni tramite un motore di orchestrazione del servizio.
 
-    * Se stai creando un agent vocale nella regione Stati Uniti Sud e non hai un'istanza del servizio {{site.data.keyword.conversationshort}}, puoi crearne una nel menu **Service instance**.
+    * Se stai creando un agent vocale nella regione Stati Uniti Sud o Stati Uniti Est e non hai un'istanza del servizio {{site.data.keyword.conversationshort}}, puoi crearne una nel menu **Service instance**.
     * In alternativa, puoi collegare altre risorse di un dialogo {{site.data.keyword.conversationshort}} modificando il [**Service type**](#other_service).
     * Se vuoi configurare più ubicazioni del servizio, fai clic sull'altra opzione di ubicazione e seleziona **Enable location** per configurare la connessione alla tua altra istanza {{site.data.keyword.conversationshort}}. Consulta [Aggiunta di più ubicazioni del servizio Watson](#add_location).
 
-1. In **{{site.data.keyword.speechtotextshort}}**, controlla la configurazione predefinita della tua istanza del servizio {{site.data.keyword.speechtotextshort}} facendo clic su **Enable location 1** o **Enable location 2**. Se stai creando un agent vocale nella regione Stati Uniti Sud e non hai un'istanza del servizio {{site.data.keyword.speechtotextshort}}, puoi crearne una dal menu **Service instance**. Oppure, puoi collegare il tuo agent vocale a un'istanza {{site.data.keyword.speechtotextshort}} in uno spazio dell'account {{site.data.keyword.Bluemix_notm}} differente modificando il [**Service type**](#other_service). {{site.data.keyword.iva_short}} supporta solo i modelli a banda stretta.
+1. In **{{site.data.keyword.speechtotextshort}}**, controlla la configurazione predefinita della tua istanza del servizio {{site.data.keyword.speechtotextshort}} facendo clic su **Enable location 1** o su **Enable location 2**. Se stai creando un agent vocale nella regione Stati Uniti Sud o Stati Uniti Est e non hai un'istanza del servizio {{site.data.keyword.speechtotextshort}}, puoi crearne una dal menu **Service instance**. Oppure, puoi collegare il tuo agent vocale a un'istanza {{site.data.keyword.speechtotextshort}} in uno spazio dell'account {{site.data.keyword.Bluemix_notm}} differente modificando il [**Service type**](#other_service). {{site.data.keyword.iva_short}} supporta solo i modelli a banda stretta.
 
     Se vuoi configurare più ubicazioni del servizio, fai clic sull'altra opzione di ubicazione e seleziona **Enable location** per configurare la connessione alla tua altra istanza {{site.data.keyword.speechtotextshort}}. Consulta [Aggiunta di più ubicazioni del servizio Watson](#add_location).
 
-1. In **{{site.data.keyword.texttospeechshort}}**, controlla la configurazione predefinita della tua istanza del servizio {{site.data.keyword.texttospeechshort}} facendo clic su **Enable location 1** o **Enable location 2**. Se stai creando un agent vocale nella regione Stati Uniti Sud e non hai un'istanza del servizio {{site.data.keyword.texttospeechshort}}, puoi crearne una dal menu **Service instance**. Oppure, puoi collegare il tuo agent vocale a un'istanza {{site.data.keyword.texttospeechshort}} in uno spazio dell'account {{site.data.keyword.Bluemix_notm}} differente modificando il [**Service type**](#other_service).
+1. In **{{site.data.keyword.texttospeechshort}}**, controlla la configurazione predefinita della tua istanza del servizio {{site.data.keyword.texttospeechshort}} facendo clic su **Enable location 1** o su **Enable location 2**. Se stai creando un agent vocale nella regione Stati Uniti Sud o Stati Uniti Est e non hai un'istanza del servizio {{site.data.keyword.texttospeechshort}}, puoi crearne una dal menu **Service instance**. Oppure, puoi collegare il tuo agent vocale a un'istanza {{site.data.keyword.texttospeechshort}} in uno spazio dell'account {{site.data.keyword.Bluemix_notm}} differente modificando il [**Service type**](#other_service).
 
     Se vuoi configurare più ubicazioni del servizio, fai clic sull'altra opzione di ubicazione e seleziona **Enable location** per configurare la connessione alla tua altra istanza {{site.data.keyword.texttospeechshort}}. Consulta [Aggiunta di più ubicazioni del servizio Watson](#add_location).
 
@@ -110,6 +110,7 @@ Quando crei o cloni un agent vocale, puoi far clic su **Show advanced** per visu
 
 * **Messaggio di risposta di errore {{site.data.keyword.conversationshort}} (facoltativo)**: il messaggio di risposta predefinito inviato al destinatario se la chiamata non può collegarsi a {{site.data.keyword.conversationshort}}.
 * **Messaggio di risposta di errore di trasferimento (facoltativo)**: il messaggio di risposta predefinito trasmesso al destinatario se il trasferimento della chiamata ha esito negativo.
+* **Intestazione SIP INVITE personalizzata (facoltativo)**: specifica l'intestazione SIP personalizzata da estrarre dalle richieste SIP INVITE in entrata
 * **Invio della risposta sonora provvisoria da {{site.data.keyword.iva_short}}**: invia una risposta `180 ringing` mentre {{site.data.keyword.iva_short}} elabora una chiamata in entrata. Abilitato per impostazione predefinita.
 * **Messa in attesa del chiamante durante il trasferimento**: mette il chiamante in attesa durante il trasferimento. Abilitato per impostazione predefinita.
 * **Scollegamento della chiamata a un errore di trasferimento**: determina se scollegare o meno la chiamata se un trasferimento di chiamata ha esito negativo.  Abilitato per impostazione predefinita. Se l'impostazione è disabilitata e un trasferimento di chiamata ha esito negativo, {{site.data.keyword.iva_short}} avvia un turno di conversazione. Quindi, {{site.data.keyword.conversationshort}} può scollegare la chiamata o trasferirla a una destinazione diversa come configurato nel dialogo.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -103,4 +103,13 @@ Vous pouvez demander une configuration réseau assistée pour vous connecter à 
 
 1. Pour **Objet**, entrez `Configuration réseau assistée par {{site.data.keyword.iva_short}}`.
 
-1. Dans la section **Description brève**, décrivez de quelle façon vous souhaitez vous connecter à votre service {{site.data.keyword.iva_short}} ou demander plu de 50 connexions simultanées pour votre agent vocal. Vous pouvez vous connecter à l'aide d'un fournisseur de liaison SIP ou d'une connexion homologue, telle qu'un tunnel IPSec. Dans votre ticket, vous pouvez joindre un diagramme réseau décrivant votre topologie de réseau au format PDF ou image. Vous pouvez également joindre des livres blancs décrivant de façon détaillée les fonctions de service souhaitées.
+1. Dans la section **Description brève**, décrivez de quelle façon vous souhaitez vous connecter à votre service {{site.data.keyword.iva_short}} ou demander plu de 50 connexions simultanées pour votre agent vocal. Une connexion homologue est disponible pour les utilisateurs disposant de plans _Standard_ ou _Premium_. Si vous faites passer votre instance d'un plan _Standard_ ou _Premium_ à un plan _Lite_, ou si vous la supprimez, la connexion homologue est désactivée.
+
+  Vous pouvez vous connecter à l'aide d'un fournisseur de liaison SIP ou d'une connexion homologue, telle qu'un tunnel IPSec. Dans votre ticket, vous pouvez joindre un diagramme réseau décrivant votre topologie de réseau au format PDF ou image. Vous pouvez également joindre des livres blancs décrivant de façon détaillée les fonctions de service souhaitées.
+
+  Incluez les informations suivantes dans votre **Brève description** :
+  * Nom de la société
+  * ID de compte {{site.data.keyword.Bluemix_notm}}
+  * URL de votre tableau de bord de service {{site.data.keyword.iva_short}}
+  * Cas d'utilisation
+  * Diagramme réseau avec adresse IP ou informations sur le fournisseur de liaison SIP

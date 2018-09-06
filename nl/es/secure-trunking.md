@@ -35,7 +35,7 @@ Puede habilitar SRTP (Secure Real Time Transport Protocol, protocolo de transpor
 ## Habilitación del cifrado solo para los mensajes SIP utilizando TLS en Twilio
 {: #TLS}
 
-Si desea cifrar solo los mensajes SIP en {{site.agent.keyword.iva_short}} sin SRTP, puede seleccionar un punto final URI que utilice TLS en Twilio.
+Si desea cifrar solo los mensajes SIP en {{site.data.keyword.iva_short}} sin SRTP, puede seleccionar un punto final URI que utilice TLS en Twilio.
 
 1. En la cuenta de Twilio, vaya al panel de control _Conexiones troncales Elastic SIP_ y seleccione **Conexiones troncales**.
 

@@ -35,7 +35,7 @@ Vous pouvez activer le protocole SRTP (Secure Real Time Transport Protocol) et l
 ## Activation du chiffrement uniquement pour les messages SIP à l'aide de TLS dans Twilio
 {: #TLS}
 
-Si vous souhaitez chiffrer uniquement des messages SIP dans {{site.agent.keyword.iva_short}} sans SRTP, vous pouvez sélectionner un noeud final d'URI qui utilise TLS (Transport Layer Security) dans Twilio.
+Si vous souhaitez chiffrer uniquement des messages SIP dans {{site.data.keyword.iva_short}} sans SRTP, vous pouvez sélectionner un noeud final d'URI qui utilise TLS (Transport Layer Security) dans Twilio.
 
 1. Dans votre compte Twilio, accédez au tableau de bord _Elastic SIP Trunking_ et sélectionnez **Trunks**.
 

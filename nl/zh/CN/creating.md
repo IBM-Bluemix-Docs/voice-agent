@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -31,9 +31,9 @@ lastupdated: "2018-06-13"
 ## 通过命令行创建服务
 {: #command_create}
 
-1. [安装 {{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/get_started.html)。
+1. [安装 {{site.data.keyword.Bluemix_notm}} CLI](../../cli/index.html#overview)。
 
-2. 运行 [`ibmcloud` 命令](../../cli/reference/bluemix_cli/bx_cli.html#bluemix_cli)来创建具有_试用_套餐的 VoiceAgent 服务实例：
+2. 运行 [`ibmcloud` 命令](../../cli/idt/commands.html#idt-cli)来创建使用_试用_套餐的 Voice Agent 服务实例：
 
    ```
    ibmcloud service create VoiceAgent _Trial_ "My Voice Agent Service"

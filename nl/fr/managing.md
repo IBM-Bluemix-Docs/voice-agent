@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-08-16"
 
 
 ---
@@ -44,15 +44,15 @@ Lorsque vous créez un agent vocal, {{site.data.keyword.iva_short}} recherche au
 
 1. Sous **{{site.data.keyword.conversationshort}}**, configurez la connexion à votre instance de service {{site.data.keyword.conversationshort}} en cliquant sur **Activer l'emplacement 1** ou **Activer l'emplacement 2**. Vous pouvez utiliser des instances {{site.data.keyword.conversationshort}} ou des instances {{site.data.keyword.virtualagentfull}} dans des comptes {{site.data.keyword.Bluemix_notm}} que vous possédez ou qui sont la propriété de quelqu'un d'autre. Vous pouvez également vous connecter à l'une de ces options via un moteur d'orchestration de service.
 
-    * Si vous créez un agent vocal dans la région Sud des Etats-Unis alors que vous ne disposez d'aucune instance de service {{site.data.keyword.conversationshort}}, vous pouvez en créer une dans le menu **Instance de service**.
+    * Si vous créez un agent vocal dans la région Sud des Etats-Unis ou Est des Etats-Unis alors que vous ne disposez d'aucune instance de service {{site.data.keyword.conversationshort}}, vous pouvez en créer une dans le menu **Instance de service**.
     * Sinon, vous pouvez vous connecter à d'autres sources d'un dialogue {{site.data.keyword.conversationshort}} en modifiant le [**type de service**](#other_service).
     * Si vous souhaitez configurer plusieurs emplacements de service, cliquez sur l'autre option d'emplacement et sélectionnez **Activer l'emplacement** afin de configurer la connexion à votre autre instance {{site.data.keyword.conversationshort}}. Voir [Ajout de plusieurs emplacements de service Watson](#add_location).
 
-1. Sous **{{site.data.keyword.speechtotextshort}}**, passez en revue la configuration par défaut de votre instance de service {{site.data.keyword.speechtotextshort}} en cliquant sur **Activer l'emplacement 1** ou **Activer l'emplacement 2**. Si vous créez un agent vocal dans la région Sud des Etats-Unis alors que vous ne disposez d'aucune instance de service {{site.data.keyword.speechtotextshort}}, créez-en une à partir du menu **Instance de service**. Ou, vous pouvez connecter votre agent vocal à une instance {{site.data.keyword.speechtotextshort}} dans un autre espace de compte {{site.data.keyword.Bluemix_notm}} en modifiant le [**type de service**](#other_service). {{site.data.keyword.iva_short}} ne prend en charge que les modèles à bande étroite.
+1. Sous **{{site.data.keyword.speechtotextshort}}**, passez en revue la configuration par défaut de votre instance de service {{site.data.keyword.speechtotextshort}} en cliquant sur **Activer l'emplacement 1** ou **Activer l'emplacement 2**. Si vous créez un agent vocal dans la région Sud des Etats-Unis ou Est des Etats-Unis alors que vous ne disposez d'aucune instance de service {{site.data.keyword.speechtotextshort}}, créez-en une à partir du menu **Instance de service**. Ou, vous pouvez connecter votre agent vocal à une instance {{site.data.keyword.speechtotextshort}} dans un autre espace de compte {{site.data.keyword.Bluemix_notm}} en modifiant le [**type de service**](#other_service). {{site.data.keyword.iva_short}} ne prend en charge que les modèles à bande étroite.
 
     Si vous souhaitez configurer plusieurs emplacements de service, cliquez sur l'autre option d'emplacement et sélectionnez **Activer l'emplacement** afin de configurer la connexion à votre autre instance {{site.data.keyword.speechtotextshort}}. Voir [Ajout de plusieurs emplacements de service Watson](#add_location).
 
-1. Sous **{{site.data.keyword.texttospeechshort}}**, passez en revue la configuration par défaut de votre instance de service {{site.data.keyword.texttospeechshort}} en cliquant sur **Activer l'emplacement 1** ou **Activer l'emplacement 2**. Si vous créez un agent vocal dans la région Sud des Etats-Unis alors que vous ne disposez d'aucune instance de service {{site.data.keyword.texttospeechshort}}, vous pouvez en créer une à partir du menu **Instance de service**. Ou, vous pouvez connecter votre agent vocal à une instance {{site.data.keyword.texttospeechshort}} dans un autre espace de compte {{site.data.keyword.Bluemix_notm}} en modifiant le [**type de service**](#other_service).
+1. Sous **{{site.data.keyword.texttospeechshort}}**, passez en revue la configuration par défaut de votre instance de service {{site.data.keyword.texttospeechshort}} en cliquant sur **Activer l'emplacement 1** ou **Activer l'emplacement 2**. Si vous créez un agent vocal dans la région Sud des Etats-Unis ou Est des Etats-Unis alors que vous ne disposez d'aucune instance de service {{site.data.keyword.texttospeechshort}}, vous pouvez en créer une à partir du menu **Instance de service**. Ou, vous pouvez connecter votre agent vocal à une instance {{site.data.keyword.texttospeechshort}} dans un autre espace de compte {{site.data.keyword.Bluemix_notm}} en modifiant le [**type de service**](#other_service).
 
     Si vous souhaitez configurer plusieurs emplacements de service, cliquez sur l'autre option d'emplacement et sélectionnez **Activer l'emplacement** afin de configurer la connexion à votre autre instance {{site.data.keyword.texttospeechshort}}. Voir [Ajout de plusieurs emplacements de service Watson](#add_location).
 
@@ -110,6 +110,7 @@ Lorsque vous créez ou clonez un agent vocal, vous pouvez cliquer sur **Afficher
 
 * **Message de réponse en cas d'échec de {{site.data.keyword.conversationshort}} (facultatif)** : message de réponse par défaut qui est envoyé au récepteur de messagerie si l'appel ne peut pas se connecter à {{site.data.keyword.conversationshort}}.
 * **Message de réponse en cas d'échec du transfert (facultatif)** : message de réponse par défaut qui est diffusé à l'appelant si le transfert d'appel échoue.
+* **En-tête SIP INVITE personnalisé (facultatif)** : indique l'en-tête SIP personnalisé à extraire des requêtes SIP INVITE entrantes.
 * **Envoyer une réponse provisoire par téléphone depuis {{site.data.keyword.iva_short}}** : envoie une réponse `180 ringing` durant le traitement d'un appel entrant par {{site.data.keyword.iva_short}}. Activée par défaut.
 * **Placer l'appelant en attente lors du transfert** : l'appelant est placé en attente durant le transfert. Activée par défaut.
 * **Déconnecter l'appel en cas d'échec du transfert** : détermine s'il convient ou non de déconnecter l'appel en cas d'échec du transfert d'appel.  Activée par défaut. Si  le paramètre est désactivé et qu'un transfert d'appel échoue, {{site.data.keyword.iva_short}} initie un échange de conversation. Ensuite, {{site.data.keyword.conversationshort}} peut déconnecter l'appel ou le transférer vers une autre destination, selon la configuration dans le dialogue.

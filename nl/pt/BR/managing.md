@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-08-16"
 
 
 ---
@@ -52,26 +52,19 @@ serviço do {{site.data.keyword.conversationshort}} clicando em **Ativar local 1
 instâncias do {{site.data.keyword.virtualagentfull}} em contas do {{site.data.keyword.Bluemix_notm}} que pertençam a
 você ou a outra pessoa. É possível também conectar-se a qualquer uma dessas opções por meio de um mecanismo de orquestração de serviços.
 
-    * Se você estiver criando um agente de voz na região sul dos EUA e não tiver uma instância do serviço
-{{site.data.keyword.conversationshort}}, poderá criar uma no menu **Instância de serviço**.
+    * Se você estiver criando um agente de voz na região Sul dos EUA ou Leste dos EUA e não tiver uma instância do serviço {{site.data.keyword.conversationshort}}, será possível criar uma no menu **Instância de serviço**.
     * Como alternativa, é possível conectar-se a outras fontes de um diálogo {{site.data.keyword.conversationshort}} mudando o [**Tipo de serviço**](#other_service).
     * Se você deseja configurar múltiplos locais de serviço, clique na outra opção de local e selecione
 **Ativar local** para configurar a conexão com a sua outra instância do
 {{site.data.keyword.conversationshort}}. Consulte [Incluindo vários locais de serviço Watson](#add_location).
 
-1. Em **{{site.data.keyword.speechtotextshort}}**, revise a configuração padrão para a sua instância
-do serviço {{site.data.keyword.speechtotextshort}} clicando em **Ativar local 1** ou **Ativar
-local 2**. Se você estiver criando um agente de voz na região sul dos EUA e não tiver uma instância do serviço
-{{site.data.keyword.speechtotextshort}}, crie uma no menu **Instância de serviço**. Ou, é possível conectar seu agente de voz a uma instância {{site.data.keyword.speechtotextshort}} em um espaço de conta {{site.data.keyword.Bluemix_notm}} diferente mudando o [**Tipo de serviço**](#other_service). {{site.data.keyword.iva_short}} suporta apenas modelos estreita.
+1. Em **{{site.data.keyword.speechtotextshort}}**, revise a configuração padrão para sua instância de serviço {{site.data.keyword.speechtotextshort}} clicando em **Ativar localização 1** ou **Ativar localização 2**. Se estiver criando um agente de voz na região Sul dos EUA ou Leste dos EUA e não tiver uma instância de serviço {{site.data.keyword.speechtotextshort}}, crie uma no menu **Instância de serviço**. Ou, é possível conectar seu agente de voz a uma instância {{site.data.keyword.speechtotextshort}} em um espaço de conta {{site.data.keyword.Bluemix_notm}} diferente mudando o [**Tipo de serviço**](#other_service). {{site.data.keyword.iva_short}} suporta apenas modelos estreita.
 
     Se você deseja configurar múltiplos locais de serviço, clique na outra opção de local e selecione
 **Ativar local** para configurar a conexão com a sua outra instância do
 {{site.data.keyword.speechtotextshort}}. Consulte [Incluindo vários locais de serviço Watson](#add_location).
 
-1. Em **{{site.data.keyword.texttospeechshort}}**, revise a configuração padrão para a sua instância
-do serviço {{site.data.keyword.texttospeechshort}} clicando em **Ativar local 1** ou **Ativar
-local 2**. Se você estiver criando um agente de voz na região sul dos EUA e não tiver uma instância do serviço
-{{site.data.keyword.texttospeechshort}}, poderá criar uma no menu **Instância de serviço**. Ou, é possível conectar seu agente de voz a uma instância {{site.data.keyword.texttospeechshort}} em um espaço de conta {{site.data.keyword.Bluemix_notm}} diferente mudando o [**Tipo de serviço**](#other_service).
+1. Em **{{site.data.keyword.texttospeechshort}}**, revise a configuração padrão para sua instância de serviço {{site.data.keyword.texttospeechshort}} clicando em **Ativar localização 1** ou **Ativar localização 2**. Se estiver criando um agente de voz na região Sul dos EUA ou Leste dos EUA e não tiver uma instância de serviço {{site.data.keyword.texttospeechshort}}, crie uma no menu **Instância de serviço**. Ou, é possível conectar seu agente de voz a uma instância {{site.data.keyword.texttospeechshort}} em um espaço de conta {{site.data.keyword.Bluemix_notm}} diferente mudando o [**Tipo de serviço**](#other_service).
 
     Se você deseja configurar múltiplos locais de serviço, clique na outra opção de local e selecione
 **Ativar local** para configurar a conexão com a sua outra instância do
@@ -150,6 +143,7 @@ opções de configuração avançada a seguir.
 a mensagem de resposta padrão que será enviada para o receptor da mensagem se a chamada não puder se conectar ao {{site.data.keyword.conversationshort}}.
 * **Transferir mensagem de resposta de falha (opcional)**: a mensagem de resposta
 padrão que será transmitida ao responsável pela chamada se a transferência de chamada falhar.
+* **Cabeçalho customizado SIP INVITE (opcional)**: especifica o cabeçalho SIP customizado para extração de solicitações SIP INVITE recebidas
 * **Enviar resposta de toque provisório do {{site.data.keyword.iva_short}}**: envia uma
 resposta `180 ringing` enquanto o {{site.data.keyword.iva_short}} processa uma chamada de entrada. Ativado por padrão.
 * **Colocar o responsável pela chamada em espera na transferência**: coloca o responsável pela chamada

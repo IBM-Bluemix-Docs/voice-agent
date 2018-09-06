@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -32,10 +32,9 @@ catálogo do {{site.data.keyword.Bluemix_short}} ou um comando `ibmcloud` do {{s
 ## Criando o serviço da linha de comandos
 {: #command_create}
 
-1. [Instale a CLI do {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/get_started.html).
+1. [Instale o {{site.data.keyword.Bluemix_notm}} CLI](../../cli/index.html#overview).
 
-2. Execute o [comando `ibmcloud`
-](../../cli/reference/bluemix_cli/bx_cli.html#bluemix_cli) que cria a sua instância do serviço VoiceAgent com o plano de Experiência:
+2. Execute o comando [`ibmcloud`](../../cli/idt/commands.html#idt-cli) que cria sua instância de serviço do Agente de voz com o plano _Avaliação_:
 
    ```
    ibmcloud service create VoiceAgent _Trial_ "My Voice Agent Service"

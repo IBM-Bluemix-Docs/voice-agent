@@ -35,7 +35,7 @@ lastupdated: "2018-06-14"
 ## 在 Twilio 中使用 TLS 仅对 SIP 消息启用加密
 {: #TLS}
 
-如果只想加密 {{site.agent.keyword.iva_short}} 中的 SIP 消息，而不使用 SRTP，那么可以在 Twilio 中选择使用传输层安全性 (TLS) 的 URI 端点。
+如果只想加密 {{site.data.keyword.iva_short}} 中的 SIP 消息，而不使用 SRTP，那么可以在 Twilio 中选择使用传输层安全性 (TLS) 的 URI 端点。
 
 1. 在 Twilio 帐户中，浏览至_弹性 SIP 中继_仪表板，然后选择**中继**。
 

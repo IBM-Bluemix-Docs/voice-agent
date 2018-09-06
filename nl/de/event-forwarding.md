@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-11"
+lastupdated: "2018-08-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -37,7 +37,7 @@ Sie können die Ereignisweiterleitung aktivieren, wenn Sie Ihre Sprachagenten im
 
 1. Wählen Sie entweder **Meine {{site.data.keyword.cloudant_short_notm}}-Serviceinstanz** oder **Andere {{site.data.keyword.cloudant_short_notm}}-Serviceinstanz** aus.
   * Wenn Sie **Meine {{site.data.keyword.cloudant_short_notm}}-Serviceinstanz** verwenden, wählen Sie den Namen und Benutzernamen für das **{{site.data.keyword.cloudant_short_notm}}-Konto** aus den entsprechenden Listen aus.
-  * Wenn Sie **Andere {{site.data.keyword.cloudant_short_notm}}-Serviceinstanz** verwenden, geben Sie den {{site.data.keyword.cloudant_short_notm}}-Benutzernamen und das entsprechende Kennwort für das Konto ein.
+  * Wenn Sie **Andere {{site.data.keyword.cloudant_short_notm}}-Serviceinstanz** verwenden, geben Sie entweder den {{site.data.keyword.cloudant_short_notm}}-Benutzernamen und das entsprechende Kennwort oder den API-Schlüssel für das Konto ein.
 
 1. Wählen Sie **Aktivieren** für jeden Ereignistyp, der weitergeleitet werden soll, und wählen Sie anschließend die Datenbank aus, an die die Ereignisse weitergeleitet werden sollen.
   * CDR-Ereignisse (Call Detail Record, Datensatz mit Anrufdetails)

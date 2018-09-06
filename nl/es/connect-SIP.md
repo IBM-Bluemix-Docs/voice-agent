@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -103,4 +103,13 @@ Puede solicitar la configuración de red asistida para conectarse con AT&T u otr
 
 1. En **Asunto**, escriba `Configuración de red asistida de {{site.data.keyword.iva_short}}`.
 
-1. En la sección **Descripción breve**, describa cómo piensa conectarse al servicio {{site.data.keyword.iva_short}} o solicitar más de 50 conexiones simultáneas para su agente de voz. Puede conectarse utilizando un proveedor de conexión troncal SIP o una conexión entre iguales, como un túnel IPSec. En la incidencia, puede adjuntar un diagrama de red que describa su topología de red en formato PDF o de imagen. También puede adjuntar documentos técnicos que describan en detalle las capacidades de servicio que desea.
+1. En la sección **Descripción breve**, describa cómo piensa conectarse al servicio {{site.data.keyword.iva_short}} o solicitar más de 50 conexiones simultáneas para su agente de voz. La conexión entre iguales está disponible para usuarios con planes _Estándar_ o _Premium_. Si cambia la instancia de un plan _Estándar_ o _Premium_ a un plan _Lite_, o si suprime la instancia, se inhabilita la conexión entre iguales.
+
+  Puede conectarse utilizando un proveedor de conexión troncal SIP o una conexión entre iguales, como un túnel IPSec. En la incidencia, puede adjuntar un diagrama de red que describa su topología de red en formato PDF o de imagen. También puede adjuntar documentos técnicos que describan en detalle las capacidades de servicio que desea.
+
+  Incluya la información siguiente en la **Descripción breve**:
+  * Nombre de la empresa
+  * ID de cuenta de {{site.data.keyword.Bluemix_notm}}
+  * URL del panel de control del servicio {{site.data.keyword.iva_short}}
+  * Caso de uso
+  * Diagrama de red con la información de proveedor de conexión troncal SIP o dirección IP
