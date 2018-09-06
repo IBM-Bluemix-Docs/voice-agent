@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-08-16"
 
 
 ---
@@ -44,15 +44,15 @@ When you create a voice agent, {{site.data.keyword.iva_short}} automatically sea
 
 1. Under **{{site.data.keyword.conversationshort}}**, configure the connection to your {{site.data.keyword.conversationshort}} service instance by clicking **Enable location 1** or **Enable location 2**. You can use {{site.data.keyword.conversationshort}} instances or {{site.data.keyword.virtualagentfull}} instances in {{site.data.keyword.Bluemix_notm}} accounts that you or someone else owns. You can also connect to any of these options through a service orchestration engine.
 
-    * If you are creating a voice agent in the US South region and do not have a {{site.data.keyword.conversationshort}} service instance, you can create one in the **Service instance** menu.
+    * If you are creating a voice agent in either the US South or US East region and do not have a {{site.data.keyword.conversationshort}} service instance, you can create one in the **Service instance** menu.
     * Alternatively, you can connect to other sources of a {{site.data.keyword.conversationshort}} dialog by changing the [**Service type**](#other_service).
     * If you want to configure multiple service locations, click the other location option and select **Enable location** to configure the connection to your other {{site.data.keyword.conversationshort}} instance. See [Adding multiple Watson service locations](#add_location).
 
-1. Under **{{site.data.keyword.speechtotextshort}}**, review the default configuration for your {{site.data.keyword.speechtotextshort}} service instance by clicking **Enable location 1** or **Enable location 2**. If you are creating a voice agent in the US South region and do not have a {{site.data.keyword.speechtotextshort}} service instance, you create one from the **Service instance** menu. Or, you can connect your voice agent to a {{site.data.keyword.speechtotextshort}} instance in a different {{site.data.keyword.Bluemix_notm}} account space by changing the [**Service type**](#other_service). {{site.data.keyword.iva_short}} supports only narrowband models.
+1. Under **{{site.data.keyword.speechtotextshort}}**, review the default configuration for your {{site.data.keyword.speechtotextshort}} service instance by clicking **Enable location 1** or **Enable location 2**. If you are creating a voice agent in the US South or US East region and do not have a {{site.data.keyword.speechtotextshort}} service instance, you create one from the **Service instance** menu. Or, you can connect your voice agent to a {{site.data.keyword.speechtotextshort}} instance in a different {{site.data.keyword.Bluemix_notm}} account space by changing the [**Service type**](#other_service). {{site.data.keyword.iva_short}} supports only narrowband models.
 
     If you want to configure multiple service locations, click the other location option and select **Enable location** to configure the connection to your other {{site.data.keyword.speechtotextshort}} instance. See [Adding multiple Watson service locations](#add_location).
 
-1. Under **{{site.data.keyword.texttospeechshort}}**, review the default configuration for your {{site.data.keyword.texttospeechshort}} service instance by clicking **Enable location 1** or **Enable location 2**. If you are creating a voice agent in the US South region and you do not have a {{site.data.keyword.texttospeechshort}} service instance, you can create one from the **Service instance** menu. Or, you can connect your voice agent to a {{site.data.keyword.texttospeechshort}} instance in a different {{site.data.keyword.Bluemix_notm}} account space by changing the [**Service type**](#other_service).
+1. Under **{{site.data.keyword.texttospeechshort}}**, review the default configuration for your {{site.data.keyword.texttospeechshort}} service instance by clicking **Enable location 1** or **Enable location 2**. If you are creating a voice agent in the US South or US East region and you do not have a {{site.data.keyword.texttospeechshort}} service instance, you can create one from the **Service instance** menu. Or, you can connect your voice agent to a {{site.data.keyword.texttospeechshort}} instance in a different {{site.data.keyword.Bluemix_notm}} account space by changing the [**Service type**](#other_service).
 
     If you want to configure multiple service locations, click the other location option and select **Enable location** to configure the connection to your other {{site.data.keyword.texttospeechshort}} instance. See [Adding multiple Watson service locations](#add_location).
 
@@ -110,6 +110,7 @@ When you create or clone a voice agent, you can click **Show advanced** to view 
 
 * **{{site.data.keyword.conversationshort}} failure reply message (optional)**: The default response message that is sent to the message receiver if the call cannot connect to {{site.data.keyword.conversationshort}}.
 * **Transfer failure reply message (optional)**: The default response message that is streamed to the caller if the call transfer fails.
+* **Custom SIP INVITE Header (optional)**: Specifies custom SIP header to extract from incoming SIP INVITE requests
 * **Send provisional ringing response from {{site.data.keyword.iva_short}}**: Sends a `180 ringing` response while {{site.data.keyword.iva_short}} processes an incoming call. Enabled by default.
 * **Put caller on hold on transfer**: Puts the caller on hold during transfer. Enabled by default.
 * **Disconnect call on transfer failure**: Determines whether or not to disconnect the call if a call transfer fails.  Enabled by default. If the setting is disabled and a call transfer fails, {{site.data.keyword.iva_short}} initiates a conversation turn. Then, {{site.data.keyword.conversationshort}} can either disconnect the call or transfer it to a different destination as configured in the dialog.
