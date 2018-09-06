@@ -52,7 +52,7 @@ _「管理」_ダッシュボードでボイス・エージェントを作成、
 
     複数のサービス・ロケーションを構成する場合は、他のロケーション・オプションをクリックし、**「ロケーションの有効化 (Enable location)」**を選択して、他の {{site.data.keyword.speechtotextshort}} インスタンスへの接続を構成します。 [複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
 
-1. **{{site.data.keyword.texttospeechshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.texttospeechshort}} サービス・インスタンスのデフォルト構成を確認します。米国南部地域または米国東部地域でボイス・エージェントを作成する場合、{{site.data.keyword.texttospeechshort}} サービス・インスタンスがなければ、**「サービス・インスタンス (Service instance)」**メニューから作成できます。あるいは、[**「サービス・タイプ (Service type)」**](#other_service)を変更することによって別の {{site.data.keyword.Bluemix_notm}} アカウント・スペースの {{site.data.keyword.texttospeechshort}} インスタンスにボイス・エージェントを接続することもできます。
+1. **{{site.data.keyword.texttospeechshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.texttospeechshort}} サービス・インスタンスのデフォルト構成を確認します。米国南部地域または米国東部地域でボイス・エージェントを作成する場合、{{site.data.keyword.texttospeechshort}} サービス・インスタンスがなければ、**「サービス・インスタンス (Service instance)」**メニューから作成できます。 あるいは、[**「サービス・タイプ (Service type)」**](#other_service)を変更することによって別の {{site.data.keyword.Bluemix_notm}} アカウント・スペースの {{site.data.keyword.texttospeechshort}} インスタンスにボイス・エージェントを接続することもできます。
 
     複数のサービス・ロケーションを構成する場合は、他のロケーション・オプションをクリックし、**「ロケーションの有効化 (Enable location)」**を選択して、他の {{site.data.keyword.texttospeechshort}} インスタンスへの接続を構成します。 [複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
 
