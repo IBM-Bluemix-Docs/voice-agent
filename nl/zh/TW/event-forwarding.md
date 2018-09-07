@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-11"
+lastupdated: "2018-08-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -37,7 +37,7 @@ lastupdated: "2018-06-11"
 
 1. 選取**我的 {{site.data.keyword.cloudant_short_notm}} 服務實例**或**其他 {{site.data.keyword.cloudant_short_notm}} 服務實例**。
   * 如果您使用**我的 {{site.data.keyword.cloudant_short_notm}} 服務實例**，請從清單中選取 **{{site.data.keyword.cloudant_short_notm}} 帳戶**名稱及使用者名稱。
-  * 如果您使用**其他 {{site.data.keyword.cloudant_short_notm}} 服務實例**，請輸入帳戶的 {{site.data.keyword.cloudant_short_notm}} 使用者名稱及密碼。
+  * 如果您使用**其他 {{site.data.keyword.cloudant_short_notm}} 服務實例**，請輸入帳戶的 {{site.data.keyword.cloudant_short_notm}} 使用者名稱及密碼，或是 API 金鑰。
 
 1. 針對您要轉遞的每一種事件類型，選取**啟用**，然後選擇您要轉遞事件的資料庫。
   * 通話詳細記錄 (CDR) 事件

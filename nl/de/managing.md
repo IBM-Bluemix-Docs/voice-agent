@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-08-16"
 
 
 ---
@@ -44,15 +44,15 @@ Wenn Sie einen Sprachagenten erstellen, sucht {{site.data.keyword.iva_short}} au
 
 1. Konfigurieren Sie unter **{{site.data.keyword.conversationshort}}** die Verbindung zur {{site.data.keyword.conversationshort}}-Serviceinstanz, indem Sie auf **Standort 1 aktivieren** oder **Standort 2 aktivieren** klicken. Sie können {{site.data.keyword.conversationshort}}-Instanzen oder {{site.data.keyword.virtualagentfull}}-Instanzen in {{site.data.keyword.Bluemix_notm}}-Konten verwenden, deren Eigner Sie sind oder deren Eigner ein anderer Benutzer ist. Sie können auch zu jeder dieser Optionen eine Verbindung über eine Service-Orchestrierungsengine herstellen.
 
-    * Wenn Sie in der Region 'USA (Süden)' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.conversationshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen.
+    * Wenn Sie in der Region 'USA (Süden)' oder 'USA (Osten)' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.conversationshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen.
     * Alternativ können Sie Verbindungen zu anderen Quellen eines {{site.data.keyword.conversationshort}}-Dialogs herstellen, indem Sie den [**Servicetyp**](#other_service) ändern.
     * Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.conversationshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](#add_location).
 
-1. Überprüfen Sie unter **{{site.data.keyword.speechtotextshort}}** die Standardkonfiguration für die {{site.data.keyword.speechtotextshort}}-Serviceinstanz, indem Sie auf **Standort 1 aktivieren** oder **Standort 2 aktivieren** klicken. Wenn Sie in der Region 'USA (Süden)' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.speechtotextshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen. Alternativ können Sie Ihren Sprachagenten mit einer {{site.data.keyword.speechtotextshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}}-Kontobereich verbinden, indem Sie den [**Servicetyp**](#other_service) ändern. {{site.data.keyword.iva_short}} unterstützt nur Narrowband-Modelle.
+1. Überprüfen Sie unter **{{site.data.keyword.speechtotextshort}}** die Standardkonfiguration für die {{site.data.keyword.speechtotextshort}}-Serviceinstanz, indem Sie auf **Standort 1 aktivieren** oder **Standort 2 aktivieren** klicken. Wenn Sie in der Region 'USA (Süden)' oder 'USA (Osten)' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.speechtotextshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen. Alternativ können Sie Ihren Sprachagenten mit einer {{site.data.keyword.speechtotextshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}}-Kontobereich verbinden, indem Sie den [**Servicetyp**](#other_service) ändern. {{site.data.keyword.iva_short}} unterstützt nur Narrowband-Modelle.
 
     Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.speechtotextshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](#add_location).
 
-1. Überprüfen Sie unter **{{site.data.keyword.texttospeechshort}}** die Standardkonfiguration für die {{site.data.keyword.texttospeechshort}}-Serviceinstanz, indem Sie auf **Standort 1 aktivieren** oder **Standort 2 aktivieren** klicken. Wenn Sie in der Region 'USA (Süden)' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.texttospeechshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen. Alternativ können Sie Ihren Sprachagenten mit einer {{site.data.keyword.texttospeechshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}}-Kontobereich verbinden, indem Sie den [**Servicetyp**](#other_service) ändern.
+1. Überprüfen Sie unter **{{site.data.keyword.texttospeechshort}}** die Standardkonfiguration für die {{site.data.keyword.texttospeechshort}}-Serviceinstanz, indem Sie auf **Standort 1 aktivieren** oder **Standort 2 aktivieren** klicken. Wenn Sie in der Region 'USA (Süden)' oder 'USA (Osten)' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.texttospeechshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen. Alternativ können Sie Ihren Sprachagenten mit einer {{site.data.keyword.texttospeechshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}}-Kontobereich verbinden, indem Sie den [**Servicetyp**](#other_service) ändern.
 
     Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.texttospeechshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](#add_location).
 
@@ -110,6 +110,7 @@ Beim Erstellen oder Klonen eines Sprachagenten können Sie auf **Erweiterte Opti
 
 * **Antwortnachricht bei {{site.data.keyword.conversationshort}}-Fehler (optional)**: Die Standardantwortnachricht, die an den Nachrichtenempfänger gesendet wird, falls der Anruf nicht mit {{site.data.keyword.conversationshort}} verbunden werden kann.
 * **Antwortnachricht bei Anrufübergabefehler (optional)**: Die Standardantwortnachricht, die an den Anrufer gestreamt wird, falls die Anrufübergabe fehlschlägt.
+* **Angepasster SIP INVITE-Header (optional)**: Gibt den angepassten SIP-Header an, der aus eingehenden SIP INVITE-Anforderungen extrahiert werden soll.
 * **Vorläufige Antwort mit dem Statuscode 'Ringing' von {{site.data.keyword.iva_short}}** senden: Sendet eine Antwort mit dem Statuscode `180 - Ringing`, während {{site.data.keyword.iva_short}} einen eingehenden Anruf verarbeitet. Standardmäßig aktiviert.
 * **Anruf während der Übergabe in die Warteschleife legen**: Legt den Anruf während der Übergabe in die Warteschleife. Standardmäßig aktiviert.
 * **Anruf bei fehlgeschlagener Übergabe unterbrechen**: Bestimmt, ob der Anruf bei einer fehlgeschlagenen Anrufübergabe unterbrochen werden soll.  Standardmäßig aktiviert. Wenn die Einstellung inaktiviert ist und eine Anrufübergabe fehlschlägt, initiiert {{site.data.keyword.iva_short}} einen Dialogwechsel. Dann kann {{site.data.keyword.conversationshort}} den Anruf entweder unterbrechen oder an ein anderes Ziel übergeben, abhängig von der Dialogkonfiguration.

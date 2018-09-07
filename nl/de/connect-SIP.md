@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -103,4 +103,13 @@ Sie können Unterstützung für die Netzkonfiguration anfordern, um eine Verbind
 
 1. Geben Sie als **Betreff** `{{site.data.keyword.iva_short}} - Unterstützung für Netzkonfiguration` ein.
 
-1. Beschreiben Sie im Abschnitt **Kurze Beschreibung** die gewünschte Verbindung für den {{site.data.keyword.iva_short}}-Service oder die gewünschte Anforderung von mehr als 50 gleichzeitigen Verbindungen für Ihren Sprachagenten. Für die Verbindung kann entweder ein SIP-Trunking-Provider oder eine Peerverbindung wie ein IPSec-Tunnel verwendet werden. Sie können im Ticket ein Netzdiagramm Ihrer Netztopologie im PDF- oder Imageformat anhängen. Darüber hinaus können Sie Dokumente anhängen, in denen die gewünschte Servicefunktionalität detailliert beschrieben ist.
+1. Beschreiben Sie im Abschnitt **Kurze Beschreibung** die gewünschte Verbindung für den {{site.data.keyword.iva_short}}-Service oder die gewünschte Anforderung von mehr als 50 gleichzeitigen Verbindungen für Ihren Sprachagenten. Eine Peerverbindung ist für Benutzer mit _Standard_- oder _Premium_-Plänen verfügbar. Wenn Sie für Ihre Instanz von einem _Standard_- oder _Premium_-Plan zu einem _Lite_-Plan wechseln oder wenn Sie die Instanz löschen, wird die Peerverbindung inaktiviert.
+
+  Für die Verbindung kann entweder ein SIP-Trunking-Provider oder eine Peerverbindung wie ein IPSec-Tunnel verwendet werden. Sie können im Ticket ein Netzdiagramm Ihrer Netztopologie im PDF- oder Imageformat anhängen. Darüber hinaus können Sie Dokumente anhängen, in denen die gewünschte Servicefunktionalität detailliert beschrieben ist.
+
+  In der **kurzen Beschreibung** die folgenden Informationen angeben:
+  * Firmenname
+  * {{site.data.keyword.Bluemix_notm}}-Konto-ID
+  * {{site.data.keyword.iva_short}}-Service-Dashboard-URL
+  * Anwendungsfall
+  * Netzdiagramm mit IP-Adresse oder Informationen zum SIP-Trunk-Provider

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -31,9 +31,9 @@ Puoi creare un'istanza del servizio {{site.data.keyword.iva_full}} utilizzando i
 ## Creazione del servizio dalla riga di comando
 {: #command_create}
 
-1. [Installa la CLI {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/get_started.html).
+1. [Installa la CLI {{site.data.keyword.Bluemix_notm}}](../../cli/index.html#overview).
 
-2. Esegui il comando [`ibmcloud`](../../cli/reference/bluemix_cli/bx_cli.html#bluemix_cli) che crea la tua istanza del servizio VoiceAgent con il piano _di prova_:
+2. Esegui il [comando `ibmcloud`](../../cli/idt/commands.html#idt-cli) che crea la tua istanza del servizio Voice Agent con il piano _di prova_:
 
    ```
    ibmcloud service create VoiceAgent _Trial_ "My Voice Agent Service"

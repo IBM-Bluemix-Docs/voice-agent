@@ -41,7 +41,7 @@ as suas mudanças.
 ## Ativando a criptografia somente para as mensagens de SIP usando o TLS no Twilio
 {: #TLS}
 
-Se você quiser criptografar apenas as mensagens de SIP no {{site.agent.keyword.iva_short}} sem o SRTP, será possível
+Se você quiser criptografar apenas as mensagens de SIP no {{site.data.keyword.iva_short}} sem o SRTP, será possível
 selecionar um terminal URI que use a Segurança da Camada de Transporte (TLS) no Twilio.
 
 1. Em sua conta do Twilio, navegue para o painel _Entroncamento SIP elástico_ e selecione **Troncos**.

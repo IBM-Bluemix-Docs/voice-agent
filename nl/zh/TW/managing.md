@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-08-16"
 
 
 ---
@@ -44,15 +44,15 @@ lastupdated: "2018-06-19"
 
 1. 在 **{{site.data.keyword.conversationshort}}** 下，按一下**啟用位置 1** 或**啟用位置 2** 以配置與 {{site.data.keyword.conversationshort}} 服務實例的連線。在您或其他人擁有的 {{site.data.keyword.Bluemix_notm}} 帳戶中，您可以使用 {{site.data.keyword.conversationshort}} 實例或 {{site.data.keyword.virtualagentfull}} 實例。您也可以透過服務編排引擎，連接至其中任何選項。
 
-    * 如果您在「美國南部」地區中建立語音代理程式，但沒有 {{site.data.keyword.conversationshort}} 服務實例，則可以在**服務實例**功能表中建立服務實例。
+    * 如果您在「美國南部」或「美國東部」地區中建立語音代理程式，但沒有 {{site.data.keyword.conversationshort}} 服務實例，則可以在**服務實例**功能表中建立服務實例。
     * 或者，您也可以藉由變更[**服務類型**](#other_service)，以連接至 {{site.data.keyword.conversationshort}} 對話的其他來源。
     * 如果您要配置多個服務位置，請按一下另一個位置選項，然後選取**啟用位置**以配置與其他 {{site.data.keyword.conversationshort}} 實例的連線。請參閱[新增多個 Watson 服務位置](#add_location)。
 
-1. 在 **{{site.data.keyword.speechtotextshort}}** 下，按一下**啟用位置 1** 或**啟用位置 2** 以檢閱 {{site.data.keyword.speechtotextshort}} 服務實例的預設配置。如果您在「美國南部」地區中建立語音代理程式，但沒有 {{site.data.keyword.speechtotextshort}} 服務實例，則可以從**服務實例**功能表中建立服務實例。或者，您可以藉由變更[**服務類型**](#other_service)，來將語音代理程式連接至不同 {{site.data.keyword.Bluemix_notm}} 帳戶空間中的 {{site.data.keyword.speechtotextshort}} 實例。{{site.data.keyword.iva_short}} 僅支援窄頻模型。
+1. 在 **{{site.data.keyword.speechtotextshort}}** 下，按一下**啟用位置 1** 或**啟用位置 2** 以檢閱 {{site.data.keyword.speechtotextshort}} 服務實例的預設配置。如果您在「美國南部」或「美國東部」地區中建立語音代理程式，但沒有 {{site.data.keyword.speechtotextshort}} 服務實例，則可以從**服務實例**功能表中建立服務實例。或者，您可以藉由變更[**服務類型**](#other_service)，來將語音代理程式連接至不同 {{site.data.keyword.Bluemix_notm}} 帳戶空間中的 {{site.data.keyword.speechtotextshort}} 實例。{{site.data.keyword.iva_short}} 僅支援窄頻模型。
 
     如果您要配置多個服務位置，請按一下另一個位置選項，然後選取**啟用位置**以配置與其他 {{site.data.keyword.speechtotextshort}} 實例的連線。請參閱[新增多個 Watson 服務位置](#add_location)。
 
-1. 在 **{{site.data.keyword.texttospeechshort}}** 下，按一下**啟用位置 1** 或**啟用位置 2** 以檢閱 {{site.data.keyword.texttospeechshort}} 服務實例的預設配置。如果您在「美國南部」地區中建立語音代理程式，但沒有 {{site.data.keyword.texttospeechshort}} 服務實例，則可以從**服務實例**功能表中建立服務實例。或者，您可以藉由變更[**服務類型**](#other_service)，來將語音代理程式連接至不同 {{site.data.keyword.Bluemix_notm}} 帳戶空間中的 {{site.data.keyword.texttospeechshort}} 實例。
+1. 在 **{{site.data.keyword.texttospeechshort}}** 下，按一下**啟用位置 1** 或**啟用位置 2** 以檢閱 {{site.data.keyword.texttospeechshort}} 服務實例的預設配置。如果您在「美國南部」或「美國東部」地區中建立語音代理程式，但沒有 {{site.data.keyword.texttospeechshort}} 服務實例，則可以從**服務實例**功能表中建立服務實例。或者，您可以藉由變更[**服務類型**](#other_service)，來將語音代理程式連接至不同 {{site.data.keyword.Bluemix_notm}} 帳戶空間中的 {{site.data.keyword.texttospeechshort}} 實例。
 
     如果您要配置多個服務位置，請按一下另一個位置選項，然後選取**啟用位置**以配置與其他 {{site.data.keyword.texttospeechshort}} 實例的連線。請參閱[新增多個 Watson 服務位置](#add_location)。
 
@@ -110,6 +110,7 @@ lastupdated: "2018-06-19"
 
 * **{{site.data.keyword.conversationshort}} 失敗回覆訊息（選用）**：通話無法連接至 {{site.data.keyword.conversationshort}} 時，要傳送給訊息接收者的預設回覆訊息。
 * **轉接失敗回覆訊息（選用）**：通話轉接失敗時，要串流給來電者的預設回覆訊息。
+* **自訂 SIP INVITE 標頭（選用）**：指定要從送入的 SIP INVITE 要求擷取的自訂 SIP 標頭。
 * **從 {{site.data.keyword.iva_short}} 傳送暫時鈴聲回應**：當 {{site.data.keyword.iva_short}} 處理送入的通話時，傳送 `180 ringing` 回應。預設為啟用。
 * **轉接時保留通話**：在轉接期間讓來電者進入保留狀態。預設為啟用。
 * **轉接失敗時中斷通話**決定通話轉接失敗時，是否中斷通話。預設為啟用。如果設定為已停用且通話轉接失敗，則 {{site.data.keyword.iva_short}} 會起始一個回合的交談。然後，{{site.data.keyword.conversationshort}} 可以中斷通話，或將它轉接至對話中所配置的不同目的地。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-11"
+lastupdated: "2018-08-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -37,7 +37,7 @@ Puede habilitar el reenvío de sucesos cuando crea o edita los agentes de voz en
 
 1. Seleccione **Mi instancia de servicio de {{site.data.keyword.cloudant_short_notm}}** u **Otra instancia de servicio de {{site.data.keyword.cloudant_short_notm}}**.
   * Si va a utilizar **Mi instancia de servicio de {{site.data.keyword.cloudant_short_notm}}**, seleccione el nombre de usuario y el nombre de la **cuenta de {{site.data.keyword.cloudant_short_notm}}** en las listas.
-  * Si va a utilizar **Otra instancia de servicio de {{site.data.keyword.cloudant_short_notm}}**, especifique el nombre de usuario y la contraseña de {{site.data.keyword.cloudant_short_notm}} de la cuenta.
+  * Si va a utilizar **Otra instancia de servicio de {{site.data.keyword.cloudant_short_notm}}**, especifique el nombre de usuario y la contraseña de {{site.data.keyword.cloudant_short_notm}} o la clave de API de la cuenta.
 
 1. Seleccione **Habilitar** para cada tipo de suceso que desea reenviar y, a continuación, elija la base de datos a la que desea reenviar los sucesos.
   * Sucesos de registro de detalles de llamadas (CDR)

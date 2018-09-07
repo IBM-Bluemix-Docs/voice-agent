@@ -23,7 +23,7 @@ lastupdated: "2018-06-19"
 ## 호출 전송 정보
 {: #about-ct}
 
-호출 전송을 사용으로 설정하면 호출자가 대화 중에 실시간 상담원과 통화하도록 요청하는 경우 음성 에이전트가 호출을 경로 재지정합니다. SIP 제공자 구성에서 종료 URI를 설정하여 호출 전송을 사용으로 설정할 수 있습니다. 그리고 {{site.data.keyword.conversationshort}} 인스턴스의 대화 노드에서 API 조치의 전송 대상을 정의하십시오. 전송 대상은 종료 URI 및 전화번호가 포함된 SIP URI입니다. 음성 에이전트의 사용자 정의 및 지원되는 조치에 대한 자세한 정보는 [API를 사용하여 음성 에이전트 프로그래밍](api.html)을 참조하십시오. 
+호출 전송을 사용으로 설정하면 호출자가 대화 중에 실시간 상담원과 통화하도록 요청하는 경우 음성 에이전트가 호출을 경로 재지정합니다. SIP 제공자 구성에서 종료 URI를 설정하여 호출 전송을 사용으로 설정할 수 있습니다. 그리고 {{site.data.keyword.conversationshort}} 인스턴스의 대화 노드에서 API 조치의 전송 대상을 정의하십시오. 전송 대상은 종료 URI 및 전화번호가 포함된 SIP URI입니다. 음성 에이전트의 사용자 정의 및 지원되는 조치에 대한 자세한 정보는 [API를 사용하여 음성 에이전트 프로그래밍](api.html)을 참조하십시오.
 
 ## 1단계: 종료 URI 설정
 {: #termination-setup}
@@ -42,14 +42,14 @@ dal.watson-va.netfoundry.net
 
 [호출 전송을 위한 {{site.data.keyword.conversationshort}} 구성](#conversation-setup) 시 NetFoundry 계정에서 종료 URI를 수동으로 구성하지 않아도 됩니다.
 
-### Twilio에서 종료 URI 설정 
+### Twilio에서 종료 URI 설정
 {: #termination-Twilio}
 
 1. Twilio 계정에서 _Elastic SIP Trunking_ 대시보드로 이동하여 **트렁크**를 선택하십시오.
 
 1. 기존 트렁크를 선택하거나 **+** 아이콘을 클릭하여 새 트렁크를 작성한 후 호출 전송을 추가하려는 트렁크를 선택하십시오.
 
-  * 새 트렁크를 작성할 때 **시작** 대시보드에서 _SIP 트렁크 URI_를 구성해야 합니다. 자세한 정보는 [SIP 트렁크 연결](connect-SIP.html)을 참조하십시오. 
+  * 새 트렁크를 작성할 때 **시작** 대시보드에서 _SIP 트렁크 URI_를 구성해야 합니다.  자세한 정보는 [SIP 트렁크 연결](connect-SIP.html)을 참조하십시오.
 
 1. 탐색줄에서 **종료**를 선택하고 종료 URI의 이름을 입력하십시오.
 
@@ -63,13 +63,13 @@ dal.watson-va.netfoundry.net
 
 1. **저장**을 클릭하여 종료 URI 구성을 완료하십시오.
 
-전송할 대상 전화번호와 종료 URI를 기록하십시오. 전화번호가 개인 전화번호가 아닌지 확인하십시오. 전화번호와 종료 URI를 사용하여 전송 대상을 {{site.data.keyword.conversationshort}} 대화상자에 지정할 수 있습니다. 
+전송할 대상 전화번호와 종료 URI를 기록하십시오. 전화번호가 개인 전화번호가 아닌지 확인하십시오. 전화번호와 종료 URI를 사용하여 전송 대상을 {{site.data.keyword.conversationshort}} 대화상자에 지정할 수 있습니다.
 
 
 ## 2단계: 호출 전송을 위한 {{site.data.keyword.conversationshort}} 구성
 {: #conversation-setup}
 
-{{site.data.keyword.conversationshort}} 서비스에서의 작업에 대해 자세히 알아보려면 [{{site.data.keyword.conversationshort}} 정보](../conversation/index.html#about)를 참조하십시오. 
+{{site.data.keyword.conversationshort}} 서비스에서의 작업에 대해 자세히 알아보려면 [{{site.data.keyword.conversationshort}} 정보](../conversation/index.html#about)를 참조하십시오.
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 음성 에이전트가 사용하는 {{site.data.keyword.conversationshort}} 인스턴스를 선택하십시오.
 
@@ -87,19 +87,19 @@ dal.watson-va.netfoundry.net
 
 1. 작성한 인텐트를 찾으려면 _조건 검사:_ 섹션에 **호출 전송 인텐트**를 입력하십시오.
 
-1. _응답 조치:_ 섹션에서 **&vellip;** 아이콘을 클릭하고 **JSON 편집기 열기**를 선택하십시오. 다음의 코드 스니펫을 복사하고 붙여넣어서 필드의 코드를 대체하십시오. 
+1. _응답 조치:_ 섹션에서 **&vellip;** 아이콘을 클릭하고 **JSON 편집기 열기**를 선택하십시오. 다음의 코드 스니펫을 복사하고 붙여넣어서 필드의 코드를 대체하십시오.
 
 ```json
 {
     "output": {
-   "text": {
-     "values": [ "Please hold on while I connect you with a live agent." ],
+        "text": {
+            "values": [ "Please hold on while I connect you with a live agent." ],
      "selection_policy": "sequential"
-   },
+        },
    "vgwAction": {
-     "command": "vgwActTransfer",
+            "command": "vgwActTransfer",
      "parameters": {
-       "transferTarget": "sip:18889990000\\@dal.watson-va.netfoundry.net"
+                "transferTarget": "sip:18889990000\\@dal.watson-va.netfoundry.net"
             }
         }
     }

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -103,4 +103,13 @@ Puoi richiedere la configurazione di rete assistita per collegarti con AT&T o al
 
 1. Per **Subject**, immetti `{{site.data.keyword.iva_short}} assisted network setup`.
 
-1. Nella sezione **Brief description**, descrivi come intendi collegarti al tuo servizio {{site.data.keyword.iva_short}} o di richiedere più di 50 connessioni simultanee per il tuo agent vocale. Puoi collegarti utilizzando un provider di trunking SIP o una connessione peer, come un tunnel IPSec. Nel tuo ticket, puoi allegare un diagramma di rete che descrive la tua topologia di rete in un formato immagine o PDF. Puoi anche allegare dei libri bianchi che descrivono nel dettaglio le funzionalità del servizio che desideri.
+1. Nella sezione **Brief description**, descrivi come intendi collegarti al tuo servizio {{site.data.keyword.iva_short}} o di richiedere più di 50 connessioni simultanee per il tuo agent vocale. La connessione peer è disponibile per gli utenti con i piani _Standard_ o _Premium_. Se cambi la tua istanza da un piano _Standard_ o _Premium_ a un piano _Lite_ o se elimini la tua propria istanza, la connessione peer viene disabilitata.
+
+  Puoi collegarti utilizzando un provider di trunking SIP o una connessione peer, come un tunnel IPSec. Nel tuo ticket, puoi allegare un diagramma di rete che descrive la tua topologia di rete in un formato immagine o PDF. Puoi anche allegare dei libri bianchi che descrivono nel dettaglio le funzionalità del servizio che desideri.
+
+  In **Brief description** immetti le seguenti informazioni:
+  * Nome azienda
+  * ID account {{site.data.keyword.Bluemix_notm}}
+  * URL dashboard del servizio {{site.data.keyword.iva_short}}
+  * Casi di utilizzo
+  * Diagramma di rete con indirizzo IP o informazioni sul provider di trunk SIP

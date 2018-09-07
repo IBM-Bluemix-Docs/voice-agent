@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-11"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -19,6 +19,6 @@ lastupdated: "2018-06-11"
 Este release de {{site.data.keyword.iva_full}} tiene las siguientes limitaciones.
 {: shortdesc}
 
-* Puede crear nuevas instancias de servicio de Watson directamente desde el panel de control de _Crear un agente de voz_ solo para la región **EE.UU. sur**. Para conectar su agente de voz a los servicios de Watson en otras regiones, cree los servicios de Watson antes de crear el agente de voz en el panel de control _Gestionar_.
+* Puede crear nuevas instancias de servicio de Watson directamente desde el panel de control de _Crear un agente de voz_ para las regiones **EE.UU. sur** o **EE.UU. este**. Para conectar su agente de voz a los servicios de Watson en otras regiones, cree los servicios de Watson antes de crear el agente de voz en el panel de control _Gestionar_.
 * Solo se admiten las conexiones con la red telefónica pública conmutada (PSTN).
 * Se debe especificar toda la configuración de agente de voz en el servicio {{site.data.keyword.conversationshort}} que utiliza la API.

@@ -32,7 +32,7 @@ lastupdated: "2018-06-14"
 
 1. [음성 에이전트에 이벤트 전달을 사용](event-forwarding.html)하여 CDR(Call Detail Records)을 Cloudant 데이터베이스로 전달하도록 음성 에이전트를 구성한 다음 호출 실패 이유를 판별할 수 있습니다. {{site.data.keyword.conversationshort}} 턴 이벤트와 같은 기타 이벤트는 호출 내 모든 대화 턴에 대한 세부사항을 제공할 수 있습니다.
 
-**중요:** CDR, 기록 및 변환 이벤트에는 잠재적으로 PHI(Protected Health Information), PII(Personally Identifiable Information) 또는 PCI DSS(Data Security Standard) 데이터가 있을 수 있는 사용자의 정보가 포함되어 있습니다. 개인 정보가 노출되지 않도록 하려면 사용자가 대화에서 또는 대화 중에 공유하는 기밀 정보를 {{site.data.keyword.cloudant_short_notm}} 인스턴스에서 적절히 보호하도록 해야 합니다. 
+**중요:** CDR, 기록 및 변환 이벤트에는 잠재적으로 PHI(Protected Health Information), PII(Personally Identifiable Information) 또는 PCI DSS(Data Security Standard) 데이터가 있을 수 있는 사용자의 정보가 포함되어 있습니다. 개인 정보가 노출되지 않도록 하려면 사용자가 대화에서 또는 대화 중에 공유하는 기밀 정보를 {{site.data.keyword.cloudant_short_notm}} 인스턴스에서 적절히 보호하도록 해야 합니다.
 
 
 ## 도움 받기
@@ -59,13 +59,13 @@ lastupdated: "2018-06-14"
 
 * Watson 서비스 신임 정보, URL 및 {{site.data.keyword.conversationshort}} 작업공간 ID가 모두 유효한지 확인하십시오.
 * {{site.data.keyword.conversationshort}} 작업공간의 대화가 올바르게 작성되었는지 확인하십시오.
-  * GitHub에서 사전 빌드된 작업공간에 대한 [샘플 대화 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)를 가져올 수 있습니다. {{site.data.keyword.conversationshort}} 도구에서 JSON 파일로서 샘플 대화 저장 이후 작업공간으로서 파일 가져오기에 대한 세부사항은 [*시작하기 튜토리얼*의 3단계](getting-started.html#step3)를 참조하십시오. 
+  * GitHub에서 사전 빌드된 작업공간에 대한 [샘플 대화 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)를 가져올 수 있습니다. {{site.data.keyword.conversationshort}} 도구에서 JSON 파일로서 샘플 대화 저장 이후 작업공간으로서 파일 가져오기에 대한 세부사항은 [*시작하기 튜토리얼*의 3단계](getting-started.html#step3)를 참조하십시오.
   * 자체 {{site.data.keyword.conversationshort}} 대화를 작성한 경우에는 `conversation_start` 조건이 있는 노드와 기본 응답이 있는 노드가 대화에 포함되는지 확인하십시오. 자세한 지시사항은 {{site.data.keyword.conversationshort}} 문서에서 [대화 빌드](../conversation/dialog-build.html)를 참조하십시오.
 * 전화 통화가 음성 에이전트 _사용_ 대시보드에 나열되어 있는지 여부를 확인하십시오. 전화 통화에 대한 항목이 표시되면 음성 에이전트가 Watson 서비스에 연결된 것입니다.
 
 ### 음성 에이전트를 작성할 때 전화번호를 지정할 수 없는 이유는 무엇입니까?
 
-지정한 전화번호를 기존의 음성 에이전트에서 사용하는지 확인하십시오. 전화번호에는 하나의 음성 에이전트만 있을 수 있습니다. SIP 트렁크 제공자의 다른 전화번호를 프로비저닝하고 이를 사용하여 다른 음성 에이전트를 작성할 수 있습니다. 또는 [_관리_ 대시보드에서 기존 음성 에이전트를 삭제](managing.html#delete_va)하여 전화번호를 해제한 후에 새 음성 에이전트를 작성하십시오. 
+지정한 전화번호를 기존의 음성 에이전트에서 사용하는지 확인하십시오. 전화번호에는 하나의 음성 에이전트만 있을 수 있습니다. SIP 트렁크 제공자의 다른 전화번호를 프로비저닝하고 이를 사용하여 다른 음성 에이전트를 작성할 수 있습니다. 또는 [_관리_ 대시보드에서 기존 음성 에이전트를 삭제](managing.html#delete_va)하여 전화번호를 해제한 후에 새 음성 에이전트를 작성하십시오.
 
 ### 자주 호출에 실패하는 이유는 무엇입니까?
 

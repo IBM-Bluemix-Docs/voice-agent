@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-11"
+lastupdated: "2018-08-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -37,7 +37,7 @@ Vous pouvez activer la transmission d'événements lorsque vous créez ou édite
 
 1. Sélectionnez **Mon instance de service {{site.data.keyword.cloudant_short_notm}}** ou **Autre instance de service {{site.data.keyword.cloudant_short_notm}}**.
   * Si vous utilisez **Mon instance de service {{site.data.keyword.cloudant_short_notm}}**, sélectionnez le nom et le nom d'utilisateur du **compte {{site.data.keyword.cloudant_short_notm}}** dans les listes.
-  * Si vous utilisez **Autre instance de service {{site.data.keyword.cloudant_short_notm}}**, entrez le nom d'utilisateur et le mot de passe {{site.data.keyword.cloudant_short_notm}} pour le compte.
+  * Si vous utilisez **Autre instance de service {{site.data.keyword.cloudant_short_notm}}**, entrez le nom d'utilisateur et le mot de passe {{site.data.keyword.cloudant_short_notm}} ou la clé d'API pour le compte.
 
 1. Sélectionnez **Activer** pour chaque type d'événement que vous souhaitez transmettre, puis choisissez la base de données dans laquelle vous souhaitez transmettre les événements.
   * Evénement d'enregistrement des détails d'appel (CDR)

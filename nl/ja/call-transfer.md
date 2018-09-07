@@ -63,7 +63,7 @@ dal.watson-va.netfoundry.net
 
 1. **「保存」**をクリックして、終了 URI の構成を完了します。
 
-転送先の電話番号と終了 URI をメモします。 電話番号が、個人の電話番号でないことを確認してください。この電話番号と終了 URI は、{{site.data.keyword.conversationshort}} ダイアログで転送ターゲットを指定するために使用できます。
+転送先の電話番号と終了 URI をメモします。 電話番号が、個人の電話番号でないことを確認してください。 この電話番号と終了 URI は、{{site.data.keyword.conversationshort}} ダイアログで転送ターゲットを指定するために使用できます。
 
 
 ## ステップ 2: 通話中転送のための {{site.data.keyword.conversationshort}} の構成
@@ -107,7 +107,7 @@ dal.watson-va.netfoundry.net
 ```
 {: codeblock}
 
-**注**: 転送ターゲットの SIP URI には、電話番号と作成した終了 URI が含まれます。転送ターゲットで、個人の電話番号を使用しないでください。例えば、電話番号が `18889990000` で終了 URI が `mysiptrunk.pstn.twilio.com` の場合、完全な SIP URI は `sip:18889990000\\@mysiptrunk.pstn.twilio.com` となります。 Netfoundry を使用し、電話番号が `18889990000` である場合、完全な SIP URI は `sip:18889990000\\@dal.watson-va.netfoundry.net` となります。
+**注**: 転送ターゲットの SIP URI には、電話番号と作成した終了 URI が含まれます。 転送ターゲットで、個人の電話番号を使用しないでください。 例えば、電話番号が `18889990000` で終了 URI が `mysiptrunk.pstn.twilio.com` の場合、完全な SIP URI は `sip:18889990000\\@mysiptrunk.pstn.twilio.com` となります。 Netfoundry を使用し、電話番号が `18889990000` である場合、完全な SIP URI は `sip:18889990000\\@dal.watson-va.netfoundry.net` となります。
 
 ## 次のステップ
 {: #Next}

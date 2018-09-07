@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-11"
+lastupdated: "2018-08-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -37,7 +37,7 @@ lastupdated: "2018-06-11"
 
 1. **「マイ {{site.data.keyword.cloudant_short_notm}} サービス・インスタンス」**または**「その他の {{site.data.keyword.cloudant_short_notm}} サービス・インスタンス」**のいずれかを選択します。
   * **「マイ {{site.data.keyword.cloudant_short_notm}} サービス・インスタンス」**を使用する場合は、リストから **{{site.data.keyword.cloudant_short_notm}} アカウント**名とユーザー名を選択します。
-  * **「その他の {{site.data.keyword.cloudant_short_notm}} サービス・インスタンス」**を使用する場合は、アカウントの {{site.data.keyword.cloudant_short_notm}} ユーザー名とパスワードを入力します。
+  * **「その他の {{site.data.keyword.cloudant_short_notm}} サービス・インスタンス」**を使用する場合は、アカウントの {{site.data.keyword.cloudant_short_notm}} ユーザー名とパスワード、または API キーを入力します。
 
 1. 転送する各イベント・タイプについて**「Enable (有効化)」**を選択してから、イベントを転送する宛先のデータベースを選択します。
   * 発着信詳細記録 (CDR) イベント

@@ -63,7 +63,7 @@ dal.watson-va.netfoundry.net
 
 1. 单击**保存**以完成终止 URI 的配置。
 
-请记下要转移到的电话号码和终止 URI。确保电话号码不是个人电话号码。可以使用电话号码和终端 URI 来指定 {{site.data.keyword.conversationshort}} 对话中的转移目标。
+请记下要转移到的电话号码和终止 URI。确保电话号码不是个人电话号码。可以使用电话号码和终止 URI 来指定 {{site.data.keyword.conversationshort}} 对话中的转移目标。
 
 
 ## 步骤 2：将 {{site.data.keyword.conversationshort}} 配置用于呼叫转移

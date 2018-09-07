@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-08-13"
 
 ---
 
@@ -31,9 +31,9 @@ Puede crear una instancia de servicio de {{site.data.keyword.iva_full}} mediante
 ## Creación del servicio desde la línea de mandatos
 {: #command_create}
 
-1. [Instale la CLI de {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/get_started.html).
+1. [Instale la CLI de {{site.data.keyword.Bluemix_notm}}](../../cli/index.html#overview).
 
-2. Ejecute el [mandato `ibmcloud`](../../cli/reference/bluemix_cli/bx_cli.html#bluemix_cli) que crea la instancia de servicio de VoiceAgent con el plan _Trial_:
+2. Ejecute el mandato [`ibmcloud`](../../cli/idt/commands.html#idt-cli) que crea la instancia de servicio de Voice Agent con el plan de _Prueba_:
 
    ```
    ibmcloud service create VoiceAgent _Trial_ "My Voice Agent Service"

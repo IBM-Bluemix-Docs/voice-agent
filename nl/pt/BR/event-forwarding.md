@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-11"
+lastupdated: "2018-08-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -39,8 +39,7 @@ Ao criar ou editar agentes de voz, é possível também escolher ativar o encami
 
 1. Selecione **Minha instância de serviço {{site.data.keyword.cloudant_short_notm}}** ou **Outra instância de serviço {{site.data.keyword.cloudant_short_notm}}**.
   * Se você estiver usando **Minha instância de serviço {{site.data.keyword.cloudant_short_notm}}**, selecione o nome da conta **{{site.data.keyword.cloudant_short_notm}} e o** nome de usuário nas listas.
-  * Se você estiver usando **Outra instância de serviço do {{site.data.keyword.cloudant_short_notm}}
-**, insira o nome de usuário e a senha do {{site.data.keyword.cloudant_short_notm}} para a conta.
+  * Se você estiver usando **Outra instância de serviço do {{site.data.keyword.cloudant_short_notm}}**, insira o nome de usuário e a senha do {{site.data.keyword.cloudant_short_notm}} ou a chave API para a conta.
 
 1. Selecione **Ativar** para cada tipo de evento que você deseja encaminhar e, em seguida, escolha o banco de dados no qual deseja encaminhar os eventos.
   * Eventos do registro de detalhe de chamada (CDR)

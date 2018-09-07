@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-08-16"
 
 
 ---
@@ -36,7 +36,7 @@ _「管理」_ダッシュボードでボイス・エージェントを作成、
 
 1. オプションで、ボイス・エージェントの説明を入力します。
 
-1. 通話中転送を有効にする場合は、**「転送ターゲット (Transfer Target)」**で終了 URI を構成することができます。[通話中転送のセットアップ](call-transfer.html)を参照してください。転送ターゲットに個人の電話番号を使用しないでください。
+1. 通話中転送を有効にする場合は、**「転送ターゲット (Transfer Target)」**で終了 URI を構成することができます。 [通話中転送のセットアップ](call-transfer.html)を参照してください。 転送ターゲットに個人の電話番号を使用しないでください。
 
 1. Watson サービス・インスタンスへの接続を構成します。 **「ロケーション 1 (Location 1)」**と**「ロケーション 2 (Location 2)」**の両方に接続を構成して、複数の Watson サービス・インスタンスに接続することができます。複数のサービス・インスタンスに接続できるので、障害発生時には、ボイス・エージェントを別のサービス・インスタンスに切り替えることができます。 [複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
 
@@ -44,15 +44,15 @@ _「管理」_ダッシュボードでボイス・エージェントを作成、
 
 1. **{{site.data.keyword.conversationshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.conversationshort}} サービス・インスタンスへの接続を構成します。自分自身または他の人が所有する {{site.data.keyword.Bluemix_notm}} アカウントの {{site.data.keyword.conversationshort}} インスタンスまたは {{site.data.keyword.virtualagentfull}} インスタンスを使用することができます。 サービス・オーケストレーション・エンジンを使用してこれらのオプションのいずれかに接続することもできます。
 
-    * 米国南部地域でボイス・エージェントを作成する場合、{{site.data.keyword.conversationshort}} サービス・インスタンスがなければ、**「サービス・インスタンス (Service instance)」**メニューから作成できます。
+    * 米国南部地域または米国東部地域でボイス・エージェントを作成する場合、{{site.data.keyword.conversationshort}} サービス・インスタンスがなければ、**「サービス・インスタンス (Service instance)」**メニューから作成できます。
     * あるいは、[**「サービス・タイプ (Service type)」**](#other_service)を変更することによって {{site.data.keyword.conversationshort}} ダイアログの他のソースに接続することもできます。
     * 複数のサービス・ロケーションを構成する場合は、他のロケーション・オプションをクリックし、**「ロケーションの有効化 (Enable location)」**を選択して、他の {{site.data.keyword.conversationshort}} インスタンスへの接続を構成します。 [複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
 
-1. **{{site.data.keyword.speechtotextshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.speechtotextshort}} サービス・インスタンスのデフォルト構成を確認します。米国南部地域でボイス・エージェントを作成する場合、{{site.data.keyword.speechtotextshort}} サービス・インスタンスがなければ、**「サービス・インスタンス (Service instance)」**メニューから作成できます。 あるいは、[**「サービス・タイプ (Service type)」**](#other_service)を変更することによって別の {{site.data.keyword.Bluemix_notm}} アカウント・スペースの {{site.data.keyword.speechtotextshort}} インスタンスにボイス・エージェントを接続することもできます。 {{site.data.keyword.iva_short}} では、狭周波数帯域モデルのみがサポートされています。
+1. **{{site.data.keyword.speechtotextshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.speechtotextshort}} サービス・インスタンスのデフォルト構成を確認します。米国南部地域または米国東部地域でボイス・エージェントを作成する場合、{{site.data.keyword.speechtotextshort}} サービス・インスタンスがなければ、**「サービス・インスタンス (Service instance)」**メニューから作成できます。 あるいは、[**「サービス・タイプ (Service type)」**](#other_service)を変更することによって別の {{site.data.keyword.Bluemix_notm}} アカウント・スペースの {{site.data.keyword.speechtotextshort}} インスタンスにボイス・エージェントを接続することもできます。 {{site.data.keyword.iva_short}} では、狭周波数帯域モデルのみがサポートされています。
 
     複数のサービス・ロケーションを構成する場合は、他のロケーション・オプションをクリックし、**「ロケーションの有効化 (Enable location)」**を選択して、他の {{site.data.keyword.speechtotextshort}} インスタンスへの接続を構成します。 [複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
 
-1. **{{site.data.keyword.texttospeechshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.texttospeechshort}} サービス・インスタンスのデフォルト構成を確認します。米国南部地域でボイス・エージェントを作成しようとしており、{{site.data.keyword.texttospeechshort}} サービス・インスタンスがない場合には、**「サービス・インスタンス (Service instance)」**メニューから作成することができます。 あるいは、[**「サービス・タイプ (Service type)」**](#other_service)を変更することによって別の {{site.data.keyword.Bluemix_notm}} アカウント・スペースの {{site.data.keyword.texttospeechshort}} インスタンスにボイス・エージェントを接続することもできます。
+1. **{{site.data.keyword.texttospeechshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.texttospeechshort}} サービス・インスタンスのデフォルト構成を確認します。米国南部地域または米国東部地域でボイス・エージェントを作成する場合、{{site.data.keyword.texttospeechshort}} サービス・インスタンスがなければ、**「サービス・インスタンス (Service instance)」**メニューから作成できます。 あるいは、[**「サービス・タイプ (Service type)」**](#other_service)を変更することによって別の {{site.data.keyword.Bluemix_notm}} アカウント・スペースの {{site.data.keyword.texttospeechshort}} インスタンスにボイス・エージェントを接続することもできます。
 
     複数のサービス・ロケーションを構成する場合は、他のロケーション・オプションをクリックし、**「ロケーションの有効化 (Enable location)」**を選択して、他の {{site.data.keyword.texttospeechshort}} インスタンスへの接続を構成します。 [複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
 
@@ -110,6 +110,7 @@ _「管理」_ ダッシュボードの**「同時接続最大数 (Maximum concu
 
 * **{{site.data.keyword.conversationshort}} 失敗応答メッセージ (オプション) ({{site.data.keyword.conversationshort}} failure reply message (optional))**: 通話が {{site.data.keyword.conversationshort}} に接続できない場合にメッセージ受信者に送信されるデフォルトの応答メッセージ。
 * **転送失敗応答メッセージ (オプション)(Transfer failure reply message (optional))**: 通話中転送が失敗した場合に発信者に対して流されるデフォルトの応答メッセージ。
+* **カスタム SIP INVITE ヘッダー (オプション) (Custom SIP INVITE Header (optional))**: 着信した SIP INVITE 要求から取り出すカスタム SIP ヘッダーを指定します。
 * **{{site.data.keyword.iva_short}} から仮のリンギング応答を送信する (Send provisional ringing response from {{site.data.keyword.iva_short}})**: {{site.data.keyword.iva_short}} が着信を処理する間に `180 リンギング`応答を送信します。 デフォルトでは有効です。
 * **転送時に発信者を保留にする (Put caller on hold on transfer)**: 転送時に発信者を保留にします。 デフォルトでは有効です。
 * **転送が失敗したときに通話を切断する (Disconnect call on transfer failure)**: 通話中転送が失敗した場合に通話を切断するかどうかを指定します。  デフォルトでは有効です。 この設定を無効にした場合に通話中転送が失敗すると、{{site.data.keyword.iva_short}} が会話のターンを開始します。 その後、ダイアログでの構成に応じて、{{site.data.keyword.conversationshort}} は通話を切断することも、別の宛先に転送することもできます。
