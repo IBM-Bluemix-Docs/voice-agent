@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-24"
 ---
 
 {:shortdesc: .shortdesc}
@@ -23,9 +23,9 @@ Vous souhaiterez peut-être collecter et analyser des données d'appel à partir
 
 L'analyse des données de ces événements peut vous aider à ajuster les dialogues, à affiner les intentions et à améliorer l'expérience globale de l'appelant.
 
-Lorsque vous créez ou éditez des agents vocaux, vous pouvez également choisir d'activer la transmission des événements. Pour en savoir plus sur la création et l'édition d'agents vocaux, voir [Gestion des agents vocaux](managing.html). Vous devez fournir des informations sur le compte {{site.data.keyword.cloudant_short_notm}}, y compris le nom du compte et le mot de passe qui lui est associé, pour activer la transmission des événements.
+Lorsque vous créez ou éditez des agents vocaux, vous pouvez également choisir d'activer la transmission d'événements. Pour en savoir plus sur la création et l'édition d'agents vocaux, voir [Gestion des agents vocaux](managing.html). Vous devez fournir des informations sur le compte {{site.data.keyword.cloudant_short_notm}}, y compris le nom du compte et le mot de passe qui lui est associé, pour activer la transmission d'événements.
 
-**Important :** Les événements d'enregistrement des détails d'appel, de transcription et d'échange incluent des informations fournies par vos utilisateurs pouvant potentiellement contenir des renseignements médicaux protégés (PHI), des informations personnelles identifiables (PII) ou des données PCI DSS (norme de sécurité de l'industrie des cartes de paiement). Pour empêcher que les informations personnelles ne soient exposées, vous devez faire en sorte que votre instance {{site.data.keyword.cloudant_short_notm}} protège correctement les informations confidentielles partagées par vos utilisateurs ou divulguées durant une conversation.
+**Important :** Les événements d'enregistrement des détails d'appel, de transcription et d'échange incluent des informations fournies par vos utilisateurs pouvant potentiellement contenir des renseignements médicaux protégés (PHI), des informations personnelles identifiables (PII) ou des données PCI DSS (norme de sécurité de l'industrie des cartes de paiement). Pour empêcher que les informations personnelles ne soient exposées, vous devez faire en sorte que votre instance {{site.data.keyword.cloudant_short_notm}} protège correctement les informations confidentielles partagées par vos utilisateurs ou divulguées durant une conversation. Voir [Sécurité des informations et confidentialité des données : Transmission d'événements](infosec.html#event_forwarding) et [{{site.data.keyword.cloudant_short_notm}}: Security](../Cloudant/offerings/security.html#security).
 
 
 ## Activation de la transmission d'événements
@@ -33,7 +33,7 @@ Lorsque vous créez ou éditez des agents vocaux, vous pouvez également choisir
 
 Vous pouvez activer la transmission d'événements lorsque vous créez ou éditez vos agents vocaux dans le tableau de bord _Gestion_ sur {{site.data.keyword.Bluemix_short}}.
 
-1. Dans la section **Transmission d'événements**, située après la section Configuration pour {{site.data.keyword.texttospeechshort}}, sélectionnez **Activer la transmission des événements**.
+1. Dans la section **Transmission d'événements**, située après la section Configuration pour {{site.data.keyword.texttospeechshort}}, sélectionnez **Activer la transmission d'événements**.
 
 1. Sélectionnez **Mon instance de service {{site.data.keyword.cloudant_short_notm}}** ou **Autre instance de service {{site.data.keyword.cloudant_short_notm}}**.
   * Si vous utilisez **Mon instance de service {{site.data.keyword.cloudant_short_notm}}**, sélectionnez le nom et le nom d'utilisateur du **compte {{site.data.keyword.cloudant_short_notm}}** dans les listes.
@@ -48,3 +48,5 @@ Vous pouvez activer la transmission d'événements lorsque vous créez ou édite
 
 ## Liens connexes
 * [IBM Voice Gateway : Evénements de génération de rapports](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}
+* [Sécurité des informations et confidentialité des données](infosec.html)
+* [{{site.data.keyword.cloudant_short_notm}}: Security](../Cloudant/offerings/security.html#security)

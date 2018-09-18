@@ -24,7 +24,9 @@ lastupdated: "2018-06-19"
 {: #about-ct}
 
 Ao ativar a transferência de chamada, se um responsável pela chamada solicitar falar com um agente em tempo real durante a conversa, o agente de voz redirecionará a chamada. É possível ativar a transferência de chamada configurando um URI de finalização na configuração do provedor SIP. Em seguida, defina
-o destino de transferência em uma ação de API em um nó de diálogo da instância do {{site.data.keyword.conversationshort}}. O seu destino de transferência é um URI do SIP que contém o URI de finalização e o número do telefone. Para obter mais informações sobre ações suportadas e a customização dos agentes de voz, consulte [Programando
+o destino de transferência em uma ação de API em um nó de diálogo da instância do {{site.data.keyword.conversationshort}}. O seu destino de transferência é um URI do SIP que contém o URI de finalização e o número do telefone.
+
+Para obter mais informações sobre ações suportadas e a customização dos agentes de voz, consulte [Programando
 agentes de voz usando a API](api.html).
 
 ## Etapa 1: Configurando o URI de finalização
@@ -65,7 +67,9 @@ Não é necessário configurar manualmente o URI de finalização na sua conta d
 
 1. Clique em **Salvar** para concluir a configuração do seu URI de finalização.
 
-Anote o número do telefone e o URI de finalização para o qual você deseja transferir. Certifique-se de que o número de telefone não é um número de telefone pessoal. É possível usar o número de telefone e o URI de finalização para especificar o destino de transferência no diálogo {{site.data.keyword.conversationshort}}.
+Anote o número do telefone e o URI de finalização para o qual você deseja transferir. Certifique-se de que o número de telefone não é um número de telefone pessoal.
+
+É possível usar o número de telefone e o URI de finalização para especificar o destino de transferência no diálogo {{site.data.keyword.conversationshort}}.
 
 
 ## Etapa 2: Configurando o {{site.data.keyword.conversationshort}} para transferência de chamada
@@ -110,6 +114,9 @@ Para saber mais sobre como trabalhar no serviço {{site.data.keyword.conversatio
 {: codeblock}
 
 **Nota**: o URI SIP do destino de transferência inclui um número de telefone e o URI de finalização criados. Não use um número de telefone pessoal no destino de transferência. Por exemplo, se o número de telefone for `18889990000` e seu URI de finalização for `mysiptrunk.pstn.twilio.com`, o URI SIP completo será `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. Se você usar o NetFoundry e tiver um número de telefone do `18889990000`, o URI do SIP completo será `sip:18889990000\\@dal.watson-va.netfoundry.net`.
+
+Para proteger as Informações pessoalmente identificáveis (PII), não use um número de telefone pessoal ao configurar seu URI de SIP de destino de transferência. Consulte [{{site.data.keyword.iva_short}} e manipulação de informações](infosec.html#configure_infosec){:new_window} para obter mais informações sobre PII e configurações.
+{: tip}
 
 ## Próximas etapas
 {: #Next}

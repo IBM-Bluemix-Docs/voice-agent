@@ -19,6 +19,12 @@ IBM Voice Agent with Watson
         [Watson Assistant](https://console.bluemix.net/docs/services/conversation/index.html){: new_window}
         [Speech to Text](https://console.bluemix.net/docs/services/speech-to-text/index.html){: new_window}
         [Text to Speech](https://console.bluemix.net/docs/services/text-to-speech/index.html){: new_window}
+
+    {: .topicgroup}
+    Seguridad de información y privacidad de datos
+        [Seguridad de información y privacidad de datos](infosec.html)
+        [Manejo de información y opciones de configuración](infosec.html#configure_infosec)
+        [Servicios relacionados con IBM Voice Agent with Watson](infosec.html#related_services)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

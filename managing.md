@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-29"
 
 
 ---
@@ -38,9 +38,9 @@ When you create a voice agent, {{site.data.keyword.iva_short}} automatically sea
 
 1. If you want to enable call transfer, you can configure a termination URI for your **Transfer Target**. See [Setting up call transfer](call-transfer.html). Do not use a personal phone number for your transfer target.
 
-1. Configure the connections to your Watson service instances. You can connect to multiple Watson services instances by configuring connections for both **Location 1** and **Location 2**. Having connections to multiple service instances enables your voice agent to switch to an alternate service instance if an outage occurs. See [Adding multiple Watson service locations](#add_location).
+1. Configure the connections to your Watson service instances. You can connect to multiple Watson service instances by configuring connections for both **Location 1** and **Location 2**. Having connections to multiple service instances enables your voice agent to switch to an alternate service instance if an outage occurs. See [Adding multiple Watson service locations](#add_location).
 
-**Important**: _Trial_ and _Lite_ accounts can connect only to the location where your {{site.data.keyword.iva_short}} service instance is created. Your second location is not a second voice agent. It acts only as a backup for disaster recovery.
+    **Important**: _Trial_ and _Lite_ instances can connect only to the location where your {{site.data.keyword.iva_short}} service instance is created. Your second location is not a second voice agent. It acts only as a backup for disaster recovery.
 
 1. Under **{{site.data.keyword.conversationshort}}**, configure the connection to your {{site.data.keyword.conversationshort}} service instance by clicking **Enable location 1** or **Enable location 2**. You can use {{site.data.keyword.conversationshort}} instances or {{site.data.keyword.virtualagentfull}} instances in {{site.data.keyword.Bluemix_notm}} accounts that you or someone else owns. You can also connect to any of these options through a service orchestration engine.
 
@@ -48,13 +48,16 @@ When you create a voice agent, {{site.data.keyword.iva_short}} automatically sea
     * Alternatively, you can connect to other sources of a {{site.data.keyword.conversationshort}} dialog by changing the [**Service type**](#other_service).
     * If you want to configure multiple service locations, click the other location option and select **Enable location** to configure the connection to your other {{site.data.keyword.conversationshort}} instance. See [Adding multiple Watson service locations](#add_location).
 
-1. Under **{{site.data.keyword.speechtotextshort}}**, review the default configuration for your {{site.data.keyword.speechtotextshort}} service instance by clicking **Enable location 1** or **Enable location 2**. If you are creating a voice agent in the US South or US East region and do not have a {{site.data.keyword.speechtotextshort}} service instance, you create one from the **Service instance** menu. Or, you can connect your voice agent to a {{site.data.keyword.speechtotextshort}} instance in a different {{site.data.keyword.Bluemix_notm}} account space by changing the [**Service type**](#other_service). {{site.data.keyword.iva_short}} supports only narrowband models.
+1. Under **{{site.data.keyword.speechtotextshort}}**, review the default configuration for your {{site.data.keyword.speechtotextshort}} service instance by clicking **Enable location 1** or **Enable location 2**. You can customize your configuration with the following.
+    * If you are creating a voice agent in the US South or US East region and do not have a {{site.data.keyword.speechtotextshort}} service instance, you can create one from the **Service instance** menu.
+    * Choose the [**Service type**](#other_service) to connect your voice agent to a {{site.data.keyword.speechtotextshort}} instance in a different {{site.data.keyword.Bluemix_notm}}.
+    * If you want to configure multiple service locations, click the other location option and select **Enable location** to configure the connection to your other {{site.data.keyword.speechtotextshort}} instance. See [Adding multiple Watson service locations](#add_location).
+    * **Remember:** {{site.data.keyword.iva_short}} supports only narrowband models.
 
-    If you want to configure multiple service locations, click the other location option and select **Enable location** to configure the connection to your other {{site.data.keyword.speechtotextshort}} instance. See [Adding multiple Watson service locations](#add_location).
-
-1. Under **{{site.data.keyword.texttospeechshort}}**, review the default configuration for your {{site.data.keyword.texttospeechshort}} service instance by clicking **Enable location 1** or **Enable location 2**. If you are creating a voice agent in the US South or US East region and you do not have a {{site.data.keyword.texttospeechshort}} service instance, you can create one from the **Service instance** menu. Or, you can connect your voice agent to a {{site.data.keyword.texttospeechshort}} instance in a different {{site.data.keyword.Bluemix_notm}} account space by changing the [**Service type**](#other_service).
-
-    If you want to configure multiple service locations, click the other location option and select **Enable location** to configure the connection to your other {{site.data.keyword.texttospeechshort}} instance. See [Adding multiple Watson service locations](#add_location).
+1. Under **{{site.data.keyword.texttospeechshort}}**, review the default configuration for your {{site.data.keyword.texttospeechshort}} service instance by clicking **Enable location 1** or **Enable location 2**. 
+    * If you are creating a voice agent in the US South or US East region and you do not have a {{site.data.keyword.texttospeechshort}} service instance, you can create one from the **Service instance** menu. 
+    * You can also connect your voice agent to a {{site.data.keyword.texttospeechshort}} instance in a different {{site.data.keyword.Bluemix_notm}} account space by changing the [**Service type**](#other_service).
+    * If you want to configure multiple service locations, click the other location option and select **Enable location** to configure the connection to your other {{site.data.keyword.texttospeechshort}} instance. See [Adding multiple Watson service locations](#add_location).
 
 1. You can also choose to enable event forwarding to collect information about calls that are handled by your voice agents in a {{site.data.keyword.cloudantfull}}. See [Enabling event forwarding for voice agents](event-forwarding.html). For more configuration options, see [Configuring a voice agent](#configure_va).
 
@@ -76,7 +79,7 @@ If you want to change the maximum number of concurrent connections in your plan,
 
   * _Lite_, _Trial_, and _Standard_ plans include 2 concurrent connections at no charge.
   * _Premium_ plans are customized by instance.
-  * In a _Standard_ account, you have a minimum capacity of 10 concurrent connections.
+  * In a _Standard_ plan, you have a minimum capacity of 10 concurrent connections.
   * Concurrent connection use is prorated by the month. If you use more than 2 concurrent connections in a day, you are charged a daily rate.
   * If you have a _Standard_ or _Premium_ plan, you can purchase a greater concurrent connection capacity.
   * You are charged a daily rate for the maximum concurrent connection capacity that you use in a day. For example, because your plan supports 2 concurrent connections free, and you set a maximum limit of 12 connections. If you use only 5 in a day, you are charged for 3.
@@ -96,7 +99,7 @@ When you clone a voice agent, all of the configurations for the Watson services 
 ## Deleting a voice agent
 {: #delete_va}
 
-You might want to delete a voice agent to free up the phone number. You can have only one voice agent for a phone number. To use a phone number for a different voice agent, you first must delete any voice agent that is using the phone number.
+You might want to delete a voice agent to free up the phone number. You can have only one voice agent per phone number. To use a phone number for a different voice agent, you first must delete any voice agent that is using the phone number.
 
 To delete a voice agent, click **Delete Agent** from the list of options for the voice agent, and save the changes. The voice agent is removed from the list of voice agents.
 
@@ -119,13 +122,13 @@ When you create or clone a voice agent, you can click **Show advanced** to view 
 ### Adding multiple Watson service locations
 {: #add_location}
 
-If you have a _Standard_ or _Premium_ account, you can connect your voice agent to multiple Watson services in different locations for service redundancy. _Trial_ and _Lite_ accounts can connect only to the location where your {{site.data.keyword.iva_short}} service instance is created. Your second location is not a second voice agent. It acts only as a backup for disaster recovery.
+If you have a _Standard_ or _Premium_ instance, you can connect your voice agent to multiple Watson services in different locations for service redundancy. _Trial_ and _Lite_ instances can connect only to the location where your {{site.data.keyword.iva_short}} service instance is created. Your second location is not a second voice agent. It acts only as a backup for disaster recovery.
 
 Your voice agent uses the Watson service instances in order of geographical distance. For example, you can create a voice agent in the US East region, and your {{site.data.keyword.conversationshort}} services in US South and Sydney, Australia. Your voice agent uses the {{site.data.keyword.conversationshort}} US South region because US South is geographically nearer to US East than Sydney. By connecting to Watson services in multiple regions, if a Watson service is offline at one location, your voice agent can use the redundant service.
 
 You can add a Watson service location to your voice agent configuration at any time. For information about connecting multiple service location instances when you create your voice agent, see [Creating a voice agent](#creating).
 
-To add a Watson service location to an existing voice agent, click **Edit agent** for the voice agent you want to configure. Choose either **Location 1** or **Location 2** for the {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}}, or {{site.data.keyword.speechtotextshort}} instance that you want to connect, and add your configuration information. You can use Watson service instance in your workspace or in other workspaces. See [Using service instances in other {{site.data.keyword.Bluemix_notm}} workspaces](#other_services).
+To add a Watson service location to an existing voice agent, click **Edit agent** for the voice agent you want to configure. Choose either **Location 1** or **Location 2** for the {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}}, or {{site.data.keyword.speechtotextshort}} instance that you want to connect, and add your configuration information. You can use Watson service instances in your workspace or in other workspaces. See [Using service instances in other {{site.data.keyword.Bluemix_notm}} workspaces](#other_services).
 
 **Remember**: For service redundancy, you must use Watson service instances in different service regions for different locations.
 
@@ -150,9 +153,7 @@ You can configure your voice agent to use {{site.data.keyword.conversationshort}
 1. Enter your service instance information.
 
   * **{{site.data.keyword.conversationshort}}:** In the **Workspace ID** field, enter the ID of the workspace that you want to use with your voice agent. To find the workspace ID, launch the tool, and on the workspace that you want to integrate, click the Actions icon (**&vellip;**) and select **View details**.
-
   * **{{site.data.keyword.speechtotextshort}}:** In the **Model** field, select the speech language and format for your service. {{site.data.keyword.iva_short}} supports only narrowband models.
-
   * **{{site.data.keyword.texttospeechshort}}:** In the **Voice** field, select the language and voice that your service uses. You must specify a voice for your service.
 
 **Remember:** For your voice agent to work, you must configure your {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, and {{site.data.keyword.texttospeechshort}} for the same language. See [Supported languages](about.html#supported-languages).
@@ -165,6 +166,8 @@ As an alternative to configuring a {{site.data.keyword.conversationshort}} servi
 * **Service orchestration engine**: Connect to a {{site.data.keyword.conversationshort}} workspace or {{site.data.keyword.virtualagentshort}} through a [service orchestration engine (SOE)](about.html#arch-soe). An SOE intercepts messages to and from the service so that you can modify them by using third-party APIs.
 
   In the **URL** field, enter the full URL to your SOE workspace, such as `https://iva-soesample.myorg.net/SOE/myWorkspace`. If your SOE requires authentication (recommended), enter the user name and password in the respective fields.
+
+  **Important**: For data security, make sure that you use a secure URL for your SOE workspace, by using `https:` instead of `http:`, and require authentication. See [Information security and data privacy](infosec.html) to learn more about security considerations.
 
 * **Watson {{site.data.keyword.virtualagentshort}}**: Connect to a {{site.data.keyword.virtualagentshort}} chatbot instead of a {{site.data.keyword.conversationshort}} workspace. [{{site.data.keyword.virtualagentshort}}](../virtual-agent/getting-started.html#getting-started) is built on the {{site.data.keyword.conversationshort}} service, but it provides pre-trained capabilities so you can get started with zero machine-learning experience.
 

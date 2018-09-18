@@ -23,7 +23,9 @@ Puoi configurare un trasferimento di chiamata in modo che se un chiamante richie
 ## Informazioni sul trasferimento di chiamata
 {: #about-ct}
 
-Abilitando il trasferimento di chiamata, se un chiamante richiede di parlare con un agent dal vivo durante la conversazione, l'agent vocale reindirizzerà la chiamata. Puoi abilitare il trasferimento di chiamata configurando un URI di terminazione nella configurazione del provider SIP. Successivamente definisci la destinazione del trasferimento in un'azione API in un nodo di dialogo della tua istanza {{site.data.keyword.conversationshort}}. La tua destinazione del trasferimento è un URI SIP che contiene l'URI di terminazione e il numero di telefono. Per ulteriori informazioni dettagliate sulle azioni supportate e sulla personalizzazione dei tuoi agent vocali, consulta [Programmazione degli agent vocali utilizzando l'API](api.html).
+Abilitando il trasferimento di chiamata, se un chiamante richiede di parlare con un agent dal vivo durante la conversazione, l'agent vocale reindirizzerà la chiamata. Puoi abilitare il trasferimento di chiamata configurando un URI di terminazione nella configurazione del provider SIP. Successivamente definisci la destinazione del trasferimento in un'azione API in un nodo di dialogo della tua istanza {{site.data.keyword.conversationshort}}. La tua destinazione del trasferimento è un URI SIP che contiene l'URI di terminazione e il numero di telefono.
+
+Per ulteriori informazioni dettagliate sulle azioni supportate e sulla personalizzazione dei tuoi agent vocali, consulta [Programmazione degli agent vocali utilizzando l'API](api.html).
 
 ## Passo 1: configurazione dell'URI di terminazione
 {: #termination-setup}
@@ -63,7 +65,9 @@ Non hai bisogno di configurare manualmente l'URI di terminazione nel tuo account
 
 1. Fai clic su **Save** per finire la configurazione del tuo URI di terminazione.
 
-Prendi nota del numero di telefono e dell'URI di terminazione che desideri trasferire. Assicurati che il numero di telefono non sia personale. Puoi utilizzare il numero di telefono e la terminazione URI per specificare la destinazione del trasferimento nel tuo dialogo {{site.data.keyword.conversationshort}}.
+Prendi nota del numero di telefono e dell'URI di terminazione che desideri trasferire. Assicurati che il numero di telefono non sia personale.
+
+Puoi utilizzare il numero di telefono e la terminazione URI per specificare la destinazione del trasferimento nel tuo dialogo {{site.data.keyword.conversationshort}}.
 
 
 ## Passo 2: Configurazione di {{site.data.keyword.conversationshort}} per il trasferimento di chiamata
@@ -108,6 +112,9 @@ Per ulteriori informazioni sull'utilizzo del servizio {{site.data.keyword.conver
 {: codeblock}
 
 **Ricorda**: l'URI SIP della destinazione del trasferimento include un numero di telefono e l'URI di terminazione che hai creato. Non utilizzare un numero di telefono personale nella tua destinazione di trasferimento. Ad esempio, se il numero di telefono è `18889990000` e il tuo URI di terminazione è `mysiptrunk.pstn.twilio.com`, l'URI SIP completo è `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. Se utilizzi Netfoundry e hai un numero di telefono `18889990000`, l'URI SIP completo è `sip:18889990000\\@dal.watson-va.netfoundry.net`.
+
+Per proteggere i PII (Personally Identifiable Information), non utilizzare un numero di telefono personale quando configuri il tuo URI SIP di destinazione di trasferimento. Consulta [{{site.data.keyword.iva_short}} e gestione delle informazioni](infosec.html#configure_infosec){:new_window} per ulteriori informazioni sulle configurazioni e i PII.
+{: tip}
 
 ## Fasi successive
 {: #Next}

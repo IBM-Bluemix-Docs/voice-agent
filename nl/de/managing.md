@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-29"
 
 
 ---
@@ -40,7 +40,7 @@ Wenn Sie einen Sprachagenten erstellen, sucht {{site.data.keyword.iva_short}} au
 
 1. Konfigurieren Sie die Verbindungen zu Ihren Watson-Serviceinstanzen. Sie können Verbindungen zu mehreren Watson-Serviceinstanzen herstellen, indem Sie sowohl für **Standort 1** als auch für **Standort 2** Verbindungen konfigurieren. Wenn Verbindungen zu mehreren Serviceinstanzen vorhanden sind, kann der Sprachagent bei einem Ausfall zu einer alternativen Serviceinstanz wechseln. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](#add_location).
 
-**Wichtig**: Bei Konten des Typs _Trial_ und _Lite_ ist eine Verbindung nur zu dem Standort möglich, an dem die {{site.data.keyword.iva_short}}-Serviceinstanz erstellt wurde. Beim zweiten Standort handelt es sich nicht um einen zweiten Sprachagenten. Er dient nur als Sicherung für Disaster-Recovery-Situationen.
+    **Wichtig**: Bei Instanzen des Typs _Trial_ und _Lite_ ist eine Verbindung nur zu dem Standort möglich, an dem die {{site.data.keyword.iva_short}}-Serviceinstanz erstellt wurde. Beim zweiten Standort handelt es sich nicht um einen zweiten Sprachagenten. Er dient nur als Sicherung für Disaster-Recovery-Situationen.
 
 1. Konfigurieren Sie unter **{{site.data.keyword.conversationshort}}** die Verbindung zur {{site.data.keyword.conversationshort}}-Serviceinstanz, indem Sie auf **Standort 1 aktivieren** oder **Standort 2 aktivieren** klicken. Sie können {{site.data.keyword.conversationshort}}-Instanzen oder {{site.data.keyword.virtualagentfull}}-Instanzen in {{site.data.keyword.Bluemix_notm}}-Konten verwenden, deren Eigner Sie sind oder deren Eigner ein anderer Benutzer ist. Sie können auch zu jeder dieser Optionen eine Verbindung über eine Service-Orchestrierungsengine herstellen.
 
@@ -48,13 +48,16 @@ Wenn Sie einen Sprachagenten erstellen, sucht {{site.data.keyword.iva_short}} au
     * Alternativ können Sie Verbindungen zu anderen Quellen eines {{site.data.keyword.conversationshort}}-Dialogs herstellen, indem Sie den [**Servicetyp**](#other_service) ändern.
     * Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.conversationshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](#add_location).
 
-1. Überprüfen Sie unter **{{site.data.keyword.speechtotextshort}}** die Standardkonfiguration für die {{site.data.keyword.speechtotextshort}}-Serviceinstanz, indem Sie auf **Standort 1 aktivieren** oder **Standort 2 aktivieren** klicken. Wenn Sie in der Region 'USA (Süden)' oder 'USA (Osten)' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.speechtotextshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen. Alternativ können Sie Ihren Sprachagenten mit einer {{site.data.keyword.speechtotextshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}}-Kontobereich verbinden, indem Sie den [**Servicetyp**](#other_service) ändern. {{site.data.keyword.iva_short}} unterstützt nur Narrowband-Modelle.
+1. Überprüfen Sie unter **{{site.data.keyword.speechtotextshort}}** die Standardkonfiguration für die {{site.data.keyword.speechtotextshort}}-Serviceinstanz, indem Sie auf **Standort 1 aktivieren** oder **Standort 2 aktivieren** klicken. Sie können die Konfiguration wie folgt anpassen: 
+    * Wenn Sie in der Region 'USA (Süden)' oder 'USA (Osten)' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.speechtotextshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen.
+    * Wählen Sie den [**Servicetyp**](#other_service) aus, um Ihren Sprachagenten mit einer {{site.data.keyword.speechtotextshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}} zu verbinden. 
+    * Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.speechtotextshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](#add_location).
+    * **Wichtig:** {{site.data.keyword.iva_short}} unterstützt nur Narrowband-Modelle. 
 
-    Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.speechtotextshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](#add_location).
-
-1. Überprüfen Sie unter **{{site.data.keyword.texttospeechshort}}** die Standardkonfiguration für die {{site.data.keyword.texttospeechshort}}-Serviceinstanz, indem Sie auf **Standort 1 aktivieren** oder **Standort 2 aktivieren** klicken. Wenn Sie in der Region 'USA (Süden)' oder 'USA (Osten)' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.texttospeechshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen. Alternativ können Sie Ihren Sprachagenten mit einer {{site.data.keyword.texttospeechshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}}-Kontobereich verbinden, indem Sie den [**Servicetyp**](#other_service) ändern.
-
-    Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.texttospeechshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](#add_location).
+1. Überprüfen Sie unter **{{site.data.keyword.texttospeechshort}}** die Standardkonfiguration für die {{site.data.keyword.texttospeechshort}}-Serviceinstanz, indem Sie auf **Standort 1 aktivieren** oder **Standort 2 aktivieren** klicken.  
+    * Wenn Sie in der Region 'USA (Süden)' oder 'USA (Osten)' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.texttospeechshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen. 
+    * Sie können Ihren Sprachagenten auch mit einer {{site.data.keyword.texttospeechshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}}-Kontobereich verbinden, indem Sie den [**Servicetyp**](#other_service) ändern. 
+    * Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.texttospeechshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](#add_location).
 
 1. Sie können auch die Ereignisweiterleitung aktivieren, um Informationen zu den von Ihren Sprachagenten verarbeiteten Anrufen in {{site.data.keyword.cloudantfull}} zu erfassen. Informationen hierzu finden Sie in [Ereignisweiterleitung für Sprachagenten aktivieren](event-forwarding.html). Weitere Konfigurationsoptionen finden Sie in [Sprachagenten konfigurieren](#configure_va).
 
@@ -76,7 +79,7 @@ Wenn Sie die maximale Anzahl gleichzeitiger Verbindungen in Ihrem Plan ändern m
 
   * In den Plänen des Typs _Lite_, _Trial_ und _Standard_ sind 2 gebührenfreie gleichzeitige Verbindungen enthalten.
   * _Premium_-Pläne werden pro Instanz angepasst.
-  * In einem Konto des Typs _Standard_ ist eine Mindestkapazität von 10 gleichzeitigen Verbindungen verfügbar.
+  * In einem Plan des Typs _Standard_ ist eine Mindestkapazität von 10 gleichzeitigen Verbindungen verfügbar.
   * Die Nutzung gleichzeitiger Verbindungen wird anteilmäßig pro Monat umgelegt. Wenn Sie mehr als 2 gleichzeitige Verbindungen an einem Tag nutzen, werden Gebühren auf der Basis einer Tagesrate berechnet.
   * Bei der Verwendung eines _Standard_- oder _Premium_-Plans können Sie eine größere Kapazität für gleichzeitige Verbindungen kaufen.
   * Für die maximale Kapazität gleichzeitiger Verbindungen, die Sie an einem Tag nutzen, werden Gebühren auf der Basis einer Tagesrate berechnet. Beispiel: Der Plan unterstützt 2 kostenfreie gleichzeitige Verbindungen und Sie legen einen Maximalwert von 12 Verbindungen fest. Wenn Sie nur 5 an einem Tag nutzen, werden Gebühren für 3 berechnet.
@@ -96,7 +99,7 @@ Wenn Sie einen Sprachagenten klonen, werden die gesamten Konfigurationen für di
 ## Sprachagenten löschen
 {: #delete_va}
 
-Das Löschen eines Sprachagenten kann sinnvoll sein, um eine Telefonnummer freizugeben. Für eine Telefonnummer können Sie jeweils nur einen Sprachagenten haben. Um eine Telefonnummer für einen anderen Sprachagenten zu verwenden, müssen Sie zuerst einen eventuell vorhandenen Sprachagenten löschen, der diese Telefonnummer verwendet.
+Das Löschen eines Sprachagenten kann sinnvoll sein, um eine Telefonnummer freizugeben. Für eine einzelne Telefonnummer können Sie nur jeweils einen Sprachagenten haben. Um eine Telefonnummer für einen anderen Sprachagenten zu verwenden, müssen Sie zuerst einen eventuell vorhandenen Sprachagenten löschen, der diese Telefonnummer verwendet.
 
 Zum Löschen eines Sprachagenten klicken Sie in der Liste der Optionen für den Sprachagenten auf **Agenten löschen**. Der Sprachagent wird aus der Liste der Sprachagenten entfernt.
 
@@ -119,13 +122,13 @@ Beim Erstellen oder Klonen eines Sprachagenten können Sie auf **Erweiterte Opti
 ### Mehrere Watson-Servicestandorte hinzufügen
 {: #add_location}
 
-Wenn Sie über ein _Standard_- oder _Premium_-Konto verfügen, können Sie den Sprachagenten aus Gründen der Serviceredundanz mit mehreren Watson-Services an verschiedenen Standorten verbinden. Mit _Trial_- und _Lite_-Konten kann nur eine Verbindung zu dem Standort hergestellt werden, an dem die {{site.data.keyword.iva_short}}-Serviceinstanz erstellt wurde. Beim zweiten Standort handelt es sich nicht um einen zweiten Sprachagenten. Er dient nur als Sicherung für Disaster-Recovery-Situationen.
+Wenn Sie über eine _Standard_- oder _Premium_-Instanz verfügen, können Sie den Sprachagenten aus Gründen der Serviceredundanz mit mehreren Watson-Services an verschiedenen Standorten verbinden. Mit _Trial_- und _Lite_-Instanzen kann nur eine Verbindung zu dem Standort hergestellt werden, an dem die {{site.data.keyword.iva_short}}-Serviceinstanz erstellt wurde. Beim zweiten Standort handelt es sich nicht um einen zweiten Sprachagenten. Er dient nur als Sicherung für Disaster-Recovery-Situationen.
 
 Der Sprachagent verwendet die Watson-Serviceinstanzen in der Reihenfolge der jeweiligen geografischen Distanz. Beispiel: Sie können einen Sprachagenten in der Region 'USA (Osten)' und die {{site.data.keyword.conversationshort}}-Services in den Regionen 'USA (Süden)' und 'Sydney, Australien' erstellen. Der Sprachagent verwendet die {{site.data.keyword.conversationshort}}-Region 'USA (Süden)', da diese geografisch näher an 'USA (Osten)' liegt als 'Sydney, Australien'. Wenn Sie Verbindungen zu Watson-Services in mehreren Regionen einrichten und ein Watson-Service an einem Standort offline ist, kann der Sprachagent den redundanten Service verwenden.
 
 Sie können einen Watson-Servicestandort zu jedem beliebigen Zeitpunkt zur Konfiguration Ihres Sprachagenten hinzufügen. Informationen zur Herstellung von Verbindungen zu Serviceinstanzen an mehreren Standorten beim Erstellen des Sprachagenten finden Sie in [Sprachagenten erstellen](#creating).
 
-Wenn Sie einen Watson-Servicestandort zu einem vorhandenen Sprachagenten hinzufügen möchten, klicken Sie auf die Option **Agenten bearbeiten** für den Sprachagenten, den Sie konfigurieren möchten. Wählen Sie **Standort 1** oder **Standort 2** für die {{site.data.keyword.conversationshort}}-, {{site.data.keyword.texttospeechshort}}- oder {{site.data.keyword.speechtotextshort}}-Instanz aus, die Sie verbinden möchten, und fügen Sie Ihre Konfigurationsinformationen hinzu. Sie können eine Watson-Serviceinstanz in Ihrem Arbeitsbereich oder in anderen Arbeitsbereichen verwenden. Informationen hierzu finden Sie in [Serviceinstanzen in anderen {{site.data.keyword.Bluemix_notm}}-Arbeitsbereichen verwenden](#other_services).
+Wenn Sie einen Watson-Servicestandort zu einem vorhandenen Sprachagenten hinzufügen möchten, klicken Sie auf die Option **Agenten bearbeiten** für den Sprachagenten, den Sie konfigurieren möchten. Wählen Sie **Standort 1** oder **Standort 2** für die {{site.data.keyword.conversationshort}}-, {{site.data.keyword.texttospeechshort}}- oder {{site.data.keyword.speechtotextshort}}-Instanz aus, die Sie verbinden möchten, und fügen Sie Ihre Konfigurationsinformationen hinzu. Sie können Watson-Serviceinstanzen in Ihrem Arbeitsbereich oder in anderen Arbeitsbereichen verwenden. Informationen hierzu finden Sie in [Serviceinstanzen in anderen {{site.data.keyword.Bluemix_notm}}-Arbeitsbereichen verwenden](#other_services).
 
 **Denken Sie daran**: Zum Zweck der Serviceredundanz müssen Sie Watson-Serviceinstanzen in verschiedenen Serviceregionen für verschiedene Standorte verwenden.
 
@@ -150,9 +153,7 @@ Sie können Ihren Sprachagenten für die Verwendung von {{site.data.keyword.conv
 1. Geben Sie die Serviceinstanzinformationen ein.
 
   * **{{site.data.keyword.conversationshort}}:** Im Feld **Arbeitsbereich-ID** geben Sie die ID des Arbeitsbereichs ein, den Sie mit Ihrem Sprachagenten verwenden möchten. Zum Suchen der Arbeitsbereich-ID starten Sie das Tool und den Arbeitsbereich, den Sie integrieren möchten, klicken auf das Symbol 'Aktionen' (**&vellip;**) und wählen **Details anzeigen** aus.
-
   * **{{site.data.keyword.speechtotextshort}}:** Im Feld **Modell** geben Sie die Sprache für die Sprachausgabe und das Format für Ihren Service an. {{site.data.keyword.iva_short}} unterstützt nur Narrowband-Modelle.
-
   * **{{site.data.keyword.texttospeechshort}}:** Wählen Sie im Feld **Sprachunterstützung** die Sprache und die Sprachunterstützung aus, die Ihr Service verwendet. Für Ihren Service müssen Sie eine Sprachunterstützung angeben.
 
 **Bitte beachten:** Damit Ihr Sprachagent funktioniert, müssen Sie {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} und {{site.data.keyword.texttospeechshort}} für dieselbe Sprache konfigurieren. Weitere Informationen finden Sie in [Unterstützte Sprachen](about.html#supported-languages).
@@ -165,6 +166,8 @@ Als Alternative zum Konfigurieren einer {{site.data.keyword.conversationshort}}-
 * **Service-Orchestrierungsengine**: Stellen Sie eine Verbindung zu einem {{site.data.keyword.conversationshort}}-Arbeitsbereich oder zu {{site.data.keyword.virtualagentshort}} über eine [Service-Orchestrierungsengine (SOE)](about.html#arch-soe) her. Eine SOE fängt Nachrichten zum und vom Service ab, sodass Sie sie mithilfe von APIs von Drittanbietern modifizieren können.
 
   Geben Sie im Feld **URL** die vollständige URL zu Ihrem SOE-Arbeitsbereich ein, z. B. `https://iva-soesample.myorg.net/SOE/myWorkspace`. Wenn die SOE Ihre Authentifizierung anfordert (empfohlen), geben Sie in den Benutzernamen und Kennwort in den entsprechenden Feldern an.
+
+  **Wichtig**: Aus Gründen der Datensicherheit müssen Sie sicherstellen, dass Sie für Ihren SOE-Arbeitsbereich eine sichere URL verwenden. Verwenden Sie `https:` anstelle von `http:` sowie obligatorische Authentifizierung. Weitere Informationen zu Sicherheitsaspekten finden Sie unter [Informationssicherheit und Datenschutz](infosec.html). 
 
 * **Watson {{site.data.keyword.virtualagentshort}}**: Stellen Sie eine Verbindung zu einem {{site.data.keyword.virtualagentshort}}-Chatbot statt zu einem {{site.data.keyword.conversationshort}}-Arbeitsbereich her. [{{site.data.keyword.virtualagentshort}}](../virtual-agent/getting-started.html#getting-started) ist auf dem {{site.data.keyword.conversationshort}}-Service aufgebaut, bietet aber vortrainierte Funktionen, sodass Sie ohne jegliche Erfahrung mit maschinellem Lernen gleich einsteigen können.
 

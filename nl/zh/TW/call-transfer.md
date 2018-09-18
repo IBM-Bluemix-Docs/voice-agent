@@ -23,7 +23,9 @@ lastupdated: "2018-06-19"
 ## 關於通話轉接
 {: #about-ct}
 
-透過啟用通話轉接，如果來電者在交談期間要求與即時代理程式交談，則語音代理程式將會重新導向該通話。您可以藉由在 SIP 提供者配置中設定終止 URI，啟用通話轉接。然後，您可以在 {{site.data.keyword.conversationshort}} 實例的對話節點，在 API 動作上定義轉接目標。您的轉接目標是包含終止 URI 及電話號碼的 SIP URI。如需所支援動作以及自訂語音代理程式的相關資訊，請參閱[使用 API 程式設計語音代理程式](api.html)。
+透過啟用通話轉接，如果來電者在交談期間要求與即時代理程式交談，則語音代理程式將會重新導向該通話。您可以藉由在 SIP 提供者配置中設定終止 URI，啟用通話轉接。然後，您可以在 {{site.data.keyword.conversationshort}} 實例的對話節點，在 API 動作上定義轉接目標。您的轉接目標是包含終止 URI 及電話號碼的 SIP URI。
+
+如需所支援動作以及自訂語音代理程式的相關資訊，請參閱[使用 API 程式設計語音代理程式](api.html)。
 
 ## 步驟 1：設定終止 URI
 {: #termination-setup}
@@ -63,7 +65,9 @@ dal.watson-va.netfoundry.net
 
 1. 按一下**儲存**，完成終止 URI 的配置。
 
-請記下您要轉接到的電話號碼及終止 URI。請確定電話號碼不是個人電話號碼。您可以在 {{site.data.keyword.conversationshort}} 對話中，使用電話號碼及終止 URI 來指定轉接目標。
+請記下您要轉接到的電話號碼及終止 URI。請確定電話號碼不是個人電話號碼。
+
+您可以在 {{site.data.keyword.conversationshort}} 對話中，使用電話號碼及終止 URI 來指定轉接目標。
 
 
 ## 步驟 2：配置 {{site.data.keyword.conversationshort}} 以進行通話轉接
@@ -108,6 +112,9 @@ dal.watson-va.netfoundry.net
 {: codeblock}
 
 **請記住**：轉接目標的 SIP URI 包括一個電話號碼及您建立的終止 URI。請不要在轉接目標中使用個人電話號碼。例如，如果電話號碼是 `18889990000`，而終止 URI 是 `mysiptrunk.pstn.twilio.com`，則完整 SIP URI 是 `sip:18889990000\\@mysiptrunk.pstn.twilio.com`。如果您使用 Netfoundry，而且電話號碼為 `18889990000`，則完整 SIP URI 是 `sip:18889990000\\@dal.watson-va.netfoundry.net`。
+
+為了保護個人識別資訊 (PII)，在配置轉接目標 SIP URI 時請不要使用個人電話號碼。如需 PII 及配置的相關資訊，請參閱 [{{site.data.keyword.iva_short}} 與資訊處理](infosec.html#configure_infosec){:new_window}。
+{: tip}
 
 ## 後續步驟
 {: #Next}

@@ -72,7 +72,9 @@ Folgende Gründe können für die Einbindung einer Service-Orchestrierungsengine
 * Anpassen von Interaktionen an Kunden unter Verwendung von APIs
 * Integration von Schutzfunktionen für die Sprachsteuerung mithilfe von DTMF oder biometrischen Angaben
 
-Weitere Informationen zur Vorgehensweise beim Implementieren einer Service-Orchestrierungsengine finden Sie unter [Beispiele für Service-Orchestrierungsengine auf GitHub ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}. Es wird empfohlen, die Service-Orchestrierungsengine mit einem Benutzernamen und Kennwort zu schützen.
+Weitere Informationen zur Vorgehensweise beim Implementieren einer Service-Orchestrierungsengine finden Sie unter [Beispiele für Service-Orchestrierungsengine auf GitHub ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}.
+
+**Wichtig**: Aus Gründen der Datensicherheit müssen Sie sicherstellen, dass Sie für Ihren SOE-Arbeitsbereich eine sichere URL verwenden. Verwenden Sie `https:` anstelle von `http:` sowie obligatorische Authentifizierung. Weitere Informationen zu Sicherheitsaspekten finden Sie unter [Informationssicherheit und Datenschutz](infosec.html). 
 
 ## Features
 {: #features}

@@ -72,7 +72,9 @@ SIP 트렁크를 사용하여 공중 전화망(PTN)에서 사용자 환경을 �
 * API를 사용하여 고객과의 상호작용 사용자 정의
 * DTMF 또는 생채인식을 사용하여 음성 보안 통합
 
-서비스 오케스트레이션 엔진을 구현하는 방법에 대해 자세히 알아보려면 [GitHub의 서비스 오케스트레이션 엔진 샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}을 참조하십시오. 사용자 이름과 비밀번호를 사용하여 서비스 오케스트레이션 엔진의 보안을 설정하는 것이 좋습니다.
+서비스 오케스트레이션 엔진을 구현하는 방법에 대해 자세히 알아보려면 [GitHub의 서비스 오케스트레이션 엔진 샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}을 참조하십시오.
+
+**중요**: 데이터 보안을 위해 `http:` 대신 `https:`를 사용하여 SOE 작업공간에 보안 URL을 사용해야 하고 인증을 요구해야 합니다. 보안 고려사항에 대해 자세히 보려면 [정보 보안 및 데이터 개인정보 보호](infosec.html)를 참조하십시오.
 
 ## 기능
 {: #features}

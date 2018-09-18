@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-24"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,7 +25,7 @@ lastupdated: "2018-08-16"
 
 當您建立或編輯語音代理程式時，也可以選擇啟用事件轉遞。如需建立及編輯語音代理程式的詳細資料，請參閱[管理語音代理程式](managing.html)。您需要提供 {{site.data.keyword.cloudant_short_notm}} 帳戶資訊（包括帳戶名稱及密碼），才能啟用事件轉遞。
 
-**重要事項：**CDR、轉錄及回合事件包括使用者的資訊，而這些資訊可能包含「受保護健康資訊 (PHI)」、個人識別資訊 (PII) 或「PCI 資料安全標準 (PCI DSS)」資料。若要防止公開個人資訊，您必須確保 {{site.data.keyword.cloudant_short_notm}} 實例適當地保護使用者在交談或交談期間共用的機密資訊。
+**重要事項：**CDR、轉錄及回合事件包括使用者的資訊，而這些資訊可能包含「受保護健康資訊 (PHI)」、個人識別資訊 (PII) 或「PCI 資料安全標準 (PCI DSS)」資料。若要防止公開個人資訊，您必須確保 {{site.data.keyword.cloudant_short_notm}} 實例適當地保護使用者在交談中或交談期間分享的機密資訊。請參閱[資訊安全及資料隱私：事件轉遞](infosec.html#event_forwarding)和 [{{site.data.keyword.cloudant_short_notm}}：安全](../Cloudant/offerings/security.html#security)。
 
 
 ## 啟用事件轉遞
@@ -48,3 +48,5 @@ lastupdated: "2018-08-16"
 
 ## 相關鏈結
 * [IBM Voice Gateway：報告事件](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}
+* [資訊安全及資料隱私](infosec.html)
+* [{{site.data.keyword.cloudant_short_notm}}：安全](../Cloudant/offerings/security.html#security)

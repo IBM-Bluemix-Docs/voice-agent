@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-29"
 
 
 ---
@@ -40,7 +40,7 @@ Cuando crea un agente de voz, {{site.data.keyword.iva_short}} busca automáticam
 
 1. Configure las conexiones a sus instancias de servicio de Watson. Puede conectarse a varias instancias de servicio de Watson configurando las conexiones tanto para la **Ubicación 1** como para la **Ubicación 2**. Disponer de conexiones a varias instancias de servicio permite al agente de voz conmutar a una instancia de servicio alternativa si se produce una interrupción del servicio. Consulte [Adición de varias ubicaciones de servicio de Watson](#add_location).
 
-**Importante**: Las cuentas _Prueba_ y _Lite_ solo se pueden conectar a la ubicación donde se ha creado su instancia de servicio de {{site.data.keyword.iva_short}}. La segunda ubicación no es un segundo agente de voz. Solo es una ubicación de respaldo para la recuperación tras desastre.
+    **Importante**: Las instancias _Prueba_ y _Lite_ solo se pueden conectar a la ubicación donde se ha creado su instancia de servicio de {{site.data.keyword.iva_short}}. La segunda ubicación no es un segundo agente de voz. Solo es una ubicación de respaldo para la recuperación tras desastre.
 
 1. En **{{site.data.keyword.conversationshort}}**, configure la conexión a su instancia de servicio de {{site.data.keyword.conversationshort}} pulsando **Habilitar ubicación 1** o **Habilitar ubicación 2**. Puede utilizar instancias de {{site.data.keyword.conversationshort}} o instancias de {{site.data.keyword.virtualagentfull}} en cuentas de {{site.data.keyword.Bluemix_notm}} que posee usted u otra persona. También puede conectarse a cualquiera de estas opciones mediante un motor de orquestación de servicio.
 
@@ -48,13 +48,16 @@ Cuando crea un agente de voz, {{site.data.keyword.iva_short}} busca automáticam
     * Como alternativa, puede conectarse a otros orígenes de un diálogo de {{site.data.keyword.conversationshort}} cambiando el [**Tipo de servicio**](#other_service).
     * Si desea configurar varias ubicaciones de servicio, pulse la opción de la otra ubicación y seleccione **Habilitar ubicación** para configurar la conexión a su otra instancia de {{site.data.keyword.conversationshort}}. Consulte [Adición de varias ubicaciones de servicio de Watson](#add_location).
 
-1. En **{{site.data.keyword.speechtotextshort}}**, revise la configuración predeterminada para su instancia de servicio de {{site.data.keyword.speechtotextshort}} pulsando **Habilitar ubicación 1** o **Habilitar ubicación 2**. Si está creando un agente de voz en las regiones EE.UU. sur o EE.UU. este y no tiene una instancia de servicio de {{site.data.keyword.speechtotextshort}}, puede crear una desde el menú **Instancia de servicio**. O bien, puede conectar su agente de voz a una instancia de {{site.data.keyword.speechtotextshort}} en un espacio de cuenta diferente de {{site.data.keyword.Bluemix_notm}} cambiando el [**Tipo de servicio**](#other_service). {{site.data.keyword.iva_short}} sólo admite modelos de banda estrecha.
+1. En **{{site.data.keyword.speechtotextshort}}**, revise la configuración predeterminada para la instancia de servicio de {{site.data.keyword.speechtotextshort}} pulsando **Habilitar ubicación 1** o **Habilitar ubicación 2**. Puede personalizar la configuración con lo siguiente.
+    * Si está creando un agente de voz en las regiones EE.UU. sur o EE.UU. este y no tiene una instancia de servicio de {{site.data.keyword.speechtotextshort}}, puede crear una desde el menú **Instancia de servicio**.
+    * Seleccione el [**Tipo de servicio**](#other_service) para conectar el agente de voz a una instancia de {{site.data.keyword.speechtotextshort}} en un {{site.data.keyword.Bluemix_notm}} distinto.
+    * Si desea configurar varias ubicaciones de servicio, pulse la opción de la otra ubicación y seleccione **Habilitar ubicación** para configurar la conexión a su otra instancia de {{site.data.keyword.speechtotextshort}}. Consulte [Adición de varias ubicaciones de servicio de Watson](#add_location).
+    * **Recuerde:** {{site.data.keyword.iva_short}} solo admite modelos de banda estrecha.
 
-    Si desea configurar varias ubicaciones de servicio, pulse la opción de la otra ubicación y seleccione **Habilitar ubicación** para configurar la conexión a su otra instancia de {{site.data.keyword.speechtotextshort}}. Consulte [Adición de varias ubicaciones de servicio de Watson](#add_location).
-
-1. En **{{site.data.keyword.texttospeechshort}}**, revise la configuración predeterminada para su instancia de servicio de {{site.data.keyword.texttospeechshort}} pulsando **Habilitar ubicación 1** o **Habilitar ubicación 2**. Si está creando un agente de voz en las regiones EE.UU. sur o EE.UU. este y no tiene una instancia de servicio de {{site.data.keyword.texttospeechshort}}, puede crear una desde el menú **Instancia de servicio**. O bien, puede conectar su agente de voz a una instancia de {{site.data.keyword.texttospeechshort}} en un espacio de cuenta diferente de {{site.data.keyword.Bluemix_notm}} cambiando el [**Tipo de servicio**](#other_service).
-
-    Si desea configurar varias ubicaciones de servicio, pulse la opción de la otra ubicación y seleccione **Habilitar ubicación** para configurar la conexión a su otra instancia de {{site.data.keyword.texttospeechshort}}. Consulte [Adición de varias ubicaciones de servicio de Watson](#add_location).
+1. En **{{site.data.keyword.texttospeechshort}}**, revise la configuración predeterminada para la instancia de servicio de {{site.data.keyword.texttospeechshort}} pulsando **Habilitar ubicación 1** o **Habilitar ubicación 2**. 
+    * Si está creando un agente de voz en las regiones EE.UU. sur o EE.UU. este y no tiene una instancia de servicio de {{site.data.keyword.texttospeechshort}}, puede crear una desde el menú **Instancia de servicio**. 
+    * También puede conectar su agente de voz a una instancia de {{site.data.keyword.texttospeechshort}} en un espacio de cuenta diferente de {{site.data.keyword.Bluemix_notm}} cambiando el [**Tipo de servicio**](#other_service).
+    * Si desea configurar varias ubicaciones de servicio, pulse la opción de la otra ubicación y seleccione **Habilitar ubicación** para configurar la conexión a su otra instancia de {{site.data.keyword.texttospeechshort}}. Consulte [Adición de varias ubicaciones de servicio de Watson](#add_location).
 
 1. También puede optar por habilitar el reenvío de sucesos para recopilar información sobre las llamadas gestionadas por los agentes de voz en una {{site.data.keyword.cloudantfull}}. Consulte [Habilitación del reenvío de sucesos para agentes de voz](event-forwarding.html). Para ver más opciones de configuración, consulte [Configuración de un agente de voz](#configure_va).
 
@@ -76,7 +79,7 @@ Si desea cambiar el número máximo de conexiones simultáneas de su plan, pulse
 
   * Los planes _Lite_, _Prueba_ y _Estándar_ incluyen 2 conexiones simultáneas de forma gratuita.
   * Los planes _Premium_ están personalizados por instancia.
-  * En una cuenta _Estándar_, tiene una capacidad mínima de 10 conexiones simultáneas.
+  * En un plan _Estándar_, tiene una capacidad mínima de 10 conexiones simultáneas.
   * El uso de conexiones simultáneas se prorratea por mes. Si utiliza más de 2 conexiones simultáneas en un día, se le facturará una tarifa diaria.
   * Si tiene un plan _Estándar_ o _Premium_, puede adquirir una mayor capacidad de conexiones simultáneas.
   * Se le facturará una tarifa diaria para la capacidad de conexiones simultáneas máxima que utilice en un día. Por ejemplo, su plan admite 2 conexiones simultáneas gratuitas y ha establecido un límite máximo de 12 conexiones. Si solo utiliza 5 conexiones en un día, se le facturarán 3.
@@ -96,7 +99,7 @@ Cuando clona un agente de voz, se copian todas las configuraciones de los servic
 ## Supresión de un agente de voz
 {: #delete_va}
 
-Puede que desee suprimir un agente de voz para liberar el número de teléfono. Sólo puede tener un agente de voz para un número de teléfono. Para utilizar un número de teléfono para un agente de voz diferente, primero debe suprimir cualquier agente de voz que utilice el número de teléfono.
+Puede que desee suprimir un agente de voz para liberar el número de teléfono. Solo puede tener un agente de voz por número de teléfono. Para utilizar un número de teléfono para un agente de voz diferente, primero debe suprimir cualquier agente de voz que utilice el número de teléfono.
 
 Para suprimir un agente de voz, pulse **Suprimir agente** en la lista de opciones del agente de voz y guarde los cambios. El agente de voz se elimina de la lista de agentes de voz.
 
@@ -119,13 +122,13 @@ Al crear o clonar un agente de voz, puede pulsar **Mostrar avanzadas** para ver 
 ### Adición de varias ubicaciones de servicio de Watson
 {: #add_location}
 
-Si tiene una cuenta _Estándar_ o _Premium_, puede conectar el agente de voz a varios servicios de Watson en ubicaciones distintas para añadir redundancia al servicio. Las cuentas _Prueba_ y _Lite_ solo se pueden conectar a la ubicación donde se ha creado su instancia de servicio de {{site.data.keyword.iva_short}}. La segunda ubicación no es un segundo agente de voz. Solo es una ubicación de respaldo para la recuperación tras desastre.
+Si tiene una instancia _Estándar_ o _Premium_, puede conectar el agente de voz a varios servicios de Watson en ubicaciones distintas para añadir redundancia al servicio. Las instancias _Prueba_ y _Lite_ solo se pueden conectar a la ubicación donde se ha creado su instancia de servicio de {{site.data.keyword.iva_short}}. La segunda ubicación no es un segundo agente de voz. Solo es una ubicación de respaldo para la recuperación tras desastre.
 
 Su agente de voz utiliza las instancias de servicio de Watson en orden de distancia geográfica. Por ejemplo, puede crear un agente de voz en la región EE.UU. este y crear sus servicios {{site.data.keyword.conversationshort}} en EE.UU. sur y Sídney, Australia. El agente de voz utiliza la región EE.UU. sur de {{site.data.keyword.conversationshort}} porque es geográficamente más cercana a EE.UU. este que a Sídney. Al conectarse a servicios de Watson en varias regiones, si un servicio de Watson está fuera de línea en una ubicación, su agente de voz puede utilizar el servicio redundante.
 
 Puede añadir una ubicación de servicio de Watson a la configuración del agente de voz en cualquier momento. Para obtener información sobre cómo conectarse a varias instancias de ubicación de servicio al crear el agente de voz, consulte [Creación de un agente de voz](#creating).
 
-Para añadir una ubicación de servicio de Watson a un agente de voz existente, pulse **Editar agente** para el agente de voz que desea configurar. Elija **Ubicación 1** o **Ubicación 2** para la instancia de {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}} o {{site.data.keyword.speechtotextshort}} que desea conectar y añada la información de configuración. Puede utilizar una instancia de servicio de Watson de su espacio de trabajo o de otros espacios de trabajo. Consulte [Utilización de instancias de servicio en otros espacios de trabajo de {{site.data.keyword.Bluemix_notm}}](#other_services).
+Para añadir una ubicación de servicio de Watson a un agente de voz existente, pulse **Editar agente** para el agente de voz que desea configurar. Elija **Ubicación 1** o **Ubicación 2** para la instancia de {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}} o {{site.data.keyword.speechtotextshort}} que desea conectar y añada la información de configuración. Puede utilizar instancias de servicio de Watson de su espacio de trabajo o de otros espacios de trabajo. Consulte [Utilización de instancias de servicio en otros espacios de trabajo de {{site.data.keyword.Bluemix_notm}}](#other_services).
 
 **Recuerde**: Para añadir redundancia al servicio, debe utilizar instancias de servicio de Watson de distintas regiones para las distintas ubicaciones.
 
@@ -150,9 +153,7 @@ Puede configurar el agente de voz para utilizar instancias de servicio de {{site
 1. Especifique la información de su instancia de servicio.
 
   * **{{site.data.keyword.conversationshort}}:** En el campo **ID de espacio de trabajo**, escriba el ID del espacio de trabajo que desea utilizar con el agente de voz. Para encontrar el ID de espacio de trabajo, inicie la herramienta y, en el espacio de trabajo que desea integrar, pulse el icono Acciones (**&vellip;**) y seleccione **Ver detalles**.
-
   * **{{site.data.keyword.speechtotextshort}}:** En el campo **Modelo**, seleccione el idioma del habla y el formato del servicio. {{site.data.keyword.iva_short}} sólo admite modelos de banda estrecha.
-
   * **{{site.data.keyword.texttospeechshort}}:** En el campo **Voz**, seleccione el idioma y la voz que utiliza el servicio. Debe especificar una voz para el servicio.
 
 **Recuerde:** Para que el agente de voz funcione, debe configurar {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} y {{site.data.keyword.texttospeechshort}} para el mismo idioma. Consulte [Idiomas admitidos](about.html#supported-languages).
@@ -165,6 +166,8 @@ Como alternativa a configurar una instancia de servicio de {{site.data.keyword.c
 * **Motor de orquestación de servicio**: Conéctese a un espacio de trabajo de {{site.data.keyword.conversationshort}} o a {{site.data.keyword.virtualagentshort}} mediante un [motor de orquestación de servicio (SOE)](about.html#arch-soe). Los SOE interceptan mensajes entrantes y salientes del servicio, de modo que pueda modificarlos mediante las API de terceros.
 
   En el campo **URL**, especifique el URL completo del espacio de trabajo del SOE, por ejemplo `https://iva-soesample.myorg.net/SOE/myWorkspace`. Si el SOE requiere autenticación (recomendado), especifique el nombre de usuario y la contraseña en los campos correspondientes.
+
+  **Importante**: Para la seguridad de datos, asegúrese de utilizar un URL seguro para el espacio de trabajo de SOE, utilizando `https:` en lugar de `http:`, y solicite autenticación. Consulte [Seguridad de información y privacidad de datos](infosec.html) para obtener más información sobre las consideraciones de seguridad.
 
 * **Watson {{site.data.keyword.virtualagentshort}}**: Conéctese a un chatbot de {{site.data.keyword.virtualagentshort}} en lugar de a un espacio de trabajo de {{site.data.keyword.conversationshort}}. [{{site.data.keyword.virtualagentshort}}](../virtual-agent/getting-started.html#getting-started) se basa en el servicio {{site.data.keyword.conversationshort}} pero ofrece funciones preentrenadas, de forma que pueda empezar a trabajar sin necesidad de tener experiencia en aprendizaje automático.
 

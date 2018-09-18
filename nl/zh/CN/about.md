@@ -72,7 +72,9 @@ lastupdated: "2018-06-13"
 * 使用 API 来定制与客户的交互
 * 使用 DTMF 或生物识别技术来集成语音安全性
 
-要了解有关如何实施服务编排引擎的更多信息，请参阅 [GitHub 上的服务编排引擎样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}。建议您使用用户名和密码来确保服务编排引擎的安全。
+要了解有关如何实施服务编排引擎的更多信息，请参阅 [GitHub 上的服务编排引擎样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}。
+
+**重要信息**：为了实现数据安全，请确保对 SOE 工作空间使用安全 URL（即，使用 `https:` 而不是 `http:`），并要求认证。请参阅[信息安全和数据隐私](infosec.html)以了解更多安全性注意事项。
 
 ## 功能
 {: #features}

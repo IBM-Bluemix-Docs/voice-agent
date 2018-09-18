@@ -23,7 +23,7 @@ Watch a demonstration of how to create your first voice agent in this [{{site.da
 ## Before you begin
 {: #prereqs}
 
-Create a new account or log in to you existing account on [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/).
+Create a new account or log in to your existing account on [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/).
 
 ## Step 1: Creating a {{site.data.keyword.iva_short}} service instance on {{site.data.keyword.Bluemix_notm}}
 {: #step1}
@@ -61,7 +61,7 @@ After you create the service, make note of the voice agent endpoint on the _Gett
    1. On the sample conversation GitHub page, click the `1` line number and select **... > Copy line**. Paste the copied text into a file, and save it as a JSON file such as `voice-gateway-conversation-en.json`.
    2. Launch the {{site.data.keyword.conversationshort}} tool. On the _Workspaces_ page, click the ![Import workspace](../conversation/images/workspace_import.png) icon and import the JSON file.
 
-  Alternatively, you can [build your own dialog](https://console.bluemix.net/docs/services/conversation/dialog-build.html) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and node with a default response.
+  Alternatively, you can [build your own dialog](https://console.bluemix.net/docs/services/conversation/dialog-build.html) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and a node with a default response.
 
 ## Next steps
 {: #next}

@@ -60,7 +60,7 @@ lastupdated: "2018-06-14"
 * Watson 서비스 신임 정보, URL 및 {{site.data.keyword.conversationshort}} 작업공간 ID가 모두 유효한지 확인하십시오.
 * {{site.data.keyword.conversationshort}} 작업공간의 대화가 올바르게 작성되었는지 확인하십시오.
   * GitHub에서 사전 빌드된 작업공간에 대한 [샘플 대화 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)를 가져올 수 있습니다. {{site.data.keyword.conversationshort}} 도구에서 JSON 파일로서 샘플 대화 저장 이후 작업공간으로서 파일 가져오기에 대한 세부사항은 [*시작하기 튜토리얼*의 3단계](getting-started.html#step3)를 참조하십시오.
-  * 자체 {{site.data.keyword.conversationshort}} 대화를 작성한 경우에는 `conversation_start` 조건이 있는 노드와 기본 응답이 있는 노드가 대화에 포함되는지 확인하십시오. 자세한 지시사항은 {{site.data.keyword.conversationshort}} 문서에서 [대화 빌드](../conversation/dialog-build.html)를 참조하십시오.
+  * 고유한 {{site.data.keyword.conversationshort}} 대화를 작성한 경우에는 `conversation_start` 조건이 있는 노드와 기본 응답이 있는 노드가 대화에 포함되는지 확인하십시오. 자세한 지시사항은 {{site.data.keyword.conversationshort}} 문서에서 [대화 빌드](../conversation/dialog-build.html)를 참조하십시오.
 * 전화 통화가 음성 에이전트 _사용_ 대시보드에 나열되어 있는지 여부를 확인하십시오. 전화 통화에 대한 항목이 표시되면 음성 에이전트가 Watson 서비스에 연결된 것입니다.
 
 ### 음성 에이전트를 작성할 때 전화번호를 지정할 수 없는 이유는 무엇입니까?
