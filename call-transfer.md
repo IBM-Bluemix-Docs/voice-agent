@@ -23,7 +23,9 @@ You can set up call transfer so that if a caller requests to speak to a live age
 ## About call transfer
 {: #about-ct}
 
-By enabling call transfer, if a caller requests to speak with a live agent during conversation, the voice agent will redirect the call. You can enable call transfer by setting a termination URI in your SIP provider configuration. Then, you define the transfer target on an API action in a dialog node of your {{site.data.keyword.conversationshort}} instance. Your transfer target is a SIP URI that contains the termination URI and phone number. For more information about supported actions and customizing your voice agents, see [Programming voice agents using the API](api.html).
+By enabling call transfer, if a caller requests to speak with a live agent during conversation, the voice agent will redirect the call. You can enable call transfer by setting a termination URI in your SIP provider configuration. Then, you define the transfer target on an API action in a dialog node of your {{site.data.keyword.conversationshort}} instance. Your transfer target is a SIP URI that contains the termination URI and phone number.
+
+For more information about supported actions and customizing your voice agents, see [Programming voice agents using the API](api.html).
 
 ## Step 1: Setting up the termination URI
 {: #termination-setup}
@@ -63,7 +65,9 @@ You do not need to manually configure the termination URI in your NetFoundry acc
 
 1. Click **Save** to finish configuring your termination URI.
 
-Make note of the phone number and termination URI that you want to transfer to. Make sure that the phone number is not a personal phone number. You can use the phone number and termination URI to specify the transfer target in your {{site.data.keyword.conversationshort}} dialog.
+Make note of the phone number and termination URI that you want to transfer to. Make sure that the phone number is not a personal phone number.
+
+You can use the phone number and termination URI to specify the transfer target in your {{site.data.keyword.conversationshort}} dialog.
 
 
 ## Step 2: Configuring {{site.data.keyword.conversationshort}} for call transfer
@@ -108,6 +112,9 @@ To learn more about working in the {{site.data.keyword.conversationshort}} servi
 {: codeblock}
 
 **Remember**: The SIP URI of the transfer target includes a telephone number and the termination URI that you created. Do not use a personal telephone number in your transfer target. For example, if the telephone number is `18889990000` and your termination URI is `mysiptrunk.pstn.twilio.com`, the full SIP URI is `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. If you use Netfoundry, and have a telephone number of `18889990000`, the full SIP URI is `sip:18889990000\\@dal.watson-va.netfoundry.net`.
+
+To protect Personally Identifiable Information (PII), do not use a personal phone number when configuring your transfer target SIP URI. See [{{site.data.keyword.iva_short}} and information handling](infosec.html#configure_infosec){:new_window} for more information about PII and configurations.
+{: tip}
 
 ## Next steps
 {: #Next}

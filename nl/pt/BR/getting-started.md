@@ -23,8 +23,7 @@ Assista a uma demonstração de como criar seu primeiro agente de voz neste tuto
 ## Antes de começar
 {: #prereqs}
 
-Crie uma nova conta ou efetue login em sua conta existente no
-[{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/).
+Crie uma nova conta ou efetue login em sua conta existente no [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/).
 
 ## Etapa 1: criando uma instância de serviço do {{site.data.keyword.iva_short}} no {{site.data.keyword.Bluemix_notm}}
 {: #step1}

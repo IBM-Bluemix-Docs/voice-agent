@@ -23,7 +23,9 @@ lastupdated: "2018-06-19"
 ## 호출 전송 정보
 {: #about-ct}
 
-호출 전송을 사용으로 설정하면 호출자가 대화 중에 실시간 상담원과 통화하도록 요청하는 경우 음성 에이전트가 호출을 경로 재지정합니다. SIP 제공자 구성에서 종료 URI를 설정하여 호출 전송을 사용으로 설정할 수 있습니다. 그리고 {{site.data.keyword.conversationshort}} 인스턴스의 대화 노드에서 API 조치의 전송 대상을 정의하십시오. 전송 대상은 종료 URI 및 전화번호가 포함된 SIP URI입니다. 음성 에이전트의 사용자 정의 및 지원되는 조치에 대한 자세한 정보는 [API를 사용하여 음성 에이전트 프로그래밍](api.html)을 참조하십시오.
+호출 전송을 사용으로 설정하면 호출자가 대화 중에 실시간 상담원과 통화하도록 요청하는 경우 음성 에이전트가 호출을 경로 재지정합니다. SIP 제공자 구성에서 종료 URI를 설정하여 호출 전송을 사용으로 설정할 수 있습니다. 그리고 {{site.data.keyword.conversationshort}} 인스턴스의 대화 노드에서 API 조치의 전송 대상을 정의하십시오. 전송 대상은 종료 URI 및 전화번호가 포함된 SIP URI입니다.
+
+음성 에이전트의 사용자 정의 및 지원되는 조치에 대한 자세한 정보는 [API를 사용하여 음성 에이전트 프로그래밍](api.html)을 참조하십시오.
 
 ## 1단계: 종료 URI 설정
 {: #termination-setup}
@@ -63,7 +65,9 @@ dal.watson-va.netfoundry.net
 
 1. **저장**을 클릭하여 종료 URI 구성을 완료하십시오.
 
-전송할 대상 전화번호와 종료 URI를 기록하십시오. 전화번호가 개인 전화번호가 아닌지 확인하십시오. 전화번호와 종료 URI를 사용하여 전송 대상을 {{site.data.keyword.conversationshort}} 대화상자에 지정할 수 있습니다.
+전송할 대상 전화번호와 종료 URI를 기록하십시오. 전화번호가 개인 전화번호가 아닌지 확인하십시오.
+
+전화번호와 종료 URI를 사용하여 전송 대상을 {{site.data.keyword.conversationshort}} 대화상자에 지정할 수 있습니다.
 
 
 ## 2단계: 호출 전송을 위한 {{site.data.keyword.conversationshort}} 구성
@@ -108,6 +112,9 @@ dal.watson-va.netfoundry.net
 {: codeblock}
 
 **중요**: 전송 대상의 SIP URI에는 전화번호와 사용자가 작성한 종료 URI가 포함됩니다. 전송 대상에 개인 전화번호를 사용하지 마십시오. 예를 들어, 전화번호가 `18889990000`이고 종료 URI가 `mysiptrunk.pstn.twilio.com`인 경우 전체 SIP URI는 `sip:18889990000\\@mysiptrunk.pstn.twilio.com`입니다. Netfoundry를 사용하며 전화번호가 `18889990000`인 경우 전체 SIP URI는 `sip:18889990000\\@dal.watson-va.netfoundry.net`입니다.
+
+PII(Personally Identifiable Information)를 보호하려면 전송 대상 SIP URI를 구성할 때 개인 전화번호를 사용하지 마십시오. PII 및 구성에 대한 자세한 정보는 [{{site.data.keyword.iva_short}} 및 정보 처리](infosec.html#configure_infosec){:new_window}를 참조하십시오.
+{: tip}
 
 ## 다음 단계
 {: #Next}

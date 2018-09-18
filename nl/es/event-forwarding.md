@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-24"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,7 +25,7 @@ Analizar los datos de estos sucesos le permite ajustar diálogos, refinar intenc
 
 Cuando cree o edite agentes de voz, también puede optar por habilitar el reenvío de sucesos. Para obtener más detalles sobre la creación y la edición de agentes de voz, consulte [Gestión de agentes de voz](managing.html). Para habilitar el reenvío de sucesos, debe indicar la información de cuenta de {{site.data.keyword.cloudant_short_notm}}, incluido el nombre de cuenta y la contraseña.
 
-**Importante:** Los sucesos de turno, transcripción y CDR incluyen información de los usuarios que puede contener PHI (información sanitaria personal), PII (información de identificación personal) o datos PCI DSS (PCI Data Security Standard). Para evitar la exposición de información personal, debe asegurarse de que la instancia de {{site.data.keyword.cloudant_short_notm}} protege correctamente la información confidencial que los usuarios comparten en o durante la conversación.
+**Importante:** Los sucesos de turno, transcripción y CDR incluyen información de los usuarios que puede contener PHI (información sanitaria personal), PII (información de identificación personal) o datos PCI DSS (PCI Data Security Standard). Para evitar la exposición de información personal, debe asegurarse de que la instancia de {{site.data.keyword.cloudant_short_notm}} protege correctamente la información confidencial que los usuarios comparten en o durante la conversación. Consulte [Seguridad de información y privacidad de datos: Reenvío de sucesos](infosec.html#event_forwarding) y [{{site.data.keyword.cloudant_short_notm}}: Seguridad](../Cloudant/offerings/security.html#security).
 
 
 ## Habilitación del reenvío de sucesos
@@ -48,3 +48,5 @@ Puede habilitar el reenvío de sucesos cuando crea o edita los agentes de voz en
 
 ## Enlaces relacionados
 * [IBM Voice Gateway: Informes de sucesos](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}
+* [Seguridad de información y privacidad de datos](infosec.html)
+* [{{site.data.keyword.cloudant_short_notm}}: Seguridad](../Cloudant/offerings/security.html#security)

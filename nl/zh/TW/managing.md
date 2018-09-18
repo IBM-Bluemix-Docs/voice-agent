@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-29"
 
 
 ---
@@ -40,7 +40,7 @@ lastupdated: "2018-08-16"
 
 1. 配置與 Watson 服務實例的連線。您可以配置**位置 1** 及**位置 2** 的連線，以連接至多個 Watson 服務實例。具有與多個服務實例的連線可讓語音代理程式在運作中斷時切換至替代服務實例。請參閱[新增多個 Watson 服務位置](#add_location)。
 
-**重要事項**：_試用_ 及_精簡_ 帳戶只能直接連接至您建立 {{site.data.keyword.iva_short}} 服務實例的位置。您的第二個位置不是第二個語音代理程式。它只會充當災難回復的備份。
+    **重要事項**：_試用_ 及_精簡_ 實例只能直接連接至您建立 {{site.data.keyword.iva_short}} 服務實例的位置。您的第二個位置不是第二個語音代理程式。它只會充當災難回復的備份。
 
 1. 在 **{{site.data.keyword.conversationshort}}** 下，按一下**啟用位置 1** 或**啟用位置 2** 以配置與 {{site.data.keyword.conversationshort}} 服務實例的連線。在您或其他人擁有的 {{site.data.keyword.Bluemix_notm}} 帳戶中，您可以使用 {{site.data.keyword.conversationshort}} 實例或 {{site.data.keyword.virtualagentfull}} 實例。您也可以透過服務編排引擎，連接至其中任何選項。
 
@@ -48,13 +48,16 @@ lastupdated: "2018-08-16"
     * 或者，您也可以藉由變更[**服務類型**](#other_service)，以連接至 {{site.data.keyword.conversationshort}} 對話的其他來源。
     * 如果您要配置多個服務位置，請按一下另一個位置選項，然後選取**啟用位置**以配置與其他 {{site.data.keyword.conversationshort}} 實例的連線。請參閱[新增多個 Watson 服務位置](#add_location)。
 
-1. 在 **{{site.data.keyword.speechtotextshort}}** 下，按一下**啟用位置 1** 或**啟用位置 2** 以檢閱 {{site.data.keyword.speechtotextshort}} 服務實例的預設配置。如果您在「美國南部」或「美國東部」地區中建立語音代理程式，但沒有 {{site.data.keyword.speechtotextshort}} 服務實例，則可以從**服務實例**功能表中建立服務實例。或者，您可以藉由變更[**服務類型**](#other_service)，來將語音代理程式連接至不同 {{site.data.keyword.Bluemix_notm}} 帳戶空間中的 {{site.data.keyword.speechtotextshort}} 實例。{{site.data.keyword.iva_short}} 僅支援窄頻模型。
+1. 在 **{{site.data.keyword.speechtotextshort}}** 下，按一下**啟用位置 1** 或**啟用位置 2** 以檢閱 {{site.data.keyword.speechtotextshort}} 服務實例的預設配置。您可以使用下列各項來自訂配置。
+    * 如果您在「美國南部」或「美國東部」地區中建立語音代理程式，但沒有 {{site.data.keyword.speechtotextshort}} 服務實例，則可以從**服務實例**功能表建立服務實例。
+    * 選擇[**服務類型**](#other_service)，將語音代理程式連接至不同 {{site.data.keyword.Bluemix_notm}} 中的 {{site.data.keyword.speechtotextshort}} 實例。
+    * 如果您要配置多個服務位置，請按一下另一個位置選項，然後選取**啟用位置**以配置與其他 {{site.data.keyword.speechtotextshort}} 實例的連線。請參閱[新增多個 Watson 服務位置](#add_location)。
+    * **請記住**：{{site.data.keyword.iva_short}} 僅支援窄頻模型。
 
-    如果您要配置多個服務位置，請按一下另一個位置選項，然後選取**啟用位置**以配置與其他 {{site.data.keyword.speechtotextshort}} 實例的連線。請參閱[新增多個 Watson 服務位置](#add_location)。
-
-1. 在 **{{site.data.keyword.texttospeechshort}}** 下，按一下**啟用位置 1** 或**啟用位置 2** 以檢閱 {{site.data.keyword.texttospeechshort}} 服務實例的預設配置。如果您在「美國南部」或「美國東部」地區中建立語音代理程式，但沒有 {{site.data.keyword.texttospeechshort}} 服務實例，則可以從**服務實例**功能表中建立服務實例。或者，您可以藉由變更[**服務類型**](#other_service)，來將語音代理程式連接至不同 {{site.data.keyword.Bluemix_notm}} 帳戶空間中的 {{site.data.keyword.texttospeechshort}} 實例。
-
-    如果您要配置多個服務位置，請按一下另一個位置選項，然後選取**啟用位置**以配置與其他 {{site.data.keyword.texttospeechshort}} 實例的連線。請參閱[新增多個 Watson 服務位置](#add_location)。
+1. 在 **{{site.data.keyword.texttospeechshort}}** 下，按一下**啟用位置 1** 或**啟用位置 2** 以檢閱 {{site.data.keyword.texttospeechshort}} 服務實例的預設配置。 
+    * 如果您在「美國南部」或「美國東部」地區中建立語音代理程式，但沒有 {{site.data.keyword.texttospeechshort}} 服務實例，則可以從**服務實例**功能表建立服務實例。 
+    * 您也可以藉由變更[**服務類型**](#other_service)，來將語音代理程式連接至不同 {{site.data.keyword.Bluemix_notm}} 帳戶空間中的 {{site.data.keyword.texttospeechshort}} 實例。
+    * 如果您要配置多個服務位置，請按一下另一個位置選項，然後選取**啟用位置**以配置與其他 {{site.data.keyword.texttospeechshort}} 實例的連線。請參閱[新增多個 Watson 服務位置](#add_location)。
 
 1. 您也可以選擇啟用事件轉遞，收集 {{site.data.keyword.cloudantfull}} 中語音代理程式所處理通話的相關資訊。請參閱[啟用語音代理程式的事件轉遞](event-forwarding.html)。如需其他配置選項，請參閱[配置語音代理程式](#configure_va)。
 
@@ -76,7 +79,7 @@ lastupdated: "2018-08-16"
 
   * _精簡_、_試用_ 及_標準_ 方案包括 2 個免費的並行連線。
   * _超值_ 方案是依實例來自訂。
-  * 在_標準_ 帳戶中，您的容量下限至少有 10 個並行連線。
+  * 在_標準_ 方案中，您的容量下限至少有 10 個並行連線。
   * 並行連線使用是按月依比例分配。如果您使用超過 2 個的並行連線，則會對您按日計費。
   * 如果您有_標準_ 或_超值_ 方案，則可以購買更大的並行連線容量。
   * 您一天使用的並行連線若達到並行連線容量上限，則會對您按日計費。例如，因為您的方案支援 2 個免費的並行連線，所以您最多可以設定 12 個連線。如果您一天只使用 5 個，只會對 3 個計費。
@@ -119,7 +122,7 @@ lastupdated: "2018-08-16"
 ### 新增多個 Watson 服務位置
 {: #add_location}
 
-如果您有_標準_ 或_超值_ 帳戶，則以將語音代理程式連接至不同位置中的多個 Watson 服務，以進行服務備援。_試用_ 及_精簡_ 帳戶只能直接連接至您建立 {{site.data.keyword.iva_short}} 服務實例的位置。您的第二個位置不是第二個語音代理程式。它只會充當災難回復的備份。
+如果您有_標準_ 或_超值_ 實例，則以將語音代理程式連接至不同位置中的多個 Watson 服務，以進行服務備援。_試用_ 及_精簡_ 實例只能直接連接至您建立 {{site.data.keyword.iva_short}} 服務實例的位置。您的第二個位置不是第二個語音代理程式。它只會充當災難回復的備份。
 
 您的語音代理程式會依地理距離的順序來使用 Watson 服務實例。例如，您可以在「美國東部」地區建立語音代理程式，以及在「美國南部」及「澳洲雪梨」建立您的 {{site.data.keyword.conversationshort}} 服務。您的語音代理程式會使用 {{site.data.keyword.conversationshort}}「美國南部」地區，因為「美國南部」在地理位置上較接近「美國東部」，而不是雪梨。藉由連接至多個地區中的 Watson 服務，如果 Watson 服務在某個位置離線，則語音代理程式可以使用備用服務。
 
@@ -149,14 +152,12 @@ lastupdated: "2018-08-16"
 1. 輸入服務實例資訊。
 
   * **{{site.data.keyword.conversationshort}}：**在**工作區 ID** 欄位中，輸入您要與語音代理程式搭配使用的工作區 ID。若要尋找工作區 ID，請啟動工具，並在您要整合的工作區上，按一下「動作」圖示 (**&vellip;**)，然後選取**檢視詳細資料**。
-
   * **{{site.data.keyword.speechtotextshort}}：**在**模型**欄位中，選取服務的語音語言及格式。{{site.data.keyword.iva_short}} 僅支援窄頻模型。
-
   * **{{site.data.keyword.texttospeechshort}}：**在**語音**欄位中，選取服務所使用的語言及語音。您必須指定服務的語音。
 
 **請記住：**為了讓您的語音代理程式運作，您必須配置相同語言的 {{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}} 及 {{site.data.keyword.texttospeechshort}}。請參閱[支援的語言](about.html#supported-languages)。
 
-### 配置語音代理程式的 {{site.data.keyword.conversationshort}}
+### 為語音代理程式配置 {{site.data.keyword.conversationshort}}
 {: #conversation_va}
 
 作為配置 {{site.data.keyword.conversationshort}} 服務實例的替代方案，您可以連接至服務編排引擎 (SOE) 或 Watson {{site.data.keyword.virtualagentshort}}。
@@ -164,6 +165,8 @@ lastupdated: "2018-08-16"
 * **服務編排引擎**：透過[服務編排引擎 (SOE)](about.html#arch-soe) 連接至 {{site.data.keyword.conversationshort}} 工作區或 {{site.data.keyword.virtualagentshort}}。SOE 會將訊息截取至服務並從中截取訊息，讓您可以使用協力廠商 API 進行修改。
 
   在 **URL** 欄位中，輸入 SOE 工作區的完整 URL（例如 `https://iva-soesample.myorg.net/SOE/myWorkspace`）。如果您的 SOE 需要鑑別（建議），則請在個別欄位中輸入使用者名稱及密碼。
+
+  **重要事項**：為了資料安全，請確定針對 SOE 工作區使用安全的 URL，方法是使用 `https:` 而不要使用 `http:`，並且要求鑑別。若要進一步瞭解安全考量，請參閱[資訊安全及資料隱私](infosec.html)。
 
 * **Watson {{site.data.keyword.virtualagentshort}}**：連接至 {{site.data.keyword.virtualagentshort}} 聊天機器人，而不是 {{site.data.keyword.conversationshort}} 工作區。[{{site.data.keyword.virtualagentshort}}](../virtual-agent/getting-started.html#getting-started) 是以 {{site.data.keyword.conversationshort}} 服務為建置基礎，但提供預先訓練的功能，以讓您開始使用零機器學習體驗。
 

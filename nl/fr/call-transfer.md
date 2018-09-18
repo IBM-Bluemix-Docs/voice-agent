@@ -23,7 +23,9 @@ Vous pouvez configurer le transfert d'appel de sorte que si un appelant demande 
 ## A propos du transfert d'appel
 {: #about-ct}
 
-Lorsque le transfert d'appel est configuré, si un appelant demande à parler à un agent humain durant une conversation, l'appel est transféré automatiquement par l'agent vocal. Vous pouvez activer le transfert d'appel en définissant un URI d'arrêt dans la configuration de votre fournisseur SIP. Ensuite, définissez la cible du transfert sur une action API dans un noeud de dialogue de votre instance {{site.data.keyword.conversationshort}}. Votre cible de transfert est un URI SIP qui contient l'URI d'arrêt et le numéro de téléphone. Pour plus d'informations sur les actions prises en charge et la personnalisation de vos agents vocaux, voir [Programmation des agents vocaux à l'aide de l'API](api.html).
+Lorsque le transfert d'appel est configuré, si un appelant demande à parler à un agent humain durant une conversation, l'appel est transféré automatiquement par l'agent vocal. Vous pouvez activer le transfert d'appel en définissant un URI d'arrêt dans la configuration de votre fournisseur SIP. Ensuite, définissez la cible du transfert sur une action API dans un noeud de dialogue de votre instance {{site.data.keyword.conversationshort}}. Votre cible de transfert est un URI SIP qui contient l'URI d'arrêt et le numéro de téléphone.
+
+Pour plus d'informations sur les actions prises en charge et la personnalisation de vos agents vocaux, voir [Programmation des agents vocaux à l'aide de l'API](api.html).
 
 ## Etape 1 : Configuration de l'URI d'arrêt
 {: #termination-setup}
@@ -63,7 +65,9 @@ Vous n'avez pas besoin de configurer manuellement l'URI d'arrêt dans votre comp
 
 1. Cliquez sur **Save** pour finaliser la configuration de votre URI d'arrêt.
 
-Notez le numéro de téléphone et l'URI d'arrêt vers lesquels le transfert doit s'effectuer. Assurez-vous que le numéro de téléphone n'est pas un numéro personnel. Vous pouvez utiliser le numéro de téléphone et l'URI d'arrêt pour indiquer la cible du transfert dans votre dialogue {{site.data.keyword.conversationshort}}.
+Notez le numéro de téléphone et l'URI d'arrêt vers lesquels le transfert doit s'effectuer. Assurez-vous que le numéro de téléphone n'est pas un numéro personnel.
+
+Vous pouvez utiliser le numéro de téléphone et l'URI d'arrêt pour indiquer la cible du transfert dans votre dialogue {{site.data.keyword.conversationshort}}.
 
 
 ## Etape 2 : Configuration de {{site.data.keyword.conversationshort}} pour le transfert d'appel
@@ -107,7 +111,10 @@ Pour en apprendre davantage sur l'utilisation du service {{site.data.keyword.con
 ```
 {: codeblock}
 
-**N'oubliez pas** : L'URI SIP du cible de transfert inclut un numéro de téléphone et l'URI d'arrêt que vous avez créé. N'utilisez pas de numéro de téléphone personnel dans votre cible de transfert. Par exemple, si le numéro de téléphone est `18889990000` et que votre URI d'arrêt est `mysiptrunk.pstn.twilio.com`, l'URI SIP complet est `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. Si vous utilisez NetFoundry et que votre numéro de téléphone est `18889990000`, l'URI SIP complet est `sip:18889990000\\@dal.watson-va.netfoundry.net`.
+**Rappel** : l'URI SIP de la cible de transfert inclut un numéro de téléphone et l'URI d'arrêt que vous avez créé. N'utilisez pas de numéro de téléphone personnel dans votre cible de transfert. Par exemple, si le numéro de téléphone est `18889990000` et que votre URI d'arrêt est `mysiptrunk.pstn.twilio.com`, l'URI SIP complet est `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. Si vous utilisez NetFoundry et que votre numéro de téléphone est `18889990000`, l'URI SIP complet est `sip:18889990000\\@dal.watson-va.netfoundry.net`.
+
+Afin de protéger les renseignements médicaux protégés (PHI), n'utilisez pas de numéro de téléphone personnel lorsque vous configurez l'URI SIP de votre cible de transfert. Voir [{{site.data.keyword.iva_short}} et traitement des informations](infosec.html#configure_infosec){:new_window} pour plus d'informations sur les renseignements médicaux protégés (PHI) et les configurations.
+{: tip}
 
 ## Etapes suivantes
 {: #Next}

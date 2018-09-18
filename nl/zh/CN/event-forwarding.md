@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-24"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,7 +25,7 @@ lastupdated: "2018-08-16"
 
 此外，还可以在创建或编辑语音代理程序时选择启用事件转发。有关创建和编辑语音代理程序的更多详细信息，请参阅[管理语音代理程序](managing.html)。您需要提供 {{site.data.keyword.cloudant_short_notm}} 帐户信息（包括帐户名称和密码）才能启用事件转发。
 
-**重要信息**：CDR、转录和轮次事件包含来自用户的信息，其中可能含有受保护的健康信息 (PHI)、个人可标识信息 (PII) 或 PCI 数据安全标准 (PCI DSS) 数据。为了防止泄露个人信息，您必须确保 {{site.data.keyword.cloudant_short_notm}} 实例能够妥善保护用户在对话中或对话期间共享的机密信息。
+**重要信息**：CDR、转录和轮次事件包含来自用户的信息，其中可能含有受保护的健康信息 (PHI)、个人可标识信息 (PII) 或 PCI 数据安全标准 (PCI DSS) 数据。为了防止泄露个人信息，您必须确保 {{site.data.keyword.cloudant_short_notm}} 实例能够妥善保护用户在对话中或对话期间共享的机密信息。请参阅[信息安全和数据隐私：事件转发](infosec.html#event_forwarding)以及 [{{site.data.keyword.cloudant_short_notm}}：安全性](../Cloudant/offerings/security.html#security)。
 
 
 ## 启用事件转发
@@ -48,3 +48,5 @@ lastupdated: "2018-08-16"
 
 ## 相关链接
 * [IBM Voice Gateway：报告事件](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}
+* [信息安全和数据隐私](infosec.html)
+* [{{site.data.keyword.cloudant_short_notm}}：安全性](../Cloudant/offerings/security.html#security)

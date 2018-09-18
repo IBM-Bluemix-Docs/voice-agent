@@ -75,7 +75,9 @@ para o serviço {{site.data.keyword.conversationshort}}
 * Para customizar interações com clientes usando APIs
 * Para integrar a segurança de voz usando DTMF ou biometria
 
-Para saber mais sobre como implementar um mecanismo de orquestração de serviço, consulte as [amostras do mecanismo de orquestração de serviço em GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}. É recomendado que você proteja seu mecanismo de orquestração de serviço com um nome de usuário e senha.
+Para saber mais sobre como implementar um mecanismo de orquestração de serviço, consulte as [amostras do mecanismo de orquestração de serviço em GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}.
+
+**Importante**: para segurança de dados, assegure-se de usar uma URL segura para sua área de trabalho SOE usando `https:` em vez de `http:` e de requerer autenticação. Consulte [Segurança de informações e privacidade de dados](infosec.html) para saber mais sobre considerações de segurança.
 
 ## Recursos
 {: #features}

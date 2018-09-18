@@ -31,9 +31,9 @@ lastupdated: "2018-08-13"
 ## 명령행에서 서비스 작성
 {: #command_create}
 
-1. [{{site.data.keyword.Bluemix_notm}} CLI를 설치](../../cli/index.html#overview)하십시오. 
+1. [{{site.data.keyword.Bluemix_notm}} CLI를 설치](../../cli/index.html#overview)하십시오.
 
-2. _평가판_ 플랜으로 음성 에이전트 서비스 인스턴스를 작성하는 [`ibmcloud` 명령](../../cli/idt/commands.html#idt-cli)을 실행하십시오. 
+2. _평가판_ 플랜으로 음성 에이전트 서비스 인스턴스를 작성하는 [`ibmcloud` 명령](../../cli/idt/commands.html#idt-cli)을 실행하십시오.
 
    ```
    ibmcloud service create VoiceAgent _Trial_ "My Voice Agent Service"

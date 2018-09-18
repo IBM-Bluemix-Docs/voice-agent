@@ -23,7 +23,7 @@ Eine Demonstration, wie Sie Ihren ersten Sprachagenten erstellen können, sehen 
 ## Vorbereitende Schritte
 {: #prereqs}
 
-Erstellen Sie ein neues Konto oder melden Sie sich beim vorhandenen Konto in [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/) an.
+Erstellen Sie ein neues Konto oder melden Sie sich mit Ihrem vorhandenen Konto bei [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/) an.
 
 ## Schritt 1: {{site.data.keyword.iva_short}}-Serviceinstanz in {{site.data.keyword.Bluemix_notm}} erstellen
 {: #step1}

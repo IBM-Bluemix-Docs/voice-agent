@@ -23,7 +23,7 @@ lastupdated: "2018-06-14"
 ## 始めに
 {: #prereqs}
 
-[{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/) で、新規アカウントを作成するか、既存のアカウントにログインします。
+[{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/) で、新しいアカウントを作成するか、既存のアカウントにログインします。
 
 ## ステップ 1: {{site.data.keyword.Bluemix_notm}} での {{site.data.keyword.iva_short}} サービス・インスタンスの作成
 {: #step1}

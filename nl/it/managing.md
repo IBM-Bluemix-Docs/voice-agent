@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-29"
 
 
 ---
@@ -40,7 +40,7 @@ Quando crei un agent vocale, {{site.data.keyword.iva_short}} automaticamente ric
 
 1. Configura le connessioni alle tue istanze del servizio Watson. Puoi collegarti a più istanze del servizio Watson configurando le connessioni per **Location 1** e **Location 2**. Disporre di connessioni a più istanze del servizio consente al tuo agent vocale di passare a un'istanza del servizio alternativa se si verifica un'interruzione. Consulta [Aggiunta di più ubicazioni del servizio Watson](#add_location).
 
-**Importante**: gli account _Trial_ e _Lite_ possono collegarsi solo all'ubicazione in cui è stata creata la tua istanza del servizio {{site.data.keyword.iva_short}}. La tua seconda ubicazione non è un secondo agent vocale. Agisce solo da backup per il ripristino di emergenza.
+    **Importante**: le istanze _Trial_ e _Lite_ possono collegarsi solo all'ubicazione in cui è stata creata la tua istanza del servizio {{site.data.keyword.iva_short}}. La tua seconda ubicazione non è un secondo agent vocale. Agisce solo da backup per il ripristino di emergenza.
 
 1. In **{{site.data.keyword.conversationshort}}**, configura la connessione alla tua istanza del servizio {{site.data.keyword.conversationshort}} facendo clic su **Enable location 1** o **Enable location 2**. Puoi utilizzare le istanze {{site.data.keyword.conversationshort}} o {{site.data.keyword.virtualagentfull}} negli account {{site.data.keyword.Bluemix_notm}} che gestisci tu o qualcun altro. Puoi anche collegare una qualsiasi di queste opzioni tramite un motore di orchestrazione del servizio.
 
@@ -48,13 +48,16 @@ Quando crei un agent vocale, {{site.data.keyword.iva_short}} automaticamente ric
     * In alternativa, puoi collegare altre risorse di un dialogo {{site.data.keyword.conversationshort}} modificando il [**Service type**](#other_service).
     * Se vuoi configurare più ubicazioni del servizio, fai clic sull'altra opzione di ubicazione e seleziona **Enable location** per configurare la connessione alla tua altra istanza {{site.data.keyword.conversationshort}}. Consulta [Aggiunta di più ubicazioni del servizio Watson](#add_location).
 
-1. In **{{site.data.keyword.speechtotextshort}}**, controlla la configurazione predefinita della tua istanza del servizio {{site.data.keyword.speechtotextshort}} facendo clic su **Enable location 1** o su **Enable location 2**. Se stai creando un agent vocale nella regione Stati Uniti Sud o Stati Uniti Est e non hai un'istanza del servizio {{site.data.keyword.speechtotextshort}}, puoi crearne una dal menu **Service instance**. Oppure, puoi collegare il tuo agent vocale a un'istanza {{site.data.keyword.speechtotextshort}} in uno spazio dell'account {{site.data.keyword.Bluemix_notm}} differente modificando il [**Service type**](#other_service). {{site.data.keyword.iva_short}} supporta solo i modelli a banda stretta.
+1. In **{{site.data.keyword.speechtotextshort}}**, controlla la configurazione predefinita della tua istanza del servizio {{site.data.keyword.speechtotextshort}} facendo clic su **Enable location 1** o **Enable location 2**. Puoi personalizzare la tua configurazione nel seguente modo. 
+    * Se stai creando un agent vocale nella regione Stati Uniti Sud o Stati Uniti Est e non hai un'istanza del servizio {{site.data.keyword.speechtotextshort}}, puoi crearne una dal menu **Service instance**.
+    * Scegli il [**Service type**](#other_service) per collegare il tuo agent vocale a un'istanza {{site.data.keyword.speechtotextshort}} in un {{site.data.keyword.Bluemix_notm}} diverso.
+    * Se vuoi configurare più ubicazioni del servizio, fai clic sull'altra opzione di ubicazione e seleziona **Enable location** per configurare la connessione alla tua altra istanza {{site.data.keyword.speechtotextshort}}. Consulta [Aggiunta di più ubicazioni del servizio Watson](#add_location).
+    * **Ricorda:** {{site.data.keyword.iva_short}} supporta solo i modelli a banda stretta.
 
-    Se vuoi configurare più ubicazioni del servizio, fai clic sull'altra opzione di ubicazione e seleziona **Enable location** per configurare la connessione alla tua altra istanza {{site.data.keyword.speechtotextshort}}. Consulta [Aggiunta di più ubicazioni del servizio Watson](#add_location).
-
-1. In **{{site.data.keyword.texttospeechshort}}**, controlla la configurazione predefinita della tua istanza del servizio {{site.data.keyword.texttospeechshort}} facendo clic su **Enable location 1** o su **Enable location 2**. Se stai creando un agent vocale nella regione Stati Uniti Sud o Stati Uniti Est e non hai un'istanza del servizio {{site.data.keyword.texttospeechshort}}, puoi crearne una dal menu **Service instance**. Oppure, puoi collegare il tuo agent vocale a un'istanza {{site.data.keyword.texttospeechshort}} in uno spazio dell'account {{site.data.keyword.Bluemix_notm}} differente modificando il [**Service type**](#other_service).
-
-    Se vuoi configurare più ubicazioni del servizio, fai clic sull'altra opzione di ubicazione e seleziona **Enable location** per configurare la connessione alla tua altra istanza {{site.data.keyword.texttospeechshort}}. Consulta [Aggiunta di più ubicazioni del servizio Watson](#add_location).
+1. In **{{site.data.keyword.texttospeechshort}}**, controlla la configurazione predefinita della tua istanza del servizio {{site.data.keyword.texttospeechshort}} facendo clic su **Enable location 1** o **Enable location 2**.   
+    * Se stai creando un agent vocale nella regione Stati Uniti Sud o Stati Uniti Est e non hai un'istanza del servizio {{site.data.keyword.texttospeechshort}}, puoi crearne una dal menu **Service instance**. 
+    * Puoi inoltre collegare il tuo agent vocale a un'istanza {{site.data.keyword.texttospeechshort}} in uno spazio dell'account {{site.data.keyword.Bluemix_notm}} differente modificando il [**Service type**](#other_service).
+    * Se vuoi configurare più ubicazioni del servizio, fai clic sull'altra opzione di ubicazione e seleziona **Enable location** per configurare la connessione alla tua altra istanza {{site.data.keyword.texttospeechshort}}. Consulta [Aggiunta di più ubicazioni del servizio Watson](#add_location).
 
 1. Puoi inoltre scegliere di abilitare l'inoltro dell'evento per raccogliere le informazioni sulle chiamate gestite dai tuoi agent vocali in {{site.data.keyword.cloudantfull}}. Vedi [Abilitazione dell'inoltro dell'evento per gli agent vocali](event-forwarding.html). Per ulteriori opzioni di configurazione, consulta [Configurazione di un agent vocale](#configure_va).
 
@@ -76,7 +79,7 @@ Se vuoi modificare il numero massimo di connessioni simultanee nel tuo piano, fa
 
   * I piani _Lite_, _Trial_ e _Standard_ includono 2 connessioni simultanee gratuitamente.
   * I piani _Premium_ sono personalizzati per istanza.
-  * In un account _Standard_ hai una capacità minima di 10 connessioni simultanee.
+  * In un piano _Standard_ hai una capacità minima di 10 connessioni simultanee.
   * L'utilizzo della connessione simultanea viene addebitato mensilmente. Se utilizzi più di 2 connessioni simultanee al giorno, sei addebitato con una tariffa giornaliera.
   * Se hai un piano _Standard_ o _Premium_, puoi acquistare una capacità di connessione simultanea maggiore.
   * Sei addebitato con una tariffa giornaliera per la capacità di connessione simultanea massima che utilizzi in un giorno. Ad esempio, poiché il tuo piano supporta 2 connessioni simultanee gratuite e imposti un limite massimo di 12 connessioni. Se ne utilizzi solo 5 in un giorno, vieni addebitato per 3.
@@ -119,13 +122,13 @@ Quando crei o cloni un agent vocale, puoi far clic su **Show advanced** per visu
 ### Aggiunta di più ubicazioni del servizio Watson
 {: #add_location}
 
-Se hai un account _Standard_ o _Premium_, puoi collegare il tuo agent vocale a più servizi Watson in ubicazioni diverse per la ridondanza del servizio. Gli account _Trial_ e _Lite_ possono collegarsi solo all'ubicazione in cui è stata creata la tua istanza del servizio {{site.data.keyword.iva_short}}. La tua seconda ubicazione non è un secondo agent vocale. Agisce solo da backup per il ripristino di emergenza.
+Se hai un'istanza _Standard_ o _Premium_, puoi collegare il tuo agent vocale a più servizi Watson in ubicazioni diverse per la ridondanza del servizio. Le istanze _Trial_ e _Lite_ possono collegarsi solo all'ubicazione in cui è stata creata la tua istanza del servizio {{site.data.keyword.iva_short}}. La tua seconda ubicazione non è un secondo agent vocale. Agisce solo da backup per il ripristino di emergenza.
 
 Il tuo agent vocale utilizza le istanze del servizio Watson in ordine di distanza geografica. Ad esempio, puoi creare un agent vocale nella regione Stati Uniti Est e i tuoi servizi {{site.data.keyword.conversationshort}} in Stati Uniti Sud e Sydney, Australia. Il tuo agent vocale utilizza la regione Stati Uniti Sud {{site.data.keyword.conversationshort}} perché è geograficamente più vicina a Stati Uniti Est rispetto a Sydney. Collegando i servizi Watson in più regioni, se uno di essi è offline in un'ubicazione, il tuo agent vocale può utilizzare il servizio di ridondanza.
 
 Puoi aggiungere un'ubicazione del servizio Watson alla tua configurazione dell'agent vocale in qualsiasi momento. Per informazioni sul collegamento a più istanze di ubicazione del servizio quando crei il tuo agent vocale, consulta [Creazione di un agent vocale](#creating).
 
-Per aggiungere un'ubicazione del servizio Watson a un agent vocale esistente, fai clic su **Edit agent** per l'agent vocale che vuoi modificare. Scegli **Location 1** o **Location 2** per l'istanza {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}} o {{site.data.keyword.speechtotextshort}} che vuoi collegare e aggiungi le tue informazioni di configurazione. Puoi utilizzare l'istanza del servizio Watson nel tuo spazio di lavoro o in altri spazi di lavoro. Consulta [Utilizzo delle istanze del servizio in altri spazi di lavoro {{site.data.keyword.Bluemix_notm}}](#other_services).
+Per aggiungere un'ubicazione del servizio Watson a un agent vocale esistente, fai clic su **Edit agent** per l'agent vocale che vuoi modificare. Scegli **Location 1** o **Location 2** per l'istanza {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}} o {{site.data.keyword.speechtotextshort}} che vuoi collegare e aggiungi le tue informazioni di configurazione. Puoi utilizzare le istanze del servizio Watson nel tuo spazio di lavoro o in altri spazi di lavoro. Consulta [Utilizzo delle istanze del servizio in altri spazi di lavoro {{site.data.keyword.Bluemix_notm}}](#other_services).
 
 **Ricordati**: per la ridondanza del servizio, devi utilizzare le istanze del servizio Watson in regioni del servizio differenti per ubicazioni diverse.
 
@@ -150,9 +153,7 @@ Puoi configurare il tuo agent vocale ad utilizzare le istanze del servizio {{sit
 1. Immetti le tue informazioni sull'istanza del servizio
 
   * **{{site.data.keyword.conversationshort}}:** nel campo **Workspace ID**, immetti l'ID dello spazio di lavoro che vuoi utilizzare con il tuo agent vocale. Per trovare l'ID dello spazio di lavoro, avvia lo strumento e nello spazio di lavoro che vuoi integrare, fai clic sull'icona Actions (**&vellip;**) e seleziona **View details**.
-
   * **{{site.data.keyword.speechtotextshort}}:** nel campo **Model**, seleziona la lingua delle funzionalità vocali e il formato del tuo servizio. {{site.data.keyword.iva_short}} supporta solo i modelli a banda stretta.
-
   * **{{site.data.keyword.texttospeechshort}}:** nel campo **Voice**, seleziona la lingua e la voce che il tuo servizio utilizza. Devi specificare una voce del tuo servizio.
 
 **Ricorda:** perché il tuo agent vocale funzioni, devi configurare {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} e {{site.data.keyword.texttospeechshort}} per la stessa lingua. Vedi [Lingue supportate](about.html#supported-languages).
@@ -165,6 +166,8 @@ In alternativa alla configurazione di un'istanza del servizio {{site.data.keywor
 * **Motore di orchestrazione del servizio**: collegati a uno spazio di lavoro {{site.data.keyword.conversationshort}} o {{site.data.keyword.virtualagentshort}} tramite un [motore di orchestrazione del servizio (SOE)](about.html#arch-soe). Un SOE intercetta i messaggi in entrata e uscita dal servizio in modo che puoi modificarli utilizzando le API di terze parti.
 
   Nel campo **URL**, immetti l'URL completo del tuo spazio di lavoro SOE, come ad esempio `https://iva-soesample.myorg.net/SOE/myWorkspace`. Se il tuo SOE richiede l'autenticazione (consigliato), immetti il nome utente e la password nei rispettivi campi.
+
+  **Importante**: per la sicurezza dei dati, assicurati di utilizzare un URL sicuro per il tuo spazio di lavoro SOE, utilizzando `https:` invece di `http:` e richiedi l'autenticazione. Consulta [Informazioni sulla sicurezza e sulla privacy dei dati](infosec.html) per ulteriori informazioni sulle considerazioni sulla sicurezza.
 
 * **Watson {{site.data.keyword.virtualagentshort}}**: collegati a una chatbot {{site.data.keyword.virtualagentshort}} invece che a uno spazio di lavoro {{site.data.keyword.conversationshort}}. [{{site.data.keyword.virtualagentshort}}](../virtual-agent/getting-started.html#getting-started) viene creato nel servizio {{site.data.keyword.conversationshort}}, ma fornisce funzionalità pre-preparate in modo che puoi iniziare senza avere esperienza nel machine learning.
 

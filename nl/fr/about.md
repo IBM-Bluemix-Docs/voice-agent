@@ -72,7 +72,9 @@ Vous souhaiterez peut-être incorporer un moteur d'orchestration de service dans
 * Pour personnalisation des interactions avec les clients via des API
 * Pour intégrer la sécurité par identification de la voix DTMF ou des données biométriques
 
-Pour plus d'informations sur l'implémentation d'un moteur d'orchestration de service, voir les [exemples de moteur d'orchestration de service sur GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}. Il est recommandé de sécuriser le moteur d'orchestration de service avec un nom d'utilisateur et un mot de passe.
+Pour plus d'informations sur l'implémentation d'un moteur d'orchestration de service, voir les [exemples de moteur d'orchestration de service sur GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}.
+
+**Important** : pour la sécurité des données, veillez à utiliser une URL sécurisée pour votre espace de travail de moteur d'orchestration de service, en utilisant `https:` au lieu de `http:`, et exigez une authentification. Voir [Sécurité des informations et confidentialité des données](infosec.html) pour en savoir plus sur les éléments à prendre en compte en matière de sécurité.
 
 ## Fonctions
 {: #features}

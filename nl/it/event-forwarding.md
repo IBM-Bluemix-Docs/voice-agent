@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-24"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,7 +25,7 @@ L'analisi dei dati da questi eventi può esserti utile per modificare i dialoghi
 
 Quando crei o modifichi gli agent vocali, puoi anche scegliere di abilitare l'inoltro dell'evento. Per ulteriori dettagli sulla creazione e la modifica degli agent vocali, vedi [Gestione degli agent vocali](managing.html). Devi fornire le informazioni sull'account {{site.data.keyword.cloudant_short_notm}}, inclusi nome e password dell'account, per abilitare l'inoltro dell'evento.
 
-**Importante:** gli eventi CDR, trascrizione e turno includono informazioni dai tuoi utenti che potrebbero potenzialmente contenere dati Protected Health Information (PHI), personally identifiable information (PII) o PCI Data Security Standard (PCI DSS). Per evitare l'esposizione di informazioni personali, devi assicurarti che la tua istanza {{site.data.keyword.cloudant_short_notm}} protegga in modo appropriato le informazioni confidenziali che i tuoi utenti condividono durante la conversazione.
+**Importante:** gli eventi CDR, trascrizione e turno includono informazioni dai tuoi utenti che potrebbero potenzialmente contenere dati Protected Health Information (PHI), personally identifiable information (PII) o PCI Data Security Standard (PCI DSS). Per evitare l'esposizione di informazioni personali, devi assicurarti che la tua istanza {{site.data.keyword.cloudant_short_notm}} protegga in modo appropriato le informazioni confidenziali che i tuoi utenti condividono durante la conversazione. Consulta [Informazioni sulla sicurezza e sulla privacy dei dati: inoltro dell'evento](infosec.html#event_forwarding) e [{{site.data.keyword.cloudant_short_notm}}: sicurezza](../Cloudant/offerings/security.html#security).
 
 
 ## Abilitazione dell'inoltro dell'evento
@@ -48,3 +48,5 @@ Puoi abilitare l'inoltro dell'evento quando stai creando o modificando i tuoi ag
 
 ## Link correlati
 * [IBM Voice Gateway: Reporting events](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}
+* [Informazioni sulla sicurezza e sulla privacy dei dati](infosec.html)
+* [{{site.data.keyword.cloudant_short_notm}}: sicurezza](../Cloudant/offerings/security.html#security)

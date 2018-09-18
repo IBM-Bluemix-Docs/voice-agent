@@ -72,7 +72,9 @@ Puede que desee incorporar un motor de orquestación de servicio en el despliegu
 * Para personalizar las interacciones con los clientes mediante API
 * Para integrar la seguridad de voz mediante DTMF o biométrica
 
-Para obtener más información sobre cómo implementar un motor de orquestación de servicio, consulte los [ejemplos de motor de orquestación de servicio en GitHub ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}. Se recomienda proteger el motor de orquestación de servicio con un nombre de usuario y una contraseña.
+Para obtener más información sobre cómo implementar un motor de orquestación de servicio, consulte los [ejemplos de motor de orquestación de servicio en GitHub ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}.
+
+**Importante**: Para la seguridad de datos, asegúrese de utilizar un URL seguro para el espacio de trabajo de SOE, utilizando `https:` en lugar de `http:`, y solicite autenticación. Consulte [Seguridad de información y privacidad de datos](infosec.html) para obtener más información sobre las consideraciones de seguridad.
 
 ## Características
 {: #features}

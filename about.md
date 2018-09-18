@@ -72,7 +72,9 @@ You might want to incorporate a service orchestration engine in your {{site.data
 * To customize interactions with customers by using APIs
 * To integrate voice security by using DTMF or biometrics
 
-To learn more about how to implement a service orchestration engine, see the [service orchestration engine samples on GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}. It's recommended that you secure your service orchestration engine with a user name and password.
+To learn more about how to implement a service orchestration engine, see the [service orchestration engine samples on GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}.
+
+**Important**: For data security, make sure that you use a secure URL for your SOE workspace, by using `https:` instead of `http:`, and require authentication. See [Information security and data privacy](infosec.html) to learn more about security considerations.
 
 ## Features
 {: #features}

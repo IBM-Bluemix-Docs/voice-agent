@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-24"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,7 +25,7 @@ Analyzing data from these events can help you adjust dialogs, refine intents, an
 
 When you create or edit voice agents, you can also choose to enable event forwarding. For more detail about creating and editing voice agents, see [Managing voice agents](managing.html). You need to provide {{site.data.keyword.cloudant_short_notm}} account information, including the account name and password, to enable event forwarding.
 
-**Important:** The CDR, transcription, and turn events include information from your users that might potentially contain Protected Health Information (PHI), personally identifiable information (PII), or PCI Data Security Standard (PCI DSS) data. To prevent exposure of personal information, you must ensure that your {{site.data.keyword.cloudant_short_notm}} instance properly protects the confidential information that your users share in or during conversation.
+**Important:** The CDR, transcription, and turn events include information from your users that might potentially contain Protected Health Information (PHI), personally identifiable information (PII), or PCI Data Security Standard (PCI DSS) data. To prevent exposure of personal information, you must ensure that your {{site.data.keyword.cloudant_short_notm}} instance properly protects the confidential information that your users share in or during conversation. See [Information security and data privacy: Event forwarding](infosec.html#event_forwarding) and [{{site.data.keyword.cloudant_short_notm}}: Security](../Cloudant/offerings/security.html#security).
 
 
 ## Enabling event forwarding
@@ -48,3 +48,5 @@ You can enable event forwarding when you are creating or editing your voice agen
 
 ## Related links
 * [IBM Voice Gateway: Reporting events](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}
+* [Information security and data privacy](infosec.html)
+* [{{site.data.keyword.cloudant_short_notm}}: Security](../Cloudant/offerings/security.html#security)

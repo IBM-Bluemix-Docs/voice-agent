@@ -61,7 +61,7 @@ Une fois que vous avez créé le service, notez le noeud final d'agent vocal sur
    1. Sur la page GitHub contenant l'exemple de conversation, cliquez sur le numéro de ligne `1` et sélectionnez **... > Copy line**. Collez le texte copié dans un fichier, puis enregistrez-le en tant que fichier JSON, par exemple, `voice-gateway-conversation-en.json`.
    2. Lancez l'outil {{site.data.keyword.conversationshort}}. Sur la page _Espaces de travail_, cliquez sur l'icône ![Importer un espace de travail](../conversation/images/workspace_import.png) et importez le fichier JSON.
 
-  Vous pouvez aussi [générer votre propre dialogue](https://console.bluemix.net/docs/services/conversation/dialog-build.html) afin de simuler votre environnement de production. Votre dialogue doit au moins contenir un noeud avec la condition `conversation_start` et une noeud avec une réponse par défaut.
+  Vous pouvez aussi [générer votre propre dialogue](https://console.bluemix.net/docs/services/conversation/dialog-build.html) afin de simuler votre environnement de production. Votre dialogue doit au moins contenir un noeud avec la condition `conversation_start` et un noeud avec une réponse par défaut.
 
 ## Etapes suivantes
 {: #next}
@@ -72,4 +72,4 @@ Si vous n'entendez pas de réponse, vous pouvez afficher vos journaux d'appels e
 
 Vous pouvez éditer les paramètres de votre agent vocal, créer ou retirer des agents vocaux et ajouter plusieurs emplacements de service Watson à votre agent vocal à partir du tableau de bord _Gestion_. Pour plus d'informations, voir [Gestion des agents vocaux](managing.html).
 
-Vous pouvez également configurer des paramètres avancés, tels que la sécurisation de votre connexion SIP à partir de votre compte Twilio. Voir[Sécurisation des connexions](secure-trunking.html).
+Vous pouvez également configurer des paramètres avancés, tels que la sécurisation de votre connexion SIP à partir de votre compte Twilio. Voir [Sécurisation des connexions](secure-trunking.html).

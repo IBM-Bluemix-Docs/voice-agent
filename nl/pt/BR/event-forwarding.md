@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-24"
 ---
 
 {:shortdesc: .shortdesc}
@@ -27,7 +27,7 @@ Analisar dados desses eventos pode ajudá-lo a ajustar diálogos, refinar inten�
 
 Ao criar ou editar agentes de voz, é possível também escolher ativar o encaminhamento de eventos. Para obter mais detalhes sobre como criar e editar agentes de voz, consulte [Gerenciando agentes de voz](managing.html). É necessário fornecer informações da conta do {{site.data.keyword.cloudant_short_notm}}, incluindo o nome e a senha da conta, para ativar o encaminhamento de eventos.
 
-**Importante:** o CDR, a transcrição e os eventos de turnos incluem informações de seus usuários que podem potencialmente conter dados de Informação Protegida de Saúde (PHI), Informações Pessoalmente Identificáveis (PII) ou Padrão de Segurança de Dados PCI (PCI DSS). Para evitar a exposição de informações pessoais, deve-se assegurar que a instância do {{site.data.keyword.cloudant_short_notm}} proteja adequadamente as informações confidenciais que seus usuários compartilham na conversa ou durante a conversa.
+**Importante:** o CDR, a transcrição e os eventos de turnos incluem informações de seus usuários que podem potencialmente conter dados de Informação Protegida de Saúde (PHI), Informações Pessoalmente Identificáveis (PII) ou Padrão de Segurança de Dados PCI (PCI DSS). Para evitar a exposição de informações pessoais, deve-se assegurar que a instância do {{site.data.keyword.cloudant_short_notm}} proteja adequadamente as informações confidenciais que seus usuários compartilham na conversa ou durante a conversa. Consulte [Segurança de informações e privacidade de dados: encaminhamento de eventos](infosec.html#event_forwarding) e [{{site.data.keyword.cloudant_short_notm}}: segurança](../Cloudant/offerings/security.html#security).
 
 
 ## Ativando o encaminhamento de eventos
@@ -50,3 +50,5 @@ Ao criar ou editar agentes de voz, é possível também escolher ativar o encami
 
 ## Links relacionados
 * [IBM Voice Gateway: Relatando eventos](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}
+* [Segurança de informações e privacidade de dados](infosec.html)
+* [{{site.data.keyword.cloudant_short_notm}}: segurança](../Cloudant/offerings/security.html#security)

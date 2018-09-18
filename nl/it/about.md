@@ -72,7 +72,9 @@ Potresti voler incorporare un motore di orchestrazione del servizio nella tua di
 * Per personalizzare le interazioni con i clienti utilizzando le API
 * Per integrare la sicurezza vocale utilizzando DTMF o la biometrica
 
-Per ulteriori informazioni su come implementare un motore di orchestrazione del servizio, vedi [service orchestration engine samples on GitHub ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}. Ti consigliamo di proteggere il tuo motore di orchestrazione del servizio con un nome utente e una password.
+Per ulteriori informazioni su come implementare un motore di orchestrazione del servizio, vedi [service orchestration engine samples on GitHub ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}.
+
+**Importante**: per la sicurezza dei dati, assicurati di utilizzare un URL sicuro per il tuo spazio di lavoro SOE, utilizzando `https:` invece di `http:` e richiedi l'autenticazione. Consulta [Informazioni sulla sicurezza e sulla privacy dei dati](infosec.html) per ulteriori informazioni sulle considerazioni sulla sicurezza.
 
 ## Funzioni
 {: #features}

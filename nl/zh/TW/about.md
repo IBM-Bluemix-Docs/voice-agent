@@ -72,7 +72,9 @@ lastupdated: "2018-06-13"
 * 使用 API 自訂與客戶之間的互動
 * 使用 DTMF 或生物識別技術整合語音安全
 
-若要進一步瞭解如何實作服務編排引擎，請參閱 [GitHub 上的服務編排引擎範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}。建議您利用使用者名稱及密碼來保護服務編排引擎的安全。
+若要進一步瞭解如何實作服務編排引擎，請參閱 [GitHub 上的服務編排引擎範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}。
+
+**重要事項**：為了資料安全，請確定針對 SOE 工作區使用安全的 URL，方法是使用 `https:` 而不要使用 `http:`，並且要求鑑別。若要進一步瞭解安全考量，請參閱[資訊安全及資料隱私](infosec.html)。
 
 ## 特性
 {: #features}
