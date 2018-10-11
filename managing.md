@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-08"
+lastupdated: "2018-10-11"
 
 
 ---
@@ -54,8 +54,8 @@ When you create a voice agent, {{site.data.keyword.iva_short}} automatically sea
     * If you want to configure multiple service locations, click the other location option and select **Enable location** to configure the connection to your other {{site.data.keyword.speechtotextshort}} instance. See [Adding multiple Watson service locations](#add_location).
     * **Remember:** {{site.data.keyword.iva_short}} supports only narrowband models.
 
-1. Under **{{site.data.keyword.texttospeechshort}}**, review the default configuration for your {{site.data.keyword.texttospeechshort}} service instance by clicking **Enable location 1** or **Enable location 2**. 
-    * If you are creating a voice agent in the US South or US East region and you do not have a {{site.data.keyword.texttospeechshort}} service instance, you can create one from the **Service instance** menu. 
+1. Under **{{site.data.keyword.texttospeechshort}}**, review the default configuration for your {{site.data.keyword.texttospeechshort}} service instance by clicking **Enable location 1** or **Enable location 2**.
+    * If you are creating a voice agent in the US South or US East region and you do not have a {{site.data.keyword.texttospeechshort}} service instance, you can create one from the **Service instance** menu.
     * You can also connect your voice agent to a {{site.data.keyword.texttospeechshort}} instance in a different {{site.data.keyword.Bluemix_notm}} account space by changing the [**Service type**](#other_service).
     * If you want to configure multiple service locations, click the other location option and select **Enable location** to configure the connection to your other {{site.data.keyword.texttospeechshort}} instance. See [Adding multiple Watson service locations](#add_location).
 
@@ -166,7 +166,7 @@ Instead of using a {{site.data.keyword.speechtotextshort}} instance, you can cho
 1. In your _Speech to Text_ service configuration, choose **Google Speech to Text service instance**.
 
 1. Enter your Google Cloud Speech-to-Text service credentials.
-  * You can generate your service credentials in the Google Cloud Platform as a JSON key when you [Set up a serive account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account).
+  * You can generate your service credentials in the Google Cloud Platform as a JSON key when you [set up a service account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account).
 
 ### Configuring {{site.data.keyword.conversationshort}} for your voice agent
 {: #conversation_va}
