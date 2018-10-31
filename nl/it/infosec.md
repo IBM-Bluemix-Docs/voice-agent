@@ -14,20 +14,20 @@ lastupdated: "2018-08-29"
 {:tip: .tip}
 
 
-# Informazioni sulla sicurezza e sulla privacy dei dati 
+# Informazioni sulla sicurezza e sulla privacy dei dati
 {: #infosec}
 
 IBM si impegna a offrire ai nostri clienti e partner soluzioni innovative per la privacy, la sicurezza e la governance dei dati.
 {: shortdesc}
 
-## Gestione delle informazioni e opzioni di configurazione 
+## Gestione delle informazioni e opzioni di configurazione
 {: #configure_infosec}
 
 {{site.data.keyword.iva_short}} non archivia, raccoglie o elabora i dati ricevuti dai clienti. Invece, i dati sono instradati a servizi diversi per l'elaborazione. Durante la conversazione, gli utenti potrebbero condividere informazioni che contengono dati Protected Health Information (PHI), personally identifiable information (PII) o PCI Data Security Standard (PCI DSS). Consulta [Architettura](about.html#architecture){: new_window} per ulteriori informazioni sul flusso di conversazione e l'architettura di {{site.data.keyword.iva_short}}.
 
 Considera le seguenti funzioni quando configuri la tua istanza dell'agent vocale per supportare la privacy dei dati e la gestione sicura.
 
-### Trasferimento di chiamata 
+### Trasferimento di chiamata
 {:  #calltransfer_infosec}
 
 Quando aggiungi le funzionalità del trasferimento di chiamata al tuo agent vocale, fornisci un numero di telefono quando configuri l'URI SIP di destinazione del trasferimento. Gli utenti non dovrebbero fornire un numero di telefono personale per questa destinazione del trasferimento.
@@ -53,7 +53,7 @@ Per conversare con i clienti, {{site.data.keyword.conversationshort}} crea le ri
 
 {{site.data.keyword.iva_short}} è basato su {{site.data.keyword.Bluemix_notm}} e integra i trunk SIP configurati dagli utenti. Poiché i trunk SIP sono esterni e collegati a {{site.data.keyword.iva_short}}, puoi abilitare le connessioni tra i tuoi trunk SIP e {{site.data.keyword.iva_short}} utilizzando SRTP (Secure Real Time Transport Protocol) e la codifica utilizzando sip sicuri (sips), che si basano su TLS (Transport Layer Security). Consulta [Protezione delle connessioni](secure-trunking.html).
 
-### Configurazione del motore di orchestrazione del servizio (SOE) 
+### Configurazione del motore di orchestrazione del servizio (SOE)
 {: #SOE_config}
 
 Puoi utilizzare un motore di orchestrazione del servizio (SOE) per elaborare le informazioni trasmesse tra {{site.data.keyword.iva_short}} e {{site.data.keyword.conversationshort}} per personalizzare la conversazione con i chiamanti. Per mantenere le connessioni sicure, assicurati di configurare il tuo SOE utilizzando un URL sicuro, `https` e l'autenticazione utente.

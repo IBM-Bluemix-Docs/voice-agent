@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-10-11"
 
 
 ---
@@ -50,12 +50,12 @@ Lorsque vous créez un agent vocal, {{site.data.keyword.iva_short}} recherche au
 
 1. Sous **{{site.data.keyword.speechtotextshort}}**, revoyez la configuration par défaut de votre instance de service {{site.data.keyword.speechtotextshort}} en cliquant sur **Activer l'emplacement 1** ou sur **Activer l'emplacement 2**. Vous pouvez personnaliser votre configuration comme indiqué ci-après.
     * Si vous créez un agent vocal dans la région Sud des Etats-Unis ou Est des Etats-Unis alors que vous ne disposez d'aucune instance de service {{site.data.keyword.speechtotextshort}}, vous pouvez en créer une dans le menu **Instance de service**.
-    * Sélectionnez le [**Type de service**](#other_service) pour connecter votre agent vocal à une instance {{site.data.keyword.speechtotextshort}} dans un autre {{site.data.keyword.Bluemix_notm}}.
+    * Sélectionnez le [**Type de service**](#other_service) pour connecter votre agent vocal à une instance {{site.data.keyword.speechtotextshort}} dans un autre service {{site.data.keyword.Bluemix_notm}} ou dans un [service parole-texte tiers](#third-party), comme Google Cloud Speech-to-Text.
     * Si vous souhaitez configurer plusieurs emplacements de service, cliquez sur l'autre option d'emplacement et sélectionnez **Activer l'emplacement** afin de configurer la connexion à votre autre instance {{site.data.keyword.speechtotextshort}}. Voir [Ajout de plusieurs emplacements de service Watson](#add_location).
     * **Rappel :** {{site.data.keyword.iva_short}} ne prend en charge que les modèles à bande étroite.
 
-1. Sous **{{site.data.keyword.texttospeechshort}}**, revoyez la configuration par défaut de votre instance de service {{site.data.keyword.texttospeechshort}} en cliquant sur **Activer l'emplacement 1** ou sur **Activer l'emplacement 2**. 
-    * Si vous créez un agent vocal dans la région Sud des Etats-Unis ou Est des Etats-Unis alors que vous ne disposez d'aucune instance de service {{site.data.keyword.texttospeechshort}}, vous pouvez en créer une dans le menu **Instance de service**. 
+1. Sous **{{site.data.keyword.texttospeechshort}}**, revoyez la configuration par défaut de votre instance de service {{site.data.keyword.texttospeechshort}} en cliquant sur **Activer l'emplacement 1** ou sur **Activer l'emplacement 2**.
+    * Si vous créez un agent vocal dans la région Sud des Etats-Unis ou Est des Etats-Unis alors que vous ne disposez d'aucune instance de service {{site.data.keyword.texttospeechshort}}, vous pouvez en créer une dans le menu **Instance de service**.
     * Vous pouvez également connecter votre agent vocal à une instance {{site.data.keyword.texttospeechshort}} dans un autre espace de compte {{site.data.keyword.Bluemix_notm}} en modifiant le [**Type de service**](#other_service).
     * Si vous souhaitez configurer plusieurs emplacements de service, cliquez sur l'autre option d'emplacement et sélectionnez **Activer l'emplacement** afin de configurer la connexion à votre autre instance {{site.data.keyword.texttospeechshort}}. Voir [Ajout de plusieurs emplacements de service Watson](#add_location).
 
@@ -116,7 +116,7 @@ Lorsque vous créez ou clonez un agent vocal, vous pouvez cliquer sur **Afficher
 * **En-tête SIP INVITE personnalisé (facultatif)** : indique l'en-tête SIP personnalisé à extraire des requêtes SIP INVITE entrantes.
 * **Envoyer une réponse provisoire par téléphone depuis {{site.data.keyword.iva_short}}** : envoie une réponse `180 ringing` durant le traitement d'un appel entrant par {{site.data.keyword.iva_short}}. Activée par défaut.
 * **Placer l'appelant en attente lors du transfert** : l'appelant est placé en attente durant le transfert. Activée par défaut.
-* **Déconnecter l'appel en cas d'échec du transfert** : détermine s'il convient ou non de déconnecter l'appel en cas d'échec du transfert d'appel.  Activée par défaut. Si  le paramètre est désactivé et qu'un transfert d'appel échoue, {{site.data.keyword.iva_short}} initie un échange de conversation. Ensuite, {{site.data.keyword.conversationshort}} peut déconnecter l'appel ou le transférer vers une autre destination, selon la configuration dans le dialogue.
+* **Déconnecter l'appel en cas d'échec du transfert** : détermine s'il convient ou non de déconnecter l'appel en cas d'échec du transfert d'appel.  Activée par défaut. Si le paramètre est désactivé et qu'un transfert d'appel échoue, {{site.data.keyword.iva_short}} initie un échange de conversation. Ensuite, {{site.data.keyword.conversationshort}} peut déconnecter l'appel ou le transférer vers une autre destination, selon la configuration dans le dialogue.
 * **Notifier {{site.data.keyword.conversationshort}} lors d'événements de réseau** : lorsque cette option est activée et qu'une erreur réseau est détectée, {{site.data.keyword.iva_short}} initie un échange avec le service {{site.data.keyword.conversationshort}} avec le texte "vgwNetworkWarningMessage". La variable d'état `vgwNetworkWarnings` contient une liste d'événements de réseau qui se sont produits durant l'échange en cours. Si cette option est désactivée, une liste des événements de réseau qui se sont produits durant l'échange en cours est envoyée à l'événement d'échange suivant dans la variable d'état `vgwNetworkWarning`. Activée par défaut.
 
 ### Ajout de plusieurs emplacements de service Watson
@@ -157,6 +157,16 @@ Vous pouvez configurer votre agent vocal pour qu'il utilise des instances de ser
   * **{{site.data.keyword.texttospeechshort}} :** dans la zone **Voix**, sélectionnez la langue et la voix qui seront utilisées par votre service. Vous devez spécifier une voix pour votre service.
 
 **Important :** pour que votre agent vocal fonctionne, vous devez configurer vos instances de service {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} et {{site.data.keyword.texttospeechshort}} pour la même langue. Voir [Langues prises en charge](about.html#supported-languages).
+
+### Connexion à des services tiers
+{: #third-party}
+
+Au lieu d'utiliser une instance {{site.data.keyword.speechtotextshort}}, vous pouvez choisir de connecter votre agent vocal à un service de parole-texte tiers, tel que [Google Cloud Speech-to-Text ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.google.com/speech-to-text/).
+
+1. Dans votre configuration de service _Speech to Text_, choisissez **Instance de service Google Speech to Text**.
+
+1. Entrez vos données d'identification au service Google Cloud Speech-to-Text.
+  * Vous pouvez générer vos données d'identification au service dans la plateforme Google Cloud sous la forme d'une clé JSON lorsque vous [définissez un compte de service ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account).
 
 ### Configuration de {{site.data.keyword.conversationshort}} pour votre agent vocal
 {: #conversation_va}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-10-11"
 
 
 ---
@@ -50,12 +50,12 @@ lastupdated: "2018-08-29"
 
 1. 在 **{{site.data.keyword.speechtotextshort}}** 下，按一下**啟用位置 1** 或**啟用位置 2** 以檢閱 {{site.data.keyword.speechtotextshort}} 服務實例的預設配置。您可以使用下列各項來自訂配置。
     * 如果您在「美國南部」或「美國東部」地區中建立語音代理程式，但沒有 {{site.data.keyword.speechtotextshort}} 服務實例，則可以從**服務實例**功能表建立服務實例。
-    * 選擇[**服務類型**](#other_service)，將語音代理程式連接至不同 {{site.data.keyword.Bluemix_notm}} 中的 {{site.data.keyword.speechtotextshort}} 實例。
+    * 選擇[**服務類型**](#other_service)，將語音代理程式連接至不同 {{site.data.keyword.Bluemix_notm}} 中的 {{site.data.keyword.speechtotextshort}} 實例，或[協力廠商語音轉文字服務](#third-party)，例如 Google Cloud Speech-to-Text。
     * 如果您要配置多個服務位置，請按一下另一個位置選項，然後選取**啟用位置**以配置與其他 {{site.data.keyword.speechtotextshort}} 實例的連線。請參閱[新增多個 Watson 服務位置](#add_location)。
     * **請記住**：{{site.data.keyword.iva_short}} 僅支援窄頻模型。
 
-1. 在 **{{site.data.keyword.texttospeechshort}}** 下，按一下**啟用位置 1** 或**啟用位置 2** 以檢閱 {{site.data.keyword.texttospeechshort}} 服務實例的預設配置。 
-    * 如果您在「美國南部」或「美國東部」地區中建立語音代理程式，但沒有 {{site.data.keyword.texttospeechshort}} 服務實例，則可以從**服務實例**功能表建立服務實例。 
+1. 在 **{{site.data.keyword.texttospeechshort}}** 下，按一下**啟用位置 1** 或**啟用位置 2** 以檢閱 {{site.data.keyword.texttospeechshort}} 服務實例的預設配置。
+    * 如果您在「美國南部」或「美國東部」地區中建立語音代理程式，但沒有 {{site.data.keyword.texttospeechshort}} 服務實例，則可以從**服務實例**功能表建立服務實例。
     * 您也可以藉由變更[**服務類型**](#other_service)，來將語音代理程式連接至不同 {{site.data.keyword.Bluemix_notm}} 帳戶空間中的 {{site.data.keyword.texttospeechshort}} 實例。
     * 如果您要配置多個服務位置，請按一下另一個位置選項，然後選取**啟用位置**以配置與其他 {{site.data.keyword.texttospeechshort}} 實例的連線。請參閱[新增多個 Watson 服務位置](#add_location)。
 
@@ -156,6 +156,16 @@ lastupdated: "2018-08-29"
   * **{{site.data.keyword.texttospeechshort}}：**在**語音**欄位中，選取服務所使用的語言及語音。您必須指定服務的語音。
 
 **請記住：**為了讓您的語音代理程式運作，您必須配置相同語言的 {{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}} 及 {{site.data.keyword.texttospeechshort}}。請參閱[支援的語言](about.html#supported-languages)。
+
+### 使用協力廠商服務進行連接
+{: #third-party}
+
+您可以選擇將語音代理程式連接至協力廠商語音轉文字服務，例如 [Google Cloud Speech-to-Text ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.google.com/speech-to-text/)，而非使用 {{site.data.keyword.speechtotextshort}} 實例。
+
+1. 在您的 _Speech to Text_ 服務配置中，選擇 **Google Speech to Text 服務實例**。
+
+1. 輸入您的 Google Cloud Speech-to-Text 服務認證。
+  * 當您[設定服務帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account)，您可以在 Google Cloud Platform 中產生服務認證作為 JSON 金鑰。
 
 ### 為語音代理程式配置 {{site.data.keyword.conversationshort}}
 {: #conversation_va}

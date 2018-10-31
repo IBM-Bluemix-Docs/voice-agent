@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-10-11"
 
 
 ---
@@ -50,12 +50,12 @@ Cuando crea un agente de voz, {{site.data.keyword.iva_short}} busca automáticam
 
 1. En **{{site.data.keyword.speechtotextshort}}**, revise la configuración predeterminada para la instancia de servicio de {{site.data.keyword.speechtotextshort}} pulsando **Habilitar ubicación 1** o **Habilitar ubicación 2**. Puede personalizar la configuración con lo siguiente.
     * Si está creando un agente de voz en las regiones EE.UU. sur o EE.UU. este y no tiene una instancia de servicio de {{site.data.keyword.speechtotextshort}}, puede crear una desde el menú **Instancia de servicio**.
-    * Seleccione el [**Tipo de servicio**](#other_service) para conectar el agente de voz a una instancia de {{site.data.keyword.speechtotextshort}} en un {{site.data.keyword.Bluemix_notm}} distinto.
+    * Seleccione el [**Tipo de servicio**](#other_service) para conectar el agente de voz a una instancia de {{site.data.keyword.speechtotextshort}} en un {{site.data.keyword.Bluemix_notm}} distinto o un [servicio de habla a texto de terceros](#third-party), como Google Cloud Speech-to-Text.
     * Si desea configurar varias ubicaciones de servicio, pulse la opción de la otra ubicación y seleccione **Habilitar ubicación** para configurar la conexión a su otra instancia de {{site.data.keyword.speechtotextshort}}. Consulte [Adición de varias ubicaciones de servicio de Watson](#add_location).
     * **Recuerde:** {{site.data.keyword.iva_short}} solo admite modelos de banda estrecha.
 
-1. En **{{site.data.keyword.texttospeechshort}}**, revise la configuración predeterminada para la instancia de servicio de {{site.data.keyword.texttospeechshort}} pulsando **Habilitar ubicación 1** o **Habilitar ubicación 2**. 
-    * Si está creando un agente de voz en las regiones EE.UU. sur o EE.UU. este y no tiene una instancia de servicio de {{site.data.keyword.texttospeechshort}}, puede crear una desde el menú **Instancia de servicio**. 
+1. En **{{site.data.keyword.texttospeechshort}}**, revise la configuración predeterminada para la instancia de servicio de {{site.data.keyword.texttospeechshort}} pulsando **Habilitar ubicación 1** o **Habilitar ubicación 2**.
+    * Si está creando un agente de voz en las regiones EE.UU. sur o EE.UU. este y no tiene una instancia de servicio de {{site.data.keyword.texttospeechshort}}, puede crear una desde el menú **Instancia de servicio**.
     * También puede conectar su agente de voz a una instancia de {{site.data.keyword.texttospeechshort}} en un espacio de cuenta diferente de {{site.data.keyword.Bluemix_notm}} cambiando el [**Tipo de servicio**](#other_service).
     * Si desea configurar varias ubicaciones de servicio, pulse la opción de la otra ubicación y seleccione **Habilitar ubicación** para configurar la conexión a su otra instancia de {{site.data.keyword.texttospeechshort}}. Consulte [Adición de varias ubicaciones de servicio de Watson](#add_location).
 
@@ -157,6 +157,16 @@ Puede configurar el agente de voz para utilizar instancias de servicio de {{site
   * **{{site.data.keyword.texttospeechshort}}:** En el campo **Voz**, seleccione el idioma y la voz que utiliza el servicio. Debe especificar una voz para el servicio.
 
 **Recuerde:** Para que el agente de voz funcione, debe configurar {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} y {{site.data.keyword.texttospeechshort}} para el mismo idioma. Consulte [Idiomas admitidos](about.html#supported-languages).
+
+### Conexión con servicios de terceros
+{: #third-party}
+
+En lugar de utilizar una instancia de {{site.data.keyword.speechtotextshort}}, puede elegir conectar el agente de voz a un servicio de habla a texto de terceros, como [Google Cloud Speech-to-Text ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.google.com/speech-to-text/).
+
+1. En la configuración del servicio _Speech to Text_, elija **Instancia de servicio Google Speech to Text**.
+
+1. Escriba sus credenciales del servicio Google Cloud Speech-to-Text.
+  * Puede generar sus credenciales de servicio en la plataforma Google Cloud Platform como una clave JSON al [configurar una cuenta de servicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account).
 
 ### Configuración de {{site.data.keyword.conversationshort}} para el agente de voz
 {: #conversation_va}

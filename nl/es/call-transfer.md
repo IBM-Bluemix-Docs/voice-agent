@@ -98,11 +98,11 @@ Para obtener más información sobre cómo trabajar en el servicio {{site.data.k
     "output": {
         "text": {
             "values": [ "Please hold on while I connect you with a live agent." ],
-     "selection_policy": "sequential"
+            "selection_policy": "sequential"
         },
-   "vgwAction": {
+        "vgwAction": {
             "command": "vgwActTransfer",
-     "parameters": {
+            "parameters": {
                 "transferTarget": "sip:18889990000\\@dal.watson-va.netfoundry.net"
             }
         }
