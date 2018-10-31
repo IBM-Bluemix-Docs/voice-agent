@@ -69,7 +69,7 @@ painel _Gerenciar_ do agente de voz. Por exemplo, `18884253968`.
 
 * Verifique se as credenciais de serviço do Watson, as URLs e o ID da área de trabalho do {{site.data.keyword.conversationshort}} são todas válidas.
 * Verifique se o diálogo em sua área de trabalho do {{site.data.keyword.conversationshort}} foi criado corretamente.
-  * É possível importar a [conversa de amostra ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) do GitHub para uma área de trabalho pré-construída. Consulte [Etapa 3 em *Introdução ao tutorial*](getting-started.html#step3) para obter detalhes sobre
+  * É possível importar a [conversa de amostra ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) do GitHub para uma área de trabalho pré-construída. Consulte [Etapa 3 em *Tutorial de Introdução*](getting-started.html#step3) para obter detalhes sobre
 como salvar a conversa de amostra como um arquivo JSON e, em seguida, importar o arquivo como uma área de trabalho na ferramenta {{site.data.keyword.conversationshort}}.
   * Se você criou o seu próprio diálogo {{site.data.keyword.conversationshort}}, verifique se o diálogo
 contém um nó com a condição `conversation_start` e um nó com uma resposta padrão. Para obter instruções detalhadas, consulte [Construindo um diálogo](../conversation/dialog-build.html) na documentação do {{site.data.keyword.conversationshort}}.

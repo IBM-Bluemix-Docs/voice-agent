@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-10-11"
 
 
 ---
@@ -48,14 +48,14 @@ Quando crei un agent vocale, {{site.data.keyword.iva_short}} automaticamente ric
     * In alternativa, puoi collegare altre risorse di un dialogo {{site.data.keyword.conversationshort}} modificando il [**Service type**](#other_service).
     * Se vuoi configurare più ubicazioni del servizio, fai clic sull'altra opzione di ubicazione e seleziona **Enable location** per configurare la connessione alla tua altra istanza {{site.data.keyword.conversationshort}}. Consulta [Aggiunta di più ubicazioni del servizio Watson](#add_location).
 
-1. In **{{site.data.keyword.speechtotextshort}}**, controlla la configurazione predefinita della tua istanza del servizio {{site.data.keyword.speechtotextshort}} facendo clic su **Enable location 1** o **Enable location 2**. Puoi personalizzare la tua configurazione nel seguente modo. 
+1. In **{{site.data.keyword.speechtotextshort}}**, controlla la configurazione predefinita della tua istanza del servizio {{site.data.keyword.speechtotextshort}} facendo clic su **Enable location 1** o **Enable location 2**. Puoi personalizzare la tua configurazione nel seguente modo.
     * Se stai creando un agent vocale nella regione Stati Uniti Sud o Stati Uniti Est e non hai un'istanza del servizio {{site.data.keyword.speechtotextshort}}, puoi crearne una dal menu **Service instance**.
-    * Scegli il [**Service type**](#other_service) per collegare il tuo agent vocale a un'istanza {{site.data.keyword.speechtotextshort}} in un {{site.data.keyword.Bluemix_notm}} diverso.
+    * Scegli il [**Service type**](#other_service) per connettere il tuo agent vocale a un'istanza {{site.data.keyword.speechtotextshort}} in un {{site.data.keyword.Bluemix_notm}} o un [servizio da voce a testo di terze parti](#third-party) differente, come Google Cloud Speech-to-Text.
     * Se vuoi configurare più ubicazioni del servizio, fai clic sull'altra opzione di ubicazione e seleziona **Enable location** per configurare la connessione alla tua altra istanza {{site.data.keyword.speechtotextshort}}. Consulta [Aggiunta di più ubicazioni del servizio Watson](#add_location).
     * **Ricorda:** {{site.data.keyword.iva_short}} supporta solo i modelli a banda stretta.
 
-1. In **{{site.data.keyword.texttospeechshort}}**, controlla la configurazione predefinita della tua istanza del servizio {{site.data.keyword.texttospeechshort}} facendo clic su **Enable location 1** o **Enable location 2**.   
-    * Se stai creando un agent vocale nella regione Stati Uniti Sud o Stati Uniti Est e non hai un'istanza del servizio {{site.data.keyword.texttospeechshort}}, puoi crearne una dal menu **Service instance**. 
+1. In **{{site.data.keyword.texttospeechshort}}**, controlla la configurazione predefinita della tua istanza del servizio {{site.data.keyword.texttospeechshort}} facendo clic su **Enable location 1** o **Enable location 2**.
+    * Se stai creando un agent vocale nella regione Stati Uniti Sud o Stati Uniti Est e non hai un'istanza del servizio {{site.data.keyword.texttospeechshort}}, puoi crearne una dal menu **Service instance**.
     * Puoi inoltre collegare il tuo agent vocale a un'istanza {{site.data.keyword.texttospeechshort}} in uno spazio dell'account {{site.data.keyword.Bluemix_notm}} differente modificando il [**Service type**](#other_service).
     * Se vuoi configurare più ubicazioni del servizio, fai clic sull'altra opzione di ubicazione e seleziona **Enable location** per configurare la connessione alla tua altra istanza {{site.data.keyword.texttospeechshort}}. Consulta [Aggiunta di più ubicazioni del servizio Watson](#add_location).
 
@@ -130,7 +130,7 @@ Puoi aggiungere un'ubicazione del servizio Watson alla tua configurazione dell'a
 
 Per aggiungere un'ubicazione del servizio Watson a un agent vocale esistente, fai clic su **Edit agent** per l'agent vocale che vuoi modificare. Scegli **Location 1** o **Location 2** per l'istanza {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}} o {{site.data.keyword.speechtotextshort}} che vuoi collegare e aggiungi le tue informazioni di configurazione. Puoi utilizzare le istanze del servizio Watson nel tuo spazio di lavoro o in altri spazi di lavoro. Consulta [Utilizzo delle istanze del servizio in altri spazi di lavoro {{site.data.keyword.Bluemix_notm}}](#other_services).
 
-**Ricordati**: per la ridondanza del servizio, devi utilizzare le istanze del servizio Watson in regioni del servizio differenti per ubicazioni diverse.
+**Ricorda**: per la ridondanza del servizio, devi utilizzare le istanze del servizio Watson in regioni del servizio differenti per ubicazioni diverse.
 
 Puoi abilitare o disabilitare un percorso utilizzando la casella **Enable location**. Per impostazione predefinita **Location 1** è abilitata e **Location 2** è disabilitata. Deve essere abilitata almeno un'ubicazione per ogni servizio Watson.
 
@@ -157,6 +157,16 @@ Puoi configurare il tuo agent vocale ad utilizzare le istanze del servizio {{sit
   * **{{site.data.keyword.texttospeechshort}}:** nel campo **Voice**, seleziona la lingua e la voce che il tuo servizio utilizza. Devi specificare una voce del tuo servizio.
 
 **Ricorda:** perché il tuo agent vocale funzioni, devi configurare {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} e {{site.data.keyword.texttospeechshort}} per la stessa lingua. Vedi [Lingue supportate](about.html#supported-languages).
+
+### Connessione a servizi di terze parti
+{: #third-party}
+
+Invece di utilizzare un'istanza {{site.data.keyword.speechtotextshort}}, puoi scegliere di connettere il tuo agent vocale a un servizio da voce a testo di terze parti come [Google Cloud Speech-to-Text ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.google.com/speech-to-text/).
+
+1. Nella tua configurazione del servizio _Speech to Text_, scegli **Google Speech to Text service instance**.
+
+1. Immetti le tue credenziali del servizio Google Cloud Speech-to-Text.
+  * Puoi generare le tue credenziali del servizio nella Google Cloud Platform come una chiave JSON quando [configuri un account del servizio ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account).
 
 ### Configurazione di {{site.data.keyword.conversationshort}} del tuo agent vocale
 {: #conversation_va}

@@ -113,7 +113,7 @@ dal.watson-va.netfoundry.net
 
 **注**: 転送ターゲットの SIP URI には、電話番号と作成した終了 URI が含まれます。 転送ターゲットで、個人の電話番号を使用しないでください。 例えば、電話番号が `18889990000` で終了 URI が `mysiptrunk.pstn.twilio.com` の場合、完全な SIP URI は `sip:18889990000\\@mysiptrunk.pstn.twilio.com` となります。 Netfoundry を使用し、電話番号が `18889990000` である場合、完全な SIP URI は `sip:18889990000\\@dal.watson-va.netfoundry.net` となります。
 
-個人情報 (PII) を保護するには、転送ターゲット SIP URI を構成する際に個人の電話番号を使用しないでください。PII と構成の詳細については、[{{site.data.keyword.iva_short}} と情報処理](infosec.html#configure_infosec){:new_window}を参照してください。
+個人情報 (PII) を保護するには、転送ターゲット SIP URI を構成する際に個人の電話番号を使用しないでください。 PII と構成の詳細については、[{{site.data.keyword.iva_short}} と情報処理](infosec.html#configure_infosec){:new_window}を参照してください。
 {: tip}
 
 ## 次のステップ

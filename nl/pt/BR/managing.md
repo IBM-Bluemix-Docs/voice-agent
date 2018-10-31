@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-10-11"
 
 
 ---
@@ -56,14 +56,14 @@ você ou a outra pessoa. É possível também conectar-se a qualquer uma dessas 
 
 1. No **{{site.data.keyword.speechtotextshort}}**, revise a configuração padrão para sua instância do serviço {{site.data.keyword.speechtotextshort}} clicando em **Ativar local 1** ou **Ativar local 2**. É possível customizar sua configuração com as informações a seguir.
     * Se estiver criando um agente de voz na região Sul ou Leste dos EUA e não tiver uma instância do serviço {{site.data.keyword.speechtotextshort}}, será possível criar uma por meio do menu **Instância de serviço**.
-    * Escolha o [**Tipo de serviço**](#other_service) para conectar seu agente de voz a uma instância do {{site.data.keyword.speechtotextshort}} em um {{site.data.keyword.Bluemix_notm}} diferente.
+    * Escolha o [**Tipo de serviço**](#other_service) para conectar seu agente de voz a uma instância do {{site.data.keyword.speechtotextshort}} em um {{site.data.keyword.Bluemix_notm}} diferente ou um [serviço de fala para texto de terceiro](#third-party), como o Google Cloud Speech-to-Text.
     * Se você deseja configurar múltiplos locais de serviço, clique na outra opção de local e selecione
 **Ativar local** para configurar a conexão com a sua outra instância do
 {{site.data.keyword.speechtotextshort}}. Consulte [Incluindo vários locais de serviço Watson](#add_location).
     * **Lembre-se:** o {{site.data.keyword.iva_short}} suporta somente modelos de banda estreita.
 
-1. No **{{site.data.keyword.texttospeechshort}}**, revise a configuração padrão para sua instância do serviço {{site.data.keyword.texttospeechshort}} clicando em **Ativar local 1** ou **Ativar local 2**. 
-    * Se estiver criando um agente de voz na região Sul ou Leste dos EUA e não tiver uma instância do serviço {{site.data.keyword.texttospeechshort}}, será possível criar uma por meio do menu **Instância de serviço**. 
+1. No **{{site.data.keyword.texttospeechshort}}**, revise a configuração padrão para sua instância do serviço {{site.data.keyword.texttospeechshort}} clicando em **Ativar local 1** ou **Ativar local 2**.
+    * Se estiver criando um agente de voz na região Sul ou Leste dos EUA e não tiver uma instância do serviço {{site.data.keyword.texttospeechshort}}, será possível criar uma por meio do menu **Instância de serviço**.
     * Também é possível conectar seu agente de voz a uma instância do {{site.data.keyword.texttospeechshort}} em um espaço de conta do {{site.data.keyword.Bluemix_notm}} diferente mudando o [**Tipo de serviço**](#other_service).
     * Se você deseja configurar múltiplos locais de serviço, clique na outra opção de local e selecione
 **Ativar local** para configurar a conexão com a sua outra instância do
@@ -214,6 +214,16 @@ credenciais para as suas instâncias de serviço do {{site.data.keyword.conversa
   * **{{site.data.keyword.texttospeechshort}}:** No campo **Voz**, selecione o idioma e a voz que seu serviço usa. Deve-se especificar uma voz para o seu serviço.
 
 **Lembre-se:** para que seu agente de voz funcione, deve-se configurar seu {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} e {{site.data.keyword.texttospeechshort}} para o mesmo idioma. Consulte [Idiomas suportados](about.html#supported-languages).
+
+### Conectando a serviços de terceiros
+{: #third-party}
+
+Em vez de usar uma instância do {{site.data.keyword.speechtotextshort}}, é possível escolher conectar seu agente de voz a um serviço de fala para texto de terceiro, como o [Google Cloud Speech-to-Text ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.google.com/speech-to-text/).
+
+1. Na configuração do serviço _Fala para texto_, escolha a **instância de serviço do Google Speech to Text**.
+
+1. Insira suas credenciais de serviço do Google Cloud Speech-to-Text.
+  * É possível gerar suas credenciais de serviço no Google Cloud Platform como uma chave JSON ao [configurar uma conta de serviço ![ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account).
 
 ### Configurando o {{site.data.keyword.conversationshort}} para o seu agente de voz
 {: #conversation_va}

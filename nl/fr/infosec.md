@@ -51,7 +51,7 @@ Pour dialoguer avec les clients, {{site.data.keyword.conversationshort}} élabor
 ### Connexions sécurisées
 {: #secure_trunking}
 
-{{site.data.keyword.iva_short}} est basé dans {{site.data.keyword.Bluemix_notm}} et s'intègre aux liaisons SIP que les utilisateurs configurent. Etant donné que les liaisons SIP sont des éléments externes qui se connectent à {{site.data.keyword.iva_short}}, vous pouvez activer des connexions sécurisées entre vos liaisons SIP et {{site.data.keyword.iva_short}} à l'aide du protocole SRTP (Secure Real Time Transport Protocol) et le chiffrement à l'aide de secure sip (sips), qui s'appuie sur TLS (Transport Layer Security). Voir[Sécurisation des connexions](secure-trunking.html).
+{{site.data.keyword.iva_short}} est basé dans {{site.data.keyword.Bluemix_notm}} et s'intègre aux liaisons SIP que les utilisateurs configurent. Etant donné que les liaisons SIP sont des éléments externes qui se connectent à {{site.data.keyword.iva_short}}, vous pouvez activer des connexions sécurisées entre vos liaisons SIP et {{site.data.keyword.iva_short}} à l'aide du protocole SRTP (Secure Real Time Transport Protocol) et le chiffrement à l'aide de secure sip (sips), qui s'appuie sur TLS (Transport Layer Security). Voir [Sécurisation des connexions](secure-trunking.html).
 
 ### Configuration du moteur d'orchestration de service
 {: #SOE_config}

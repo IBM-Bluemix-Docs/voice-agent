@@ -25,7 +25,7 @@ lastupdated: "2018-08-24"
 
 ボイス・エージェントを作成または編集するとき、イベント転送の有効化も選択することができます。 ボイス・エージェントの作成および編集の詳細については、[ボイス・エージェントの管理](managing.html)を参照してください。 イベント転送を有効化するには、{{site.data.keyword.cloudant_short_notm}} アカウント情報 (アカウント名とパスワードを含む) を提供する必要があります。
 
-**重要:** CDR イベント、転写イベント、およびターン・イベントにはユーザーからの情報が取り込まれますが、それには保護医療情報 (PHI)、個人情報 (PII)、または PCI データ・セキュリティー基準 (PCI DSS) のデータが含まれている可能性があります。 個人情報の漏えいを防ぐため、会話内および会話中にユーザーどうしがやりとりする機密情報が {{site.data.keyword.cloudant_short_notm}} インスタンスで適切に保護されるようにする必要があります。[機密保護とデータ・プライバシー: イベント転送](infosec.html#event_forwarding)と、[{{site.data.keyword.cloudant_short_notm}}: セキュリティー](../Cloudant/offerings/security.html#security)を参照してください。
+**重要:** CDR イベント、転写イベント、およびターン・イベントにはユーザーからの情報が取り込まれますが、それには保護医療情報 (PHI)、個人情報 (PII)、または PCI データ・セキュリティー基準 (PCI DSS) のデータが含まれている可能性があります。 個人情報の漏えいを防ぐため、会話内および会話中にユーザーどうしがやりとりする機密情報が {{site.data.keyword.cloudant_short_notm}} インスタンスで適切に保護されるようにする必要があります。 [機密保護とデータ・プライバシー: イベント転送](infosec.html#event_forwarding)と、[{{site.data.keyword.cloudant_short_notm}}: セキュリティー](../Cloudant/offerings/security.html#security)を参照してください。
 
 
 ## イベント転送の有効化

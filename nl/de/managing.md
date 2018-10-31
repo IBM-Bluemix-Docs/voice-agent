@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-10-11"
 
 
 ---
@@ -48,15 +48,15 @@ Wenn Sie einen Sprachagenten erstellen, sucht {{site.data.keyword.iva_short}} au
     * Alternativ können Sie Verbindungen zu anderen Quellen eines {{site.data.keyword.conversationshort}}-Dialogs herstellen, indem Sie den [**Servicetyp**](#other_service) ändern.
     * Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.conversationshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](#add_location).
 
-1. Überprüfen Sie unter **{{site.data.keyword.speechtotextshort}}** die Standardkonfiguration für die {{site.data.keyword.speechtotextshort}}-Serviceinstanz, indem Sie auf **Standort 1 aktivieren** oder **Standort 2 aktivieren** klicken. Sie können die Konfiguration wie folgt anpassen: 
+1. Überprüfen Sie unter **{{site.data.keyword.speechtotextshort}}** die Standardkonfiguration für die {{site.data.keyword.speechtotextshort}}-Serviceinstanz, indem Sie auf **Standort 1 aktivieren** oder **Standort 2 aktivieren** klicken. Sie können die Konfiguration wie folgt anpassen:
     * Wenn Sie in der Region 'USA (Süden)' oder 'USA (Osten)' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.speechtotextshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen.
-    * Wählen Sie den [**Servicetyp**](#other_service) aus, um Ihren Sprachagenten mit einer {{site.data.keyword.speechtotextshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}} zu verbinden. 
+    * Wählen Sie den [**Servicetyp**](#other_service) aus, um den Sprachagenten mit einer {{site.data.keyword.speechtotextshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}}-Kontobereich oder mit einem [Speech-to-Text-Service eines anderen Anbieters](#third-party), wie z. B. Google Cloud Speech-to-Text, zu verbinden.
     * Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.speechtotextshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](#add_location).
-    * **Wichtig:** {{site.data.keyword.iva_short}} unterstützt nur Narrowband-Modelle. 
+    * **Wichtig:** {{site.data.keyword.iva_short}} unterstützt nur Narrowband-Modelle.
 
-1. Überprüfen Sie unter **{{site.data.keyword.texttospeechshort}}** die Standardkonfiguration für die {{site.data.keyword.texttospeechshort}}-Serviceinstanz, indem Sie auf **Standort 1 aktivieren** oder **Standort 2 aktivieren** klicken.  
-    * Wenn Sie in der Region 'USA (Süden)' oder 'USA (Osten)' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.texttospeechshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen. 
-    * Sie können Ihren Sprachagenten auch mit einer {{site.data.keyword.texttospeechshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}}-Kontobereich verbinden, indem Sie den [**Servicetyp**](#other_service) ändern. 
+1. Überprüfen Sie unter **{{site.data.keyword.texttospeechshort}}** die Standardkonfiguration für die {{site.data.keyword.texttospeechshort}}-Serviceinstanz, indem Sie auf **Standort 1 aktivieren** oder **Standort 2 aktivieren** klicken.
+    * Wenn Sie in der Region 'USA (Süden)' oder 'USA (Osten)' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.texttospeechshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen.
+    * Sie können Ihren Sprachagenten auch mit einer {{site.data.keyword.texttospeechshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}}-Kontobereich verbinden, indem Sie den [**Servicetyp**](#other_service) ändern.
     * Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.texttospeechshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](#add_location).
 
 1. Sie können auch die Ereignisweiterleitung aktivieren, um Informationen zu den von Ihren Sprachagenten verarbeiteten Anrufen in {{site.data.keyword.cloudantfull}} zu erfassen. Informationen hierzu finden Sie in [Ereignisweiterleitung für Sprachagenten aktivieren](event-forwarding.html). Weitere Konfigurationsoptionen finden Sie in [Sprachagenten konfigurieren](#configure_va).
@@ -158,6 +158,16 @@ Sie können Ihren Sprachagenten für die Verwendung von {{site.data.keyword.conv
 
 **Bitte beachten:** Damit Ihr Sprachagent funktioniert, müssen Sie {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} und {{site.data.keyword.texttospeechshort}} für dieselbe Sprache konfigurieren. Weitere Informationen finden Sie in [Unterstützte Sprachen](about.html#supported-languages).
 
+### Verbindung zu Services anderer Anbieter herstellen
+{: #third-party}
+
+Anstelle einer Verbindung zur {{site.data.keyword.speechtotextshort}}-Instanz können Sie für den Sprachagenten auch eine Verbindung mit dem Speech-to-Text-Service eines anderen Anbieters, z. B. [Google Cloud Speech-to-Text ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.google.com/speech-to-text/), herstellen.
+
+1. Wählen Sie in der _Speech to Text_-Servicekonfiguration die **Google Speech-to-Text-Serviceinstanz** aus.
+
+1. Geben Sie Ihre Google Cloud Speech-to-Text-Serviceberechtigungsnachweise ein.
+  * Sie können die Serviceberechtigungsnachweise auf der Google Cloud-Plattform als JSON-Schlüssel generieren, wenn Sie [ein Servicekonto einrichten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account).
+
 ### {{site.data.keyword.conversationshort}} für Ihren Sprachagenten konfigurieren
 {: #conversation_va}
 
@@ -167,7 +177,7 @@ Als Alternative zum Konfigurieren einer {{site.data.keyword.conversationshort}}-
 
   Geben Sie im Feld **URL** die vollständige URL zu Ihrem SOE-Arbeitsbereich ein, z. B. `https://iva-soesample.myorg.net/SOE/myWorkspace`. Wenn die SOE Ihre Authentifizierung anfordert (empfohlen), geben Sie in den Benutzernamen und Kennwort in den entsprechenden Feldern an.
 
-  **Wichtig**: Aus Gründen der Datensicherheit müssen Sie sicherstellen, dass Sie für Ihren SOE-Arbeitsbereich eine sichere URL verwenden. Verwenden Sie `https:` anstelle von `http:` sowie obligatorische Authentifizierung. Weitere Informationen zu Sicherheitsaspekten finden Sie unter [Informationssicherheit und Datenschutz](infosec.html). 
+  **Wichtig**: Aus Gründen der Datensicherheit müssen Sie sicherstellen, dass Sie für Ihren SOE-Arbeitsbereich eine sichere URL verwenden. Verwenden Sie `https:` anstelle von `http:` sowie obligatorische Authentifizierung. Weitere Informationen zu Sicherheitsaspekten finden Sie unter [Informationssicherheit und Datenschutz](infosec.html).
 
 * **Watson {{site.data.keyword.virtualagentshort}}**: Stellen Sie eine Verbindung zu einem {{site.data.keyword.virtualagentshort}}-Chatbot statt zu einem {{site.data.keyword.conversationshort}}-Arbeitsbereich her. [{{site.data.keyword.virtualagentshort}}](../virtual-agent/getting-started.html#getting-started) ist auf dem {{site.data.keyword.conversationshort}}-Service aufgebaut, bietet aber vortrainierte Funktionen, sodass Sie ohne jegliche Erfahrung mit maschinellem Lernen gleich einsteigen können.
 

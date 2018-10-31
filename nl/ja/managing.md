@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-10-11"
 
 
 ---
@@ -38,9 +38,9 @@ _「管理」_ダッシュボードでボイス・エージェントを作成、
 
 1. 通話中転送を有効にする場合は、**「転送ターゲット (Transfer Target)」**で終了 URI を構成することができます。 [通話中転送のセットアップ](call-transfer.html)を参照してください。 転送ターゲットに個人の電話番号を使用しないでください。
 
-1. Watson サービス・インスタンスへの接続を構成します。 **「ロケーション 1 (Location 1)」**と**「ロケーション 2 (Location 2)」**の両方に接続を構成して、複数の Watson サービス・インスタンスに接続することができます。複数のサービス・インスタンスに接続できるので、障害発生時には、ボイス・エージェントを別のサービス・インスタンスに切り替えることができます。[複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
+1. Watson サービス・インスタンスへの接続を構成します。 **「ロケーション 1 (Location 1)」**と**「ロケーション 2 (Location 2)」**の両方に接続を構成して、複数の Watson サービス・インスタンスに接続することができます。複数のサービス・インスタンスに接続できるので、障害発生時には、ボイス・エージェントを別のサービス・インスタンスに切り替えることができます。 [複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
 
-    **重要**: _トライアル_・インスタンスと_ライト_・インスタンスは、{{site.data.keyword.iva_short}} サービス・インスタンスが作成されている場所にのみ接続できます。2 番目の場所は、2 番目のボイス・エージェントではありません。災害復旧用のバックアップとしてのみ機能します。
+    **重要**: _トライアル_・インスタンスと_ライト_・インスタンスは、{{site.data.keyword.iva_short}} サービス・インスタンスが作成されている場所にのみ接続できます。 2 番目の場所は、2 番目のボイス・エージェントではありません。 災害復旧用のバックアップとしてのみ機能します。
 
 1. **{{site.data.keyword.conversationshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.conversationshort}} サービス・インスタンスへの接続を構成します。自分自身または他の人が所有する {{site.data.keyword.Bluemix_notm}} アカウントの {{site.data.keyword.conversationshort}} インスタンスまたは {{site.data.keyword.virtualagentfull}} インスタンスを使用することができます。 サービス・オーケストレーション・エンジンを使用してこれらのオプションのいずれかに接続することもできます。
 
@@ -50,12 +50,12 @@ _「管理」_ダッシュボードでボイス・エージェントを作成、
 
 1. **{{site.data.keyword.speechtotextshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.speechtotextshort}} サービス・インスタンスのデフォルト構成を確認します。以下のように構成をカスタマイズできます。
     * 米国南部地域または米国東部地域でボイス・エージェントを作成する場合、{{site.data.keyword.speechtotextshort}} サービス・インスタンスがなければ、**「サービス・インスタンス」**メニューから作成できます。
-    * [**「サービス・タイプ (Service type)」**](#other_service)を選択することによって別の {{site.data.keyword.Bluemix_notm}} の {{site.data.keyword.speechtotextshort}} インスタンスにボイス・エージェントを接続します。
+    * [**「サービス・タイプ (Service type)」**](#other_service)を選択することによって、別の {{site.data.keyword.Bluemix_notm}} の {{site.data.keyword.speechtotextshort}} インスタンスまたは Google Cloud Speech-to-Text などの[サード・パーティーの音声認識サービス](#third-party)にボイス・エージェントを接続します。
     * 複数のサービス・ロケーションを構成する場合は、他のロケーション・オプションをクリックし、**「ロケーションの有効化 (Enable location)」**を選択して、他の {{site.data.keyword.speechtotextshort}} インスタンスへの接続を構成します。 [複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
     * **注:** {{site.data.keyword.iva_short}} では、狭周波数帯域モデルのみがサポートされています。
 
-1. **{{site.data.keyword.texttospeechshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.texttospeechshort}} サービス・インスタンスのデフォルト構成を確認します。 
-    * 米国南部地域または米国東部地域でボイス・エージェントを作成する場合、{{site.data.keyword.texttospeechshort}} サービス・インスタンスがなければ、**「サービス・インスタンス」**メニューから作成できます。 
+1. **{{site.data.keyword.texttospeechshort}}** の下で、**「ロケーション 1 の有効化 (Enable location 1)」**または**「ロケーション 2 の有効化 (Enable location 2)」**をクリックして、{{site.data.keyword.texttospeechshort}} サービス・インスタンスのデフォルト構成を確認します。
+    * 米国南部地域または米国東部地域でボイス・エージェントを作成する場合、{{site.data.keyword.texttospeechshort}} サービス・インスタンスがなければ、**「サービス・インスタンス」**メニューから作成できます。
     * [**「サービス・タイプ (Service type)」**](#other_service)を変更することによって別の {{site.data.keyword.Bluemix_notm}} アカウント・スペースの {{site.data.keyword.texttospeechshort}} インスタンスにボイス・エージェントを接続することもできます。
     * 複数のサービス・ロケーションを構成する場合は、他のロケーション・オプションをクリックし、**「ロケーションの有効化 (Enable location)」**を選択して、他の {{site.data.keyword.texttospeechshort}} インスタンスへの接続を構成します。 [複数の Watson サービス・ロケーションの追加](#add_location)を参照してください。
 
@@ -99,7 +99,7 @@ _「管理」_ ダッシュボードの**「同時接続最大数 (Maximum concu
 ## ボイス・エージェントの削除
 {: #delete_va}
 
-ボイス・エージェントを削除して電話番号を解放できます。 1 つの電話番号を複数のボイス・エージェントに指定することはできません。ある電話番号を別のボイス・エージェントで使用するには、まずその電話番号を使用しているボイス・エージェントを削除する必要があります。
+ボイス・エージェントを削除して電話番号を解放できます。 1 つの電話番号を複数のボイス・エージェントに指定することはできません。 ある電話番号を別のボイス・エージェントで使用するには、まずその電話番号を使用しているボイス・エージェントを削除する必要があります。
 
 ボイス・エージェントを削除するには、ボイス・エージェントのオプションのリストから**「エージェントの削除 (Delete Agent)」**をクリックし、変更内容を保存します。 ボイス・エージェントがボイス・エージェントのリストから削除されます。
 
@@ -122,13 +122,13 @@ _「管理」_ ダッシュボードの**「同時接続最大数 (Maximum concu
 ### 複数の Watson サービス・ロケーションの追加
 {: #add_location}
 
-_標準_ インスタンスまたは_プレミアム_・インスタンスをお持ちの場合は、異なるロケーションの複数の Watson サービスにボイス・エージェントを接続して、サービスを冗長化することができます。_トライアル_・インスタンスと_ライト_・インスタンスは、{{site.data.keyword.iva_short}} サービス・インスタンスが作成されている場所にのみ接続できます。2 番目の場所は、2 番目のボイス・エージェントではありません。 災害復旧用のバックアップとしてのみ機能します。
+_標準_ インスタンスまたは_プレミアム_・インスタンスをお持ちの場合は、異なるロケーションの複数の Watson サービスにボイス・エージェントを接続して、サービスを冗長化することができます。 _トライアル_・インスタンスと_ライト_・インスタンスは、{{site.data.keyword.iva_short}} サービス・インスタンスが作成されている場所にのみ接続できます。 2 番目の場所は、2 番目のボイス・エージェントではありません。 災害復旧用のバックアップとしてのみ機能します。
 
 ボイス・エージェントは、Watson サービス・インスタンスを地理的な距離の順序で使用します。 例えば、ボイス・エージェントを米国東部地域で作成し、{{site.data.keyword.conversationshort}} サービスは米国南部とオーストラリアのシドニーにあるとします。 この場合、ボイス・エージェントは、{{site.data.keyword.conversationshort}} 米国南部地域を使用します。米国南部の方がシドニーより地理的に米国東部に近いからです。 複数の地域の Watson サービスに接続しているなら、あるロケーションで Watson サービスがオフラインになっても、ボイス・エージェントは予備のサービスを使用できます。
 
 ボイス・エージェント構成に Watson サービス・ロケーションをいつでも追加できます。 ボイス・エージェントの作成時に複数のサービス・ロケーション・インスタンスを接続する方法については、[ボイス・エージェントの作成](#creating)を参照してください。
 
-既存のボイス・エージェントに Watson サービス・ロケーションを追加するには、構成するボイス・エージェントの**「エージェントの編集 (Edit agent)」**をクリックします。 接続する {{site.data.keyword.conversationshort}}、{{site.data.keyword.texttospeechshort}}、または {{site.data.keyword.speechtotextshort}} インスタンスにおいて**「ロケーション 1 (Location 1)」**または**「ロケーション 2 (Location 2)」**を選択し、構成情報を追加します。 自分のワークスペースまたは他のワークスペースの Watson サービス・インスタンスを使用できます。[他の {{site.data.keyword.Bluemix_notm}} ワークスペースのサービス・インスタンスの使用](#other_services)を参照してください。
+既存のボイス・エージェントに Watson サービス・ロケーションを追加するには、構成するボイス・エージェントの**「エージェントの編集 (Edit agent)」**をクリックします。 接続する {{site.data.keyword.conversationshort}}、{{site.data.keyword.texttospeechshort}}、または {{site.data.keyword.speechtotextshort}} インスタンスにおいて**「ロケーション 1 (Location 1)」**または**「ロケーション 2 (Location 2)」**を選択し、構成情報を追加します。 自分のワークスペースまたは他のワークスペースの Watson サービス・インスタンスを使用できます。 [他の {{site.data.keyword.Bluemix_notm}} ワークスペースのサービス・インスタンスの使用](#other_services)を参照してください。
 
 **注**: サービスを冗長化するには、異なるロケーションごとに異なるサービス地域で Watson サービス・インスタンスを使用する必要があります。
 
@@ -158,6 +158,16 @@ _標準_ インスタンスまたは_プレミアム_・インスタンスをお
 
 **注:** ボイス・エージェントが機能するためには、{{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}}、および {{site.data.keyword.texttospeechshort}} で同じ言語を構成する必要があります。 [サポートされている言語](about.html#supported-languages)を参照してください。
 
+### サード・パーティー・サービスとの接続
+{: #third-party}
+
+{{site.data.keyword.speechtotextshort}} インスタンスを使用する代わりに、[Google Cloud Speech-to-Text ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.google.com/speech-to-text/) などのサード・パーティーの音声認識サービスにボイス・エージェントを接続できます。
+
+1. _「音声認識テキスト」_サービス構成で、**「Google Speech to Text サービス・インスタンス」**を選択します。
+
+1. Google Cloud Speech-to-Text サービス資格情報を入力します。
+  * [サービス・アカウントをセットアップ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account)するときに、Google Cloud Platform でサービス資格情報を JSON キーとして生成できます。
+
 ### ボイス・エージェントの {{site.data.keyword.conversationshort}} の構成
 {: #conversation_va}
 
@@ -167,7 +177,7 @@ _標準_ インスタンスまたは_プレミアム_・インスタンスをお
 
   **「URL」**フィールドに、SOE ワークスペースへの完全な URL を入力します (`https://iva-soesample.myorg.net/SOE/myWorkspace` など)。 SOE が認証を要求する場合 (推奨)、ユーザー名とパスワードをそれぞれのフィールドに入力します。
 
-  **重要**: データ・セキュリティーの場合、`http:` ではなく `https:` を使用して、SOE ワークスペースにセキュア URL を使用していることを確認してください。また、認証が必要です。セキュリティーに関する考慮事項の詳細については、[機密保護とデータ・プライバシー](infosec.html)を参照してください。
+  **重要**: データ・セキュリティーの場合、`http:` ではなく `https:` を使用して、SOE ワークスペースにセキュア URL を使用していることを確認してください。また、認証が必要です。 セキュリティーに関する考慮事項の詳細については、[機密保護とデータ・プライバシー](infosec.html)を参照してください。
 
 * **Watson {{site.data.keyword.virtualagentshort}}**: {{site.data.keyword.conversationshort}} ワークスペースではなく {{site.data.keyword.virtualagentshort}} チャットボットに接続します。 [{{site.data.keyword.virtualagentshort}}](../virtual-agent/getting-started.html#getting-started) は {{site.data.keyword.conversationshort}} サービス上にビルドされますが、事前にトレーニングされた機能を提供するので、機械学習の経験がゼロでも始められます。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-10-11"
 
 
 ---
@@ -50,12 +50,12 @@ lastupdated: "2018-08-29"
 
 1. 在 **{{site.data.keyword.speechtotextshort}}** 下，通过单击**启用位置 1** 或**启用位置 2** 来查看 {{site.data.keyword.speechtotextshort}} 服务实例的缺省配置。
     * 如果要在美国南部或美国东部区域创建语音代理程序，但没有 {{site.data.keyword.speechtotextshort}} 服务实例，那么可以在**服务实例**菜单中创建一个服务实例。
-    * 选择[**服务类型**](#other_service)以将语音代理程序连接到位于不同 {{site.data.keyword.Bluemix_notm}} 中的 {{site.data.keyword.speechtotextshort}} 实例。
+    * 选择[**服务类型**](#other_service)，以将语音代理程序连接到其他 {{site.data.keyword.Bluemix_notm}} 或[第三方语音转文字服务](#third-party)（如 Google Cloud 语音转文字）中的 {{site.data.keyword.speechtotextshort}} 实例。
     * 如果您想要配置多个服务位置，请单击其他位置选项，并选择**启用位置**以配置到其他 {{site.data.keyword.speechtotextshort}} 实例的连接。请参阅[添加多个 Watson 服务位置](#add_location)。
     * **请记住：**{{site.data.keyword.iva_short}} 仅支持窄带模型。
 
-1. 在 **{{site.data.keyword.texttospeechshort}}** 下，通过单击**启用位置 1** 或**启用位置 2** 来查看 {{site.data.keyword.texttospeechshort}} 服务的缺省配置。 
-    * 如果要在美国南部或美国东部区域创建语音代理程序，但没有 {{site.data.keyword.texttospeechshort}} 服务实例，那么可以在**服务实例**菜单中创建一个服务实例。 
+1. 在 **{{site.data.keyword.texttospeechshort}}** 下，通过单击**启用位置 1** 或**启用位置 2** 来查看 {{site.data.keyword.texttospeechshort}} 服务的缺省配置。
+    * 如果要在美国南部或美国东部区域创建语音代理程序，但没有 {{site.data.keyword.texttospeechshort}} 服务实例，那么可以在**服务实例**菜单中创建一个服务实例。
     * 也可以通过更改[**服务类型**](#other_service)，将语音代理程序连接到其他 {{site.data.keyword.Bluemix_notm}} 帐户空间中的 {{site.data.keyword.texttospeechshort}} 实例。
     * 如果您想要配置多个服务位置，请单击其他位置选项，并选择**启用位置**以配置到其他 {{site.data.keyword.texttospeechshort}} 实例的连接。请参阅[添加多个 Watson 服务位置](#add_location)。
 
@@ -157,6 +157,16 @@ lastupdated: "2018-08-29"
   * **{{site.data.keyword.texttospeechshort}}**：在**语音**字段中，选择服务使用的语言和语音。您必须指定服务的语音。
 
 **请记住：**为确保语音代理程序能够正常运行，必须将 {{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}} 和 {{site.data.keyword.texttospeechshort}} 配置为使用同一语言。请参阅[支持的语言](about.html#supported-languages)。
+
+### 连接第三方服务
+{: #third-party}
+
+如果不使用 {{site.data.keyword.speechtotextshort}} 实例，那么您可以选择将语音代理程序连接到第三方语音转文字服务，例如 [Google Cloud 语音转文字 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cloud.google.com/speech-to-text/)。
+
+1. 在_语音转文字_服务配置中，请选择 **Google 语音转文字服务实例**。
+
+1. 输入 Google Cloud 语音转文字服务凭证。
+  * [设置服务帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 时，您可以在 Google Cloud 平台中生成服务凭证作为 JSON 密钥](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account)。
 
 ### 为语音代理程序配置 {{site.data.keyword.conversationshort}}
 {: #conversation_va}
