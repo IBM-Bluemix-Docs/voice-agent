@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-10-11"
 
 
 ---
@@ -40,7 +40,7 @@ _관리_ 대시보드에서 음성 에이전트를 작성, 편집, 복제, 구�
 
 1. Watson 서비스 인스턴스에 대한 연결을 구성하십시오. **위치 1** 및 **위치 2** 모두에 대한 연결을 구성하여 다중 Watson 서비스 인스턴스에 연결할 수 있습니다. 다중 서비스 인스턴스에 연결하면 가동 중단 시에 음성 에이전트가 대체 서비스 인스턴스로 전환할 수 있습니다. [다중 Watson 서비스 위치 추가](#add_location)를 참조하십시오.
 
-    **중요**: _평가판_ 및 _라이트_ 인스턴스는 {{site.data.keyword.iva_short}} 서비스 인스턴스가 작성된 위치에만 연결할 수 있습니다. 두 번째 위치는 두 번째 음성 에이전트가 아닙니다. 재해 복구를 위한 백업으로만 작동합니다.
+    **중요**: _평가판_ 및 _Lite_ 인스턴스는 {{site.data.keyword.iva_short}} 서비스 인스턴스가 작성된 위치에만 연결할 수 있습니다. 두 번째 위치는 두 번째 음성 에이전트가 아닙니다. 재해 복구를 위한 백업으로만 작동합니다.
 
 1. **{{site.data.keyword.conversationshort}}** 아래에서 **위치 1 사용** 또는 **위치 2 사용**을 클릭하여 {{site.data.keyword.conversationshort}} 서비스 인스턴스에 대한 연결을 구성하십시오. 자신이나 다른 사용자가 소유하는 {{site.data.keyword.Bluemix_notm}} 계정에서 {{site.data.keyword.conversationshort}} 인스턴스나 {{site.data.keyword.virtualagentfull}} 인스턴스를 사용할 수 있습니다. 서비스 오케스트레이션 엔진을 통해 이러한 옵션에 연결할 수도 있습니다.
 
@@ -50,12 +50,12 @@ _관리_ 대시보드에서 음성 에이전트를 작성, 편집, 복제, 구�
 
 1. **{{site.data.keyword.speechtotextshort}}**에서 **위치 1 사용** 또는 **위치 2 사용**을 클릭하여 {{site.data.keyword.speechtotextshort}} 서비스 인스턴스에 대한 기본 구성을 검토하십시오. 다음에 따라 구성을 사용자 정의할 수 있습니다.
     * 미국 남부 또는 미국 동부 지역에서 음성 에이전트를 작성 중이며 {{site.data.keyword.speechtotextshort}} 서비스 인스턴스가 없는 경우에는 **서비스 인스턴스** 메뉴에서 서비스 인스턴스를 작성할 수 있습니다.
-    * [**서비스 유형**](#other_service)을 선택하여 음성 에이전트를 다른 {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.speechtotextshort}} 인스턴스에 연결하십시오.
+    * 음성 에이전트를 다른 {{site.data.keyword.Bluemix_notm}} 또는 Google Cloud Speech-to-Text와 같은 [서드파티 음성-문자 변환 서비스](#third-party)의 {{site.data.keyword.speechtotextshort}} 인스턴스에 연결하려면 [**서비스 유형**](#other_service)을 선택하십시오.
     * 다중 서비스 위치를 구성하려면 기타 위치 옵션을 클릭하고 **위치 사용**을 선택하여 기타 {{site.data.keyword.speechtotextshort}} 인스턴스에 대한 연결을 구성하십시오. [다중 Watson 서비스 위치 추가](#add_location)를 참조하십시오.
     * **중요:** {{site.data.keyword.iva_short}}은 협대역 모델만 지원합니다.
 
-1. **{{site.data.keyword.texttospeechshort}}**에서 **위치 1 사용** 또는 **위치 2 사용**을 클릭하여 {{site.data.keyword.texttospeechshort}} 서비스 인스턴스의 기본 구성을 검토하십시오. 
-    * 미국 남부 또는 미국 동부 지역에서 음성 에이전트를 작성 중이며 {{site.data.keyword.texttospeechshort}} 서비스 인스턴스가 없는 경우에는 **서비스 인스턴스** 메뉴에서 서비스 인스턴스를 작성할 수 있습니다. 
+1. **{{site.data.keyword.texttospeechshort}}**에서 **위치 1 사용** 또는 **위치 2 사용**을 클릭하여 {{site.data.keyword.texttospeechshort}} 서비스 인스턴스의 기본 구성을 검토하십시오.
+    * 미국 남부 또는 미국 동부 지역에서 음성 에이전트를 작성 중이며 {{site.data.keyword.texttospeechshort}} 서비스 인스턴스가 없는 경우에는 **서비스 인스턴스** 메뉴에서 서비스 인스턴스를 작성할 수 있습니다.
     * 또는 [**서비스 유형**](#other_service)을 변경하여 음성 에이전트를 다른 {{site.data.keyword.Bluemix_notm}} 계정 영역의 {{site.data.keyword.texttospeechshort}} 인스턴스에 연결할 수 있습니다.
     * 다중 서비스 위치를 구성하려면 기타 위치 옵션을 클릭하고 **위치 사용**을 선택하여 기타 {{site.data.keyword.texttospeechshort}} 인스턴스에 대한 연결을 구성하십시오. [다중 Watson 서비스 위치 추가](#add_location)를 참조하십시오.
 
@@ -68,23 +68,23 @@ _관리_ 대시보드에서 음성 에이전트를 작성, 편집, 복제, 구�
 ## 최대 동시 연결 수 편집
 {: #edit_concurrency}
 
-_표준_ 플랜을 사용하는 경우 기본 설정에서 최대 동시 연결 수를 변경할 수 있습니다. 모든 플랜에서 사용자는 무료로 2개의 동시 연결을 수신합니다. 자세한 정보는 [가격 책정 플랜](https://console.bluemix.net/catalog/services/voice-agent-with-watson)을 참조하십시오.
+_표준_ 플랜을 사용하는 경우 기본 설정에서 최대 동시 연결 수를 변경할 수 있습니다. 모든 플랜에서 사용자는 무료로 2개의 동시 연결을 수신합니다. 자세한 정보는 [가격 플랜](https://console.bluemix.net/catalog/services/voice-agent-with-watson)을 참조하십시오.
 
 _관리_ 대시보드에서 _최대 동시 연결 수**에 나열된 플랜에서 허용된 최대 동시 연결 수를 볼 수 있습니다. 또한 **사용된 최대 동시 연결 수**에서 당월 중에 음성 에이전트에 의해 사용된 최대 동시 연결 수를 볼 수 있습니다.
 
 플랜에서 최대 동시 연결 수를 변경하려면 **편집** 아이콘을 클릭하십시오. _최대 동시 연결 수 편집_ 창에서 최대 동시 연결 수를 선택하고 **저장**을 클릭하십시오. 셀프 서비스를 통해 설정할 수 있는 최소 동시 연결 수는 10개이며 최대값은 50개입니다. 음성 에이전트에 대한 50개가 넘는 동시 연결이 필요한 경우 [지원되는 네트워크 설정 요청](connect-SIP.html#request-setup)을 참조하십시오.
 
-### 동시 연결 가격 책정 정보
+### 동시 연결 가격 정보
 {: #concurrent-charge}
 
-  * _라이트_, _평가판_ 및 _표준_ 플랜에는 비용 없이 2개의 동시 연결이 포함됩니다.
+  * _Lite_, _평가판_ 및 _표준_ 플랜에는 비용 없이 2개의 동시 연결이 포함됩니다.
   * _프리미엄_ 플랜은 인스턴스로 사용자 정의됩니다.
   * _표준_ 플랜에는 최소 10개의 동시 연결 용량이 있습니다.
   * 동시 연결 사용은 월 단위입니다. 하루에 2개가 넘는 동시 연결을 사용하는 경우 일 단위로 비용이 청구됩니다.
   * _표준_ 또는 _프리미엄_ 플랜이 있는 경우 더 많은 동시 연결 용량을 구매할 수 있습니다.
   * 하루에 사용한 최대 동시 연결 용량에 대해 일 단위로 비용이 청구됩니다. 예를 들어, 사용자 플랜이 2개의 동시 연결을 무료로 지원하고 사용자는 최대 연결 한계를 12개로 설정하는 경우가 있기 때문입니다. 하루에 5개만 사용하는 경우 3개에 대해 비용이 청구됩니다.
 
-플랜, 요금 및 기능에 대한 자세한 정보는 [가격 책정 플랜](https://console.bluemix.net/catalog/services/voice-agent-with-watson)을 참조하십시오.
+플랜, 요금 및 기능에 대한 자세한 정보는 [가격 플랜](https://console.bluemix.net/catalog/services/voice-agent-with-watson)을 참조하십시오.
 
 ## 음성 에이전트 편집
 {: #edit_va}
@@ -122,7 +122,7 @@ _관리_ 대시보드에서 _최대 동시 연결 수**에 나열된 플랜에�
 ### 복수의 Watson 서비스 위치 추가
 {: #add_location}
 
-_표준_ 또는 _프리미엄_ 인스턴스가 있는 경우 서비스 중복성을 위해 서로 다른 위치의 여러 Watson 서비스에 음성 에이전트를 연결할 수 있습니다. _평가판_ 및 _라이트_ 인스턴스는 {{site.data.keyword.iva_short}} 서비스 인스턴스가 작성된 위치에만 연결할 수 있습니다. 두 번째 위치는 두 번째 음성 에이전트가 아닙니다. 재해 복구를 위한 백업으로만 작동합니다.
+_표준_ 또는 _프리미엄_ 인스턴스가 있는 경우 서비스 중복성을 위해 서로 다른 위치의 여러 Watson 서비스에 음성 에이전트를 연결할 수 있습니다. _평가판_ 및 _Lite_ 인스턴스는 {{site.data.keyword.iva_short}} 서비스 인스턴스가 작성된 위치에만 연결할 수 있습니다. 두 번째 위치는 두 번째 음성 에이전트가 아닙니다. 재해 복구를 위한 백업으로만 작동합니다.
 
 음성 에이전트는 지리적 거리순으로 Watson 서비스 인스턴스를 사용합니다. 예를 들어, 미국 동부 지역에서 음성 에이전트를 작성하고 미국 남부와 시드니(호주)에서 {{site.data.keyword.conversationshort}} 서비스를 작성할 수 있습니다. 미국 남부가 지리적으로 시드니보다 미국 동부에 더 가깝기 때문에 음성 에이전트는 {{site.data.keyword.conversationshort}} 미국 남부 지역을 사용합니다. 여러 지역의 Watson 서비스에 연결하면 Watson 서비스가 한 위치에서 오프라인인 경우에 음성 에이전트가 여분의 서비스를 사용할 수 있습니다.
 
@@ -137,17 +137,17 @@ _표준_ 또는 _프리미엄_ 인스턴스가 있는 경우 서비스 중복성
 ### 다른 {{site.data.keyword.Bluemix_notm}} 작업공간에서 서비스 인스턴스 사용
 {: #other_service}
 
-다른 {{site.data.keyword.Bluemix_short}} 계정의 작업공간에 속해 있는 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 또는 {{site.data.keyword.speechtotextshort}} 서비스 인스턴스를 사용하도록 음성 에이전트를 구성할 수 있습니다. 음성 에이전트를 기타 서비스 인스턴스에 연결하려면 서비스 인스턴스에 대한 API 키 또는 사용자 이름과 비밀번호 신임 정보를 사용할 수 있습니다.
+다른 {{site.data.keyword.Bluemix_short}} 계정의 작업공간에 속해 있는 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 또는 {{site.data.keyword.speechtotextshort}} 서비스 인스턴스를 사용하도록 음성 에이전트를 구성할 수 있습니다. 음성 에이전트를 기타 서비스 인스턴스에 연결하려면 서비스 인스턴스에 대한 API 키 또는 사용자 이름과 비밀번호 인증 정보를 사용할 수 있습니다.
 
 1. **서비스 유형** 및 **지역**을 선택하십시오.
 
-1. **사용자 이름 및 비밀번호** 또는 **API 키**를 선택하고 서비스 신임 정보를 입력하십시오.
-  이러한 값을 찾으려면 구성할 서비스 인스턴스로 이동하여 **서비스 신임 정보**를 선택한 후 **신임 정보 보기**를 선택하십시오.
+1. **사용자 이름 및 비밀번호** 또는 **API 키**를 선택하고 서비스 인증 정보를 입력하십시오.
+  이러한 값을 찾으려면 구성할 서비스 인스턴스로 이동하여 **서비스 인증 정보**를 선택한 후 **인증 정보 보기**를 선택하십시오.
 
-  * **사용자 이름 및 비밀번호**: **URL**, **사용자 이름** 및 **비밀번호** 필드에서 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 또는 {{site.data.keyword.texttospeechshort}} 서비스 인스턴스에 대한 신임 정보를 구성하십시오.
-  * **API 키**: **URL** 및 **API 키** 필드에서 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 또는 {{site.data.keyword.texttospeechshort}} 서비스 인스턴스에 대한 신임 정보를 구성하십시오.
+  * **사용자 이름 및 비밀번호**: **URL**, **사용자 이름** 및 **비밀번호** 필드에서 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 또는 {{site.data.keyword.texttospeechshort}} 서비스 인스턴스에 대한 인증 정보를 구성하십시오.
+  * **API 키**: **URL** 및 **API 키** 필드에서 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 또는 {{site.data.keyword.texttospeechshort}} 서비스 인스턴스에 대한 인증 정보를 구성하십시오.
 
-  신임 정보는 {{site.data.keyword.Bluemix_notm}} 사용자 이름 및 비밀번호가 아니라 특정 서비스 인스턴스에 대한 암호화된 신임 정보입니다.
+  인증 정보는 {{site.data.keyword.Bluemix_notm}} 사용자 이름 및 비밀번호가 아니라 특정 서비스 인스턴스에 대한 암호화된 인증 정보입니다.
   {:tip}
 
 1. 서비스 인스턴스 정보를 입력하십시오.
@@ -158,12 +158,22 @@ _표준_ 또는 _프리미엄_ 인스턴스가 있는 경우 서비스 중복성
 
 **중요:** 음성 에이전트가 작동하려면 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 및 {{site.data.keyword.texttospeechshort}}를 동일한 언어로 구성해야 합니다. [지원되는 언어](about.html#supported-languages)를 참조하십시오.
 
+### 서드파티 서비스와 연결
+{: #third-party}
+
+{{site.data.keyword.speechtotextshort}} 인스턴스를 사용하는 대신 음성 에이전트를 서드파티 음성-문자 변환 서비스(예: [Google Cloud Speech-to-Text ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.google.com/speech-to-text/))에 연결하도록 선택할 수 있습니다.
+
+1. _Speech to Text_ 서비스 구성에서 **Google Speech to Text 서비스 인스턴스**를 선택하십시오.
+
+1. Google Cloud Speech-to-Text 서비스 인증 정보를 입력하십시오.
+  * [서비스 계정을 설정할 때 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account) Google Cloud Platform에서 서비스 인증 정보를 JSON 키로 생성할 수 있습니다.
+
 ### 음성 에이전트에 대한 {{site.data.keyword.conversationshort}} 구성
 {: #conversation_va}
 
 {{site.data.keyword.conversationshort}} 서비스 인스턴스를 구성하는 대신 서비스 오케스트레이션 엔진(SOE) 또는 Watson {{site.data.keyword.virtualagentshort}}에 연결할 수 있습니다.
 
-* **서비스 오케스트레이션 엔진**: [서비스 오케스트레이션 엔진(SOE)](about.html#arch-soe)을 통해 {{site.data.keyword.conversationshort}} 작업공간 또는 {{site.data.keyword.virtualagentshort}}에 액세스하십시오. SOE는 써드파티 API를 사용하여 수정할 수 있도록 서비스로 보내고 받는 메시지를 인터셉트합니다.
+* **서비스 오케스트레이션 엔진**: [서비스 오케스트레이션 엔진(SOE)](about.html#arch-soe)을 통해 {{site.data.keyword.conversationshort}} 작업공간 또는 {{site.data.keyword.virtualagentshort}}에 액세스하십시오. SOE는 서드파티 API를 사용하여 수정할 수 있도록 서비스로 보내고 받는 메시지를 인터셉트합니다.
 
   **URL** 필드에 SOE 작업공간의 전체 URL(예: `https://iva-soesample.myorg.net/SOE/myWorkspace`)을 입력하십시오. SOE에 인증이 필요한 경우(권장됨) 사용자 이름과 비밀번호를 각 필드에 입력하십시오.
 
@@ -171,4 +181,4 @@ _표준_ 또는 _프리미엄_ 인스턴스가 있는 경우 서비스 중복성
 
 * **Watson {{site.data.keyword.virtualagentshort}}**: {{site.data.keyword.conversationshort}} 작업공간 대신 {{site.data.keyword.virtualagentshort}} 챗봇에 연결하십시오. [{{site.data.keyword.virtualagentshort}}](../virtual-agent/getting-started.html#getting-started)는 {{site.data.keyword.conversationshort}} 서비스를 기반으로 빌드되었지만 기계 학습 경험 없이 시작할 수 있도록 사전 학습된 기능을 제공합니다.
 
-  **URL** 필드에 {{site.data.keyword.virtualagentshort}}의 URL 신임 정보(예: `https://api.ibm.com/virtualagent/run/api`)를 입력하십시오. **클라이언트 ID** 및 **클라이언트 시크릿** 필드에는 API 호출에 대한 `X-IBM-Client-Id` 및 `X-IBM-Client-Secret` 헤더 파일에 맵핑되는 인증 키를 입력하십시오. **봇 ID** 필드에 이 음성 에이전트용으로 사용할 봇의 ID를 입력하십시오. 이러한 값을 찾는 방법에 대한 정보는 {{site.data.keyword.virtualagentshort}} 문서에서 [에이전트 공개](../virtual-agent/publish.html)를 참조하십시오.
+  **URL** 필드에 {{site.data.keyword.virtualagentshort}}의 URL 인증 정보(예: `https://api.ibm.com/virtualagent/run/api`)를 입력하십시오. **클라이언트 ID** 및 **클라이언트 시크릿** 필드에는 API 호출에 대한 `X-IBM-Client-Id` 및 `X-IBM-Client-Secret` 헤더 파일에 맵핑되는 인증 키를 입력하십시오. **봇 ID** 필드에 이 음성 에이전트용으로 사용할 봇의 ID를 입력하십시오. 이러한 값을 찾는 방법에 대한 정보는 {{site.data.keyword.virtualagentshort}} 문서에서 [에이전트 공개](../virtual-agent/publish.html)를 참조하십시오.

@@ -24,7 +24,7 @@ lastupdated: "2018-08-13"
 
 1. [{{site.data.keyword.iva_short}} 카탈로그 페이지](https://console.bluemix.net/catalog/services/voice-agent-with-watson)로 이동하십시오.
 
-   카탈로그 페이지에는 서비스 및 가격 책정 플랜에 대한 정보가 있습니다. **서비스 이름** 값을 변경할 수 있습니다.
+   카탈로그 페이지에는 서비스 및 가격 플랜에 대한 정보가 있습니다. **서비스 이름** 값을 변경할 수 있습니다.
 
 2. **작성**을 클릭하십시오.
 
