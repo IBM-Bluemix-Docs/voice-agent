@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -146,7 +146,7 @@ The following table lists the actions that you can specify in the {{site.data.ke
 ## Setting states
 {: #setting-states}
 
-To indicate a change of state that remains between conversation turns, the voice agent exchanges state variables with the configured {{site.data.keyword.conversationfull}} service. These state variables are defined on a {{site.data.keyword.conversationshort}} dialog node as [context variables](https://console.bluemix.net/docs/services/conversation/dialog-build.html#context) in JSON format.
+To indicate a change of state that remains between conversation turns, the voice agent exchanges state variables with the configured {{site.data.keyword.conversationfull}} service. These state variables are defined on a {{site.data.keyword.conversationshort}} dialog node as [context variables](../conversation/dialog-build.html#context) in JSON format.
 
 For example, you can define following state variable to set the message that is streamed to the caller if the connection to the  {{site.data.keyword.conversationshort}} service fails.
 

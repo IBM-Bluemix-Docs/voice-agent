@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent/getting-started.html"}
+{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent/getting-started.html" path="services/voice-agent"}
 IBM Voice Agent with Watson
 
     {: .navgroup id="learn"}
@@ -17,15 +17,15 @@ IBM Voice Agent with Watson
 
     {: .topicgroup}
     Watson services
-        [Watson Assistant](https://console.bluemix.net/docs/services/conversation/index.html){: new_window}
-        [Speech to Text](https://console.bluemix.net/docs/services/speech-to-text/index.html){: new_window}
-        [Text to Speech](https://console.bluemix.net/docs/services/text-to-speech/index.html){: new_window}
+        [Watson Assistant](services/conversation/index.html){: new_window}
+        [Speech to Text](services/speech-to-text/index.html){: new_window}
+        [Text to Speech](services/text-to-speech/index.html){: new_window}
 
     {: .topicgroup}
     Information security and data privacy
-        [Information security and data privacy](infosec.html)
-        [Information handling and configuration options](infosec.html#configure_infosec)
-        [Services related to IBM Voice Agent with Watson](infosec.html#related_services)
+        [Information security and data privacy](services/voice-agent/infosec.html)
+        [Information handling and configuration options](services/voice-agent/infosec.html#configure_infosec)
+        [Services related to IBM Voice Agent with Watson](services/voice-agent/infosec.html#related_services)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

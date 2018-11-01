@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -51,6 +51,7 @@ After you create the service, make note of the voice agent endpoint on the _Gett
   * **Name:** A unique name for your voice agent, such as `Customer Support`
   * **Phone number:** The full phone number that you associated with your SIP trunk, including the country and area codes. For example, for a United States 800 number, specify the phone number as 18883334444. The phone number can have spaces and + ( ) - characters.
   * **Description:** An optional description of its use
+  * **Transfer default target:** An optional termination URI that calls can be transferred to. 
 
 3. Create the {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, and {{site.data.keyword.texttospeechshort}} service instances for your voice agent. You can choose to create a voice agent with either of the following methods:
   * Click **Create a voice agent** to create all of the services and a voice agent with the default configuration in a single step.
@@ -61,7 +62,8 @@ After you create the service, make note of the voice agent endpoint on the _Gett
    1. On the sample conversation GitHub page, click the `1` line number and select **... > Copy line**. Paste the copied text into a file, and save it as a JSON file such as `voice-gateway-conversation-en.json`.
    2. Launch the {{site.data.keyword.conversationshort}} tool. On the _Workspaces_ page, click the ![Import workspace](../conversation/images/workspace_import.png) icon and import the JSON file.
 
-  Alternatively, you can [build your own dialog](https://console.bluemix.net/docs/services/conversation/dialog-build.html) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and a node with a default response.
+  Alternatively, you can [build your own dialog](../conversation/dialog-build.html) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and a node with a default response.
+
 
 ## Next steps
 {: #next}
