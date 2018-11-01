@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-11"
+lastupdated: "2018-10-31"
 
 
 ---
@@ -36,13 +36,13 @@ When you create a voice agent, {{site.data.keyword.iva_short}} automatically sea
 
 1. Optionally describe your voice agent.
 
-1. If you want to enable call transfer, you can configure a termination URI for your **Transfer Target**. See [Setting up call transfer](call-transfer.html). Do not use a personal phone number for your transfer target.
+1. If you want to enable call transfer, enter the termination URI for your **Transfer default target**. See [Setting up call transfer](call-transfer.html) for information about how to set up a termination URI. Do not use a personal phone number for your transfer target.
 
 1. Configure the connections to your Watson service instances. You can connect to multiple Watson service instances by configuring connections for both **Location 1** and **Location 2**. Having connections to multiple service instances enables your voice agent to switch to an alternate service instance if an outage occurs. See [Adding multiple Watson service locations](#add_location).
 
     **Important**: _Trial_ and _Lite_ instances can connect only to the location where your {{site.data.keyword.iva_short}} service instance is created. Your second location is not a second voice agent. It acts only as a backup for disaster recovery.
 
-1. Under **{{site.data.keyword.conversationshort}}**, configure the connection to your {{site.data.keyword.conversationshort}} service instance by clicking **Enable location 1** or **Enable location 2**. You can use {{site.data.keyword.conversationshort}} instances or {{site.data.keyword.virtualagentfull}} instances in {{site.data.keyword.Bluemix_notm}} accounts that you or someone else owns. You can also connect to any of these options through a service orchestration engine.
+1. Under **{{site.data.keyword.conversationshort}}**, configure the connection to your {{site.data.keyword.conversationshort}} service instance by clicking **Enable location 1** or **Enable location 2**. You can use {{site.data.keyword.conversationshort}} instances instances in {{site.data.keyword.Bluemix_notm}} accounts that you or someone else owns. You can also connect to any of these options through a service orchestration engine.
 
     * If you are creating a voice agent in either the US South or US East region and do not have a {{site.data.keyword.conversationshort}} service instance, you can create one in the **Service instance** menu.
     * Alternatively, you can connect to other sources of a {{site.data.keyword.conversationshort}} dialog by changing the [**Service type**](#other_service).
@@ -84,7 +84,7 @@ If you want to change the maximum number of concurrent connections in your plan,
   * If you have a _Standard_ or _Premium_ plan, you can purchase a greater concurrent connection capacity.
   * You are charged a daily rate for the maximum concurrent connection capacity that you use in a day. For example, because your plan supports 2 concurrent connections free, and you set a maximum limit of 12 connections. If you use only 5 in a day, you are charged for 3.
 
-For more information about plans, rates, and features, see [Pricing plans](https://console.bluemix.net/catalog/services/voice-agent-with-watson).
+For more information about plans, rates, and features, see [Pricing plans](https://console.ibm.cloud.com/catalog/services/voice-agent-with-watson).
 
 ## Editing a voice agent
 {: #edit_va}
@@ -168,17 +168,13 @@ Instead of using a {{site.data.keyword.speechtotextshort}} instance, you can cho
 1. Enter your Google Cloud Speech-to-Text service credentials.
   * You can generate your service credentials in the Google Cloud Platform as a JSON key when you [set up a service account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account).
 
-### Configuring {{site.data.keyword.conversationshort}} for your voice agent
+### Configuring {{site.data.keyword.conversationshort}} with a Service Orchestration Engine
 {: #conversation_va}
 
-As an alternative to configuring a {{site.data.keyword.conversationshort}} service instance, you can connect to a service orchestration engine (SOE) or Watson {{site.data.keyword.virtualagentshort}}.
+As an alternative to configuring a {{site.data.keyword.conversationshort}} service instance, you can connect to a service orchestration engine (SOE).
 
-* **Service orchestration engine**: Connect to a {{site.data.keyword.conversationshort}} workspace or {{site.data.keyword.virtualagentshort}} through a [service orchestration engine (SOE)](about.html#arch-soe). An SOE intercepts messages to and from the service so that you can modify them by using third-party APIs.
+You can connect to a {{site.data.keyword.conversationshort}} workspace through a [service orchestration engine (SOE)](about.html#arch-soe). An SOE intercepts messages to and from the service so that you can modify them by using third-party APIs.
 
   In the **URL** field, enter the full URL to your SOE workspace, such as `https://iva-soesample.myorg.net/SOE/myWorkspace`. If your SOE requires authentication (recommended), enter the user name and password in the respective fields.
 
   **Important**: For data security, make sure that you use a secure URL for your SOE workspace, by using `https:` instead of `http:`, and require authentication. See [Information security and data privacy](infosec.html) to learn more about security considerations.
-
-* **Watson {{site.data.keyword.virtualagentshort}}**: Connect to a {{site.data.keyword.virtualagentshort}} chatbot instead of a {{site.data.keyword.conversationshort}} workspace. [{{site.data.keyword.virtualagentshort}}](../virtual-agent/getting-started.html#getting-started) is built on the {{site.data.keyword.conversationshort}} service, but it provides pre-trained capabilities so you can get started with zero machine-learning experience.
-
-  In the **URL** field, enter the URL credential for {{site.data.keyword.virtualagentshort}}, such as `https://api.ibm.com/virtualagent/run/api`. For the **Client ID** and **Client secret** fields, enter the authentication keys, which map to the `X-IBM-Client-Id` and `X-IBM-Client-Secret` header fields for API calls. In the **Bot ID** field, enter the ID for the bot to use for this voice agent. For more information about how to find these values, see [Publishing the agent](../virtual-agent/publish.html) in the {{site.data.keyword.virtualagentshort}} documentation.

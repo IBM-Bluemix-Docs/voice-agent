@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -23,7 +23,7 @@ You can set up call transfer so that if a caller requests to speak to a live age
 ## About call transfer
 {: #about-ct}
 
-By enabling call transfer, if a caller requests to speak with a live agent during conversation, the voice agent will redirect the call. You can enable call transfer by setting a termination URI in your SIP provider configuration. Then, you define the transfer target on an API action in a dialog node of your {{site.data.keyword.conversationshort}} instance. Your transfer target is a SIP URI that contains the termination URI and phone number.
+By enabling call transfer, if a caller requests to speak with a live agent during conversation, the voice agent will redirect the call. You can enable call transfer by setting a termination URI in your SIP provider configuration. Then, you configure the transfer target or define an API action in a dialog node of your {{site.data.keyword.conversationshort}} instance. Your transfer target is a SIP URI that contains the termination URI and phone number.
 
 For more information about supported actions and customizing your voice agents, see [Programming voice agents using the API](api.html).
 
@@ -35,7 +35,7 @@ For more information about supported actions and customizing your voice agents, 
 
 Make note of the phone number in your [NetFoundry account![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson.netfoundry.io/watson-login){: new_window} that you want to transfer to. Later, you can specify this phone number and the termination URI as the transfer target in your {{site.data.keyword.conversationshort}} dialog. Do not use a personal phone number.
 
-You can copy the following NetFoundry termination URI to use in the transfer target.
+You can copy the following NetFoundry termination URI for when you create your voice agent or to use as the transfer target in your {{site.data.keyword.conversationshort}} dialog.
 
 ```
 dal.watson-va.netfoundry.net
@@ -67,7 +67,7 @@ You do not need to manually configure the termination URI in your NetFoundry acc
 
 Make note of the phone number and termination URI that you want to transfer to. Make sure that the phone number is not a personal phone number.
 
-You can use the phone number and termination URI to specify the transfer target in your {{site.data.keyword.conversationshort}} dialog.
+You can use the phone number and termination URI for when you create your voice agent or to use as the transfer target in your {{site.data.keyword.conversationshort}} dialog.
 
 
 ## Step 2: Configuring {{site.data.keyword.conversationshort}} for call transfer

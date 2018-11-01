@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -25,9 +25,9 @@ lastupdated: "2018-06-13"
 {{site.data.keyword.iva_short}} is one of several components in the overall architecture of your environment, which can include the following elements:
 
 * A voice agent based on [IBM Voice Gateway ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS4U29/), which orchestrates the following Watson services:
-  * [{{site.data.keyword.speechtotextshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/speech-to-text/index.html): Converts the caller's audio into text
-  * [{{site.data.keyword.conversationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/conversation/index.html) or [{{site.data.keyword.virtualagentshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/virtual-agent/getting-started.html#getting-started): Analyzes the text, maps it to intents, and provides a response according to a dialog that you create
-  * [{{site.data.keyword.texttospeechshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/text-to-speech/index.html): Converts the response into voice audio
+  * [{{site.data.keyword.speechtotextshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](../speech-to-text/index.html): Converts the caller's audio into text
+  * [{{site.data.keyword.conversationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](../conversation/index.html): Analyzes the text, maps it to intents, and provides a response according to a dialog that you create
+  * [{{site.data.keyword.texttospeechshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](../text-to-speech/index.html): Converts the response into voice audio
 * A SIP trunk, which connects your voice agent to the telephone network
 * An optional service orchestration engine (SOE), which sits between the {{site.data.keyword.conversationshort}} service and your voice agent so that you can further customize your environment
 
@@ -44,7 +44,7 @@ The following steps outline the conversation flow.
 1. The caller asks a question.
 1. The question is streamed to the {{site.data.keyword.speechtotextshort}} service.
 1. A text utterance is returned.
-1. The text is sent to the {{site.data.keyword.conversationshort}} service or {{site.data.keyword.virtualagentshort}} as a message request.
+1. The text is sent to the {{site.data.keyword.conversationshort}} service as a message request.
 1. A message response is returned.
 1. The response text is sent to the {{site.data.keyword.texttospeechshort}} service.
 1. Synthesized audio is returned.
@@ -60,7 +60,7 @@ You can use SIP trunks to quickly set up and test your environment from the publ
 ### Architecture with a service orchestration engine
 {: #arch-soe}
 
-When you configure the {{site.data.keyword.conversationshort}} service, you can include a service orchestration engine (SOE) to customize the communication between {{site.data.keyword.iva_short}} and the service. The service orchestration engine acts as a proxy for the {{site.data.keyword.conversationshort}} service, by intercepting message requests and responses and modifying them by using third-party APIs. {{site.data.keyword.iva_short}} and the {{site.data.keyword.conversationshort}} service communicate through the {{site.data.keyword.conversationshort}} service's REST API, sending request data by using the `MessageRequest` method and receiving a corresponding JSON response. You can also use an SOE as a proxy for {{site.data.keyword.virtualagentshort}}, where it acts in the same way.
+When you configure the {{site.data.keyword.conversationshort}} service, you can include a service orchestration engine (SOE) to customize the communication between {{site.data.keyword.iva_short}} and the service. The service orchestration engine acts as a proxy for the {{site.data.keyword.conversationshort}} service, by intercepting message requests and responses and modifying them by using third-party APIs. {{site.data.keyword.iva_short}} and the {{site.data.keyword.conversationshort}} service communicate through the {{site.data.keyword.conversationshort}} service's REST API, sending request data by using the `MessageRequest` method and receiving a corresponding JSON response.
 
 ![Message requests and responses between {{site.data.keyword.iva_short}} and the {{site.data.keyword.conversationshort}} service flow through a service orchestration engine, which modifies them.](images/arch-soe.png)
 
@@ -88,7 +88,7 @@ To learn more about how to implement a service orchestration engine, see the [se
 ## Supported languages
 {: #supported-languages}
 
-For a language to be supported, it must be supported by all Watson services that you configure in your voice agent. Using the {{site.data.keyword.speechtotextshort}} and {{site.data.keyword.texttospeechshort}} services and either {{site.data.keyword.conversationshort}} or {{site.data.keyword.virtualagentshort}}, the following languages are supported:
+For a language to be supported, it must be supported by all Watson services that you configure in your voice agent. Using the {{site.data.keyword.speechtotextshort}}, {{site.data.keyword.texttospeechshort}}, and {{site.data.keyword.conversationshort}} services, the following languages are supported:
 
 * Brazilian Portuguese
 * Japanese
