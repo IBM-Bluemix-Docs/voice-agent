@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -35,7 +35,7 @@ For more information about supported actions and customizing your voice agents, 
 
 Make note of the phone number in your [NetFoundry account![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson.netfoundry.io/watson-login){: new_window} that you want to transfer to. Later, you can specify this phone number and the termination URI as the transfer target in your {{site.data.keyword.conversationshort}} dialog. Do not use a personal phone number.
 
-You can copy the following NetFoundry termination URI for when you create your voice agent or to use as the transfer target in your {{site.data.keyword.conversationshort}} dialog.
+You can copy the following NetFoundry termination URI to use when creating your voice agent or configuring the transfer target in your {{site.data.keyword.conversationshort}} dialog.
 
 ```
 dal.watson-va.netfoundry.net
@@ -67,7 +67,7 @@ You do not need to manually configure the termination URI in your NetFoundry acc
 
 Make note of the phone number and termination URI that you want to transfer to. Make sure that the phone number is not a personal phone number.
 
-You can use the phone number and termination URI for when you create your voice agent or to use as the transfer target in your {{site.data.keyword.conversationshort}} dialog.
+You can use the phone number and termination URI to use when creating your voice agent or configuring the transfer target in your {{site.data.keyword.conversationshort}} dialog.
 
 
 ## Step 2: Configuring {{site.data.keyword.conversationshort}} for call transfer
