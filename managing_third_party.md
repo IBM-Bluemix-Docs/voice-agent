@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-11-16"
 
 
 ---
@@ -67,7 +67,7 @@ Instead of using a {{site.data.keyword.speechtotextfull}} instance, you can choo
   {: tip}
 
 ## Connecting to Google Text-to-Speech from {{site.data.keyword.iva_short}}
-{: #stt_va}
+{: #tts_va}
 
 Instead of using a {{site.data.keyword.texttospeechfull}} instance, you can choose to connect your voice agent to a third-party speech to text service, such as [Google Cloud Text-to-Speech ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/text-to-speech/).
 

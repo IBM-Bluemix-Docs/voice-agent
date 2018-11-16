@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -41,12 +41,12 @@ You can configure your voice agent to forward reporting events to a {{site.data.
 
 See [Enabling event forwarding](event-forwarding.html) to configure your voice agents to forward reporting events.
 
-See [**{{site.data.keyword.cloudant_short_notm}}: Security**](../Cloudant/offerings/security.html#security){: #new_window} for more information about data privacy and information security for {{site.data.keyword.cloudant_short_notm}}.
+See [**{{site.data.keyword.cloudant_short_notm}}: Security**](../Cloudant/offerings/security.html#security){: new_window} for more information about data privacy and information security for {{site.data.keyword.cloudant_short_notm}}.
 
 ### Text to Speech caching
 {: #tts_caching}
 
-To converse with customers, {{site.data.keyword.conversationshort}} crafts responses as text, which are passed to the {{site.data.keyword.texttospeechshort}} service and spoken aloud in {{site.data.keyword.iva_short}}. The responses that {{site.data.keyword.conversationshort}} creates might contain sensitive information. To prevent the {{site.data.keyword.iva_short}} from caching responses received from the {{site.data.keyword.texttospeechshort}} service that contain personal data, you can enable the `vgwActExcludeFromTTSCache` action command to exclude utterances that contain certain types of information from being cached. See [Programming voice agents using the API](api.html#action-sequencess).
+To converse with customers, {{site.data.keyword.conversationshort}} crafts responses as text, which are passed to the {{site.data.keyword.texttospeechshort}} service and spoken aloud in {{site.data.keyword.iva_short}}. The responses that {{site.data.keyword.conversationshort}} creates might contain sensitive information. To prevent the {{site.data.keyword.iva_short}} from caching responses received from the {{site.data.keyword.texttospeechshort}} service that contain personal data, you can enable the `vgwActExcludeFromTTSCache` action command to exclude utterances that contain certain types of information from being cached. See [Programming voice agents using the API](api.html#action-sequences).
 
 ### Secure connections
 {: #secure_trunking}
@@ -67,8 +67,8 @@ See [Configuring {{site.data.keyword.conversationshort}} for your voice agent](m
 
 See the following resources to find considerations for each service and {{site.data.keyword.Bluemix_notm}}.
 
-  * [**{{site.data.keyword.Bluemix_short}}: Security compliance**](../../security/compliance.html)
-  * [**{{site.data.keyword.conversationfull}}: Information security**](../conversation/information-security.html){: #new_window}
-  * [**{{site.data.keyword.texttospeechfull}}: Information security**](../text-to-speech/information-security.html){: #new_window}
-  * [**{{site.data.keyword.speechtotextfull}}: Information security**](../speech-to-text/information-security.html){: #new_window}
-  * [**{{site.data.keyword.cloudant_short_notm}}: Security**](../Cloudant/offerings/security.html#security){: #new_window}
+  * [**{{site.data.keyword.Bluemix_short}}: Security compliance**](../security/compliance.html)
+  * [**{{site.data.keyword.conversationfull}}: Information security**](../conversation/information-security.html){: new_window}
+  * [**{{site.data.keyword.texttospeechfull}}: Information security**](../text-to-speech/information-security.html){: new_window}
+  * [**{{site.data.keyword.speechtotextfull}}: Information security**](../speech-to-text/information-security.html){: new_window}
+  * [**{{site.data.keyword.cloudant_short_notm}}: Security**](../Cloudant/offerings/security.html#security){: new_window}
