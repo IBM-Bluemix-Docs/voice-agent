@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-01"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -60,8 +60,8 @@ You do not need to manually configure the termination URI in your NetFoundry acc
 1. In the _Authentication_ section, click the **+** icon to add a voice agent IP address to the Access Control IP list.
 
   Add both of the following IP addresses:
-   * 169.60.154.134 (US-South service region)
-   * 169.61.86.179 (US-East service region)
+   * 169.60.154.134 (Dallas service region)
+   * 169.61.86.179 (Washington DC service region)
 
 1. Click **Save** to finish configuring your termination URI.
 

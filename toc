@@ -11,6 +11,12 @@ IBM Voice Agent with Watson
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    {: .topicgroup}
+    State variables
+        [State variables set by the voice agent](services/voice-agent/api_reference.html#state-variables-iva)
+        [State variables set in the {{site.data.keyword.conversationshort}} dialog](services/voice-agent/api_reference.html#state-variables-conv)
+
+    [Action commands and attributes](services/voice-agent/api_reference.html#actions-and-attributes)
     default-settings.md
     activity-tracker.md
     [IBM Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/welcome_voicegateway.html){: new_window}
@@ -32,11 +38,32 @@ IBM Voice Agent with Watson
     creating.md
     connect-SIP.md
     managing.md
-    api.md
-    secure-trunking.md
-    call-transfer.md
-    event-forwarding.md
+    managing_create.md
+
+    {: .topicgroup}
+    Configuring voice agents
+        [Configuring multiple service locations](services/voice-agent/managing_disaster_recovery.html)
+        [Connecting with third-party speech and text services](services/voice-agent/managing_third_party.html)
+        [Using services in other IBM Cloud workspaces](services/voice-agent/managing_other.html)
+        [Configuring a Service Orchestration Engine](services/voice-agent/managing_SOE.html)
+        [Enabling event forwarding for voice agents](services/voice-agent/event-forwarding.html)
+        [Configuring advanced options](services/voice-agent/managing.html#config-advanced)
+
+    {: .topicgroup}
+    Configure a service instance
+        managing_concurrency.md
+
+    {: .topicgroup}
+    Programming voice agents
+        api.md
+        api_dynamic_config.md
+        call-transfer.md
+
     logging.md
+
+    {: .topicgroup}
+    Securing your voice agent
+        [Securing connections](services/voice-agent/secure-trunking.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

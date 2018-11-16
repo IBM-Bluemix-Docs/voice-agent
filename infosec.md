@@ -58,7 +58,7 @@ To converse with customers, {{site.data.keyword.conversationshort}} crafts respo
 
 You can use a Service Orchestration Engine (SOE) to process information passing between {{site.data.keyword.iva_short}} and {{site.data.keyword.conversationshort}} to customize conversation with callers. To maintain secure connections, ensure that you configure your SOE by using a secure URL, `https`, and user authentication.
 
-See [Configuring {{site.data.keyword.conversationshort}} for your voice agent](managing.html#conversation_va) and [Architecture with a service orchestration engine](about.html#arch-soe).
+See [Configuring {{site.data.keyword.conversationshort}} for your voice agent](managing_SOE.html#conversation_va) and [Architecture with a service orchestration engine](about.html#arch-soe).
 
 ## Services related to {{site.data.keyword.iva_short}}
 {: #related_services}
