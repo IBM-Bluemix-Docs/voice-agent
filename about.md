@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -91,6 +91,8 @@ To learn more about how to implement a service orchestration engine, see the [se
 For a language to be supported, it must be supported by all Watson services that you configure in your voice agent. Using the {{site.data.keyword.speechtotextshort}}, {{site.data.keyword.texttospeechshort}}, and {{site.data.keyword.conversationshort}} services, the following languages are supported:
 
 * Brazilian Portuguese
+* French ({{site.data.keyword.speechtotextshort}} broadband only)
+* German ({{site.data.keyword.speechtotextshort}} broadband only)
 * Japanese
 * Spanish
 * UK English
