@@ -14,7 +14,7 @@ IBM Voice Agent with Watson
     {: .topicgroup}
     State variables
         [State variables set by the voice agent](services/voice-agent/api_reference.html#state-variables-iva)
-        [State variables set in the {{site.data.keyword.conversationshort}} dialog](services/voice-agent/api_reference.html#state-variables-conv)
+        [State variables set in the Watson Assistant dialog](services/voice-agent/api_reference.html#state-variables-conv)
 
     [Action commands and attributes](services/voice-agent/api_reference.html#actions-and-attributes)
     default-settings.md
