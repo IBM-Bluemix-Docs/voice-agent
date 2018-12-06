@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -23,7 +23,7 @@ Puoi configurare un trasferimento di chiamata in modo che se un chiamante richie
 ## Informazioni sul trasferimento di chiamata
 {: #about-ct}
 
-Abilitando il trasferimento di chiamata, se un chiamante richiede di parlare con un agent dal vivo durante la conversazione, l'agent vocale reindirizzerà la chiamata. Puoi abilitare il trasferimento di chiamata configurando un URI di terminazione nella configurazione del provider SIP. Successivamente definisci la destinazione del trasferimento in un'azione API in un nodo di dialogo della tua istanza {{site.data.keyword.conversationshort}}. La tua destinazione del trasferimento è un URI SIP che contiene l'URI di terminazione e il numero di telefono.
+Abilitando il trasferimento di chiamata, se un chiamante richiede di parlare con un agent dal vivo durante la conversazione, l'agent vocale reindirizzerà la chiamata. Puoi abilitare il trasferimento di chiamata configurando un URI di terminazione nella configurazione del provider SIP. Successivamente configura la destinazione del trasferimento o definisci un'azione API in un nodo di dialogo della tua istanza {{site.data.keyword.conversationshort}}. La tua destinazione del trasferimento è un URI SIP che contiene l'URI di terminazione e il numero di telefono.
 
 Per ulteriori informazioni dettagliate sulle azioni supportate e sulla personalizzazione dei tuoi agent vocali, consulta [Programmazione degli agent vocali utilizzando l'API](api.html).
 
@@ -35,7 +35,7 @@ Per ulteriori informazioni dettagliate sulle azioni supportate e sulla personali
 
 Prendi nota del numero di telefono nel tuo [account NetFoundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://watson.netfoundry.io/watson-login){: new_window} che desideri trasferire. In seguito, puoi specificare questo numero di telefono e l'URI di terminazione come destinazione del trasferimento nel tuo dialogo {{site.data.keyword.conversationshort}}. Non utilizzare un numero di telefono personale.
 
-Puoi copiare il seguente URI di terminazione NetFoundry da utilizzare nella destinazione del trasferimento.
+Puoi copiare il seguente URI di terminazione NetFoundry da utilizzare durante la creazione del tuo agent vocale o durante la configurazione della destinazione di trasferimento nel tuo dialogo {{site.data.keyword.conversationshort}}.
 
 ```
 dal.watson-va.netfoundry.net
@@ -60,14 +60,14 @@ Non hai bisogno di configurare manualmente l'URI di terminazione nel tuo account
 1. Nella sezione _Authentication_, fai clic sull'icona **+** per aggiungere un indirizzo IP dell'agent vocale nell'elenco Access Control IP.
 
   Aggiungi entrambi i seguenti indirizzi IP:
-   * 169.60.154.134 (regione servizio Stati Uniti Sud)
-   * 169.61.86.179 (regione servizio Stati Uniti Est)
+   * 169.60.154.134 (regione servizio Dallas)
+   * 169.61.86.179 (regione servizio Washington DC)
 
 1. Fai clic su **Save** per finire la configurazione del tuo URI di terminazione.
 
 Prendi nota del numero di telefono e dell'URI di terminazione che desideri trasferire. Assicurati che il numero di telefono non sia personale.
 
-Puoi utilizzare il numero di telefono e la terminazione URI per specificare la destinazione del trasferimento nel tuo dialogo {{site.data.keyword.conversationshort}}.
+Puoi utilizzare il numero di telefono e l'URI di terminazione durante la creazione del tuo agent vocale o durante la configurazione della destinazione di trasferimento del tuo dialogo {{site.data.keyword.conversationshort}}.
 
 
 ## Passo 2: Configurazione di {{site.data.keyword.conversationshort}} per il trasferimento di chiamata

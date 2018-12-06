@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-06-19"
 ## 關於通話轉接
 {: #about-ct}
 
-透過啟用通話轉接，如果來電者在交談期間要求與即時代理程式交談，則語音代理程式將會重新導向該通話。您可以藉由在 SIP 提供者配置中設定終止 URI，啟用通話轉接。然後，您可以在 {{site.data.keyword.conversationshort}} 實例的對話節點，在 API 動作上定義轉接目標。您的轉接目標是包含終止 URI 及電話號碼的 SIP URI。
+透過啟用通話轉接，如果來電者在交談期間要求與即時代理程式交談，則語音代理程式將會重新導向該通話。您可以藉由在 SIP 提供者配置中設定終止 URI，啟用通話轉接。然後，您可以在 {{site.data.keyword.conversationshort}} 實例的對話節點，配置轉接目標或定義 API 動作。您的轉接目標是包含終止 URI 及電話號碼的 SIP URI。
 
 如需所支援動作以及自訂語音代理程式的相關資訊，請參閱[使用 API 程式設計語音代理程式](api.html)。
 
@@ -35,7 +35,7 @@ lastupdated: "2018-06-19"
 
 記下 [NetFoundry 帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://watson.netfoundry.io/watson-login){: new_window} 中您要轉接到的電話號碼。稍後，您可以在 {{site.data.keyword.conversationshort}} 對話中將此電話號碼及終止 URI 指定為轉接目標。請不要使用個人電話號碼。
 
-您可以複製下列 NetFoundry 終止 URI，以用於轉接目標。
+您可以複製下列 NetFoundry 終止 URI，以用於建立語音代理程式或在 {{site.data.keyword.conversationshort}} 對話中配置轉接目標。
 
 ```
 dal.watson-va.netfoundry.net
@@ -60,14 +60,14 @@ dal.watson-va.netfoundry.net
 1. 在_鑑別_ 區段中，按一下 **+** 圖示，將語音代理程式 IP 位址新增至「存取控制 IP」清單。
 
   新增下列兩個 IP 位址：
-   * 169.60.154.134（美國南部服務地區）
-   * 169.61.86.179（美國東部服務地區）
+   * 169.60.154.134（達拉斯服務地區）
+   * 169.61.86.179（華盛頓特區服務地區）
 
 1. 按一下**儲存**，完成終止 URI 的配置。
 
 請記下您要轉接到的電話號碼及終止 URI。請確定電話號碼不是個人電話號碼。
 
-您可以在 {{site.data.keyword.conversationshort}} 對話中，使用電話號碼及終止 URI 來指定轉接目標。
+您可以使用電話號碼及終止 URI，以用於建立語音代理程式或在 {{site.data.keyword.conversationshort}} 對話中配置轉接目標。
 
 
 ## 步驟 2：配置 {{site.data.keyword.conversationshort}} 以進行通話轉接

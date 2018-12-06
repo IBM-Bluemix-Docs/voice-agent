@@ -37,7 +37,7 @@ Sie können den SIP-Trunk-Provider, den Sie für die Integration mit {{site.data
 
 1. Wählen Sie eine Region aus, aus der die Telefonnummer stammen soll.
 
-  **Hinweis:** Überprüfen Sie auf der Netfoundry-Website, welche Regionen verfügbar sind. Neue Regionen werden ständig hinuzugefügt.
+  **Hinweis:** Überprüfen Sie auf der NetFoundry-Website, welche Regionen verfügbar sind. Neue Regionen werden ständig hinzugefügt.
 
 1. Klicken Sie auf **Kaufen** und führen Sie die Anweisungen in der Anzeige aus, um den Kauf abzuschließen.
 

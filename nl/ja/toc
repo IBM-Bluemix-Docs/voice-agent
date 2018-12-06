@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent/getting-started.html"}
+{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent/getting-started.html" path="services/voice-agent"}
 IBM Voice Agent with Watson
 
     {: .navgroup id="learn"}
@@ -11,32 +11,59 @@ IBM Voice Agent with Watson
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    {: .topicgroup}
+    状態変数
+        [ボイス・エージェントによって設定される状態変数](services/voice-agent/api_reference.html#state-variables-iva)
+        [Watson Assistant  ダイアログで設定される状態変数](services/voice-agent/api_reference.html#state-variables-conv)
+
+    [アクション・コマンドと属性](services/voice-agent/api_reference.html#actions-and-attributes)
     default-settings.md
     activity-tracker.md
     [IBM Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/welcome_voicegateway.html){: new_window}
 
     {: .topicgroup}
     Watson サービス
-        [Watson Assistant](https://console.bluemix.net/docs/services/conversation/index.html){: new_window}
-        [Speech to Text](https://console.bluemix.net/docs/services/speech-to-text/index.html){: new_window}
-        [Text to Speech](https://console.bluemix.net/docs/services/text-to-speech/index.html){: new_window}
+        [Watson Assistant](services/conversation/index.html){: new_window}
+        [Speech to Text](services/speech-to-text/index.html){: new_window}
+        [Text to Speech](services/text-to-speech/index.html){: new_window}
 
     {: .topicgroup}
     機密保護とデータ・プライバシー
-        [機密保護とデータ・プライバシー](infosec.html)
-        [情報処理と構成オプション](infosec.html#configure_infosec)
-        [IBM Voice Agent with Watson に関連したサービス](infosec.html#related_services)
+        [機密保護とデータ・プライバシー](services/voice-agent/infosec.html)
+        [情報処理と構成オプション](services/voice-agent/infosec.html#configure_infosec)
+        [IBM Voice Agent with Watson に関連したサービス](services/voice-agent/infosec.html#related_services)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     creating.md
     connect-SIP.md
     managing.md
-    api.md
-    secure-trunking.md
-    call-transfer.md
-    event-forwarding.md
+    managing_create.md
+
+    {: .topicgroup}
+    ボイス・エージェントの構成
+        [複数のサービスの場所を構成する](services/voice-agent/managing_disaster_recovery.html)
+        [サード・パーティーの音声テキスト変換サービスに接続する](services/voice-agent/managing_third_party.html)
+        [他の IBM Cloud ワークスペースのサービスを使用する](services/voice-agent/managing_other.html)
+        [サービス・オーケストレーション・エンジンを構成する](services/voice-agent/managing_SOE.html)
+        [ボイス・エージェントのイベント転送を有効にする](services/voice-agent/event-forwarding.html)
+        [拡張オプションを構成する](services/voice-agent/managing.html#config-advanced)
+
+    {: .topicgroup}
+    サービス・インスタンスの構成
+        managing_concurrency.md
+
+    {: .topicgroup}
+    ボイス・エージェントのプログラミング
+        api.md
+        api_dynamic_config.md
+        call-transfer.md
+
     logging.md
+
+    {: .topicgroup}
+    ボイス・エージェントの保護
+        [接続の保護](services/voice-agent/secure-trunking.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

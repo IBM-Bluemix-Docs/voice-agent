@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -41,12 +41,12 @@ IBM は、お客様とパートナーへの革新的なデータ・プライバ�
 
 レポート作成イベントを転送するようにボイス・エージェントを構成するには、[イベント転送の有効化](event-forwarding.html)を参照してください。
 
-{{site.data.keyword.cloudant_short_notm}} に関するデータ・プライバシーと機密保護の詳細については、[**{{site.data.keyword.cloudant_short_notm}}: セキュリティー**](../Cloudant/offerings/security.html#security){: #new_window}を参照してください。
+{{site.data.keyword.cloudant_short_notm}} に関するデータ・プライバシーと機密保護の詳細については、[**{{site.data.keyword.cloudant_short_notm}}: セキュリティー**](../Cloudant/offerings/security.html#security){: new_window}を参照してください。
 
 ### Text to Speech キャッシング
 {: #tts_caching}
 
-{{site.data.keyword.conversationshort}} は、顧客と対話するために、応答をテキストとして作成します。このテキストは {{site.data.keyword.texttospeechshort}} サービスに渡され、{{site.data.keyword.iva_short}} で発話されます。 {{site.data.keyword.conversationshort}} が作成する応答には、機密情報が含まれている場合があります。 {{site.data.keyword.iva_short}} が、個人データが含まれる応答を {{site.data.keyword.texttospeechshort}} サービスから受け取った場合にキャッシュに入れないようにするには、`vgwActExcludeFromTTSCache` アクション・コマンドを有効にして、特定のタイプの情報が含まれる発話をキャッシュに入れることから除外できます。 [API を使用したボイス・エージェントのプログラミング](api.html#action-sequencess)を参照してください。
+{{site.data.keyword.conversationshort}} は、顧客と対話するために、応答をテキストとして作成します。このテキストは {{site.data.keyword.texttospeechshort}} サービスに渡され、{{site.data.keyword.iva_short}} で発話されます。 {{site.data.keyword.conversationshort}} が作成する応答には、機密情報が含まれている場合があります。 {{site.data.keyword.iva_short}} が、個人データが含まれる応答を {{site.data.keyword.texttospeechshort}} サービスから受け取った場合にキャッシュに入れないようにするには、`vgwActExcludeFromTTSCache` アクション・コマンドを有効にして、特定のタイプの情報が含まれる発話をキャッシュに入れることから除外できます。 [API を使用したボイス・エージェントのプログラミング](api.html#action-sequences)を参照してください。
 
 ### セキュア接続
 {: #secure_trunking}
@@ -58,7 +58,7 @@ IBM は、お客様とパートナーへの革新的なデータ・プライバ�
 
 サービス・オーケストレーション・エンジン (SOE) を使用して、{{site.data.keyword.iva_short}} と {{site.data.keyword.conversationshort}} の間で渡される情報を処理し、発信者との会話をカスタマイズできます。 セキュア接続を保守するには、セキュア URL の `https` とユーザー認証を使用して SOE を構成していることを確認してください。
 
-[ボイス・エージェントの {{site.data.keyword.conversationshort}} の構成](managing.html#conversation_va)と、[サービス・オーケストレーション・エンジンを使用するアーキテクチャー](about.html#arch-soe)を参照してください。
+[ボイス・エージェントの {{site.data.keyword.conversationshort}} の構成](managing_SOE.html#conversation_va)と、[サービス・オーケストレーション・エンジンを使用するアーキテクチャー](about.html#arch-soe)を参照してください。
 
 ## {{site.data.keyword.iva_short}} に関連したサービス
 {: #related_services}
@@ -68,8 +68,8 @@ IBM は、お客様とパートナーへの革新的なデータ・プライバ�
 
 各サービスと {{site.data.keyword.Bluemix_notm}} に関する考慮事項については、以下のリソースを参照してください。
 
-  * [**{{site.data.keyword.Bluemix_short}}: セキュリティー・コンプライアンス**](../../security/compliance.html)
-  * [**{{site.data.keyword.conversationfull}}: Information security**](../conversation/information-security.html){: #new_window}
-  * [**{{site.data.keyword.texttospeechfull}}: Information security**](../text-to-speech/information-security.html){: #new_window}
-  * [**{{site.data.keyword.speechtotextfull}}: Information security**](../speech-to-text/information-security.html){: #new_window}
-  * [**{{site.data.keyword.cloudant_short_notm}}: セキュリティー**](../Cloudant/offerings/security.html#security){: #new_window}
+  * [**{{site.data.keyword.Bluemix_short}}: セキュリティー・コンプライアンス**](../security/compliance.html)
+  * [**{{site.data.keyword.conversationfull}}: Information security**](../conversation/information-security.html){: new_window}
+  * [**{{site.data.keyword.texttospeechfull}}: Information security**](../text-to-speech/information-security.html){: new_window}
+  * [**{{site.data.keyword.speechtotextfull}}: Information security**](../speech-to-text/information-security.html){: new_window}
+  * [**{{site.data.keyword.cloudant_short_notm}}: セキュリティー**](../Cloudant/offerings/security.html#security){: new_window}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -25,9 +25,9 @@ lastupdated: "2018-06-13"
 {{site.data.keyword.iva_short}} est l'un des différents composants de l'architecture globale de votre environnement, à savoir :
 
 * Un agent vocal basé sur [IBM Voice Gateway ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/SS4U29/), qui orchestre les services Watson suivants :
-  * [{{site.data.keyword.speechtotextshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/speech-to-text/index.html) : Convertit l'audio de l'appelant en texte
-  * [{{site.data.keyword.conversationshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/conversation/index.html) ou [{{site.data.keyword.virtualagentshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/virtual-agent/getting-started.html#getting-started) Analyse le texte, le met en correspondance avec des intentions et fournit une réponse en fonction d'un dialogue que vous créez
-  * [{{site.data.keyword.texttospeechshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/docs/services/text-to-speech/index.html) : Convertit la réponse en audio vocal
+  * [{{site.data.keyword.speechtotextshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](../speech-to-text/index.html) : Convertit l'audio de l'appelant en texte
+  * [{{site.data.keyword.conversationshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](../conversation/index.html) : Analyse le texte, le mappe à des intentions et fournit une réponse en fonction d'un dialogue que vous créez
+  * [{{site.data.keyword.texttospeechshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](../text-to-speech/index.html) : Convertit la réponse en audio vocal
 * Une liaison SIP, qui connecte votre agent vocal au réseau téléphonique
 * Un moteur d'orchestration de service facultatif, situé entre le service {{site.data.keyword.conversationshort}} et votre agent vocal vous permettant de personnaliser encore davantage votre environnement
 
@@ -44,7 +44,7 @@ Les étapes suivantes décrivent le flux de conversion :
 1. L'appelant pose une question.
 1. La question est diffusée au service {{site.data.keyword.speechtotextshort}}.
 1. Un énoncé de texte est retourné.
-1. Le texte est envoyé au service {{site.data.keyword.conversationshort}} ou à {{site.data.keyword.virtualagentshort}} en tant que demande de message.
+1. Le texte est envoyé au service {{site.data.keyword.conversationshort}} en tant que demande de message.
 1. Une réponse au message est retournée.
 1. Le texte de réponse est envoyé au service {{site.data.keyword.texttospeechshort}}.
 1. Une version audio synthétisée est retournée.
@@ -60,7 +60,7 @@ Vous pouvez utiliser des liaisons SIP pour rapidement configurer et tester votre
 ### Architecture avec un moteur d'orchestration de service
 {: #arch-soe}
 
-Lorsque vous configurez le service {{site.data.keyword.conversationshort}}, vous pouvez inclure un moteur d'orchestration de service pour personnaliser la communication entre {{site.data.keyword.iva_short}} et le service. Le moteur d'orchestration de service fait office de proxy pour le service {{site.data.keyword.conversationshort}}, en interceptant les demandes de message et les réponses aux messages et en les modifiant via des API tierces. {{site.data.keyword.iva_short}} et le service {{site.data.keyword.conversationshort}} communiquent via l'API REST du service {{site.data.keyword.conversationshort}}, en envoyant des données de demande via la méthode `MessageRequest` et en recevant une réponse JSON correspondante. Vous pouvez également utiliser un moteur d'orchestration de service en tant que proxy pour {{site.data.keyword.virtualagentshort}}, où il agit de la même manière.
+Lorsque vous configurez le service {{site.data.keyword.conversationshort}}, vous pouvez inclure un moteur d'orchestration de service pour personnaliser la communication entre {{site.data.keyword.iva_short}} et le service. Le moteur d'orchestration de service fait office de proxy pour le service {{site.data.keyword.conversationshort}}, en interceptant les demandes de message et les réponses aux messages et en les modifiant via des API tierces. {{site.data.keyword.iva_short}} et le service {{site.data.keyword.conversationshort}} communiquent via l'API REST du service {{site.data.keyword.conversationshort}}, en envoyant des données de demande via la méthode `MessageRequest` et en recevant une réponse JSON correspondante.
 
 ![Les demandes de message et les réponses entre {{site.data.keyword.iva_short}} et le service {{site.data.keyword.conversationshort}} transitent via un moteur d'orchestration de service qui les modifie.](images/arch-soe.png)
 
@@ -88,9 +88,11 @@ Pour plus d'informations sur l'implémentation d'un moteur d'orchestration de se
 ## Langues prises en charge
 {: #supported-languages}
 
-Pour qu'une langue soit prise en charge, elle doit être prise en charge par tous les services Watson que vous configurez dans votre agent vocal. L'utilisation des services {{site.data.keyword.speechtotextshort}} et {{site.data.keyword.texttospeechshort}} et du service {{site.data.keyword.conversationshort}} ou {{site.data.keyword.virtualagentshort}} permet la prise en charge des langues suivantes :
+Pour qu'une langue soit prise en charge, elle doit être prise en charge par tous les services Watson que vous configurez dans votre agent vocal. Avec les services {{site.data.keyword.speechtotextshort}}, {{site.data.keyword.texttospeechshort}} et {{site.data.keyword.conversationshort}}, les langues suivantes sont prises en charge :
 
 * Portugais brésilien
+* Français ({{site.data.keyword.speechtotextshort}} large bande uniquement)
+* Allemand ({{site.data.keyword.speechtotextshort}} large bande uniquement)
 * Japonais
 * Espagnol
 * Anglais (Royaume Uni)

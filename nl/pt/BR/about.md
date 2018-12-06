@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -25,9 +25,9 @@ O {{site.data.keyword.iva_full}} permite interações de voz por telefone, diret
 O {{site.data.keyword.iva_short}} é um dos vários componentes na arquitetura geral de seu ambiente, que pode incluir os seguintes elementos:
 
 * Um agente de voz com base no [IBM Voice Gateway ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SS4U29/), que orquestra os seguintes serviços do Watson:
-  * [{{site.data.keyword.speechtotextshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/services/speech-to-text/index.html): converte o áudio do responsável pela chamada em texto
-  * [{{site.data.keyword.conversationshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/services/conversation/index.html) ou [{{site.data.keyword.virtualagentshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/services/virtual-agent/getting-started.html#getting-started): analisa o texto, mapeia suas intenções e fornece uma resposta de acordo com um diálogo que você cria
-  * [{{site.data.keyword.texttospeechshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/docs/services/text-to-speech/index.html): converte a resposta em áudio de voz
+  * [{{site.data.keyword.speechtotextshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](../speech-to-text/index.html): converte o áudio do responsável pela chamada em texto
+  * [{{site.data.keyword.conversationshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](../conversation/index.html): analisa o texto, mapeia-o para os intentos e fornece uma resposta de acordo com um diálogo que você cria
+  * [{{site.data.keyword.texttospeechshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](../text-to-speech/index.html): converte a resposta em áudio de voz
 * Um tronco SIP, que conecta seu agente de voz à rede telefônica
 * Um mecanismo de orquestração de serviço (SOE) opcional, que fica entre o serviço {{site.data.keyword.conversationshort}} e seu agente de voz para que seja possível customizar ainda mais o seu ambiente
 
@@ -44,7 +44,7 @@ As etapas a seguir descrevem o fluxo da conversa.
 1. O responsável pela chamada faz uma pergunta.
 1. A pergunta é transmitida para o serviço {{site.data.keyword.speechtotextshort}}.
 1. Uma elocução de texto é retornada.
-1. O texto é enviado para o serviço {{site.data.keyword.conversationshort}} ou {{site.data.keyword.virtualagentshort}} como uma solicitação de mensagem.
+1. O texto é enviado para o serviço {{site.data.keyword.conversationshort}} como uma solicitação de mensagem.
 1. Uma mensagem de resposta é retornada.
 1. O texto da resposta é enviado para o serviço {{site.data.keyword.texttospeechshort}}.
 1. Um áudio sintetizado é retornado.
@@ -62,7 +62,7 @@ As etapas a seguir descrevem o fluxo da conversa.
 
 Ao configurar o serviço {{site.data.keyword.conversationshort}}, é possível incluir um mecanismo de
 orquestração de serviço (SOE) para customizar a comunicação entre o {{site.data.keyword.iva_short}} e o serviço. O mecanismo
-de orquestração de serviço age como um proxy para o serviço {{site.data.keyword.conversationshort}}, interceptando as solicitações e as respostas de mensagens e modificando-as usando APIs de terceiro. {{site.data.keyword.iva_short}} e o serviço {{site.data.keyword.conversationshort}} se comunicam por meio da API REST do serviço {{site.data.keyword.conversationshort}}, enviando dados de solicitação usando o método `MessageRequest` e recebendo uma resposta JSON correspondente. É possível também usar um SOE como um proxy para {{site.data.keyword.virtualagentshort}}, em que ele age da mesma maneira.
+de orquestração de serviço age como um proxy para o serviço {{site.data.keyword.conversationshort}}, interceptando as solicitações e as respostas de mensagens e modificando-as usando APIs de terceiro. {{site.data.keyword.iva_short}} e o serviço {{site.data.keyword.conversationshort}} se comunicam por meio da API REST do serviço {{site.data.keyword.conversationshort}}, enviando dados de solicitação usando o método `MessageRequest` e recebendo uma resposta JSON correspondente.
 
 ![As solicitações e respostas de mensagem entre o {{site.data.keyword.iva_short}} e o serviço {{site.data.keyword.conversationshort}} fluem por meio de um mecanismo de orquestraçãom que as modifica.](images/arch-soe.png)
 
@@ -93,9 +93,11 @@ Para saber mais sobre como implementar um mecanismo de orquestração de serviç
 ## Idiomas Suportados
 {: #supported-languages}
 
-Para que um idioma seja suportado, ele deve ser suportado por todos os serviços do Watson que você configura em seu agente de voz. Usando os serviços {{site.data.keyword.speechtotextshort}} e {{site.data.keyword.texttospeechshort}} e o {{site.data.keyword.conversationshort}} ou o {{site.data.keyword.virtualagentshort}}, os idiomas a seguir são suportados:
+Para que um idioma seja suportado, ele deve ser suportado por todos os serviços do Watson que você configura em seu agente de voz. Usando os serviços {{site.data.keyword.speechtotextshort}}, {{site.data.keyword.texttospeechshort}} e {{site.data.keyword.conversationshort}}, os seguintes idiomas são suportados:
 
 * Português do Brasil
+* Francês ({{site.data.keyword.speechtotextshort}} banda larga apenas)
+* Alemão ({{site.data.keyword.speechtotextshort}} banda larga apenas)
 * Japonês
 * Espanhol
 * Inglês do Reino Unido

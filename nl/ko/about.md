@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -25,9 +25,9 @@ lastupdated: "2018-06-13"
 {{site.data.keyword.iva_short}}은 전체 사용자 환경 아키텍처의 여러 컴포넌트 중 하나이며 다음 요소를 포함할 수 있습니다.
 
 * 다음과 같은 Watson 서비스를 조정하는 [IBM Voice Gateway ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SS4U29/) 기반의 음성 에이전트
-  * [{{site.data.keyword.speechtotextshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/speech-to-text/index.html): 호출자의 오디오를 텍스트로 변환
-  * [{{site.data.keyword.conversationshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/conversation/index.html) 또는 [{{site.data.keyword.virtualagentshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/virtual-agent/getting-started.html#getting-started): 텍스트를 분석하여 인텐트에 맵핑하고 작성한 대화에 따라 응답 제공
-  * [{{site.data.keyword.texttospeechshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/docs/services/text-to-speech/index.html): 응답을 음성 오디오로 변환
+  * [{{site.data.keyword.speechtotextshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](../speech-to-text/index.html): 호출자의 오디오를 텍스트로 변환
+  * [{{site.data.keyword.conversationshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](../conversation/index.html): 텍스트를 분석하여 인텐트에 맵핑하고 작성한 대화에 따라 응답 제공
+  * [{{site.data.keyword.texttospeechshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](../text-to-speech/index.html): 응답을 음성 오디오로 변환
 * 음성 에이전트를 전화 네트워크에 연결하는 SIP 트렁크
 * 사용자 환경을 세부적으로 사용자 정의할 수 있도록 {{site.data.keyword.conversationshort}} 서비스와 음성 에이전트 사이에 위치하는 선택적 서비스 오케스트레이션 엔진(SOE)
 
@@ -44,7 +44,7 @@ lastupdated: "2018-06-13"
 1. 호출자가 질문합니다.
 1. 질문이 {{site.data.keyword.speechtotextshort}} 서비스로 스트리밍됩니다.
 1. 텍스트 발화가 리턴됩니다.
-1. 텍스트가 {{site.data.keyword.conversationshort}} 서비스 또는 {{site.data.keyword.virtualagentshort}}에 음성 요청으로 전송됩니다.
+1. 텍스트가 {{site.data.keyword.conversationshort}} 서비스에 메시지 요청으로 전송됩니다.
 1. 메시지 응답이 리턴됩니다.
 1. 응답 텍스트가 {{site.data.keyword.texttospeechshort}} 서비스에 전송됩니다.
 1. 합성된 오디오가 리턴됩니다.
@@ -60,7 +60,7 @@ SIP 트렁크를 사용하여 공중 전화망(PTN)에서 사용자 환경을 �
 ### 서비스 오케스트레이션 엔진이 포함된 아키텍처
 {: #arch-soe}
 
-{{site.data.keyword.conversationshort}} 서비스를 구성할 때 {{site.data.keyword.iva_short}}과 서비스 간 통신을 사용자 정의하기 위한 서비스 오케스트레이션 엔진(SOE)을 포함할 수 있습니다. 서비스 오케스트레이션 엔진은 메시지 응답 및 요청을 인터셉트하고 서드파티 API로 수정하여 {{site.data.keyword.conversationshort}} 서비스에 대한 프록시 역할을 수행할 수 있습니다. {{site.data.keyword.iva_short}} 및 {{site.data.keyword.conversationshort}} 서비스는 `MessageRequest` 메소드를 사용하여 요청 데이터를 전송하고 해당 JSON 응답을 수신하여 {{site.data.keyword.conversationshort}} 서비스의 REST API를 통해 통신합니다. SOE를 {{site.data.keyword.virtualagentshort}}에 대한 프록시로 사용할 수도 있습니다. 이 경우에도 동일한 방식으로 작동합니다.
+{{site.data.keyword.conversationshort}} 서비스를 구성할 때 {{site.data.keyword.iva_short}}과 서비스 간 통신을 사용자 정의하기 위한 서비스 오케스트레이션 엔진(SOE)을 포함할 수 있습니다. 서비스 오케스트레이션 엔진은 메시지 응답 및 요청을 인터셉트하고 서드파티 API로 수정하여 {{site.data.keyword.conversationshort}} 서비스에 대한 프록시 역할을 수행할 수 있습니다. {{site.data.keyword.iva_short}} 및 {{site.data.keyword.conversationshort}} 서비스는 `MessageRequest` 메소드를 사용하여 요청 데이터를 전송하고 해당 JSON 응답을 수신하여 {{site.data.keyword.conversationshort}} 서비스의 REST API를 통해 통신합니다.
 
 ![{{site.data.keyword.iva_short}} 및 {{site.data.keyword.conversationshort}} 서비스 간의 메시지 요청 및 응답이 이를 수정하는 서비스 오케스트레이션 엔진을 통해 플로우됩니다.](images/arch-soe.png)
 
@@ -88,9 +88,11 @@ SIP 트렁크를 사용하여 공중 전화망(PTN)에서 사용자 환경을 �
 ## 지원되는 언어
 {: #supported-languages}
 
-언어가 지원되려면 음성 에이전트에서 구성하는 모든 Watson 서비스에서 지원되어야 합니다. {{site.data.keyword.speechtotextshort}} 및 {{site.data.keyword.texttospeechshort}} 서비스와 {{site.data.keyword.conversationshort}} 또는 {{site.data.keyword.virtualagentshort}}를 사용하는 경우 다음 언어가 지원됩니다.
+언어가 지원되려면 음성 에이전트에서 구성하는 모든 Watson 서비스에서 지원되어야 합니다. {{site.data.keyword.speechtotextshort}}, {{site.data.keyword.texttospeechshort}} 및 {{site.data.keyword.conversationshort}} 서비스를 사용하는 경우 다음 언어가 지원됩니다.
 
 * 브라질 포르투갈어
+* 프랑스어({{site.data.keyword.speechtotextshort}} 광대역 전용)
+* 독일어({{site.data.keyword.speechtotextshort}} 광대역 전용)
 * 일본어
 * 스페인어
 * 영어(영국)

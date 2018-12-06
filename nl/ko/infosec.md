@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -41,12 +41,12 @@ IBM은 고객과 파트너에게 혁신적인 데이터 개인정보 보호, 보
 
 보고 이벤트를 전달하도록 음성 에이전트를 구성하려면 [이벤트 전달 사용](event-forwarding.html)을 참조하십시오.
 
-{{site.data.keyword.cloudant_short_notm}}의 데이터 개인정보 보호 및 정보 보안에 대한 자세한 정보는 [**{{site.data.keyword.cloudant_short_notm}}: 보안**](../Cloudant/offerings/security.html#security){: #new_window}을 참조하십시오.
+{{site.data.keyword.cloudant_short_notm}}의 데이터 개인정보 보호 및 정보 보안에 대한 자세한 정보는 [**{{site.data.keyword.cloudant_short_notm}}: 보안**](../Cloudant/offerings/security.html#security){: new_window}을 참조하십시오.
 
 ### 문자-음성 변환 캐싱
 {: #tts_caching}
 
-고객과 대화하기 위해 {{site.data.keyword.conversationshort}}은 응답을 텍스트로 만들며, 이 응답은 {{site.data.keyword.texttospeechshort}} 서비스로 전달되고 {{site.data.keyword.iva_short}}에서 이를 큰 소리로 읽습니다. {{site.data.keyword.conversationshort}}이 작성하는 응답에는 민감한 정보가 포함될 수 있습니다. {{site.data.keyword.iva_short}}이 개인 데이터가 포함된, {{site.data.keyword.texttospeechshort}} 서비스에서 수신된 응답을 캐시하지 않도록 하기 위해 `vgwActExcludeFromTTSCache` 조치 명령을 사용하여 특정 유형의 정보가 포함된 발화가 캐시되지 않도록 할 수 있습니다. [API를 사용한 음성 에이전트 프로그래밍](api.html#action-sequencess)을 참조하십시오.
+고객과 대화하기 위해 {{site.data.keyword.conversationshort}}은 응답을 텍스트로 만들며, 이 응답은 {{site.data.keyword.texttospeechshort}} 서비스로 전달되고 {{site.data.keyword.iva_short}}에서 이를 큰 소리로 읽습니다. {{site.data.keyword.conversationshort}}이 작성하는 응답에는 민감한 정보가 포함될 수 있습니다. {{site.data.keyword.iva_short}}이 개인 데이터가 포함된, {{site.data.keyword.texttospeechshort}} 서비스에서 수신된 응답을 캐시하지 않도록 하기 위해 `vgwActExcludeFromTTSCache` 조치 명령을 사용하여 특정 유형의 정보가 포함된 발화가 캐시되지 않도록 할 수 있습니다. [API를 사용한 음성 에이전트 프로그래밍](api.html#action-sequences)을 참조하십시오.
 
 ### 보안 연결
 {: #secure_trunking}
@@ -58,7 +58,7 @@ IBM은 고객과 파트너에게 혁신적인 데이터 개인정보 보호, 보
 
 서비스 오케스트레이션 엔진(SOE)을 통해 {{site.data.keyword.iva_short}}과 {{site.data.keyword.conversationshort}} 간에 전달되는 정보를 처리하여 호출자와의 대화를 사용자 정의할 수 있습니다. 보안 연결을 유지보수하려면 보안 URL `https` 및 사용자 인증을 사용하여 SOE를 구성하는지 확인하십시오.
 
-[음성 에이전트에 맞게 {{site.data.keyword.conversationshort}} 구성](managing.html#conversation_va) 및 [서비스 오케스트레이션 엔진을 사용한 아키텍처](about.html#arch-soe)를 참조하십시오.
+[음성 에이전트에 맞게 {{site.data.keyword.conversationshort}} 구성](managing_SOE.html#conversation_va) 및 [서비스 오케스트레이션 엔진을 사용한 아키텍처](about.html#arch-soe)를 참조하십시오.
 
 ## {{site.data.keyword.iva_short}} 관련 서비스
 {: #related_services}
@@ -67,8 +67,8 @@ IBM은 고객과 파트너에게 혁신적인 데이터 개인정보 보호, 보
 
 각 서비스 및 {{site.data.keyword.Bluemix_notm}}에 대한 고려사항을 알아보려면 다음 리소스를 참조하십시오.
 
-  * [**{{site.data.keyword.Bluemix_short}}: 보안 준수**](../../security/compliance.html)
-  * [**{{site.data.keyword.conversationfull}}: 정보 보안**](../conversation/information-security.html){: #new_window}
-  * [**{{site.data.keyword.texttospeechfull}}: 정보 보안**](../text-to-speech/information-security.html){: #new_window}
-  * [**{{site.data.keyword.speechtotextfull}}: 정보 보안**](../speech-to-text/information-security.html){: #new_window}
-  * [**{{site.data.keyword.cloudant_short_notm}}: 보안**](../Cloudant/offerings/security.html#security){: #new_window}
+  * [**{{site.data.keyword.Bluemix_short}}: 보안 준수**](../security/compliance.html)
+  * [**{{site.data.keyword.conversationfull}}: 정보 보안**](../conversation/information-security.html){: new_window}
+  * [**{{site.data.keyword.texttospeechfull}}: 정보 보안**](../text-to-speech/information-security.html){: new_window}
+  * [**{{site.data.keyword.speechtotextfull}}: 정보 보안**](../speech-to-text/information-security.html){: new_window}
+  * [**{{site.data.keyword.cloudant_short_notm}}: 보안**](../Cloudant/offerings/security.html#security){: new_window}

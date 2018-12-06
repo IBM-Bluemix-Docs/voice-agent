@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -51,6 +51,7 @@ lastupdated: "2018-06-14"
   * **名稱：**語音代理程式的唯一名稱，例如 `Customer Support`
   * **電話號碼：**您與 SIP 幹線相關聯的完整電話號碼（包括國碼及區域碼）。例如，若為美國 800 號碼，請將電話號碼指定為 18883334444。電話號碼可以有空格及 + ( ) - 字元。
   * **說明：**其用法的選用性說明
+  * **轉接預設目標：**通話可以轉接到的選用性終止 URI。 
 
 3. 建立語音代理程式的 {{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}} 及 {{site.data.keyword.texttospeechshort}} 服務實例。您可以選擇使用下列一種方法來建立語音代理程式：
   * 按一下**建立語音代理程式**，透過單一步驟以使用預設配置來建立所有服務及語音代理程式。
@@ -61,7 +62,8 @@ lastupdated: "2018-06-14"
    1. 在範例交談 GitHub 頁面上，按一下行號 `1`，然後選取 **... > 複製行**。將複製的文字貼入檔案中，並將其儲存為 JSON 檔案，例如 `voice-gateway-conversation-en.json`。
    2. 啟動 {{site.data.keyword.conversationshort}} 工具。在_工作區_ 頁面上，按一下 ![匯入工作區](../conversation/images/workspace_import.png) 圖示，然後匯入 JSON 檔案。
 
-  或者，您也可以[建置自己的對話](https://console.bluemix.net/docs/services/conversation/dialog-build.html)來模擬正式作業環境。您的對話至少必須包含具有 `conversation_start` 條件的節點，以及具有預設回應的節點。
+  或者，您也可以[建置自己的對話](../conversation/dialog-build.html)來模擬正式作業環境。您的對話至少必須包含具有 `conversation_start` 條件的節點，以及具有預設回應的節點。
+
 
 ## 後續步驟
 {: #next}

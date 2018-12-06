@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -25,9 +25,9 @@ lastupdated: "2018-06-13"
 {{site.data.keyword.iva_short}} ist eine von mehreren Komponenten in der Gesamtarchitektur Ihrer Umgebung, die folgende Elemente beinhalten kann:
 
 * Ein Sprachagent auf Basis von [IBM Voice Gateway ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SS4U29/), der die folgenden Watson-Services koordiniert:
-  * [{{site.data.keyword.speechtotextshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/speech-to-text/index.html): wandelt den Ton des Anrufers in Text um
-  * [{{site.data.keyword.conversationshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/conversation/index.html) oder [{{site.data.keyword.virtualagentshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/virtual-agent/getting-started.html#getting-started): Analysiert den Text, ordnet ihn Absichten zu und stellt eine Antwort entsprechend dem von Ihnen erstellten Dialog bereit
-  * [{{site.data.keyword.texttospeechshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/docs/services/text-to-speech/index.html): Wandelt die Antwort in Sprachton um
+  * [{{site.data.keyword.speechtotextshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](../speech-to-text/index.html): wandelt den Ton des Anrufers in Text um
+  * [{{site.data.keyword.conversationshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](../conversation/index.html): Analysiert den Text, ordnet ihn Absichten zu und stellt eine Antwort entsprechend dem von Ihnen erstellten Dialog bereit
+  * [{{site.data.keyword.texttospeechshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](../text-to-speech/index.html): Wandelt die Antwort in Sprachton um
 * Ein SIP-Trunk, der Ihren Sprachagenten mit dem Telefonnetz verbindet
 * Eine optionale Service-Orchestrierungsengine (SOE), die sich zwischen dem {{site.data.keyword.conversationshort}}-Service und Ihrem Sprachagenten befindet, sodass Sie Ihre Umgebung weiter anpassen können
 
@@ -39,12 +39,12 @@ Das folgende Diagramm zeigt, wie {{site.data.keyword.iva_short}} die unterschied
 <div style="float: right; padding-left: 1em; padding-bottom: 1em">
 <img src="images/conversation-flow.png" alt="{{site.data.keyword.iva_short}} agiert als Hub, über den der Anrufer und die einzelnen Watson-Services kommunizieren können."/></div>
 
-Die folgenen Schritte veranschaulichen den Ablauf eines Dialogs.
+Die folgenden Schritte veranschaulichen den Ablauf eines Dialogs.
 
 1. Der Anrufer stellt eine Frage.
 1. Die Frage wird an den {{site.data.keyword.speechtotextshort}}-Service gestreamt.
 1. Eine Textäußerung wird zurückgegeben.
-1. Der Text wird als Nachrichtenanforderung an den {{site.data.keyword.conversationshort}}-Service oder an {{site.data.keyword.virtualagentshort}} gesendet.
+1. Der Text wird als Nachrichtenanforderung an den {{site.data.keyword.conversationshort}}-Service gesendet.
 1. Eine Reaktion auf die Nachricht wird zurückgegeben.
 1. Der Antworttext wird an den {{site.data.keyword.texttospeechshort}}-Service gesendet.
 1. Synthetisch erstellter Ton wird zurückgegeben.
@@ -60,7 +60,7 @@ Mit SIP-Trunks können Sie Ihre Umgebung über das öffentliche Telefonnetz umge
 ### Architektur mit einer Service-Orchestrierungsengine
 {: #arch-soe}
 
-Wenn Sie den {{site.data.keyword.conversationshort}}-Service konfigurieren, können Sie eine Service-Orchestrierungsengine (SOE) für die Anpassung der Kommunikation zwischen {{site.data.keyword.iva_short}} und dem Service integrieren. Die Service-Orchestrierungsengine agiert als Proxy für den {{site.data.keyword.conversationshort}}-Service, indem sie Nachrichtenanforderungen und Antworten abfängt und sie mithilfe von APIs von Drittanbietern modifiziert. {{site.data.keyword.iva_short}} und der {{site.data.keyword.conversationshort}}-Service kommunizieren über die REST-API des {{site.data.keyword.conversationshort}}-Service, wobei sie mittels der `MessageRequest`-Methode Anforderungsdaten senden und eine entsprechende JSON-Antwort empfangen. Sie können eine SOE auch als Proxy für {{site.data.keyword.virtualagentshort}} nutzen, wo sie in gleicher Weise agiert.
+Wenn Sie den {{site.data.keyword.conversationshort}}-Service konfigurieren, können Sie eine Service-Orchestrierungsengine (SOE) für die Anpassung der Kommunikation zwischen {{site.data.keyword.iva_short}} und dem Service integrieren. Die Service-Orchestrierungsengine agiert als Proxy für den {{site.data.keyword.conversationshort}}-Service, indem sie Nachrichtenanforderungen und Antworten abfängt und sie mithilfe von APIs von Drittanbietern modifiziert. {{site.data.keyword.iva_short}} und der {{site.data.keyword.conversationshort}}-Service kommunizieren über die REST-API des {{site.data.keyword.conversationshort}}-Service, wobei sie mittels der `MessageRequest`-Methode Anforderungsdaten senden und eine entsprechende JSON-Antwort empfangen.
 
 ![Nachrichtenanforderungen und Antworten zwischen {{site.data.keyword.iva_short}} und dem {{site.data.keyword.conversationshort}}-Service-Flow über eine Service-Orchestrierungsengine, die sie modifiziert.](images/arch-soe.png)
 
@@ -88,9 +88,11 @@ Weitere Informationen zur Vorgehensweise beim Implementieren einer Service-Orche
 ## Unterstützte Sprachen
 {: #supported-languages}
 
-Eine Sprache kann nur unterstützt werden, wenn Sie von allen Watson-Service unterstützt wird, die Sie in Ihrem Sprachagenten konfigurieren. Unter Verwendung des {{site.data.keyword.speechtotextshort}}- und des {{site.data.keyword.texttospeechshort}}-Service sowie entweder {{site.data.keyword.conversationshort}} oder {{site.data.keyword.virtualagentshort}} werden die folgenden Sprachen unterstützt:
+Eine Sprache kann nur unterstützt werden, wenn Sie von allen Watson-Service unterstützt wird, die Sie in Ihrem Sprachagenten konfigurieren. Unter Verwendung des {{site.data.keyword.speechtotextshort}}-, {{site.data.keyword.texttospeechshort}}- sowie des {{site.data.keyword.conversationshort}}-Service werden die folgenden Sprachen unterstützt:
 
 * Portugiesisch (Brasilien)
+* Französisch ({{site.data.keyword.speechtotextshort}} - nur Breitband)
+* Deutsch ({{site.data.keyword.speechtotextshort}} - nur Breitband)
 * Japanisch
 * Spanisch
 * Englisch (GB)

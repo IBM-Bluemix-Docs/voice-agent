@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -17,10 +17,10 @@ lastupdated: "2018-08-29"
 # Informationssicherheit und Datenschutz
 {: #infosec}
 
-IBM hat sich das Ziel gesetzt, unseren Kunden und Partnern innovative Datenschutz- Sicherheits- und Governance-Lösungen bereitzustellen.
+IBM hat sich das Ziel gesetzt, unseren Kunden und Partnern innovative Datenschutz-, Sicherheits- und Governance-Lösungen bereitzustellen.
 {: shortdesc}
 
-## Informationsverarbeitung und Konfigurationsoption
+## Informationsverarbeitung und Konfigurationsoptionen
 {: #configure_infosec}
 
 {{site.data.keyword.iva_short}} speichert, erfasst oder verarbeitet keine von Kunden empfangene Daten. Die Daten werden stattdessen zur Verarbeitung an verschiedene Services weitergeleitet. Bei einer Unterhaltung geben Benutzer möglicherweise Informationen preis, die geschützte Gesundheitsinformationen (Protected Health Information, PHI), persönlich identifizierbare Daten (Personally Identifiable Information, PII) oder Zahlungskarteninformationen (Payment Card Industry Data Security Standard, PCI DSS) enthalten. Weitere Informationen zum Dialogablauf und zur Architektur von {{site.data.keyword.iva_short}} finden Sie unter [Architektur](about.html#architecture){: new_window}.
@@ -41,12 +41,12 @@ Sie können den Sprachagenten so konfigurieren, dass er Berichterstellungsereign
 
 Unter [Ereignisweiterleitung aktivieren](event-forwarding.html) finden Sie Informationen dazu, wie Sprachagenten für die Weiterleitung von Berichterstellungsereignissen konfiguriert werden.
 
-Unter [**{{site.data.keyword.cloudant_short_notm}}: Sicherheit**](../Cloudant/offerings/security.html#security){: #new_window} finden Sie weitere Informationen zum Datenschutz und zur Informationssicherheit für {{site.data.keyword.cloudant_short_notm}}.
+Unter [**{{site.data.keyword.cloudant_short_notm}}: Sicherheit**](../Cloudant/offerings/security.html#security){: new_window} finden Sie weitere Informationen zum Datenschutz und zur Informationssicherheit für {{site.data.keyword.cloudant_short_notm}}.
 
 ### Zwischenspeicherung bei Text to Speech
 {: #tts_caching}
 
-Um sich mit Kunden zu unterhalten, generiert {{site.data.keyword.conversationshort}} Antworten in Textform, die an den {{site.data.keyword.texttospeechshort}}-Service weitergeleitet und in {{site.data.keyword.iva_short}} als Sprachausgabe ausgegeben werden. Die Antworten, die {{site.data.keyword.conversationshort}} erstellt, können möglicherweise schutzwürdige Informationen enthalten. Um zu verhindern, dass {{site.data.keyword.iva_short}} Antworten zwischenspeichert, die vom {{site.data.keyword.texttospeechshort}}-Service empfangen wurden und die persönliche Daten enthalten, können Sie den Aktionsbefehl `vgwActExcludeFromTTSCache` aktivieren, mit dem Äußerungen, die bestimmte Informationstypen enthalten, von der Zwischenspeicherung ausgeschlossen werden. Weitere Informationen finden Sie unter [Sprachagenten mithilfe der API programmieren](api.html#action-sequencess).
+Um sich mit Kunden zu unterhalten, generiert {{site.data.keyword.conversationshort}} Antworten in Textform, die an den {{site.data.keyword.texttospeechshort}}-Service weitergeleitet und in {{site.data.keyword.iva_short}} als Sprachausgabe ausgegeben werden. Die Antworten, die {{site.data.keyword.conversationshort}} erstellt, können möglicherweise schutzwürdige Informationen enthalten. Um zu verhindern, dass {{site.data.keyword.iva_short}} Antworten zwischenspeichert, die vom {{site.data.keyword.texttospeechshort}}-Service empfangen wurden und die persönliche Daten enthalten, können Sie den Aktionsbefehl `vgwActExcludeFromTTSCache` aktivieren, mit dem Äußerungen, die bestimmte Informationstypen enthalten, von der Zwischenspeicherung ausgeschlossen werden. Weitere Informationen finden Sie unter [Sprachagenten mithilfe der API programmieren](api.html#action-sequences).
 
 ### Sichere Verbindungen
 {: #secure_trunking}
@@ -58,7 +58,7 @@ Um sich mit Kunden zu unterhalten, generiert {{site.data.keyword.conversationsho
 
 Sie können eine Service-Orchestrierungsengine (SOE) verwenden, um die zwischen {{site.data.keyword.iva_short}} und {{site.data.keyword.conversationshort}} ausgetauschten Informationen zu verarbeiten und um die Unterhaltung mit Anrufern anzupassen. Um sichere Verbindungen zu verwenden, sollten Sie sicherstellen, dass Sie die SOE mit einer sicheren URL (`https`) und mit Benutzerauthentifizierung konfigurieren.
 
-Weitere Informationen finden Sie unter [{{site.data.keyword.conversationshort}}  für Ihren Sprachagenten konfigurieren](managing.html#conversation_va) und [Architektur mit einer Service-Orchestrierungsengine](about.html#arch-soe).
+Weitere Informationen finden Sie in [{{site.data.keyword.conversationshort}} für Ihren Sprachagenten konfigurieren](managing_SOE.html#conversation_va) und in [Architektur mit einer Service-Orchestrierungsengine](about.html#arch-soe).
 
 ## Services mit Bezug auf {{site.data.keyword.iva_short}}
 {: #related_services}
@@ -67,8 +67,8 @@ Weitere Informationen finden Sie unter [{{site.data.keyword.conversationshort}} 
 
 In den folgenden Ressourcen finden Sie weitere Hinweise zu den einzelnen Services und zu {{site.data.keyword.Bluemix_notm}}.
 
-  * [**{{site.data.keyword.Bluemix_short}}: Einhaltung der Sicherheitsrichtlinie**](../../security/compliance.html)
-  * [**{{site.data.keyword.conversationfull}}: Informationssicherheit**](../conversation/information-security.html){: #new_window}
-  * [**{{site.data.keyword.texttospeechfull}}: Informationssicherheit**](../text-to-speech/information-security.html){: #new_window}
-  * [**{{site.data.keyword.speechtotextfull}}: Informationssicherheit**](../speech-to-text/information-security.html){: #new_window}
-  * [**{{site.data.keyword.cloudant_short_notm}}: Sicherheit**](../Cloudant/offerings/security.html#security){: #new_window}
+  * [**{{site.data.keyword.Bluemix_short}}: Einhaltung der Sicherheitsrichtlinie**](../security/compliance.html)
+  * [**{{site.data.keyword.conversationfull}}: Informationssicherheit**](../conversation/information-security.html){: new_window}
+  * [**{{site.data.keyword.texttospeechfull}}: Informationssicherheit**](../text-to-speech/information-security.html){: new_window}
+  * [**{{site.data.keyword.speechtotextfull}}: Informationssicherheit**](../speech-to-text/information-security.html){: new_window}
+  * [**{{site.data.keyword.cloudant_short_notm}}: Sicherheit**](../Cloudant/offerings/security.html#security){: new_window}
