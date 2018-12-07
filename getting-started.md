@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -23,12 +23,12 @@ Watch a demonstration of how to create your first voice agent in this [{{site.da
 ## Before you begin
 {: #prereqs}
 
-Create a new account or log in to your existing account on [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/).
+Create a new account or log in to your existing account on [{{site.data.keyword.Bluemix_short}}](https://cloud.ibm.com/).
 
 ## Step 1: Creating a {{site.data.keyword.iva_short}} service instance on {{site.data.keyword.Bluemix_notm}}
 {: #step1}
 
-From the [{{site.data.keyword.iva_short}} catalog page](https://console.bluemix.net/catalog/services/voice-agent-with-watson), review the service information, and then click **Create**.
+From the [{{site.data.keyword.iva_short}} catalog page](https://cloud.ibm.com/catalog/services/voice-agent-with-watson), review the service information, and then click **Create**.
 
 After you create the service, make note of the voice agent endpoint on the _Getting started_ dashboard. You need the endpoint SIP URI to configure your SIP trunk.
 
@@ -51,7 +51,7 @@ After you create the service, make note of the voice agent endpoint on the _Gett
   * **Name:** A unique name for your voice agent, such as `Customer Support`
   * **Phone number:** The full phone number that you associated with your SIP trunk, including the country and area codes. For example, for a United States 800 number, specify the phone number as 18883334444. The phone number can have spaces and + ( ) - characters.
   * **Description:** An optional description of its use
-  * **Transfer default target:** An optional termination URI that calls can be transferred to. 
+  * **Transfer default target:** An optional termination URI that calls can be transferred to.
 
 3. Create the {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, and {{site.data.keyword.texttospeechshort}} service instances for your voice agent. You can choose to create a voice agent with either of the following methods:
   * Click **Create a voice agent** to create all of the services and a voice agent with the default configuration in a single step.

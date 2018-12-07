@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -71,23 +71,28 @@ You need this phone number to set up your voice agent and configure call transfe
 
   You need this phone number to set up your voice agent, including the country and area codes. See [Creating and connecting your voice agent](getting-started.html#step3).
 
+## Peering with {{site.data.keyword.iva_short}}
+{: #peering}
+
+{{site.data.keyword.iva_short}} supports peer connections, such as an IPSec tunnel. To peer with {{site.data.keyword.iva_short}}, you can whitelist the IP addresses of your servers.
+
+1. Go to the _Manage_ dashboard and select the _Instance_ tab.
+
+1. Click **Add a new IP** icon to whitelist a new IP address .
+
+1. Add an **IP Nickname** and the **IP Address**.
 
 ## Connecting with AT&T and other providers
 {: #att-other}
 
 {{site.data.keyword.iva_short}} supports connections with AT&T&reg; and other SIP trunking providers. However, these connections are not self-service setup, and require extra assistance. See [Requesting assisted setup](#request-setup).
 
-## Peering with {{site.data.keyword.iva_short}}
-{: #peering}
-
-{{site.data.keyword.iva_short}} supports peer connections, such as an IPSec tunnel. However, these connections are not self-service setup, and require extra assistance. See [Requesting assisted setup](#request-setup).
-
 ## Requesting assisted setup
 {: #request-setup}
 
 You can request assisted network setup to connect with AT&T or other SIP trunking providers, peer with {{site.data.keyword.iva_short}}, or to request more than 50 concurrent connections by using the following process.
 
-1. Open a new [{{site.data.keyword.Bluemix_notm}} support ticket](https://console.bluemix.net/unifiedsupport/tickets/add)
+1. Open a new [{{site.data.keyword.Bluemix_notm}} support ticket](https://cloud.ibm.com/unifiedsupport/tickets/add)
 
 1. Select **Technical** for **Ticket Type**.
 
