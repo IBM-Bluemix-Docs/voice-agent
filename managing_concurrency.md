@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-03"
 
 
 ---
@@ -20,11 +20,13 @@ lastupdated: "2018-11-12"
 If you use the _Standard_ or _Premium_ plans, you can change the maximum number of concurrent connections from the default settings.
 {: shortdesc}
 
-In all plans, you receive 2 concurrent connections at no charge. For more information, see the [Pricing plans](https://console.bluemix.net/catalog/services/voice-agent-with-watson). On the _Manage_ dashboard, you can see the maximum number of concurrent connections that are allowed in your listed plan in **Maximum concurrent connections**. You can also see the maximum number of concurrent connections that are used by your voice agents during the current month in **Maximum concurrent connections used**.
+In all plans, you receive 2 concurrent connections at no charge. For more information, see the [Pricing plans](https://cloud.ibm.com/catalog/services/voice-agent-with-watson). On the _Manage_ dashboard, you can see the maximum number of concurrent connections that are allowed in your listed plan in **Maximum concurrent connections**. You can also see the maximum number of concurrent connections that are used by your voice agents during the current month in **Maximum concurrent connections used**.
 
-1. Go to the _Instances_ tab on your _Manage_ dashboard to edit the maximum concurrent connections in your plan. 
+1. Go to the _Instances_ tab on your _Manage_ dashboard to edit the maximum concurrent connections in your plan.
+
 1. If you want to change the maximum number of concurrent connections in your plan, click the **Edit** icon.
-1. In the _Edit maximum concurrent connections_ window, choose the maximum number of concurrent connections, and click **Save**.
+
+1. In _Edit maximum concurrent connections_, enter the maximum number of concurrent connections, and click **Save**.
 
 The minimum number of concurrent connections that you can set through self-service is 10 and the maximum is 50. If you need more than 50 concurrent connections for your voice agent, see [Requesting assisted network setup](connect-SIP.html#request-setup).
 
@@ -38,4 +40,4 @@ The minimum number of concurrent connections that you can set through self-servi
   * If you have a _Standard_ or _Premium_ plan, you can purchase a greater concurrent connection capacity.
   * You are charged a daily rate for the maximum concurrent connection capacity that you use in a day.
 
-For more information about plans, rates, and features, see [Pricing plans](https://console.bluemix.net/catalog/services/voice-agent-with-watson).
+For more information about plans, rates, and features, see [Pricing plans](https://cloud.ibm.com/catalog/services/voice-agent-with-watson).

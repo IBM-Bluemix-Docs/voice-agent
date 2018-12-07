@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-16"
+lastupdated: "2018-12-04"
+
 
 ---
 
@@ -23,19 +24,22 @@ You can set up call transfer so that if a caller requests to speak to a live age
 ## About call transfer
 {: #about-ct}
 
-By enabling call transfer, if a caller requests to speak with a live agent during conversation, the voice agent will redirect the call. You can enable call transfer by setting a termination URI in your SIP provider configuration. Then, you configure the transfer target or define an API action in a dialog node of your {{site.data.keyword.conversationshort}} instance. Your transfer target is a SIP URI that contains the termination URI and phone number.
+By enabling call transfer, if a caller requests to speak with a live agent during conversation, the voice agent will redirect the call. {{site.data.keyword.iva_short}} uses a SIP REFER to direct the call back to your SIP trunk provider to handle, and does not anchor transferred phone calls.
 
-For more information about supported actions and customizing your voice agents, see [Programming voice agents using the API](api.html).
+You can enable call transfer by setting a termination URI or tel URI in your SIP provider configuration. Then, you define the transfer target on an API action in a dialog node of your {{site.data.keyword.conversationshort}} instance. Your transfer target is a SIP URI that contains the termination URI and phone number or a tel URI with phone number. For more information about supported actions and customizing your voice agents, see [Programming voice agents using the API](api.html).
 
 ## Step 1: Setting up the termination URI
 {: #termination-setup}
+
+If you are using a tel URI instead of a termination URI for your SIP URI configuration, you can use the tel URI, such as `tel:+18889990000`, for your `trasnferTarget`. You need a termination URI for your `transferTarget` if you are using a SIP URI.
+{: tip}
 
 ### Setting up a termination URI in NetFoundry
 {: #termination-netfoundry}
 
 Make note of the phone number in your [NetFoundry account![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson.netfoundry.io/watson-login){: new_window} that you want to transfer to. Later, you can specify this phone number and the termination URI as the transfer target in your {{site.data.keyword.conversationshort}} dialog. Do not use a personal phone number.
 
-You can copy the following NetFoundry termination URI to use when creating your voice agent or configuring the transfer target in your {{site.data.keyword.conversationshort}} dialog.
+Copy the following NetFoundry termination URI to use in the transfer target.
 
 ```
 dal.watson-va.netfoundry.net
@@ -57,17 +61,11 @@ You do not need to manually configure the termination URI in your NetFoundry acc
 
   * Termination URI names must be unique. Twilio automatically checks the name that you choose for availability. See [SIP Trunk termination settings ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.twilio.com/docs/api/sip-trunking/getting-started#termination){: new_window} for more detail about the Twilio services.
 
-1. In the _Authentication_ section, click the **+** icon to add a voice agent IP address to the Access Control IP list.
+1. Select **General** on your navigation bar to view the _General settings_. Under the **Call Transfer (SIP REFER)** heading, toggle the setting to **Enabled** and select **Allow Call Transfers to the PSTN via your Trunk.**
 
-  Add both of the following IP addresses:
-   * 169.60.154.134 (Dallas service region)
-   * 169.61.86.179 (Washington DC service region)
+1. Click **Save** to finish configuring your termination URI and enabling call transfer.
 
-1. Click **Save** to finish configuring your termination URI.
-
-Make note of the phone number and termination URI that you want to transfer to. Make sure that the phone number is not a personal phone number.
-
-You can use the phone number and termination URI to use when creating your voice agent or configuring the transfer target in your {{site.data.keyword.conversationshort}} dialog.
+1. Make note of the phone number and termination URI that you want to transfer to. Make sure that the phone number is not a personal phone number. You can use the phone number and termination URI to specify the transfer target in your {{site.data.keyword.conversationshort}} dialog.
 
 
 ## Step 2: Configuring {{site.data.keyword.conversationshort}} for call transfer
@@ -93,28 +91,29 @@ To learn more about working in the {{site.data.keyword.conversationshort}} servi
 
 1. For the _Then respond with:_ section, click the **&vellip;** icon and select **Open JSON editor**. Copy and paste the following code snippet to replace the code in the field.
 
-```json
-{
-    "output": {
-        "text": {
-            "values": [ "Please hold on while I connect you with a live agent." ],
-            "selection_policy": "sequential"
-        },
-        "vgwAction": {
-            "command": "vgwActTransfer",
-            "parameters": {
-                "transferTarget": "sip:18889990000\\@dal.watson-va.netfoundry.net"
-            }
-        }
-    }
-}
-```
-{: codeblock}
+  * If you use a tel URI, replace the SIP URI in the `transferTarget` with your tel URI. For example,  `"transferTarget":"tel:+18889990000"`.
 
-**Remember**: The SIP URI of the transfer target includes a telephone number and the termination URI that you created. Do not use a personal telephone number in your transfer target. For example, if the telephone number is `18889990000` and your termination URI is `mysiptrunk.pstn.twilio.com`, the full SIP URI is `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. If you use Netfoundry, and have a telephone number of `18889990000`, the full SIP URI is `sip:18889990000\\@dal.watson-va.netfoundry.net`.
+  ```json
+  {
+      "output": {
+          "text": {
+              "values": [ "Please hold on while I connect you with a live agent." ],
+              "selection_policy": "sequential"
+          },
+          "vgwAction": {
+              "command": "vgwActTransfer",
+              "parameters": {
+                  "transferTarget": "sip:+18889990000\\@dal.watson-va.netfoundry.net"
+              }
+          }
+      }
+  }
+  ```
+  {: codeblock}
 
-To protect Personally Identifiable Information (PII), do not use a personal phone number when configuring your transfer target SIP URI. See [{{site.data.keyword.iva_short}} and information handling](infosec.html#configure_infosec){:new_window} for more information about PII and configurations.
-{: tip}
+1. Check that the phone number in your `transferTarget` termination URI or tel URI correctly matches the phone number in your SIP trunk.
+
+**Remember**: The SIP URI of the transfer target includes a telephone number and the termination URI that you created. Do not use a personal telephone number in your transfer target. For example, if the telephone number is `18889990000` and your termination URI is `mysiptrunk.pstn.twilio.com`, the full SIP URI is `sip:+18889990000\\@mysiptrunk.pstn.twilio.com`. If you use Netfoundry, and have a telephone number of `18889990000`, the full SIP URI is `sip:+18889990000\\@dal.watson-va.netfoundry.net`.
 
 ## Next steps
 {: #Next}

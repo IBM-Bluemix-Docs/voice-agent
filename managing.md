@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-03"
 
 
 ---
@@ -24,9 +24,9 @@ You can use the _Manage_ dashboard to change your service instance configuration
 ## Navigating to your Voice Agent service dashboard
 {: #navigate_manage}
 
-You can find the _Manage_ dashboard from your {{site.data.keyword.Bluemix_notm}} account dashboard.
+You can find the _Manage_ dashboard from your {{site.data.keyword.iva_short}} service dashboard.
 
-1. Go to your [{{site.data.keyword.Bluemix_notm}} account dashboard](https://console.bluemix.net/dashboard/apps).
+1. Go to your [{{site.data.keyword.Bluemix_notm}} account resource list](https://cloud.ibm.com/resources).
 
 1. From the list of **Services**, select your **Voice Agent** service instance to open the service dashboard on the _Manage_ tab.
 
