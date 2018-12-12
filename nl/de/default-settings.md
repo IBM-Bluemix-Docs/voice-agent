@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -23,7 +23,6 @@ lastupdated: "2018-06-19"
 |------|---------------|
 | {{site.data.keyword.conversationshort}}-Tokenauthentifizierung| Aktiviert |
 | SOE-Tokenauthentifizierung (Service Orchestration Engine)| Inaktiviert |
-| {{site.data.keyword.virtualagentshort}}-Tokenauthentifizierung| Inaktiviert |
 | {{site.data.keyword.speechtotextshort}}-Tokenauthentifizierung| Aktiviert |
 | Schimpfwortfilter | Aktiviert |
 | Intelligente Formatierung | Aktiviert |

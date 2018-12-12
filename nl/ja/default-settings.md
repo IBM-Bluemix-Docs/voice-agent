@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -23,7 +23,6 @@ lastupdated: "2018-06-19"
 |------|---------------|
 | {{site.data.keyword.conversationshort}} トークン認証| 有効 |
 | サービス・オーケストレーション・エンジン (SOE) トークン認証| 無効 |
-| {{site.data.keyword.virtualagentshort}} トークン認証| 無効 |
 | {{site.data.keyword.speechtotextshort}} トークン認証| 有効 |
 | 不適切表現フィルター | 有効 |
 | スマート・フォーマット設定 | 有効 |

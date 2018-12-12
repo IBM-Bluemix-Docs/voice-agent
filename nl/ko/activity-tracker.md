@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-08"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -17,17 +17,16 @@ lastupdated: "2018-10-08"
 # 활동 트래커 이벤트
 {: #activity-tracker}
 
-{{site.data.keyword.cloudaccesstrailfull}} 서비스를 사용하여 사용자 및 애플리케이션이 {{site.data.keyword.Bluemix}}의 {{site.data.keyword.iva_full}} 서비스와 상호작용하는 방법을 추적할 수 있습니다.
-{: shortdesc}
+{{site.data.keyword.cloudaccesstrailfull}} 서비스를 사용하여 사용자 및 애플리케이션이 {{site.data.keyword.Bluemix}}의 {{site.data.keyword.iva_full}} 서비스와 상호작용하는 방법을 추적할 수 있습니다. {: shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 서비스는 {{site.data.keyword.Bluemix_notm}}의 서비스 상태를 변경하는 사용자가 시작한 활동을 기록합니다. 자세한 정보는 [{{site.data.keyword.cloudaccesstrailshort}}](./cloud-activity-tracker/index.html#getting-started-with-cla)의 내용을 참조하십시오.
+{{site.data.keyword.cloudaccesstrailfull_notm}} 서비스는 {{site.data.keyword.Bluemix_notm}}의 서비스 상태를 변경하는 사용자가 시작한 활동을 기록합니다. 자세한 정보는 [{{site.data.keyword.cloudaccesstrailshort}}](../cloud-activity-tracker/index.html#getting-started-with-cla)의 내용을 참조하십시오.
 
 ## 이벤트 목록
 {: #event-List}
 
 다음 표에는 이벤트를 생성하는 조치가 나열되어 있습니다.
 
-| 조치 | 설명 |
+| 조치| 설명 |
 | --- | ---- |
 | `create agent: POST /config/submitconfig` | 새 음성 에이전트 작성 |
 | `update agent: POST /config/submitconfig` | 음성 에이전트 업데이트 |

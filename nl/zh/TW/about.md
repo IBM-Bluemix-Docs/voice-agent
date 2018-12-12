@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -25,9 +25,9 @@ lastupdated: "2018-06-13"
 {{site.data.keyword.iva_short}} 是整體環境架構中數個元件之一，可包括下列元素：
 
 * 以 [IBM Voice Gateway ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SS4U29/) 為基礎的語音代理程式，它可編排下列 Watson 服務：
-  * [{{site.data.keyword.speechtotextshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/services/speech-to-text/index.html)：將來電者的音訊轉換為文字
-  * [{{site.data.keyword.conversationshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/services/conversation/index.html) 或 [{{site.data.keyword.virtualagentshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/services/virtual-agent/getting-started.html#getting-started)：分析文字、將它對映至目的，並根據您建立的對話提供回應
-  * [{{site.data.keyword.texttospeechshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/docs/services/text-to-speech/index.html)：將回應轉換為語音音訊
+  * [{{site.data.keyword.speechtotextshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](../speech-to-text/index.html)：將來電者的音訊轉換為文字
+  * [{{site.data.keyword.conversationshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](../conversation/index.html)：分析文字、將它對映至目的，並根據您建立的對話提供回應
+  * [{{site.data.keyword.texttospeechshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](../text-to-speech/index.html)：將回應轉換為語音音訊
 * SIP 幹線，可將語音代理程式連接至電話網路
 * 選用性的服務編排引擎 (SOE)，位於 {{site.data.keyword.conversationshort}} 服務與語音代理程式之間，可讓您進一步自訂環境
 
@@ -44,7 +44,7 @@ lastupdated: "2018-06-13"
 1. 來電者發問。
 1. 問題會串流至 {{site.data.keyword.speechtotextshort}} 服務。
 1. 傳回文字話語。
-1. 文字會作為訊息要求傳送至 {{site.data.keyword.conversationshort}} 服務或 {{site.data.keyword.virtualagentshort}}。
+1. 文字會作為訊息要求傳送至 {{site.data.keyword.conversationshort}} 服務
 1. 傳回訊息回應。
 1. 回應文字會傳送至 {{site.data.keyword.texttospeechshort}} 服務。
 1. 傳回合成音訊。
@@ -60,7 +60,7 @@ lastupdated: "2018-06-13"
 ### 具有服務編排引擎的架構
 {: #arch-soe}
 
-當您配置 {{site.data.keyword.conversationshort}} 服務時，可以包含服務編排引擎 (SOE)，以自訂 {{site.data.keyword.iva_short}} 與服務之間的通訊。服務編排引擎會充當 {{site.data.keyword.conversationshort}} 服務的 Proxy，方法為截取訊息要求及回應，並使用協力廠商 API 進行修改。{{site.data.keyword.iva_short}} 及 {{site.data.keyword.conversationshort}} 服務透過 {{site.data.keyword.conversationshort}} 服務的 REST API 進行通訊，並使用 `MessageRequest` 方法來傳送要求資料，以及接收對應的 JSON 回應。您也可以使用 SOE 作為 {{site.data.keyword.virtualagentshort}} 的 Proxy，其運作方式相同。
+當您配置 {{site.data.keyword.conversationshort}} 服務時，可以包含服務編排引擎 (SOE)，以自訂 {{site.data.keyword.iva_short}} 與服務之間的通訊。服務編排引擎會充當 {{site.data.keyword.conversationshort}} 服務的 Proxy，方法為截取訊息要求及回應，並使用協力廠商 API 進行修改。{{site.data.keyword.iva_short}} 及 {{site.data.keyword.conversationshort}} 服務透過 {{site.data.keyword.conversationshort}} 服務的 REST API 進行通訊，並使用 `MessageRequest` 方法來傳送要求資料，以及接收對應的 JSON 回應。
 
 ![{{site.data.keyword.iva_short}} 與 {{site.data.keyword.conversationshort}} 服務之間的訊息要求及回應會流經服務編排引擎，而此引擎會對其進行修改。](images/arch-soe.png)
 
@@ -88,9 +88,11 @@ lastupdated: "2018-06-13"
 ## 支援的語言
 {: #supported-languages}
 
-若要支援某個語言，您在語音代理程式中配置的所有 Watson 服務都必須支援它。使用 {{site.data.keyword.speechtotextshort}} 和 {{site.data.keyword.texttospeechshort}} 服務，以及 {{site.data.keyword.conversationshort}} 或 {{site.data.keyword.virtualagentshort}}，可支援下列語言：
+若要支援某個語言，您在語音代理程式中配置的所有 Watson 服務都必須支援它。使用 {{site.data.keyword.speechtotextshort}}、{{site.data.keyword.texttospeechshort}} 及 {{site.data.keyword.conversationshort}} 服務，可支援下列語言：
 
 * 巴西葡萄牙文
+* 法文（僅限 {{site.data.keyword.speechtotextshort}} 寬頻）
+* 德文（僅限 {{site.data.keyword.speechtotextshort}} 寬頻）
 * 日文
 * 西班牙文
 * 英文（英國）

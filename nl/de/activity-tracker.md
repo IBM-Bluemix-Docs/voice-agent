@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-08"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -17,19 +17,18 @@ lastupdated: "2018-10-08"
 # Activity Tracker-Ereignisse
 {: #activity-tracker}
 
-Mit dem {{site.data.keyword.cloudaccesstrailfull}}-Service können Sie die Interaktion von Benutzern und Anwendungen mit dem {{site.data.keyword.iva_full}}-Service in {{site.data.keyword.Bluemix}} verfolgen.
-{: shortdesc}
+Mit dem {{site.data.keyword.cloudaccesstrailfull}}-Service können Sie die Interaktion von Benutzern und Anwendungen mit dem {{site.data.keyword.iva_full}}-Service in {{site.data.keyword.Bluemix}} verfolgen. {: shortdesc}
 
-Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet die vom Benutzer initiierten Aktivitäten auf, die den Status eines Service in {{site.data.keyword.Bluemix_notm}} ändern. Weitere Informationen finden Sie in [{{site.data.keyword.cloudaccesstrailshort}}](./cloud-activity-tracker/index.html#getting-started-with-cla).
+Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet die vom Benutzer initiierten Aktivitäten auf, die den Status eines Service in {{site.data.keyword.Bluemix_notm}} ändern. Weitere Informationen finden Sie in [{{site.data.keyword.cloudaccesstrailshort}}](../cloud-activity-tracker/index.html#getting-started-with-cla).
 
 ## Ereignisliste
 {: #event-List}
 
 In der folgenden Tabelle sind die Aktionen aufgeführt, durch die ein Ereignis generiert wird.
 
-|Aktion| Beschreibung|
+|Aktion| Beschreibung |
 | --- | ---- |
-| `Agenten erstellen: POST /config/submitconfig` |Neuen Sprachagenten erstellen |
+| `Agenten erstellen: POST /config/submitconfig` | Neuen Sprachagenten erstellen |
 | `Agenten aktualisieren: POST /config/submitconfig` | Sprachagenten aktualisieren |
 | `Gleichzeitige Ausführung aktualisieren: POST /config/updatemax` | Maximum für gleichzeitige Aufrufe aktualisieren |
 | `Agenten löschen: POST /config/submitconfig` | Sprachagenten löschen |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -41,12 +41,12 @@ IBM 致力於提供客戶和合作夥伴創新的資料隱私、安全及控管�
 
 請參閱[啟用事件轉遞](event-forwarding.html)，以將語音代理程式配置為轉遞報告事件。
 
-請參閱 [**{{site.data.keyword.cloudant_short_notm}}：安全**](../Cloudant/offerings/security.html#security){: #new_window}，以取得 {{site.data.keyword.cloudant_short_notm}} 的資料隱私和資訊安全相關資訊。
+請參閱 [**{{site.data.keyword.cloudant_short_notm}}：安全**](../Cloudant/offerings/security.html#security){: new_window}，以取得 {{site.data.keyword.cloudant_short_notm}} 的資料隱私和資訊安全相關資訊。
 
 ### Text to Speech 快取
 {: #tts_caching}
 
-為了與客戶交談，{{site.data.keyword.conversationshort}} 會將回應製作為文字、傳給 {{site.data.keyword.texttospeechshort}} 服務，然後在 {{site.data.keyword.iva_short}} 大聲朗讀。{{site.data.keyword.conversationshort}} 建立的回應可能會包含機密性資訊。要避免 {{site.data.keyword.iva_short}} 快取從 {{site.data.keyword.texttospeechshort}} 服務所收到、包含個人資料的回應，您可以啟用 `vgwActExcludeFromTTSCache` 動作指令，排除包含特定類型資訊的話語不要快取。請參閱[使用 API 程式設計語音代理程式](api.html#action-sequencess)。
+為了與客戶交談，{{site.data.keyword.conversationshort}} 會將回應製作為文字、傳給 {{site.data.keyword.texttospeechshort}} 服務，然後在 {{site.data.keyword.iva_short}} 大聲朗讀。{{site.data.keyword.conversationshort}} 建立的回應可能會包含機密性資訊。要避免 {{site.data.keyword.iva_short}} 快取從 {{site.data.keyword.texttospeechshort}} 服務所收到、包含個人資料的回應，您可以啟用 `vgwActExcludeFromTTSCache` 動作指令，排除包含特定類型資訊的話語不要快取。請參閱[使用 API 程式設計語音代理程式](api.html#action-sequences)。
 
 ### 安全連線
 {: #secure_trunking}
@@ -58,7 +58,7 @@ IBM 致力於提供客戶和合作夥伴創新的資料隱私、安全及控管�
 
 您可以使用「服務編排引擎 (SOE)」來處理 {{site.data.keyword.iva_short}} 與 {{site.data.keyword.conversationshort}} 之間的資訊傳遞，以便自訂與來電者的交談。若要維護安全連線，請務必使用安全 URL `https` 和使用者鑑別來配置 SOE。
 
-請參閱[為語音代理程式配置 {{site.data.keyword.conversationshort}}](managing.html#conversation_va) 及[具有服務編排引擎的架構](about.html#arch-soe)。
+請參閱[為語音代理程式配置 {{site.data.keyword.conversationshort}}](managing_SOE.html#conversation_va) 及[具有服務編排引擎的架構](about.html#arch-soe)。
 
 ## 與 {{site.data.keyword.iva_short}} 相關的服務
 {: #related_services}
@@ -67,8 +67,8 @@ IBM 致力於提供客戶和合作夥伴創新的資料隱私、安全及控管�
 
 請參閱下列資源，以尋找每個服務和 {{site.data.keyword.Bluemix_notm}} 的考量。
 
-  * [**{{site.data.keyword.Bluemix_short}}：安全規範**](../../security/compliance.html)
-  * [**{{site.data.keyword.conversationfull}}：資訊安全**](../conversation/information-security.html){: #new_window}
-  * [**{{site.data.keyword.texttospeechfull}}：資訊安全**](../text-to-speech/information-security.html){: #new_window}
-  * [**{{site.data.keyword.speechtotextfull}}：資訊安全**](../speech-to-text/information-security.html){: #new_window}
-  * [**{{site.data.keyword.cloudant_short_notm}}：安全**](../Cloudant/offerings/security.html#security){: #new_window}
+  * [**{{site.data.keyword.Bluemix_short}}：安全規範**](../security/compliance.html)
+  * [**{{site.data.keyword.conversationfull}}：資訊安全**](../conversation/information-security.html){: new_window}
+  * [**{{site.data.keyword.texttospeechfull}}：資訊安全**](../text-to-speech/information-security.html){: new_window}
+  * [**{{site.data.keyword.speechtotextfull}}：資訊安全**](../speech-to-text/information-security.html){: new_window}
+  * [**{{site.data.keyword.cloudant_short_notm}}：安全**](../Cloudant/offerings/security.html#security){: new_window}

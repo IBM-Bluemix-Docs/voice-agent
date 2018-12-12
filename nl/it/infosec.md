@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -41,12 +41,12 @@ Puoi configurare il tuo agent vocale per inoltrare gli eventi di segnalazione a 
 
 Consulta [Abilitazione dell'inoltro dell'evento](event-forwarding.html) per configurare i tuoi agent vocali ad inoltrare gli eventi di segnalazione.
 
-Consulta [**{{site.data.keyword.cloudant_short_notm}}: sicurezza**](../Cloudant/offerings/security.html#security){: #new_window} per ulteriori informazioni sulla privacy dei dati e la sicurezza delle informazioni per {{site.data.keyword.cloudant_short_notm}}.
+Consulta [**{{site.data.keyword.cloudant_short_notm}}: sicurezza**](../Cloudant/offerings/security.html#security){: new_window} per ulteriori informazioni sulla privacy dei dati e la sicurezza delle informazioni per {{site.data.keyword.cloudant_short_notm}}.
 
 ### Memorizzazione nella cache di Text to Speech
 {: #tts_caching}
 
-Per conversare con i clienti, {{site.data.keyword.conversationshort}} crea le risposte come del testo, che viene passato al servizio {{site.data.keyword.texttospeechshort}} e letto ad alta voce in {{site.data.keyword.iva_short}}. Le risposte create da {{site.data.keyword.conversationshort}} potrebbero contenere informazioni sensibili. Per evitare che {{site.data.keyword.iva_short}} memorizzi nella cache le risposte ricevute dal servizio {{site.data.keyword.texttospeechshort}} che contengono dati personali, puoi abilitare il comando di azione `vgwActExcludeFromTTSCache` per escludere dalla memorizzazione nella cache le espressioni che contengono alcuni tipi di informazioni. Consulta [Programmazione degli agent vocali utilizzando l'API](api.html#action-sequencess).
+Per conversare con i clienti, {{site.data.keyword.conversationshort}} crea le risposte come del testo, che viene passato al servizio {{site.data.keyword.texttospeechshort}} e letto ad alta voce in {{site.data.keyword.iva_short}}. Le risposte create da {{site.data.keyword.conversationshort}} potrebbero contenere informazioni sensibili. Per evitare che {{site.data.keyword.iva_short}} memorizzi nella cache le risposte ricevute dal servizio {{site.data.keyword.texttospeechshort}} che contengono dati personali, puoi abilitare il comando di azione `vgwActExcludeFromTTSCache` per escludere dalla memorizzazione nella cache le espressioni che contengono alcuni tipi di informazioni. Consulta [Programmazione degli agent vocali utilizzando l'API](api.html#action-sequences).
 
 ### Connessioni sicure
 {: #secure_trunking}
@@ -58,7 +58,7 @@ Per conversare con i clienti, {{site.data.keyword.conversationshort}} crea le ri
 
 Puoi utilizzare un motore di orchestrazione del servizio (SOE) per elaborare le informazioni trasmesse tra {{site.data.keyword.iva_short}} e {{site.data.keyword.conversationshort}} per personalizzare la conversazione con i chiamanti. Per mantenere le connessioni sicure, assicurati di configurare il tuo SOE utilizzando un URL sicuro, `https` e l'autenticazione utente.
 
-Consulta [Configurazione di {{site.data.keyword.conversationshort}} del tuo agent vocale](managing.html#conversation_va) e [Architettura con un motore di orchestrazione del servizio](about.html#arch-soe).
+Consulta [Configurazione di {{site.data.keyword.conversationshort}} del tuo agent vocale](managing_SOE.html#conversation_va) e [Architettura con un motore di orchestrazione del servizio](about.html#arch-soe).
 
 ## Servizi correlati a {{site.data.keyword.iva_short}}
 {: #related_services}
@@ -67,8 +67,8 @@ Consulta [Configurazione di {{site.data.keyword.conversationshort}} del tuo agen
 
 Vedi le seguenti risorse per trovare delle considerazioni su ogni servizio e su {{site.data.keyword.Bluemix_notm}}.
 
-  * [**{{site.data.keyword.Bluemix_short}}: conformità di sicurezza**](../../security/compliance.html)
-  * [**{{site.data.keyword.conversationfull}}: sicurezza delle informazioni**](../conversation/information-security.html){: #new_window}
-  * [**{{site.data.keyword.texttospeechfull}}: sicurezza delle informazioni**](../text-to-speech/information-security.html){: #new_window}
-  * [**{{site.data.keyword.speechtotextfull}}: sicurezza delle informazioni**](../speech-to-text/information-security.html){: #new_window}
-  * [**{{site.data.keyword.cloudant_short_notm}}: sicurezza**](../Cloudant/offerings/security.html#security){: #new_window}
+  * [**{{site.data.keyword.Bluemix_short}}: conformità di sicurezza**](../security/compliance.html)
+  * [**{{site.data.keyword.conversationfull}}: sicurezza delle informazioni**](../conversation/information-security.html){: new_window}
+  * [**{{site.data.keyword.texttospeechfull}}: sicurezza delle informazioni**](../text-to-speech/information-security.html){: new_window}
+  * [**{{site.data.keyword.speechtotextfull}}: sicurezza delle informazioni**](../speech-to-text/information-security.html){: new_window}
+  * [**{{site.data.keyword.cloudant_short_notm}}: sicurezza**](../Cloudant/offerings/security.html#security){: new_window}

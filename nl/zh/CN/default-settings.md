@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -23,7 +23,6 @@ lastupdated: "2018-06-19"
 |------|---------------|
 | {{site.data.keyword.conversationshort}} 令牌认证 | 已启用 |
 | 服务编排引擎 (SOE) 令牌认证 | 已禁用 |
-| {{site.data.keyword.virtualagentshort}} 令牌认证 | 已禁用 |
 | {{site.data.keyword.speechtotextshort}} 令牌认证 | 已启用 |
 | 不雅言辞过滤器 | 已启用 |
 | 智能格式化 | 已启用 |

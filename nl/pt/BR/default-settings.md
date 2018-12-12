@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -23,7 +23,6 @@ lastupdated: "2018-06-19"
 |------|---------------|
 | {{site.data.keyword.conversationshort}} token de autenticação| Ativado |
 | Mecanismo de orquestração de serviço (SOE) token de autenticação| Desativado |
-| Autenticação do token do {{site.data.keyword.virtualagentshort}}| Desativado |
 | {{site.data.keyword.speechtotextshort}} token de autenticação| Ativado |
 | Filtro Inapropriada | Ativado |
 | Formatação Smart | Ativado |

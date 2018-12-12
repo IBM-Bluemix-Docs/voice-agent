@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -51,6 +51,7 @@ lastupdated: "2018-06-14"
   * **이름:** 음성 에이전트의 고유 이름(예: `Customer Support`)
   * **전화번호:** SIP 트렁크와 연관된 전체 전화번호(국가 및 지역 코드 포함). 예를 들어, 미국 800 번호의 경우 전화번호를 18883334444로 지정하십시오. 전화번호에는 공백 및 + ( ) - 문자가 포함될 수 있습니다.
   * **설명:** 음성 에이전트 사용에 대한 선택적 설명
+  * **전송 기본 대상:** 호출이 전송될 수 있는 선택적 종료 URI 
 
 3. 음성 에이전트에 대한 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 및 {{site.data.keyword.texttospeechshort}} 서비스 인스턴스를 작성하십시오. 다음 방법 중 하나를 사용하여 음성 에이전트를 작성하도록 선택할 수 있습니다.
   * **음성 에이전트 작성**을 클릭하여 하나의 단계로 기본 구성을 사용하여 모든 서비스 및 음성 에이전트를 작성하십시오.
@@ -61,7 +62,8 @@ lastupdated: "2018-06-14"
    1. 동일한 대화 GitHub 페이지에서 행 번호 `1`을 클릭하고 **... > 행 복사**를 선택하십시오. 복사된 텍스트를 파일에 붙여넣고 JSON 파일(예: `voice-gateway-conversation-en.json`)로 저장하십시오.
    2. {{site.data.keyword.conversationshort}} 도구를 실행하십시오. _작업공간_ 페이지에서 ![작업공간 가져오기](../conversation/images/workspace_import.png) 아이콘을 클릭하고 JSON 파일을 가져오십시오.
 
-  또는 프로덕션 환경을 시뮬레이션하기 위한 [고유한 대화를 빌드](https://console.bluemix.net/docs/services/conversation/dialog-build.html)할 수 있습니다. 최소한 `conversation_start` 조건이 있는 노드와 기본 응답이 있는 노드가 대화에 포함되어야 합니다.
+  또는 프로덕션 환경을 시뮬레이션하기 위한 [고유한 대화를 빌드](../conversation/dialog-build.html)할 수 있습니다. 최소한 `conversation_start` 조건이 있는 노드와 기본 응답이 있는 노드가 대화에 포함되어야 합니다.
+
 
 ## 다음 단계
 {: #next}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-08"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-10-08"
 請使用 {{site.data.keyword.cloudaccesstrailfull}} 服務，來追蹤在 {{site.data.keyword.Bluemix}} 中，使用者及應用程式如何與 {{site.data.keyword.iva_full}} 服務互動。
 {: shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 服務會記錄由使用者起始，且會變更 {{site.data.keyword.Bluemix_notm}} 中服務狀態的活動。如需相關資訊，請參閱 [{{site.data.keyword.cloudaccesstrailshort}}](./cloud-activity-tracker/index.html#getting-started-with-cla)。
+{{site.data.keyword.cloudaccesstrailfull_notm}} 服務會記錄由使用者起始，且會變更 {{site.data.keyword.Bluemix_notm}} 中服務狀態的活動。如需相關資訊，請參閱 [{{site.data.keyword.cloudaccesstrailshort}}](../cloud-activity-tracker/index.html#getting-started-with-cla)。
 
 ## 事件清單
 {: #event-List}

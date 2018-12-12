@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent/getting-started.html"}
+{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent/getting-started.html" path="services/voice-agent"}
 IBM Voice Agent with Watson
 
     {: .navgroup id="learn"}
@@ -11,32 +11,59 @@ IBM Voice Agent with Watson
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    {: .topicgroup}
+    Variables de estado
+        [Variables de estado establecidas por el agente de voz](services/voice-agent/api_reference.html#state-variables-iva)
+        [Variables de estado establecidas en el diálogo de Watson Assistant](services/voice-agent/api_reference.html#state-variables-conv)
+
+    [Mandatos de acción y atributos](services/voice-agent/api_reference.html#actions-and-attributes)
     default-settings.md
     activity-tracker.md
     [IBM Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/welcome_voicegateway.html){: new_window}
 
     {: .topicgroup}
     Servicios de Watson
-        [Watson Assistant](https://console.bluemix.net/docs/services/conversation/index.html){: new_window}
-        [Speech to Text](https://console.bluemix.net/docs/services/speech-to-text/index.html){: new_window}
-        [Text to Speech](https://console.bluemix.net/docs/services/text-to-speech/index.html){: new_window}
+        [Watson Assistant](services/conversation/index.html){: new_window}
+        [Speech to Text](services/speech-to-text/index.html){: new_window}
+        [Text to Speech](services/text-to-speech/index.html){: new_window}
 
     {: .topicgroup}
     Seguridad de información y privacidad de datos
-        [Seguridad de información y privacidad de datos](infosec.html)
-        [Manejo de información y opciones de configuración](infosec.html#configure_infosec)
-        [Servicios relacionados con IBM Voice Agent with Watson](infosec.html#related_services)
+        [Seguridad de información y privacidad de datos](services/voice-agent/infosec.html)
+        [Manejo de información y opciones de configuración](services/voice-agent/infosec.html#configure_infosec)
+        [Servicios relacionados con IBM Voice Agent with Watson](services/voice-agent/infosec.html#related_services)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     creating.md
     connect-SIP.md
     managing.md
-    api.md
-    secure-trunking.md
-    call-transfer.md
-    event-forwarding.md
+    managing_create.md
+
+    {: .topicgroup}
+    Configuración de agentes de voz
+        [Configuración de varias ubicaciones de servicio](services/voice-agent/managing_disaster_recovery.html)
+        [Conexión con servicios de habla y texto de terceros](services/voice-agent/managing_third_party.html)
+        [Utilización de servicios en otros espacios de trabajo de IBM Cloud](services/voice-agent/managing_other.html)
+        [Configuración de un motor de orquestación de servicios](services/voice-agent/managing_SOE.html)
+        [Habilitación del reenvío de sucesos para agentes de voz](services/voice-agent/event-forwarding.html)
+        [Configuración de opciones avanzadas](services/voice-agent/managing.html#config-advanced)
+
+    {: .topicgroup}
+    Configuración de una instancia de servicio
+        managing_concurrency.md
+
+    {: .topicgroup}
+    Programación de agentes de voz
+        api.md
+        api_dynamic_config.md
+        call-transfer.md
+
     logging.md
+
+    {: .topicgroup}
+    Protección del agente de voz
+        [Protección de conexiones](services/voice-agent/secure-trunking.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -51,6 +51,7 @@ Une fois que vous avez créé le service, notez le noeud final d'agent vocal sur
   * **Nom :** Nom unique pour votre agent vocal, par exemple, `Customer Support`
   * **Numéro de téléphone :** Numéro de téléphone complet que vous avez associé à votre liaison SIP, y compris le code pays et l'indicatif régional. Par exemple, pour un numéro 800 aux Etats-Unis, spécifiez le numéro de téléphone sous la forme suivante : 18883334444. Le numéro de téléphone peut comporter des espaces et les caractères + ( ) -.
   * **Description :** Description facultative de son utilisation
+  * **Cible par défaut du transfert :** URI de terminaison facultatif vers lequel les appels peuvent être transférés. 
 
 3. Créez les instances de service {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} et {{site.data.keyword.texttospeechshort}} pour votre agent vocal. Vous pouvez choisir de créer un agent vocal avec l'une ou l'autre des méthodes suivantes :
   * Cliquez sur **Créer un agent vocal** pour créer en une seule étape tous les services et un agent vocal avec la configuration par défaut.
@@ -61,7 +62,8 @@ Une fois que vous avez créé le service, notez le noeud final d'agent vocal sur
    1. Sur la page GitHub contenant l'exemple de conversation, cliquez sur le numéro de ligne `1` et sélectionnez **... > Copy line**. Collez le texte copié dans un fichier, puis enregistrez-le en tant que fichier JSON, par exemple, `voice-gateway-conversation-en.json`.
    2. Lancez l'outil {{site.data.keyword.conversationshort}}. Sur la page _Espaces de travail_, cliquez sur l'icône ![Importer un espace de travail](../conversation/images/workspace_import.png) et importez le fichier JSON.
 
-  Vous pouvez aussi [générer votre propre dialogue](https://console.bluemix.net/docs/services/conversation/dialog-build.html) afin de simuler votre environnement de production. Votre dialogue doit au moins contenir un noeud avec la condition `conversation_start` et un noeud avec une réponse par défaut.
+  Vous pouvez aussi [générer votre propre dialogue](../conversation/dialog-build.html) afin de simuler votre environnement de production. Votre dialogue doit au moins contenir un noeud avec la condition `conversation_start` et un noeud avec une réponse par défaut.
+
 
 ## Etapes suivantes
 {: #next}

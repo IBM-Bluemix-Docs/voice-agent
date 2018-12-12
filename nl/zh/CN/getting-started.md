@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -51,6 +51,7 @@ lastupdated: "2018-06-14"
   * **名称**：语音代理程序的唯一名称，例如 `Customer Support`
   * **电话号码**：与 SIP 中继相关联的完整电话号码，包括国家和地区代码。例如，对于美国 800 号码，请将电话号码指定为 18883334444。电话号码可以包含空格和 + ( ) - 字符。
   * **描述**：用途的相关描述（非必填）
+  * **缺省转移目标：**可将呼叫转移到的终止 URI（非必填）。 
 
 3. 为语音代理程序创建 {{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}} 和 {{site.data.keyword.texttospeechshort}} 服务实例。您可以选择使用以下任一方法来创建语音代理程序：
   * 单击**创建语音代理程序**，以使用缺省配置一步创建语音代理程序和所有服务。
@@ -61,7 +62,8 @@ lastupdated: "2018-06-14"
    1. 在样本对话 GitHub 页面上，单击行号 `1`，然后选择 **... > 复制行**。将复制的文本粘贴到一个文件中，然后将其另存为 JSON 文件，例如 `voice-gateway-conversation-en.json`。
    2. 启动 {{site.data.keyword.conversationshort}} 工具。在_工作空间_页面上，单击 ![导入工作空间](../conversation/images/workspace_import.png) 图标，并导入 JSON 文件。
 
-  或者，可以[构建自己的对话](https://console.bluemix.net/docs/services/conversation/dialog-build.html)来模拟生产环境。对话必须至少包含具有 `conversation_start` 条件的节点和具有缺省响应的节点。
+  或者，可以[构建自己的对话](../conversation/dialog-build.html)来模拟生产环境。对话必须至少包含具有 `conversation_start` 条件的节点和具有缺省响应的节点。
+
 
 ## 后续步骤
 {: #next}

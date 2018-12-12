@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-13"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -16,8 +16,9 @@ lastupdated: "2018-08-13"
 
 # サービスの作成
 
+{{site.data.keyword.iva_full}} サービス・インスタンスは、{{site.data.keyword.Bluemix_short}} カタログまたは {{site.data.keyword.Bluemix_notm}} `ibmcloud` コマンドを使用して作成できます。
 {: shortdesc}
-{{site.data.keyword.Bluemix_short}} カタログまたは {{site.data.keyword.Bluemix_notm}} `ibmcloud` コマンドを使用して {{site.data.keyword.iva_full}} サービス・インスタンスを作成できます。
+
 
 ## カタログからのサービス作成
 {: #catalog_create}
@@ -26,21 +27,16 @@ lastupdated: "2018-08-13"
 
    カタログ・ページにはサービスと価格プランに関する情報があります。 **サービス名**の値は変更可能です。
 
-2. **「作成」**をクリックします。
+2. [_「管理」_ダッシュボードで**「作成」**をクリックしてボイス・エージェントを作成](managing_create.html#config_instance)します。
 
 ## コマンド・ラインからのサービスの作成
 {: #command_create}
 
-1. [{{site.data.keyword.Bluemix_notm}} CLI をインストールします](../../cli/index.html#overview)。
+1. [{{site.data.keyword.Bluemix_notm}} CLI をインストールします](../cli/index.html#overview)。
 
-2. [`ibmcloud` コマンド](../../cli/idt/commands.html#idt-cli)を実行して、_トライアル_・プランで Voice Agent サービス・インスタンスを作成します。
+2. [`ibmcloud` コマンド](../cli/idt/commands.html#idt-cli)を実行して、_ライト_・プランで Voice Agent サービス・インスタンスを作成します。
 
    ```
-   ibmcloud service create VoiceAgent _Trial_ "My Voice Agent Service"
+   ibmcloud service create VoiceAgent _Lite_ "My Voice Agent Service"
    ```
    {: codeblock}
-
-## 次のステップ
-{: #next}
-
-_管理_ダッシュボードからボイス・エージェントを作成します。 [ボイス・エージェントの管理](managing.html)を参照してください。
