@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -25,9 +25,9 @@ lastupdated: "2018-06-13"
 {{site.data.keyword.iva_short}} は、環境の全体的なアーキテクチャー内にある複数のコンポーネントの 1 つで、以下の要素が含まれることがあります。
 
 * [IBM Voice Gateway ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SS4U29/) に基づくボイス・エージェント。これは以下の複数の Watson サービスを調整します。
-  * [{{site.data.keyword.speechtotextshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/speech-to-text/index.html): 発信者の音声をテキストに変換します
-  * [{{site.data.keyword.conversationshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/conversation/index.html) または [{{site.data.keyword.virtualagentshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/virtual-agent/getting-started.html#getting-started): テキストを分析し、それをインテントにマップして、ユーザーが作成したダイアログに基づいて応答を提供します。
-  * [{{site.data.keyword.texttospeechshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/docs/services/text-to-speech/index.html): 応答を音声オーディオに変換します。
+  * [{{site.data.keyword.speechtotextshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](../speech-to-text/index.html): 発信者の音声をテキストに変換します
+  * [{{site.data.keyword.conversationshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](../conversation/index.html): テキストを分析し、それをインテントにマップして、ユーザーが作成したダイアログに基づいて応答を提供します。
+  * [{{site.data.keyword.texttospeechshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](../text-to-speech/index.html): 応答を音声オーディオに変換します。
 * SIP トランク。これはボイス・エージェントを電話網に接続します
 * オプションのサービス・オーケストレーション・エンジン (SOE)。これは {{site.data.keyword.conversationshort}} サービスとボイス・エージェントの間に存在して、環境をさらにカスタマイズできるようにします
 
@@ -44,7 +44,7 @@ lastupdated: "2018-06-13"
 1. 発信者が質問をします。
 1. 質問は {{site.data.keyword.speechtotextshort}} サービスに流されます。
 1. テキストの発話が返されます。
-1. テキストが {{site.data.keyword.conversationshort}} サービスまたは {{site.data.keyword.virtualagentshort}} にメッセージ要求として送信されます。
+1. テキストが {{site.data.keyword.conversationshort}} サービスにメッセージ要求として送信されます。
 1. メッセージ応答が返されます。
 1. 応答テキストが {{site.data.keyword.texttospeechshort}} サービスに送信されます。
 1. 合成音声が返されます。
@@ -60,7 +60,7 @@ SIP トランクを使用して、公衆電話網から環境を素早くセッ�
 ### サービス・オーケストレーション・エンジンを使用するアーキテクチャー
 {: #arch-soe}
 
-{{site.data.keyword.conversationshort}} サービスの構成時にサービス・オーケストレーション・エンジン (SOE) を組み込んで、{{site.data.keyword.iva_short}} とサービスの間の通信をカスタマイズすることができます。 メッセージ要求と応答を代行受信し、それらをサード・パーティー API を使用して変更することで、サービス・オーケストレーション・エンジンは {{site.data.keyword.conversationshort}} サービスのプロキシーとして機能します。 {{site.data.keyword.iva_short}} と {{site.data.keyword.conversationshort}} サービスは、{{site.data.keyword.conversationshort}} サービスの REST API を介して通信し、`MessageRequest` 方式を使用して要求データを送信し、対応する JSON 応答を受信します。 SOE を {{site.data.keyword.virtualagentshort}} のプロキシーとして使用することもできます。その場合は SOE によって同様の機能が実行されます。
+{{site.data.keyword.conversationshort}} サービスの構成時にサービス・オーケストレーション・エンジン (SOE) を組み込んで、{{site.data.keyword.iva_short}} とサービスの間の通信をカスタマイズすることができます。 メッセージ要求と応答を代行受信し、それらをサード・パーティー API を使用して変更することで、サービス・オーケストレーション・エンジンは {{site.data.keyword.conversationshort}} サービスのプロキシーとして機能します。 {{site.data.keyword.iva_short}} と {{site.data.keyword.conversationshort}} サービスは、{{site.data.keyword.conversationshort}} サービスの REST API を介して通信します。`MessageRequest` メソッドを使用して要求データを送信し、対応する JSON 応答を受信します。
 
 ![{{site.data.keyword.iva_short}} と {{site.data.keyword.conversationshort}} サービスの間のメッセージ要求と応答はサービス・オーケストレーション・エンジンを通ってフローし、そこで変更されます。](images/arch-soe.png)
 
@@ -88,9 +88,11 @@ SIP トランクを使用して、公衆電話網から環境を素早くセッ�
 ## サポートされる言語
 {: #supported-languages}
 
-ある言語がサポートされるためには、ボイス・エージェントで構成するすべての Watson サービスでその言語がサポートされている必要があります。 {{site.data.keyword.speechtotextshort}} と {{site.data.keyword.texttospeechshort}} サービス、および {{site.data.keyword.conversationshort}} または {{site.data.keyword.virtualagentshort}} のいずれかを使用する場合は、以下の言語がサポートされます。
+ある言語がサポートされるためには、ボイス・エージェントで構成するすべての Watson サービスでその言語がサポートされている必要があります。 {{site.data.keyword.speechtotextshort}}、{{site.data.keyword.texttospeechshort}}、{{site.data.keyword.conversationshort}} サービスを使用する場合は、以下の言語がサポートされます。
 
 * ブラジル・ポルトガル語
+* フランス語 ({{site.data.keyword.speechtotextshort}} ブロードバンドのみ)
+* ドイツ語 ({{site.data.keyword.speechtotextshort}} ブロードバンドのみ)
 * 日本語
 * スペイン語
 * 英国英語

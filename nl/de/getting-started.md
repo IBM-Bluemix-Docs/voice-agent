@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -51,6 +51,7 @@ Nach dem Erstellen des Service vermerken Sie den Endpunkt des Sprachagenten im D
   * **Name:** Ein eindeutiger Name für Ihren Sprachagenten, z. B. `Kundendienst`
   * **Telefonnummer:** Die vollständige Telefonnummer, die Sie Ihrem SIP-Trunk zugeordnet haben, einschließlich Landes- und Ortsvorwahl. Für eine 800-er Nummer in den Vereinigten Staaten z. B. geben Sie die Nummer mit 18883334444 an. Die Telefonnummer darf Leerzeichen und die Zeichen + ( ) - enthalten.
   * **Beschreibung:** Eine optionale Beschreibung der Verwendung
+  * **Übertragungsstandardziel:** Ein optionaler Beendigungs-URI, an den Aufrufe übertragen werden können. 
 
 3. Erstellen Sie für Ihren Sprachagenten die {{site.data.keyword.conversationshort}}-, die {{site.data.keyword.speechtotextshort}}- und die {{site.data.keyword.texttospeechshort}}-Serviceinstanz. Für die Erstellung eines Sprachagenten können Sie eine der folgenden Methoden wählen:
   * Klicken Sie auf **Sprachagenten erstellen**, um alle Services sowie einen Sprachagenten mit der Standardkonfiguration in nur einem Schritt zu erstellen.
@@ -61,7 +62,8 @@ Nach dem Erstellen des Service vermerken Sie den Endpunkt des Sprachagenten im D
    1. Auf der GitHub-Seite mit dem Beispieldialog klicken Sie auf die Zeilennummer `1` und wählen Sie **... > Zeile kopieren** aus. Fügen Sie den kopierten Text in eine Datei ein und speichern Sie diese als JSON-Datei, z. B. `voice-gateway-conversation-en.json`.
    2. Starten Sie das {{site.data.keyword.conversationshort}}-Tool. Klicken Sie auf der Seite _Arbeitsbereiche_ auf das Symbol ![Arbeitsbereich importieren](../conversation/images/workspace_import.png) und importieren Sie die JSON-Datei.
 
-  Alternativ können Sie [einen eigenen Dialog erstellen](https://console.bluemix.net/docs/services/conversation/dialog-build.html), um Ihre Produktionsumgebung zu simulieren. Ihr Dialog muss mindestens einen Knoten mit der Bedingung `conversation_start` und einen Knoten mit einer Standardantwort enthalten.
+  Alternativ können Sie [einen eigenen Dialog erstellen](../conversation/dialog-build.html), um Ihre Produktionsumgebung zu simulieren. Ihr Dialog muss mindestens einen Knoten mit der Bedingung `conversation_start` und einen Knoten mit einer Standardantwort enthalten.
+
 
 ## Nächste Schritte
 {: #next}

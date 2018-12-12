@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -23,7 +23,6 @@ lastupdated: "2018-06-19"
 |------|---------------|
 | {{site.data.keyword.conversationshort}} 토큰 인증| 사용 |
 | 서비스 오케스트레이션 엔진(SOE) 토큰 인증| 사용 안함 |
-| {{site.data.keyword.virtualagentshort}} 토큰 인증| 사용 안함 |
 | {{site.data.keyword.speechtotextshort}} 토큰 인증| 사용 |
 | 비속어 필터 | 사용 |
 | 스마트 포맷 | 사용 |

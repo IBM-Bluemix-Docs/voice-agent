@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -23,8 +23,7 @@ lastupdated: "2018-06-19"
 ## Sobre a transferência de chamada
 {: #about-ct}
 
-Ao ativar a transferência de chamada, se um responsável pela chamada solicitar falar com um agente em tempo real durante a conversa, o agente de voz redirecionará a chamada. É possível ativar a transferência de chamada configurando um URI de finalização na configuração do provedor SIP. Em seguida, defina
-o destino de transferência em uma ação de API em um nó de diálogo da instância do {{site.data.keyword.conversationshort}}. O seu destino de transferência é um URI do SIP que contém o URI de finalização e o número do telefone.
+Ao ativar a transferência de chamada, se um responsável pela chamada solicitar falar com um agente em tempo real durante a conversa, o agente de voz redirecionará a chamada. É possível ativar a transferência de chamada configurando um URI de finalização na configuração do provedor SIP. Em seguida, configure o destino de transferência ou defina uma ação de API em um nó de diálogo da instância do {{site.data.keyword.conversationshort}}. O seu destino de transferência é um URI do SIP que contém o URI de finalização e o número do telefone.
 
 Para obter mais informações sobre ações suportadas e a customização dos agentes de voz, consulte [Programando
 agentes de voz usando a API](api.html).
@@ -37,7 +36,7 @@ agentes de voz usando a API](api.html).
 
 Anote o número do telefone em sua [conta do NetFoundry ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://watson.netfoundry.io/watson-login){: new_window} para o qual deseja transferir. Posteriormente, é possível especificar esse número do telefone e o URI de finalização como o destino de transferência em seu diálogo de {{site.data.keyword.conversationshort}}. Não use um número de telefone pessoal.
 
-É possível copiar o URI de finalização do NetFoundry a seguir para usá-lo no destino de transferência.
+É possível copiar o seguinte URI de terminação do NetFoundry para usar ao criar o agente de voz ou configurar o destino de transferência no diálogo do {{site.data.keyword.conversationshort}}.
 
 ```
 Dal.watson-va.netfoundry.net
@@ -62,14 +61,14 @@ Não é necessário configurar manualmente o URI de finalização na sua conta d
 1. Na seção _Autenticação_, clique no ícone **+** para incluir um endereço IP do agente de voz na lista Acessar IP de controle.
 
   Inclua ambos os endereços IP a seguir:
-   * 169.60.154.134 (região de serviço do Sul dos EUA)
-   * 169.61.86.179 (região de serviço do Leste dos EUA)
+   * 169.60.154.134 (região de serviço de Dallas)
+   * 169.61.86.179 (região de serviço de Washington DC)
 
 1. Clique em **Salvar** para concluir a configuração do seu URI de finalização.
 
 Anote o número do telefone e o URI de finalização para o qual você deseja transferir. Certifique-se de que o número de telefone não é um número de telefone pessoal.
 
-É possível usar o número de telefone e o URI de finalização para especificar o destino de transferência no diálogo {{site.data.keyword.conversationshort}}.
+É possível usar o número do telefone e o URI de terminação ao criar o agente de voz ou configurar o destino de transferência no diálogo do {{site.data.keyword.conversationshort}}.
 
 
 ## Etapa 2: Configurando o {{site.data.keyword.conversationshort}} para transferência de chamada

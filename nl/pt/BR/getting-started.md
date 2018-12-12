@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -53,6 +53,7 @@ tronco SIP.
   * **Número do telefone:** o número do telefone completo que você associou ao seu tronco SIP, incluindo
 os códigos de país e de área. Por exemplo, para um número 800 dos Estados Unidos, especifique o número de telefone como 18883334444. O número do telefone pode ter espaços e caracteres + ( ) -.
   * **Descrição:** uma descrição opcional de seu uso
+  * **Destino de transferência padrão:** um URI de terminação opcional para o qual as chamadas podem ser transferidas. 
 
 3. Crie as instâncias de serviço {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} e {{site.data.keyword.texttospeechshort}} para seu agente de voz. Você pode optar por criar um agente de voz com qualquer um dos métodos a seguir:
   * Clique em **Criar um agente de voz** para criar todos os serviços e um agente de voz com a configuração padrão em uma única etapa.
@@ -65,7 +66,8 @@ o {{site.data.keyword.iva_short}} e crie um agente de voz separadamente.
    2. Ative a ferramenta {{site.data.keyword.conversationshort}}. Na página _Áreas de trabalho_, clique
 no ícone ![Importar área de trabalho](../conversation/images/workspace_import.png) e importe o arquivo JSON.
 
-  Como alternativa, é possível [construir seu próprio diálogo](https://console.bluemix.net/docs/services/conversation/dialog-build.html) para simular o ambiente de produção. No mínimo, seu diálogo deve conter um nó com a condição `conversation_start` e um nó com uma resposta padrão.
+  Como alternativa, é possível [construir seu próprio diálogo](../conversation/dialog-build.html) para simular o ambiente de produção. No mínimo, seu diálogo deve conter um nó com a condição `conversation_start` e um nó com uma resposta padrão.
+
 
 ## Próximas etapas
 {: #next}

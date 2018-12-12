@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -23,7 +23,6 @@ lastupdated: "2018-06-19"
 |------|---------------|
 | {{site.data.keyword.conversationshort}} token authentication| Habilitado |
 | Service Orchestration Engine (SOE) token authentication| Inhabilitado |
-| {{site.data.keyword.virtualagentshort}} token authentication| Inhabilitado |
 | {{site.data.keyword.speechtotextshort}} token authentication| Habilitado |
 | Profanity filter | Habilitado |
 | Smart formatting | Habilitado |

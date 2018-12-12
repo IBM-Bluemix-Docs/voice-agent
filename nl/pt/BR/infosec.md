@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-29"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -41,13 +41,13 @@ Consulte [Configurando transferência de chamada](call-transfer.html) para saber
 
 Consulte [Ativando o encaminhamento de eventos](event-forwarding.html) para configurar seus agentes de voz para encaminhar eventos de relatórios.
 
-Consulte [**{{site.data.keyword.cloudant_short_notm}}: segurança**](../Cloudant/offerings/security.html#security){: #new_window} para obter mais informações sobre privacidade de dados e segurança de informações para o {{site.data.keyword.cloudant_short_notm}}.
+Consulte [**{{site.data.keyword.cloudant_short_notm}}: segurança**](../Cloudant/offerings/security.html#security){: new_window} para obter mais informações sobre privacidade de dados e segurança de informações para o {{site.data.keyword.cloudant_short_notm}}.
 
 ### Armazenamento em cache de Texto para fala
 {: #tts_caching}
 
 Para conversar com clientes, o {{site.data.keyword.conversationshort}} produz respostas como texto, que são passadas para o serviço {{site.data.keyword.texttospeechshort}} e faladas em voz alta no {{site.data.keyword.iva_short}}. As respostas que o {{site.data.keyword.conversationshort}}
-cria podem conter informações confidenciais. Para impedir o {{site.data.keyword.iva_short}} de armazenar em cache respostas recebidas do serviço {{site.data.keyword.texttospeechshort}} que contenham dados pessoais, é possível permitir que o comando de ação `vgwActExcludeFromTTSCache` impeça elocuções que contenham certos tipos de informações de serem armazenadas em cache. Consulte [Programando agentes de voz usando a API](api.html#action-sequencess).
+cria podem conter informações confidenciais. Para impedir o {{site.data.keyword.iva_short}} de armazenar em cache respostas recebidas do serviço {{site.data.keyword.texttospeechshort}} que contenham dados pessoais, é possível permitir que o comando de ação `vgwActExcludeFromTTSCache` impeça elocuções que contenham certos tipos de informações de serem armazenadas em cache. Consulte [Programando os agentes de voz usando a API](api.html#action-sequences).
 
 ### Conexões Seguras
 {: #secure_trunking}
@@ -59,7 +59,7 @@ O {{site.data.keyword.iva_short}} é baseado no {{site.data.keyword.Bluemix_notm
 
 É possível usar um mecanismo de orquestração de serviço (SOE) para processar informações que passam entre o {{site.data.keyword.iva_short}} e o {{site.data.keyword.conversationshort}} para customizar conversas com os responsáveis pela chamada. Para manter conexões seguras, assegure-se de configurar seu SOE usando uma URL segura (`https`) e a autenticação de usuário.
 
-Consulte [Configurando o {{site.data.keyword.conversationshort}} para seu agente de voz](managing.html#conversation_va) e [Arquitetura com um mecanismo de orquestração de serviço](about.html#arch-soe).
+Consulte [Configurando o {{site.data.keyword.conversationshort}} para seu agente de voz](managing_SOE.html#conversation_va) e [Arquitetura com um mecanismo de orquestração de serviço](about.html#arch-soe).
 
 ## Serviços relacionados ao {{site.data.keyword.iva_short}}
 {: #related_services}
@@ -68,8 +68,8 @@ O {{site.data.keyword.iva_short}} orquestra diferentes serviços do {{site.data.
 
 Consulte os recursos a seguir para localizar considerações para cada serviço e para o {{site.data.keyword.Bluemix_notm}}.
 
-  * [**{{site.data.keyword.Bluemix_short}}: conformidade de segurança**](../../security/compliance.html)
-  * [**{{site.data.keyword.conversationfull}}: segurança de informações**](../conversation/information-security.html){: #new_window}
-  * [**{{site.data.keyword.texttospeechfull}}: segurança de informações**](../text-to-speech/information-security.html){: #new_window}
-  * [**{{site.data.keyword.speechtotextfull}}: segurança de informações**](../speech-to-text/information-security.html){: #new_window}
-  * [**{{site.data.keyword.cloudant_short_notm}}: segurança**](../Cloudant/offerings/security.html#security){: #new_window}
+  * [**{{site.data.keyword.Bluemix_short}}: conformidade de segurança**](../security/compliance.html)
+  * [**{{site.data.keyword.conversationfull}}: segurança de informações**](../conversation/information-security.html){: new_window}
+  * [**{{site.data.keyword.texttospeechfull}}: segurança de informações**](../text-to-speech/information-security.html){: new_window}
+  * [**{{site.data.keyword.speechtotextfull}}: segurança de informações**](../speech-to-text/information-security.html){: new_window}
+  * [**{{site.data.keyword.cloudant_short_notm}}: segurança**](../Cloudant/offerings/security.html#security){: new_window}

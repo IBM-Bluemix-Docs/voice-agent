@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-06-19"
 ## 关于呼叫转移
 {: #about-ct}
 
-启用呼叫转移后，如果呼叫者在对话期间请求与人工代理通话，语音代理程序会重定向该呼叫。您可以通过在 SIP 提供者配置中设置终止 URI 来启用呼叫转移。然后在 {{site.data.keyword.conversationshort}} 实例的对话节点中的 API 操作上定义转移目标。转移目标是包含终止 URI 和电话号码的 SIP URI。
+启用呼叫转移后，如果呼叫者在对话期间请求与人工代理通话，语音代理程序会重定向该呼叫。您可以通过以下方法来启用呼叫转移：在 SIP 提供者配置中设置终止 URI。然后，在 {{site.data.keyword.conversationshort}} 实例的对话节点中配置转移目标或定义 API 操作。转移目标是包含终止 URI 和电话号码的 SIP URI。
 
 有关支持的操作和定制语音代理程序的更多信息，请参阅[使用 API 对语音代理程序编程](api.html)。
 
@@ -35,7 +35,7 @@ lastupdated: "2018-06-19"
 
 记下 [NetFoundry 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://watson.netfoundry.io/watson-login){: new_window} 中要转移到的电话号码。以后，可以在 {{site.data.keyword.conversationshort}} 对话中将此电话号码和终止 URI 指定为转移目标。不要使用个人电话号码。
 
-您可以复制以下 NetFoundry 终止 URI 以用于转移目标。
+您可以复制以下 NetFoundry 终止 URI，以便在创建语音代理程序或在 {{site.data.keyword.conversationshort}} 对话中配置转移目标时使用。
 
 ```
 dal.watson-va.netfoundry.net
@@ -60,14 +60,14 @@ dal.watson-va.netfoundry.net
 1. 在_认证_部分中，单击 **+** 图标以将语音代理程序 IP 地址添加到访问控制 IP 列表中。
 
   添加以下两个 IP 地址：
-   * 169.60.154.134（美国南部服务区域）
-   * 169.61.86.179（美国东部服务区域）
+   * 169.60.154.134（达拉斯服务区域）
+   * 169.61.86.179（华盛顿服务区域）
 
 1. 单击**保存**以完成终止 URI 的配置。
 
 请记下要转移到的电话号码和终止 URI。确保电话号码不是个人电话号码。
 
-可以使用电话号码和终止 URI 来指定 {{site.data.keyword.conversationshort}} 对话中的转移目标。
+您可以在创建语音代理程序或在 {{site.data.keyword.conversationshort}} 对话中配置转移目标时使用电话号码和终止 URI。
 
 
 ## 步骤 2：将 {{site.data.keyword.conversationshort}} 配置用于呼叫转移
@@ -113,7 +113,7 @@ dal.watson-va.netfoundry.net
 
 **请记住**：转移目标的 SIP URI 包含电话号码和您所创建的终止 URI。不要在转移目标中使用个人电话号码。例如，如果电话号码为 `18889990000`，终止 URI 为 `mysiptrunk.pstn.twilio.com`，那么完整的 SIP URI 为 `sip:18889990000\\@mysiptrunk.pstn.twilio.com`。如果使用 Netfoundry 且电话号码为 `18889990000`，那么完整 SIP URI 为 `sip:18889990000\\@dal.watson-va.netfoundry.net`。
 
-为了保护个人可标识信息 (PII)，在配置传输目标 SIP URI 时，请勿使用个人电话号码。请参阅 [{{site.data.keyword.iva_short}} 和信息处理](infosec.html#configure_infosec){:new_window}以了解有关 PII 和配置的更多信息。
+为了保护个人可标识信息 (PII)，在配置转移目标 SIP URI 时，请勿使用个人电话号码。请参阅 [{{site.data.keyword.iva_short}} 和信息处理](infosec.html#configure_infosec){:new_window}以了解有关 PII 和配置的更多信息。
 {: tip}
 
 ## 后续步骤

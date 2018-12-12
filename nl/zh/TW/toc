@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent/getting-started.html"}
+{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent/getting-started.html" path="services/voice-agent"}
 IBM Voice Agent with Watson
 
     {: .navgroup id="learn"}
@@ -11,32 +11,59 @@ IBM Voice Agent with Watson
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    {: .topicgroup}
+    狀態變數
+        [語音代理程式所設定的狀態變數](services/voice-agent/api_reference.html#state-variables-iva)
+        [Watson Assistant 對話中設定的狀態變數](services/voice-agent/api_reference.html#state-variables-conv)
+
+    [動作指令及屬性](services/voice-agent/api_reference.html#actions-and-attributes)
     default-settings.md
     activity-tracker.md
     [IBM Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/welcome_voicegateway.html){: new_window}
 
     {: .topicgroup}
     Watson 服務
-        [Watson Assistant](https://console.bluemix.net/docs/services/conversation/index.html){: new_window}
-        [Speech to Text](https://console.bluemix.net/docs/services/speech-to-text/index.html){: new_window}
-        [Text to Speech](https://console.bluemix.net/docs/services/text-to-speech/index.html){: new_window}
+        [Watson Assistant](services/conversation/index.html){: new_window}
+        [Speech to Text](services/speech-to-text/index.html){: new_window}
+        [Text to Speech](services/text-to-speech/index.html){: new_window}
 
     {: .topicgroup}
     資訊安全及資料隱私
-        [資訊安全及資料隱私](infosec.html)
-        [資訊處理及配置選項](infosec.html#configure_infosec)
-        [與 IBM Voice Agent with Watson 相關的服務](infosec.html#related_services)
+        [資訊安全及資料隱私](services/voice-agent/infosec.html)
+        [資訊處理及配置選項](services/voice-agent/infosec.html#configure_infosec)
+        [與 IBM Voice Agent with Watson 相關的服務](services/voice-agent/infosec.html#related_services)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     creating.md
     connect-SIP.md
     managing.md
-    api.md
-    secure-trunking.md
-    call-transfer.md
-    event-forwarding.md
+    managing_create.md
+
+    {: .topicgroup}
+    配置語音代理程式
+        [配置多個服務位置](services/voice-agent/managing_disaster_recovery.html)
+        [使用協力廠商語音及文字服務進行連接](services/voice-agent/managing_third_party.html)
+        [在其他 IBM Cloud 工作區中使用服務](services/voice-agent/managing_other.html)
+        [配置服務編排引擎](services/voice-agent/managing_SOE.html)
+        [啟用語音代理程式的事件轉遞](services/voice-agent/event-forwarding.html)
+        [配置進階選項](services/voice-agent/managing.html#config-advanced)
+
+    {: .topicgroup}
+    配置服務實例
+        managing_concurrency.md
+
+    {: .topicgroup}
+    程式設計語音代理程式
+        api.md
+        api_dynamic_config.md
+        call-transfer.md
+
     logging.md
+
+    {: .topicgroup}
+    保護語音代理程式
+        [保護連線](services/voice-agent/secure-trunking.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

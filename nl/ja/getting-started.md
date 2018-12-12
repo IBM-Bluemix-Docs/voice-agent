@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -51,6 +51,7 @@ lastupdated: "2018-06-14"
   * **名前:** ボイス・エージェントの固有の名前。例: `お客様サポート`
   * **電話番号:** SIP トランクに関連付けた (国別コードと市外局番を含む) 完全な電話番号。 例えば、米国の 800 ナンバーの場合は、電話番号を 18883334444 と指定します。 電話番号にはスペースや + ( ) - の文字を含めることができます。
   * **説明:** 用途の説明 (任意)
+  * **転送する場合のデフォルトの宛先:** 呼び出しを転送できるオプションの終端 URI。 
 
 3. ボイス・エージェント用に {{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}}、および {{site.data.keyword.texttospeechshort}} のサービス・インスタンスを作成します。 次のいずれかの方法で、ボイス・エージェントを作成することができます。
   * **「Create a voice agent (ボイス・エージェントの作成)」**をクリックして、1 つのステップですべてのサービスとボイス・エージェントをデフォルト構成で作成します。
@@ -61,7 +62,8 @@ lastupdated: "2018-06-14"
    1. GitHub のサンプル会話のページで、`1` 行目をクリックし、**「... > Copy line (行のコピー)」**を選択します。 コピーしたテキストをファイルに貼り付け、それを `voice-gateway-conversation-en.json` などの JSON ファイルとして保存します。
    2. {{site.data.keyword.conversationshort}} ツールを起動します。 _「Workspaces」_ページで、![ワークスペースのインポート](../conversation/images/workspace_import.png) アイコンをクリックして JSON ファイルをインポートします。
 
-  または、[独自のダイアログを作成](https://console.bluemix.net/docs/services/conversation/dialog-build.html)して、実稼働環境をシミュレートすることもできます。 この場合、作成するダイアログには、少なくとも `conversation_start` 条件を含むノードと、デフォルト応答を含むノードが含まれている必要があります。
+  または、[独自のダイアログを作成](../conversation/dialog-build.html)して、実稼働環境をシミュレートすることもできます。 この場合、作成するダイアログには、少なくとも `conversation_start` 条件を含むノードと、デフォルト応答を含むノードが含まれている必要があります。
+
 
 ## 次のステップ
 {: #next}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -25,9 +25,9 @@ lastupdated: "2018-06-13"
 {{site.data.keyword.iva_short}} è uno dei vari componenti nell'architettura generale del tuo ambiente, che può includere i seguenti elementi:
 
 * Un agent vocale basato su [IBM Voice Gateway ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/SS4U29/), che orchestra i seguenti servizi Watson:
-  * [{{site.data.keyword.speechtotextshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/speech-to-text/index.html): converte l'audio del chiamante in testo
-  * [{{site.data.keyword.conversationshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/conversation/index.html) o [{{site.data.keyword.virtualagentshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/virtual-agent/getting-started.html#getting-started): analizza il testo, lo associa agli intenti e risponde in base a un dialogo che crei
-  * [{{site.data.keyword.texttospeechshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/docs/services/text-to-speech/index.html): converte le risposte in un audio vocale
+  * [{{site.data.keyword.speechtotextshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](../speech-to-text/index.html): converte l'audio del chiamante in testo
+  * [{{site.data.keyword.conversationshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](../conversation/index.html): analizza il testo, lo associa agli intenti e risponde in base a un dialogo che crei 
+  * [{{site.data.keyword.texttospeechshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](../text-to-speech/index.html): converte le risposte in un audio vocale
 * Un trunk SIP, che collega il tuo agent vocale alla rete del telefono
 * Un motore di orchestrazione del servizio (SOE) facoltativo, che si pone tra il servizio {{site.data.keyword.conversationshort}} e il tuo agent vocale in modo che puoi ulteriormente personalizzare il tuo ambiente
 
@@ -37,14 +37,14 @@ lastupdated: "2018-06-13"
 Il seguente diagramma illustra come {{site.data.keyword.iva_short}} orchestra i vari servizi Watson per creare un agent vocale. In pochi secondi, il flusso di espressioni tra i servizi produrrà una conversazione di linguaggio naturale con il chiamante.
 
 <div style="float: right; padding-left: 1em; padding-bottom: 1em">
-<img src="images/conversation-flow.png" alt="{{site.data.keyword.iva_short}} funge a hub tramite il quale comunicano il chiamante e tutti i servizi Watson."/></div>
+<img src="images/conversation-flow.png" alt="{{site.data.keyword.iva_short}} funge da hub tramite il quale comunicano il chiamante e tutti i servizi Watson."/></div>
 
 La seguente procedura descrive il flusso di conversazione.
 
 1. Il chiamante pone una domanda.
 1. La domanda viene trasmessa al servizio {{site.data.keyword.speechtotextshort}}.
 1. Viene restituita un'espressione di testo.
-1. Il testo viene inviato al servizio {{site.data.keyword.conversationshort}} o a {{site.data.keyword.virtualagentshort}} come una richiesta di messaggio.
+1. Il testo viene inviato al servizio {{site.data.keyword.conversationshort}} come una richiesta di messaggio.
 1. Viene restituita una risposta di messaggio.
 1. Il testo di risposta viene inviato al servizio {{site.data.keyword.texttospeechshort}}.
 1. Viene restituito l'audio sintetizzato.
@@ -60,7 +60,7 @@ Puoi utilizzare i trunk SIP per configurare e verificare velocemente il tuo ambi
 ### Architettura con un motore di orchestrazione del servizio
 {: #arch-soe}
 
-Quando configuri il servizio {{site.data.keyword.conversationshort}}, puoi includere un motore di orchestrazione del servizio (SOE) per personalizzare la comunicazione tra {{site.data.keyword.iva_short}} e il servizio. Il motore di orchestrazione del servizio funge da proxy per il servizio {{site.data.keyword.conversationshort}}, intercettando le richieste e le risposte di messaggio e modificandole utilizzando API di terze parti. {{site.data.keyword.iva_short}} e il servizio {{site.data.keyword.conversationshort}} comunicano tramite l'API REST del servizio {{site.data.keyword.conversationshort}}, inviando i dati della richiesta utilizzando il metodo `MessageRequest` e ricevendo una risposta JSON corrispondente. Puoi anche utilizzare un SOE come proxy per {{site.data.keyword.virtualagentshort}}, che agisce nello stesso modo.
+Quando configuri il servizio {{site.data.keyword.conversationshort}}, puoi includere un motore di orchestrazione del servizio (SOE) per personalizzare la comunicazione tra {{site.data.keyword.iva_short}} e il servizio. Il motore di orchestrazione del servizio funge da proxy per il servizio {{site.data.keyword.conversationshort}}, intercettando le richieste e le risposte di messaggio e modificandole utilizzando API di terze parti. {{site.data.keyword.iva_short}} e il servizio {{site.data.keyword.conversationshort}} comunicano tramite l'API REST del servizio {{site.data.keyword.conversationshort}}, inviando i dati della richiesta utilizzando il metodo `MessageRequest` e ricevendo una risposta JSON corrispondente.
 
 ![Le richieste e le risposte di messaggio tra {{site.data.keyword.iva_short}} e il servizio {{site.data.keyword.conversationshort}} fluiscono tramite un motore di orchestrazione del servizio, che le modifica.](images/arch-soe.png)
 
@@ -88,9 +88,11 @@ Per ulteriori informazioni su come implementare un motore di orchestrazione del 
 ## Lingue supportate
 {: #supported-languages}
 
-Perché una lingua venga supportata, lo deve essere da tutti i servizi Watson che configuri nel tuo agent vocale. Utilizzando i servizi {{site.data.keyword.speechtotextshort}} e {{site.data.keyword.texttospeechshort}} e {{site.data.keyword.conversationshort}} o {{site.data.keyword.virtualagentshort}}, sono supportate le seguenti lingue:
+Perché una lingua venga supportata, lo deve essere da tutti i servizi Watson che configuri nel tuo agent vocale. Utilizzando i servizi {{site.data.keyword.speechtotextshort}}, {{site.data.keyword.texttospeechshort}} e {{site.data.keyword.conversationshort}}, sono supportate le seguenti lingue:
 
 * Portoghese brasiliano
+* Francese ({{site.data.keyword.speechtotextshort}} solo a banda larga)
+* Tedesco ({{site.data.keyword.speechtotextshort}} solo a banda larga)
 * Giapponese
 * Spagnolo
 * Inglese (Regno Unito)

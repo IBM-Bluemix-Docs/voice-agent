@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -51,6 +51,7 @@ Después de crear el servicio, anote el punto final del agente de voz en el pane
   * **Nombre:** Un nombre exclusivo para el agente de voz, como `Soporte al cliente`
   * **Número de teléfono:** El número de teléfono completo que ha asociado con la conexión troncal SIP, incluidos los códigos de país y área. Por ejemplo, para un número 800 de Estados Unidos, especifique el número de teléfono como 18883334444. El número de teléfono puede tener espacios y caracteres + ( ) -.
   * **Descripción:** Una descripción opcional del uso
+  * **Destino predeterminado de la transferencia:** Un URI de terminación opcional al que se pueden transferir las llamadas. 
 
 3. Cree las instancias de servicio de {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} y {{site.data.keyword.texttospeechshort}} para el agente de voz. Puede elegir crear un agente de voz con cualquiera de los siguientes métodos:
   * Pulse **Crear un agente de voz** para crear todos los servicios y un agente de voz con la configuración predeterminada en un solo paso.
@@ -61,7 +62,8 @@ Después de crear el servicio, anote el punto final del agente de voz en el pane
    1. En la página de GitHub de la conversación de ejemplo, pulse el número de línea `1` y seleccione **... > Copiar línea**. Pegue el texto copiado en un archivo y guárdelo como archivo JSON, por ejemplo `voice-gateway-conversation-en.json`.
    2. Inicie la herramienta {{site.data.keyword.conversationshort}}. En la página _Espacios de trabajo_, pulse el icono ![Importar espacio de trabajo](../conversation/images/workspace_import.png) e importe el archivo JSON.
 
-  De forma alternativa, puede [crear su propio diálogo](https://console.bluemix.net/docs/services/conversation/dialog-build.html) para simular el entorno de producción. Como mínimo, el diálogo debe contener un nodo con la condición `conversation_start` y un nodo con una respuesta predeterminada.
+  De forma alternativa, puede [crear su propio diálogo](../conversation/dialog-build.html) para simular el entorno de producción. Como mínimo, el diálogo debe contener un nodo con la condición `conversation_start` y un nodo con una respuesta predeterminada.
+
 
 ## Pasos siguientes
 {: #next}
