@@ -26,7 +26,7 @@ lastupdated: "2018-11-06"
 
 * Un agent vocale basato su [IBM Voice Gateway ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/SS4U29/), che orchestra i seguenti servizi Watson:
   * [{{site.data.keyword.speechtotextshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](../speech-to-text/index.html): converte l'audio del chiamante in testo
-  * [{{site.data.keyword.conversationshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](../conversation/index.html): analizza il testo, lo associa agli intenti e risponde in base a un dialogo che crei 
+  * [{{site.data.keyword.conversationshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](../conversation/index.html): analizza il testo, lo associa agli intenti e risponde in base a un dialogo che crei
   * [{{site.data.keyword.texttospeechshort}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](../text-to-speech/index.html): converte le risposte in un audio vocale
 * Un trunk SIP, che collega il tuo agent vocale alla rete del telefono
 * Un motore di orchestrazione del servizio (SOE) facoltativo, che si pone tra il servizio {{site.data.keyword.conversationshort}} e il tuo agent vocale in modo che puoi ulteriormente personalizzare il tuo ambiente

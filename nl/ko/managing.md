@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-03"
 
 
 ---
@@ -24,9 +24,9 @@ _관리_ 대시보드를 사용하여 서비스 인스턴스 구성을 변경하
 ## 음성 에이전트 서비스 대시보드로 이동
 {: #navigate_manage}
 
-{{site.data.keyword.Bluemix_notm}} 계정 대시보드에서 _관리_ 대시보드를 찾을 수 있습니다.
+{{site.data.keyword.iva_short}} 서비스 대시보드에서 _관리_ 대시보드를 찾을 수 있습니다.
 
-1. [{{site.data.keyword.Bluemix_notm}} 계정 대시보드](https://console.bluemix.net/dashboard/apps)로 이동하십시오.
+1. [{{site.data.keyword.Bluemix_notm}} 계정 리소스 목록](https://cloud.ibm.com/resources)으로 이동하십시오. 
 
 1. **서비스** 목록에서 **음성 에이전트** 서비스 인스턴스를 선택하여 _관리_ 탭에서 서비스 대시보드를 여십시오.
 
@@ -64,7 +64,7 @@ _관리_ 대시보드의 _음성 에이전트_ 탭에서 편집하여 기존 음
 
 * **[다중 서비스 위치 구성](managing_disaster_recovery.html):** 연결된 서비스가 서비스 중복성을 지원하도록 다중 서비스 위치를 포함하십시오.
 * **[서드파티 음성 및 텍스트 서비스와 연결](managing_third_party.html):** {{site.data.keyword.texttospeechshort}} 또는 {{site.data.keyword.speechtotextshort}}를 사용하는 대신에 음성 에이전트를 Google Cloud Speech-to-Text와 같은 서드파티 API에 연결할 수 있습니다.
-* **[다른 {{site.data.keyword.Bluemix_notm}} 작업공간에서 서비스 사용](managing_other.html):** 다른 {{site.data.keyword.Bluemix_short}} 계정의 작업공간에 속해 있는 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 또는 {{site.data.keyword.speechtotextshort}} 서비스 인스턴스를 사용하도록 음성 에이전트를 구성할 수 있습니다. 
+* **[다른 {{site.data.keyword.Bluemix_notm}} 작업공간에서 서비스 사용](managing_other.html):** 다른 {{site.data.keyword.Bluemix_short}} 계정의 작업공간에 속해 있는 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 또는 {{site.data.keyword.speechtotextshort}} 서비스 인스턴스를 사용하도록 음성 에이전트를 구성할 수 있습니다.
 * **[서비스 오케스트레이션 엔진을 사용하여 Watson Assistant 구성](managing_SOE.html):** 서비스 오케스트레이션 엔진(SOE)을 통해 {{site.data.keyword.conversationshort}} 작업공간에 연결할 수 있습니다. SOE는 서드파티 API를 사용하여 수정할 수 있도록 서비스로 보내고 받는 메시지를 인터셉트합니다.
 * **[음성 에이전트에 대한 이벤트 전달 사용](event-forwarding.html):** {{site.data.keyword.iva_short}}에서 호출 데이터를 수집하고 분석하여 호출자와의 자연스러운 대화 능력을 개선할 수 있습니다. 사용자가 작성하는 각 음성 에이전트는 사용자가 관리하는 지정된 {{site.data.keyword.cloudant_short_notm}}로 이벤트 보고서를 전달할 수 있습니다.
 

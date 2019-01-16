@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -71,23 +71,28 @@ lastupdated: "2018-08-16"
 
   您需要此電話號碼來設定語音代理程式（包括國碼及區域碼）。請參閱[建立及連接語音代理程式](getting-started.html#step3)。
 
+## 與 {{site.data.keyword.iva_short}} 的對等作業
+{: #peering}
+
+{{site.data.keyword.iva_short}} 支援對等節點連線（例如 IPSec 通道）。若要與 {{site.data.keyword.iva_short}} 對等作業，您可以將伺服器的 IP 位址設為白名單。
+
+1. 移至_管理_ 儀表板，並選取_實例_ 標籤。
+
+1. 按一下**新增 IP** 圖示，將新的 IP 位址設為白名單。
+
+1. 新增 **IP 暱稱**及 **IP 位址**。
 
 ## 使用 AT&T 及其他提供者進行連線
 {: #att-other}
 
 {{site.data.keyword.iva_short}} 支援使用 AT&T&reg; 及其他 SIP 幹線提供者進行連線。不過，這些連線不會進行自助式設定，而且需要額外協助。請參閱[要求輔助設定](#request-setup)。
 
-## 與 {{site.data.keyword.iva_short}} 的對等作業
-{: #peering}
-
-{{site.data.keyword.iva_short}} 支援對等節點連線（例如 IPSec 通道）。不過，這些連線不會進行自助式設定，而且需要額外協助。請參閱[要求輔助設定](#request-setup)。
-
 ## 要求輔助設定
 {: #request-setup}
 
 您可以要求設定輔助網路，以與 AT&T 或其他 SIP 幹線提供者連接、與 {{site.data.keyword.iva_short}} 對等，或使用下列處理程序來要求超過 50 個的並行連線。
 
-1. 開立新的 [{{site.data.keyword.Bluemix_notm}} 支援問題單](https://console.bluemix.net/unifiedsupport/tickets/add)
+1. 開立新的 [{{site.data.keyword.Bluemix_notm}} 支援問題單](https://cloud.ibm.com/unifiedsupport/tickets/add)
 
 1. 針對**問題單類型**，選取**技術**。
 

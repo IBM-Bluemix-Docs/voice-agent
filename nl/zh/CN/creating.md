@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-16"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-11-16"
 ## 通过目录创建服务
 {: #catalog_create}
 
-1. 转至 [{{site.data.keyword.iva_short}} 目录页面](https://console.bluemix.net/catalog/services/voice-agent-with-watson)。
+1. 转至 [{{site.data.keyword.iva_short}} 目录页面](https://cloud.ibm.com/catalog/services/voice-agent-with-watson)。
 
    该目录页面包含有关服务及其价格套餐的信息。您可以更改**服务名称**值。
 

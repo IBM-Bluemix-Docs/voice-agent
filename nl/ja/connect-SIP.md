@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -72,23 +72,28 @@ SIP トランクの名前を入力し、**「Create (作成)」**をクリック
 
   この電話番号は、国コードおよび地域コードとともに、ボイス・エージェントのセットアップに必要です。 [ボイス・エージェントの作成と接続](getting-started.html#step3)を参照してください。
 
+## {{site.data.keyword.iva_short}} とのピアリング
+{: #peering}
+
+{{site.data.keyword.iva_short}} では、IPSec トンネルなどのピア接続がサポートされています。 {{site.data.keyword.iva_short}} とのピアリングのために、サーバーの IP アドレスをホワイトリストに登録することができます。
+
+1. _「管理」_ダッシュボードに移動して、_「インスタンス」_タブを選択します。
+
+1. **「新規 IP の追加 (Add a new IP)」**アイコンをクリックして、新しい IP アドレスをホワイトリストに登録します。
+
+1. **IP ニックネーム**と **IP アドレス**を追加します。
 
 ## AT&T やその他のプロバイダーとの接続
 {: #att-other}
 
 {{site.data.keyword.iva_short}} では、AT&T&reg; やその他の SIP トランキング・プロバイダーとの接続がサポートされています。 ただし、それらの接続はセルフサービスのセットアップではなく、特別な支援が必要になります。 [要補助セットアップの要求](#request-setup)を参照してください。
 
-## {{site.data.keyword.iva_short}} とのピアリング
-{: #peering}
-
-{{site.data.keyword.iva_short}} では、IPSec トンネルなどのピア接続がサポートされています。 ただし、それらの接続はセルフサービスのセットアップではなく、特別な支援が必要になります。 [要補助セットアップの要求](#request-setup)を参照してください。
-
 ## 要補助セットアップの要求
 {: #request-setup}
 
 AT&T やその他の SIP トランキング・プロバイダーと接続したり、{{site.data.keyword.iva_short}} とピア接続したり、あるいは 50 より多くの同時接続を要求したりするには、以下の手順で要補助ネットワーク・セットアップを要求します。
 
-1. 新しい [{{site.data.keyword.Bluemix_notm}} サポート・チケット](https://console.bluemix.net/unifiedsupport/tickets/add)を開きます。
+1. 新しい [{{site.data.keyword.Bluemix_notm}} サポート・チケット](https://cloud.ibm.com/unifiedsupport/tickets/add)を開きます。
 
 1. **「チケット・タイプ」**は**「技術的」**を選択します。
 

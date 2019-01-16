@@ -15,7 +15,7 @@ lastupdated: "2018-11-16"
 {:tip: .tip}
 
 
-# Connessione ai servizi di discorso e testo di terze parti 
+# Connessione ai servizi di discorso e testo di terze parti
 {: #third-party}
 
 Puoi collegare i servizi di discorso e testo di terze parti quando crei, cloni o modifichi il tuo agent vocale nel dashboard _Manage_.
@@ -97,7 +97,7 @@ Invece di utilizzare un'istanza {{site.data.keyword.texttospeechfull}}, puoi sce
     {: codeblock}
 
 1. **Facoltativo** seleziona **Show Advanced** per immettere le impostazioni di configurazione speciali definite da Google in un formato JSON valido.
-  Il seguente esempio mostra le impostazioni di configurazione Google per una voce femminile in tedesco.  
+  Il seguente esempio mostra le impostazioni di configurazione Google per una voce femminile in tedesco.
 
   Se selezioni una lingua nella configurazione del servizio differente dalla lingua che hai definito in `languageCode`, {{site.data.keyword.iva_short}} sovrascrive la tua selezione con la lingua definita dalla configurazione JSON `languageCode`.
   {: tip}

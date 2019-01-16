@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -71,23 +71,28 @@ Vous avez besoin de ce numéro de téléphone pour installer et configurer votre
 
   Vous avez besoin de ce numéro de téléphone pour configurer votre agent vocal, y compris le code pays et l'indicatif régional. Voir [Création et connexion de votre agent vocal](getting-started.html#step3).
 
+## Appairage avec {{site.data.keyword.iva_short}}
+{: #peering}
+
+{{site.data.keyword.iva_short}} prend en charge les connexion homologues, par exemple, un tunnel IPSec. Pour une connexion homologue avec {{site.data.keyword.iva_short}}, vous pouvez constituer une liste blanche des adresse IP de vos serveurs.
+
+1. Accédez au tableau de bord _Gestion_ et sélectionnez l'onglet _Instance_.
+
+1. Cliquez sur **Ajouter une adresse IP** pour placer une nouvelle adresse IP en liste blanche.
+
+1. Ajoutez un **Pseudonyme IP** et l'**Adresse IP**.
 
 ## Connexion avec AT&T et d'autres fournisseurs
 {: #att-other}
 
 {{site.data.keyword.iva_short}} prend en charge les connexions à AT&T&reg; et d'autres fournisseurs de liaisons SIP. Toutefois, ces connexions ne sont pas configurées en libre-service et nécessitent une assistance supplémentaire. Voir [Demande de configuration assistée](#request-setup).
 
-## Appairage avec {{site.data.keyword.iva_short}}
-{: #peering}
-
-{{site.data.keyword.iva_short}} prend en charge les connexion homologues, par exemple, un tunnel IPSec. Toutefois, ces connexions ne sont pas configurées en libre-service et nécessitent une assistance supplémentaire. Voir [Demande de configuration assistée](#request-setup).
-
 ## Demande de configuration assistée
 {: #request-setup}
 
 Vous pouvez demander une configuration réseau assistée pour vous connecter à AT&T ou à d'autres fournisseurs de liaison SIP, de pair à pair avec {{site.data.keyword.iva_short}}, ou pour demander plus de 50 connexions simultanées à l'aide du processus ci-après.
 
-1. Ouvrez un nouveau [ticket de demande de service {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/unifiedsupport/tickets/add)
+1. Ouvrez un nouveau [ticket de demande de service {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/unifiedsupport/tickets/add)
 
 1. Sélectionnez **Technique** pour **Type de ticket**.
 

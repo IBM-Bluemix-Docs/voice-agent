@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-16"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-11-16"
 ## 從型錄建立服務
 {: #catalog_create}
 
-1. 移至 [{{site.data.keyword.iva_short}} 型錄頁面](https://console.bluemix.net/catalog/services/voice-agent-with-watson)。
+1. 移至 [{{site.data.keyword.iva_short}} 型錄頁面](https://cloud.ibm.com/catalog/services/voice-agent-with-watson)。
 
    型錄頁面具有服務及其定價方案的相關資訊。您可以變更**服務名稱**值。
 

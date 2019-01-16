@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -23,12 +23,12 @@ Guarda una dimostrazione su come creare il tuo primo agent vocale in questa [Ese
 ## Prima di cominciare
 {: #prereqs}
 
-Crea un nuovo account o accedi al tuo account esistente in [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/).
+Crea un nuovo account o accedi al tuo account esistente in [{{site.data.keyword.Bluemix_short}}](https://cloud.ibm.com/).
 
 ## Passo 1: creazione di un'istanza del servizio {{site.data.keyword.iva_short}} in {{site.data.keyword.Bluemix_notm}}
 {: #step1}
 
-Dalla [pagina di catalogo {{site.data.keyword.iva_short}}](https://console.bluemix.net/catalog/services/voice-agent-with-watson), controlla le informazioni sul servizio e fai poi clic su **Create**.
+Dalla pagina di catalogo [{{site.data.keyword.iva_short}} ](https://cloud.ibm.com/catalog/services/voice-agent-with-watson), controlla le informazioni sul servizio e fai poi clic su **Crea**.
 
 Dopo aver creato il servizio, prendi nota dell'endpoint dell'agent vocale nel dashboard _Getting started_. Hai bisogno dell'URI SIP endpoint per configurare il tuo trunk SIP.
 
@@ -51,7 +51,7 @@ Dopo aver creato il servizio, prendi nota dell'endpoint dell'agent vocale nel da
   * **Nome:** un nome univoco del tuo agent vocale, come `Customer Support`
   * **Numero di telefono:** il numero di telefono completo che hai associato al tuo trunk SIP, inclusi i codici area e paese. Ad esempio, per un numero 800 degli Stati Uniti, specifica il numero di telefono come 18883334444. Il numero di telefono può avere spazi e caratteri + ( ) -.
   * **Descrizione:** una descrizione facoltativa del suo utilizzo
-  * **Destinazione predefinita di trasferimento:** un URI di terminazione facoltativo a cui possono essere trasferite le chiamate. 
+  * **Destinazione predefinita di trasferimento:** un URI di terminazione facoltativo a cui possono essere trasferite le chiamate.
 
 3. Crea le istanze del servizio {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} e {{site.data.keyword.texttospeechshort}} del tuo agent vocale. Puoi scegliere di creare un agent vocale con uno dei seguenti metodi:
   * Fai clic su **Create a voice agent** per creare tutti i servizi e un agent vocale con la configurazione predefinita in un solo passo.

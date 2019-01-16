@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -23,12 +23,12 @@ lastupdated: "2018-10-31"
 ## 開始之前
 {: #prereqs}
 
-建立新帳戶，或在 [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/) 登入現有帳戶。
+建立新帳戶，或在 [{{site.data.keyword.Bluemix_short}}](https://cloud.ibm.com/) 登入現有帳戶。
 
 ## 步驟 1：在 {{site.data.keyword.Bluemix_notm}} 上建立 {{site.data.keyword.iva_short}} 服務實例
 {: #step1}
 
-從 [{{site.data.keyword.iva_short}} 型錄頁面](https://console.bluemix.net/catalog/services/voice-agent-with-watson)中，檢閱服務資訊，然後按一下**建立**。
+從 [{{site.data.keyword.iva_short}} 型錄頁面](https://cloud.ibm.com/catalog/services/voice-agent-with-watson)中，檢閱服務資訊，然後按一下**建立**。
 
 建立服務之後，請記下_開始使用_ 儀表板上的語音代理程式端點。您需要端點 SIP URI，才能配置 SIP 幹線。
 
@@ -51,7 +51,7 @@ lastupdated: "2018-10-31"
   * **名稱：**語音代理程式的唯一名稱，例如 `Customer Support`
   * **電話號碼：**您與 SIP 幹線相關聯的完整電話號碼（包括國碼及區域碼）。例如，若為美國 800 號碼，請將電話號碼指定為 18883334444。電話號碼可以有空格及 + ( ) - 字元。
   * **說明：**其用法的選用性說明
-  * **轉接預設目標：**通話可以轉接到的選用性終止 URI。 
+  * **轉接預設目標：**通話可以轉接到的選用性終止 URI。
 
 3. 建立語音代理程式的 {{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}} 及 {{site.data.keyword.texttospeechshort}} 服務實例。您可以選擇使用下列一種方法來建立語音代理程式：
   * 按一下**建立語音代理程式**，透過單一步驟以使用預設配置來建立所有服務及語音代理程式。

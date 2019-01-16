@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-16"
+lastupdated: "2018-12-04"
+
 
 ---
 
@@ -23,19 +24,22 @@ lastupdated: "2018-11-16"
 ## 호출 전송 정보
 {: #about-ct}
 
-호출 전송을 사용으로 설정하면 호출자가 대화 중에 실시간 상담원과 통화하도록 요청하는 경우 음성 에이전트가 호출을 경로 재지정합니다. SIP 제공자 구성에서 종료 URI를 설정하여 호출 전송을 사용으로 설정할 수 있습니다. 그런 다음 {{site.data.keyword.conversationshort}} 인스턴스의 대화 노드에서 전송 대상을 구성하거나 API 조치를 정의합니다. 전송 대상은 종료 URI 및 전화번호가 포함된 SIP URI입니다.
+호출 전송을 사용으로 설정하면 호출자가 대화 중에 실시간 상담원과 통화하도록 요청하는 경우 음성 에이전트가 호출을 경로 재지정합니다. {{site.data.keyword.iva_short}}에서는 SIP REFER를 사용하여 SIP 트렁크 제공자에게 다시 호출하여 처리하도록 하고 전송된 전화 호출은 다시 표시하지 않습니다.
 
-음성 에이전트의 사용자 정의 및 지원되는 조치에 대한 자세한 정보는 [API를 사용하여 음성 에이전트 프로그래밍](api.html)을 참조하십시오.
+SIP 제공자 구성에서 종료 URI 또는 전화 URI를 설정하여 호출 전송을 사용으로 설정할 수 있습니다. 그런 다음 {{site.data.keyword.conversationshort}} 인스턴스의 대화 상자 노드에서 API 조치에 대한 전송 대상을 정의합니다. 전송 대상은 종료 URI와 전화번호가 있는 SIP URI 또는 전화번호가 있는 전화 URI입니다. 음성 에이전트의 사용자 정의 및 지원되는 조치에 대한 자세한 정보는 [API를 사용하여 음성 에이전트 프로그래밍](api.html)을 참조하십시오.
 
 ## 1단계: 종료 URI 설정
 {: #termination-setup}
+
+SIP URI 구성에서 종료 URI 대신 전화 URI를 사용 중인 경우, `trasnferTarget`에 대해 `tel:+18889990000`과 같은 전화 URI를 사용할 수 있습니다. SIP URI를 사용 중인 경우 `transferTarget`에 대한 종료 URI가 필요합니다.
+{: tip}
 
 ### NetFoundry에서 종료 URI 설정
 {: #termination-netfoundry}
 
 [NetFoundry 계정![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://watson.netfoundry.io/watson-login){: new_window}의 전송할 대상 전화번호를 기록하십시오. 나중에 {{site.data.keyword.conversationshort}} 대화 상자에서 이 전화번호 및 종료 URI를 전송 대상으로 지정할 수 있습니다. 개인 전화번호를 사용하지 마십시오.
 
-{{site.data.keyword.conversationshort}} 대화에서 음성 에이전트를 작성하거나 전송 대상을 구성할 때 사용할 다음 NetFoundry 종료 URI를 복사할 수 있습니다.
+전송 대상에서 사용할 다음 NetFoundry 종료 URI를 복사하십시오.
 
 ```
 dal.watson-va.netfoundry.net
@@ -57,17 +61,11 @@ dal.watson-va.netfoundry.net
 
   * 종료 URI 이름은 고유해야 합니다. Twilio는 선택한 이름의 가용성을 자동으로 확인합니다. Twilio 서비스에 대한 세부사항은 [SIP 트렁크 종료 설정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.twilio.com/docs/api/sip-trunking/getting-started#termination){: new_window}을 참조하십시오.
 
-1. _인증_ 섹션에서 **+** 아이콘을 클릭하여 음성 에이전트 IP 주소를 액세스 제어 IP 목록에 추가하십시오.
+1. 탐색줄에서 **일반**을 선택하여 _일반 설정_을 표시하십시오. **호출 전송(SIP REFER)** 표제에서 설정을 **사용**으로 전환한 후 **트렁크를 통해 PSTN으로 호출 전송 가능**을 선택하십시오. 
 
-  다음 IP 주소를 모두 추가하십시오.
-   * 169.60.154.134(댈러스 서비스 지역)
-   * 169.61.86.179(워싱턴 DC 서비스 지역)
+1. 종료 URI 구성 및 호출 전송 사용 설정을 완료하려면 **저장**을 클릭하십시오. 
 
-1. **저장**을 클릭하여 종료 URI 구성을 완료하십시오.
-
-전송할 대상 전화번호와 종료 URI를 기록하십시오. 전화번호가 개인 전화번호가 아닌지 확인하십시오.
-
-{{site.data.keyword.conversationshort}} 대화에서 음성 에이전트를 작성하거나 전송 대상을 구성할 때 사용할 전화번호와 종료 URI를 사용할 수 있습니다.
+1. 전송할 대상 전화번호와 종료 URI를 기록하십시오. 전화번호가 개인 전화번호가 아닌지 확인하십시오. 전화번호 및 종료 URI를 사용하여 {{site.data.keyword.conversationshort}} 대화 상자에서 전송 대상을 지정할 수 있습니다.
 
 
 ## 2단계: 호출 전송을 위한 {{site.data.keyword.conversationshort}} 구성
@@ -93,28 +91,29 @@ dal.watson-va.netfoundry.net
 
 1. _응답 조치:_ 섹션에서 **&vellip;** 아이콘을 클릭하고 **JSON 편집기 열기**를 선택하십시오. 다음의 코드 스니펫을 복사하고 붙여넣어서 필드의 코드를 대체하십시오.
 
-```json
-{
-    "output": {
-        "text": {
-            "values": [ "Please hold on while I connect you with a live agent." ],
+  * 전화 URI를 사용하는 경우 `transferTarget`에서 SIP URI를 사용자의 전화 URI로 대체하십시오. 예를 들면, `"transferTarget":"tel:+18889990000"`.
+
+  ```json
+  {
+      "output": {
+          "text": {
+              "values": [ "Please hold on while I connect you with a live agent." ],
      "selection_policy": "sequential"
-        },
+          },
    "vgwAction": {
-            "command": "vgwActTransfer",
+              "command": "vgwActTransfer",
      "parameters": {
-                "transferTarget": "sip:18889990000\\@dal.watson-va.netfoundry.net"
-            }
-        }
-    }
-}
-```
-{: codeblock}
+                  "transferTarget": "sip:+18889990000\\@dal.watson-va.netfoundry.net"
+              }
+          }
+      }
+  }
+  ```
+  {: codeblock}
 
-**중요**: 전송 대상의 SIP URI에는 전화번호와 사용자가 작성한 종료 URI가 포함됩니다. 전송 대상에 개인 전화번호를 사용하지 마십시오. 예를 들어, 전화번호가 `18889990000`이고 종료 URI가 `mysiptrunk.pstn.twilio.com`인 경우 전체 SIP URI는 `sip:18889990000\\@mysiptrunk.pstn.twilio.com`입니다. Netfoundry를 사용하며 전화번호가 `18889990000`인 경우 전체 SIP URI는 `sip:18889990000\\@dal.watson-va.netfoundry.net`입니다.
+1. `transferTarget` 종료 URI 또는 전화 URI에 있는 전화번호가 SIP 트렁크에 있는 전화번호와 올바로 일치되는지 확인하십시오.
 
-PII(Personally Identifiable Information)를 보호하려면 전송 대상 SIP URI를 구성할 때 개인 전화번호를 사용하지 마십시오. PII 및 구성에 대한 자세한 정보는 [{{site.data.keyword.iva_short}} 및 정보 처리](infosec.html#configure_infosec){:new_window}를 참조하십시오.
-{: tip}
+**중요**: 전송 대상의 SIP URI에는 전화번호와 사용자가 작성한 종료 URI가 포함됩니다. 전송 대상에 개인 전화번호를 사용하지 마십시오. 예를 들어 전화번호가 `18889990000`이고 종료 URI가 `mysiptrunk.pstn.twilio.com`인 경우 전체 SIP URI는 `sip:+18889990000\\@mysiptrunk.pstn.twilio.com`입니다. Netfoundry를 사용하고 전화번호가 `18889990000`인 경우 전체 SIP URI는 `sip:+18889990000\\@dal.watson-va.netfoundry.net`입니다.
 
 ## 다음 단계
 {: #Next}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-03"
 
 
 ---
@@ -24,9 +24,9 @@ Puede utilizar el panel de control _Gestionar_ para cambiar las configuraciones 
 ## Navegación por el panel de control del servicio Voice Agent
 {: #navigate_manage}
 
-Encontrará el panel de control _Gestionar_ en el panel de control de la cuenta de {{site.data.keyword.Bluemix_notm}}.
+Encontrará el panel de control _Gestionar_ en el panel de control del servicio de {{site.data.keyword.iva_short}}.
 
-1. Vaya al [panel de control de su cuenta de {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/dashboard/apps).
+1. Vaya a la [lista de recursos de su cuenta de {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/resources).
 
 1. En la lista de **Servicios**, seleccione su instancia del servicio **Voice Agent** para abrir el panel de control de servicio en el separador _Gestionar_.
 

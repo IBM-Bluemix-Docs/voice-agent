@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-16"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-11-16"
 ## Criando o serviço a partir do catálogo
 {: #catalog_create}
 
-1. Acesse o [{{site.data.keyword.iva_short}} página do catálogo](https://console.bluemix.net/catalog/services/voice-agent-with-watson).
+1. Acesse o [{{site.data.keyword.iva_short}} página do catálogo](https://cloud.ibm.com/catalog/services/voice-agent-with-watson).
 
    A página do catálogo possui informações sobre o serviço e seus planos de precificação. É possível mudar o valor **Nome do serviço**.
 

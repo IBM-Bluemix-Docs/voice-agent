@@ -63,7 +63,8 @@ Em vez de usar uma instância do {{site.data.keyword.speechtotextfull}}, é poss
   ```
   {: codeblock}
 
-  Se você selecionar um idioma na configuração de serviço diferente do idioma definido em `languageCode`, o {{site.data.keyword.iva_short}} sobrescreverá a sua seleção com o idioma definido pela configuração `languageCode` do JSON. {: tip}
+  Se você selecionar um idioma na configuração de serviço diferente do idioma definido em `languageCode`, o {{site.data.keyword.iva_short}} sobrescreverá a sua seleção com o idioma definido pela configuração `languageCode` do JSON.
+  {: tip}
 
 ## Conectando-se ao Google Text-to-Speech por meio do {{site.data.keyword.iva_short}}
 {: #tts_va}

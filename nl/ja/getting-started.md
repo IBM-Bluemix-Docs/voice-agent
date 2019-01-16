@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -23,12 +23,12 @@ lastupdated: "2018-10-31"
 ## 始めに
 {: #prereqs}
 
-[{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/) で、新しいアカウントを作成するか、既存のアカウントにログインします。
+[{{site.data.keyword.Bluemix_short}}](https://cloud.ibm.com/) で、新しいアカウントを作成するか、既存のアカウントにログインします。
 
 ## ステップ 1: {{site.data.keyword.Bluemix_notm}} での {{site.data.keyword.iva_short}} サービス・インスタンスの作成
 {: #step1}
 
-[{{site.data.keyword.iva_short}}カタログ・ページ](https://console.bluemix.net/catalog/services/voice-agent-with-watson)で、サービス情報を確認して、**「作成」**をクリックします。
+[{{site.data.keyword.iva_short}}カタログ・ページ](https://cloud.ibm.com/catalog/services/voice-agent-with-watson)で、サービス情報を確認して、**「作成」**をクリックします。
 
 サービスを作成した後、_「開始 (Getting started)」_ダッシュボードに示されているボイス・エージェント・エンドポイントをメモします。 SIP トランクを構成するために、このエンドポイントの SIP URI が必要になります。
 
@@ -51,7 +51,7 @@ lastupdated: "2018-10-31"
   * **名前:** ボイス・エージェントの固有の名前。例: `お客様サポート`
   * **電話番号:** SIP トランクに関連付けた (国別コードと市外局番を含む) 完全な電話番号。 例えば、米国の 800 ナンバーの場合は、電話番号を 18883334444 と指定します。 電話番号にはスペースや + ( ) - の文字を含めることができます。
   * **説明:** 用途の説明 (任意)
-  * **転送する場合のデフォルトの宛先:** 呼び出しを転送できるオプションの終端 URI。 
+  * **転送する場合のデフォルトの宛先:** 呼び出しを転送できるオプションの終端 URI。
 
 3. ボイス・エージェント用に {{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}}、および {{site.data.keyword.texttospeechshort}} のサービス・インスタンスを作成します。 次のいずれかの方法で、ボイス・エージェントを作成することができます。
   * **「Create a voice agent (ボイス・エージェントの作成)」**をクリックして、1 つのステップですべてのサービスとボイス・エージェントをデフォルト構成で作成します。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-03"
 
 
 ---
@@ -20,11 +20,13 @@ lastupdated: "2018-11-12"
 Si utiliza los planes _Estándar_ o _Premium_, puede cambiar el número máximo de conexiones simultáneas en los valores predeterminados.
 {: shortdesc}
 
-En todos los planes, puede recibir 2 conexiones simultáneas de forma gratuita. Para obtener más información, consulte [Planes de tarifas](https://console.bluemix.net/catalog/services/voice-agent-with-watson). En el panel de control _Gestionar_, puede ver el número máximo de conexiones simultáneas permitidas en el plan listado en **Número máximo de conexiones simultáneas**. También puede ver el número máximo de conexiones simultáneas utilizado por los agentes de voz en el mes actual en **Número máximo de conexiones simultáneas utilizado**.
+En todos los planes, puede recibir 2 conexiones simultáneas de forma gratuita. Para obtener más información, consulte [Planes de tarifas](https://cloud.ibm.com/catalog/services/voice-agent-with-watson). En el panel de control _Gestionar_, puede ver el número máximo de conexiones simultáneas permitidas en el plan listado en **Número máximo de conexiones simultáneas**. También puede ver el número máximo de conexiones simultáneas utilizado por los agentes de voz en el mes actual en **Número máximo de conexiones simultáneas utilizado**.
 
-1. Vaya al separador _Instancias_ en el panel de control _Gestionar_ para editar el número máximo de conexiones simultáneas en el plan. 
+1. Vaya al separador _Instancias_ en el panel de control _Gestionar_ para editar el número máximo de conexiones simultáneas en el plan.
+
 1. Si desea cambiar el número máximo de conexiones simultáneas de su plan, pulse el icono **Editar**.
-1. En la ventana _Editar número máximo de conexiones simultáneas_, elija el número máximo de conexiones simultáneas y pulse **Guardar**.
+
+1. En _Editar número máximo de conexiones simultáneas_, especifique el número máximo de conexiones simultáneas y pulse **Guardar**.
 
 El número mínimo de conexiones simultáneas que puede establecer mediante autoservicio es 10 y el máximo es 50. Si necesita más de 50 conexiones simultáneas para su agente de voz, consulte [Solicitud de configuración de red asistida](connect-SIP.html#request-setup).
 
@@ -38,4 +40,4 @@ El número mínimo de conexiones simultáneas que puede establecer mediante auto
   * Si tiene un plan _Estándar_ o _Premium_, puede adquirir una mayor capacidad de conexiones simultáneas.
   * Se le facturará una tarifa diaria para la capacidad de conexiones simultáneas máxima que utilice en un día.
 
-Para obtener más información sobre planes, tarifas y características, consulte [Planes de tarifas](https://console.bluemix.net/catalog/services/voice-agent-with-watson).
+Para obtener más información sobre planes, tarifas y características, consulte [Planes de tarifas](https://cloud.ibm.com/catalog/services/voice-agent-with-watson).

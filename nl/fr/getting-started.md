@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -23,12 +23,12 @@ Regardez une démonstration expliquant comment créer votre premier agent vocal 
 ## Avant de commencer
 {: #prereqs}
 
-Créez un nouveau compte ou connectez-vous à un compte existant sur [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/).
+Créez un nouveau compte ou connectez-vous à un compte existant sur [{{site.data.keyword.Bluemix_short}}](https://cloud.ibm.com/).
 
 ## Etape 1 : Création d'une instance de service {{site.data.keyword.iva_short}} sur {{site.data.keyword.Bluemix_notm}}
 {: #step1}
 
-A partir de la [page de catalogue {{site.data.keyword.iva_short}}](https://console.bluemix.net/catalog/services/voice-agent-with-watson), passez en revue les informations de service, puis cliquez sur **Créer**.
+A partir de la [page de catalogue de {{site.data.keyword.iva_short}}](https://cloud.ibm.com/catalog/services/voice-agent-with-watson), passez en revue les informations de service, puis cliquez sur **Créer**.
 
 Une fois que vous avez créé le service, notez le noeud final d'agent vocal sur le tableau de bord _Initiation_. Vous avez besoin de l'URI SIP de noeud final pour configurer votre liaison SIP.
 
@@ -51,7 +51,7 @@ Une fois que vous avez créé le service, notez le noeud final d'agent vocal sur
   * **Nom :** Nom unique pour votre agent vocal, par exemple, `Customer Support`
   * **Numéro de téléphone :** Numéro de téléphone complet que vous avez associé à votre liaison SIP, y compris le code pays et l'indicatif régional. Par exemple, pour un numéro 800 aux Etats-Unis, spécifiez le numéro de téléphone sous la forme suivante : 18883334444. Le numéro de téléphone peut comporter des espaces et les caractères + ( ) -.
   * **Description :** Description facultative de son utilisation
-  * **Cible par défaut du transfert :** URI de terminaison facultatif vers lequel les appels peuvent être transférés. 
+  * **Cible par défaut du transfert :** URI de terminaison facultatif vers lequel les appels peuvent être transférés.
 
 3. Créez les instances de service {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} et {{site.data.keyword.texttospeechshort}} pour votre agent vocal. Vous pouvez choisir de créer un agent vocal avec l'une ou l'autre des méthodes suivantes :
   * Cliquez sur **Créer un agent vocal** pour créer en une seule étape tous les services et un agent vocal avec la configuration par défaut.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-03"
 
 
 ---
@@ -24,9 +24,9 @@ Vous pouvez utiliser le tableau de bord _Gestion_ pour changer la configuration 
 ## Accès au tableau de bord du service Agent vocal
 {: #navigate_manage}
 
-Le tableau de bord _Gestion_ est accessible à partir du tableau de bord de votre compte {{site.data.keyword.Bluemix_notm}}.
+Le tableau de bord _Gestion_ est accessible à partir du tableau de bord de votre service {{site.data.keyword.iva_short}}.
 
-1. Accédez au tableau de bord de votre compte [{{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/dashboard/apps).
+1. Accédez à la [liste de ressources de votre compte {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/resources).
 
 1. Dans la liste des **Services**, sélectionnez votre instance de service **Agent vocal** pour ouvrir le tableau de bord du service sur l'onglet _Gérer_.
 

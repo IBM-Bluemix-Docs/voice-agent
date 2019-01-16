@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -71,23 +71,28 @@ Necesita este número de teléfono para configurar el agente de voz y la transfe
 
   Necesita este número de teléfono para configurar el agente de voz, incluidos los códigos de área y país. Consulte [Creación y conexión del agente de voz](getting-started.html#step3).
 
+## Interconexión con {{site.data.keyword.iva_short}}
+{: #peering}
+
+{{site.data.keyword.iva_short}} da soporte a conexiones entre iguales, como un túnel IPSec. Para la interconexión con {{site.data.keyword.iva_short}}, puede añadir a la lista blanca las direcciones IP de sus servidores.
+
+1. Vaya al panel de control _Gestionar_ y seleccione el separador _Instancia_.
+
+1. Pulse el icono **Añadir una nueva IP** para añadir una nueva dirección IP a la lista blanca.
+
+1. Añada un **Apodo de IP** y la **Dirección IP**.
 
 ## Conexión con AT&T y otros proveedores
 {: #att-other}
 
 {{site.data.keyword.iva_short}} da soporte a conexiones con AT&T&reg; y otros proveedores de conexión troncal SIP. Sin embargo, la configuración de estas conexiones no es de tipo autoservicio, por lo que requieren asistencia adicional. Consulte [Solicitud de configuración asistida](#request-setup).
 
-## Interconexión con {{site.data.keyword.iva_short}}
-{: #peering}
-
-{{site.data.keyword.iva_short}} da soporte a conexiones entre iguales, como un túnel IPSec. Sin embargo, la configuración de estas conexiones no es de tipo autoservicio, por lo que requieren asistencia adicional. Consulte [Solicitud de configuración asistida](#request-setup).
-
 ## Solicitud de configuración asistida
 {: #request-setup}
 
 Puede solicitar la configuración de red asistida para conectarse con AT&T u otros proveedores de conexiones troncales SIP, para la interconexión con {{site.data.keyword.iva_short}} o para solicitar más de 50 conexiones simultáneas utilizando el siguiente proceso.
 
-1. Abra una nueva [incidencia de soporte de {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/unifiedsupport/tickets/add)
+1. Abra una nueva [incidencia de soporte de {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/unifiedsupport/tickets/add)
 
 1. En **Tipo de incidencia**, seleccione **Técnico**.
 

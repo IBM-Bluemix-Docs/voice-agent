@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -37,7 +37,7 @@ Puoi scegliere il provider del trunk SIP che utilizzi per l'integrazione con {{s
 
 1. Seleziona una regione da cui vuoi il numero.
 
-  **Nota:** controlla il sito web Netfoundry per le regioni disponibili. Nuove regioni vengono aggiunte di continuo.
+  **Nota:** controlla il sito web NetFoundry per le regioni disponibili. Nuove regioni vengono aggiunte di continuo.
 
 1. Fai clic su **Purchase** e segui le istruzioni sullo schermo per completare l'acquisto.
 
@@ -71,23 +71,28 @@ Hai bisogno di questo numero di telefono per configurare il tuo agent vocale e i
 
   Hai bisogno di questo numero di telefono per configurare il tuo agent vocale, inclusi i codici area e paese. Consulta [Creazione e collegamento del tuo agent vocale](getting-started.html#step3).
 
+## Peering con {{site.data.keyword.iva_short}}
+{: #peering}
+
+{{site.data.keyword.iva_short}} supporta le connessioni peer, come un tunnel IPSec. Per un peering con {{site.data.keyword.iva_short}}, puoi inserire in whitelist gli indirizzi IP dei tuoi server.
+
+1. Vai al dashboard _Manage_ e seleziona la scheda _Instance_.
+
+1. Fai clic sull'icona **Add a new IP** per inserire in whitelist un nuovo indirizzo IP.
+
+1. Aggiungi un valore per **IP Nickname**) e **IP Address**.
 
 ## Connessione con AT&T e altri provider
 {: #att-other}
 
 {{site.data.keyword.iva_short}} supporta le connessioni con AT&T&reg; e altri provider di trunking SIP. Tuttavia, queste connessioni non sono configurate in modalità self-service e richiedono ulteriore assistenza. Consulta [Richiesta di configurazione assistita](#request-setup).
 
-## Peering con {{site.data.keyword.iva_short}}
-{: #peering}
-
-{{site.data.keyword.iva_short}} supporta le connessioni peer, come un tunnel IPSec. Tuttavia, queste connessioni non sono configurate in modalità self-service e richiedono ulteriore assistenza. Consulta [Richiesta di configurazione assistita](#request-setup).
-
 ## Richiesta di configurazione assistita
 {: #request-setup}
 
 Puoi richiedere la configurazione di rete assistita per collegarti con AT&T o altri provider di trunking SIP, eseguire il peer con {{site.data.keyword.iva_short}} o per richiedere più di 50 connessioni simultanee utilizzando il seguente processo.
 
-1. Apri un nuovo [ticket di supporto {{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/unifiedsupport/tickets/add)
+1. Apri un nuovo [ticket di supporto {{site.data.keyword.Bluemix_notm}} ](https://cloud.ibm.com/unifiedsupport/tickets/add)
 
 1. Seleziona **Technical** per **Ticket Type**.
 

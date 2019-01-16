@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -23,12 +23,12 @@ Eine Demonstration, wie Sie Ihren ersten Sprachagenten erstellen können, sehen 
 ## Vorbereitende Schritte
 {: #prereqs}
 
-Erstellen Sie ein neues Konto oder melden Sie sich mit Ihrem vorhandenen Konto bei [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/) an.
+Erstellen Sie ein neues Konto oder melden Sie sich mit Ihrem vorhandenen Konto bei [{{site.data.keyword.Bluemix_short}}](https://cloud.ibm.com/) an.
 
 ## Schritt 1: {{site.data.keyword.iva_short}}-Serviceinstanz in {{site.data.keyword.Bluemix_notm}} erstellen
 {: #step1}
 
-Prüfen Sie auf der [{{site.data.keyword.iva_short}}-Katalogseite](https://console.bluemix.net/catalog/services/voice-agent-with-watson) die Serviceinformationen und klicken Sie auf **Erstellen**.
+Prüfen Sie auf der [{{site.data.keyword.iva_short}}-Katalogseite](https://cloud.ibm.com/catalog/services/voice-agent-with-watson) die Serviceinformationen und klicken Sie auf **Erstellen**.
 
 Nach dem Erstellen des Service vermerken Sie den Endpunkt des Sprachagenten im Dashboard _Einführung_. Zum Konfigurieren Ihres SIP-Trunks benötigen Sie den Endpunkt-SIP-URI.
 
@@ -51,7 +51,7 @@ Nach dem Erstellen des Service vermerken Sie den Endpunkt des Sprachagenten im D
   * **Name:** Ein eindeutiger Name für Ihren Sprachagenten, z. B. `Kundendienst`
   * **Telefonnummer:** Die vollständige Telefonnummer, die Sie Ihrem SIP-Trunk zugeordnet haben, einschließlich Landes- und Ortsvorwahl. Für eine 800-er Nummer in den Vereinigten Staaten z. B. geben Sie die Nummer mit 18883334444 an. Die Telefonnummer darf Leerzeichen und die Zeichen + ( ) - enthalten.
   * **Beschreibung:** Eine optionale Beschreibung der Verwendung
-  * **Übertragungsstandardziel:** Ein optionaler Beendigungs-URI, an den Aufrufe übertragen werden können. 
+  * **Übertragungsstandardziel:** Ein optionaler Beendigungs-URI, an den Aufrufe übertragen werden können.
 
 3. Erstellen Sie für Ihren Sprachagenten die {{site.data.keyword.conversationshort}}-, die {{site.data.keyword.speechtotextshort}}- und die {{site.data.keyword.texttospeechshort}}-Serviceinstanz. Für die Erstellung eines Sprachagenten können Sie eine der folgenden Methoden wählen:
   * Klicken Sie auf **Sprachagenten erstellen**, um alle Services sowie einen Sprachagenten mit der Standardkonfiguration in nur einem Schritt zu erstellen.

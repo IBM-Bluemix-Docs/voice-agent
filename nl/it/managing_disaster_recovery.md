@@ -15,7 +15,7 @@ lastupdated: "2018-11-11"
 {:tip: .tip}
 
 
-# Configurazione di più ubicazioni del servizio 
+# Configurazione di più ubicazioni del servizio
 {: #disaster-recovery}
 
 Puoi collegare il tuo agent vocale a più servizi in ubicazioni diverse per la ridondanza del servizio. La tua seconda ubicazione non è un secondo agent vocale, serve solo da backup.
@@ -24,7 +24,7 @@ Puoi collegare il tuo agent vocale a più servizi in ubicazioni diverse per la r
 Se utilizzi un piano _Lite_ per la tua istanza dell'agent vocale, puoi collegare il tuo trunk SIP a solo un endpoint, in cui viene creata la tua istanza dell'agent vocale. Poiché il piano _Lite_ fornisce le connessioni a una sola ubicazione, puoi fornire le ridondanze ai tuoi servizi collegati, ma non al tuo agent vocale. Se si verifica un'interruzione del servizio nella tua ubicazione dell'agent vocale, le chiamate non possono essere indirizzate a un'ubicazione secondaria.
 {: tip}
 
-## Aggiunta dei servizi ridondanti 
+## Aggiunta dei servizi ridondanti
 {: #add_redundant}
 
 Puoi aggiungere un'ubicazione del servizio Watson o di terze parti alla tua configurazione dell'agent vocale in qualsiasi momento modificando il tuo agent vocale.

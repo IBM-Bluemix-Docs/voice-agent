@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-03"
 
 
 ---
@@ -24,9 +24,9 @@ lastupdated: "2018-11-12"
 ## 导航到语音代理程序服务仪表板
 {: #navigate_manage}
 
-_管理_仪表板位于 {{site.data.keyword.Bluemix_notm}} 帐户仪表板中。
+您可以从 {{site.data.keyword.iva_short}} 服务仪表板中找到_管理_仪表板。
 
-1. 转至 [{{site.data.keyword.Bluemix_notm}} 帐户仪表板](https://console.bluemix.net/dashboard/apps)。
+1. 转至 [{{site.data.keyword.Bluemix_notm}} 帐户资源列表](https://cloud.ibm.com/resources)。
 
 1. 从**服务**列表中，选择您的**语音代理程序**服务实例，以在_管理_选项卡上打开服务仪表板。
 

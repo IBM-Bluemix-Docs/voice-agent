@@ -14,7 +14,7 @@ lastupdated: "2018-11-12"
 {:tip: .tip}
 
 
-# Creazione di un agent vocale dal dashboard _Manage_ 
+# Creazione di un agent vocale dal dashboard _Manage_
 {: #config_instance}
 
 Dopo aver creato il tuo servizio {{site.data.keyword.iva_full}}, puoi creare singoli agenti vocali dal dashboard _Manage_.

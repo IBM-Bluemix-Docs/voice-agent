@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-03"
 
 
 ---
@@ -24,9 +24,9 @@ lastupdated: "2018-11-12"
 ## Navegando para o painel de serviço Agente de voz
 {: #navigate_manage}
 
-É possível localizar o painel _Gerenciar_ por meio do painel da conta do {{site.data.keyword.Bluemix_notm}}.
+É possível localizar o painel _Gerenciar_ por meio do painel de serviço do {{site.data.keyword.iva_short}}.
 
-1. Acesse o painel da conta do [{{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/dashboard/apps).
+1. Acesse a sua lista de recursos da conta do [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/resources).
 
 1. Na lista de **Serviços**, selecione a instância de serviço do **Agente de voz** para abrir o painel de serviço na guia _Gerenciar_.
 

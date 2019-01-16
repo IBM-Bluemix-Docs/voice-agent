@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-03"
 
 
 ---
@@ -24,13 +24,13 @@ Puoi utilizzare il dashboard _Manage_ per modificare le configurazioni delle tue
 ## Passa al tuo dashboard del servizio Voice Agent
 {: #navigate_manage}
 
-Puoi trovare il dashboard _Manage_ dal tuo dashboard dell'account {{site.data.keyword.Bluemix_notm}}.
+Puoi trovare il dashboard _Manage_ dal tuo dashboard del servizio {{site.data.keyword.iva_short}}.
 
-1. Vai al tuo [dashboard dell'account {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/dashboard/apps).
+1. Vai al tuo [elenco risorse dell'account {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/resources).
 
-1. Dall'elenco **Servizi**, seleziona la tua istanza del servizio **Voice Agent** per aprire il dashboard del servizio nella scheda _Manage_.
+1. Dall'elenco **Services**, seleziona la tua istanza del servizio **Voice Agent** per aprire il dashboard del servizio nella scheda _Manage_.
 
-## Modifica del numero massimo di connessioni simultanee per la tua istanza del servizio 
+## Modifica del numero massimo di connessioni simultanee per la tua istanza del servizio
 {: #edit_service}
 
 In tutti i piani, ricevi 2 connessioni simultanee gratuitamente. Se utilizzi i piani _Standard_ o _Premium_, puoi [modificare il numero massimo di connessioni simultanee](managing_concurrency.html) dalle impostazioni predefinite dalla scheda _Instances_.
@@ -64,7 +64,7 @@ Quando crei, cloni o modifichi un agent vocale, puoi apportare modifiche alle im
 
 * **[Configurazione di più ubicazioni del servizio](managing_disaster_recovery.html):** includi più ubicazioni del servizio per i tuoi servizi collegati per supportare la ridondanza del servizio.
 * **[Connessione ai servizi di discorso e testo di terze parti](managing_third_party.html):** invece di utilizzare {{site.data.keyword.texttospeechshort}} o {{site.data.keyword.speechtotextshort}}, puoi collegare il tuo agent vocale a API di terze parti, come Google Cloud Speech-to-Text.
-* **[Utilizzo dei servizi in altri spazi di lavoro {{site.data.keyword.Bluemix_notm}}](managing_other.html):** puoi configurare il tuo agent vocale in modo da utilizzare le istanze del servizio {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} o {{site.data.keyword.speechtotextshort}} che appartengono a spazi di lavoro in altri account {{site.data.keyword.Bluemix_short}}. 
+* **[Utilizzo dei servizi in altri spazi di lavoro {{site.data.keyword.Bluemix_notm}}](managing_other.html):** puoi configurare il tuo agent vocale in modo da utilizzare le istanze del servizio {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} o {{site.data.keyword.speechtotextshort}} che appartengono a spazi di lavoro in altri account {{site.data.keyword.Bluemix_short}}.
 * **[Configurazione di Watson Assistant con un motore di orchestrazione del servizio](managing_SOE.html):** puoi collegare uno spazio di lavoro {{site.data.keyword.conversationshort}} tramite un motore di orchestrazione del servizio (SOE). Un SOE intercetta i messaggi in entrata e uscita dal servizio in modo che puoi modificarli utilizzando le API di terze parti.
 * **[Abilitazione dell'inoltro dell'evento per gli agent vocali](event-forwarding.html):** potresti voler raccogliere ed analizzare i dati della chiamata da {{site.data.keyword.iva_short}} per migliorare quanto naturale la conversazione sembri al chiamante. Ogni agent vocale che crei può inoltrare i report dell'evento a un {{site.data.keyword.cloudant_short_notm}} specificato che gestisci.
 

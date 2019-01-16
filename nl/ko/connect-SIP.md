@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -71,23 +71,28 @@ lastupdated: "2018-08-16"
 
   국가 및 지역 코드를 포함하여 이 전화번호는 음성 에이전트를 설정하는 데 필요합니다. [음성 에이전트 작성 및 연결](getting-started.html#step3)을 참조하십시오.
 
+## {{site.data.keyword.iva_short}}과의 피어링
+{: #peering}
+
+{{site.data.keyword.iva_short}}에서는 IPSec 터널 등의 피어 연결을 지원합니다. {{site.data.keyword.iva_short}}에 대해 피어링하기 위해 서버 IP 주소의 화이트리스트를 작성할 수 있습니다.
+
+1. _관리_ 대시보드로 이동하여 _인스턴스_ 탭을 선택하십시오.
+
+1. **새 IP 추가** 아이콘을 클릭하여 새 IP 주소의 화이트리스트를 작성하십시오.
+
+1. **IP 닉네임** 및 **IP 주소**를 추가하십시오.
 
 ## AT&T 및 기타 제공자와 연결
 {: #att-other}
 
 {{site.data.keyword.iva_short}}에서는 AT&T&reg; 및 기타 SIP 트렁크 제공자와 연결할 수 있도록 지원합니다. 하지만 이러한 연결은 셀프 서비스 설정이 아니며 추가 지원이 필요합니다. [지원되는 설정 요청](#request-setup)을 참조하십시오.
 
-## {{site.data.keyword.iva_short}}과의 피어링
-{: #peering}
-
-{{site.data.keyword.iva_short}}에서는 IPSec 터널 등의 피어 연결을 지원합니다. 하지만 이러한 연결은 셀프 서비스 설정이 아니며 추가 지원이 필요합니다. [지원되는 설정 요청](#request-setup)을 참조하십시오.
-
 ## 지원되는 설정 요청
 {: #request-setup}
 
 다음 프로세스를 사용하여 AT&T 또는 기타 SIP 트렁크 제공자와 연결하거나 {{site.data.keyword.iva_short}}과 피어링하거나 50개가 넘는 동시 연결을 요청할 수 있도록 지원되는 네트워크 설정을 요청할 수 있습니다.
 
-1. 새 [{{site.data.keyword.Bluemix_notm}} 지원 티켓](https://console.bluemix.net/unifiedsupport/tickets/add)을 여십시오.
+1. 새 [{{site.data.keyword.Bluemix_notm}} 지원 티켓](https://cloud.ibm.com/unifiedsupport/tickets/add)을 여십시오.
 
 1. **티켓 유형**에 대해 **기술적**을 선택하십시오.
 
