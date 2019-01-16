@@ -20,7 +20,7 @@ lastupdated: "2018-11-12"
 {{site.data.keyword.conversationshort}} サービス・インスタンスを構成する代わりに、サービス・オーケストレーション・エンジン (SOE) に接続することができます。
 {: shortdesc}
 
-[サービス・オーケストレーション・エンジン (SOE)](about.html#arch-soe) を経由して {{site.data.keyword.conversationshort}} ワークスペースに接続することができます。SOE はサービスとの間で送受信されるメッセージを代行受信し、サード・パーティー API を使用して変更できるようにします。
+[サービス・オーケストレーション・エンジン (SOE)](about.html#arch-soe) を経由して {{site.data.keyword.conversationshort}} ワークスペースに接続することができます。 SOE はサービスとの間で送受信されるメッセージを代行受信し、サード・パーティー API を使用して変更できるようにします。
 
 ## SOE への接続の構成
 {: #how-to}

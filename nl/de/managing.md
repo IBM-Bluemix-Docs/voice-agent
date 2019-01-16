@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-03"
 
 
 ---
@@ -24,9 +24,9 @@ Mithilfe des Dashboards _Verwalten_ können Sie Ihre Serviceinstanzkonfiguration
 ## Zum eigenen Voice Agent-Service-Dashboard navigieren
 {: #navigate_manage}
 
-Sie finden das Dashboard _Verwalten_ im Dashboard Ihres {{site.data.keyword.Bluemix_notm}}-Kontos.
+Sie finden das Dashboard _Verwalten_ im Dashboard Ihres {{site.data.keyword.iva_short}}-Service.
 
-1. Rufen Sie das [Dashboard Ihres {{site.data.keyword.Bluemix_notm}}-Kontos](https://console.bluemix.net/dashboard/apps) auf.
+1. Rufen Sie die [Ressourcenliste Ihres {{site.data.keyword.Bluemix_notm}}-Kontos](https://cloud.ibm.com/resources) auf.
 
 1. Wählen Sie in der Liste der **Services** die **Voice Agent**-Serviceinstanz aus, um das Service-Dashboard auf der Registerkarte _Verwalten_ zu öffnen.
 
@@ -34,7 +34,6 @@ Sie finden das Dashboard _Verwalten_ im Dashboard Ihres {{site.data.keyword.Blue
 {: #edit_service}
 
 In allen Plänen sind zwei gleichzeitige Verbindungen kostenfrei enthalten. Wenn Sie den _Standardplan_ oder den _Premiumplan_ verwenden, können Sie die [maximale Anzahl gleichzeitiger Verbindungen gegenüber den Standardeinstellungen ändern](managing_concurrency.html), und zwar über die Registerkarte _Instanzen_.
-
 
 ## Sprachagenten erstellen
 {: #create_va}

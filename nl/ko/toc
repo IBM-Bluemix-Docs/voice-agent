@@ -52,6 +52,7 @@ IBM Voice Agent with Watson
     {: .topicgroup}
     서비스 인스턴스 구성
         managing_concurrency.md
+        managing_IP_whitelist.md
 
     {: .topicgroup}
     음성 에이전트 프로그래밍

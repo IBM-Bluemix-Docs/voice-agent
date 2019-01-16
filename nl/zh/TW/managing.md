@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-03"
 
 
 ---
@@ -24,9 +24,9 @@ lastupdated: "2018-11-12"
 ## 導覽至 Voice Agent 服務儀表板
 {: #navigate_manage}
 
-您可以從 {{site.data.keyword.Bluemix_notm}} 帳戶儀表板找到_管理_ 儀表板。
+您可以從 {{site.data.keyword.iva_short}} 服務儀表板找到_管理_ 儀表板。
 
-1. 移至 [{{site.data.keyword.Bluemix_notm}} 帳戶儀表板](https://console.bluemix.net/dashboard/apps)。
+1. 移至 [{{site.data.keyword.Bluemix_notm}} 帳戶資源清單](https://cloud.ibm.com/resources)。
 
 1. 從**服務**的清單，選取 **Voice Agent** 服務實例，以便在_管理_ 標籤上開啟服務儀表板。
 

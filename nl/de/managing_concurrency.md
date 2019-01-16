@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-03"
 
 
 ---
@@ -20,11 +20,13 @@ lastupdated: "2018-11-12"
 Wenn Sie den _Standardplan_ oder den _Premiumplan_ verwenden, können Sie die maximale Anzahl gleichzeitiger Verbindungen gegenüber den Standardeinstellungen ändern.
 {: shortdesc}
 
-In allen Plänen sind zwei gleichzeitige Verbindungen kostenfrei enthalten. Weitere Informationen finden Sie in [Preisstrukturpläne](https://console.bluemix.net/catalog/services/voice-agent-with-watson). Im Dashboard _Verwalten_ wird die maximale Anzahl gleichzeitiger Verbindungen, die im Rahmen Ihres aufgeführten Plans zulässig sind, im Feld **Maximale Anzahl gleichzeitiger Verbindungen** angezeigt. Darüber hinaus wird die maximale Anzahl gleichzeitiger Verbindungen, die von Ihren Sprachagenten im laufenden Monat genutzt wurden, im Feld _Genutzte maximale Anzahl gleichzeitiger Verbindungen_ angezeigt.
+In allen Plänen sind zwei gleichzeitige Verbindungen kostenfrei enthalten. Weitere Informationen finden Sie in [Preisstrukturpläne](https://cloud.ibm.com/catalog/services/voice-agent-with-watson). Im Dashboard _Verwalten_ wird die maximale Anzahl gleichzeitiger Verbindungen, die im Rahmen Ihres aufgeführten Plans zulässig sind, im Feld **Maximale Anzahl gleichzeitiger Verbindungen** angezeigt. Darüber hinaus wird die maximale Anzahl gleichzeitiger Verbindungen, die von Ihren Sprachagenten im laufenden Monat genutzt wurden, im Feld _Genutzte maximale Anzahl gleichzeitiger Verbindungen_ angezeigt.
 
-1. Rufen Sie die Registerkarte _Instanzen_ in Ihrem Dashboard _Verwalten_ auf, um die maximale Anzahl gleichzeitiger Verbindungen in Ihrem Plan zu bearbeiten. 
+1. Rufen Sie die Registerkarte _Instanzen_ in Ihrem Dashboard _Verwalten_ auf, um die maximale Anzahl gleichzeitiger Verbindungen in Ihrem Plan zu bearbeiten.
+
 1. Wenn Sie die maximale Anzahl gleichzeitiger Verbindungen in Ihrem Plan ändern möchten, klicken Sie auf das Symbol **Bearbeiten**.
-1. Wählen Sie im Fenster _Maximale Anzahl gleichzeitiger Verbindungen bearbeiten_ die gewünschte maximale Anzahl gleichzeitiger Verbindungen aus und klicken Sie auf **Speichern**.
+
+1. Geben Sie in _Maximale Anzahl gleichzeitiger Verbindungen bearbeiten_ die gewünschte maximale Anzahl gleichzeitiger Verbindungen ein und klicken Sie auf **Speichern**.
 
 Der Mindestwert für die Anzahl gleichzeitiger Anrufe, der im Self-Service-Verfahren festgelegt werden kann, ist 10, der Höchstwert 50. Wenn Sie mehr als 50 gleichzeitige Verbindungen für den Sprachagenten benötigen, lesen Sie die Informationen in [Unterstützung für Netzkonfiguration anfordern](connect-SIP.html#request-setup).
 
@@ -38,4 +40,4 @@ Der Mindestwert für die Anzahl gleichzeitiger Anrufe, der im Self-Service-Verfa
   * Bei der Verwendung eines _Standard_- oder _Premium_-Plans können Sie eine größere Kapazität für gleichzeitige Verbindungen kaufen.
   * Für die maximale Kapazität gleichzeitiger Verbindungen, die Sie an einem Tag nutzen, werden Gebühren auf der Basis einer Tagesrate berechnet.
 
-Weitere Informationen zu Plänen, Raten und Features finden Sie in [Preisstrukturpläne](https://console.bluemix.net/catalog/services/voice-agent-with-watson).
+Weitere Informationen zu Plänen, Raten und Features finden Sie in [Preisstrukturpläne](https://cloud.ibm.com/catalog/services/voice-agent-with-watson).

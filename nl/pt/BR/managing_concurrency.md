@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-03"
 
 
 ---
@@ -20,15 +20,15 @@ lastupdated: "2018-11-12"
 Se você usar os planos _Padrão_ ou _Premium_, será possível mudar o número máximo de conexões simultâneas por meio das configurações padrão.
 {: shortdesc}
 
-Em todos os planos, você recebe duas conexões simultâneas gratuitamente. Para obter mais informações, consulte os
-[Planos de precificação](https://console.bluemix.net/catalog/services/voice-agent-with-watson). No painel _Gerenciar_, é possível ver o número máximo de conexões simultâneas que são permitidas em seu
+Em todos os planos, você recebe duas conexões simultâneas gratuitamente. Para obter mais informações, consulte os [Planos de precificação](https://cloud.ibm.com/catalog/services/voice-agent-with-watson). No painel _Gerenciar_, é possível ver o número máximo de conexões simultâneas que são permitidas em seu
 plano listado em **Máximo de conexões simultâneas**. Também é possível ver o número máximo de conexões simultâneas
 que são usadas por seus agentes de voz durante o mês atual em **Máximo de conexões simultâneas usadas**.
 
-1. Acesse a guia _Instâncias_ no painel _Gerenciar_ para editar o máximo de conexões simultâneas no plano. 
+1. Acesse a guia _Instâncias_ no painel _Gerenciar_ para editar o máximo de conexões simultâneas no plano.
+
 1. Se você deseja mudar o número máximo de conexões simultâneas em seu plano, clique no ícone **Editar**.
-1. Na
-janela _Editar máximo de conexões simultâneas_, escolha o número máximo de conexões simultâneas e clique em **Salvar**.
+
+1. Em _Editar conexões simultâneas máximas_, insira o número máximo de conexões simultâneas e clique em **Salvar**.
 
 O número mínimo de conexões simultâneas que pode ser configurado por meio de autoatendimento é 10 e o máximo é 50. Se você precisar
 de mais de 50 conexões simultâneas para o seu agente de voz, consulte [Solicitando
@@ -48,4 +48,4 @@ capacidade de conexão simultânea.
   * Uma taxa diária é cobrada para a capacidade máxima de conexões simultâneas usadas em um dia.
 
 Para obter mais informações sobre planos, taxas e recursos, consulte
-[Planos de precificação](https://console.bluemix.net/catalog/services/voice-agent-with-watson).
+[Planos de precificação](https://cloud.ibm.com/catalog/services/voice-agent-with-watson).

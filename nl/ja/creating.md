@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-16"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-11-16"
 ## カタログからのサービス作成
 {: #catalog_create}
 
-1. [{{site.data.keyword.iva_short}}カタログ・ページ](https://console.bluemix.net/catalog/services/voice-agent-with-watson)に移動します。
+1. [{{site.data.keyword.iva_short}}カタログ・ページ](https://cloud.ibm.com/catalog/services/voice-agent-with-watson)に移動します。
 
    カタログ・ページにはサービスと価格プランに関する情報があります。 **サービス名**の値は変更可能です。
 

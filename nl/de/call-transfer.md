@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-16"
+lastupdated: "2018-12-04"
+
 
 ---
 
@@ -23,19 +24,22 @@ Sie können eine Anrufübergabe einrichten, sodass der Sprachagent im Fall, dass
 ## Informationen zur Anrufübergabe
 {: #about-ct}
 
-Wenn die Anrufübergabe aktiviert ist und ein Anrufer während eines Dialogs anfordert, mit einem Live-Agenten zu sprechen, leitet der Sprachagent den Anruf um. Sie können eine Anrufübergabe aktivieren, indem Sie einen Beendigungs-URI in der SIP-Providerkonfiguration festlegen. Anschließend konfigurieren Sie das Ziel der Anrufübergabe oder definieren eine API-Aktion in einem Dialogknoten Ihrer {{site.data.keyword.conversationshort}}-Instanz. Beim Übergabeziel handelt es sich um einen SIP-URI, der den Beendigungs-URI und die Telefonnummer enthält.
+Wenn die Anrufübergabe aktiviert ist und ein Anrufer während eines Dialogs anfordert, mit einem Live-Agenten zu sprechen, leitet der Sprachagent den Anruf um. {{site.data.keyword.iva_short}} verwendet SIP REFER, um den Anruf zur Verarbeitung an den SIP-Trunk-Provider zurück zu übergeben, und versieht übergebene Telefonanrufe nicht mit einem Tag des Typs "anchor".
 
-Weitere Informationen zu unterstützten Aktionen und zur Anpassung der Sprachagenten finden Sie in [Sprachagenten mithilfe der API programmieren](api.html).
+Sie können eine Anrufübergabe aktivieren, indem Sie einen Beendigungs-URI oder einen URI des Typs "tel" in der SIP-Providerkonfiguration festlegen. Anschließend definieren Sie das Ziel der Anrufübergabe oder eine API-Aktion in einem Dialogknoten Ihrer {{site.data.keyword.conversationshort}}-Instanz. Beim Übergabeziel handelt es sich um einen SIP-URI, der den Beendigungs-URI und die Telefonnummer enthält, oder um einen URI des Typs "tel" mit der Telefonnummer. Weitere Informationen zu unterstützten Aktionen und zur Anpassung der Sprachagenten finden Sie in [Sprachagenten mithilfe der API programmieren](api.html).
 
 ## Schritt 1: Beendigungs-URI
 {: #termination-setup}
+
+Wenn Sie einen URI des Typs "tel" anstelle eines Beendigungs-URIs für die SIP-URI-Konfiguration verwenden, können Sie den tel-URI, z. B. `tel:+18889990000`, für das Übergabeziel, `transferTarget`, verwenden. Wenn Sie einen SIP-URI verwenden, ist ein Beendigungs-URI für `transferTarget` erforderlich.
+{: tip}
 
 ### Beendigungs-URI in NetFoundry einrichten
 {: #termination-netfoundry}
 
 Notieren Sie sich die Telefonnummer, an die der Anruf übergeben werden soll, in Ihrem [NetFoundry-Konto![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://watson.netfoundry.io/watson-login){: new_window}. Später können Sie diese Telefonnummer und den Beendigungs-URI als Ziel der Anrufübergabe im {{site.data.keyword.conversationshort}}-Dialog angeben. Verwenden Sie keine persönliche Telefonnummer.
 
-Sie können den folgenden NetFoundry-Beendigungs-URI kopieren, der verwendet werden soll, wenn Sie Ihren Sprachagenten erstellen oder das Übertragungsziel in Ihrem {{site.data.keyword.conversationshort}}-Dialog konfigurieren.
+Kopieren Sie den folgenden NetFoundry-Beendigungs-URI zur Verwendung für das Übergabeziel. 
 
 ```
 dal.watson-va.netfoundry.net
@@ -57,17 +61,11 @@ Sie müssen den Beendigungs-URI in Ihrem NetFoundry-Konto nicht manuell konfigur
 
   * Die Namen für Beendigungs-URIs müssen eindeutig sein. Twilio überprüft die von Ihnen eingegebenen Namen automatisch auf ihre Verfügbarkeit. [Einstellungen für SIP-Trunk-Beendigung![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.twilio.com/docs/api/sip-trunking/getting-started#termination){: new_window} enthält weitere Details zu den Twilio-Services.
 
-1. Klicken Sie im Abschnitt _Authentifizierung_ auf das Pluszeichen (**+**), um der Liste der Zugriffssteuerungs-IPs eine Sprachagenten-IP-Adresse hinzuzufügen.
+1. Wählen Sie **Allgemein** in der Navigationsleiste aus, um die _allgemeinen Einstellungen_ anzuzeigen. Ändern Sie unter der Überschrift **Anrufübergabe (SIP REFER)** die Einstellung in **Aktiviert** und wählen Sie **Anrufübergaben an PSTN über den Trunk zulassen** aus. 
 
-  Fügen Sie die folgenden zwei IP-Adressen hinzu:
-   * 169.60.154.134 (Serviceregion 'Dallas')
-   * 169.61.86.179 (Serviceregion 'Washington DC')
+1. Klicken Sie auf **Speichern**, um die Konfiguration des Beendigungs-URIs und die Aktivierung der Anrufübergabe fertigzustellen. 
 
-1. Klicken Sie auf **Speichern**, um die Konfiguration Ihres Beendigungs-URI zu beenden.
-
-Notieren Sie sich die Telefonnummer, an die der Anruf übergeben werden soll, und den Beendigungs-URI. Stellen Sie sicher, dass es sich bei der Telefonnummer nicht um eine persönliche Telefonnummer handelt.
-
-Sie können die Telefonnummer und den Beendigungs-URI verwenden, die verwendet werden sollen, wenn Sie Ihren Sprachagenten erstellen oder das Übertragungsziel in Ihrem {{site.data.keyword.conversationshort}}-Dialog konfigurieren.
+1. Notieren Sie sich die Telefonnummer, an die der Anruf übergeben werden soll, und den Beendigungs-URI. Stellen Sie sicher, dass es sich bei der Telefonnummer nicht um eine persönliche Telefonnummer handelt. Sie können die Telefonnummer und den Beendigungs-URI verwenden, um das Übergabeziel im {{site.data.keyword.conversationshort}}-Dialog anzugeben. 
 
 
 ## Schritt 2: {{site.data.keyword.conversationshort}} für die Anrufübergabe konfigurieren
@@ -81,7 +79,7 @@ Weitere Informationen zum Arbeiten mit dem {{site.data.keyword.conversationshort
 
 1. Klicken Sie in **Einführung** auf den Arbeitsbereich, den Sie bearbeiten möchten.
 
-1. Klicken Sie auf **Absicht hinzufügen** und geben Sie einen Namen für die Absicht ein, z. B. _Übertragung_.
+1. Klicken Sie auf **Absicht hinzufügen** und geben Sie einen Namen für die Absicht ein, z. B. _Übergabe_.
 
   Sie können ausführlichere Informationen eingeben oder später zur Bearbeitung zurückkehren und die Absicht präzisieren.
 
@@ -93,28 +91,29 @@ Weitere Informationen zum Arbeiten mit dem {{site.data.keyword.conversationshort
 
 1. Im Abschnitt _Dann antworten mit:_ klicken Sie auf das Symbol **&vellip;** und wählen Sie **JSON-Editor öffnen**. Kopieren Sie das folgende Code-Snippet und fügen Sie es in das Feld ein, um den dort vorhandenen Code zu ersetzen.
 
-```json
-{
-    "output": {
-        "text": {
-            "values": [ "Bitte warten Sie, während ich eine Verbindung zu einem Live-Agenten herstelle." ],
+  * Wenn Sie einen tel-URI verwenden, ersetzen Sie den SIP-URI in `transferTarget` durch den tel-URI. Beispiel: `"transferTarget":"tel:+18889990000"`.
+
+  ```json
+  {
+      "output": {
+          "text": {
+              "values": [ "Bitte warten Sie, während ich eine Verbindung zu einem Live-Agenten herstelle." ],
      "selection_policy": "sequential"
-        },
+          },
    "vgwAction": {
-            "command": "vgwActTransfer",
+              "command": "vgwActTransfer",
      "parameters": {
-                "transferTarget": "sip:18889990000\\@dal.watson-va.netfoundry.net"
-            }
-        }
-    }
-}
-```
-{: codeblock}
+                  "transferTarget": "sip:+18889990000\\@dal.watson-va.netfoundry.net"
+              }
+          }
+      }
+  }
+  ```
+  {: codeblock}
 
-**Denken Sie daran**: Der SIP-URI des Übertragungsziels enthält eine Telefonnummer und den von Ihnen erstellten Beendigungs-URI. Verwenden Sie keine persönliche Telefonnummer für das Übergabeziel. Wenn z. B. die Telefonnummer `18889990000` und Ihr Beendigungs-URI `mysiptrunk.pstn.twilio.com` ist, lautet der vollständige SIP-URI `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. Bei der Verwendung von NetFoundry und der Telefonnummer `18889990000` lautet der vollständige SIP-URI `sip:18889990000\\@dal.watson-va.netfoundry.net`.
+1. Stellen Sie sicher, dass die Telefonnummer im Beendigungs-URI von `transferTarget` exakt mit der Telefonnummer im SIP-Trunk übereinstimmt.
 
-Um Ihre personenbezogenen Daten zu schützen, sollten Sie beim Konfigurieren des SIP-URI für das Übergabeziel keine persönliche Telefonnummer verwenden. Weitere Informationen zu personenbezogenen Daten und Konfigurationen finden Sie unter [{{site.data.keyword.iva_short}} und Informationsverarbeitung](infosec.html#configure_infosec){:new_window}.
-{: tip}
+**Denken Sie daran**: Der SIP-URI des Übergabeziels enthält eine Telefonnummer und den von Ihnen erstellten Beendigungs-URI. Verwenden Sie keine persönliche Telefonnummer für das Übergabeziel. Wenn z. B. die Telefonnummer `18889990000` und Ihr Beendigungs-URI `mysiptrunk.pstn.twilio.com` ist, lautet der vollständige SIP-URI `sip:+18889990000\\@mysiptrunk.pstn.twilio.com`. Bei der Verwendung von NetFoundry und der Telefonnummer `18889990000` lautet der vollständige SIP-URI `sip:+18889990000\\@dal.watson-va.netfoundry.net`. 
 
 ## Nächste Schritte
 {: #Next}

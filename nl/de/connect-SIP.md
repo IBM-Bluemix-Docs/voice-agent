@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -71,23 +71,28 @@ Sie benötigen diese Telefonnummer, einschließlich der Landes- und Ortsnetzkenn
 
   Sie benötigen diese Telefonnummer, einschließlich der Landes- und Ortsnetzkennzahl, zum Einrichten des Sprachagenten. Informationen hierzu finden Sie in [Sprachagenten erstellen und Verbindung herstellen](getting-started.html#step3).
 
+## Peering mit {{site.data.keyword.iva_short}}
+{: #peering}
+
+{{site.data.keyword.iva_short}} unterstützt Peerverbindungen, wie z. B. einen IPSec-Tunnel. Für eine Peerverbindung mit {{site.data.keyword.iva_short}} können Sie die IP-Adressen Ihres Servers in eine Whitelist aufnehmen. 
+
+1. Rufen Sie das Dashboard _Verwalten_ auf und wählen Sie die Registerkarte _Instanz_ aus. 
+
+1. Klicken Sie auf das Symbol **Neue IP-Adresse hinzufügen**, um eine neue IP-Adresse in die Whitelist aufzunehmen. 
+
+1. Fügen Sie einen **Kurznamen für die IP-Adresse** und die **IP-Adresse** selbst hinzu. 
 
 ## Verbindung mit AT&T und anderen Providern herstellen
 {: #att-other}
 
 {{site.data.keyword.iva_short}} unterstützt Verbindungen mit AT&T&reg; und anderen SIP-Trunking-Providern. Diese Verbindungen können jedoch nicht im Self-Service-Verfahren eingerichtet werden und erfordern zusätzliche Unterstützung. Informationen hierzu finden Sie in [Unterstützung für Konfiguration anfordern](#request-setup).
 
-## Peering mit {{site.data.keyword.iva_short}}
-{: #peering}
-
-{{site.data.keyword.iva_short}} unterstützt Peerverbindungen, wie z. B. einen IPSec-Tunnel. Diese Verbindungen können jedoch nicht im Self-Service-Verfahren eingerichtet werden und erfordern zusätzliche Unterstützung. Informationen hierzu finden Sie in [Unterstützung für Konfiguration anfordern](#request-setup).
-
 ## Unterstützung für Konfiguration anfordern
 {: #request-setup}
 
 Sie können Unterstützung für die Netzkonfiguration anfordern, um eine Verbindung mit AT&T oder anderen SIP-Trunking-Providern herzustellen, eine Peerverbindung mit {{site.data.keyword.iva_short}} herzustellen oder mehr als 50 gleichzeitige Verbindungen anzufordern. Verwenden Sie hierzu den folgenden Prozess.
 
-1. Öffnen Sie ein neues [{{site.data.keyword.Bluemix_notm}}-Support-Ticket](https://console.bluemix.net/unifiedsupport/tickets/add).
+1. Öffnen Sie ein neues [{{site.data.keyword.Bluemix_notm}}-Support-Ticket](https://cloud.ibm.com/unifiedsupport/tickets/add).
 
 1. Wählen Sie **Technisch** für **Tickettyp** aus.
 

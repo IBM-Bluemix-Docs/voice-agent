@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-16"
+lastupdated: "2018-12-04"
+
 
 ---
 
@@ -23,19 +24,22 @@ Puoi configurare un trasferimento di chiamata in modo che se un chiamante richie
 ## Informazioni sul trasferimento di chiamata
 {: #about-ct}
 
-Abilitando il trasferimento di chiamata, se un chiamante richiede di parlare con un agent dal vivo durante la conversazione, l'agent vocale reindirizzerà la chiamata. Puoi abilitare il trasferimento di chiamata configurando un URI di terminazione nella configurazione del provider SIP. Successivamente configura la destinazione del trasferimento o definisci un'azione API in un nodo di dialogo della tua istanza {{site.data.keyword.conversationshort}}. La tua destinazione del trasferimento è un URI SIP che contiene l'URI di terminazione e il numero di telefono.
+Abilitando il trasferimento di chiamata, se un chiamante richiede di parlare con un agent dal vivo durante la conversazione, l'agent vocale reindirizzerà la chiamata. {{site.data.keyword.iva_short}} utilizza un SIP REFER per indirizzare nuovamente la chiamata al tuo provider trunk SIP da gestire e non esegue l'ancoraggio delle chiamate telefoniche trasferite.
 
-Per ulteriori informazioni dettagliate sulle azioni supportate e sulla personalizzazione dei tuoi agent vocali, consulta [Programmazione degli agent vocali utilizzando l'API](api.html).
+Puoi abilitare il trasferimento di chiamata configurando un URI di terminazione o un URI tel nella configurazione del tuo provider SIP. Successivamente definisci la destinazione del trasferimento in un'azione API in un nodo di dialogo della tua istanza {{site.data.keyword.conversationshort}}. La tua destinazione del trasferimento è un URI SIP che contiene l'URI di terminazione e il numero di telefono o un URI tel con il numero di telefono. Per ulteriori informazioni dettagliate sulle azioni supportate e sulla personalizzazione dei tuoi agent vocali, consulta [Programmazione degli agent vocali utilizzando l'API](api.html).
 
 ## Passo 1: configurazione dell'URI di terminazione
 {: #termination-setup}
+
+Se stai utilizzando un URI tel invece di un URI di terminazione per la tua configurazione URI SIP, puoi utilizzare l'URI tel, come ad esempio `tel:+18889990000`, per la tua `trasnferTarget`. Hai bisogno di un URI di terminazione per il tuo `transferTarget` se stai utilizzando un URI SIP.
+{: tip}
 
 ### Configurazione di un URI di terminazione in NetFoundry
 {: #termination-netfoundry}
 
 Prendi nota del numero di telefono nel tuo [account NetFoundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://watson.netfoundry.io/watson-login){: new_window} che desideri trasferire. In seguito, puoi specificare questo numero di telefono e l'URI di terminazione come destinazione del trasferimento nel tuo dialogo {{site.data.keyword.conversationshort}}. Non utilizzare un numero di telefono personale.
 
-Puoi copiare il seguente URI di terminazione NetFoundry da utilizzare durante la creazione del tuo agent vocale o durante la configurazione della destinazione di trasferimento nel tuo dialogo {{site.data.keyword.conversationshort}}.
+Copia il seguente URI di terminazione NetFoundry da utilizzare nella destinazione del trasferimento.
 
 ```
 dal.watson-va.netfoundry.net
@@ -57,17 +61,11 @@ Non hai bisogno di configurare manualmente l'URI di terminazione nel tuo account
 
   * I nomi dell'URI di terminazione devono essere univoci. Twilio automaticamente controlla se è disponibile il nome che hai scelto. Consulta [SIP Trunk termination settings ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.twilio.com/docs/api/sip-trunking/getting-started#termination){: new_window} per ulteriori dettagli sui servizi Twilio.
 
-1. Nella sezione _Authentication_, fai clic sull'icona **+** per aggiungere un indirizzo IP dell'agent vocale nell'elenco Access Control IP.
+1. Seleziona **General** nella tua barra di navigazione per visualizzare _General settings_. Nell'intestazione **Call Transfer (SIP REFER)**, passa l'intestazione al valore **Enabled** e seleziona **Allow Call Transfers to the PSTN via your Trunk.**
 
-  Aggiungi entrambi i seguenti indirizzi IP:
-   * 169.60.154.134 (regione servizio Dallas)
-   * 169.61.86.179 (regione servizio Washington DC)
+1. Fai clic su **Save** per finire la configurazione del tuo URI di terminazione e l'abilitazione del trasferimento di chiamata.
 
-1. Fai clic su **Save** per finire la configurazione del tuo URI di terminazione.
-
-Prendi nota del numero di telefono e dell'URI di terminazione che desideri trasferire. Assicurati che il numero di telefono non sia personale.
-
-Puoi utilizzare il numero di telefono e l'URI di terminazione durante la creazione del tuo agent vocale o durante la configurazione della destinazione di trasferimento del tuo dialogo {{site.data.keyword.conversationshort}}.
+1. Prendi nota del numero di telefono e dell'URI di terminazione che desideri trasferire. Assicurati che il numero di telefono non sia personale. Puoi utilizzare il numero di telefono e la terminazione URI per specificare la destinazione del trasferimento nel tuo dialogo {{site.data.keyword.conversationshort}}.
 
 
 ## Passo 2: Configurazione di {{site.data.keyword.conversationshort}} per il trasferimento di chiamata
@@ -93,28 +91,29 @@ Per ulteriori informazioni sull'utilizzo del servizio {{site.data.keyword.conver
 
 1. Per la sezione _Then respond with:_, fai clic sull'icona **&vellip;** e seleziona **Open JSON editor**. Copia e incolla il seguente frammento di codice per sostituire il codice nel campo.
 
-```json
-{
-    "output": {
-        "text": {
-            "values": [ "Please hold on while I connect you with a live agent." ],
+  * Se utilizzi un URI tel, sostituisci l'URI SIP nel `transferTarget` con il tuo URI tel. Ad esempio, `"transferTarget":"tel:+18889990000"`.
+
+  ```json
+  {
+      "output": {
+          "text": {
+              "values": [ "Please hold on while I connect you with a live agent." ],
      "selection_policy": "sequential"
-        },
+          },
    "vgwAction": {
-            "command": "vgwActTransfer",
+              "command": "vgwActTransfer",
      "parameters": {
-                "transferTarget": "sip:18889990000\\@dal.watson-va.netfoundry.net"
-            }
-        }
-    }
-}
-```
-{: codeblock}
+                  "transferTarget": "sip:+18889990000\\@dal.watson-va.netfoundry.net"
+              }
+          }
+      }
+  }
+  ```
+  {: codeblock}
 
-**Ricorda**: l'URI SIP della destinazione del trasferimento include un numero di telefono e l'URI di terminazione che hai creato. Non utilizzare un numero di telefono personale nella tua destinazione di trasferimento. Ad esempio, se il numero di telefono è `18889990000` e il tuo URI di terminazione è `mysiptrunk.pstn.twilio.com`, l'URI SIP completo è `sip:18889990000\\@mysiptrunk.pstn.twilio.com`. Se utilizzi Netfoundry e hai un numero di telefono `18889990000`, l'URI SIP completo è `sip:18889990000\\@dal.watson-va.netfoundry.net`.
+1. Controlla che il numero di telefono nel tuo URI tel o nel tuo URI di terminazione `transferTarget` corrisponda correttamente al numero di telefono nel tuo trunk SIP.
 
-Per proteggere i PII (Personally Identifiable Information), non utilizzare un numero di telefono personale quando configuri il tuo URI SIP di destinazione di trasferimento. Consulta [{{site.data.keyword.iva_short}} e gestione delle informazioni](infosec.html#configure_infosec){:new_window} per ulteriori informazioni sulle configurazioni e i PII.
-{: tip}
+**Ricorda**: l'URI SIP della destinazione del trasferimento include un numero di telefono e l'URI di terminazione che hai creato. Non utilizzare un numero di telefono personale nella tua destinazione di trasferimento. Ad esempio, se il numero di telefono è `18889990000` e il tuo URI di terminazione è `mysiptrunk.pstn.twilio.com`, l'URI SIP completo è `sip:+18889990000\\@mysiptrunk.pstn.twilio.com`. Se utilizzi NetFoundry, e hai un numero di telefono `18889990000`, l'URI SIP completo è `sip:+18889990000\\@dal.watson-va.netfoundry.net`.
 
 ## Fasi successive
 {: #Next}

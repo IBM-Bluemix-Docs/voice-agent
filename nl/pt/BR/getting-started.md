@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -23,12 +23,12 @@ Assista a uma demonstração de como criar seu primeiro agente de voz neste tuto
 ## Antes de começar
 {: #prereqs}
 
-Crie uma nova conta ou efetue login em sua conta existente no [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/).
+Crie uma nova conta ou efetue login em sua conta existente no [{{site.data.keyword.Bluemix_short}}](https://cloud.ibm.com/).
 
 ## Etapa 1: criando uma instância de serviço do {{site.data.keyword.iva_short}} no {{site.data.keyword.Bluemix_notm}}
 {: #step1}
 
-Na página do catálogo do [{{site.data.keyword.iva_short}}](https://console.bluemix.net/catalog/services/voice-agent-with-watson), revise as informações de serviço e, em seguida, clique em **Criar**.
+Na página do catálogo do [{{site.data.keyword.iva_short}}](https://cloud.ibm.com/catalog/services/voice-agent-with-watson), revise as informações de serviço e, então, clique em **Criar**.
 
 Depois de criar o serviço, anote o terminal do agente de voz no painel _Introdução_. O URI SIP do terminal é necessário para a configuração do tronco SIP.
 
@@ -53,7 +53,7 @@ tronco SIP.
   * **Número do telefone:** o número do telefone completo que você associou ao seu tronco SIP, incluindo
 os códigos de país e de área. Por exemplo, para um número 800 dos Estados Unidos, especifique o número de telefone como 18883334444. O número do telefone pode ter espaços e caracteres + ( ) -.
   * **Descrição:** uma descrição opcional de seu uso
-  * **Destino de transferência padrão:** um URI de terminação opcional para o qual as chamadas podem ser transferidas. 
+  * **Destino de transferência padrão:** um URI de terminação opcional para o qual as chamadas podem ser transferidas.
 
 3. Crie as instâncias de serviço {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} e {{site.data.keyword.texttospeechshort}} para seu agente de voz. Você pode optar por criar um agente de voz com qualquer um dos métodos a seguir:
   * Clique em **Criar um agente de voz** para criar todos os serviços e um agente de voz com a configuração padrão em uma única etapa.

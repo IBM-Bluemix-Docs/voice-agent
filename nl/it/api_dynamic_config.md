@@ -23,7 +23,7 @@ Puoi collegare i servizi di discorso e testo di terze parti configurando Speech 
 
 Consulta [Programmazione degli agent vocali utilizzando l'API](api.html) per informazioni ed esempi di codice su come configurare e avviare le sequenze di azioni.
 
-## Collegamento a Google Speech-to-Text da un nodo di dialogo {{site.data.keyword.conversationshort}} 
+## Collegamento a Google Speech-to-Text da un nodo di dialogo {{site.data.keyword.conversationshort}}
 {: #stt_dialog}
 
 Invece di configurare la tua connessione a Google Speech-to-Text modificando il tuo agent vocale, puoi programmare {{site.data.keyword.conversationshort}} per configurare le impostazioni STT con il comando `"vgwActSetSTTConfig"`. Consulta [Modifica del JSON nella risposta del dialogo](api.html#json-editor).
@@ -66,7 +66,7 @@ Invece di configurare la tua connessione a Google Speech-to-Text modificando il 
   {: codeblock}
 
 
-## Collegamento a Google Text-to-Speech da un nodo di dialogo {{site.data.keyword.conversationshort}} 
+## Collegamento a Google Text-to-Speech da un nodo di dialogo {{site.data.keyword.conversationshort}}
 {: #tts_dialog}
 
 Invece di configurare la tua connessione a Google Text-to-Speech modificando il tuo agent vocale, puoi programmare {{site.data.keyword.conversationshort}} per configurare le impostazioni TTS con il comando `"vgwActSetTTSConfig"`. Consulta [Modifica del JSON nella risposta del dialogo](api.html#json-editor).

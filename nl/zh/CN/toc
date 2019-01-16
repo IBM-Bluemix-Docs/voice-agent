@@ -52,6 +52,7 @@ IBM Voice Agent with Watson
     {: .topicgroup}
     配置服务实例
         managing_concurrency.md
+        managing_IP_whitelist.md
 
     {: .topicgroup}
     对语音代理程序编程

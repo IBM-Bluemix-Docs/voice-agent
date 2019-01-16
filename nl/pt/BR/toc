@@ -50,8 +50,9 @@ IBM Voice Agent with Watson
         [Configurando opções avançadas](services/voice-agent/managing.html#config-advanced)
 
     {: .topicgroup}
-    Configure uma instância de serviço
+    Configurar uma instância de serviço
         managing_concurrency.md
+        managing_IP_whitelist.md
 
     {: .topicgroup}
     Programando os agentes de voz

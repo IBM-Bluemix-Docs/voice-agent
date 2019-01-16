@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-16"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -23,7 +23,7 @@ Vous pouvez créer une instance de service {{site.data.keyword.iva_full}} à l'a
 ## Création du service à partir du catalogue
 {: #catalog_create}
 
-1. Accédez à la [page de catalogue de {{site.data.keyword.iva_short}}](https://console.bluemix.net/catalog/services/voice-agent-with-watson).
+1. Accédez à la [page de catalogue de {{site.data.keyword.iva_short}}](https://cloud.ibm.com/catalog/services/voice-agent-with-watson).
 
    La page de catalogue contient des informations sur le service et ses plans de tarification. Vous pouvez modifier la valeur **Nom de service**.
 

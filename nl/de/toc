@@ -52,6 +52,7 @@ IBM Voice Agent with Watson
     {: .topicgroup}
     Serviceinstanz konfigurieren
         managing_concurrency.md
+        managing_IP_whitelist.md
 
     {: .topicgroup}
     Sprachagenten programmieren

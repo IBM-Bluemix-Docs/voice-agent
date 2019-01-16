@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -71,23 +71,28 @@ lastupdated: "2018-08-16"
 
   您需要使用此电话号码设置语音代理程序，包括国家和地区代码。请参阅[创建和连接语音代理程序](getting-started.html#step3)。
 
+## 与 {{site.data.keyword.iva_short}} 对等
+{: #peering}
+
+{{site.data.keyword.iva_short}} 支持对等连接，例如 IPSec 隧道。若要与 {{site.data.keyword.iva_short}} 对等，可以将服务器的 IP 地址列入白名单。
+
+1. 转至_管理_仪表板并选择_实例_选项卡。
+
+1. 单击**添加新 IP** 图标以将新 IP 地址列入白名单。
+
+1. 添加 **IP 昵称**和 **IP 地址**。
 
 ## 连接 AT&T 以及其他提供者
 {: #att-other}
 
 {{site.data.keyword.iva_short}} 支持连接 AT&T&reg; 以及其他 SIP 中继提供者。但是，这些连接不是自助服务设置，需要额外的协助。请参阅[请求设置协助](#request-setup)。
 
-## 与 {{site.data.keyword.iva_short}} 对等
-{: #peering}
-
-{{site.data.keyword.iva_short}} 支持对等连接，例如 IPSec 隧道。但是，这些连接不是自助服务设置，需要额外的协助。请参阅[请求设置协助](#request-setup)。
-
 ## 请求设置协助
 {: #request-setup}
 
 要请求网络设置协助以与 AT&T 或其他 SIP 中继提供者连接、与 {{site.data.keyword.iva_short}} 进行配对或者请求 50 个以上的并发连接，可以使用以下过程。
 
-1. 开一个新的 [{{site.data.keyword.Bluemix_notm}} 支持凭单](https://console.bluemix.net/unifiedsupport/tickets/add)
+1. 开一个新的 [{{site.data.keyword.Bluemix_notm}} 支持凭单](https://cloud.ibm.com/unifiedsupport/tickets/add)
 
 1. 对于**凭单类型**，选择**技术**。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -23,12 +23,12 @@ lastupdated: "2018-10-31"
 ## 시작하기 전에
 {: #prereqs}
 
-새 계정을 작성하거나 [{{site.data.keyword.Bluemix_short}}](https://console.bluemix.net/)의 기존 계정에 로그인하십시오.
+새 계정을 작성하거나 [{{site.data.keyword.Bluemix_short}}](https://cloud.ibm.com/)의 기존 계정에 로그인하십시오.
 
 ## 1단계: {{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.iva_short}} 서비스 인스턴스 작성
 {: #step1}
 
-[{{site.data.keyword.iva_short}} 카탈로그 페이지](https://console.bluemix.net/catalog/services/voice-agent-with-watson)에서 서비스 정보를 검토한 후 **작성**을 클릭하십시오.
+[{{site.data.keyword.iva_short}} 카탈로그 페이지](https://cloud.ibm.com/catalog/services/voice-agent-with-watson)에서 서비스 정보를 검토한 후 **작성**을 클릭하십시오.
 
 서비스를 작성한 후 _시작하기_ 대시보드의 음성 에이전트 엔드포인트를 기록하십시오. SIP 트렁크를 구성하려면 엔드포인트 SIP URI가 필요합니다.
 
@@ -51,7 +51,7 @@ lastupdated: "2018-10-31"
   * **이름:** 음성 에이전트의 고유 이름(예: `Customer Support`)
   * **전화번호:** SIP 트렁크와 연관된 전체 전화번호(국가 및 지역 코드 포함). 예를 들어, 미국 800 번호의 경우 전화번호를 18883334444로 지정하십시오. 전화번호에는 공백 및 + ( ) - 문자가 포함될 수 있습니다.
   * **설명:** 음성 에이전트 사용에 대한 선택적 설명
-  * **전송 기본 대상:** 호출이 전송될 수 있는 선택적 종료 URI 
+  * **전송 기본 대상:** 호출이 전송될 수 있는 선택적 종료 URI
 
 3. 음성 에이전트에 대한 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 및 {{site.data.keyword.texttospeechshort}} 서비스 인스턴스를 작성하십시오. 다음 방법 중 하나를 사용하여 음성 에이전트를 작성하도록 선택할 수 있습니다.
   * **음성 에이전트 작성**을 클릭하여 하나의 단계로 기본 구성을 사용하여 모든 서비스 및 음성 에이전트를 작성하십시오.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -71,23 +71,28 @@ Esse número de telefone é necessário para configurar o seu agente de voz e a 
 
   Esse número de telefone é necessário para configurar o seu agente de voz, incluindo os códigos de país e de área. Consulte [Criando e conectando o seu agente de voz](getting-started.html#step3).
 
+## Peering com {{site.data.keyword.iva_short}}
+{: #peering}
+
+O {{site.data.keyword.iva_short}} suporta conexões peer, como um túnel IPSec. Para estar no mesmo nível do {{site.data.keyword.iva_short}}, é possível inserir os endereços IP na lista de desbloqueio de seus servidores.
+
+1. Acesse o painel _Gerenciar_ e selecione a guia _Instância_.
+
+1. Clique no ícone **Incluir um novo IP** para inserir um novo endereço IP na lista de desbloqueio.
+
+1. Inclua um **Apelido de IP** e o **Endereço IP**.
 
 ## Conectando com o AT&T e outros provedores
 {: #att-other}
 
 O {{site.data.keyword.iva_short}} suporta conexões com o AT&T&reg; e outros provedores de entroncamento SIP. No entanto, essas conexões não são configuradas por autoatendimento e requerem assistência adicional. Consulte [Solicitando Configuração](#request-setup).
 
-## Peering com {{site.data.keyword.iva_short}}
-{: #peering}
-
-O {{site.data.keyword.iva_short}} suporta conexões peer, como um túnel IPSec. No entanto, essas conexões não são configuradas por autoatendimento e requerem assistência adicional. Consulte [Solicitando Configuração](#request-setup).
-
 ## Solicitando assistência de configuração
 {: #request-setup}
 
 É possível solicitar a configuração de rede assistida para se conectar ao AT&T e a outros provedores de entroncamento SIP, para peer com o {{site.data.keyword.iva_short}} ou para solicitar mais de 50 conexões simultâneas usando o processo a seguir.
 
-1. Abra um novo [{{site.data.keyword.Bluemix_notm}} chamado de suporte](https://console.bluemix.net/unifiedsupport/tickets/add)
+1. Abra um novo [{{site.data.keyword.Bluemix_notm}} chamado de suporte](https://cloud.ibm.com/unifiedsupport/tickets/add)
 
 1. Selecione **Técnico** para **Tipo de Registro**.
 

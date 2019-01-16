@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-16"
+lastupdated: "2018-12-04"
+
 
 ---
 
@@ -23,19 +24,22 @@ lastupdated: "2018-11-16"
 ## 關於通話轉接
 {: #about-ct}
 
-透過啟用通話轉接，如果來電者在交談期間要求與即時代理程式交談，則語音代理程式將會重新導向該通話。您可以藉由在 SIP 提供者配置中設定終止 URI，啟用通話轉接。然後，您可以在 {{site.data.keyword.conversationshort}} 實例的對話節點，配置轉接目標或定義 API 動作。您的轉接目標是包含終止 URI 及電話號碼的 SIP URI。
+透過啟用通話轉接，如果來電者在交談期間要求與即時代理程式交談，則語音代理程式將會重新導向該通話。{{site.data.keyword.iva_short}} 使用 SIP REFER 將通話導向回去給 SIP 幹線提供者處理，且不會錨定已轉接的通話。
 
-如需所支援動作以及自訂語音代理程式的相關資訊，請參閱[使用 API 程式設計語音代理程式](api.html)。
+您可以藉由在 SIP 提供者配置中設定終止 URI 或電話 URI，啟用通話轉接。然後，您可以在 {{site.data.keyword.conversationshort}} 實例的對話節點，在 API 動作上定義轉接目標。您的轉接目標是包含終止 URI 及電話號碼的 SIP URI，或是具有電話號碼的電話 URI。如需所支援動作以及自訂語音代理程式的相關資訊，請參閱[使用 API 程式設計語音代理程式](api.html)。
 
 ## 步驟 1：設定終止 URI
 {: #termination-setup}
+
+如果您使用電話 URI 而非終止 URI 來進行 SIP URI 配置，您可以針對您的 `trasnferTarget` 使用電話 URI，例如 `tel:+18889990000`。如果使用 SIP URI，則 `transferTarget` 需要終止 URI。
+{: tip}
 
 ### 在 NetFoundry 中設定終止 URI
 {: #termination-netfoundry}
 
 記下 [NetFoundry 帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://watson.netfoundry.io/watson-login){: new_window} 中您要轉接到的電話號碼。稍後，您可以在 {{site.data.keyword.conversationshort}} 對話中將此電話號碼及終止 URI 指定為轉接目標。請不要使用個人電話號碼。
 
-您可以複製下列 NetFoundry 終止 URI，以用於建立語音代理程式或在 {{site.data.keyword.conversationshort}} 對話中配置轉接目標。
+請複製下列 NetFoundry 終止 URI，以用於轉接目標。
 
 ```
 dal.watson-va.netfoundry.net
@@ -57,17 +61,11 @@ dal.watson-va.netfoundry.net
 
   * 終止 URI 名稱必須是唯一的。Twilio 會自動檢查您針對可用性所選擇的名稱。如需 Twilio 服務的詳細資料，請參閱 [SIP 幹線終止設定 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.twilio.com/docs/api/sip-trunking/getting-started#termination){: new_window}。
 
-1. 在_鑑別_ 區段中，按一下 **+** 圖示，將語音代理程式 IP 位址新增至「存取控制 IP」清單。
+1. 在導覽列上選取**一般**，以檢視_一般設定_。在**通話轉接 (SIP REFER)** 標題下，將設定切換為**已啟用**，然後選取**容許透過幹線將通話轉接至 PSTN**。
 
-  新增下列兩個 IP 位址：
-   * 169.60.154.134（達拉斯服務地區）
-   * 169.61.86.179（華盛頓特區服務地區）
+1. 按一下**儲存**，完成終止 URI 的配置與通話轉接的啟用。
 
-1. 按一下**儲存**，完成終止 URI 的配置。
-
-請記下您要轉接到的電話號碼及終止 URI。請確定電話號碼不是個人電話號碼。
-
-您可以使用電話號碼及終止 URI，以用於建立語音代理程式或在 {{site.data.keyword.conversationshort}} 對話中配置轉接目標。
+1. 請記下您要轉接到的電話號碼及終止 URI。請確定電話號碼不是個人電話號碼。您可以在 {{site.data.keyword.conversationshort}} 對話中，使用電話號碼及終止 URI 來指定轉接目標。
 
 
 ## 步驟 2：配置 {{site.data.keyword.conversationshort}} 以進行通話轉接
@@ -93,28 +91,29 @@ dal.watson-va.netfoundry.net
 
 1. 針對_則回應：_ 區段，按一下 **&vellip;** 圖示，然後選取**開啟 JSON 編輯器**。複製並貼上下列程式碼 Snippet，以取代欄位中的程式碼。
 
-```json
-{
-    "output": {
-   "text": {
-     "values": [ "Please hold on while I connect you with a live agent." ],
-     "selection_policy": "sequential"
-   },
-   "vgwAction": {
-     "command": "vgwActTransfer",
-     "parameters": {
-       "transferTarget": "sip:18889990000\\@dal.watson-va.netfoundry.net"
-            }
-        }
-    }
-}
-```
-{: codeblock}
+  * 如果您使用電話 URI，將 `transferTarget` 中的 SIP URI 取代為您的電話 URI。例如，`"transferTarget":"tel:+18889990000"`。
 
-**請記住**：轉接目標的 SIP URI 包括一個電話號碼及您建立的終止 URI。請不要在轉接目標中使用個人電話號碼。例如，如果電話號碼是 `18889990000`，而終止 URI 是 `mysiptrunk.pstn.twilio.com`，則完整 SIP URI 是 `sip:18889990000\\@mysiptrunk.pstn.twilio.com`。如果您使用 Netfoundry，而且電話號碼為 `18889990000`，則完整 SIP URI 是 `sip:18889990000\\@dal.watson-va.netfoundry.net`。
+  ```json
+  {
+      "output": {
+          "text": {
+              "values": [ "Please hold on while I connect you with a live agent." ],
+              "selection_policy": "sequential"
+          },
+          "vgwAction": {
+              "command": "vgwActTransfer",
+              "parameters": {
+                  "transferTarget": "sip:+18889990000\\@dal.watson-va.netfoundry.net"
+              }
+          }
+      }
+  }
+  ```
+  {: codeblock}
 
-為了保護個人識別資訊 (PII)，在配置轉接目標 SIP URI 時請不要使用個人電話號碼。如需 PII 及配置的相關資訊，請參閱 [{{site.data.keyword.iva_short}} 與資訊處理](infosec.html#configure_infosec){:new_window}。
-{: tip}
+1. 確認 `transferTarget` 終止 URI 或電話 URI 中的電話號碼正確地符合 SIP 幹線中的電話號碼。
+
+**請記住**：轉接目標的 SIP URI 包括一個電話號碼及您建立的終止 URI。請不要在轉接目標中使用個人電話號碼。例如，如果電話號碼是 `18889990000`，而終止 URI 是 `mysiptrunk.pstn.twilio.com`，則完整 SIP URI 是 `sip:+18889990000\\@mysiptrunk.pstn.twilio.com`。如果您使用 Netfoundry，而且電話號碼為 `18889990000`，則完整 SIP URI 是 `sip:+18889990000\\@dal.watson-va.netfoundry.net`。
 
 ## 後續步驟
 {: #Next}
