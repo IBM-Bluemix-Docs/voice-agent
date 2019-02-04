@@ -29,7 +29,7 @@ Both actions and states are defined in a dialog node response in JSON format. To
 
 1. From the {{site.data.keyword.Bluemix_short}} dashboard, select your {{site.data.keyword.conversationshort}} service instance.
 1. Launch the {{site.data.keyword.conversationshort}} tool.
-1. Click the workspace that contains the dialog you want to edit.
+1. Click the skill that contains the dialog you want to edit.
 1. Go to the **Dialog** tab, and select the node where you want to set an action or state.
 1. In the response, click the ![Advanced response](../conversation/images/kabob.png) icon, and select **Open JSON editor**.
 

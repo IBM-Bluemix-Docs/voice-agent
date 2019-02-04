@@ -77,7 +77,7 @@ To learn more about working in the {{site.data.keyword.conversationshort}} servi
 
 1. From the _Getting started_ dashboard, click the **Launch tool** button.
 
-1. Click **Getting Started** on the workspace that you want to edit.
+1. Click **Getting Started** on the skill that you want to edit.
 
 1. Click **Add intent** and enter a name for the intent, such as _Transfer_.
 

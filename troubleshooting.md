@@ -58,8 +58,8 @@ Your call likely didn't connect to the services. This problem occurs when the {{
    **Note:** You must include the country and area code when you specify the phone number on the voice agent _Manage_ dashboard. For example, `18884253968`.
 
 * Verify that the Watson service credentials, URLs, and the {{site.data.keyword.conversationshort}} workspace ID are all valid.
-* Verify that the dialog in your {{site.data.keyword.conversationshort}} workspace was created correctly.
-  * You can import the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub for a pre-built workspace. See [Step 3 in *Getting started tutorial*](getting-started.html#step3) for details about saving the sample conversation as a JSON file and then importing the file as a workspace in the {{site.data.keyword.conversationshort}} tool.
+* Verify that the dialog in your {{site.data.keyword.conversationshort}} skill was created correctly.
+  * You can import the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub for a pre-built skill. See [Step 3 in *Getting started tutorial*](getting-started.html#step3) for details about saving the sample conversation as a JSON file and then importing the file as a skill in the {{site.data.keyword.conversationshort}} tool.
   * If you created your own {{site.data.keyword.conversationshort}} dialog, verify that the dialog contains a node with the `conversation_start` condition and a node with a default response. For detailed instructions, see [Building a dialog](../conversation/dialog-build.html) in the {{site.data.keyword.conversationshort}} documentation.
 * See whether your phone call is listed on the voice agent _Usage_ dashboard. If you see an item for your phone call, then your voice agent connected to the Watson service.
 

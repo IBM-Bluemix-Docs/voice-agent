@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-05"
+lastupdated: "2018-12-11"
 
 
 ---
@@ -15,7 +15,7 @@ lastupdated: "2018-12-05"
 {:tip: .tip}
 
 # Whitelisting IP addresses
-{: #edit_IP}
+{: #whitelist_IP}
 
 You can configure peering to {{site.data.keyword.iva_short}} or other providers by whitelisting IP addresses.
 {: shortdesc}
