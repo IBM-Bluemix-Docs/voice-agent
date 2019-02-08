@@ -2,12 +2,12 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-05"
+lastupdated: "2019-02-04"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:new_window: target="_blank"_}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -20,11 +20,26 @@ lastupdated: "2018-12-05"
 You can choose the SIP trunk provider that you use to integrate with {{site.data.keyword.iva_full}} from the following list.
 {: #shortdesc}
 
+* [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
 * [AT&T and other providers](#att-other)
 * [Peering with {{site.data.keyword.iva_short}}](#peering)
 * [Requesting assisted setup](#request-setup)
+
+## Creating a Nexmo voice application
+  {: #nexmo-setup}
+
+  **Note:** Creating a [Nexmo account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dashboard.nexmo.com/sign-up){: new_window} requires a credit card, which is periodically charged based on your use of the SIP trunk that you configure. If you already have a Nexmo account, you can use the existing account.
+
+  1. Create a Nexmo account on the [Nexmo website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dashboard.nexmo.com/sign-up){: new_window}.
+
+  1. Follow the README instructions at the Nexmo [github repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/nexmo-community/watson-voice-agent){: new_window}. The github repository contains a getting started sample. 
+
+  1. Once your Nexmo phone number is provisioned and your application is running, configure your Voice Agent with the Nexmo phone number.
+
+  1. Test your configuration by calling your Nexmo phone number.
+
 
 ## Creating a NetFoundry SIP trunk and phone number
 {: #NetFoundry-setup}
