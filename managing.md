@@ -33,12 +33,12 @@ You can find the _Manage_ dashboard from your {{site.data.keyword.iva_short}} se
 ## Editing the maximum concurrent connections for your service instance
 {: #edit_service}
 
-In all plans, you receive 2 concurrent connections at no charge. If you use the _Standard_ or _Premium_ plans, you can [change the maximum number of concurrent connections](managing_concurrency.html) from the default settings from the _Instances_ tab.
+In all plans, you receive 2 concurrent connections at no charge. If you use the _Standard_ or _Premium_ plans, you can [change the maximum number of concurrent connections](/docs/services/voice-agent/managing_concurrency.html) from the default settings from the _Instances_ tab.
 
 ## Creating a voice agent
 {: #create_va}
 
-[Create a new voice agent](managing_create.html) from the _Voice agents_ tab on the _Manage_ dashboard.
+[Create a new voice agent](/docs/services/voice-agent/managing_create.html) from the _Voice agents_ tab on the _Manage_ dashboard.
 
 ## Editing a voice agent
 {: #edit_va}

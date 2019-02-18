@@ -28,7 +28,7 @@ In all plans, you receive 2 concurrent connections at no charge. For more inform
 
 1. In _Edit maximum concurrent connections_, enter the maximum number of concurrent connections, and click **Save**.
 
-The minimum number of concurrent connections that you can set through self-service is 10 and the maximum is 50. If you need more than 50 concurrent connections for your voice agent, see [Requesting assisted network setup](connect-SIP.html#request-setup).
+The minimum number of concurrent connections that you can set through self-service is 10 and the maximum is 50. If you need more than 50 concurrent connections for your voice agent, see [Requesting assisted network setup](/docs/services/voice-agent/connect-SIP.html#request-setup).
 
 ## Concurrent connection pricing information
 {: #concurrent-charge}

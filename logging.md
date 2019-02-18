@@ -28,7 +28,7 @@ The _Usage_ dashboard shows you quick stats about your service use for the curre
 
 In the _Call logs_ section, you can filter call logs by date and voice agent name to reduce the number of displayed calls and isolate specific call logs.
 
-To learn more about creating and editing voice agents, see [Managing voice agents](managing.html).
+To learn more about creating and editing voice agents, see [Managing voice agents](/docs/services/voice-agent/managing.html).
 
 ##  Viewing call logs
 

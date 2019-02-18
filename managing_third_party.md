@@ -21,7 +21,7 @@ lastupdated: "2018-11-16"
 You can connect third-party speech and text services when creating, cloning, or editing your voice agent on the _Manage_ dashboard.
 {: shortdesc}
 
-Alternatively, to configure your speech and text service connections on the fly, you can [use dynamic configuration with {{site.data.keyword.conversationshort}}](api_dynamic_config.html). This allows you to change your voice agent configuration with action tags and state variables.
+Alternatively, to configure your speech and text service connections on the fly, you can [use dynamic configuration with {{site.data.keyword.conversationshort}}](/docs/services/voice-agent/api_dynamic_config.html). This allows you to change your voice agent configuration with action tags and state variables.
 
 ## Connecting to Google Speech-to-Text from {{site.data.keyword.iva_short}}
 {: #stt_va}
