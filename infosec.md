@@ -35,7 +35,7 @@ When adding call transfer capabilities to your voice agent, you provide a phone 
 See [Setting up call transfer](/docs/services/voice-agent/call-transfer.html) to learn about configuring your SIP Trunk and SIP URI for call transfer.
 
 ### Event forwarding
-{: #event_forwarding}
+{: #infosec_event_forwarding}
 
 You can configure your voice agent to forward reporting events to a {{site.data.keyword.cloudantfull}} database instance. These reporting events can include PII, PHI, and PCI DSS data about your callers in the form of transcriptions, conversation turn events, and call detail records (CDR) events. Call data and reporting events are not stored, processed, or collected within {{site.data.keyword.iva_short}}, and users should configure their external {{site.data.keyword.cloudant_short_notm}} services appropriately. **By default, event forwarding is disabled.**
 
