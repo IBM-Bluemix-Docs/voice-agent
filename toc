@@ -12,11 +12,11 @@ IBM Voice Agent with Watson
 
     {: .navgroup id="reference"}
     {: .topicgroup}
-	api_reference.md
     State variables
 		[State variables set by the voice agent](/services/voice-agent/voice-agent-api-reference#state-variables-iva)
         [State variables set in the Watson Assistant dialog](/services/voice-agent/voice-agent-api-reference#state-variables-conv)
     [Action commands and attributes](/services/voice-agent/voice-agent-api-reference#actions-and-attributes)
+	api_reference.md
     default-settings.md
     activity-tracker.md
     [IBM Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/welcome_voicegateway.html){: new_window}
@@ -46,11 +46,9 @@ IBM Voice Agent with Watson
         manaing_third_party.md
         managing_other.md
         managing_SOE.md
-        [Enabling event forwarding for voice agents](/services/voice-agent/voice-agent-event_forwarding#enable_event_forwarding)
-        [Configuring advanced options](/services/voice-agent/voice-agent-managing#config-advanced)
 		event-forwarding.md
-		managing.md
-
+        [Configuring advanced options](/services/voice-agent/voice-agent-managing#config-advanced)
+		
     {: .topicgroup}
     Configure a service instance
         managing_concurrency.md
