@@ -12,6 +12,7 @@ IBM Voice Agent with Watson
 
     {: .navgroup id="reference"}
     {: .topicgroup}
+	api_reference.md
     State variables
 		[State variables set by the voice agent](/services/voice-agent/voice-agent-api-reference#state-variables-iva)
         [State variables set in the Watson Assistant dialog](/services/voice-agent/voice-agent-api-reference#state-variables-conv)
