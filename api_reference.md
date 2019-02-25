@@ -14,7 +14,7 @@ lastupdated: "2018-11-08"
 {:tip: .tip}
 
 # Action tags and state variables in the API
-{: #api}
+{: #api-reference}
 
 Use the reference materials to find action tags that initiate actions that your voice agent takes during a conversation session, or state variables, which define voice agent characteristics that persist throughout the conversation unless otherwise changed.
 {: shortdesc}

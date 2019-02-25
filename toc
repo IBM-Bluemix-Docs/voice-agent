@@ -13,11 +13,9 @@ IBM Voice Agent with Watson
     {: .navgroup id="reference"}
     {: .topicgroup}
     State variables
-		[State variables set by the voice agent](/services/voice-agent/voice-agent-api#state-variables-iva)
-        [State variables set in the Watson Assistant dialog](/services/voice-agent/voice-agent-api#state-variables-conv)
-	api_reference.md
-	
-    [Action commands and attributes](/services/voice-agent/voice-agent-api#actions-and-attributes)
+		[State variables set by the voice agent](/services/voice-agent/voice-agent-api-reference#state-variables-iva)
+        [State variables set in the Watson Assistant dialog](/services/voice-agent/voice-agent-api-reference#state-variables-conv)
+    [Action commands and attributes](/services/voice-agent/voice-agent-api-reference#actions-and-attributes)
     default-settings.md
     activity-tracker.md
     [IBM Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/welcome_voicegateway.html){: new_window}
