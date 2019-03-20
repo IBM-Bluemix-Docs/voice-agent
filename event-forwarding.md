@@ -3,6 +3,7 @@
 copyright:
   years: 2019
 lastupdated: "2019-01-30"
+subcollection: "voice-agent"
 ---
 
 {:shortdesc: .shortdesc}
@@ -38,7 +39,7 @@ You can enable event forwarding when you are creating or editing your voice agen
 1. Select either **My {{site.data.keyword.cloudant_short_notm}} service instance** or **Other {{site.data.keyword.cloudant_short_notm}} service instance**.
   * If you are using **My {{site.data.keyword.cloudant_short_notm}} service instance**, select the **{{site.data.keyword.cloudant_short_notm}} account** name and username from the lists.
   * If you are creating a voice agent in the Dallas or Washington DC region and you do not have a {{site.data.keyword.cloudant_short_notm}} service instance, you can create one from the **Cloudant account** menu.
-  * If you are using **Other {{site.data.keyword.cloudant_short_notm}} service instance**, enter either the {{site.data.keyword.cloudant_short_notm}} user name and password or the API key for the account.
+  * If you are using **Other {{site.data.keyword.cloudant_short_notm}} service instance**, enter either the {{site.data.keyword.cloudant_short_notm}} user name and password (up to 128 and 256 characters, respectively) or the API key for the account (up to 64 characters).
 
 1. Select **Enable** for each type of event that you want to forward, and then choose the database where you want to forward the events.
   * Call detail record (CDR) events

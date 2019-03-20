@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-04"
+  years: 2018, 2019
+lastupdated: "2019-03-15"
+subcollection: "voice-agent"
 
 
 ---
@@ -31,7 +32,7 @@ You can enable call transfer by setting a termination URI or tel URI in your SIP
 ## Step 1: Setting up the termination URI
 {: #termination-setup}
 
-If you are using a tel URI instead of a termination URI for your SIP URI configuration, you can use the tel URI, such as `tel:+18889990000`, for your `trasnferTarget`. You need a termination URI for your `transferTarget` if you are using a SIP URI.
+If you are using a tel URI instead of a termination URI for your SIP URI configuration, you can use the tel URI, such as `tel:+18889990000`, for your `transferTarget`. You need a termination URI for your `transferTarget` if you are using a SIP URI.
 {: tip}
 
 ### Setting up a termination URI in NetFoundry
@@ -93,6 +94,8 @@ To learn more about working in the {{site.data.keyword.conversationshort}} servi
 
   * If you use a tel URI, replace the SIP URI in the `transferTarget` with your tel URI. For example,  `"transferTarget":"tel:+18889990000"`.
 
+  * **NOTE**: Make sure the `transferTarget` URI starts with a `+`.
+
   ```json
   {
       "output": {
@@ -114,6 +117,8 @@ To learn more about working in the {{site.data.keyword.conversationshort}} servi
 1. Check that the phone number in your `transferTarget` termination URI or tel URI correctly matches the phone number in your SIP trunk.
 
 **Remember**: The SIP URI of the transfer target includes a telephone number and the termination URI that you created. Do not use a personal telephone number in your transfer target. For example, if the telephone number is `18889990000` and your termination URI is `mysiptrunk.pstn.twilio.com`, the full SIP URI is `sip:+18889990000\\@mysiptrunk.pstn.twilio.com`. If you use Netfoundry, and have a telephone number of `18889990000`, the full SIP URI is `sip:+18889990000\\@dal.watson-va.netfoundry.net`.
+
+**NOTE**: Make sure the `transferTarget` URI starts with a `+` and may include up to 256 characters. 
 
 ## Next steps
 {: #Next}

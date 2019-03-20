@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-16"
+subcollection: "voice-agent"
 
 
 ---
@@ -34,7 +35,7 @@ Instead of using a {{site.data.keyword.speechtotextfull}} instance, you can choo
 
 1. Choose the **Language** for your service instance.
 
-1. Enter your Google Cloud Speech-to-Text service credentials.
+1. Enter your Google Cloud Speech-to-Text service credentials, with a limit up to 2048 characters.
   * You can generate your service credentials in the Google Cloud Platform as a JSON key when you [set up a service account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). The following code example contains the sample credential fields you generate on the Google Cloud Platform.
 
     ```json
@@ -77,7 +78,7 @@ Instead of using a {{site.data.keyword.texttospeechfull}} instance, you can choo
 
 1. Choose the **Language** and **Voice** for your service instance.
 
-1. Enter your Google Cloud Text-to-Speech service credentials.
+1. Enter your Google Cloud Text-to-Speech service credentials, with a limit up to 2048 characters.
   * You can generate your service credentials in the Google Cloud Platform as a JSON key when you [set up a service account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). The following code example contains the sample credential fields you generate on the Google Cloud Platform.
 
     ```json

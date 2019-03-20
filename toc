@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent/getting-started.html" path="services/voice-agent"}
+{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#getting-started-tutorial" path="services/voice-agent"}
 IBM Voice Agent with Watson
 
     {: .navgroup id="learn"}
@@ -39,16 +39,17 @@ IBM Voice Agent with Watson
     connect-SIP.md
     managing.md
     managing_create.md
+    managing_multiple_numbers.md
 
     {: .topicgroup}
     Configuring voice agents
         managing_disaster_recovery.md
-        manaing_third_party.md
+        managing_third_party.md
         managing_other.md
         managing_SOE.md
 		event-forwarding.md
         [Configuring advanced options](/services/voice-agent/voice-agent-managing#config-advanced)
-		
+
     {: .topicgroup}
     Configure a service instance
         managing_concurrency.md

@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-08"
+subcollection: "voice-agent"
 
 ---
 
@@ -36,7 +37,7 @@ The following table lists the actions that you can specify in the {{site.data.ke
 | `vgwActHangup` | Hangs up the call. | No attributes. |
 | `vgwActSetSTTConfig` | Applies a set of parameters for the voice agent to pass to the Watson {{site.data.keyword.speechtotextshort}} service. The {{site.data.keyword.conversationshort}} service dynamically defines the parameters based on the call. | Attributes are transparently passed as JSON properties to the {{site.data.keyword.speechtotextshort}} service. |
 | `vgwActSetTTSConfig` | Applies a set of parameters for the voice agent to pass to the Watson {{site.data.keyword.texttospeechshort}} service. The {{site.data.keyword.conversationshort}} service dynamically defines the parameters based on the call. |  Attributes are transparently passed as JSON properties to the {{site.data.keyword.texttospeechshort}} service.  |
-| `vgwActSetConversationConfig` | Applies a set of parameters for the voice agent to define a {{site.data.keyword.conversationshort}} workspace. The {{site.data.keyword.conversationshort}} service dynamically defines the parameters based on the call. | <ul><li>`url`: The `url` credential for the {{site.data.keyword.conversationshort}} service API.</li><li>`workspaceID`: {{site.data.keyword.conversationshort}} workspace ID</li><li>`username`: The `username` credential for the {{site.data.keyword.conversationshort}} service.</li><li>`password`: The `password` credential for the {{site.data.keyword.conversationshort}} service.</li></ul> |
+| `vgwActSetConversationConfig` | Applies a set of parameters for the voice agent to define a {{site.data.keyword.conversationshort}} workspace. The {{site.data.keyword.conversationshort}} service dynamically defines the parameters based on the call. | <ul><li>`url`: The `url` credential for the {{site.data.keyword.conversationshort}} service API.</li><li>`workspaceID`: {{site.data.keyword.conversationshort}} workspace ID</li><li>`username`: The `username` credential for the {{site.data.keyword.conversationshort}} service, up to 64 characters.</li><li>`password`: The `password` credential for the {{site.data.keyword.conversationshort}} service, up to 256 characters.</li></ul> |
 | `vgwActCollectDtmf` | Instructs the voice agent to collect dual-tone multi-frequency signaling (DTMF) input. | One of the following attributes must be defined. <ul><li> `dtmfTermKey`: The DTMF termination key, which signals the end of DTMF input. For example, "`#`". </li><li> `dtmfCount`: The number of DTMF digits to collect.</li></ul> When either of these conditions is met, the voice agent stops collecting DTMF input. |
 | `vgwActPauseDTMF` | Disables DTMF input. All DTMF input is ignored until it is reenabled by the `vgwActUnPauseDTMF` action. | No attributes. |
 | `vgwActUnPauseDTMF` | Enables the DTMF input that was disabled by the `vgwActPauseDTMF` action. | No attributes. |

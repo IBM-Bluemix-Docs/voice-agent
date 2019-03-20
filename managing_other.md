@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-07"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,7 +22,7 @@ lastupdated: "2018-11-07"
 You can configure your voice agent to use {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, or {{site.data.keyword.speechtotextshort}} service instances that belong to workspaces in other {{site.data.keyword.Bluemix_short}} accounts.
 {: shortdesc}
 
-To connect your voice agent to other service instances, you can use either the user name and password credentials or an API key for your service instances.
+To connect your voice agent to other service instances, you can use either the user name and password credentials or an API key for your service instances. The user name and password are limited to 64 and 256 characters, respectively. The API key is limited to 64 characters.
 
 1. In the _Voice agents_ tab on the _Manage_ dashboard, select either **Create a new voice agent** or a voice agent that you want to edit.
 
@@ -38,7 +39,7 @@ To connect your voice agent to other service instances, you can use either the u
 
 1. Enter your service instance information.
 
-  * **{{site.data.keyword.conversationshort}}:** In the **Workspace ID** field, enter the ID of the workspace that you want to use with your voice agent. To find the workspace ID, launch the tool, and on the workspace that you want to integrate, click the Actions icon (**&vellip;**) and select **View details**.
+  * **{{site.data.keyword.conversationshort}}:** In the **Workspace ID** field, enter the ID of the workspace that you want to use with your voice agent, up to 128 characters. To find the workspace ID, launch the tool, and on the workspace that you want to integrate, click the Actions icon (**&vellip;**) and select **View details**.
   * **{{site.data.keyword.speechtotextshort}}:** For **Select model type**, choose **Narrowband**, **Broadband**, or **Both narrowband and broadband**, then select the language **Model**.
   * **{{site.data.keyword.texttospeechshort}}:** In the **Voice** field, select the language and voice that your service uses. You must specify a voice for your service.
 

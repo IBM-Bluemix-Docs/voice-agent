@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-11-12"
+subcollection: "voice-agent"
 
 ---
 
@@ -24,9 +25,9 @@ You can view the usage history and call logs for your voice agents from the {{si
 
 Logging is automatically enabled for {{site.data.keyword.iva_full}}. You can view your voice agent call logs in the _Usage_ dashboard.
 
-The _Usage_ dashboard shows you quick stats about your service use for the current month and remaining resources available in your plan. This information includes the maximum number of concurrent connections that are encountered in the current month and the maximum number of concurrent connections available in your plan. You can also see the number of free minutes included in the plan and the number of used minutes. The _Call logs_ section follows your _Quick stats_.
+The _Usage_ dashboard shows you quick stats about your service use and remaining resources available in your plan. This information includes the maximum number of concurrent connections that are encountered in the current month and the maximum number of concurrent connections available in your plan. In the _Call minutes_ box, you can see the number of free minutes included in the plan and the number of used minutes. The _Call logs_ section follows your _Quick stats_.
 
-In the _Call logs_ section, you can filter call logs by date and voice agent name to reduce the number of displayed calls and isolate specific call logs.
+You can filter _Call logs_ and _Call minutes_ by date, and by either voice agent name(s) or number(s) to reduce the number of displayed calls and isolate specific call logs. In addition, you can filter _Call logs_ to display only failed calls.
 
 To learn more about creating and editing voice agents, see [Managing voice agents](/docs/services/voice-agent/managing.html).
 
@@ -36,9 +37,9 @@ To learn more about creating and editing voice agents, see [Managing voice agent
 
       For each call, you can see the name and phone number of your voice agent, the start and stop times, and the call duration. You might also see a warning symbol next to the voice agent name, which indicates that the call failed.
 
-1.  You can filter the list of calls by viewing calls on a specific date or filtering calls by voice agent name.
+1.  You can filter the list of calls by viewing calls on a specific date and by filtering calls by voice agent name or number. You can also choose to display only failed calls.
 
-1. To access the call failure logs for an individual call, click the **Logs** icon in the **Failure Logs** column for that call.
+1. To access the call failure logs for an individual call, click the dots in the **Actions** column for that call to expand the menu. Then, choose **Failure logs**. This option appears only for failed calls.
 
 1. You can examine the detailed list of message logs in the new view by using the following methods:
   * Search the failure logs

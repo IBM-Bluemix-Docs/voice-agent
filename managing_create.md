@@ -2,8 +2,8 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-01-30"
-
+lastupdated: "2019-03-15"
+subcollection: "voice-agent"
 ---
 
 {:shortdesc: .shortdesc}
@@ -28,13 +28,19 @@ When you create a voice agent, {{site.data.keyword.iva_short}} automatically sea
 
 1. Go to the _Voice agents_ tab on the _Manage_ dashboard, and click **Create a Voice Agent**.
 
-1. For **Name**, specify a unique name for your voice agent. For example, `Customer Support - North America`.
+1. For **Name**, specify a unique name for your voice agent. For example, `Customer Support - North America`. The name may include up to 64 characters.
 
-1. For **Phone number**, add the number from your SIP trunk, including the country and area codes. For example, for a United States 800 number, specify the phone number as `18883334444`. The phone number can have spaces and `+ ( ) -` characters.
+1. For **Phone number**, add the number from your SIP trunk, including the country and area codes. For example, for a United States 800 number, specify the phone number as `18883334444`. The phone number can have spaces and `+ ( ) -` characters, and a maximum of 30 characters.
 
-1. Optionally describe your voice agent.
+1. By default, this phone number will be set as the **Primary Number** for the service; this is simply the first number shown to you when you have a list of numbers, and is only for display purposes.. See [Setting the Primary Number](/docs/services/voice-agent/managing_multiple_numbers.html#primary_num) for changing the Primary Number.
 
-1. If you want to enable call transfer, enter the termination URI for your **Transfer default target**. See [Setting up call transfer](/docs/services/voice-agent/call-transfer.html) for information about how to set up a termination URI. Do not use a personal phone number for your transfer target.
+1. You can also choose to add multiple numbers to one Voice Agent by clicking on **Manage**, next to **Phone Number**. See [Configuring Multiple Phone Numbers in a Voice Agent Instance](/docs/services/voice-agent/managing_multiple_numbers.html) for information about how to set up and associate multiple numbers. You may also edit the numbers and add descriptions for the individual numbers from the **Manage** dialog box.
+
+1. Alternatively, if you have multiple numbers in the Voice Agent, the **Phone Number** field will be greyed out. If you wish to edit the numbers simply click on the greyed out **Phone Number** field, or click on **Manage**. See [Editing a Number and/or Description for Multiple Numbers](/docs/services/voice-agent/managing_multiple_numbers.html#edit_num).
+
+1. Optionally describe your voice agent using up to 256 characters.
+
+1. If you want to enable call transfer, enter the termination URI for your **Transfer default target**. See [Setting up call transfer](/docs/services/voice-agent/call-transfer.html) for information about how to set up a termination URI. Do not use a personal phone number for your transfer target. The **Transfer default target** termination URI may include up to 256 characters.
 
 1. Configure the connections to your Watson service instances. You can connect to multiple Watson service instances by configuring connections for both **Location 1** and **Location 2**. Having connections to multiple service instances enables your voice agent to switch to an alternate service instance if an outage occurs. See [Adding multiple Watson service locations](/docs/services/voice-agent/managing_disaster_recovery.html#add_location).
 
@@ -59,4 +65,4 @@ When you create a voice agent, {{site.data.keyword.iva_short}} automatically sea
 
 1. Click **Create voice agent** to create your voice agent and any new services.
 
-After you create the voice agent, test your voice agent by calling its phone number. You can view details about your phone call on the _Usage_ dashboard.  
+After you create the voice agent, test your voice agent by calling its phone number. You can view details about your phone call on the _Usage_ dashboard. See [Viewing Usage and Call Logs](/docs/services/voice-agent/logging.html).   

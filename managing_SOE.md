@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-12"
+subcollection: "voice-agent"
 
 
 ---
@@ -31,8 +32,8 @@ You can connect to a {{site.data.keyword.conversationshort}} workspace through a
 
 1. Select the **Region** for your **Service type**.
 
-1. In the **URL** field, enter the full URL to your SOE workspace, such as `https://iva-soesample.myorg.net/SOE/myWorkspace`.
+1. In the **URL** field, enter the full URL to your SOE workspace, such as `https://iva-soesample.myorg.net/SOE/myWorkspace`. Up to 256 characters may be entered for the URL.
 
   **Important**: For data security, make sure that you use a secure URL for your SOE workspace, by using `https:` instead of `http:`, and require authentication. See [Information security and data privacy](/docs/services/voice-agent/infosec.html) to learn more about security considerations.
 
-1. **Optional** If your SOE requires authentication (recommended), enter the user name and password in the respective fields.
+1. **Optional** If your SOE requires authentication (recommended), enter the user name and password in the respective fields, up to 64 and 256 characters each.
