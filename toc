@@ -71,4 +71,5 @@ IBM Voice Agent with Watson
     {: .navgroup id="help"}
     troubleshooting.md
     limitations.md
+    release_notes.md
     {: .navgroup-end}

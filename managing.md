@@ -19,7 +19,7 @@ subcollection: "voice-agent"
 # Managing service instances and voice agents
 {: #managing}
 
-You can use the _Manage_ dashboard to change your service instance configurations and create, edit, clone, configure, or remove individual voice agents. You can have multiple voice agents in your service instance, and each voice agent can have up to 500 unique numbers and descriptions. However, each voice agent must have a unique name and at least one phone number.
+You can use the _Manage_ dashboard to change your service instance configurations and create, edit, clone, configure, or remove individual voice agents. You can have multiple voice agents in your service instance, and each voice agent can have up to 1000 unique numbers and descriptions. However, each voice agent must have a unique name and at least one phone number.
 
 * **NOTE**: A single {{site.data.keyword.iva_full}} service instance may have up to 150 voice agents.
 {: shortdesc}
