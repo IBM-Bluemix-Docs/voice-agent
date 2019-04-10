@@ -21,6 +21,9 @@ subcollection: "voice-agent"
 Watch a demonstration of how to create your first voice agent in this [{{site.data.keyword.iva_full_notm}} tutorial ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/tv/building-voice-enabled-cognitive-applications-with-watson/).
 {: tip}
 
+If you require any assistance, find us on Slack in the [IBM Cloud Technology ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://slack-invite-ibm-cloud-tech.mybluemix.net/) team under the `#ibmvoicegateway` channel
+{: tip}
+
 ## Before you begin
 {: #prereqs}
 

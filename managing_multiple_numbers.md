@@ -24,7 +24,7 @@ You can add multiple phone numbers to a single Agent, so that configuring the Ag
 
 You can access the **Manage** dialog box by clicking on **Manage** next to **Phone Number** from the _Create a Voice Agent_ or _Edit Voice Agent_ page.
 
-  * _**NOTE:**_ There is a limit of 500 unique numbers per Agent configuration.
+  * _**NOTE:**_ There is a limit of 1000 unique numbers per Agent configuration.
 {: shortdesc}
 
 
@@ -37,7 +37,7 @@ You can access the **Manage** dialog box by clicking on **Manage** next to **Pho
 
 1. {: #format_num} For **Phone Number**, add the number from your SIP trunk, including the country and area codes. For example, for a United States 800 number, specify the phone number as 18883334444. The phone number can have spaces and + ( ) - characters, and a maximum of 30 characters.  
 
-  * _**NOTE:**_ There is a limit of 500 unique numbers per voice agent configuration.
+  * _**NOTE:**_ There is a limit of 1000 unique numbers per voice agent configuration.
 
 1. You may optionally provide a description for your phone number in the **Description** field, up to a maximum of 64 characters.
 
@@ -88,7 +88,7 @@ You can access the **Manage** dialog box by clicking on **Manage** next to **Pho
 ## Importing Numbers
 {: #import_num}
 
-A list of numbers may be uploaded into the Agent all at once. The list _must_ be a file of type **.csv**. The file may have up to and including 500 unique **Phone Numbers**, with one number per line, along with an optional **Description** for each number.
+A list of numbers may be uploaded into the Agent all at once. The list _must_ be a file of type **.csv**. The file may have up to and including 1000 unique **Phone Numbers**, with one number per line, along with an optional **Description** for each number.
 
   * _**NOTE:**_ Uploading numbers from a .CSV file will replace _ALL_ current numbers in the Agent. The number list will _not_ be appended with the numbers from the .CSV file.
 
