@@ -26,9 +26,9 @@ subcollection: "voice-agent"
 {{site.data.keyword.iva_short}} is one of several components in the overall architecture of your environment, which can include the following elements:
 
 * A voice agent based on [IBM Voice Gateway ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS4U29/), which orchestrates the following Watson services:
-  * [{{site.data.keyword.speechtotextshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/speech-to-text/index.html): Converts the caller's audio into text
-  * [{{site.data.keyword.conversationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/conversation/index.html): Analyzes the text, maps it to intents, and provides a response according to a dialog that you create
-  * [{{site.data.keyword.texttospeechshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/text-to-speech/index.html): Converts the response into voice audio
+  * [{{site.data.keyword.speechtotextshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/speech-to-text?topic=speech-to-text-about): Converts the caller's audio into text
+  * [{{site.data.keyword.conversationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/conversation?topic=conversation-about): Analyzes the text, maps it to intents, and provides a response according to a dialog that you create
+  * [{{site.data.keyword.texttospeechshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/text-to-speech?topic=text-to-speech-about): Converts the response into voice audio
 * A SIP trunk, which connects your voice agent to the telephone network
 * An optional service orchestration engine (SOE), which sits between the {{site.data.keyword.conversationshort}} service and your voice agent so that you can further customize your environment
 
@@ -75,7 +75,7 @@ You might want to incorporate a service orchestration engine in your {{site.data
 
 To learn more about how to implement a service orchestration engine, see the [service orchestration engine samples on GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}.
 
-**Important**: For data security, make sure that you use a secure URL for your SOE workspace, by using `https:` instead of `http:`, and require authentication. See [Information security and data privacy](/docs/services/voice-agent/infosec.html) to learn more about security considerations.
+**Important**: For data security, make sure that you use a secure URL for your SOE workspace, by using `https:` instead of `http:`, and require authentication. See [Information security and data privacy](/docs/services/voice-agent?topic=voice-agent-infosec) to learn more about security considerations.
 
 ## Features
 {: #features}

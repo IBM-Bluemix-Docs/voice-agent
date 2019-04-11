@@ -24,9 +24,9 @@ You might want to collect and analyze call data from {{site.data.keyword.iva_sho
 
 Analyzing data from these events can help you adjust dialogs, refine intents, and improve overall caller experience.
 
-When you create or edit voice agents, you can also choose to enable event forwarding. For more detail about creating and editing voice agents, see [Managing voice agents](/docs/services/voice-agent/managing.html). You need to provide {{site.data.keyword.cloudant_short_notm}} account information, including the account name and password, to enable event forwarding.
+When you create or edit voice agents, you can also choose to enable event forwarding. For more detail about creating and editing voice agents, see [Managing voice agents](/docs/services/voice-agent?topic=voice-agent-managing). You need to provide {{site.data.keyword.cloudant_short_notm}} account information, including the account name and password, to enable event forwarding.
 
-**Important:** The CDR, transcription, and turn events include information from your users that might potentially contain Protected Health Information (PHI), personally identifiable information (PII), or PCI Data Security Standard (PCI DSS) data. To prevent exposure of personal information, you must ensure that your {{site.data.keyword.cloudant_short_notm}} instance properly protects the confidential information that your users share in or during conversation. See [Information security and data privacy: Event forwarding](/docs/services/voice-agent/infosec.html#event_forwarding) and [{{site.data.keyword.cloudant_short_notm}}: Security](/docs/services/Cloudant/offerings/security.html#security).
+**Important:** The CDR, transcription, and turn events include information from your users that might potentially contain Protected Health Information (PHI), personally identifiable information (PII), or PCI Data Security Standard (PCI DSS) data. To prevent exposure of personal information, you must ensure that your {{site.data.keyword.cloudant_short_notm}} instance properly protects the confidential information that your users share in or during conversation. See [Information security and data privacy: Event forwarding](/docs/services/voice-agent?topic=voice-agent-infosec#event_forwarding) and [{{site.data.keyword.cloudant_short_notm}}: Security](/docs/services/Cloudant/offerings?topic=cloudant-security#security).
 
 
 ## Enabling event forwarding
@@ -50,5 +50,5 @@ You can enable event forwarding when you are creating or editing your voice agen
 
 ## Related links
 * [IBM Voice Gateway: Reporting events](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}
-* [Information security and data privacy](/docs/services/voice-agent/infosec.html)
-* [{{site.data.keyword.cloudant_short_notm}}: Security](/docs/services/Cloudant/offerings/security.html#security)
+* [Information security and data privacy](/docs/services/voice-agent?topic=voice-agent-infosec)
+* [{{site.data.keyword.cloudant_short_notm}}: Security](/docs/services/Cloudant/offerings?topic=cloudant-security#security)

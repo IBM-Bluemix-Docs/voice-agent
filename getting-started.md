@@ -43,8 +43,8 @@ After you create the service, make note of the voice agent endpoint on the _Gett
 
   * [NetFoundry](connect-SIP.html#NetFoundry-setup)
   * [Twilio](connect-SIP.html#twilio-setup)
-  * [AT&T and other SIP Trunking providers](/docs/services/voice-agent/connect-SIP.html#att-other)
-  * [Peering with {{site.data.keyword.iva_short}}](/docs/services/voice-agent/connect-SIP.html#peering)
+  * [AT&T and other SIP Trunking providers](/docs/services/voice-agent?topic=voice-agent-connect#att-other)
+  * [Peering with {{site.data.keyword.iva_short}}](/docs/services/voice-agent?topic=voice-agent-connect#peering)
 
 ## Step 3: Creating and connecting your voice agent
 {: #step3}
@@ -66,7 +66,7 @@ After you create the service, make note of the voice agent endpoint on the _Gett
    1. On the sample conversation GitHub page, click the `1` line number and select **... > Copy line**. Paste the copied text into a file, and save it as a JSON file such as `voice-gateway-conversation-en.json`.
    2. Launch the {{site.data.keyword.conversationshort}} tool. On the _Skills_ page, click the ![Import workspace](../conversation/images/workspace_import.png) icon and import the JSON file.
 
-  Alternatively, you can [build your own dialog](/docs/services/conversation/dialog-build.html) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and a node with a default response.
+  Alternatively, you can [build your own dialog](/docs/services/conversation?topic=conversation-dialog-build) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and a node with a default response.
 
 
 ## Next steps
@@ -74,8 +74,8 @@ After you create the service, make note of the voice agent endpoint on the _Gett
 
 Test your voice agent by calling its associated phone number. If you hear a response, your voice agent is active!
 
-If you do not hear a response, you can examine your call logs and voice agent usage on the _Usage_ dashboard. See [Viewing usage and call logs](/docs/services/voice-agent/logging.html).
+If you do not hear a response, you can examine your call logs and voice agent usage on the _Usage_ dashboard. See [Viewing usage and call logs](/docs/services/voice-agent?topic=voice-agent-logging).
 
-You can edit the settings for your voice agent, create or remove voice agents, and add multiple Watson service locations to your voice agent from the _Manage_ dashboard. For more information, see [Managing voice agents](/docs/services/voice-agent/managing.html).
+You can edit the settings for your voice agent, create or remove voice agents, and add multiple Watson service locations to your voice agent from the _Manage_ dashboard. For more information, see [Managing voice agents](/docs/services/voice-agent?topic=voice-agent-managing).
 
-You can also configure advanced settings, such as securing your SIP connection from your Twilio account. See [Securing connections](/docs/services/voice-agent/secure-trunking.html).
+You can also configure advanced settings, such as securing your SIP connection from your Twilio account. See [Securing connections](/docs/services/voice-agent?topic=voice-agent-securing).
