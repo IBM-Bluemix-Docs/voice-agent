@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 Use the reference materials to find action tags that initiate actions that your voice agent takes during a conversation session, or state variables, which define voice agent characteristics that persist throughout the conversation unless otherwise changed.
 {: shortdesc}
 
-See [Programming voice agents using the API](/docs/services/voice-agent/api.html) for code examples and examples of how to set states and initiate action sequences.
+See [Programming voice agents using the API](/docs/services/voice-agent?topic=voice-agent-api) for code examples and examples of how to set states and initiate action sequences.
 
 Because {{site.data.keyword.iva_full}} is based on IBM Voice Gateway, the API works the same way. If you're familiar with Voice Gateway, you can use the same actions and state variables in your {{site.data.keyword.conversationshort}} dialogs with {{site.data.keyword.iva_short}}. See [Action tags and state variables in the Voice Gateway API](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html).
 {: tip}

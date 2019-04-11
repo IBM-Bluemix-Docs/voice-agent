@@ -22,7 +22,7 @@ subcollection: "voice-agent"
 You can connect third-party speech and text services by setting the Speech to Text or Text to Speech from a {{site.data.keyword.conversationshort}} dialog node.
 {: shortdesc}
 
-See [Programming voice agents using the API](/docs/services/voice-agent/api.html) for code examples and information about how to set states and initiate action sequences.
+See [Programming voice agents using the API](/docs/services/voice-agent?topic=voice-agent-api) for code examples and information about how to set states and initiate action sequences.
 
 ## Connecting to Google Speech-to-Text from a {{site.data.keyword.conversationshort}} dialog node
 {: #stt_dialog}
@@ -70,7 +70,7 @@ Instead of configuring your connection to Google Speech-to-Text by editing your 
 ## Connecting to Google Text-to-Speech from a {{site.data.keyword.conversationshort}} dialog node
 {: #tts_dialog}
 
-Instead of configuring your connection to Google Text-to-Speech by editing your voice agent, you can program your {{site.data.keyword.conversationshort}} to configure the TTS settings with the `"vgwActSetTTSConfig"` command. See [Editing JSON in the dialog response](/docs/services/voice-agent/api.html#json-editor).
+Instead of configuring your connection to Google Text-to-Speech by editing your voice agent, you can program your {{site.data.keyword.conversationshort}} to configure the TTS settings with the `"vgwActSetTTSConfig"` command. See [Editing JSON in the dialog response](/docs/services/voice-agent?topic=voice-agent-api#json-editor).
 
 1. In the JSON editor for the {{site.data.keyword.conversationshort}} dialog, add the `"vgwActSetTTSConfig"` command to your dialog node.
 

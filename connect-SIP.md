@@ -59,7 +59,7 @@ You can choose the SIP trunk provider that you use to integrate with {{site.data
 
 1. Once the payment successfully processes, your SIP trunk phone number is displayed in your account.
 
-You need this phone number to set up your voice agent and configure call transfer, including the country and area codes. See [Creating and connecting your voice agent](/docs/services/voice-agent/getting-started.html#step3).
+You need this phone number to set up your voice agent and configure call transfer, including the country and area codes. See [Creating and connecting your voice agent](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
 
 
 ## Creating a Twilio SIP trunk
@@ -85,7 +85,7 @@ You need this phone number to set up your voice agent and configure call transfe
 
   On the Numbers page, click **Buy a Number** or, if you already have a number, click the **+** icon. A panel displays where you can provision a new phone number in your region. Assign the number to the SIP trunk you created by going back to the SIP trunk and clicking the Number icon.
 
-  You need this phone number to set up your voice agent, including the country and area codes. See [Creating and connecting your voice agent](/docs/services/voice-agent/getting-started.html#step3).
+  You need this phone number to set up your voice agent, including the country and area codes. See [Creating and connecting your voice agent](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
 
   **NOTE**: If you are using a Lite/Trial Twilio account to test transfers on {{site.data.keyword.iva_short}}, then you will need to make sure to _verify_ the transfer target. See more instructions on [Twilio's official site](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
 
@@ -110,7 +110,7 @@ You need this phone number to set up your voice agent and configure call transfe
 
 You can request assisted network setup to connect with AT&T or other SIP trunking providers, peer with {{site.data.keyword.iva_short}}, or to request more than 50 concurrent connections by using the following process.
 
-You can whitelist a PBX such as Asterisk in your {{site.data.keyword.iva_short}} instance. Open a support ticket only if public internet whitelisting is not an acceptable solution. See [Whitelisting IP addresses](/docs/services/voice-agent/managing_IP_whitelist.html#whitelist_IP).
+You can whitelist a PBX such as Asterisk in your {{site.data.keyword.iva_short}} instance. Open a support ticket only if public internet whitelisting is not an acceptable solution. See [Whitelisting IP addresses](/docs/services/voice-agent?topic=voice-agent-whitelist_IP#whitelist_IP).
 
 1. Open a new [{{site.data.keyword.Bluemix_notm}} support ticket](https://cloud.ibm.com/unifiedsupport/tickets/add)
 

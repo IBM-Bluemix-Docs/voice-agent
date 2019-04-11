@@ -32,7 +32,7 @@ You can add a Watson or third-party service location to your voice agent configu
 
 1. To add a redundant service to an existing voice agent, navigate to the _Voice agents_ tab on your _Manage_ dashboard. Click **Edit agent** for the voice agent you want to configure.
 
-1. Choose either **Location 1** or **Location 2** for the {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}}, or {{site.data.keyword.speechtotextshort}} service that you want to connect, and add your configuration information. You can use third-party services or Watson service instances in your workspace or in other workspaces. See [Using service instances in other {{site.data.keyword.Bluemix_notm}} workspaces](/docs/services/voice-agent/managing_other.html).
+1. Choose either **Location 1** or **Location 2** for the {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}}, or {{site.data.keyword.speechtotextshort}} service that you want to connect, and add your configuration information. You can use third-party services or Watson service instances in your workspace or in other workspaces. See [Using service instances in other {{site.data.keyword.Bluemix_notm}} workspaces](/docs/services/voice-agent?topic=voice-agent-other_service).
 
 **Remember**: For service redundancy, you must use Watson service instances in different service regions for different locations.
 
