@@ -72,7 +72,7 @@ You do not need to manually configure the termination URI in your NetFoundry acc
 ## Step 2: Configuring {{site.data.keyword.conversationshort}} for call transfer
 {: #conversation-setup}
 
-To learn more about working in the {{site.data.keyword.conversationshort}} service, see [About {{site.data.keyword.conversationshort}}](/docs/conversation?topic=conversation-about#about).
+To learn more about working in the {{site.data.keyword.conversationshort}} service, see [About {{site.data.keyword.conversationshort}}](/docs/conversation?topic=services/conversation-about#about).
 
 1. In your {{site.data.keyword.Bluemix_notm}} dashboard, select the {{site.data.keyword.conversationshort}} instance that your voice agent uses.
 

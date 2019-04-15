@@ -41,8 +41,8 @@ After you create the service, make note of the voice agent endpoint on the _Gett
 
 1. Create a SIP trunk from any of the following supported providers. Then, associate a phone number with your SIP trunk.
 
-  * [NetFoundry](connect-SIP.html#NetFoundry-setup)
-  * [Twilio](connect-SIP.html#twilio-setup)
+  * [NetFoundry](/docs/services/voice-agent?topic=voice-agent-connect#NetFoundry-setup)
+  * [Twilio](/docs/services/voice-agent?topic=voice-agent-connect#twilio-setup)
   * [AT&T and other SIP Trunking providers](/docs/services/voice-agent?topic=voice-agent-connect#att-other)
   * [Peering with {{site.data.keyword.iva_short}}](/docs/services/voice-agent?topic=voice-agent-connect#peering)
 
@@ -61,12 +61,12 @@ After you create the service, make note of the voice agent endpoint on the _Gett
   * Click **Create a voice agent** to create all of the services and a voice agent with the default configuration in a single step.
   * Or, click each of the service names to create the services yourself. Then, return to {{site.data.keyword.iva_short}} and create a voice agent separately.
 
-   If you manually created a {{site.data.keyword.conversationshort}} service instance, add a dialog so that you can test your voice agent.  To quickly get started, clone the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub and then [import the sample](../conversation/configure-workspace.html#creating-workspaces) as a skill:
+   If you manually created a {{site.data.keyword.conversationshort}} service instance, add a dialog so that you can test your voice agent.  To quickly get started, clone the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub and then [import the sample](../docs/conversation?topic=services/conversation-configuring-a-watson-assistant-workspace#creating-workspaces) as a skill:
 
    1. On the sample conversation GitHub page, click the `1` line number and select **... > Copy line**. Paste the copied text into a file, and save it as a JSON file such as `voice-gateway-conversation-en.json`.
    2. Launch the {{site.data.keyword.conversationshort}} tool. On the _Skills_ page, click the ![Import workspace](../conversation/images/workspace_import.png) icon and import the JSON file.
 
-  Alternatively, you can [build your own dialog](/docs/services/conversation?topic=conversation-dialog-build) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and a node with a default response.
+  Alternatively, you can [build your own dialog](/docs/services/conversation?topic=services/conversation-dialog-build) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and a node with a default response.
 
 
 ## Next steps

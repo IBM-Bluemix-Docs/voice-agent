@@ -69,7 +69,7 @@ See [Configuring {{site.data.keyword.conversationshort}} for your voice agent](/
 See the following resources to find considerations for each service and {{site.data.keyword.Bluemix_notm}}.
 
   * [**{{site.data.keyword.Bluemix_short}}: Security compliance**](/docs/overview?topic=overview-security#security)
-  * [**{{site.data.keyword.conversationfull}}: Information security**](/docs/services/conversation?topic=conversation-information-security){: new_window}
+  * [**{{site.data.keyword.conversationfull}}: Information security**](/docs/services/conversation?topic=services/conversation-information-security){: new_window}
   * [**{{site.data.keyword.texttospeechfull}}: Information security**](/docs/services/text-to-speech?topic=text-to-speech-information-security){: new_window}
   * [**{{site.data.keyword.speechtotextfull}}: Information security**](/docs/services/speech-to-text?topic=speech-to-text-information-security){: new_window}
   * [**{{site.data.keyword.cloudant_short_notm}}: Security**](/docs/services/Cloudant/offerings?topic=cloudant-security#security){: new_window}

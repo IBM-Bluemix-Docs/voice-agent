@@ -27,7 +27,7 @@ See [Programming voice agents using the API](/docs/services/voice-agent?topic=vo
 ## Connecting to Google Speech-to-Text from a {{site.data.keyword.conversationshort}} dialog node
 {: #stt_dialog}
 
-Instead of configuring your connection to Google Speech-to-Text by editing your voice agent, you can program your {{site.data.keyword.conversationshort}} to configure the STT settings with the `"vgwActSetSTTConfig"` command. See [Editing JSON in the dialog response](api.html#json-editor).
+Instead of configuring your connection to Google Speech-to-Text by editing your voice agent, you can program your {{site.data.keyword.conversationshort}} to configure the STT settings with the `"vgwActSetSTTConfig"` command. See [Editing JSON in the dialog response](/docs/services/voice-agent?topic=voice-agent-api#json-editor).
 
 1. In the JSON editor for the {{site.data.keyword.conversationshort}} dialog, add the `"vgwActSetSTTConfig"` command to your dialog node.
 
