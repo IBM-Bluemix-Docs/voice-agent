@@ -93,6 +93,7 @@ When you create, clone, or edit a voice agent, you can make changes to the confi
 
 When you create or clone a voice agent, you can click **Show advanced** to view the following advanced configuration options.
 
+* **Conversation read timeout (optional)**: This option sets the time, in seconds, that the Voice Agent waits for a response from Watson Assistant. If the time is exceeded, the Voice Agent reattempts to contact Watson Assistant. If the service still cannot be reached, the call fails. Set to 5 seconds by default.
 * **{{site.data.keyword.conversationshort}} failure reply message (optional)**: The default response message that is sent to the message receiver if the call cannot connect to {{site.data.keyword.conversationshort}}. You may enter up to 1024 characters.
 * **Transfer failure reply message (optional)**: The default response message that is streamed to the caller if the call transfer fails. You may enter up to 1024 characters.
 * **Custom SIP INVITE Header (optional)**: Specifies custom SIP header to extract from incoming SIP INVITE requests. You may enter up to 1024 characters.

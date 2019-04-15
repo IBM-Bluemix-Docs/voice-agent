@@ -29,7 +29,7 @@ You can choose the SIP trunk provider that you use to integrate with {{site.data
 * [Requesting assisted setup](#request-setup)
 
 ## Creating a Nexmo voice application
-  {: #nexmo-setup}
+{: #nexmo-setup}
 
   **Note:** Creating a [Nexmo account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dashboard.nexmo.com/sign-up){: new_window} requires a credit card, which is periodically charged based on your use of the SIP trunk that you configure. If you already have a Nexmo account, you can use the existing account.
 

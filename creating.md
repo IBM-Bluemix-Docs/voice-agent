@@ -28,7 +28,7 @@ You can create an {{site.data.keyword.iva_full}} service instance by using the {
 
    The catalog page has information about the service and its pricing plans. You can change the **Service name** value.
 
-2. Click **Create** to [create a voice agent from the _Manage_ dashboard](/docs/servies/voice-agent/managing_create.html#config_instance).
+2. Click **Create** to [create a voice agent from the _Manage_ dashboard](/docs/services/voice-agent?topic=voice-agent-config_instance#config_instance).
 
 ## Creating the service from the command line
 {: #command_create}
