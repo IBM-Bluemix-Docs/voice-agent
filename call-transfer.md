@@ -72,7 +72,7 @@ You do not need to manually configure the termination URI in your NetFoundry acc
 ## Step 2: Configuring {{site.data.keyword.conversationshort}} for call transfer
 {: #conversation-setup}
 
-To learn more about working in the {{site.data.keyword.conversationshort}} service, see [About {{site.data.keyword.conversationshort}}](/docs/conversation?topic=services/conversation-about#about).
+To learn more about working in the {{site.data.keyword.conversationshort}} service, see [About {{site.data.keyword.conversationshort}}](/docs/services/assistant?topic=assistant-index#indext).
 
 1. In your {{site.data.keyword.Bluemix_notm}} dashboard, select the {{site.data.keyword.conversationshort}} instance that your voice agent uses.
 
@@ -118,7 +118,7 @@ To learn more about working in the {{site.data.keyword.conversationshort}} servi
 
 **Remember**: The SIP URI of the transfer target includes a telephone number and the termination URI that you created. Do not use a personal telephone number in your transfer target. For example, if the telephone number is `18889990000` and your termination URI is `mysiptrunk.pstn.twilio.com`, the full SIP URI is `sip:+18889990000\\@mysiptrunk.pstn.twilio.com`. If you use Netfoundry, and have a telephone number of `18889990000`, the full SIP URI is `sip:+18889990000\\@dal.watson-va.netfoundry.net`.
 
-**NOTE**: Make sure the `transferTarget` URI starts with a `+` and may include up to 256 characters. 
+**NOTE**: Make sure the `transferTarget` URI starts with a `+` and may include up to 256 characters.
 
 ## Next steps
 {: #Next}

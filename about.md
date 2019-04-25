@@ -27,7 +27,7 @@ subcollection: "voice-agent"
 
 * A voice agent based on [IBM Voice Gateway ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS4U29/), which orchestrates the following Watson services:
   * [{{site.data.keyword.speechtotextshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/speech-to-text?topic=speech-to-text-about): Converts the caller's audio into text
-  * [{{site.data.keyword.conversationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/conversation?topic=services/conversation-about): Analyzes the text, maps it to intents, and provides a response according to a dialog that you create
+  * [{{site.data.keyword.conversationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/assistant?topic=assistant-index#index): Analyzes the text, maps it to intents, and provides a response according to a dialog that you create
   * [{{site.data.keyword.texttospeechshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/text-to-speech?topic=text-to-speech-about): Converts the response into voice audio
 * A SIP trunk, which connects your voice agent to the telephone network
 * An optional service orchestration engine (SOE), which sits between the {{site.data.keyword.conversationshort}} service and your voice agent so that you can further customize your environment

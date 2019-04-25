@@ -40,11 +40,11 @@ When you create a voice agent, {{site.data.keyword.iva_short}} automatically sea
 
 1. Optionally describe your voice agent using up to 256 characters.
 
-1. If you want to enable call transfer, enter the termination URI for your **Transfer default target**. See [Setting up call transfer](/docs/services/voice-agent?topic=voice-agent-call-transfer) for information about how to set up a termination URI. Do not use a personal phone number for your transfer target. The **Transfer default target** termination URI may include up to 256 characters.
+1. If you want to enable call transfer, enter the termination URI for your **Default transfer target**. See [Setting up call transfer](/docs/services/voice-agent?topic=voice-agent-call-transfer) for information about how to set up a termination URI. Do not use a personal phone number for your transfer target. The **Default transfer target** termination URI may include up to 256 characters.
 
 1. Configure the connections to your Watson service instances. You can connect to multiple Watson service instances by configuring connections for both **Location 1** and **Location 2**. Having connections to multiple service instances enables your voice agent to switch to an alternate service instance if an outage occurs. See [Adding multiple Watson service locations](/docs/services/voice-agent?topic=voice-agent-disaster-recovery#add_location).
 
-1. Under **{{site.data.keyword.conversationshort}}**, configure the connection to your {{site.data.keyword.conversationshort}} service instance by clicking **Location 1** or **Location 2** and enabling the location that you selected. You can use {{site.data.keyword.conversationshort}} service instances in {{site.data.keyword.Bluemix_notm}} accounts that you or someone else owns. You can also connect to any of these options through a service orchestration engine.
+1. Under **Conversation**, configure the connection to your {{site.data.keyword.conversationshort}} service instance by clicking **Location 1** or **Location 2** and enabling the location that you selected. You can use {{site.data.keyword.conversationshort}} service instances in {{site.data.keyword.Bluemix_notm}} accounts that you or someone else owns. You can also connect to any of these options through a service orchestration engine.
 
    * If you are creating a voice agent in either the Dallas or Washington DC region and do not have a {{site.data.keyword.conversationshort}} service instance, you can create one in the **Service instance** menu.
    * Alternatively, you can connect to other sources of a {{site.data.keyword.conversationshort}} dialog or to connect with a SOE by changing the [**Service type**](/docs/services/voice-agent?topic=voice-agent-other_service#other_service).

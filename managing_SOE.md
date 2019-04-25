@@ -24,7 +24,7 @@ As an alternative to configuring a {{site.data.keyword.conversationshort}} servi
 You can connect to a {{site.data.keyword.conversationshort}} workspace through a [service orchestration engine (SOE)](/docs/services/voice-agent?topic=voice-agent-about#arch-soe). An SOE intercepts messages to and from the service so that you can modify them by using third-party APIs.
 
 ## Configuring a connection to an SOE
-{: #how-to}
+{: #how-to-SEO}
 
 1. In the _Voice agent_ tab on the _Manage_ page for your voice agent, navigate to the {{site.data.keyword.conversationshort}} configuration section.
 
