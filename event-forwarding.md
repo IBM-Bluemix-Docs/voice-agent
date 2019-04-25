@@ -49,6 +49,7 @@ You can enable event forwarding when you are creating or editing your voice agen
 1. View your database to ensure that event reports forward correctly.
 
 ## Related links
+{: #related-links-forwarding}
 * [IBM Voice Gateway: Reporting events](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}
 * [Information security and data privacy](/docs/services/voice-agent?topic=voice-agent-infosec)
 * [{{site.data.keyword.cloudant_short_notm}}: Security](/docs/services/Cloudant/offerings?topic=cloudant-security#security)

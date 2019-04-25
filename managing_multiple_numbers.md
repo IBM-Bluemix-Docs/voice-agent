@@ -173,7 +173,7 @@ If you wish to make changes to the numbers list in the Voice Agent, you _must_ s
 * _**NOTE:**_ You _must_ click both **Done** on the **Manage** dialog box _and_ **Save Changes** on the _Edit Voice Agent_ page to save your changes, otherwise they will be discarded.
 
 ## Searching For Numbers or Description
-{: #search}
+{: #search_num}
 
 You can search for numbers stored by searching for the number or description.
 

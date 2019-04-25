@@ -3,6 +3,9 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-03"
+
+keywords: voice agent, creating a SIP trunk, creating and connecting your voice agent,
+
 subcollection: "voice-agent"
 
 ---
@@ -15,6 +18,7 @@ subcollection: "voice-agent"
 {:tip: .tip}
 
 # Getting started tutorial
+{: #getting-started}
 {{site.data.keyword.iva_full}} helps you integrate a set of orchestrated Watson services with the telephone network by using the Session Initiation Protocol (SIP). This tutorial describes how to set up a cognitive voice agent that you call from any phone.
 {: shortdesc}
 
@@ -55,22 +59,22 @@ After you create the service, make note of the voice agent endpoint on the _Gett
   * **Name:** A unique name for your voice agent, such as `Customer Support`
   * **Phone number:** The full phone number that you associated with your SIP trunk, including the country and area codes. For example, for a United States 800 number, specify the phone number as 18883334444. The phone number can have spaces and + ( ) - characters.
   * **Description:** An optional description of its use
-  * **Transfer default target:** An optional termination URI that calls can be transferred to.
+  * **Default transfer target:** An optional termination URI that calls can be transferred to.
 
 3. Create the {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, and {{site.data.keyword.texttospeechshort}} service instances for your voice agent. You can choose to create a voice agent with either of the following methods:
   * Click **Create a voice agent** to create all of the services and a voice agent with the default configuration in a single step.
   * Or, click each of the service names to create the services yourself. Then, return to {{site.data.keyword.iva_short}} and create a voice agent separately.
 
-   If you manually created a {{site.data.keyword.conversationshort}} service instance, add a dialog so that you can test your voice agent.  To quickly get started, clone the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub and then [import the sample](../docs/conversation?topic=services/conversation-configuring-a-watson-assistant-workspace#creating-workspaces) as a skill:
+   If you manually created a {{site.data.keyword.conversationshort}} service instance, add a dialog so that you can test your voice agent.  To quickly get started, clone the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub and then [import the sample](/docs/conversation?topic=services/conversation-configuring-a-watson-assistant-workspace#creating-workspaces) as a skill:
 
    1. On the sample conversation GitHub page, click the `1` line number and select **... > Copy line**. Paste the copied text into a file, and save it as a JSON file such as `voice-gateway-conversation-en.json`.
    2. Launch the {{site.data.keyword.conversationshort}} tool. On the _Skills_ page, click the ![Import workspace](../conversation/images/workspace_import.png) icon and import the JSON file.
 
-  Alternatively, you can [build your own dialog](/docs/services/conversation?topic=services/conversation-dialog-build) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and a node with a default response.
+  Alternatively, you can [build your own dialog](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and a node with a default response.
 
 
 ## Next steps
-{: #next}
+{: #next-steps}
 
 Test your voice agent by calling its associated phone number. If you hear a response, your voice agent is active!
 
