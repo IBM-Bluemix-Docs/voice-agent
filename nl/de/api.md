@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-01"
+subcollection: "voice-agent"
 
 ---
 
@@ -29,7 +30,7 @@ Sowohl Aktionen als auch Status werden in einer Dialogknotenantwort im JSON-Form
 
 1. Wählen Sie im {{site.data.keyword.Bluemix_short}}-Dashboard Ihre {{site.data.keyword.conversationshort}}-Serviceinstanz aus.
 1. Starten Sie das {{site.data.keyword.conversationshort}}-Tool.
-1. Klicken Sie auf den Arbeitsbereich, der den zu bearbeitenden Dialog enthält.
+1. Klicken Sie auf den Skill, der den zu bearbeitenden Dialog enthält.
 1. Wechseln Sie zur Registerkarte **Dialog** und wählen Sie den Knoten aus, an dem Sie eine Aktion oder einen Status festlegen möchten.
 1. Klicken Sie in der Antwort auf das Symbol ![Erweiterte Antwort](../conversation/images/kabob.png) und wählen Sie **JSON-Editor öffnen**.
 
@@ -119,7 +120,7 @@ Im folgenden, etwas komplexeren Beispiel fordern die im Tag `vgwActionSequence` 
 ## Status festlegen
 {: #setting-states}
 
-Um eine Änderung des Status anzugeben, der zwischen den Dialogwechseln verbleibt, tauscht der Sprachagent mit dem konfigurierten {{site.data.keyword.conversationfull}}-Service Statusvariablen aus. Diese Statusvariablen werden in einem {{site.data.keyword.conversationshort}}-Dialogknoten als [Kontextvariablen](../conversation/dialog-build.html#context) im JSON-Format definiert.
+Um eine Änderung des Status anzugeben, der zwischen den Dialogwechseln verbleibt, tauscht der Sprachagent mit dem konfigurierten {{site.data.keyword.conversationfull}}-Service Statusvariablen aus. Diese Statusvariablen werden in einem {{site.data.keyword.conversationshort}}-Dialogknoten als [Kontextvariablen](/docs/services/assistant?topic=assistant-dialog-build#dialog-build) im JSON-Format definiert.
 
 Sie können z. B. die folgende Statusvariable definieren, um die Nachricht festzulegen, die an den Anrufer gestreamt wird, wenn die Verbindung zum {{site.data.keyword.conversationshort}}-Service fehlschlägt.
 

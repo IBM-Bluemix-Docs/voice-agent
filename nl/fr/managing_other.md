@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-07"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,7 +22,7 @@ lastupdated: "2018-11-07"
 Vous pouvez configurer votre agent vocal pour qu'il utilise des instances de service {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} ou {{site.data.keyword.speechtotextshort}} appartenant à des espaces de travail situés dans d'autres comptes {{site.data.keyword.Bluemix_short}}.
 {: shortdesc}
 
-Pour connecter votre agent vocal à d'autres instances de service, vous pouvez utiliser les données d'identification par nom d'utilisateur et mot de passe ou une clé d'API pour vos instances de service.
+Pour connecter votre agent vocal à d'autres instances de service, vous pouvez utiliser les données d'identification par nom d'utilisateur et mot de passe ou une clé d'API pour vos instances de service. Le nom d'utilisateur et le mot de passe ne doivent pas dépasser 64 et 256 caractères, respectivement. La clé d'API est quant à elle limitée à 64 caractères.
 
 1. Dans l'onglet _Agents vocaux_ du tableau de bord _Gestion_, cliquez sur **Créer un agent vocal** ou sélectionnez un agent vocal que vous souhaitez éditer.
 
@@ -38,8 +39,8 @@ Pour connecter votre agent vocal à d'autres instances de service, vous pouvez u
 
 1. Entrez les informations relatives à votre instance de service.
 
-  * **{{site.data.keyword.conversationshort}} :** dans la zone **ID d'espace de travail**, entrez l'ID de l'espace de travail que vous souhaitez utiliser avec votre agent vocal. Pour trouver l'ID d'espace de travail, lancez l'outil, et sur l'espace de travail que vous souhaitez intégrer, cliquez sur l'icône Actions(**&vellip;**) et sélectionnez **Afficher les détails**.
+  * **{{site.data.keyword.conversationshort}} :** Dans la zone **ID d'espace de travail**, entrez l'ID de l'espace de travail que vous souhaitez utiliser avec votre agent vocal, sans dépasser 128 caractères. Pour trouver l'ID d'espace de travail, lancez l'outil, et sur l'espace de travail que vous souhaitez intégrer, cliquez sur l'icône Actions(**&vellip;**) et sélectionnez **Afficher les détails**.
   * **{{site.data.keyword.speechtotextshort}} :** dans la zone **Sélectionner un type de modèle**, choisissez **Bande étroite**, **Bande large** ou **Bande étroite et bande large**, puis sélectionnez le **modèle** de langue.
   * **{{site.data.keyword.texttospeechshort}} :** dans la zone **Voix**, sélectionnez la langue et la voix qui seront utilisées par votre service. Vous devez spécifier une voix pour votre service.
 
-**Important :** pour que votre agent vocal fonctionne, vous devez configurer vos instances de service {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} et {{site.data.keyword.texttospeechshort}} pour la même langue. Voir [Langues prises en charge](about.html#supported-languages).
+**Important :** pour que votre agent vocal fonctionne, vous devez configurer vos instances de service {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} et {{site.data.keyword.texttospeechshort}} pour la même langue. Voir [Langues prises en charge](/docs/services/voice-agent?topic=voice-agent-about#supported-languages).

@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-01"
+subcollection: "voice-agent"
 
 ---
 
@@ -30,7 +31,7 @@ As ações e os estados são definidos em uma resposta do nó de diálogo no for
 
 1. No painel {{site.data.keyword.Bluemix_short}}, selecione sua instância de serviço {{site.data.keyword.conversationshort}}.
 1. Ative a ferramenta {{site.data.keyword.conversationshort}}.
-1. Clique na área de trabalho que contém o diálogo que você deseja editar.
+1. Clique na qualificação que contém o diálogo que você deseja editar.
 1. Acesse a guia **Dialog** e selecione o nó no qual deseja configurar uma ação ou estado.
 1. Na resposta, clique no ícone ![Resposta avançada](../conversation/images/kabob.png) e selecione **Abrir editor JSON**.
 
@@ -122,7 +123,7 @@ que desativem o processamento de fala para texto e coletem entrada DTMF enquanto
 ## Configurando estados
 {: #setting-states}
 
-Para indicar uma mudança de estado que permanece entre turnos de conversas, o agente de voz troca variáveis de estado com o serviço {{site.data.keyword.conversationfull}} configurado. Essas variáveis de estado são definidas em um nó de diálogo de {{site.data.keyword.conversationshort}} como [variáveis de contexto](../conversation/dialog-build.html#context) no formato JSON.
+Para indicar uma mudança de estado que permanece entre turnos de conversas, o agente de voz troca variáveis de estado com o serviço {{site.data.keyword.conversationfull}} configurado. Essas variáveis de estado são definidas em um nó de diálogo de {{site.data.keyword.conversationshort}} como [variáveis de contexto](/docs/services/assistant?topic=assistant-dialog-build#dialog-build) no formato JSON.
 
 Por exemplo, é possível definir a seguinte variável de estado para configurar a mensagem que será transmitida ao responsável pela chamada se a conexão com o serviço {{site.data.keyword.conversationshort}} falhar.
 

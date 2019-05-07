@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-06"
+subcollection: "voice-agent"
 
 ---
 
@@ -25,9 +26,9 @@ lastupdated: "2018-11-06"
 {{site.data.keyword.iva_short}} 是整體環境架構中數個元件之一，可包括下列元素：
 
 * 以 [IBM Voice Gateway ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SS4U29/) 為基礎的語音代理程式，它可編排下列 Watson 服務：
-  * [{{site.data.keyword.speechtotextshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](../speech-to-text/index.html)：將來電者的音訊轉換為文字
-  * [{{site.data.keyword.conversationshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](../conversation/index.html)：分析文字、將它對映至目的，並根據您建立的對話提供回應
-  * [{{site.data.keyword.texttospeechshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](../text-to-speech/index.html)：將回應轉換為語音音訊
+  * [{{site.data.keyword.speechtotextshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/speech-to-text?topic=speech-to-text-about)：將來電者的音訊轉換為文字
+  * [{{site.data.keyword.conversationshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/assistant?topic=assistant-index#index)：分析文字、將它對映至目的，並根據您建立的對話提供回應
+  * [{{site.data.keyword.texttospeechshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/text-to-speech?topic=text-to-speech-about)：將回應轉換為語音音訊
 * SIP 幹線，可將語音代理程式連接至電話網路
 * 選用性的服務編排引擎 (SOE)，位於 {{site.data.keyword.conversationshort}} 服務與語音代理程式之間，可讓您進一步自訂環境
 
@@ -74,7 +75,7 @@ lastupdated: "2018-11-06"
 
 若要進一步瞭解如何實作服務編排引擎，請參閱 [GitHub 上的服務編排引擎範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}。
 
-**重要事項**：為了資料安全，請確定針對 SOE 工作區使用安全的 URL，方法是使用 `https:` 而不要使用 `http:`，並且要求鑑別。若要進一步瞭解安全考量，請參閱[資訊安全及資料隱私](infosec.html)。
+**重要事項**：為了資料安全，請確定針對 SOE 工作區使用安全的 URL，方法是使用 `https:` 而不要使用 `http:`，並且要求鑑別。若要進一步瞭解安全考量，請參閱[資訊安全及資料隱私](/docs/services/voice-agent?topic=voice-agent-infosec)。
 
 ## 特性
 {: #features}

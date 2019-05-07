@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-07"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,7 +22,7 @@ lastupdated: "2018-11-07"
 다른 {{site.data.keyword.Bluemix_short}} 계정의 작업공간에 속해 있는 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 또는 {{site.data.keyword.speechtotextshort}} 서비스 인스턴스를 사용하도록 음성 에이전트를 구성할 수 있습니다.
 {: shortdesc}
 
-음성 에이전트를 기타 서비스 인스턴스에 연결하려면 서비스 인스턴스에 대한 API 키 또는 사용자 이름과 비밀번호 인증 정보를 사용할 수 있습니다.
+음성 에이전트를 기타 서비스 인스턴스에 연결하려면 서비스 인스턴스에 대한 API 키 또는 사용자 이름과 비밀번호 인증 정보를 사용할 수 있습니다. 사용자 이름 및 비밀번호는 각각 64자와 256자로 제한됩니다. API 키는 64자로 제한됩니다. 
 
 1. _관리_ 대시보드의 _음성 에이전트_ 탭에서 **새 음성 에이전트 작성** 또는 편집할 음성 에이전트를 선택하십시오.
 
@@ -38,8 +39,8 @@ lastupdated: "2018-11-07"
 
 1. 서비스 인스턴스 정보를 입력하십시오.
 
-  * **{{site.data.keyword.conversationshort}}:** **작업공간 ID** 필드에 음성 에이전트와 함께 사용할 작업공간의 ID를 입력하십시오. 작업공간 ID를 찾으려면 도구를 실행하고 통합할 작업공간에서 조치 아이콘(**&vellip;**)을 클릭하고 **세부사항 보기**를 선택하십시오.
+  * **{{site.data.keyword.conversationshort}}:** **작업공간 ID** 필드에 음성 에이전트와 함께 사용할 작업공간의 ID를 최대 128자로 입력하십시오. 작업공간 ID를 찾으려면 도구를 실행하고 통합할 작업공간에서 조치 아이콘(**&vellip;**)을 클릭하고 **세부사항 보기**를 선택하십시오.
   * **{{site.data.keyword.speechtotextshort}}:** **모델 유형 선택**에서 **협대역**, **광대역** 또는 **협대역 및 광대역 모두**를 선택한 후 언어 **모델**을 선택하십시오.
   * **{{site.data.keyword.texttospeechshort}}:** **음성** 필드에서 서비스가 사용하는 언어 및 음성을 선택하십시오.  서비스에 대한 음성을 지정해야 합니다.
 
-**중요:** 음성 에이전트가 작동하려면 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 및 {{site.data.keyword.texttospeechshort}}를 동일한 언어로 구성해야 합니다. [지원되는 언어](about.html#supported-languages)를 참조하십시오.
+**중요:** 음성 에이전트가 작동하려면 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 및 {{site.data.keyword.texttospeechshort}}를 동일한 언어로 구성해야 합니다. [지원되는 언어](/docs/services/voice-agent?topic=voice-agent-about#supported-languages)를 참조하십시오.

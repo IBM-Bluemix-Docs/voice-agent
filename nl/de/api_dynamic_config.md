@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-08"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,12 +22,12 @@ lastupdated: "2018-11-08"
 Sie können eine Verbindung zu Sprach- und Textservices anderer Anbieter herstellen, indem Sie die Speech to Text- oder Text to Speech-Funktion von einem {{site.data.keyword.conversationshort}}-Dialogknoten aus festlegen.
 {: shortdesc}
 
-Codebeispiele und Informationen zum Festlegen von Status und zum Einleiten von Aktionsfolgen finden Sie unter [Sprachagenten mithilfe der API programmieren](api.html).
+Codebeispiele und Informationen zum Festlegen von Status und zum Einleiten von Aktionsfolgen finden Sie unter [Sprachagenten mithilfe der API programmieren](/docs/services/voice-agent?topic=voice-agent-api).
 
 ## Verbindung zu Google Speech-to-Text über einen {{site.data.keyword.conversationshort}}-Dialogknoten herstellen
 {: #stt_dialog}
 
-Anstatt Ihre Verbindung zu Google Speech-to-Text durch Bearbeitung Ihres Sprachagenten zu konfigurieren, können Sie Ihre {{site.data.keyword.conversationshort}}-Instanz so programmieren, dass die STT-Einstellungen mit dem Befehl `"vgwActSetSTTConfig"` konfiguriert werden. Weitere Informationen finden Sie in [JSON in der Dialogantwort bearbeiten](api.html#json-editor).
+Anstatt Ihre Verbindung zu Google Speech-to-Text durch Bearbeitung Ihres Sprachagenten zu konfigurieren, können Sie Ihre {{site.data.keyword.conversationshort}}-Instanz so programmieren, dass die STT-Einstellungen mit dem Befehl `"vgwActSetSTTConfig"` konfiguriert werden. Weitere Informationen finden Sie in [JSON in der Dialogantwort bearbeiten](/docs/services/voice-agent?topic=voice-agent-api#json-editor).
 
 1. Fügen Sie im JSON-Editor für den {{site.data.keyword.conversationshort}}-Dialog den Befehl `"vgwActSetSTTConfig"` zu Ihrem Dialogknoten hinzu.
 
@@ -69,7 +70,7 @@ Anstatt Ihre Verbindung zu Google Speech-to-Text durch Bearbeitung Ihres Spracha
 ## Verbindung zu Google Text-to-Speech über einen {{site.data.keyword.conversationshort}}-Dialogknoten herstellen
 {: #tts_dialog}
 
-Anstatt Ihre Verbindung zu Google Text-to-Speech durch Bearbeitung Ihres Sprachagenten zu konfigurieren, können Sie Ihre {{site.data.keyword.conversationshort}}-Instanz so programmieren, dass die TTS-Einstellungen mit dem Befehl `"vgwActSetTTSConfig"` konfiguriert werden. Weitere Informationen finden Sie in [JSON in der Dialogantwort bearbeiten](api.html#json-editor).
+Anstatt Ihre Verbindung zu Google Text-to-Speech durch Bearbeitung Ihres Sprachagenten zu konfigurieren, können Sie Ihre {{site.data.keyword.conversationshort}}-Instanz so programmieren, dass die TTS-Einstellungen mit dem Befehl `"vgwActSetTTSConfig"` konfiguriert werden. Weitere Informationen finden Sie in [JSON in der Dialogantwort bearbeiten](/docs/services/voice-agent?topic=voice-agent-api#json-editor).
 
 1. Fügen Sie im JSON-Editor für den {{site.data.keyword.conversationshort}}-Dialog den Befehl `"vgwActSetTTSConfig"` zu Ihrem Dialogknoten hinzu.
 

@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-08-24"
+  years: 2019
+lastupdated: "2019-01-30"
+subcollection: "voice-agent"
 ---
 
 {:shortdesc: .shortdesc}
@@ -23,9 +24,9 @@ lastupdated: "2018-08-24"
 
 이러한 이벤트의 데이터를 분석하면 대화를 조정하고 인텐트를 정제하며 전체 호출자 환경을 개선하는 데 도움이 될 수 있습니다.
 
-음성 에이전트를 작성하거나 편집할 때 이벤트 전달을 사용하도록 선택할 수도 있습니다. 음성 에이전트 작성 및 편집에 대한 세부사항은 [음성 에이전트 관리](managing.html)를 참조하십시오. 이벤트 전달을 사용으로 설정하려면 계정 이름 및 비밀번호를 포함한 {{site.data.keyword.cloudant_short_notm}} 계정 정보를 제공해야 합니다.
+음성 에이전트를 작성하거나 편집할 때 이벤트 전달을 사용하도록 선택할 수도 있습니다. 음성 에이전트 작성 및 편집에 대한 세부사항은 [음성 에이전트 관리](/docs/services/voice-agent?topic=voice-agent-managing)를 참조하십시오. 이벤트 전달을 사용으로 설정하려면 계정 이름 및 비밀번호를 포함한 {{site.data.keyword.cloudant_short_notm}} 계정 정보를 제공해야 합니다.
 
-**중요:** CDR, 기록 및 변환 이벤트에는 잠재적으로 PHI(Protected Health Information), PII(Personally Identifiable Information) 또는 PCI DSS(Data Security Standard) 데이터가 있을 수 있는 사용자의 정보가 포함되어 있습니다. 개인 정보가 노출되지 않도록 하려면 사용자가 대화에서 또는 대화 중에 공유하는 기밀 정보를 {{site.data.keyword.cloudant_short_notm}} 인스턴스에서 적절히 보호하도록 해야 합니다. [정보 보안 및 데이터 개인정보 보호: 이벤트 전달](infosec.html#event_forwarding) 및 [{{site.data.keyword.cloudant_short_notm}}: 보안](../Cloudant/offerings/security.html#security)을 참조하십시오.
+**중요:** CDR, 기록 및 변환 이벤트에는 잠재적으로 PHI(Protected Health Information), PII(Personally Identifiable Information) 또는 PCI DSS(Data Security Standard) 데이터가 있을 수 있는 사용자의 정보가 포함되어 있습니다. 개인 정보가 노출되지 않도록 하려면 사용자가 대화에서 또는 대화 중에 공유하는 기밀 정보를 {{site.data.keyword.cloudant_short_notm}} 인스턴스에서 적절히 보호하도록 해야 합니다. [정보 보안 및 데이터 개인정보 보호: 이벤트 전달](/docs/services/voice-agent?topic=voice-agent-infosec#event_forwarding) 및 [{{site.data.keyword.cloudant_short_notm}}: 보안](/docs/services/Cloudant/offerings?topic=cloudant-security#security)을 참조하십시오.
 
 
 ## 이벤트 전달 사용
@@ -37,7 +38,8 @@ lastupdated: "2018-08-24"
 
 1. **내 {{site.data.keyword.cloudant_short_notm}} 서비스 인스턴스** 또는 **기타 {{site.data.keyword.cloudant_short_notm}} 서비스 인스턴스**를 선택하십시오.
   * **내 {{site.data.keyword.cloudant_short_notm}} 서비스 인스턴스**를 사용 중인 경우 목록에서 **{{site.data.keyword.cloudant_short_notm}} account** 이름 및 사용자 이름을 선택하십시오.
-  * **기타 {{site.data.keyword.cloudant_short_notm}} 서비스 인스턴스**를 사용 중인 경우에는 계정에 대한 {{site.data.keyword.cloudant_short_notm}} 사용자 이름과 비밀번호, 또는 API 키를 입력하십시오.
+  * 댈러스 또는 워싱턴 DC 지역에서 음성 에이전트를 작성 중이며 {{site.data.keyword.cloudant_short_notm}} 서비스 인스턴스가 없는 경우에는 **Cloudant 계정** 메뉴에서 서비스 인스턴스를 작성할 수 있습니다.
+  * **다른 {{site.data.keyword.cloudant_short_notm}} 서비스 인스턴스**를 사용 중인 경우, {{site.data.keyword.cloudant_short_notm}} 사용자 이름 및 비밀번호(각각 최대 128자 및 256자) 중 하나 또는 계정에 대한 API 키(최대 64자)를 입력하십시오.
 
 1. 전달하려는 각 이벤트 유형에 대해 **사용**을 선택한 후 이벤트를 전달하려는 데이터베이스를 선택하십시오.
   * CDR(Call Detail Record) 이벤트
@@ -47,6 +49,7 @@ lastupdated: "2018-08-24"
 1. 데이터베이스에서 이벤트 보고서가 올바르게 전달되었는지 확인하십시오.
 
 ## 관련 링크
+{: #related-links-forwarding}
 * [IBM Voice Gateway: 이벤트 보고](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}
-* [정보 보안 및 데이터 개인정보 보호](infosec.html)
-* [{{site.data.keyword.cloudant_short_notm}}: 보안](../Cloudant/offerings/security.html#security)
+* [정보 보안 및 데이터 개인정보 보호](/docs/services/voice-agent?topic=voice-agent-infosec)
+* [{{site.data.keyword.cloudant_short_notm}}: 보안](/docs/services/Cloudant/offerings?topic=cloudant-security#security)

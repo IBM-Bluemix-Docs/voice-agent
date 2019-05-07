@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-11-12"
+subcollection: "voice-agent"
 
 ---
 
@@ -24,13 +25,12 @@ lastupdated: "2018-11-12"
 
 A criação de log é automaticamente ativada para o {{site.data.keyword.iva_full}}. É possível visualizar os logs de chamada do agente de voz no painel _Uso_.
 
-O painel _Uso_ mostra estatísticas rápidas sobre o uso do serviço para o mês atual e os outros recursos disponíveis em seu plano. Essas informações incluem o número máximo de conexões simultâneas que são encontradas no mês atual e o número máximo de conexões
-simultâneas disponíveis em seu plano. Também é possível ver o número de minutos grátis incluídos no plano e o número de minutos usados. A seção _Logs de chamada_ segue suas _Estatísticas rápidas_.
+O painel _Uso_ mostra estatísticas rápidas sobre o uso do serviço e os recursos restantes disponíveis em seu plano. Essas informações incluem o número máximo de conexões simultâneas que são encontradas no mês atual e o número máximo de conexões
+simultâneas disponíveis em seu plano. Na caixa _Minutos de chamada_, é possível ver o número de minutos gratuitos incluídos no plano e o número de minutos usados. A seção _Logs de chamada_ segue suas _Estatísticas rápidas_.
 
-Na seção _Logs de chamada_, é possível filtrar os logs de chamada por data e nome do agente de voz para
-reduzir o número de chamadas exibidas e isolar os logs de chamada específicos.
+É possível filtrar _Logs de chamada_ e _Minutos de chamada_ por data e por nome ou número do agente de voz para reduzir o número de chamadas exibidas e isolar os logs de chamada específicos. Além disso, é possível filtrar _Logs de chamada_ para exibir apenas chamadas com falha.
 
-Para saber mais sobre como criar e editar agentes de voz, consulte [Gerenciando agentes de voz](managing.html).
+Para saber mais sobre como criar e editar agentes de voz, consulte [Gerenciando agentes de voz](/docs/services/voice-agent?topic=voice-agent-managing).
 
 ##  Visualizando logs de chamada
 
@@ -38,10 +38,9 @@ Para saber mais sobre como criar e editar agentes de voz, consulte [Gerenciando 
 
       Para cada chamada, é possível ver o nome e o número de telefone do seu agente de voz, os horários de início e término e a duração da chamada. É possível também ver o símbolo de aviso ao lado do nome do agente de voz, que indica que a chamada falhou.
 
-1.  É possível filtrar a lista de chamadas visualizando chamadas em uma data específica ou filtrando chamadas pelo nome do agente de voz.
+1.  É possível filtrar a lista de chamadas visualizando chamadas em uma data específica e filtrando chamadas pelo nome ou número do agente de voz. Também é possível escolher exibir apenas chamadas com falha.
 
-1. Para acessar os logs de falha de chamada para uma chamada individual, clique no ícone **Logs** na
-coluna **Logs de falha** para essa chamada.
+1. Para acessar os logs de falha de uma chamada individual, clique nos pontos na coluna **Ações** dessa chamada para expandir o menu. Em seguida, escolha **Logs de falha**. Essa opção aparece apenas para chamadas com falha.
 
 1. É possível examinar a lista detalhada de logs de mensagens na nova visualização usando os seguintes métodos:
   * Procure a falha logs

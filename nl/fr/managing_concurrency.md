@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-03"
+subcollection: "voice-agent"
 
 
 ---
@@ -28,7 +29,7 @@ Dans tous les plans, vous recevez gratuitement 2 connexions simultanées. Pour p
 
 1. Dans _Editer le nombre maximal de connexions simultanées_, entrez le nombre maximal de connexions simultanées, puis cliquez sur **Sauvegarder**.
 
-Vous pouvez définir entre 10 et 50 connexions simultanées en libre-service. Si vous avez besoin de plus de 50 connexions simultanées pour votre agent vocal, voir [Demande de configuration réseau assistée](connect-SIP.html#request-setup).
+Vous pouvez définir entre 10 et 50 connexions simultanées en libre-service. Si vous avez besoin de plus de 50 connexions simultanées pour votre agent vocal, voir [Demande de configuration réseau assistée](/docs/services/voice-agent?topic=voice-agent-connect#request-setup).
 
 ## Informations de tarification relatives aux connexions simultanées
 {: #concurrent-charge}

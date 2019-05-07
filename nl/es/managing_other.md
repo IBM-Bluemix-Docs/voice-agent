@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-07"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,7 +22,8 @@ lastupdated: "2018-11-07"
 Puede configurar el agente de voz para utilizar instancias de servicio de {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} o {{site.data.keyword.speechtotextshort}} que pertenecen a espacios de trabajo de otras cuentas de {{site.data.keyword.Bluemix_short}}.
 {: shortdesc}
 
-Para conectar su agente de voz a otras instancias de servicio, puede utilizar las credenciales de nombre de usuario y contraseña o una clave de API para sus instancias de servicio.
+Para conectar su agente de voz a otras instancias de servicio, puede utilizar las credenciales de nombre de usuario y contraseña o una clave de API para sus instancias de servicio. El nombre de usuario y contraseña están limitados
+a 64 y 256 caracteres respectivamente. La clave de API está limitada a 64 caracteres.
 
 1. En el separador _Agentes de voz_ del panel de control _Gestionar_, seleccione **Crear un agente de voz nuevo** o el agente de voz que desea editar.
 
@@ -38,8 +40,8 @@ Para conectar su agente de voz a otras instancias de servicio, puede utilizar la
 
 1. Especifique la información de su instancia de servicio.
 
-  * **{{site.data.keyword.conversationshort}}:** En el campo **ID de espacio de trabajo**, escriba el ID del espacio de trabajo que desea utilizar con el agente de voz. Para encontrar el ID de espacio de trabajo, inicie la herramienta y, en el espacio de trabajo que desea integrar, pulse el icono Acciones (**&vellip;**) y seleccione **Ver detalles**.
+  * **{{site.data.keyword.conversationshort}}:** En el campo **ID de espacio de trabajo**, escriba el ID del espacio de trabajo que desea utilizar con el agente de voz, hasta 128 caracteres. Para encontrar el ID de espacio de trabajo, inicie la herramienta y, en el espacio de trabajo que desea integrar, pulse el icono Acciones (**&vellip;**) y seleccione **Ver detalles**.
   * **{{site.data.keyword.speechtotextshort}}:** para **Seleccionar tipo de modelo**, seleccione **Banda estrecha**, **Banda ancha** o **Banda estrecha y banda ancha** y luego seleccione el **Modelo** de idioma.
   * **{{site.data.keyword.texttospeechshort}}:** En el campo **Voz**, seleccione el idioma y la voz que utiliza el servicio. Debe especificar una voz para el servicio.
 
-**Recuerde:** Para que el agente de voz funcione, debe configurar {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} y {{site.data.keyword.texttospeechshort}} para el mismo idioma. Consulte [Idiomas admitidos](about.html#supported-languages).
+**Recuerde:** Para que el agente de voz funcione, debe configurar {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} y {{site.data.keyword.texttospeechshort}} para el mismo idioma. Consulte [Idiomas admitidos](/docs/services/voice-agent?topic=voice-agent-about#supported-languages).

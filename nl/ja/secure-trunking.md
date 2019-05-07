@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-06-14"
+subcollection: "voice-agent"
 
 ---
 
@@ -28,7 +29,7 @@ Secure Real Time Transport Protocol (SRTP) を有効にしたり、SIP トラン
 
 1. 既存のトランクを選択するか、**「+」**アイコンをクリックして新規トランクを作成し、SRTP を使用して保護するトランクを選択します。
 
-  * 新しいトランクを作成する場合、**「起点 (Origination)」**ダッシュボードで_「SIP トランク URI (SIP Trunk URI)」_を構成する必要があります。  詳しくは、[SIP トランクの接続](connect-SIP.html)を参照してください。
+  * 新しいトランクを作成する場合、**「起点 (Origination)」**ダッシュボードで_「SIP トランク URI (SIP Trunk URI)」_を構成する必要があります。  詳しくは、[SIP トランクの接続](/docs/services/voice-agent?topic=voice-agent-connect)を参照してください。
 
 1. _「一般」_ダッシュボードで、_「トランキングの保護 (Secure Trunking)」_セクションを見つけます。 **「無効」**をクリックして、トランキングの保護設定を**「有効」**に変更し、変更内容を保存します。
 

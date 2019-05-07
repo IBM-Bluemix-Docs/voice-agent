@@ -1,13 +1,14 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-05"
+  years: 2019
+lastupdated: "2019-02-15"
+subcollection: "voice-agent"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:new_window: target="_blank"_}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -20,11 +21,26 @@ lastupdated: "2018-12-05"
 Vous pouvez choisir dans la liste présentée ci-après le fournisseur de liaison SIP que vous utilisez pour l'intégration à {{site.data.keyword.iva_full}}.
 {: #shortdesc}
 
+* [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
 * [AT&T et autres fournisseurs](#att-other)
 * [Appairage avec {{site.data.keyword.iva_short}}](#peering)
 * [Demande de configuration assistée](#request-setup)
+
+## Création d'une application vocale Nexmo
+{: #nexmo-setup}
+
+  **Remarque :** la création d'un [compte Nexmo ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://dashboard.nexmo.com/sign-up){: new_window} nécessite une carte de crédit, périodiquement facturée en fonction de votre utilisation de la liaison SIP que vous configurez. Si vous disposez déjà d'un compte Nexmo, vous pouvez l'utiliser.
+
+  1. Créez un compte Nexmo sur le [site Web Nexmo ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://dashboard.nexmo.com/sign-up){: new_window}.
+
+  1. Suivez les instructions du fichier README dans le [référentiel github ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") Nexmo](https://github.com/nexmo-community/watson-voice-agent){: new_window}. Le référentiel github contient un exemple de mise en route.
+
+  1. Une fois votre numéro de téléphone Nexmo mis à disposition et votre application active, configurez votre agent vocal avec le numéro de téléphone Nexmo.
+
+  1. Testez votre configuration en appelant votre numéro de téléphone Nexmo.
+
 
 ## Création d'une liaison SIP et d'un numéro de téléphone NetFoundry
 {: #NetFoundry-setup}
@@ -43,7 +59,7 @@ Vous pouvez choisir dans la liste présentée ci-après le fournisseur de liaiso
 
 1. Une fois le traitement du paiement terminé, votre numéro de téléphone de liaison SIP apparaît dans votre compte.
 
-Vous avez besoin de ce numéro de téléphone pour installer et configurer votre agent vocal et pour configurer le transfert d'appel, y compris le code pays et l'indicatif régional. Voir [Création et connexion de votre agent vocal](getting-started.html#step3).
+Vous avez besoin de ce numéro de téléphone pour installer et configurer votre agent vocal et pour configurer le transfert d'appel, y compris le code pays et l'indicatif régional. Voir [Création et connexion de votre agent vocal](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
 
 
 ## Création d'une liaison SIP Twilio
@@ -63,18 +79,20 @@ Vous avez besoin de ce numéro de téléphone pour installer et configurer votre
 
   1. Sélectionnez **Origination** dans la barre de navigation pour votre liaison SIP et configurez l'URI SIP d'origine. Vous pouvez inclure plusieurs noms d'hôte afin d'empêcher les pannes de service en sélectionnant l'icône **+**.
 
-  L'adresse IP ou le nom d'hôte est la valeur que vous avez notée sur le tableau de bord _Getting Started_ de votre instance de service {{site.data.keyword.iva_short}}. Lorsque vous configurez l'URI d'orifine, il doit être au format d'URI SIP, par exemple, `sip:us-south.voiceagent.cloud.ibm.com/`. Grâce à l'ajout de plusieurs noms d'hôte ou adresses IP, si le premier noeud final d'hôte échoue ou est hors service, votre fournisseur de liaison SIP dirige les appels vers le nom d'hôte suivant dans la liste.
+  L'adresse IP ou le nom d'hôte est la valeur que vous avez notée sur le tableau de bord _Getting Started_ de votre instance de service {{site.data.keyword.iva_short}}. Lorsque vous configurez l'URI d'origine, il doit être au format d'URI SIP, par exemple, `sip:us-south.voiceagent.cloud.ibm.com/`. Grâce à l'ajout de plusieurs noms d'hôte ou adresses IP, si le premier noeud final d'hôte échoue ou est hors service, votre fournisseur de liaison SIP dirige les appels vers le nom d'hôte suivant dans la liste.
 
   1. Sélectionnez **Numbers** dans la barre de navigation pour votre liaison SIP. Créez ensuite un numéro de téléphone et affectez-le à votre liaison SIP.
 
   Sur la page Numbers, cliquez sur **Buy a Number** ou, si vous possédez déjà un numéro, cliquez sur l'icône **+**. Un panneau s'affiche, dans lequel vous pouvez fournir un nouveau numéro de téléphone pour votre région. Affectez le numéro à la liaison SIP que vous avez créée en revenant à la liaison SIP et en cliquant sur l'icône Number.
 
-  Vous avez besoin de ce numéro de téléphone pour configurer votre agent vocal, y compris le code pays et l'indicatif régional. Voir [Création et connexion de votre agent vocal](getting-started.html#step3).
+  Vous avez besoin de ce numéro de téléphone pour configurer votre agent vocal, y compris le code pays et l'indicatif régional. Voir [Création et connexion de votre agent vocal](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+
+  **Remarque** : Si vous utilisez une version d'évaluation ou d'essai du compte Twilio pour tester les transferts sur {{site.data.keyword.iva_short}}, vous devrez _vérifier_ la cible du transfert. Pour en savoir plus à ce sujet, consultez le [site officiel de Twilio](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
 
 ## Appairage avec {{site.data.keyword.iva_short}}
 {: #peering}
 
-{{site.data.keyword.iva_short}} prend en charge les connexion homologues, par exemple, un tunnel IPSec. Pour une connexion homologue avec {{site.data.keyword.iva_short}}, vous pouvez constituer une liste blanche des adresse IP de vos serveurs.
+{{site.data.keyword.iva_short}} prend en charge les connexions homologues avec des PBX (autocommutateurs téléphoniques privés) de client, tel Asterisk. Pour une connexion homologue avec {{site.data.keyword.iva_short}}, vous pouvez constituer une liste blanche des adresses IP de vos serveurs.
 
 1. Accédez au tableau de bord _Gestion_ et sélectionnez l'onglet _Instance_.
 
@@ -91,6 +109,8 @@ Vous avez besoin de ce numéro de téléphone pour installer et configurer votre
 {: #request-setup}
 
 Vous pouvez demander une configuration réseau assistée pour vous connecter à AT&T ou à d'autres fournisseurs de liaison SIP, de pair à pair avec {{site.data.keyword.iva_short}}, ou pour demander plus de 50 connexions simultanées à l'aide du processus ci-après.
+
+Vous pouvez placer un PBX tel qu'Asterisk en liste blanche dans votre instance {{site.data.keyword.iva_short}}. N'ouvrez un ticket de demande de service que si la mise en liste blanche sur l'Internet public n'est pas une solution acceptable. Voir [Placement sur liste blanche d'adresses IP](/docs/services/voice-agent?topic=voice-agent-whitelist_IP#whitelist_IP).
 
 1. Ouvrez un nouveau [ticket de demande de service {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/unifiedsupport/tickets/add)
 

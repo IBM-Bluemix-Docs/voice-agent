@@ -3,7 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-14"
-
+subcollection: "voice-agent"
 ---
 
 {:shortdesc: .shortdesc}
@@ -26,11 +26,11 @@ Para resolver problemas con sus agentes de voz, puede utilizar el registro, el u
 
 1. Si falla una llamada, el turno final de {{site.data.keyword.conversationshort}} podría describir el problema.
 
-1. Los registros de uso muestran los errores que se pueden haber producido durante una determinada llamada. Consulte [Visualización de registros de uso y llamadas](logging.html).
+1. Los registros de uso muestran los errores que se pueden haber producido durante una determinada llamada. Consulte [Visualización de registros de uso y llamadas](/docs/services/voice-agent?topic=voice-agent-logging).
 
 1. Consulte los registros de su proveedor de servicios en busca de errores de señalización. Por ejemplo, Twilio proporciona registros para cada conexión troncal SIP que aloja.
 
-1. [Habilitando el reenvío de sucesos para los agentes de voz](event-forwarding.html), puede configurar su agente de voz para que reenvíe los registros de detalle de llamadas (CDR) a una base de datos de Cloudant y entonces determinar por qué ha fallado la llamada. Otros sucesos, como los sucesos de turno de {{site.data.keyword.conversationshort}}, pueden proporcionar detalles sobre cada turno de conversación de una llamada.
+1. [Habilitando el reenvío de sucesos para los agentes de voz](/docs/services/voice-agent?topic=voice-agent-event_forwarding), puede configurar su agente de voz para que reenvíe los registros de detalle de llamadas (CDR) a una base de datos de Cloudant y entonces determinar por qué ha fallado la llamada. Otros sucesos, como los sucesos de turno de {{site.data.keyword.conversationshort}}, pueden proporcionar detalles sobre cada turno de conversación de una llamada.
 
 **Importante:** Los sucesos de turno, transcripción y CDR incluyen información de los usuarios que puede contener PHI (información sanitaria personal), PII (información de identificación personal) o datos PCI DSS (PCI Data Security Standard). Para evitar la exposición de información personal, debe asegurarse de que la instancia de {{site.data.keyword.cloudant_short_notm}} protege correctamente la información confidencial que los usuarios comparten en o durante la conversación.
 
@@ -58,14 +58,14 @@ Seguramente, su llamada no se ha conectado a los servicios. Este problema se pro
    **Nota:** Debe incluir el código de país y de área cuando especifique el número de teléfono en el panel de control _Gestionar_ del agente de voz. Por ejemplo, `18884253968`.
 
 * Verifique que las credenciales de servicio de Watson, los URL y el ID de espacio de trabajo de {{site.data.keyword.conversationshort}} son válidos.
-* Verifique que el diálogo del espacio de trabajo de {{site.data.keyword.conversationshort}} se ha creado correctamente.
-  * Puede importar la [conversación de ejemplo ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) desde GitHub para un espacio de trabajo preconfigurado. Consulte el [Paso 3 de la *Guía de aprendizaje de iniciación*](getting-started.html#step3) para obtener detalles sobre cómo guardar la conversación de ejemplo como un archivo JSON y luego importar el archivo como un espacio de trabajo en la herramienta {{site.data.keyword.conversationshort}}.
-  * Si ha creado su propio diálogo de {{site.data.keyword.conversationshort}}, verifique que el diálogo contiene un nodo con la condición `conversation_start` y un nodo con una respuesta predeterminada. Para obtener instrucciones detalladas, consulte [Creación de un diálogo](../conversation/dialog-build.html) en la documentación de {{site.data.keyword.conversationshort}}.
+* Verifique que el diálogo de la habilidad de {{site.data.keyword.conversationshort}} se ha creado correctamente.
+  * Puede importar la [conversación de ejemplo ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) desde GitHub para una habilidad preconfigurada. Consulte el [Paso 3 de la *Guía de aprendizaje de iniciación*](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3) para obtener detalles sobre cómo guardar la conversación de ejemplo como un archivo JSON y luego importar el archivo como una habilidad en la herramienta {{site.data.keyword.conversationshort}}.
+  * Si ha creado su propio diálogo de {{site.data.keyword.conversationshort}}, verifique que el diálogo contiene un nodo con la condición `conversation_start` y un nodo con una respuesta predeterminada. Para obtener instrucciones detalladas, consulte [Creación de un diálogo](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog) en la documentación de {{site.data.keyword.conversationshort}}.
 * Consulte si la llamada telefónica aparece en el panel de control _Uso_ del agente de voz. Si ve un elemento para su llamada telefónica, entonces el agente de voz se ha conectado al servicio de Watson.
 
 ### ¿Por qué no puedo especificar un número de teléfono al crear un agente de voz?
 
-Consulte si el número de teléfono especificado está siendo utilizado por un agente de voz existente. Sólo puede tener un agente de voz para un número de teléfono. Puede indicar otro número de teléfono de su proveedor de conexión troncal SIP y utilizarlo para crear otro agente de voz. O bien, [suprima el agente de voz existente en el panel de control _Gestionar_](managing.html#delete_va) para liberar el número de teléfono y luego cree un nuevo agente de voz.
+Consulte si el número de teléfono especificado está siendo utilizado por un agente de voz existente. Sólo puede tener un agente de voz para un número de teléfono. Puede indicar otro número de teléfono de su proveedor de conexión troncal SIP y utilizarlo para crear otro agente de voz. O bien, [suprima el agente de voz existente en el panel de control _Gestionar_](/docs/services/voice-agent?topic=voice-agent-managing#delete_va) para liberar el número de teléfono y luego cree un nuevo agente de voz.
 
 ### ¿Por qué las llamadas fallan con frecuencia?
 

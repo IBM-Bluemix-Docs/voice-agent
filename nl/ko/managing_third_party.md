@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-16"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,7 +22,7 @@ lastupdated: "2018-11-16"
 _관리_ 대시보드에서 음성 에이전트를 작성, 복제 또는 편집할 때 서드파티 음성 및 텍스트 서비스에 연결할 수 있습니다.
 {: shortdesc}
 
-또는 작동 중에 음성 및 텍스트 서비스 연결을 구성하려면 [{{site.data.keyword.conversationshort}}에 동적 구성을 사용](api_dynamic_config.html)할 수 있습니다. 이를 통해 조치 태그와 상태 변수를 사용하여 음성 에이전트 구성을 변경할 수 있습니다.
+작동 중에 음성 및 텍스트 서비스 연결을 구성하려는 경우에는 [{{site.data.keyword.conversationshort}}에 동적 구성을 사용할 수 있습니다](/docs/services/voice-agent?topic=voice-agent-dynamic-donfig). 이를 통해 조치 태그와 상태 변수를 사용하여 음성 에이전트 구성을 변경할 수 있습니다.
 
 ## {{site.data.keyword.iva_short}}에서 Google Speech-to-Text에 연결
 {: #stt_va}
@@ -34,7 +35,7 @@ _관리_ 대시보드에서 음성 에이전트를 작성, 복제 또는 편집�
 
 1. 서비스 인스턴스에 대한 **언어**를 선택하십시오.
 
-1. Google Cloud Speech-to-Text 서비스 인증 정보를 입력하십시오.
+1. Google Cloud Speech-to-Text 서비스 인증 정보를 최대 3072자로 입력하십시오.
   * [서비스 계정을 설정할 때 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account) Google Cloud Platform에서 서비스 인증 정보를 JSON 키로 생성할 수 있습니다. 다음 코드 예제에는 Google Cloud Platform에서 생성하는 샘플 인증 정보 필드가 포함되어 있습니다.
 
     ```json
@@ -77,7 +78,7 @@ _관리_ 대시보드에서 음성 에이전트를 작성, 복제 또는 편집�
 
 1. 서비스 인스턴스에 대한 **언어** 및 **음성**을 선택하십시오.
 
-1. Google Cloud Text-to-Speech 서비스 인증 정보를 입력하십시오.
+1. Google Cloud Text-to-Speech 서비스 인증 정보를 최대 3072자로 입력하십시오.
   * [서비스 계정을 설정할 때 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account) Google Cloud Platform에서 서비스 인증 정보를 JSON 키로 생성할 수 있습니다. 다음 코드 예제에는 Google Cloud Platform에서 생성하는 샘플 인증 정보 필드가 포함되어 있습니다.
 
     ```json

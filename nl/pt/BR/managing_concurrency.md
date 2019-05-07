@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-03"
+subcollection: "voice-agent"
 
 
 ---
@@ -32,7 +33,7 @@ que são usadas por seus agentes de voz durante o mês atual em **Máximo de con
 
 O número mínimo de conexões simultâneas que pode ser configurado por meio de autoatendimento é 10 e o máximo é 50. Se você precisar
 de mais de 50 conexões simultâneas para o seu agente de voz, consulte [Solicitando
-configuração de rede assistida](connect-SIP.html#request-setup).
+configuração de rede assistida](/docs/services/voice-agent?topic=voice-agent-connect#request-setup).
 
 ## Informações de conexão simultânea
 {: #concurrent-charge}

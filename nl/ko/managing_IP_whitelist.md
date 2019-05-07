@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-05"
+lastupdated: "2018-12-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -15,7 +16,7 @@ lastupdated: "2018-12-05"
 {:tip: .tip}
 
 # IP 주소 화이트리스트 작성
-{: #edit_IP}
+{: #whitelist_IP}
 
 IP 주소에 대한 화이트리스트를 작성하면 {{site.data.keyword.iva_short}} 또는 기타 제공자에 대한 피어링을 구성할 수 있습니다.
 {: shortdesc}

@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-10-30"
+subcollection: "voice-agent"
 
 ---
 
@@ -17,9 +18,10 @@ lastupdated: "2018-10-30"
 # アクティビティー・トラッカー・イベント
 {: #activity-tracker}
 
-{{site.data.keyword.cloudaccesstrailfull}} サービスを使用して、ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix}} の {{site.data.keyword.iva_full}} サービスとどのように相互作用するかをトラックします。 {: shortdesc}
+{{site.data.keyword.cloudaccesstrailfull}} サービスを使用して、ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix}} の {{site.data.keyword.iva_full}} サービスとどのように相互作用するかをトラッキングします。
+{: shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} でサービスの状態を変更するユーザー開始アクティビティーを記録します。 詳細については、[{{site.data.keyword.cloudaccesstrailshort}}](../cloud-activity-tracker/index.html#getting-started-with-cla) を参照してください。
+{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} でサービスの状態を変更するユーザー開始アクティビティーを記録します。 詳細については、[{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started) を参照してください。
 
 ## イベントのリスト
 {: #event-List}

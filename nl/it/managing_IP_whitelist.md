@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-05"
+lastupdated: "2018-12-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -15,7 +16,7 @@ lastupdated: "2018-12-05"
 {:tip: .tip}
 
 # Inserimento in whitelist di indirizzi IP
-{: #edit_IP}
+{: #whitelist_IP}
 
 Puoi configurare il peering a {{site.data.keyword.iva_short}} o altri provider inserendo in whitelist gli indirizzi IP.
 {: shortdesc}

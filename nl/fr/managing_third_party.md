@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-16"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,9 +22,9 @@ lastupdated: "2018-11-16"
 Vous pouvez connecter des services voix et texte tiers lors de la création, du clonage ou de l'édition de votre agent vocal sur le tableau de bord _Gestion_.
 {: shortdesc}
 
-Comme alternative, pour configurer vos connexions de services voix et texte à la volée, vous pouvez [utiliser la configuration dynamique avec {{site.data.keyword.conversationshort}}](api_dynamic_config.html). Ceci vous permet de changer la configuration de votre agent vocal avec des balises d'action et des variables d'état.
+Comme alternative, pour configurer vos connexions de services voix et texte à la volée, vous pouvez [utiliser la configuration dynamique avec {{site.data.keyword.conversationshort}}](/docs/services/voice-agent?topic=voice-agent-dynamic-donfig). Ceci vous permet de changer la configuration de votre agent vocal avec des balises d'action et des variables d'état.
 
-## Connection à Google Speech-to-Text depuis {{site.data.keyword.iva_short}}
+## Connexion à Google Speech-to-Text depuis {{site.data.keyword.iva_short}}
 {: #stt_va}
 
 Au lieu d'utiliser une instance {{site.data.keyword.speechtotextfull}}, vous pouvez choisir de connecter votre agent vocal à un service Speech to Text tiers, tel que [Google Cloud Speech-to-Text ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.google.com/speech-to-text/).
@@ -34,7 +35,7 @@ Au lieu d'utiliser une instance {{site.data.keyword.speechtotextfull}}, vous pou
 
 1. Choisissez la **Langue** de votre instance de service.
 
-1. Entrez les données d'identification de votre service Google Cloud Speech-to-Text.
+1. Entrez les données d'identification de votre service Google Cloud Speech-to-Text, sans dépasser 3072 caractères.
   * Vous pouvez générer les données d'identification de votre service dans la plateforme Google Cloud sous la forme d'une clé JSON lorsque vous [définissez un compte de service ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). L'exemple de code suivant contient des exemples de zones de données d'identification générées sur la plateforme Google Cloud.
 
     ```json
@@ -77,7 +78,7 @@ Au lieu d'utiliser une instance {{site.data.keyword.texttospeechfull}}, vous pou
 
 1. Choisissez la **Langue** et la **Voix** de votre instance de service.
 
-1. Entrez les données d'identification de votre service Google Cloud Text-to-Speech.
+1. Entrez les données de votre service Google Cloud Text-to-Speech, sans dépasser 3072 caractères.
   * Vous pouvez générer les données d'identification de votre service dans la plateforme Google Cloud sous la forme d'une clé JSON lorsque vous [définissez un compte de service ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). L'exemple de code suivant contient des exemples de zones de données d'identification générées sur la plateforme Google Cloud.
 
     ```json

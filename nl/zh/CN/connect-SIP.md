@@ -1,13 +1,14 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-05"
+  years: 2019
+lastupdated: "2019-02-15"
+subcollection: "voice-agent"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:new_window: target="_blank"_}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -20,11 +21,26 @@ lastupdated: "2018-12-05"
 您可以从以下列表中选择 SIP 中继提供者，用于与 {{site.data.keyword.iva_full}} 集成。
 {: #shortdesc}
 
+* [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
 * [AT&T 以及其他提供者](#att-other)
 * [与 {{site.data.keyword.iva_short}}](#peering) 对等 
 * [请求设置协助](#request-setup)
+
+## 创建 Nexmo 语音应用程序
+{: #nexmo-setup}
+
+  **注**：创建 [Nexmo 帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://dashboard.nexmo.com/sign-up){: new_window} 需要信用卡，因为会根据配置的 SIP 中继的使用情况定期收取费用。如果您有 Nexmo 帐户，可以使用现有帐户。
+
+  1. 在 [Nexmo Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://dashboard.nexmo.com/sign-up){: new_window} 上创建 Nexmo 帐户。
+
+  1. 按照 Nexmo [github 存储库 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/nexmo-community/watson-voice-agent){: new_window} 中的自述文件指示信息进行操作。该 github 存储库中包含入门样本。
+
+  1. 在供应了 Nexmo 电话号码并且应用程序运行之后，使用 Nexmo 电话号码配置 Voice Agent。
+
+  1. 拨打 Nexmo 电话号码以测试配置。
+
 
 ## 创建 NetFoundry SIP 中继和电话号码
 {: #NetFoundry-setup}
@@ -43,7 +59,7 @@ lastupdated: "2018-12-05"
 
 1. 成功付款后，您的帐户中将显示 SIP 中继电话号码。
 
-您需要使用此电话号码来设置语音代理程序和配置呼叫转移，包括国家和地区代码。请参阅[创建和连接语音代理程序](getting-started.html#step3)。
+您需要使用此电话号码来设置语音代理程序和配置呼叫转移，包括国家和地区代码。请参阅[创建和连接语音代理程序](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)。
 
 
 ## 创建 Twilio SIP 中继
@@ -69,12 +85,14 @@ lastupdated: "2018-12-05"
 
   在“号码”页面上，单击**购买号码**。如果您有号码，请单击 **+** 图标。在显示的面板上，可以提供您所在区域的新电话号码。返回到所创建的 SIP 中继，然后单击“号码”图标，将该号码分配给该 SIP 中继。
 
-  您需要使用此电话号码设置语音代理程序，包括国家和地区代码。请参阅[创建和连接语音代理程序](getting-started.html#step3)。
+  您需要使用此电话号码设置语音代理程序，包括国家和地区代码。请参阅[创建和连接语音代理程序](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)。
+
+  **注释**：如果您使用 Lite/Trial Twilio 帐户在 {{site.data.keyword.iva_short}} 上测试转移，那么您将需要确保对转移目标进行_验证_。请参阅 [Twilio 官方网站](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-)上的更多指示信息。
 
 ## 与 {{site.data.keyword.iva_short}} 对等
 {: #peering}
 
-{{site.data.keyword.iva_short}} 支持对等连接，例如 IPSec 隧道。若要与 {{site.data.keyword.iva_short}} 对等，可以将服务器的 IP 地址列入白名单。
+{{site.data.keyword.iva_short}} 支持客户 PBX 的同级连接，如 Asterisk。若要与 {{site.data.keyword.iva_short}} 对等，可以将服务器的 IP 地址列入白名单。
 
 1. 转至_管理_仪表板并选择_实例_选项卡。
 
@@ -91,6 +109,8 @@ lastupdated: "2018-12-05"
 {: #request-setup}
 
 要请求网络设置协助以与 AT&T 或其他 SIP 中继提供者连接、与 {{site.data.keyword.iva_short}} 进行配对或者请求 50 个以上的并发连接，可以使用以下过程。
+
+您可以在 {{site.data.keyword.iva_short}} 实例中将 PBX（如 Asterisk）列入白名单。只有在无法接受公共因特网列入白名单解决方案的情况下，才应提交支持凭单。请参阅[将 IP 地址列入白名单](/docs/services/voice-agent?topic=voice-agent-whitelist_IP#whitelist_IP)。
 
 1. 开一个新的 [{{site.data.keyword.Bluemix_notm}} 支持凭单](https://cloud.ibm.com/unifiedsupport/tickets/add)
 

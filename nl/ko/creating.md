@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-03"
+subcollection: "voice-agent"
 
 ---
 
@@ -27,14 +28,14 @@ lastupdated: "2018-12-03"
 
    카탈로그 페이지에는 서비스 및 가격 플랜에 대한 정보가 있습니다. **서비스 이름** 값을 변경할 수 있습니다.
 
-2. **작성**을 클릭하여 [_관리_ 대시보드에서 음성 에이전트를 작성](managing_create.html#config_instance)하십시오.
+2. **작성**을 클릭하여 [_관리_ 대시보드에서 음성 에이전트를 작성](/docs/services/voice-agent?topic=voice-agent-config_instance#config_instance)하십시오.
 
 ## 명령행에서 서비스 작성
 {: #command_create}
 
-1. [{{site.data.keyword.Bluemix_notm}} CLI를 설치](../cli/index.html#overview)하십시오.
+1. [{{site.data.keyword.Bluemix_notm}} CLI를 설치](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview)하십시오.
 
-2. _Lite _ 플랜으로 음성 에이전트 서비스 인스턴스를 작성하는 [`ibmcloud` 명령](../cli/idt/commands.html#idt-cli)을 실행하십시오.
+2. _Lite _ 플랜으로 Voice Agent 서비스 인스턴스를 작성하는 [`ibmcloud` 명령](/docs/cli/idt?topic=cloud-cli-idt-cli#idt-cli)을 실행하십시오.
 
    ```
    ibmcloud service create VoiceAgent _Lite_ "My Voice Agent Service"

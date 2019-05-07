@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-08"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,12 +22,12 @@ lastupdated: "2018-11-08"
 {{site.data.keyword.conversationshort}} のダイアログ・ノードから、音声認識または音声合成を設定してサード・パーティーの音声テキスト変換サービスに接続できます。
 {: shortdesc}
 
-状態を設定してアクション・シーケンスを開始する方法を示すサンプル・コードや情報については、[API を使用したボイス・エージェントのプログラミング](api.html)を参照してください。
+状態を設定してアクション・シーケンスを開始する方法を示すサンプル・コードや情報については、[API を使用したボイス・エージェントのプログラミング](/docs/services/voice-agent?topic=voice-agent-api)を参照してください。
 
 ## {{site.data.keyword.conversationshort}} ダイアログ・ノードから Google Speech-to-Text に接続する
 {: #stt_dialog}
 
-ボイス・エージェントを編集して Google Speech-to-Text への接続を構成する代わりに、`"vgwActSetSTTConfig"` コマンドを使用して STT 設定を構成するように、{{site.data.keyword.conversationshort}} をプログラミングできます。 [ダイアログ応答での JSON の編集](api.html#json-editor)を参照してください。
+ボイス・エージェントを編集して Google Speech-to-Text への接続を構成する代わりに、`"vgwActSetSTTConfig"` コマンドを使用して STT 設定を構成するように、{{site.data.keyword.conversationshort}} をプログラミングできます。 [ダイアログ応答での JSON の編集](/docs/services/voice-agent?topic=voice-agent-api#json-editor)を参照してください。
 
 1. {{site.data.keyword.conversationshort}} ダイアログ用の JSON エディターで、`"vgwActSetSTTConfig"` コマンドをダイアログ・ノードに追加します。
 
@@ -69,7 +70,7 @@ lastupdated: "2018-11-08"
 ## {{site.data.keyword.conversationshort}} ダイアログ・ノードから Google Text-to-Speech に接続する
 {: #tts_dialog}
 
-ボイス・エージェントを編集して Google Text-to-Speech への接続を構成する代わりに、`"vgwActSetTTSConfig"` コマンドを使用して TTS 設定を構成するように、{{site.data.keyword.conversationshort}} をプログラミングできます。 [ダイアログ応答での JSON の編集](api.html#json-editor)を参照してください。
+ボイス・エージェントを編集して Google Text-to-Speech への接続を構成する代わりに、`"vgwActSetTTSConfig"` コマンドを使用して TTS 設定を構成するように、{{site.data.keyword.conversationshort}} をプログラミングできます。 [ダイアログ応答での JSON の編集](/docs/services/voice-agent?topic=voice-agent-api#json-editor)を参照してください。
 
 1. {{site.data.keyword.conversationshort}} ダイアログ用の JSON エディターで、`"vgwActSetTTSConfig"` コマンドをダイアログ・ノードに追加します。
 

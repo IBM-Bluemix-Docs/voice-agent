@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-06-14"
+subcollection: "voice-agent"
 
 ---
 
@@ -28,7 +29,7 @@ Sie können SRTP (Secure Real Time Transport Protocol) und die Verschlüsselung 
 
 1. Wählen Sie den Trunk aus, der mit SRTP geschützt werden soll, indem Sie entweder einen vorhandenen Trunk auswählen oder einen neuen Trunk durch Klicken auf das Symbol **+** erstellen.
 
-  * Wenn Sie einen neuen Trunk erstellen, müssen Sie im Dashboard **Ursprung** den _SIP-Trunk-URI_ konfigurieren.  Weitere Informationen finden Sie in [SIP-Trunk verbinden](connect-SIP.html).
+  * Wenn Sie einen neuen Trunk erstellen, müssen Sie im Dashboard **Ursprung** den _SIP-Trunk-URI_ konfigurieren.  Weitere Informationen finden Sie in [SIP-Trunk verbinden](/docs/services/voice-agent?topic=voice-agent-connect).
 
 1. Suchen Sie im Dashboard _Allgemein_ den Abschnitt _Sicheres Trunking_. Klicken Sie auf **Inaktiviert**, um die Einstellung für sicheres Trunking in **Aktiviert** zu ändern, und speichern Sie die Änderungen.
 

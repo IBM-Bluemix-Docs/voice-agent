@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-16"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,7 +22,7 @@ lastupdated: "2018-11-16"
 在_管理_ 儀表板上建立、複製或編輯語音代理程式時，您可以連接協力廠商語音及文字服務。
 {: shortdesc}
 
-或者，若要在進行中配置語音及文字服務連線，您可以[使用動態配置搭配 {{site.data.keyword.conversationshort}}](api_dynamic_config.html)。這容許您以動作標籤及狀態變數變更語音代理程式配置。
+或者，若要在進行中配置語音及文字服務連線，您可以[使用動態配置搭配 {{site.data.keyword.conversationshort}}](/docs/services/voice-agent?topic=voice-agent-dynamic-donfig)。這容許您以動作標籤及狀態變數變更語音代理程式配置。
 
 ## 從 {{site.data.keyword.iva_short}} 連接至 Google Speech-to-Text
 {: #stt_va}
@@ -34,7 +35,7 @@ lastupdated: "2018-11-16"
 
 1. 為服務實例選擇**語言**。
 
-1. 輸入您的 Google Cloud Speech-to-Text 服務認證。
+1. 輸入您的 Google Cloud Speech-to-Text 服務認證，最多限制為 3072 個字元。
   * 當您[設定服務帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account)，您可以在 Google Cloud Platform 中產生服務認證作為 JSON 金鑰。下列程式碼範例包含您在 Google Cloud Platform 上產生的範例認證欄位。
 
     ```json
@@ -76,7 +77,7 @@ lastupdated: "2018-11-16"
 
 1. 為服務實例選擇**語言**及**語音**。
 
-1. 輸入您的 Google Cloud Text-to-Speech 服務認證。
+1. 輸入您的 Google Cloud Text-to-Speech 服務認證，最多限制為 3072 個字元。
   * 當您[設定服務帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account)，您可以在 Google Cloud Platform 中產生服務認證作為 JSON 金鑰。下列程式碼範例包含您在 Google Cloud Platform 上產生的範例認證欄位。
 
     ```json

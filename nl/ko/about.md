@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-06"
+subcollection: "voice-agent"
 
 ---
 
@@ -25,9 +26,9 @@ lastupdated: "2018-11-06"
 {{site.data.keyword.iva_short}}은 전체 사용자 환경 아키텍처의 여러 컴포넌트 중 하나이며 다음 요소를 포함할 수 있습니다.
 
 * 다음과 같은 Watson 서비스를 조정하는 [IBM Voice Gateway ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SS4U29/) 기반의 음성 에이전트
-  * [{{site.data.keyword.speechtotextshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](../speech-to-text/index.html): 호출자의 오디오를 텍스트로 변환
-  * [{{site.data.keyword.conversationshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](../conversation/index.html): 텍스트를 분석하여 인텐트에 맵핑하고 작성한 대화에 따라 응답 제공
-  * [{{site.data.keyword.texttospeechshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](../text-to-speech/index.html): 응답을 음성 오디오로 변환
+  * [{{site.data.keyword.speechtotextshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/speech-to-text?topic=speech-to-text-about): 호출자의 오디오를 텍스트로 변환
+  * [{{site.data.keyword.conversationshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/assistant?topic=assistant-index#index): 텍스트를 분석하여 인텐트에 맵핑하고 작성한 대화에 따라 응답 제공
+  * [{{site.data.keyword.texttospeechshort}} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/text-to-speech?topic=text-to-speech-about): 응답을 음성 오디오로 변환
 * 음성 에이전트를 전화 네트워크에 연결하는 SIP 트렁크
 * 사용자 환경을 세부적으로 사용자 정의할 수 있도록 {{site.data.keyword.conversationshort}} 서비스와 음성 에이전트 사이에 위치하는 선택적 서비스 오케스트레이션 엔진(SOE)
 
@@ -74,7 +75,7 @@ SIP 트렁크를 사용하여 공중 전화망(PTN)에서 사용자 환경을 �
 
 서비스 오케스트레이션 엔진을 구현하는 방법에 대해 자세히 알아보려면 [GitHub의 서비스 오케스트레이션 엔진 샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}을 참조하십시오.
 
-**중요**: 데이터 보안을 위해 `http:` 대신 `https:`를 사용하여 SOE 작업공간에 보안 URL을 사용해야 하고 인증을 요구해야 합니다. 보안 고려사항에 대해 자세히 보려면 [정보 보안 및 데이터 개인정보 보호](infosec.html)를 참조하십시오.
+**중요**: 데이터 보안을 위해 `http:` 대신 `https:`를 사용하여 SOE 작업공간에 보안 URL을 사용해야 하고 인증을 요구해야 합니다. 보안 고려사항에 대해 자세히 보려면 [정보 보안 및 데이터 개인정보 보호](/docs/services/voice-agent?topic=voice-agent-infosec)를 참조하십시오.
 
 ## 기능
 {: #features}

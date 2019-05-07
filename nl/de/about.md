@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-06"
+subcollection: "voice-agent"
 
 ---
 
@@ -25,9 +26,9 @@ lastupdated: "2018-11-06"
 {{site.data.keyword.iva_short}} ist eine von mehreren Komponenten in der Gesamtarchitektur Ihrer Umgebung, die folgende Elemente beinhalten kann:
 
 * Ein Sprachagent auf Basis von [IBM Voice Gateway ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SS4U29/), der die folgenden Watson-Services koordiniert:
-  * [{{site.data.keyword.speechtotextshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](../speech-to-text/index.html): wandelt den Ton des Anrufers in Text um
-  * [{{site.data.keyword.conversationshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](../conversation/index.html): Analysiert den Text, ordnet ihn Absichten zu und stellt eine Antwort entsprechend dem von Ihnen erstellten Dialog bereit
-  * [{{site.data.keyword.texttospeechshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](../text-to-speech/index.html): Wandelt die Antwort in Sprachton um
+  * [{{site.data.keyword.speechtotextshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/speech-to-text?topic=speech-to-text-about): wandelt den Ton des Anrufers in Text um
+  * [{{site.data.keyword.conversationshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/assistant?topic=assistant-index#index): Analysiert den Text, ordnet ihn Absichten zu und stellt eine Antwort entsprechend dem von Ihnen erstellten Dialog bereit
+  * [{{site.data.keyword.texttospeechshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/text-to-speech?topic=text-to-speech-about): Wandelt die Antwort in Sprachton um
 * Ein SIP-Trunk, der Ihren Sprachagenten mit dem Telefonnetz verbindet
 * Eine optionale Service-Orchestrierungsengine (SOE), die sich zwischen dem {{site.data.keyword.conversationshort}}-Service und Ihrem Sprachagenten befindet, sodass Sie Ihre Umgebung weiter anpassen können
 
@@ -74,7 +75,7 @@ Folgende Gründe können für die Einbindung einer Service-Orchestrierungsengine
 
 Weitere Informationen zur Vorgehensweise beim Implementieren einer Service-Orchestrierungsengine finden Sie unter [Beispiele für Service-Orchestrierungsengine auf GitHub ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}.
 
-**Wichtig**: Aus Gründen der Datensicherheit müssen Sie sicherstellen, dass Sie für Ihren SOE-Arbeitsbereich eine sichere URL verwenden. Verwenden Sie `https:` anstelle von `http:` sowie obligatorische Authentifizierung. Weitere Informationen zu Sicherheitsaspekten finden Sie unter [Informationssicherheit und Datenschutz](infosec.html).
+**Wichtig**: Aus Gründen der Datensicherheit müssen Sie sicherstellen, dass Sie für Ihren SOE-Arbeitsbereich eine sichere URL verwenden. Verwenden Sie `https:` anstelle von `http:` sowie obligatorische Authentifizierung. Weitere Informationen zu Sicherheitsaspekten finden Sie unter [Informationssicherheit und Datenschutz](/docs/services/voice-agent?topic=voice-agent-infosec).
 
 ## Features
 {: #features}

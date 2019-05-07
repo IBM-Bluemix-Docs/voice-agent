@@ -1,13 +1,14 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-05"
+  years: 2019
+lastupdated: "2019-02-15"
+subcollection: "voice-agent"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:new_window: target="_blank"_}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -20,11 +21,27 @@ lastupdated: "2018-12-05"
 É possível escolher o provedor de tronco SIP que você usa para que seja integrado ao {{site.data.keyword.iva_full}} na lista a seguir.
 {: #shortdesc}
 
+* [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
 * [AT & T e outros provedores](#att-other)
 * [Peering com {{site.data.keyword.iva_short}}](#peering)
 * [Solicitando Configuração](#request-setup)
+
+## Criando um aplicativo de voz Nexmo
+{: #nexmo-setup}
+
+  **Nota:** a criação de uma [conta Nexmo ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://dashboard.nexmo.com/sign-up){: new_window} requer um cartão de crédito, que é cobrado periodicamente com base no uso do tronco SIP que é configurado. Se você já tem uma conta Nexmo, é possível usar a conta existente.
+
+  1. Crie uma conta Nexmo no [website da Nexmo ![Ícone de linkexterno](../../icons/launch-glyph.svg "Ícone de link externo")](https://dashboard.nexmo.com/sign-up){: new_window}.
+
+
+  1. Siga as instruções do LEIA-ME no [repositório github da Nexmo ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/nexmo-community/watson-voice-agent){: new_window}. O repositório github contém uma amostra de introdução.
+
+  1. Quando seu número de telefone Nexmo for provisionado e seu aplicativo estiver em execução, configure seu agente de voz com o número de telefone Nexmo.
+
+  1. Teste sua configuração chamando seu número de telefone Nexmo.
+
 
 ## Criando um tronco SIP e um número de telefone do NetFoundry
 {: #NetFoundry-setup}
@@ -43,7 +60,7 @@ lastupdated: "2018-12-05"
 
 1. Assim que o pagamento for processado com êxito, o número de telefone do seu tronco SIP será exibido em sua conta.
 
-Esse número de telefone é necessário para configurar o seu agente de voz e a transferência de chamada, incluindo os códigos de país e de área. Consulte [Criando e conectando o seu agente de voz](getting-started.html#step3).
+Esse número de telefone é necessário para configurar o seu agente de voz e a transferência de chamada, incluindo os códigos de país e de área. Consulte [Criando e conectando o seu agente de voz](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
 
 
 ## Criando um tronco SIP Twilio
@@ -69,12 +86,14 @@ Esse número de telefone é necessário para configurar o seu agente de voz e a 
 
   Na página Números, clique em **Comprar um número** ou, se já tiver um número, clique no ícone **+**. Um painel exibe onde você pode fornecer um novo número de telefone em sua região. Designe o número ao tronco SIP que você criou ao voltar para o tronco SIP e clicar no ícone Número.
 
-  Esse número de telefone é necessário para configurar o seu agente de voz, incluindo os códigos de país e de área. Consulte [Criando e conectando o seu agente de voz](getting-started.html#step3).
+  Esse número de telefone é necessário para configurar o seu agente de voz, incluindo os códigos de país e de área. Consulte [Criando e conectando o seu agente de voz](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+
+  **NOTA**: se você estiver usando uma conta Lite/Trial do Twilio para testar as transferências no {{site.data.keyword.iva_short}}, será necessário certificar-se de _verificar_ o destino da transferência. Veja mais instruções no [site oficial do Twilio](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
 
 ## Peering com {{site.data.keyword.iva_short}}
 {: #peering}
 
-O {{site.data.keyword.iva_short}} suporta conexões peer, como um túnel IPSec. Para estar no mesmo nível do {{site.data.keyword.iva_short}}, é possível inserir os endereços IP na lista de desbloqueio de seus servidores.
+O {{site.data.keyword.iva_short}} suporta conexões de peer com os PBXs do cliente, como o Asterisk. Para estar no mesmo nível do {{site.data.keyword.iva_short}}, é possível inserir os endereços IP na lista de desbloqueio de seus servidores.
 
 1. Acesse o painel _Gerenciar_ e selecione a guia _Instância_.
 
@@ -91,6 +110,8 @@ O {{site.data.keyword.iva_short}} suporta conexões com o AT&T&reg; e outros pro
 {: #request-setup}
 
 É possível solicitar a configuração de rede assistida para se conectar ao AT&T e a outros provedores de entroncamento SIP, para peer com o {{site.data.keyword.iva_short}} ou para solicitar mais de 50 conexões simultâneas usando o processo a seguir.
+
+É possível inserir na lista de desbloqueio um PBX, como o Asterisk, em sua instância do {{site.data.keyword.iva_short}}. Abra um chamado de suporte somente se a lista de aplicativos confiáveis de Internet pública não for uma solução aceitável. Consulte [Inserindo os endereços IP na lista de desbloqueio](/docs/services/voice-agent?topic=voice-agent-whitelist_IP#whitelist_IP).
 
 1. Abra um novo [{{site.data.keyword.Bluemix_notm}} chamado de suporte](https://cloud.ibm.com/unifiedsupport/tickets/add)
 

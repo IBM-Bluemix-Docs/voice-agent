@@ -3,7 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-14"
-
+subcollection: "voice-agent"
 ---
 
 {:shortdesc: .shortdesc}
@@ -26,11 +26,11 @@ Zur Fehlerbehebung für Probleme, die bei Ihren Sprachagenten auftreten können,
 
 1. Wenn ein Anruf fehlschlägt, liefert der letzte {{site.data.keyword.conversationshort}}-Dialogwechsel möglicherweise die Erklärung für den Fehler.
 
-1. Nutzungsprotokolle enthalten alle Fehler, die möglicherweise während eines bestimmten Anrufs aufgetreten sind. Weitere Informationen hierzu finden Sie im Abschnitt [Nutzung und Anrufprotokolle anzeigen](logging.html).
+1. Nutzungsprotokolle enthalten alle Fehler, die möglicherweise während eines bestimmten Anrufs aufgetreten sind. Weitere Informationen hierzu finden Sie im Abschnitt [Nutzung und Anrufprotokolle anzeigen](/docs/services/voice-agent?topic=voice-agent-logging).
 
 1. Überprüfen Sie die Protokolle des Service-Providers auf möglicher Signalfehler. Twilio stellt beispielsweise Protokolle für jeden bereitgestellten SIP-Trunk zur Verfügung.
 
-1. Wenn Sie die [Ereignisweiterleitung für Sprachagenten aktivieren](event-forwarding.html), können Sie den Sprachagenten so konfigurieren, dass CDRs (Call Detail Records, Datensätze mit Anrufdetails) an eine Cloudant-Datenbank weitergeleitet werden und die Fehlerursache ermittelt wird. Andere Ereignisse, wie z. B. {{site.data.keyword.conversationshort}}-Dialogwechselereignisse, können Details zu jedem Dialogwechsel innerhalb eines Anrufs liefern.
+1. Wenn Sie die [Ereignisweiterleitung für Sprachagenten aktivieren](/docs/services/voice-agent?topic=voice-agent-event_forwarding), können Sie den Sprachagenten so konfigurieren, dass CDRs (Call Detail Records, Datensätze mit Anrufdetails) an eine Cloudant-Datenbank weitergeleitet werden und die Fehlerursache ermittelt wird. Andere Ereignisse, wie z. B. {{site.data.keyword.conversationshort}}-Dialogwechselereignisse, können Details zu jedem Dialogwechsel innerhalb eines Anrufs liefern.
 
 **Wichtig:** Die CDR-, Transkriptions- und Dialogwechselereignisse enthalten Informationen von Ihren Benutzern, die möglicherweise geschützte Gesundheitsinformationen (Protected Health Information, PHI), persönlich identifizierbare Daten (Personally Identifiable Information, PII) oder Zahlungskarteninformationen (Payment Card Industry Data Security Standard, PCI DSS) enthalten. Um eine Gefährdung der personenbezogenen Daten zu vermeiden, müssen Sie sicherstellen, dass Ihre {{site.data.keyword.cloudant_short_notm}}-Instanz die vertraulichen Informationen, die Ihre Benutzer während des Dialogs freigeben, ordnungsgemäß schützt.
 
@@ -58,14 +58,14 @@ Ihr Anruf hat wahrscheinlich keine Verbindung zu den Services hergestellt. Diese
    **Hinweis:** Bei der Angabe der Telefonnummer im Dashboard _Verwalten_ des Sprachagenten muss die Landes- und Ortskennzahl mit angegeben werden. Beispiel: `18884253968`.
 
 * Überprüfen Sie, ob die Watson-Serviceberechtigungsnachweise, die URLs und die {{site.data.keyword.conversationshort}}-Arbeitsbereich-ID alle gültig sind.
-* Überprüfen Sie, ob der Dialog in Ihrem {{site.data.keyword.conversationshort}}-Arbeitsbereich korrekt erstellt wurde.
-  * Sie können den [Beispieldialog![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) von GitHub für einen vorgefertigten Arbeitsbereich importieren. Details zum Speichern des Beispieldialogs als JSON-Datei und späteren Importieren der Datei als Arbeitsbereich im Tool {{site.data.keyword.conversationshort}} finden Sie in [Schritt 3 im *Lernprogramm "Einführung"*](getting-started.html#step3).
-  * Wenn Sie Ihren eigenen {{site.data.keyword.conversationshort}}-Dialog erstellt haben, überprüfen Sie, ob der Dialog einen Knoten mit der Bedingung `conversation_start` und einen Knoten mit einer Standardantwort enthält. Ausführliche Anweisungen finden Sie unter [Dialog erstellen](../conversation/dialog-build.html) in der {{site.data.keyword.conversationshort}}-Dokumentation.
+* Überprüfen Sie, ob der Dialog im {{site.data.keyword.conversationshort}}-Skill korrekt erstellt wurde.
+  * Sie können den [Beispieldialog![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) von GitHub für einen vorgefertigten Skill importieren. Details zum Speichern des Beispieldialogs als JSON-Datei und späteren Importieren der Datei als Skill im Tool {{site.data.keyword.conversationshort}} finden Sie in [Schritt 3 im *Lernprogramm "Einführung"*](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+  * Wenn Sie Ihren eigenen {{site.data.keyword.conversationshort}}-Dialog erstellt haben, überprüfen Sie, ob der Dialog einen Knoten mit der Bedingung `conversation_start` und einen Knoten mit einer Standardantwort enthält. Ausführliche Anweisungen finden Sie unter [Dialog erstellen](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog) in der {{site.data.keyword.conversationshort}}-Dokumentation.
 * Sehen Sie im Dashboard _Nutzung_ des Sprachagenten nach, ob Ihr Telefonanruf dort aufgelistet ist. Wenn für Ihren Telefonanruf ein Eintrag vorhanden ist, hat Ihr Sprachagent eine Verbindung zum Watson-Service hergestellt.
 
 ### Warum kann ich beim Erstellen eines Sprachagenten keine Telefonnummer angeben?
 
-Überprüfen Sie, ob die von Ihnen angegebene Telefonnummer von einem vorhandenen Sprachagenten verwendet wird. Für eine Telefonnummer können Sie jeweils nur einen Sprachagenten haben. Sie können eine andere Telefonnummer Ihres SIP-Trunking-Providers angeben und diese zum Erstellen eines anderen Sprachagenten verwenden. Alternativ [löschen Sie den vorhandenen Sprachagenten im Dashboard _Verwalten_](managing.html#delete_va), um die Telefonnummer freizugeben, und erstellen Sie anschließend einen neuen Sprachagenten.
+Überprüfen Sie, ob die von Ihnen angegebene Telefonnummer von einem vorhandenen Sprachagenten verwendet wird. Für eine Telefonnummer können Sie jeweils nur einen Sprachagenten haben. Sie können eine andere Telefonnummer Ihres SIP-Trunking-Providers angeben und diese zum Erstellen eines anderen Sprachagenten verwenden. Alternativ dazu können Sie [den vorhandenen Sprachagenten im Dashboard _Verwalten_ löschen](/docs/services/voice-agent?topic=voice-agent-managing#delete_va), um die Telefonnummer freizugeben, und anschließend einen neuen Sprachagenten erstellen.
 
 ### Warum treten bei meinen Anrufen häufig Fehler auf?
 

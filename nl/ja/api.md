@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-01"
+subcollection: "voice-agent"
 
 ---
 
@@ -29,7 +30,7 @@ lastupdated: "2018-11-01"
 
 1. {{site.data.keyword.Bluemix_short}} ダッシュボードから、{{site.data.keyword.conversationshort}} サービス・インスタンスを選択します。
 1. {{site.data.keyword.conversationshort}} ツールを起動します。
-1. 編集するダイアログが含まれるワークスペースをクリックします。
+1. 編集するダイアログが含まれるスキルをクリックします。
 1. 「**ダイアログ**」タブに進み、アクションまたは状態を設定するノードを選択します。
 1. 応答で ![拡張応答](../conversation/images/kabob.png) アイコンをクリックし、**「JSON エディターを開く (Open JSON editor)」**を選択します。
 
@@ -119,7 +120,7 @@ lastupdated: "2018-11-01"
 ## 状態の設定
 {: #setting-states}
 
-会話のターンが交替しても持続する状態の変更を示すため、ボイス・エージェントは構成済みの {{site.data.keyword.conversationfull}} サービスと状態変数を交換します。 これらの状態変数は、{{site.data.keyword.conversationshort}} ダイアログ・ノードで、JSON 形式の [コンテキスト変数](../conversation/dialog-build.html#context)として定義されます。
+会話のターンが交替しても持続する状態の変更を示すため、ボイス・エージェントは構成済みの {{site.data.keyword.conversationfull}} サービスと状態変数を交換します。 これらの状態変数は、{{site.data.keyword.conversationshort}} ダイアログ・ノードで、JSON 形式の [コンテキスト変数](/docs/services/assistant?topic=assistant-dialog-build#dialog-build)として定義されます。
 
 例えば、{{site.data.keyword.conversationshort}} サービスへの接続が失敗した場合に発信者に流されるメッセージを設定するには、以下の状態変数を定義できます。
 

@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-10-30"
+subcollection: "voice-agent"
 
 ---
 
@@ -17,9 +18,10 @@ lastupdated: "2018-10-30"
 # Activity Tracker-Ereignisse
 {: #activity-tracker}
 
-Mit dem {{site.data.keyword.cloudaccesstrailfull}}-Service können Sie die Interaktion von Benutzern und Anwendungen mit dem {{site.data.keyword.iva_full}}-Service in {{site.data.keyword.Bluemix}} verfolgen. {: shortdesc}
+Mit dem {{site.data.keyword.cloudaccesstrailfull}}-Service können Sie die Interaktion von Benutzern und Anwendungen mit dem {{site.data.keyword.iva_full}}-Service in {{site.data.keyword.Bluemix}} verfolgen.
+{: shortdesc}
 
-Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet die vom Benutzer initiierten Aktivitäten auf, die den Status eines Service in {{site.data.keyword.Bluemix_notm}} ändern. Weitere Informationen finden Sie in [{{site.data.keyword.cloudaccesstrailshort}}](../cloud-activity-tracker/index.html#getting-started-with-cla).
+Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet die vom Benutzer initiierten Aktivitäten auf, die den Status eines Service in {{site.data.keyword.Bluemix_notm}} ändern. Weitere Informationen finden Sie in [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started).
 
 ## Ereignisliste
 {: #event-List}

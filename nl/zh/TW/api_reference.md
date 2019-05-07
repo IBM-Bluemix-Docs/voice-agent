@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-08"
+subcollection: "voice-agent"
 
 ---
 
@@ -14,12 +15,12 @@ lastupdated: "2018-11-08"
 {:tip: .tip}
 
 # API 中的動作標籤和狀態變數
-{: #api}
+{: #api-reference}
 
 請使用參考資料來尋找動作標籤或狀態變數；動作標籤會起始您的語音代理程式在交談階段作業期間所採取的動作，而狀態變數會定義在整個交談都會持續保存（除非另有變更）的語音代理程式特徵。
 {: shortdesc}
 
-如需程式碼範例和如何設定狀態及起始動作序列的範例，請參閱[使用 API 程式設計語音代理程式](api.html)。
+如需程式碼範例和如何設定狀態及起始動作序列的範例，請參閱[使用 API 程式設計語音代理程式](/docs/services/voice-agent?topic=voice-agent-api)。
 
 因為 {{site.data.keyword.iva_full}} 是以 IBM Voice Gateway 為基礎，所以 API 的運作方式會相同。如果您熟悉 Voice Gateway，則可以在 {{site.data.keyword.conversationshort}} 對話中使用與 {{site.data.keyword.iva_short}} 相同的動作及狀態變數。請參閱 [Voice Gateway API 中的動作標籤及狀態變數](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html)。
 {: tip}
@@ -36,7 +37,7 @@ lastupdated: "2018-11-08"
 |`vgwActHangup` |掛斷通話。|沒有屬性。|
 |`vgwActSetSTTConfig` |套用語音代理程式的一組參數，以傳遞至 Watson {{site.data.keyword.speechtotextshort}} 服務。{{site.data.keyword.conversationshort}} 服務會根據通話動態地定義參數。|屬性會以 JSON 內容形式透通地傳遞至 {{site.data.keyword.speechtotextshort}} 服務。|
 |`vgwActSetTTSConfig` |套用語音代理程式的一組參數，以傳遞至 Watson {{site.data.keyword.texttospeechshort}} 服務。{{site.data.keyword.conversationshort}} 服務會根據通話動態地定義參數。|屬性會以 JSON 內容形式透通地傳遞至 {{site.data.keyword.texttospeechshort}} 服務。|
-|`vgwActSetConversationConfig` |套用語音代理程式的一組參數，以定義 {{site.data.keyword.conversationshort}} 工作區。{{site.data.keyword.conversationshort}} 服務會根據通話動態地定義參數。| <ul><li>`url`：{{site.data.keyword.conversationshort}} 服務 API 的 `url` 認證。</li><li>`workspaceID`：{{site.data.keyword.conversationshort}} 工作區 ID</li><li>`username`：{{site.data.keyword.conversationshort}} 服務的 `username` 認證。</li><li>`password`：{{site.data.keyword.conversationshort}} 服務的 `password` 認證。</li></ul> |
+|`vgwActSetConversationConfig` |套用語音代理程式的一組參數，以定義 {{site.data.keyword.conversationshort}} 工作區。{{site.data.keyword.conversationshort}} 服務會根據通話動態地定義參數。| <ul><li>`url`：{{site.data.keyword.conversationshort}} 服務 API 的 `url` 認證。</li><li>`workspaceID`：{{site.data.keyword.conversationshort}} 工作區 ID</li><li>`username`：{{site.data.keyword.conversationshort}} 服務的 `username` 認證，最多 64 個字元。</li><li>`password`：{{site.data.keyword.conversationshort}} 服務的 `password` 認證，最多 256 個字元。</li></ul> |
 |`vgwActCollectDtmf` |指示語音代理程式收集雙音多頻信號 (DTMF) 輸入。|必須定義下列其中一個屬性。<ul><li> `dtmfTermKey`：DTMF 終止鍵，以信號示意 DTMF 輸入結束。例如，"`#`"。</li><li> `dtmfCount`：要收集的 DTMF 位數。</li></ul> 符合上述任一條件時，語音代理程式就會停止收集 DTMF 輸入。|
 |`vgwActPauseDTMF` |停用 DTMF 輸入。會忽略所有 DTMF 輸入，直到 `vgwActUnPauseDTMF` 動作重新啟用它為止。|沒有屬性。|
 |`vgwActUnPauseDTMF` |啟用 `vgwActPauseDTMF` 動作已停用的 DTMF 輸入。|沒有屬性。|

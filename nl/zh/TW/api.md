@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-01"
+subcollection: "voice-agent"
 
 ---
 
@@ -29,7 +30,7 @@ lastupdated: "2018-11-01"
 
 1. 從 {{site.data.keyword.Bluemix_short}} 儀表板中，選取您的 {{site.data.keyword.conversationshort}} 服務實例。
 1. 啟動 {{site.data.keyword.conversationshort}} 工具。
-1. 按一下包含您要編輯之對話的工作區。
+1. 按一下包含您要編輯之對話的技能。
 1. 移至**對話**標籤，然後選取您要設定動作或狀態的節點。
 1. 在回應中，按一下 ![進階回應](../conversation/images/kabob.png) 圖示，然後選取**開啟 JSON 編輯器**。
 
@@ -119,7 +120,7 @@ lastupdated: "2018-11-01"
 ## 設定狀態
 {: #setting-states}
 
-為了指出兩回交談之間持續的狀態變更，語音代理程式會與所配置的 {{site.data.keyword.conversationfull}} 服務交換狀態變數。在 {{site.data.keyword.conversationshort}} 對話節點上，這些狀態變數定義為 JSON 格式的[環境定義變數](../conversation/dialog-build.html#context)。
+為了指出兩回交談之間持續的狀態變更，語音代理程式會與所配置的 {{site.data.keyword.conversationfull}} 服務交換狀態變數。在 {{site.data.keyword.conversationshort}} 對話節點上，這些狀態變數定義為 JSON 格式的[環境定義變數](/docs/services/assistant?topic=assistant-dialog-build#dialog-build)。
 
 例如，您可以定義下列狀態變數，以設定與 {{site.data.keyword.conversationshort}} 服務的連線失敗時，要串流給來電者的訊息。
 

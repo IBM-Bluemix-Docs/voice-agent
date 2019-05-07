@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-08"
+subcollection: "voice-agent"
 
 ---
 
@@ -14,12 +15,12 @@ lastupdated: "2018-11-08"
 {:tip: .tip}
 
 # Tags de ação e variáveis de estado na API
-{: #api}
+{: #api-reference}
 
 Use os materiais de referência para localizar as tags de ação que iniciam ações que o agente de voz executa durante uma sessão de conversa ou as variáveis de estado, que definem as características do agente de voz que persistem durante toda a conversa, a menos que mudem.
 {: shortdesc}
 
-Consulte [Programando os agentes de voz usando a API](api.html) para obter exemplos de códigos e exemplos de como configurar os estados e iniciar as sequências de ação.
+Consulte [Programando os agentes de voz usando a API](/docs/services/voice-agent?topic=voice-agent-api) para obter exemplos de códigos e exemplos de como configurar os estados e iniciar as sequências de ação.
 
 Como o {{site.data.keyword.iva_full}} é baseado no IBM Voice Gateway, a API funciona da mesma maneira. Se você estiver familiarizado com o Voice Gateway, poderá usar as mesmas ações e variáveis de estado em seus diálogos {{site.data.keyword.conversationshort}} com {{site.data.keyword.iva_short}}. Consulte [Tags de ação e variáveis de estado na API do
 Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html).
@@ -37,11 +38,11 @@ A tabela a seguir lista as ações que podem ser especificadas no diálogo {{sit
 | `vgwActHangup` | Desliga a chamada. | Nenhum atributo. |
 | `vgwActSetSTTConfig` | Aplica um conjunto de parâmetros para o agente de voz para passar para o serviço {{site.data.keyword.speechtotextshort}} do Watson. O serviço {{site.data.keyword.conversationshort}} define dinamicamente os parâmetros com base na chamada. | Os atributos são transmitidos de forma transparente como propriedades JSON para o serviço {{site.data.keyword.speechtotextshort}}. |
 | `vgwActSetTTSConfig` | Aplica um conjunto de parâmetros para o agente de voz para passar para o serviço {{site.data.keyword.texttospeechshort}} do Watson. O serviço {{site.data.keyword.conversationshort}} define dinamicamente os parâmetros com base na chamada. |  Os atributos são transmitidos de forma transparente como propriedades JSON para o serviço {{site.data.keyword.texttospeechshort}}.  |
-| `vgwActSetConversationConfig` | Aplica um conjunto de parâmetros para o agente de voz para definir uma área de trabalho {{site.data.keyword.conversationshort}}. O serviço {{site.data.keyword.conversationshort}} define dinamicamente os parâmetros com base na chamada. | <ul><li>`url`: a credencial `url` para a API de serviço {{site.data.keyword.conversationshort}}.</li><li>`workspaceID`: ID da área de trabalho {{site.data.keyword.conversationshort}}</li><li>`username`: a credencial `username` para o serviço {{site.data.keyword.conversationshort}}.</li><li>`password`: a credencial `password` para o serviço {{site.data.keyword.conversationshort}}.</li></ul> |
+| `vgwActSetConversationConfig` | Aplica um conjunto de parâmetros para o agente de voz para definir uma área de trabalho {{site.data.keyword.conversationshort}}. O serviço {{site.data.keyword.conversationshort}} define dinamicamente os parâmetros com base na chamada. | <ul><li>`url`: a credencial `url` para a API de serviço {{site.data.keyword.conversationshort}}.</li><li>`workspaceID`: ID da área de trabalho {{site.data.keyword.conversationshort}}</li><li>`username`: a credencial `username` para o serviço {{site.data.keyword.conversationshort}}, com até 64 caracteres.</li><li>`password`: a credencial `password` para o serviço {{site.data.keyword.conversationshort}}, com até 256 caracteres.</li></ul> |
 | `vgwActCollectDtmf` | Instrui o agente de voz a coletar entrada de sinalização de multifrequência de sinal duplo (DTMF). | Um dos atributos a seguir deve ser definido. <ul><li> `dtmfTermKey`: a chave de finalização DTMF, que sinaliza o término da entrada DTMF. Por exemplo, "`#`". </li><li> `dtmfCount`: o número de dígitos DTMF a ser coletado.</li></ul> Quando qualquer uma dessas condições for atendida, o agente de voz parará de coletar a entrada DTMF. |
 | `vgwActPauseDTMF` | Desativa a entrada DTMF. Toda entrada DTMF é ignorada até ser reativada pela ação `vgwActUnPauseDTMF`. | Nenhum atributo. |
 | `vgwActUnPauseDTMF` | Ativa a entrada DTMF que foi desativada pela ação `vgwActPauseDTMF`. | Nenhum atributo. |
-| `vgwActExcludeFromTTSCache` | Instrui o agente de voz a não armazenar em cache a resposta do serviço {{site.data.keyword.texttospeechshort}}. Por exemplo, as respostas que contêm dados confidenciais de PHI, PII e PCI DSS ou informações dinâmicas como nomes de clientes ou datas de nascimento devem ser excluídas. <br/>Essa tag de ação deve ser configurada no nó de diálogo do {{site.data.keyword.conversationshort}} para cada elocução que você não quiser armazenar em cache. | Nenhum atributo. |
+| `vgwActExcludeFromTTSCache` | Instrui o agente de voz a não armazenar em cache a resposta do serviço {{site.data.keyword.texttospeechshort}}. Por exemplo, as respostas que contêm dados confidenciais de PHI, PII e PCI DSS ou informações dinâmicas como nomes de clientes ou datas de nascimento devem ser excluídas. <br/>Essa tag de ação deve ser configurada no nó de diálogo do {{site.data.keyword.conversationshort}} para cada elocução que você não deseja armazenar em cache. | Nenhum atributo. |
 | `vgwActPauseSTT` | Pausa o processamento de fala para texto até que ele seja reativado pela ação `vgwActUnPauseSTT`. Se a gravação for ativada e o processamento de fala para texto for pausado, o áudio do responsável pela chamada não será capturado. | Nenhum atributo. |
 | `vgwActUnPauseSTT` | Retoma o processamento de fala para texto que foi pausado anteriormente pela ação `vgwActPauseSTT`. | Nenhum atributo. |
 | `vgwActEnableSpeechBargeIn` | Permite interromper a fala para que os responsáveis pela chamada possam interromper a reprodução do agente de voz ao falar. | Nenhum atributo. |
@@ -71,7 +72,7 @@ A tabela a seguir lista as ações que podem ser especificadas no diálogo {{sit
 
 | Nome da variável de estado | Valor esperado | Descrição |
 | -------------- | ----- | ----------- |
-| `vgwSessionID`   | Usuário definido <br/><br/> Padrão: `Call-ID` | Um cabeçalho de ID de sessão
+| `vgwSessionID`   | Definido pelo usuário <br/><br/> Padrão: `Call-ID` | Um cabeçalho de ID de sessão
 customizado que é extraído da solicitação SIP INVITE. O valor representa o ID de sessão global que é usado em todos os logs de auditoria do agente de voz relacionados à sessão. |
 | `vgwSIPCallID` | `Call-ID` SIP | O ID de chamada SIP associado à chamada. |
 | `vgwSIPRequestURI` | `Request-URI` SIP | O URI de solicitação SIP que iniciou a chamada. |

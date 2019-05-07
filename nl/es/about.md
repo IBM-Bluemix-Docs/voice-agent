@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-06"
+subcollection: "voice-agent"
 
 ---
 
@@ -25,9 +26,9 @@ lastupdated: "2018-11-06"
 {{site.data.keyword.iva_short}} es uno de los diversos componentes de la arquitectura general de su entorno, que puede incluir los siguientes elementos:
 
 * Un agente de voz basado en [IBM Voice Gateway ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SS4U29/), que organiza los servicios siguientes de Watson:
-  * [{{site.data.keyword.speechtotextshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](../speech-to-text/index.html): Convierte el audio del interlocutor en texto
-  * [{{site.data.keyword.conversationshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](../conversation/index.html): Analiza el texto, lo correlaciona con intenciones y ofrece una respuesta en función de un diálogo que crea el usuario
-  * [{{site.data.keyword.texttospeechshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](../text-to-speech/index.html): Convierte la respuesta en audio de voz
+  * [{{site.data.keyword.speechtotextshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/speech-to-text?topic=speech-to-text-about): Convierte el audio del interlocutor en texto
+  * [{{site.data.keyword.conversationshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/assistant?topic=assistant-index#index): Analiza el texto, lo correlaciona con intenciones y ofrece una respuesta en función de un diálogo que crea el usuario
+  * [{{site.data.keyword.texttospeechshort}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/text-to-speech?topic=text-to-speech-about): Convierte la respuesta en audio de voz
 * Una conexión troncal SIP, que conecta el agente de voz a la red telefónica
 * Un motor de orquestación de servicio (SOE) opcional, que se encuentra entre el servicio {{site.data.keyword.conversationshort}} y el agente de voz, de modo que puede personalizar más el entorno
 
@@ -74,7 +75,7 @@ Puede que desee incorporar un motor de orquestación de servicio en el despliegu
 
 Para obtener más información sobre cómo implementar un motor de orquestación de servicio, consulte los [ejemplos de motor de orquestación de servicio en GitHub ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}.
 
-**Importante**: Para la seguridad de datos, asegúrese de utilizar un URL seguro para el espacio de trabajo de SOE, utilizando `https:` en lugar de `http:`, y solicite autenticación. Consulte [Seguridad de información y privacidad de datos](infosec.html) para obtener más información sobre las consideraciones de seguridad.
+**Importante**: Para la seguridad de datos, asegúrese de utilizar un URL seguro para el espacio de trabajo de SOE, utilizando `https:` en lugar de `http:`, y solicite autenticación. Consulte [Seguridad de información y privacidad de datos](/docs/services/voice-agent?topic=voice-agent-infosec) para obtener más información sobre las consideraciones de seguridad.
 
 ## Características
 {: #features}

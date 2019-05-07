@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-08-24"
+  years: 2019
+lastupdated: "2019-01-30"
+subcollection: "voice-agent"
 ---
 
 {:shortdesc: .shortdesc}
@@ -23,9 +24,9 @@ Puede que desee recopilar y analizar los datos de llamada de {{site.data.keyword
 
 Analizar los datos de estos sucesos le permite ajustar diálogos, refinar intenciones y mejorar la experiencia general del interlocutor.
 
-Cuando cree o edite agentes de voz, también puede optar por habilitar el reenvío de sucesos. Para obtener más detalles sobre la creación y la edición de agentes de voz, consulte [Gestión de agentes de voz](managing.html). Para habilitar el reenvío de sucesos, debe indicar la información de cuenta de {{site.data.keyword.cloudant_short_notm}}, incluido el nombre de cuenta y la contraseña.
+Cuando cree o edite agentes de voz, también puede optar por habilitar el reenvío de sucesos. Para obtener más detalles sobre la creación y la edición de agentes de voz, consulte [Gestión de agentes de voz](/docs/services/voice-agent?topic=voice-agent-managing). Para habilitar el reenvío de sucesos, debe indicar la información de cuenta de {{site.data.keyword.cloudant_short_notm}}, incluido el nombre de cuenta y la contraseña.
 
-**Importante:** Los sucesos de turno, transcripción y CDR incluyen información de los usuarios que puede contener PHI (información sanitaria personal), PII (información de identificación personal) o datos PCI DSS (PCI Data Security Standard). Para evitar la exposición de información personal, debe asegurarse de que la instancia de {{site.data.keyword.cloudant_short_notm}} protege correctamente la información confidencial que los usuarios comparten en o durante la conversación. Consulte [Seguridad de información y privacidad de datos: Reenvío de sucesos](infosec.html#event_forwarding) y [{{site.data.keyword.cloudant_short_notm}}: Seguridad](../Cloudant/offerings/security.html#security).
+**Importante:** Los sucesos de turno, transcripción y CDR incluyen información de los usuarios que puede contener PHI (información sanitaria personal), PII (información de identificación personal) o datos PCI DSS (PCI Data Security Standard). Para evitar la exposición de información personal, debe asegurarse de que la instancia de {{site.data.keyword.cloudant_short_notm}} protege correctamente la información confidencial que los usuarios comparten en o durante la conversación. Consulte [Seguridad de información y privacidad de datos: Reenvío de sucesos](/docs/services/voice-agent?topic=voice-agent-infosec#event_forwarding) y [{{site.data.keyword.cloudant_short_notm}}: Seguridad](/docs/services/Cloudant/offerings?topic=cloudant-security#security).
 
 
 ## Habilitación del reenvío de sucesos
@@ -37,7 +38,8 @@ Puede habilitar el reenvío de sucesos cuando crea o edita los agentes de voz en
 
 1. Seleccione **Mi instancia de servicio de {{site.data.keyword.cloudant_short_notm}}** u **Otra instancia de servicio de {{site.data.keyword.cloudant_short_notm}}**.
   * Si va a utilizar **Mi instancia de servicio de {{site.data.keyword.cloudant_short_notm}}**, seleccione el nombre de usuario y el nombre de la **cuenta de {{site.data.keyword.cloudant_short_notm}}** en las listas.
-  * Si va a utilizar **Otra instancia de servicio de {{site.data.keyword.cloudant_short_notm}}**, especifique el nombre de usuario y la contraseña de {{site.data.keyword.cloudant_short_notm}} o la clave de API de la cuenta.
+  * Si está creando un agente de voz en las regiones de Dallas o de Washington DC y no tiene una instancia de servicio de {{site.data.keyword.cloudant_short_notm}}, puede crear una desde el menú **Cuenta Cloudant**.
+  * Si va a utilizar **Otra instancia de servicio de {{site.data.keyword.cloudant_short_notm}}**, especifique el nombre de usuario y la contraseña (hasta 128 y 256, respectivamente) de {{site.data.keyword.cloudant_short_notm}} o la clave de API de la cuenta (hasta 64 caracteres).
 
 1. Seleccione **Habilitar** para cada tipo de suceso que desea reenviar y, a continuación, elija la base de datos a la que desea reenviar los sucesos.
   * Sucesos de registro de detalles de llamadas (CDR)
@@ -47,6 +49,7 @@ Puede habilitar el reenvío de sucesos cuando crea o edita los agentes de voz en
 1. Consulte la base de datos para asegurarse de que los informes de sucesos se reenvían correctamente.
 
 ## Enlaces relacionados
+{: #related-links-forwarding}
 * [IBM Voice Gateway: Informes de sucesos](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}
-* [Seguridad de información y privacidad de datos](infosec.html)
-* [{{site.data.keyword.cloudant_short_notm}}: Seguridad](../Cloudant/offerings/security.html#security)
+* [Seguridad de información y privacidad de datos](/docs/services/voice-agent?topic=voice-agent-infosec)
+* [{{site.data.keyword.cloudant_short_notm}}: Seguridad](/docs/services/Cloudant/offerings?topic=cloudant-security#security)

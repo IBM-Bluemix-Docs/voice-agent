@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -31,7 +32,7 @@ lastupdated: "2018-11-11"
 
 1. 若要將備援服務新增至現有的語音代理程式，請導覽至_管理_ 儀表板上的_語音代理程式_ 標籤。針對您要配置的語音代理程式按一下**編輯代理程式**。
 
-1. 針對您要連接的 {{site.data.keyword.conversationshort}}、{{site.data.keyword.texttospeechshort}} 或 {{site.data.keyword.speechtotextshort}} 服務選擇**位置 1** 或**位置 2**，然後新增配置資訊。您可以在您的工作區或其他工作區中使用協力廠商服務或 Watson 服務實例。請參閱[使用其他 {{site.data.keyword.Bluemix_notm}} 工作區中的服務實例](managing_other.html)。
+1. 針對您要連接的 {{site.data.keyword.conversationshort}}、{{site.data.keyword.texttospeechshort}} 或 {{site.data.keyword.speechtotextshort}} 服務選擇**位置 1** 或**位置 2**，然後新增配置資訊。您可以在您的工作區或其他工作區中使用協力廠商服務或 Watson 服務實例。請參閱[使用其他 {{site.data.keyword.Bluemix_notm}} 工作區中的服務實例](/docs/services/voice-agent?topic=voice-agent-other_service)。
 
 **請記住**：針對服務備援，您必須在不同位置之不同服務地區中使用 Watson 服務實例。
 

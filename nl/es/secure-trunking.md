@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-06-14"
+subcollection: "voice-agent"
 
 ---
 
@@ -28,7 +29,7 @@ Puede habilitar SRTP (Secure Real Time Transport Protocol, protocolo de transpor
 
 1. Elija la conexión troncal que desea proteger con SRTP seleccionando una conexión troncal existente o creando una nueva pulsando el icono **+**.
 
-  * Si crea una nueva conexión troncal, debe configurar el _URI de conexión troncal SIP_ en el panel de control **Origen**.  Para obtener más información, consulte [Conexión a una conexión troncal SIP](connect-SIP.html).
+  * Si crea una nueva conexión troncal, debe configurar el _URI de conexión troncal SIP_ en el panel de control **Origen**.  Para obtener más información, consulte [Conexión a una conexión troncal SIP](/docs/services/voice-agent?topic=voice-agent-connect).
 
 1. En el panel de control _General_, busque la sección _Conexión troncal segura_. Pulse **Inhabilitada** para cambiar el valor de conexión troncal segura a **Habilitada** y guarde los cambios.
 

@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-06-14"
+subcollection: "voice-agent"
 
 ---
 
@@ -28,7 +29,7 @@ lastupdated: "2018-06-14"
 
 1. 기존 트렁크를 선택하거나 **+** 아이콘을 클릭하여 새 트렁크를 작성하여 SRTP를 사용하여 보안할 트렁크를 선택하십시오.
 
-  * 새 트렁크를 작성할 때 **시작** 대시보드에서 _SIP 트렁크 URI_를 구성해야 합니다.  자세한 정보는 [SIP 트렁크 연결](connect-SIP.html)을 참조하십시오.
+  * 새 트렁크를 작성할 때 **시작** 대시보드에서 _SIP 트렁크 URI_를 구성해야 합니다.  자세한 정보는 [SIP 트렁크 연결](/docs/services/voice-agent?topic=voice-agent-connect)을 참조하십시오.
 
 1. _일반_ 대시보드에서 _트렁크 보호_ 섹션을 찾으십시오. **사용 안함**을 클릭하여 트렁크 보호 설정을 **사용**으로 변경하고 변경사항을 저장하십시오.
 

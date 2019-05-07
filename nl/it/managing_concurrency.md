@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-03"
+subcollection: "voice-agent"
 
 
 ---
@@ -20,7 +21,7 @@ lastupdated: "2018-12-03"
 Se utilizzi i piani _Standard_ o _Premium_, puoi modificare il numero massimo di connessioni simultanee dalle impostazioni predefinite.
 {: shortdesc}
 
-In tutti i piani, ricevi 2 connessioni simultanee gratuitamente. Per ulteriori informazioni, vedi i [Piani dei prezzi](https://cloud.ibm.com/catalog/services/voice-agent-with-watson). Nel dashboard _Manage_, puoi visualizzare il numero massimo di connessioni simultanee consentite nel tuo piano elencate in **Maximum concurrent connections**. Puoi inoltre visualizzare il numero massimo di connessioni simultanee utilizzate dai tuoi agent vocali durante il mese corrente in **Maximum concurrent connections used**.
+In tutti i piani, ricevi 2 connessioni simultanee gratuitamente. Per ulteriori informazioni, vedi i [Piani dei prezzi](https://cloud.ibm.com/catalog/services/voice-agent-with-watson). Nel dashboard _Manage_, puoi visualizzare il numero massimo di connessioni simultanee consentite nel tuo piano elencate in **Maximum concurrent connections**. Puoi inoltre visualizzare il numero massimo di connessioni simultanee utilizzate dai tuoi Voice Agent durante il mese corrente in **Maximum concurrent connections used**.
 
 1. Vai alla scheda _Instances_ nel tuo dashboard _Manage_ per modificare il numero massimo di connessioni simultanee nel tuo piano.
 
@@ -28,7 +29,7 @@ In tutti i piani, ricevi 2 connessioni simultanee gratuitamente. Per ulteriori i
 
 1. In _Edit maximum concurrent connections_, immetti il numero massimo di connessioni simultanee e fai clic su **Save**.
 
-Il numero minimo di connessioni simultanee che puoi impostare tramite la modalità self-service è 10 e il massimo è 50. Se hai bisogno di più di 50 connessioni simultanee per il tuo agent vocale, consulta [Richiesta di configurazione di rete assistita](connect-SIP.html#request-setup).
+Il numero minimo di connessioni simultanee che puoi impostare tramite la modalità self-service è 10 e il massimo è 50. Se hai bisogno di più di 50 connessioni simultanee per il tuo Voice Agent, consulta [Richiesta di configurazione di rete assistita](/docs/services/voice-agent?topic=voice-agent-connect#request-setup).
 
 ## Informazioni sul prezzo della connessione simultanea
 {: #concurrent-charge}

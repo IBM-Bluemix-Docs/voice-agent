@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-08"
+subcollection: "voice-agent"
 
 ---
 
@@ -14,12 +15,12 @@ lastupdated: "2018-11-08"
 {:tip: .tip}
 
 # API のアクション・タグと状態変数
-{: #api}
+{: #api-reference}
 
 この参照資料を使用して、アクション・タグや状態変数を見つけてください。アクション・タグは、会話セッション中にボイス・エージェントが実行するアクションを開始します。状態変数は、ボイス・エージェントの特性を定義します。特性は、変更されない限り、会話が終わるまで維持されます。
 {: shortdesc}
 
-状態を設定してアクション・シーケンスを開始する方法を示すサンプル・コードや例については、[API を使用したボイス・エージェントのプログラミング](api.html)を参照してください。
+状態を設定してアクション・シーケンスを開始する方法を示すサンプル・コードや例については、[API を使用したボイス・エージェントのプログラミング](/docs/services/voice-agent?topic=voice-agent-api)を参照してください。
 
 {{site.data.keyword.iva_full}} は IBM Voice Gateway に基づいているため、API は同じ仕方で機能します。 Voice Gateway を使い慣れている場合は、{{site.data.keyword.iva_short}} でも {{site.data.keyword.conversationshort}} ダイアログで同じアクションと状態変数を使用できます。 [Voice Gateway API のアクション・タグおよび状態変数](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html)を参照してください。
 {: tip}
@@ -36,11 +37,11 @@ lastupdated: "2018-11-08"
 | `vgwActHangup` | 通話を停止します。 | 属性はありません。 |
 | `vgwActSetSTTConfig` | Watson {{site.data.keyword.speechtotextshort}} サービスに渡すボイス・エージェントの一連のパラメーターを適用します。 {{site.data.keyword.conversationshort}} サービスは、通話に基づいてパラメーターを動的に定義します。 | 属性は、JSON プロパティーとして、{{site.data.keyword.speechtotextshort}} サービスに透過的に渡されます。 |
 | `vgwActSetTTSConfig` | Watson {{site.data.keyword.texttospeechshort}} サービスに渡すボイス・エージェントの一連のパラメーターを適用します。 {{site.data.keyword.conversationshort}} サービスは、通話に基づいてパラメーターを動的に定義します。 |  属性は、JSON プロパティーとして、{{site.data.keyword.texttospeechshort}} サービスに透過的に渡されます。  |
-| `vgwActSetConversationConfig` | {{site.data.keyword.conversationshort}} ワークスペースを定義するためのボイス・エージェントの一連のパラメーターを適用します。 {{site.data.keyword.conversationshort}} サービスは、通話に基づいてパラメーターを動的に定義します。 | <ul><li>`url`: {{site.data.keyword.conversationshort}} サービス API の `url` 資格情報。</li><li>`workspaceID`: {{site.data.keyword.conversationshort}} ワークスペース ID</li><li>`username`: {{site.data.keyword.conversationshort}} サービス の `username` 資格情報。</li><li>`password`: {{site.data.keyword.conversationshort}} サービス の `password` 資格情報。</li></ul> |
+| `vgwActSetConversationConfig` | {{site.data.keyword.conversationshort}} ワークスペースを定義するためのボイス・エージェントの一連のパラメーターを適用します。 {{site.data.keyword.conversationshort}} サービスは、通話に基づいてパラメーターを動的に定義します。 | <ul><li>`url`: {{site.data.keyword.conversationshort}} サービス API の `url` 資格情報。</li><li>`workspaceID`: {{site.data.keyword.conversationshort}} ワークスペース ID</li><li>`username`: {{site.data.keyword.conversationshort}} サービスの `username` 資格情報 (最大 64 文字)。</li><li>`password`: {{site.data.keyword.conversationshort}} サービスの `password` 資格情報 (最大 256 文字)。</li></ul> |
 | `vgwActCollectDtmf` | デュアルトーン複数周波数 (DTMF) の入力を収集するようにボイス・エージェントに指示します。 | 以下の属性のいずれかを定義する必要があります。 <ul><li> `dtmfTermKey`: DTMF 終了キー。DTMF 入力の終了を通知します。 例えば、「`#`」などです。 </li><li> `dtmfCount`: 収集する DTMF ディジット。</li></ul> これらの条件のいずれかが満たされた場合、ボイス・エージェントは DTMF 入力の収集を停止します。 |
 | `vgwActPauseDTMF` | DTMF 入力を無効にします。 `vgwActUnPauseDTMF` アクションによって再び有効にされるまで、すべての DTMF 入力が無視されます。 | 属性はありません。 |
 | `vgwActUnPauseDTMF` | `vgwActPauseDTMF` アクションによって無効にされた DTMF 入力を有効にします。 | 属性はありません。 |
-| `vgwActExcludeFromTTSCache` | {{site.data.keyword.texttospeechshort}} サービスからの応答をキャッシュしないように、ボイス・エージェントに指示します。 例えば、機密性の高い PHI、PII、PCI DSS のデータや顧客の名前や誕生日の日付などの動的情報を含む応答は、除外する必要があります。 <br/>このアクション・タグは、キャッシュしたくない発話ごとに {{site.data.keyword.conversationshort}} ダイアログ・ノードで設定する必要があります。 | 属性はありません。 |
+| `vgwActExcludeFromTTSCache` | {{site.data.keyword.texttospeechshort}} サービスからの応答をキャッシュしないように、ボイス・エージェントに指示します。 例えば、機密性の高い PHI、PII、PCI DSS のデータや顧客の名前や誕生日の日付などの動的情報を含む応答は、除外する必要があります。 <br/>このアクション・タグは、キャッシュしない発話ごとに {{site.data.keyword.conversationshort}} ダイアログ・ノードで設定する必要があります。| 属性はありません。 |
 | `vgwActPauseSTT` | `vgwActUnPauseSTT` アクションによって再度有効にされるまで、音声テキスト化処理を一時停止します。 録音を有効にして、音声テキスト化処理を一時停止している場合、発信者からの音声は取り込まれません。 | 属性はありません。 |
 | `vgwActUnPauseSTT` | `vgwActPauseSTT` アクションによって以前に一時停止された音声テキスト化処理を再開します。 | 属性はありません。 |
 | `vgwActEnableSpeechBargeIn` | 音声バージインを有効にして、ボイス・エージェントの再生を発信者が発話で中断できるようにします。 | 属性はありません。 |
@@ -78,7 +79,7 @@ lastupdated: "2018-11-08"
 | `vgwBargeInOccurred` | `Yes` / `No` | バージインが発生するかどうかを示します。 |
 | `vgwHangUp` | `Yes` / `No` | 会話が終了したかどうかを指定します。 |
 | `vgwHangupReason` | 文字列 | 発信者によって、またはエラーのためにハングアップが始まったときに、通話が切断された理由を示すため、この変数が {{site.data.keyword.conversationshort}} サービスに送信されます。 {{site.data.keyword.conversationshort}} サービスに送信されるメッセージ要求のテキストには、「vgwHangUp」も含まれます。 |
-| `vgwConversationResponseTimeout` | 時間 (秒数)<br/><br/>デフォルト: `5`  | {{site.data.keyword.conversationshort}} サービスからの応答をボイス・エージェントが待機する秒数。 この時間を過ぎると、ボイス・エージェントは {{site.data.keyword.conversationshort}} サービスとの通信を再試行します。 それでもサービスに到達できない場合、通話は失敗します。 |
+| `vgwConversationResponseTimeout` | 時間 (秒単位) <br/><br/>デフォルト: `5`  | {{site.data.keyword.conversationshort}} サービスからの応答をボイス・エージェントが待機する秒数。 この時間を過ぎると、ボイス・エージェントは {{site.data.keyword.conversationshort}} サービスとの通信を再試行します。 それでもサービスに到達できない場合、通話は失敗します。 |
 | `vgwSTTResponse` | JSON オブジェクト | JSON 形式の {{site.data.keyword.speechtotextshort}} サービスからの最終応答。これには、推奨候補および代替候補のトランスクリプトと信頼性スコアが含まれます。 <p>例えば、次の形式は、{{site.data.keyword.speechtotextshort}} サービスから受け取る形式と正確に一致します。</p><p><code>{<br/>&nbsp;&nbsp;"result_index": 0,<br/>&nbsp;&nbsp;"warnings": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;"Unknown arguments: continuous."<br/>&nbsp;&nbsp;],<br/>&nbsp;&nbsp;"results": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"final": true,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"alternatives": [<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello world",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.758<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"transcript": "Hello wooled",<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"confidence": 0.358<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;]<br/>}.</code></p> |
 | `vgwIsDTMF` | `Yes` / `No` | {{site.data.keyword.conversationshort}} サービスへの入力がデュアルトーン複数周波数 (DTMF) かどうかを示します。 |
 {: caption="表 3. ボイス・エージェントによって設定される変数" caption-side="top"}

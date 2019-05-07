@@ -1,13 +1,14 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-05"
+  years: 2019
+lastupdated: "2019-02-15"
+subcollection: "voice-agent"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:new_window: target="_blank"_}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -20,11 +21,26 @@ lastupdated: "2018-12-05"
 Puede elegir de la siguiente lista el proveedor de la conexión troncal SIP que utiliza para la integración con {{site.data.keyword.iva_full}}.
 {: #shortdesc}
 
+* [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
 * [AT&T y otros proveedores](#att-other)
 * [Interconexión con {{site.data.keyword.iva_short}}](#peering)
 * [Solicitud de configuración asistida](#request-setup)
+
+## Creación de una aplicación de voz Nexmo
+{: #nexmo-setup}
+
+  **Nota:** Para crear una [cuenta de Nexmo ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://dashboard.nexmo.com/sign-up){: new_window}, es necesaria una tarjeta de crédito, a la que se facturará periódicamente en función del uso de la conexión troncal SIP que configure. Si ya tiene una cuenta de Nexmo, puede utilizar la cuenta existente.
+
+  1. Cree una cuenta de Nexmo en el [sitio web de Nexmo ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://dashboard.nexmo.com/sign-up){: new_window}.
+
+  1. Siga las instrucciones del README en el repositorio github de Nexmo [![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/nexmo-community/watson-voice-agent){: new_window}. El repositorio github contiene una muestra de iniciación.
+
+  1. Una vez que su número de teléfono Nexmo esté aprovisionado y su aplicación se esté ejecutando, configure su Agente de Voz con el número de teléfono Nexmo.
+
+  1. Pruebe su configuración llamando a su número de teléfono Nexmo.
+
 
 ## Creación de una conexión troncal SIP de NetFoundry y número de teléfono
 {: #NetFoundry-setup}
@@ -43,7 +59,7 @@ Puede elegir de la siguiente lista el proveedor de la conexión troncal SIP que 
 
 1. Una vez que el pago se haya procesado correctamente, su número de teléfono de conexión troncal SIP se muestra en la cuenta.
 
-Necesita este número de teléfono para configurar el agente de voz y la transferencia de llamada, incluidos los códigos de área y país. Consulte [Creación y conexión del agente de voz](getting-started.html#step3).
+Necesita este número de teléfono para configurar el agente de voz y la transferencia de llamada, incluidos los códigos de área y país. Consulte [Creación y conexión del agente de voz](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
 
 
 ## Creación de una conexión troncal SIP de Twilio
@@ -69,12 +85,15 @@ Necesita este número de teléfono para configurar el agente de voz y la transfe
 
   En la página Números, pulse **Comprar un número** o, si ya tiene uno, pulse el icono **+**. Un panel muestra dónde puede suministrar un número de teléfono nuevo en su región. Asigne el número a la conexión troncal SIP que ha creado yendo a la conexión troncal SIP y pulsando el icono de número.
 
-  Necesita este número de teléfono para configurar el agente de voz, incluidos los códigos de área y país. Consulte [Creación y conexión del agente de voz](getting-started.html#step3).
+  Necesita este número de teléfono para configurar el agente de voz, incluidos los códigos de área y país. Consulte [Creación y conexión del agente de voz](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+
+  **NOTA**: Si utiliza una cuenta Lite/Trial Twilio para probar las transferencias en {{site.data.keyword.iva_short}},
+deberá asegurarse de _verificar_ el destino de transferencia. En el [sitio oficial de Twilio](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-) hallará más información.
 
 ## Interconexión con {{site.data.keyword.iva_short}}
 {: #peering}
 
-{{site.data.keyword.iva_short}} da soporte a conexiones entre iguales, como un túnel IPSec. Para la interconexión con {{site.data.keyword.iva_short}}, puede añadir a la lista blanca las direcciones IP de sus servidores.
+{{site.data.keyword.iva_short}} soporta conexiones de pares con las PBX del cliente, como Asterisk. Para la interconexión con {{site.data.keyword.iva_short}}, puede añadir a la lista blanca las direcciones IP de sus servidores.
 
 1. Vaya al panel de control _Gestionar_ y seleccione el separador _Instancia_.
 
@@ -91,6 +110,8 @@ Necesita este número de teléfono para configurar el agente de voz y la transfe
 {: #request-setup}
 
 Puede solicitar la configuración de red asistida para conectarse con AT&T u otros proveedores de conexiones troncales SIP, para la interconexión con {{site.data.keyword.iva_short}} o para solicitar más de 50 conexiones simultáneas utilizando el siguiente proceso.
+
+Puede incluir una PBX como Asterisk en su instancia de {{site.data.keyword.iva_short}}. Abra una incidencia de soporte sólo si la lista blanca de Internet pública no es una solución aceptable. Consulte [Direcciones IP a la lista blanca](/docs/services/voice-agent?topic=voice-agent-whitelist_IP#whitelist_IP).
 
 1. Abra una nueva [incidencia de soporte de {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/unifiedsupport/tickets/add)
 

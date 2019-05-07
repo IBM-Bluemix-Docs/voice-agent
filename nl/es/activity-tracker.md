@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-10-30"
+subcollection: "voice-agent"
 
 ---
 
@@ -17,9 +18,10 @@ lastupdated: "2018-10-30"
 # Sucesos de Activity Tracker
 {: #activity-tracker}
 
-Utilice el servicio {{site.data.keyword.cloudaccesstrailfull}} para realizar un seguimiento de cómo interactúan los usuarios y las aplicaciones con el servicio {{site.data.keyword.iva_full}} en {{site.data.keyword.Bluemix}}. {: shortdesc}
+Utilice el servicio {{site.data.keyword.cloudaccesstrailfull}} para realizar un seguimiento de cómo interactúan los usuarios y las aplicaciones con el servicio {{site.data.keyword.iva_full}} en {{site.data.keyword.Bluemix}}.
+{: shortdesc}
 
-El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra las actividades iniciadas por el usuario que cambian el estado de un servicio en {{site.data.keyword.Bluemix_notm}}. Para obtener más información consulte [{{site.data.keyword.cloudaccesstrailshort}}](../cloud-activity-tracker/index.html#getting-started-with-cla).
+El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra las actividades iniciadas por el usuario que cambian el estado de un servicio en {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started).
 
 ## Lista de sucesos
 {: #event-List}
@@ -48,7 +50,7 @@ Los sucesos de {{site.data.keyword.cloudaccesstrailshort}} están disponibles en
 Puede filtrar la lista de sucesos de actividad de un agente de voz específico por su ID de instancia.
 
 1. Vaya a la página **Gestionar** de {{site.data.keyword.cloudaccesstrailshort}}.
-2. Escriba `target.name_str` en el **Campo de búsqueda** y el ID de instancia del agente de voz en el campo **Buscar** como una serie. Compruebe que el ID de instancia del agente de voz está codificado con porcentajes y que utiliza una búsqueda con caracteres comodín, _*_ .
+2. Escriba `target.name_str` en el **Campo de búsqueda** y el ID de instancia del agente de voz en el campo **Buscar** como una serie. Compruebe que el ID de instancia del agente de voz está codificado con porcentajes y que utiliza una búsqueda con caracteres comodín, _*_.
 
 Por ejemplo, para buscar el ID de instancia del agente de voz, `serviceInstanceId=crn%3A...`.
 
@@ -77,4 +79,4 @@ Por ejemplo, puede filtrar por un ID de instancia del agente de voz específico 
 * **Campo de búsqueda**: `target.name_str`
 * **Buscar**: `"*crn%3A...*" AND action_str:"action string"`
 
-**Recuerde**: Compruebe que el id de instancia del agente de voz está codificado con porcentajes y que utiliza una búsqueda con caracteres comodín, _*_ .
+**Recuerde**: Compruebe que el id de instancia del agente de voz está codificado con porcentajes y que utiliza una búsqueda con caracteres comodín, _*_.

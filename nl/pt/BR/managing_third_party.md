@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-16"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,7 +22,7 @@ lastupdated: "2018-11-16"
 É possível conectar serviços de fala e texto de terceiro ao criar, clonar ou editar o agente de voz no painel _Gerenciar_.
 {: shortdesc}
 
-Como alternativa, para configurar as conexões de serviço de fala e texto rapidamente, é possível [usar a configuração dinâmica com o {{site.data.keyword.conversationshort}}](api_dynamic_config.html). Isso permite mudar a configuração do agente de voz com as tags de ação e as variáveis de estado.
+Como alternativa, para configurar as conexões de serviço de fala e texto rapidamente, é possível [usar a configuração dinâmica com o {{site.data.keyword.conversationshort}}](/docs/services/voice-agent?topic=voice-agent-dynamic-donfig). Isso permite mudar a configuração do agente de voz com as tags de ação e as variáveis de estado.
 
 ## Conectando-se ao Google Speech-to-Text por meio do {{site.data.keyword.iva_short}}
 {: #stt_va}
@@ -34,7 +35,7 @@ Em vez de usar uma instância do {{site.data.keyword.speechtotextfull}}, é poss
 
 1. Escolha o **Idioma** para a instância de serviço.
 
-1. Insira suas credenciais de serviço do Google Cloud Speech-to-Text.
+1. Insira suas credenciais de serviço Google Cloud Speech-to-Text, com um limite de até 3.072 caracteres.
   * É possível gerar suas credenciais de serviço no Google Cloud Platform como uma chave JSON ao [configurar uma conta de serviço ![ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). O exemplo de código a seguir contém os campos de credencial de amostra que você gera no Google Cloud Platform.
 
     ```json
@@ -77,7 +78,7 @@ Em vez de usar uma instância do {{site.data.keyword.texttospeechfull}}, é poss
 
 1. Escolha o **Idioma** e a **Voz** para a instância de serviço.
 
-1. Insira as credenciais de serviço do Google Cloud Text-to-Speech.
+1. Insira suas credenciais de serviço Google Cloud Text-to-Speech, com um limite de até 3.072 caracteres.
   * É possível gerar suas credenciais de serviço no Google Cloud Platform como uma chave JSON ao [configurar uma conta de serviço ![ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). O exemplo de código a seguir contém os campos de credencial de amostra que você gera no Google Cloud Platform.
 
     ```json

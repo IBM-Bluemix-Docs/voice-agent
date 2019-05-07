@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-16"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,7 +22,7 @@ lastupdated: "2018-11-16"
 在使用_管理_仪表板来创建、克隆或编辑语音代理程序时，可以连接第三方语音和文字服务。
 {: shortdesc}
 
-或者，要动态配置语音和文字服务连接，您可以[使用 {{site.data.keyword.conversationshort}} 进行动态配置](api_dynamic_config.html)。这样，您就可以使用操作标记和状态变量来更改语音代理程序配置了。
+或者，要动态配置语音和文字服务连接，您可以[使用 {{site.data.keyword.conversationshort}} 进行动态配置](/docs/services/voice-agent?topic=voice-agent-dynamic-donfig)。这样，您就可以使用操作标记和状态变量来更改语音代理程序配置了。
 
 ## 从 {{site.data.keyword.iva_short}} 连接到 Google Speech-to-Text
 {: #stt_va}
@@ -34,7 +35,7 @@ lastupdated: "2018-11-16"
 
 1. 为您的服务实例选择**语言**。
 
-1. 输入 Google Cloud Speech-to-Text 服务凭证。
+1. 输入 Google Cloud Speech-to-Text 服务凭证，限制为最多 3072 个字符。
   * [设置服务帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 时，您可以在 Google Cloud Platform 中生成服务凭证作为 JSON 密钥](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account)。以下代码示例包含您在 Google Cloud Platform 上生成的样本凭证字段。
 
     ```json
@@ -76,7 +77,7 @@ lastupdated: "2018-11-16"
 
 1. 为您的服务实例选择**语言**和**语音**。
 
-1. 输入 Google Cloud Text-to-Speech 服务凭证。
+1. 输入 Google Cloud Text-to-Speech 服务凭证，限制为最多 3072 个字符。
   * [设置服务帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 时，您可以在 Google Cloud Platform 中生成服务凭证作为 JSON 密钥](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account)。以下代码示例包含您在 Google Cloud Platform 上生成的样本凭证字段。
 
     ```json

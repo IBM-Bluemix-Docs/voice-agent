@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-07"
+subcollection: "voice-agent"
 
 
 ---
@@ -22,7 +23,7 @@ lastupdated: "2018-11-07"
 {: shortdesc}
 
 Para conectar o seu agente de voz a outras instâncias de serviço, é possível utilizar o nome de usuário e as credenciais de senha
-ou uma chave API para as suas instâncias de serviço.
+ou uma chave API para as suas instâncias de serviço. O nome de usuário e a senha são limitados a 64 e 256 caracteres, respectivamente. A chave de API é limitada a 64 caracteres.
 
 1. Na guia _Agentes de voz_ no painel _Gerenciar_, selecione **Criar um novo agente de voz** ou um agente de voz que deseja editar.
 
@@ -44,8 +45,10 @@ credenciais para as suas instâncias de serviço do {{site.data.keyword.conversa
 
 1. Digite as informações da instância de serviço.
 
-  * **{{site.data.keyword.conversationshort}}:** No campo **ID da área de trabalho**, insira o ID da área de trabalho que deseja usar com seu agente de voz. Para localizar o ID da área de trabalho, ative a ferramenta e, na área de trabalho que você deseja integrar, clique no ícone Ações (**&vellip;**) e selecione **Visualizar detalhes**.
+  * **{{site.data.keyword.conversationshort}}:** no campo **ID
+da área de trabalho**, insira o ID da área de trabalho que você deseja usar com seu agente de
+voz, com até 128 caracteres. Para localizar o ID da área de trabalho, ative a ferramenta e, na área de trabalho que você deseja integrar, clique no ícone Ações (**&vellip;**) e selecione **Visualizar detalhes**.
   * **{{site.data.keyword.speechtotextshort}}:** para **Selecionar tipo de modelo**, escolha **Banda estreita**, **Banda larga** ou **Banda larga e banda estreita** e, então, selecione o **Modelo** de idioma.
   * **{{site.data.keyword.texttospeechshort}}:** No campo **Voz**, selecione o idioma e a voz que seu serviço usa. Deve-se especificar uma voz para o seu serviço.
 
-**Lembre-se:** para que seu agente de voz funcione, deve-se configurar seu {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} e {{site.data.keyword.texttospeechshort}} para o mesmo idioma. Consulte [Idiomas suportados](about.html#supported-languages).
+**Lembre-se:** para que seu agente de voz funcione, deve-se configurar seu {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} e {{site.data.keyword.texttospeechshort}} para o mesmo idioma. Consulte [Idiomas suportados](/docs/services/voice-agent?topic=voice-agent-about#supported-languages).

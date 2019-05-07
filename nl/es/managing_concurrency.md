@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-03"
+subcollection: "voice-agent"
 
 
 ---
@@ -28,7 +29,7 @@ En todos los planes, puede recibir 2 conexiones simultáneas de forma gratuita. 
 
 1. En _Editar número máximo de conexiones simultáneas_, especifique el número máximo de conexiones simultáneas y pulse **Guardar**.
 
-El número mínimo de conexiones simultáneas que puede establecer mediante autoservicio es 10 y el máximo es 50. Si necesita más de 50 conexiones simultáneas para su agente de voz, consulte [Solicitud de configuración de red asistida](connect-SIP.html#request-setup).
+El número mínimo de conexiones simultáneas que puede establecer mediante autoservicio es 10 y el máximo es 50. Si necesita más de 50 conexiones simultáneas para su agente de voz, consulte [Solicitud de configuración de red asistida](/docs/services/voice-agent?topic=voice-agent-connect#request-setup).
 
 ## Información sobre precios de conexiones simultáneas
 {: #concurrent-charge}

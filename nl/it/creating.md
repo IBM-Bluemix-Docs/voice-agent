@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-03"
+subcollection: "voice-agent"
 
 ---
 
@@ -27,14 +28,14 @@ Puoi creare un'istanza del servizio {{site.data.keyword.iva_full}} utilizzando i
 
    La pagina del catalogo contiene informazioni sul servizio e sui relativi piani dei prezzi. Puoi modificare il valore **Service name**.
 
-2. Fai clic su **Create** per [creare un agent vocale dal dashboard _Manage_](managing_create.html#config_instance).
+2. Fai clic su **Create** per [creare un Voice Agent dal dashboard _Manage_](/docs/services/voice-agent?topic=voice-agent-config_instance#config_instance).
 
 ## Creazione del servizio dalla riga di comando
 {: #command_create}
 
-1. [Installa la CLI {{site.data.keyword.Bluemix_notm}}](../cli/index.html#overview).
+1. [Installa la CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
 
-2. Esegui il [comando `ibmcloud`](../cli/idt/commands.html#idt-cli) che crea la tua istanza del servizio Voice Agent con il piano _Lite_:
+2. Esegui il [comando `ibmcloud`](/docs/cli/idt?topic=cloud-cli-idt-cli#idt-cli) che crea la tua istanza del servizio Voice Agent con il piano _Lite_:
 
    ```
    ibmcloud service create VoiceAgent _Lite_ "My Voice Agent Service"

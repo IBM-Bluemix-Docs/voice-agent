@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-03"
+subcollection: "voice-agent"
 
 
 ---
@@ -28,7 +29,7 @@ lastupdated: "2018-12-03"
 
 1. 在_編輯並行連線數上限_ 中，輸入並行連線數上限，然後按一下**儲存**。
 
-您可設定的並行連線數下限是 10，而上限是 50。如果對於語音代理程式您需要超過 50 個的並行連線，請參閱[要求設定輔助網路](connect-SIP.html#request-setup).
+您可設定的並行連線數下限是 10，而上限是 50。如果對於語音代理程式您需要超過 50 個的並行連線，請參閱[要求設定輔助網路](/docs/services/voice-agent?topic=voice-agent-connect#request-setup).
 
 ## 並行連線計價資訊
 {: #concurrent-charge}

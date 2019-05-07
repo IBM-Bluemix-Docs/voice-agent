@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-04"
+  years: 2018, 2019
+lastupdated: "2019-03-15"
+subcollection: "voice-agent"
 
 
 ---
@@ -26,7 +27,7 @@ lastupdated: "2018-12-04"
 
 透過啟用通話轉接，如果來電者在交談期間要求與即時代理程式交談，則語音代理程式將會重新導向該通話。{{site.data.keyword.iva_short}} 使用 SIP REFER 將通話導向回去給 SIP 幹線提供者處理，且不會錨定已轉接的通話。
 
-您可以藉由在 SIP 提供者配置中設定終止 URI 或電話 URI，啟用通話轉接。然後，您可以在 {{site.data.keyword.conversationshort}} 實例的對話節點，在 API 動作上定義轉接目標。您的轉接目標是包含終止 URI 及電話號碼的 SIP URI，或是具有電話號碼的電話 URI。如需所支援動作以及自訂語音代理程式的相關資訊，請參閱[使用 API 程式設計語音代理程式](api.html)。
+您可以藉由在 SIP 提供者配置中設定終止 URI 或電話 URI，啟用通話轉接。然後，您可以在 {{site.data.keyword.conversationshort}} 實例的對話節點，在 API 動作上定義轉接目標。您的轉接目標是包含終止 URI 及電話號碼的 SIP URI，或是具有電話號碼的電話 URI。如需所支援動作以及自訂語音代理程式的相關資訊，請參閱[使用 API 程式設計語音代理程式](/docs/services/voice-agent?topic=voice-agent-api)。
 
 ## 步驟 1：設定終止 URI
 {: #termination-setup}
@@ -55,7 +56,7 @@ dal.watson-va.netfoundry.net
 
 1. 選擇要新增通話轉接的幹線，方法是選取現有幹線，或按一下 **+** 圖示來建立新的幹線。
 
-  * 如果您建立新幹線，則需要在**起源**儀表板中配置 _SIP 幹線 URI_。如需相關資訊，請參閱[連接 SIP 幹線](connect-SIP.html)。
+  * 如果您建立新幹線，則需要在**起源**儀表板中配置 _SIP 幹線 URI_。如需相關資訊，請參閱[連接 SIP 幹線](/docs/services/voice-agent?topic=voice-agent-connect)。
 
 1. 在導覽列上選取**終止**，然後輸入終止 URI 的名稱。
 
@@ -71,13 +72,13 @@ dal.watson-va.netfoundry.net
 ## 步驟 2：配置 {{site.data.keyword.conversationshort}} 以進行通話轉接
 {: #conversation-setup}
 
-若要進一步瞭解如何在 {{site.data.keyword.conversationshort}} 服務中工作，請參閱[關於 {{site.data.keyword.conversationshort}}](../conversation/index.html#about)。
+若要進一步瞭解如何在 {{site.data.keyword.conversationshort}} 服務中工作，請參閱[關於 {{site.data.keyword.conversationshort}}](/docs/services/assistant?topic=assistant-index#indext)。
 
 1. 在 {{site.data.keyword.Bluemix_notm}} 儀表板中，選取語音代理程式所使用的 {{site.data.keyword.conversationshort}} 實例。
 
 1. 從_開始使用_ 儀表板中，按一下**啟動工具**按鈕。
 
-1. 在您要編輯的工作區上，按一下**開始使用**。
+1. 在您要編輯的技能上，按一下**開始使用**。
 
 1. 按一下**新增目的**，然後輸入目的名稱，例如_轉接_。
 
@@ -92,6 +93,8 @@ dal.watson-va.netfoundry.net
 1. 針對_則回應：_ 區段，按一下 **&vellip;** 圖示，然後選取**開啟 JSON 編輯器**。複製並貼上下列程式碼 Snippet，以取代欄位中的程式碼。
 
   * 如果您使用電話 URI，將 `transferTarget` 中的 SIP URI 取代為您的電話 URI。例如，`"transferTarget":"tel:+18889990000"`。
+
+  * **附註**：請確定 `transferTarget` URI 的開頭為 `+`。
 
   ```json
   {
@@ -114,6 +117,8 @@ dal.watson-va.netfoundry.net
 1. 確認 `transferTarget` 終止 URI 或電話 URI 中的電話號碼正確地符合 SIP 幹線中的電話號碼。
 
 **請記住**：轉接目標的 SIP URI 包括一個電話號碼及您建立的終止 URI。請不要在轉接目標中使用個人電話號碼。例如，如果電話號碼是 `18889990000`，而終止 URI 是 `mysiptrunk.pstn.twilio.com`，則完整 SIP URI 是 `sip:+18889990000\\@mysiptrunk.pstn.twilio.com`。如果您使用 Netfoundry，而且電話號碼為 `18889990000`，則完整 SIP URI 是 `sip:+18889990000\\@dal.watson-va.netfoundry.net`。
+
+**附註**：請確定 `transferTarget` URI 的開頭為 `+`，且可包括最多 256 個字元。
 
 ## 後續步驟
 {: #Next}

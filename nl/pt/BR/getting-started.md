@@ -4,6 +4,10 @@ copyright:
   years: 2017, 2018
 lastupdated: "2018-12-03"
 
+keywords: voice agent, creating a SIP trunk, creating and connecting your voice agent,
+
+subcollection: "voice-agent"
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -14,10 +18,14 @@ lastupdated: "2018-12-03"
 {:tip: .tip}
 
 # Tutorial de introdução
+{: #getting-started}
 {{site.data.keyword.iva_full}} ajuda a integrar um conjunto de serviços do Watson orquestrados com a rede telefônica usando o Protocolo de Inicialização de Sessão (SIP). Este tutorial descreve como configurar um agente cognitivo de voz que pode ser chamado em qualquer telefone.
 {: shortdesc}
 
 Assista a uma demonstração de como criar seu primeiro agente de voz neste tutorial do [{{site.data.keyword.iva_full_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/tv/building-voice-enabled-cognitive-applications-with-watson/).
+{: tip}
+
+Se você precisar de alguma assistência, localize-nos no Slack na equipe do [IBM Cloud Technology ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://slack-invite-ibm-cloud-tech.mybluemix.net/) no canal `#ibmvoicegateway`
 {: tip}
 
 ## Antes de começar
@@ -38,10 +46,10 @@ Depois de criar o serviço, anote o terminal do agente de voz no painel _Introdu
 1. Crie um tronco SIP por meio de qualquer um dos provedores suportados a seguir. Em seguida, associe um número de telefone ao seu
 tronco SIP.
 
-  * [NetFoundry](connect-SIP.html#NetFoundry-setup)
-  * [Twilio](connect-SIP.html#twilio-setup)
-  * [AT&T e outros provedores de entroncamento SIP](connect-SIP.html#att-other)
-  * [Peering com {{site.data.keyword.iva_short}}](connect-SIP.html#peering)
+  * [NetFoundry](/docs/services/voice-agent?topic=voice-agent-connect#NetFoundry-setup)
+  * [Twilio](/docs/services/voice-agent?topic=voice-agent-connect#twilio-setup)
+  * [AT&T e outros provedores de entroncamento SIP](/docs/services/voice-agent?topic=voice-agent-connect#att-other)
+  * [Peering com {{site.data.keyword.iva_short}}](/docs/services/voice-agent?topic=voice-agent-connect#peering)
 
 ## Etapa 3: criando e conectando o seu agente de voz
 {: #step3}
@@ -60,23 +68,24 @@ os códigos de país e de área. Por exemplo, para um número 800 dos Estados Un
   * Ou clique em cada um dos nomes de serviço para criar os serviços sozinho. Em seguida, retorne para
 o {{site.data.keyword.iva_short}} e crie um agente de voz separadamente.
 
-   Se você criou manualmente uma instância de serviço {{site.data.keyword.conversationshort}}, inclua um diálogo para que seja possível testar seu agente de voz.  Para iniciar rapidamente, clone a [conversa de amostra ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) do GitHub e, em seguida, [importe a amostra](../conversation/configure-workspace.html#creating-workspaces) como uma área de trabalho:
+   Se você criou manualmente uma instância de serviço {{site.data.keyword.conversationshort}}, inclua um diálogo para que seja possível testar seu agente de voz.  Para começar a usar rapidamente, clone a [conversa de amostra
+![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) do GitHub e, em seguida, [importe a amostra](/docs/conversation?topic=services/conversation-configuring-a-watson-assistant-workspace#creating-workspaces) como
+uma qualificação:
 
    1. Na página GitHub de conversa de amostra, clique no número da linha `1` e selecione **... > Copiar linha**. Cole o texto copiado em um arquivo e salve-o como um arquivo JSON, como `voice-gateway-conversation-en.json`.
-   2. Ative a ferramenta {{site.data.keyword.conversationshort}}. Na página _Áreas de trabalho_, clique
-no ícone ![Importar área de trabalho](../conversation/images/workspace_import.png) e importe o arquivo JSON.
+   2. Ative a ferramenta {{site.data.keyword.conversationshort}}. Na página _Qualificações_, clique no ícone ![Área de trabalho Importar](../conversation/images/workspace_import.png) e importe o arquivo JSON.
 
-  Como alternativa, é possível [construir seu próprio diálogo](../conversation/dialog-build.html) para simular o ambiente de produção. No mínimo, seu diálogo deve conter um nó com a condição `conversation_start` e um nó com uma resposta padrão.
+  Como alternativa, é possível [construir seu próprio diálogo](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog) para simular o ambiente de produção. No mínimo, seu diálogo deve conter um nó com a condição `conversation_start` e um nó com uma resposta padrão.
 
 
 ## Próximas etapas
-{: #next}
+{: #next-steps}
 
 Teste seu agente de voz ligando para seu número de telefone associado. Se você ouvir uma resposta, seu agente de voz está ativo!
 
-Se você não ouvir uma resposta, poderá examinar seus logs de chamada e o uso do agente de voz no painel _Uso_. Consulte [Visualizando logs de uso e de chamada](logging.html).
+Se você não ouvir uma resposta, poderá examinar seus logs de chamada e o uso do agente de voz no painel _Uso_. Consulte [Visualizando logs de uso e de chamada](/docs/services/voice-agent?topic=voice-agent-logging).
 
 É possível editar as configurações para o seu agente de voz, criar ou remover agentes de voz e incluir múltiplos locais de
-serviço do Watson no seu agente de voz do painel _Gerenciar_. Para obter mais informações, consulte [Gerenciando agentes de voz](managing.html).
+serviço do Watson no seu agente de voz do painel _Gerenciar_. Para obter mais informações, consulte [Gerenciando agentes de voz](/docs/services/voice-agent?topic=voice-agent-managing).
 
-Também é possível definir configurações avançadas, como proteger sua conexão SIP de sua conta do Twilio. Consulte [Protegendo Conexões](secure-trunking.html).
+Também é possível definir configurações avançadas, como proteger sua conexão SIP de sua conta do Twilio. Consulte [Protegendo Conexões](/docs/services/voice-agent?topic=voice-agent-securing).

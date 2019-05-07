@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-05"
+lastupdated: "2018-12-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -15,7 +16,7 @@ lastupdated: "2018-12-05"
 {:tip: .tip}
 
 # Placement sur liste blanche d'adresses IP
-{: #edit_IP}
+{: #whitelist_IP}
 
 Vous pouvez configurer l'appairage avec {{site.data.keyword.iva_short}} ou d'autres fournisseurs en plaçant des adresses IP en liste blanche.
 {: shortdesc}
