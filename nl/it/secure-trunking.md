@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-06-14"
+subcollection: "voice-agent"
 
 ---
 
@@ -28,7 +29,7 @@ Puoi abilitare SRTP (Secure Real Time Transport Protocol) e la codifica utilizza
 
 1. Scegli il trunk che vuoi proteggere con SRTP selezionando un trunk esistente oppure creandone uno nuovo facendo clic sull'icona **+**.
 
-  * Se crei un nuovo trunk, devi configurare il _SIP Trunk URI_ nel dashboard **Origination**.  Per ulteriori informazioni, vedi [Connessione a un trunk SIP](connect-SIP.html).
+  * Se crei un nuovo trunk, devi configurare il _SIP Trunk URI_ nel dashboard **Origination**.  Per ulteriori informazioni, vedi [Connessione a un trunk SIP](/docs/services/voice-agent?topic=voice-agent-connect).
 
 1. Nel dashboard _General_, trova la sezione _Secure Trunking_. Fai clic su **Disabled** per modificare l'impostazione di trunking protetto con **Enabled** e salva le tue modifiche.
 

@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-06-14"
+subcollection: "voice-agent"
 
 ---
 
@@ -28,7 +29,7 @@ lastupdated: "2018-06-14"
 
 1. 选择要使用 SRTP 保护的中继（您可以选择现有中继，也可以单击 **+** 图标来创建新中继）。
 
-  * 要创建新中继，需要在**来源**仪表板中配置 _SIP 中继 URI_。有关更多信息，请参阅[连接 SIP 中继](connect-SIP.html)。
+  * 要创建新中继，需要在**来源**仪表板中配置 _SIP 中继 URI_。有关更多信息，请参阅[连接 SIP 中继](/docs/services/voice-agent?topic=voice-agent-connect)。
 
 1. 在_一般_仪表板上，查找_保护中继_部分。单击**已禁用**将安全中继设置更改为**已启用**，并保存更改。
 

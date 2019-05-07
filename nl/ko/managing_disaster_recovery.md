@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -31,7 +32,7 @@ lastupdated: "2018-11-11"
 
 1. 기존 음성 에이전트에 중복 서비스를 추가하려면 <em>관리</em> 대시보드의 <em>음성 에이전트</em> 탭으로 이동하십시오. 구성할 음성 에이전트에 대해 **에이전트 편집**을 클릭하십시오.
 
-1. 연결할 {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}} 또는 {{site.data.keyword.speechtotextshort}} 서비스에 대해 **위치 1** 또는 **위치 2**를 선택하고 구성 정보를 추가하십시오. 자신의 작업공간이나 기타 작업공간에서 서드파티 서비스 또는 Watson 서비스 인스턴스를 사용할 수 있습니다. [기타 {{site.data.keyword.Bluemix_notm}} 작업공간에서 서비스 인스턴스 사용](managing_other.html)을 참조하십시오.
+1. 연결할 {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}} 또는 {{site.data.keyword.speechtotextshort}} 서비스에 대해 **위치 1** 또는 **위치 2**를 선택하고 구성 정보를 추가하십시오. 자신의 작업공간이나 기타 작업공간에서 서드파티 서비스 또는 Watson 서비스 인스턴스를 사용할 수 있습니다. [기타 {{site.data.keyword.Bluemix_notm}} 작업공간에서 서비스 인스턴스 사용](/docs/services/voice-agent?topic=voice-agent-other_service)을 참조하십시오.
 
 **중요:** 서비스 중복성을 원하는 경우에는 서로 다른 위치에 대해 서로 다른 서비스 지역에서 Watson 서비스 인스턴스를 사용해야 합니다.
 

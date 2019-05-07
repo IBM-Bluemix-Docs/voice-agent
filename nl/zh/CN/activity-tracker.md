@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-10-30"
+subcollection: "voice-agent"
 
 ---
 
@@ -17,9 +18,10 @@ lastupdated: "2018-10-30"
 # 活动跟踪程序事件
 {: #activity-tracker}
 
-使用 {{site.data.keyword.cloudaccesstrailfull}} 服务，以跟踪用户和应用程序与 {{site.data.keyword.Bluemix}} 中的 {{site.data.keyword.iva_full}} 服务进行交互的方式。{: shortdesc}
+使用 {{site.data.keyword.cloudaccesstrailfull}} 服务，以跟踪用户和应用程序与 {{site.data.keyword.Bluemix}} 中的 {{site.data.keyword.iva_full}} 服务进行交互的方式。
+{: shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 服务记录用户发起的活动，这些活动会更改 {{site.data.keyword.Bluemix_notm}} 中服务的状态。有关更多信息，请参阅 [{{site.data.keyword.cloudaccesstrailshort}}](../cloud-activity-tracker/index.html#getting-started-with-cla)。
+{{site.data.keyword.cloudaccesstrailfull_notm}} 服务记录用户发起的活动，这些活动会更改 {{site.data.keyword.Bluemix_notm}} 中服务的状态。有关更多信息，请参阅 [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started)。
 
 ## 事件列表
 {: #event-List}

@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-08-24"
+  years: 2019
+lastupdated: "2019-01-30"
+subcollection: "voice-agent"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,9 +26,9 @@ Talvez você queira coletar e analisar dados de chamada do {{site.data.keyword.i
 
 Analisar dados desses eventos pode ajudá-lo a ajustar diálogos, refinar intenções e melhorar a experiência geral do responsável pela chamada.
 
-Ao criar ou editar agentes de voz, é possível também escolher ativar o encaminhamento de eventos. Para obter mais detalhes sobre como criar e editar agentes de voz, consulte [Gerenciando agentes de voz](managing.html). É necessário fornecer informações da conta do {{site.data.keyword.cloudant_short_notm}}, incluindo o nome e a senha da conta, para ativar o encaminhamento de eventos.
+Ao criar ou editar agentes de voz, é possível também escolher ativar o encaminhamento de eventos. Para obter mais detalhes sobre como criar e editar agentes de voz, consulte [Gerenciando agentes de voz](/docs/services/voice-agent?topic=voice-agent-managing). É necessário fornecer informações da conta do {{site.data.keyword.cloudant_short_notm}}, incluindo o nome e a senha da conta, para ativar o encaminhamento de eventos.
 
-**Importante:** o CDR, a transcrição e os eventos de turnos incluem informações de seus usuários que podem potencialmente conter dados de Informação Protegida de Saúde (PHI), Informações Pessoalmente Identificáveis (PII) ou Padrão de Segurança de Dados PCI (PCI DSS). Para evitar a exposição de informações pessoais, deve-se assegurar que a instância do {{site.data.keyword.cloudant_short_notm}} proteja adequadamente as informações confidenciais que seus usuários compartilham na conversa ou durante a conversa. Consulte [Segurança de informações e privacidade de dados: encaminhamento de eventos](infosec.html#event_forwarding) e [{{site.data.keyword.cloudant_short_notm}}: segurança](../Cloudant/offerings/security.html#security).
+**Importante:** o CDR, a transcrição e os eventos de turnos incluem informações de seus usuários que podem potencialmente conter dados de Informação Protegida de Saúde (PHI), Informações Pessoalmente Identificáveis (PII) ou Padrão de Segurança de Dados PCI (PCI DSS). Para evitar a exposição de informações pessoais, deve-se assegurar que a instância do {{site.data.keyword.cloudant_short_notm}} proteja adequadamente as informações confidenciais que seus usuários compartilham na conversa ou durante a conversa. Consulte [Segurança de informações e privacidade de dados: encaminhamento de eventos](/docs/services/voice-agent?topic=voice-agent-infosec#event_forwarding) e [{{site.data.keyword.cloudant_short_notm}}: segurança](/docs/services/Cloudant/offerings?topic=cloudant-security#security).
 
 
 ## Ativando o encaminhamento de eventos
@@ -39,7 +40,9 @@ Ao criar ou editar agentes de voz, é possível também escolher ativar o encami
 
 1. Selecione **Minha instância de serviço {{site.data.keyword.cloudant_short_notm}}** ou **Outra instância de serviço {{site.data.keyword.cloudant_short_notm}}**.
   * Se você estiver usando **Minha instância de serviço {{site.data.keyword.cloudant_short_notm}}**, selecione o nome da conta **{{site.data.keyword.cloudant_short_notm}} e o** nome de usuário nas listas.
-  * Se você estiver usando **Outra instância de serviço do {{site.data.keyword.cloudant_short_notm}}**, insira o nome de usuário e a senha do {{site.data.keyword.cloudant_short_notm}} ou a chave API para a conta.
+  * Se você estiver criando um agente de voz na região de Dallas ou Washington DC e não tiver uma instância do serviço {{site.data.keyword.cloudant_short_notm}}, será possível criar uma no menu **Conta do Cloudant**.
+  * Se você estiver usando **Outra instância de serviço do {{site.data.keyword.cloudant_short_notm}}**, insira o nome de usuário e a senha do {{site.data.keyword.cloudant_short_notm}} (com até 128 e 256 caracteres, respectivamente)
+ou a chave de API para a conta (com até 64 caracteres).
 
 1. Selecione **Ativar** para cada tipo de evento que você deseja encaminhar e, em seguida, escolha o banco de dados no qual deseja encaminhar os eventos.
   * Eventos do registro de detalhe de chamada (CDR)
@@ -49,6 +52,7 @@ Ao criar ou editar agentes de voz, é possível também escolher ativar o encami
 1. Visualize seu banco de dados para assegurar que o evento relate o encaminhamento corretamente.
 
 ## Links relacionados
+{: #related-links-forwarding}
 * [IBM Voice Gateway: Relatando eventos](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}
-* [Segurança de informações e privacidade de dados](infosec.html)
-* [{{site.data.keyword.cloudant_short_notm}}: segurança](../Cloudant/offerings/security.html#security)
+* [Segurança de informações e privacidade de dados](/docs/services/voice-agent?topic=voice-agent-infosec)
+* [{{site.data.keyword.cloudant_short_notm}}: segurança](/docs/services/Cloudant/offerings?topic=cloudant-security#security)

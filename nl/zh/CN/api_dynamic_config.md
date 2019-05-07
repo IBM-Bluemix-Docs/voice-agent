@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-08"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,12 +22,12 @@ lastupdated: "2018-11-08"
 您可以通过在 {{site.data.keyword.conversationshort}} 对话节点中设置“语音转文字”或“文字转语音”来连接第三方语音和文字服务。
 {: shortdesc}
 
-要查看代码示例以及有关如何设置状态和启动操作序列的信息，请参阅[使用 API 对语音代理程序编程](api.html)。
+要查看代码示例以及有关如何设置状态和启动操作序列的信息，请参阅[使用 API 对语音代理程序编程](/docs/services/voice-agent?topic=voice-agent-api)。
 
 ## 从 {{site.data.keyword.conversationshort}} 对话节点连接到 Google Speech-to-Text
 {: #stt_dialog}
 
-您可以对 {{site.data.keyword.conversationshort}} 进行编程，以使用 `"vgwActSetSTTConfig"` 命令来配置 STT 设置，而不是通过编辑语音代理程序来配置与 Google Speech-to-Text 的连接。请参阅[编辑对话响应中的 JSON](api.html#json-editor)。
+您可以对 {{site.data.keyword.conversationshort}} 进行编程，以使用 `"vgwActSetSTTConfig"` 命令来配置 STT 设置，而不是通过编辑语音代理程序来配置与 Google Speech-to-Text 的连接。请参阅[编辑对话响应中的 JSON](/docs/services/voice-agent?topic=voice-agent-api#json-editor)。
 
 1. 在 {{site.data.keyword.conversationshort}} 对话的 JSON 编辑器中，向您的对话节点添加 `"vgwActSetSTTConfig"` 命令。
 
@@ -69,7 +70,7 @@ lastupdated: "2018-11-08"
 ## 从 {{site.data.keyword.conversationshort}} 对话节点连接到 Google Text-to-Speech
 {: #tts_dialog}
 
-您可以对 {{site.data.keyword.conversationshort}} 进行编程，以使用 `"vgwActSetTTSConfig"` 命令来配置 TTS 设置，而不是通过编辑语音代理程序来配置与 Google Text-to-Speech 的连接。请参阅[编辑对话响应中的 JSON](api.html#json-editor)。
+您可以对 {{site.data.keyword.conversationshort}} 进行编程，以使用 `"vgwActSetTTSConfig"` 命令来配置 TTS 设置，而不是通过编辑语音代理程序来配置与 Google Text-to-Speech 的连接。请参阅[编辑对话响应中的 JSON](/docs/services/voice-agent?topic=voice-agent-api#json-editor)。
 
 1. 在 {{site.data.keyword.conversationshort}} 对话的 JSON 编辑器中，向您的对话节点添加 `"vgwActSetTTSConfig"` 命令。
 

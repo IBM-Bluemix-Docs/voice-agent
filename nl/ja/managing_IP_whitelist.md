@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-05"
+lastupdated: "2018-12-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -15,7 +16,7 @@ lastupdated: "2018-12-05"
 {:tip: .tip}
 
 # ホワイトリストへの IP アドレスの登録
-{: #edit_IP}
+{: #whitelist_IP}
 
 {{site.data.keyword.iva_short}} または他のプロバイダーへのピアリングは、IP アドレスをホワイトリストに登録することによって構成します。
 {: shortdesc}

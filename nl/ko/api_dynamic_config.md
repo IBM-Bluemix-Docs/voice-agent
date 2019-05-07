@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-08"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,12 +22,12 @@ lastupdated: "2018-11-08"
 {{site.data.keyword.conversationshort}} 대화 노드에서 Speech to Text 또는 Text to Speech를 설정하여 서드파티 음성 및 텍스트 서비스에 연결할 수 있습니다.
 {: shortdesc}
 
-상태를 설정하고 조치 순서를 시작하는 방법에 대한 정보와 코드 예제는 [API를 사용한 음성 에이전트 프로그래밍](api.html)을 참조하십시오.
+상태를 설정하고 조치 순서를 시작하는 방법에 대한 정보와 코드 예제는 [API를 사용한 음성 에이전트 프로그래밍](/docs/services/voice-agent?topic=voice-agent-api)을 참조하십시오.
 
 ## {{site.data.keyword.conversationshort}} 대화 노드에서 Google Speech-to-Text에 연결
 {: #stt_dialog}
 
-음성 에이전트를 편집하여 Google Speech-to-Text에 대한 연결을 구성하는 대신 `"vgwActSetSTTConfig"` 명령을 사용하여 STT 설정을 구성하도록 {{site.data.keyword.conversationshort}}를 프로그래밍할 수 있습니다. [대화 응답에서 JSON 편집](api.html#json-editor)을 참조하십시오.
+음성 에이전트를 편집하여 Google Speech-to-Text에 대한 연결을 구성하는 대신 `"vgwActSetSTTConfig"` 명령을 사용하여 STT 설정을 구성하도록 {{site.data.keyword.conversationshort}}를 프로그래밍할 수 있습니다. [대화 응답에서 JSON 편집](/docs/services/voice-agent?topic=voice-agent-api#json-editor)을 참조하십시오.
 
 1. {{site.data.keyword.conversationshort}} 대화에 대한 JSON 편집기에서 `"vgwActSetSTTConfig"` 명령을 대화 노드에 추가하십시오.
 
@@ -69,7 +70,7 @@ lastupdated: "2018-11-08"
 ## {{site.data.keyword.conversationshort}} 대화 노드에서 Google Text-to-Speech에 연결
 {: #tts_dialog}
 
-음성 에이전트를 편집하여 Google Text-to-Speech에 대한 연결을 구성하는 대신 `"vgwActSetTTSConfig"` 명령을 사용하여 TTS 설정을 구성하도록 {{site.data.keyword.conversationshort}}를 프로그래밍할 수 있습니다. [대화 응답에서 JSON 편집](api.html#json-editor)을 참조하십시오.
+음성 에이전트를 편집하여 Google Text-to-Speech에 대한 연결을 구성하는 대신 `"vgwActSetTTSConfig"` 명령을 사용하여 TTS 설정을 구성하도록 {{site.data.keyword.conversationshort}}를 프로그래밍할 수 있습니다. [대화 응답에서 JSON 편집](/docs/services/voice-agent?topic=voice-agent-api#json-editor)을 참조하십시오.
 
 1. {{site.data.keyword.conversationshort}} 대화에 대한 JSON 편집기에서 `"vgwActSetTTSConfig"` 명령을 대화 노드에 추가하십시오.
 

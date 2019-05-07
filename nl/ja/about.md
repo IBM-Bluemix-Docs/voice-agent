@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-06"
+subcollection: "voice-agent"
 
 ---
 
@@ -25,9 +26,9 @@ lastupdated: "2018-11-06"
 {{site.data.keyword.iva_short}} は、環境の全体的なアーキテクチャー内にある複数のコンポーネントの 1 つで、以下の要素が含まれることがあります。
 
 * [IBM Voice Gateway ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SS4U29/) に基づくボイス・エージェント。これは以下の複数の Watson サービスを調整します。
-  * [{{site.data.keyword.speechtotextshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](../speech-to-text/index.html): 発信者の音声をテキストに変換します
-  * [{{site.data.keyword.conversationshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](../conversation/index.html): テキストを分析し、それをインテントにマップして、ユーザーが作成したダイアログに基づいて応答を提供します。
-  * [{{site.data.keyword.texttospeechshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](../text-to-speech/index.html): 応答を音声オーディオに変換します。
+  * [{{site.data.keyword.speechtotextshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/speech-to-text?topic=speech-to-text-about): 発信者の音声をテキストに変換します
+  * [{{site.data.keyword.conversationshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/assistant?topic=assistant-index#index): テキストを分析し、それをインテントにマップして、ユーザーが作成したダイアログに基づいて応答を提供します。
+  * [{{site.data.keyword.texttospeechshort}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/text-to-speech?topic=text-to-speech-about): 応答を音声オーディオに変換します。
 * SIP トランク。これはボイス・エージェントを電話網に接続します
 * オプションのサービス・オーケストレーション・エンジン (SOE)。これは {{site.data.keyword.conversationshort}} サービスとボイス・エージェントの間に存在して、環境をさらにカスタマイズできるようにします
 
@@ -74,7 +75,7 @@ SIP トランクを使用して、公衆電話網から環境を素早くセッ�
 
 サービス・オーケストレーション・エンジンを実装する方法について詳しくは、[GitHub のサービス・オーケストレーション・エンジンのサンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window} を参照してください。
 
-**重要**: データ・セキュリティーの場合、`http:` ではなく `https:` を使用して、SOE ワークスペースにセキュア URL を使用していることを確認してください。また、認証が必要です。 セキュリティーに関する考慮事項の詳細については、[機密保護とデータ・プライバシー](infosec.html)を参照してください。
+**重要**: データ・セキュリティーの場合、`http:` ではなく `https:` を使用して、SOE ワークスペースにセキュア URL を使用していることを確認してください。また、認証が必要です。 セキュリティーに関する考慮事項の詳細については、[機密保護とデータ・プライバシー](/docs/services/voice-agent?topic=voice-agent-infosec)を参照してください。
 
 ## 機能
 {: #features}

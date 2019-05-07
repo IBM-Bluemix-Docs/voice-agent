@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-06-14"
+subcollection: "voice-agent"
 
 ---
 
@@ -28,7 +29,7 @@ lastupdated: "2018-06-14"
 
 1. 選擇您要使用 SRTP 保護其安全的幹線，方法是選取現有幹線，或按一下 **+** 圖示來建立新的幹線。
 
-  * 如果您建立新幹線，則需要在**起源**儀表板中配置 _SIP 幹線 URI_。如需相關資訊，請參閱[連接 SIP 幹線](connect-SIP.html)。
+  * 如果您建立新幹線，則需要在**起源**儀表板中配置 _SIP 幹線 URI_。如需相關資訊，請參閱[連接 SIP 幹線](/docs/services/voice-agent?topic=voice-agent-connect)。
 
 1. 在_一般_ 儀表板上，尋找_保護幹線安全_ 區段。按一下**已停用**，以將安全幹線設定變更為**已啟用**，然後儲存變更。
 

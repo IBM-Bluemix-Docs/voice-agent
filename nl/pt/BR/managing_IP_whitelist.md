@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-05"
+lastupdated: "2018-12-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -15,7 +16,7 @@ lastupdated: "2018-12-05"
 {:tip: .tip}
 
 # Inserindo os endereços IP na lista de desbloqueio
-{: #edit_IP}
+{: #whitelist_IP}
 
 É possível configurar o mesmo nível para o {{site.data.keyword.iva_short}} ou outros provedores inserindo os endereços IP na lista de desbloqueio.
 {: shortdesc}

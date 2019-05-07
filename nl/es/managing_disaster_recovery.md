@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -31,7 +32,7 @@ Puede añadir una ubicación de servicio de Watson o de un tercero a la configur
 
 1. Para añadir un servicio redundante a un agente de voz existente, vaya al separador _Agentes de voz_ en el panel de control _Gestionar_. Pulse **Editar agente** para el agente de voz que desea configurar.
 
-1. Elija **Ubicación 1** o **Ubicación 2** para el servicio {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}} o {{site.data.keyword.speechtotextshort}} que desea conectar y añada la información de configuración. Puede utilizar instancias de servicio de Watson o de terceros en su espacio de trabajo o en otros espacios de trabajo. Consulte [Utilización de instancias de servicio en otros espacios de trabajo de {{site.data.keyword.Bluemix_notm}}](managing_other.html).
+1. Elija **Ubicación 1** o **Ubicación 2** para el servicio {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}} o {{site.data.keyword.speechtotextshort}} que desea conectar y añada la información de configuración. Puede utilizar instancias de servicio de Watson o de terceros en su espacio de trabajo o en otros espacios de trabajo. Consulte [Utilización de instancias de servicio en otros espacios de trabajo de {{site.data.keyword.Bluemix_notm}}](/docs/services/voice-agent?topic=voice-agent-other_service).
 
 **Recuerde**: Para añadir redundancia al servicio, debe utilizar instancias de servicio de Watson de distintas regiones para las distintas ubicaciones.
 

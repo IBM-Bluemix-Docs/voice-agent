@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-04"
+  years: 2018, 2019
+lastupdated: "2019-03-15"
+subcollection: "voice-agent"
 
 
 ---
@@ -26,7 +27,7 @@ lastupdated: "2018-12-04"
 
 启用呼叫转移后，如果呼叫者在对话期间请求与人工代理通话，语音代理程序会重定向该呼叫。{{site.data.keyword.iva_short}} 使用 SIP REFER 将呼叫定向回 SIP 中继提供者以进行处理，并且不会锚定已转移的电话呼叫。
 
-您可以通过在 SIP 提供者配置中设置终止 URI 或电话 URI 来启用呼叫转移。然后在 {{site.data.keyword.conversationshort}} 实例的对话节点中的 API 操作上定义转移目标。转移目标是包含终止 URI 和电话号码的 SIP URI，或是包含电话号码的电话 URI。有关支持的操作和定制语音代理程序的更多信息，请参阅[使用 API 对语音代理程序编程](api.html)。
+您可以通过在 SIP 提供者配置中设置终止 URI 或电话 URI 来启用呼叫转移。然后在 {{site.data.keyword.conversationshort}} 实例的对话节点中的 API 操作上定义转移目标。转移目标是包含终止 URI 和电话号码的 SIP URI，或是包含电话号码的电话 URI。有关支持的操作和定制语音代理程序的更多信息，请参阅[使用 API 对语音代理程序编程](/docs/services/voice-agent?topic=voice-agent-api)。
 
 ## 步骤 1：设置终止 URI
 {: #termination-setup}
@@ -55,7 +56,7 @@ dal.watson-va.netfoundry.net
 
 1. 选择要向其中添加呼叫转移的中继（您可以选择现有中继，也可以单击 **+** 图标来创建新中继）。
 
-  * 要创建新中继，需要在**来源**仪表板中配置 _SIP 中继 URI_。有关更多信息，请参阅[连接 SIP 中继](connect-SIP.html)。
+  * 要创建新中继，需要在**来源**仪表板中配置 _SIP 中继 URI_。有关更多信息，请参阅[连接 SIP 中继](/docs/services/voice-agent?topic=voice-agent-connect)。
 
 1. 从导航栏中选择**终止**，然后输入终止 URI 的名称。
 
@@ -71,13 +72,13 @@ dal.watson-va.netfoundry.net
 ## 步骤 2：将 {{site.data.keyword.conversationshort}} 配置用于呼叫转移
 {: #conversation-setup}
 
-要了解有关 {{site.data.keyword.conversationshort}} 服务的工作原理的更多信息，请参阅[关于 {{site.data.keyword.conversationshort}}](../conversation/index.html#about)。
+要了解有关 {{site.data.keyword.conversationshort}} 服务的工作原理的更多信息，请参阅[关于 {{site.data.keyword.conversationshort}}](/docs/services/assistant?topic=assistant-index#indext)。
 
 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，选择您的语音代理程序使用的 {{site.data.keyword.conversationshort}} 实例。
 
 1. 在_开始使用_仪表板中，单击**启动工具**按钮。
 
-1. 单击要编辑的工作空间上的**开始使用**。
+1. 单击要编辑的技能上的**开始使用**。
 
 1. 单击**添加意向**，然后输入意向名称，例如_转移_。
 
@@ -92,6 +93,8 @@ dal.watson-va.netfoundry.net
 1. 在_那么响应：_部分中，单击 **&vellip;** 图标，然后选择**打开 JSON 编辑器**。复制并粘贴以下代码片段，以替换字段中的代码：
 
   * 如果使用的是电话 URI，那么请使用电话 URI 替换掉 `transferTarget` 中的 SIP URI。例如，`"transferTarget":"tel:+18889990000"`。
+
+  * **注释**：确保 `transferTarget` URI 以 `+` 开头。
 
   ```json
   {
@@ -114,6 +117,8 @@ dal.watson-va.netfoundry.net
 1. 请检查 `transferTarget` 终止 URI 中的电话号码，或电话 URI 是否正确匹配了 SIP 中继中的电话号码。
 
 **请记住**：转移目标的 SIP URI 包含电话号码和您所创建的终止 URI。不要在转移目标中使用个人电话号码。例如，如果电话号码为 `18889990000`，终止 URI 为 `mysiptrunk.pstn.twilio.com`，那么完整的 SIP URI 为 `sip:+18889990000\\@mysiptrunk.pstn.twilio.com`。如果使用 Netfoundry 且电话号码为 `18889990000`，那么完整 SIP URI 为 `sip:+18889990000\\@dal.watson-va.netfoundry.net`。
+
+**注释**：请确保 `transferTarget` URI 以 `+` 开头，并且最多可包含 256 个字符。
 
 ## 后续步骤
 {: #Next}

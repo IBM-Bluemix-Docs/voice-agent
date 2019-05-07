@@ -1,13 +1,14 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-05"
+  years: 2019
+lastupdated: "2019-02-15"
+subcollection: "voice-agent"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:new_window: target="_blank"_}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -20,16 +21,31 @@ lastupdated: "2018-12-05"
 다음 목록에서 {{site.data.keyword.iva_full}}과의 통합에 사용할 SIP 트렁크 제공자를 선택할 수 있습니다.
 {: #shortdesc}
 
+* [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
 * [AT&T 및 기타 제공자](#att-other)
 * [{{site.data.keyword.iva_short}}과의 피어링](#peering)
 * [지원되는 설정 요청](#request-setup)
 
+## Nexmo 음성 애플리케이션 작성
+{: #nexmo-setup}
+
+  **참고:** [Nexmo 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://dashboard.nexmo.com/sign-up){: new_window}을 작성하려면 신용카드가 필요하며, 이는 구성하는 SIP 트렁크의 사용량을 기반으로 정기적으로 비용이 청구됩니다. 이미 Nexmo 계정이 있는 경우 기존 계정을 사용할 수 있습니다.
+
+  1. [Nexmo 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://dashboard.nexmo.com/sign-up){: new_window}에서 Nexmo 계정을 작성하십시오.
+
+  1. Nexmo [GitHub 저장소 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/nexmo-community/watson-voice-agent){: new_window}에 있는 README 지시사항을 따르십시오. 이 GitHub 저장소에는 시작하기 샘플이 포함되어 있습니다.
+
+  1. 사용자의 Nexmo 전화번호가 프로비저닝되고 애플리케이션이 실행되고 나면 해당 Nexmo 전화번호를 사용하여 Voice Agent를 구성하십시오.
+
+  1. 사용자의 Nexmo 전화번호로 전화하여 구성을 테스트하십시오.
+
+
 ## NetFoundry SIP 트렁크 및 전화번호 작성
 {: #NetFoundry-setup}
 
-**참고:** 계정을 작성하려면 신용카드가 필요하며, 이는 사용량에 따라 정기적으로 비용 청구됩니다. 이미 NetFoundry 계정을 보유한 경우에는 기존 계정을 사용할 수 있습니다.
+**참고:** 계정을 작성하려면 신용카드가 필요하며, 이는 사용량에 따라 정기적으로 비용이 청구됩니다. 이미 NetFoundry 계정을 보유한 경우에는 기존 계정을 사용할 수 있습니다.
 
 1. [NetFoundry![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://watson.netfoundry.io/watson-login){: new_window} 웹 사이트에서 계정을 작성하십시오.
 
@@ -43,13 +59,13 @@ lastupdated: "2018-12-05"
 
 1. 일단 지불이 정상적으로 처리되면 SIP 트렁크 전화번호가 계정에 표시됩니다.
 
-국가 및 지역 코드를 포함하여 이 전화번호는 음성 에이전트를 설정하고 호출 전송을 구성하는 데 필요합니다. [음성 에이전트 작성 및 연결](getting-started.html#step3)을 참조하십시오.
+국가 및 지역 코드를 포함하여 이 전화번호는 음성 에이전트를 설정하고 호출 전송을 구성하는 데 필요합니다. [음성 에이전트 작성 및 연결](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)을 참조하십시오.
 
 
 ## Twilio SIP 트렁크 작성
 {: #twilio-setup}
 
-**참고:** [Twilio 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.twilio.com/try-twilio){: new_window}을 작성하려면 신용카드가 필요하며, 이는 구성하는 SIP 트렁크의 사용량을 기반으로 정기적으로 비용 청구됩니다. 이미 Twilio 계정이 있는 경우 기존 계정을 사용할 수 있습니다.
+**참고:** [Twilio 계정 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.twilio.com/try-twilio){: new_window}을 작성하려면 신용카드가 필요하며, 이는 구성하는 SIP 트렁크의 사용량을 기반으로 정기적으로 비용이 청구됩니다. 이미 Twilio 계정이 있는 경우 기존 계정을 사용할 수 있습니다.
 
   1. [Twilio 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.twilio.com/try-twilio){: new_window}에서 Twilio 계정을 작성하십시오.
 
@@ -69,12 +85,14 @@ lastupdated: "2018-12-05"
 
   번호 페이지에서 **번호 구매**를 클릭하거나 이미 번호가 있는 경우 **+** 아이콘을 클릭하십시오. 사용자 지역의 새 전화번호를 프로비저닝할 수 있는 패널이 표시됩니다. SIP 트렁크로 되돌아가서 번호 아이콘을 클릭하여 작성한 SIP 트렁크에 번호를 지정하십시오.
 
-  국가 및 지역 코드를 포함하여 이 전화번호는 음성 에이전트를 설정하는 데 필요합니다. [음성 에이전트 작성 및 연결](getting-started.html#step3)을 참조하십시오.
+  국가 및 지역 코드를 포함하여 이 전화번호는 음성 에이전트를 설정하는 데 필요합니다. [음성 에이전트 작성 및 연결](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)을 참조하십시오.
+
+  **참고**: Lite/Trial Twilio 계정을 사용하여 {{site.data.keyword.iva_short}}에서 전송을 테스트하는 경우, 전송 대상을 _확인_해야 합니다. [Twilio의 공식 사이트](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-)에서 자세한 지시사항을 참조하십시오.
 
 ## {{site.data.keyword.iva_short}}과의 피어링
 {: #peering}
 
-{{site.data.keyword.iva_short}}에서는 IPSec 터널 등의 피어 연결을 지원합니다. {{site.data.keyword.iva_short}}에 대해 피어링하기 위해 서버 IP 주소의 화이트리스트를 작성할 수 있습니다.
+{{site.data.keyword.iva_short}}에서는 Asterisk와 같은 고객 PBX와의 피어 연결을 지원합니다. {{site.data.keyword.iva_short}}에 대해 피어링하기 위해 서버 IP 주소의 화이트리스트를 작성할 수 있습니다.
 
 1. _관리_ 대시보드로 이동하여 _인스턴스_ 탭을 선택하십시오.
 
@@ -91,6 +109,8 @@ lastupdated: "2018-12-05"
 {: #request-setup}
 
 다음 프로세스를 사용하여 AT&T 또는 기타 SIP 트렁크 제공자와 연결하거나 {{site.data.keyword.iva_short}}과 피어링하거나 50개가 넘는 동시 연결을 요청할 수 있도록 지원되는 네트워크 설정을 요청할 수 있습니다.
+
+{{site.data.keyword.iva_short}} 인스턴스에서 Asterisk와 같은 PBX의 화이트리스트를 작성할 수 있습니다. 공용 인터넷 화이트리스트 작성이 적절한 솔루션이 아닌 경우에만 지원 티켓을 여십시오. [IP 주소 화이트리스트 작성](/docs/services/voice-agent?topic=voice-agent-whitelist_IP#whitelist_IP)을 참조하십시오.
 
 1. 새 [{{site.data.keyword.Bluemix_notm}} 지원 티켓](https://cloud.ibm.com/unifiedsupport/tickets/add)을 여십시오.
 

@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-03"
+subcollection: "voice-agent"
 
 
 ---
@@ -28,7 +29,7 @@ _표준_ 또는 _프리미엄_ 플랜을 사용하는 경우 기본 설정에서
 
 1. _최대 동시 연결 수 편집_에서 최대 동시 연결 수를 입력한 후 **저장**을 클릭하십시오.
 
-셀프 서비스를 통해 설정할 수 있는 최소 동시 연결 수는 10개이며 최대값은 50개입니다. 음성 에이전트에 대한 50개가 넘는 동시 연결이 필요한 경우 [지원되는 네트워크 설정 요청](connect-SIP.html#request-setup)을 참조하십시오.
+셀프 서비스를 통해 설정할 수 있는 최소 동시 연결 수는 10개이며 최대값은 50개입니다. 음성 에이전트에 대한 50개가 넘는 동시 연결이 필요한 경우 [지원되는 네트워크 설정 요청](/docs/services/voice-agent?topic=voice-agent-connect#request-setup)을 참조하십시오.
 
 ## 동시 연결 가격 정보
 {: #concurrent-charge}

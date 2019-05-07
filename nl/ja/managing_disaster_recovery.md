@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -31,7 +32,7 @@ lastupdated: "2018-11-11"
 
 1. 既存のボイス・エージェントに冗長サービスを追加するには、_「管理」_ダッシュボードの_「音声エージェント」_タブにナビゲートします。 構成するボイス・エージェントの**「エージェントの編集」**をクリックします。
 
-1. 接続する {{site.data.keyword.conversationshort}}、{{site.data.keyword.texttospeechshort}}、または {{site.data.keyword.speechtotextshort}} サービスにおいて**「場所 1」**または**「場所 2」**を選択し、構成情報を追加します。 自分のワークスペースまたは他のワークスペースのサード・パーティー・サービスまたは Watson サービスのインスタンスを使用できます。 [他の {{site.data.keyword.Bluemix_notm}} ワークスペースのサービス・インスタンスの使用](managing_other.html)を参照してください。
+1. 接続する {{site.data.keyword.conversationshort}}、{{site.data.keyword.texttospeechshort}}、または {{site.data.keyword.speechtotextshort}} サービスにおいて**「場所 1」**または**「場所 2」**を選択し、構成情報を追加します。 自分のワークスペースまたは他のワークスペースのサード・パーティー・サービスまたは Watson サービスのインスタンスを使用できます。 [他の {{site.data.keyword.Bluemix_notm}} ワークスペースのサービス・インスタンスの使用](/docs/services/voice-agent?topic=voice-agent-other_service)を参照してください。
 
 **注**: サービスを冗長化するには、異なるロケーションごとに異なるサービス地域で Watson サービス・インスタンスを使用する必要があります。
 

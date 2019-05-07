@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -31,7 +32,7 @@ Sie können Ihrer Sprachagentenkonfiguration jederzeit einen Servicestandort von
 
 1. Wenn Sie einen redundanten Service zu einem vorhandenen Sprachagenten hinzufügen möchten, navigieren Sie in Ihrem Dashboard _Verwalten_ zur Registerkarte _Sprachagenten_. Klicken Sie auf die Option **Agenten bearbeiten** für den Sprachagenten, den Sie konfigurieren möchten.
 
-1. Wählen Sie **Standort 1** oder **Standort 2** für den {{site.data.keyword.conversationshort}}-, den {{site.data.keyword.texttospeechshort}}- oder den {{site.data.keyword.speechtotextshort}}-Service aus, den Sie verbinden möchten, und fügen Sie Ihre Konfigurationsinformationen hinzu. Sie können Serviceinstanzen anderer Anbieter oder Watson-Serviceinstanzen in Ihrem Arbeitsbereich oder in anderen Arbeitsbereichen verwenden. Informationen hierzu finden Sie in [Serviceinstanzen in anderen {{site.data.keyword.Bluemix_notm}}-Arbeitsbereichen verwenden](managing_other.html).
+1. Wählen Sie **Standort 1** oder **Standort 2** für den {{site.data.keyword.conversationshort}}-, den {{site.data.keyword.texttospeechshort}}- oder den {{site.data.keyword.speechtotextshort}}-Service aus, den Sie verbinden möchten, und fügen Sie Ihre Konfigurationsinformationen hinzu. Sie können Serviceinstanzen anderer Anbieter oder Watson-Serviceinstanzen in Ihrem Arbeitsbereich oder in anderen Arbeitsbereichen verwenden. Informationen hierzu finden Sie in [Serviceinstanzen in anderen {{site.data.keyword.Bluemix_notm}}-Arbeitsbereichen verwenden](/docs/services/voice-agent?topic=voice-agent-other_service).
 
 **Denken Sie daran**: Zum Zweck der Serviceredundanz müssen Sie Watson-Serviceinstanzen in verschiedenen Serviceregionen für verschiedene Standorte verwenden.
 

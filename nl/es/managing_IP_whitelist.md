@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-05"
+lastupdated: "2018-12-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -15,7 +16,7 @@ lastupdated: "2018-12-05"
 {:tip: .tip}
 
 # Adición de direcciones IP a la lista blanca
-{: #edit_IP}
+{: #whitelist_IP}
 
 Puede configurar la interconexión con {{site.data.keyword.iva_short}} o con otros proveedores añadiendo direcciones IP a la lista blanca.
 {: shortdesc}

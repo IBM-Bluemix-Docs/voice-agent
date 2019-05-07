@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-08"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,14 +22,14 @@ lastupdated: "2018-11-08"
 Puoi collegare i servizi di discorso e testo di terze parti configurando Speech to Text o Text to Speech da un nodo di dialogo {{site.data.keyword.conversationshort}}.
 {: shortdesc}
 
-Consulta [Programmazione degli agent vocali utilizzando l'API](api.html) per informazioni ed esempi di codice su come configurare e avviare le sequenze di azioni.
+Consulta [Programmazione dei Voice Agent utilizzando l'API](/docs/services/voice-agent?topic=voice-agent-api) per informazioni ed esempi di codice su come configurare e avviare le sequenze di azioni.
 
 ## Collegamento a Google Speech-to-Text da un nodo di dialogo {{site.data.keyword.conversationshort}}
 {: #stt_dialog}
 
-Invece di configurare la tua connessione a Google Speech-to-Text modificando il tuo agent vocale, puoi programmare {{site.data.keyword.conversationshort}} per configurare le impostazioni STT con il comando `"vgwActSetSTTConfig"`. Consulta [Modifica del JSON nella risposta del dialogo](api.html#json-editor).
+Invece di configurare la tua connessione a Google Speech-to-Text modificando il tuo Voice Agent, puoi programmare {{site.data.keyword.conversationshort}} per configurare le impostazioni STT con il comando `"vgwActSetSTTConfig"`. Consulta [Modifica del JSON nella risposta del dialogo](/docs/services/voice-agent?topic=voice-agent-api#json-editor).
 
-1. Nell'editor JSON della finestra di dialogo {{site.data.keyword.conversationshort}}, aggiungi il comando `"vgwActSetSTTConfig"` al tuo nodo di dialogo.
+1. Nell'editor JSON per il dialogo {{site.data.keyword.conversationshort}}, aggiungi il comando `"vgwActSetSTTConfig"` al tuo nodo di dialogo.
 
 1. Aggiungi i tuoi valori per `parameters`, `thirdPartyCredentials` e `credentials`.
 
@@ -69,9 +70,9 @@ Invece di configurare la tua connessione a Google Speech-to-Text modificando il 
 ## Collegamento a Google Text-to-Speech da un nodo di dialogo {{site.data.keyword.conversationshort}}
 {: #tts_dialog}
 
-Invece di configurare la tua connessione a Google Text-to-Speech modificando il tuo agent vocale, puoi programmare {{site.data.keyword.conversationshort}} per configurare le impostazioni TTS con il comando `"vgwActSetTTSConfig"`. Consulta [Modifica del JSON nella risposta del dialogo](api.html#json-editor).
+Invece di configurare la tua connessione a Google Text-to-Speech modificando il tuo Voice Agent, puoi programmare {{site.data.keyword.conversationshort}} per configurare le impostazioni TTS con il comando `"vgwActSetTTSConfig"`. Consulta [Modifica del JSON nella risposta del dialogo](/docs/services/voice-agent?topic=voice-agent-api#json-editor).
 
-1. Nell'editor JSON della finestra di dialogo {{site.data.keyword.conversationshort}}, aggiungi il comando `"vgwActSetTTSConfig"` al tuo nodo di dialogo.
+1. Nell'editor JSON per il dialogo {{site.data.keyword.conversationshort}}, aggiungi il comando `"vgwActSetTTSConfig"` al tuo nodo di dialogo.
 
 1. Aggiungi i tuoi valori per `parameters`, `thirdPartyCredentials` e `credentials`.
 

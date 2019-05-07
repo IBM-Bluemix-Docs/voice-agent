@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-03"
+subcollection: "voice-agent"
 
 
 ---
@@ -28,7 +29,7 @@ In allen Plänen sind zwei gleichzeitige Verbindungen kostenfrei enthalten. Weit
 
 1. Geben Sie in _Maximale Anzahl gleichzeitiger Verbindungen bearbeiten_ die gewünschte maximale Anzahl gleichzeitiger Verbindungen ein und klicken Sie auf **Speichern**.
 
-Der Mindestwert für die Anzahl gleichzeitiger Anrufe, der im Self-Service-Verfahren festgelegt werden kann, ist 10, der Höchstwert 50. Wenn Sie mehr als 50 gleichzeitige Verbindungen für den Sprachagenten benötigen, lesen Sie die Informationen in [Unterstützung für Netzkonfiguration anfordern](connect-SIP.html#request-setup).
+Der Mindestwert für die Anzahl gleichzeitiger Anrufe, der im Self-Service-Verfahren festgelegt werden kann, ist 10, der Höchstwert 50. Wenn Sie mehr als 50 gleichzeitige Verbindungen für den Sprachagenten benötigen, lesen Sie die Informationen in [Unterstützung für Netzkonfiguration anfordern](/docs/services/voice-agent?topic=voice-agent-connect#request-setup).
 
 ## Preisinformationen für gleichzeitige Verbindungen
 {: #concurrent-charge}

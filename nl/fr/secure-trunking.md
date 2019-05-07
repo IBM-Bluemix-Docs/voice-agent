@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-06-14"
+subcollection: "voice-agent"
 
 ---
 
@@ -28,7 +29,7 @@ Vous pouvez activer le protocole SRTP (Secure Real Time Transport Protocol) et l
 
 1. Choisissez la liaison que vous souhaitez sécuriser avec SRTP en sélectionnant une liaison existante ou en créant une nouvelle liaison en cliquant sur l'icône **+**.
 
-  * Si vous créez une nouvelle liaison, vous devez configurer l'_URI de liaison SIP_ dans le tableau de bord **Origination**.  Pour plus d'informations, voir [Connexion d'une liaison SIP](connect-SIP.html).
+  * Si vous créez une nouvelle liaison, vous devez configurer l'_URI de liaison SIP_ dans le tableau de bord **Origination**.  Pour plus d'informations, voir [Connexion d'une liaison SIP](/docs/services/voice-agent?topic=voice-agent-connect).
 
 1. Sur le tableau de bord _General_, recherchez la section _Secure Trunking_. Cliquez sur **Disabled** pour affecter la valeur **Enabled** au paramètre de commutation automatique de canaux sécurisé, puis sauvegardez vos modifications.
 

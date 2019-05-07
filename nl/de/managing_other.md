@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-07"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,7 +22,7 @@ lastupdated: "2018-11-07"
 Sie können Ihren Sprachagenten für die Verwendung von {{site.data.keyword.conversationshort}}-, {{site.data.keyword.speechtotextshort}}- oder {{site.data.keyword.speechtotextshort}}-Serviceinstanzen, die zu Arbeitsbereichen in anderen {{site.data.keyword.Bluemix_short}}-Konten gehören, konfigurieren.
 {: shortdesc}
 
-Für die Verbindung Ihres Sprachagenten mit anderen Serviceinstanzen können Sie entweder den Benutzernamen und die Kennwortberechtigungsnachweise oder einen API-Schlüssel für Ihre Serviceinstanzen verwenden.
+Für die Verbindung Ihres Sprachagenten mit anderen Serviceinstanzen können Sie entweder den Benutzernamen und die Kennwortberechtigungsnachweise oder einen API-Schlüssel für Ihre Serviceinstanzen verwenden. Die Länge für den Benutzernamen und das Kennwort ist auf maximal 64 Zeichen bzw. 256 Zeichen beschränkt. Der API-Schlüssel darf aus maximal 64 Zeichen bestehen.
 
 1. Wählen Sie auf der Registerkarte _Sprachagenten_ im Dashboard _Verwalten_ die Option **Neuen Sprachagenten erstellen** oder einen Sprachagenten aus, den Sie bearbeiten möchten.
 
@@ -38,8 +39,8 @@ Für die Verbindung Ihres Sprachagenten mit anderen Serviceinstanzen können Sie
 
 1. Geben Sie die Serviceinstanzinformationen ein.
 
-  * **{{site.data.keyword.conversationshort}}:** Im Feld **Arbeitsbereich-ID** geben Sie die ID des Arbeitsbereichs ein, den Sie mit Ihrem Sprachagenten verwenden möchten. Zum Suchen der Arbeitsbereich-ID starten Sie das Tool und den Arbeitsbereich, den Sie integrieren möchten, klicken auf das Symbol 'Aktionen' (**&vellip;**) und wählen **Details anzeigen** aus.
+  * **{{site.data.keyword.conversationshort}}:** Geben Sie im Feld **Arbeitsbereich-ID** die ID des Arbeitsbereichs (bis zu 128 Zeichen) ein, den Sie mit Ihrem Sprachagenten verwenden möchten. Zum Suchen der Arbeitsbereich-ID starten Sie das Tool und den Arbeitsbereich, den Sie integrieren möchten, klicken auf das Symbol 'Aktionen' (**&vellip;**) und wählen **Details anzeigen** aus.
   * **{{site.data.keyword.speechtotextshort}}:** Wählen Sie bei **Modelltyp auswählen** die Option **Schmalband**, **Breitband** oder **Schmal- und Breitband** sowie das Sprachmodell aus.
   * **{{site.data.keyword.texttospeechshort}}:** Wählen Sie im Feld **Sprachunterstützung** die Sprache und die Sprachunterstützung aus, die Ihr Service verwendet. Für Ihren Service müssen Sie eine Sprachunterstützung angeben.
 
-**Bitte beachten:** Damit Ihr Sprachagent funktioniert, müssen Sie {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} und {{site.data.keyword.texttospeechshort}} für dieselbe Sprache konfigurieren. Weitere Informationen finden Sie in [Unterstützte Sprachen](about.html#supported-languages).
+**Bitte beachten:** Damit Ihr Sprachagent funktioniert, müssen Sie {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} und {{site.data.keyword.texttospeechshort}} für dieselbe Sprache konfigurieren. Weitere Informationen finden Sie in [Unterstützte Sprachen](/docs/services/voice-agent?topic=voice-agent-about#supported-languages).

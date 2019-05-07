@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-12"
-
+  years: 2019
+lastupdated: "2019-03-15"
+subcollection: "voice-agent"
 ---
 
 {:shortdesc: .shortdesc}
@@ -28,35 +28,41 @@ Wenn Sie einen Sprachagenten erstellen, sucht {{site.data.keyword.iva_short}} au
 
 1. Navigieren Sie zur Registerkarte _Sprachagenten_ auf dem Dashboard _Verwalten_ und klicken Sie auf **Sprachagenten erstellen**.
 
-1. In **Name** geben Sie einen eindeutigen Namen für Ihren Sprachagenten an. Beispiel: `Kundendienst - Nordamerika`.
+1. In **Name** geben Sie einen eindeutigen Namen für Ihren Sprachagenten an. Beispiel: `Kundendienst - Nordamerika`. Der Name kann aus bis zu 64 Zeichen bestehen.
 
-1. Als **Telefonnummer** fügen Sie die Nummer von Ihrem SIP-Trunk, einschließlich Landes- und Ortsvorwahl, hinzu. Für eine 800-er Nummer in den Vereinigten Staaten z. B. geben Sie die Nummer mit `18883334444` an. Die Telefonnummer darf Leerzeichen und die Zeichen `+ ( ) -` enthalten.
+1. Als **Telefonnummer** fügen Sie die Nummer von Ihrem SIP-Trunk, einschließlich Landes- und Ortsvorwahl, hinzu. Für eine 800-er Nummer in den Vereinigten Staaten z. B. geben Sie die Nummer mit `18883334444` an. Die Telefonnummer kann Leerzeichen und die Zeichen `+ ( ) -` enthalten und darf aus höchstens 30 Zeichen bestehen.
 
-1. Optional beschreiben Sie Ihren Sprachagenten.
+1. Standardmäßig wird diese Telefonnummer als **Primärnummer** für den Service festgelegt. Dabei handelt es sich einfach um die erste Nummer, die Ihnen angezeigt wird, wenn eine Liste von Nummern vorhandne ist. Die Primärnummer dient nur Anzeigezwecken. Informationen dazu, wie Sie die primäre Nummer ändern, finden Sie in [Primäre Nummer festlegen](/docs/services/voice-agent?topic=voice-agent-multi_num#primary_num).
 
-1. Wenn Sie die Anrufübergabe aktivieren möchten, geben Sie den Beendigungs-URI für das **Übergabestandardziel** ein. Informationen zum Konfigurieren eines Beendigungs-URI finden Sie im Abschnitt zum [Einrichten einer Anrufübergabe](call-transfer.html). Verwenden Sie keine persönliche Telefonnummer für das Übergabeziel.
+1. Auf Wunsch können Sie auch mehrere Nummern zu einer Voice Agent-Instanz hinzufügen, indem Sie neben **Telefonnummer** auf **Verwalten** klicken. Informationen zum Einrichten und Zuordnen mehrerer Rufnummern finden Sie in [Mehrere Telefonnummern in einer Voice Agent-Instanz konfigurieren](/docs/services/voice-agent?topic=voice-agent-multi_num). Im Dialogfenster **Verwalten** können Sie die Nummern auch bearbeiten und Beschreibungen für die einzelnen Nummern hinzufügen.
 
-1. Konfigurieren Sie die Verbindungen zu Ihren Watson-Serviceinstanzen. Sie können Verbindungen zu mehreren Watson-Serviceinstanzen herstellen, indem Sie sowohl für **Standort 1** als auch für **Standort 2** Verbindungen konfigurieren. Wenn Verbindungen zu mehreren Serviceinstanzen vorhanden sind, kann der Sprachagent bei einem Ausfall zu einer alternativen Serviceinstanz wechseln. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](managing_disaster_recovery.html#add_location).
+1. Wenn Ihr Voice Agent mehrere Nummern enthält, ist das Feld **Telefonnummer** grau abgeblendet. Wenn Sie die Nummern bearbeiten möchten, klicken Sie einfach auf das grau abgeblendete Feld für die **Telefonnummer** oder klicken Sie auf **Verwalten**. Weitere Informationen finden Sie in [Nummer und/oder Beschreibung für mehrere Nummern bearbeiten](/docs/services/voice-agent?topic=voice-agent-multi_num#edit_num).
 
-1. Konfigurieren Sie unter **{{site.data.keyword.conversationshort}}** die Verbindung zur {{site.data.keyword.conversationshort}}-Serviceinstanz, indem Sie auf **Standort 1** oder **Standort 2** klicken und den ausgewählten Standort aktivieren. Sie können {{site.data.keyword.conversationshort}}-Instanzen in {{site.data.keyword.Bluemix_notm}}-Konten verwenden, deren Eigner Sie sind oder deren Eigner ein anderer Benutzer ist. Sie können auch zu jeder dieser Optionen eine Verbindung über eine Service-Orchestrierungsengine herstellen.
+1. Wahlweise können Sie Ihren Sprachagenten mit bis zu 256 Zeichen beschreiben.
+
+1. Wenn Sie die Anrufübergabe aktivieren möchten, geben Sie den Beendigungs-URI für das **Standardübergabeziel** ein. Informationen zum Konfigurieren eines Beendigungs-URI finden Sie im Abschnitt zum [Einrichten einer Anrufübergabe](/docs/services/voice-agent?topic=voice-agent-call-transfer). Verwenden Sie keine persönliche Telefonnummer für das Übergabeziel. Der Beendigungs-URI für das **Standardübergabeziel** kann bis zu 256 Zeichen enthalten.
+
+1. Konfigurieren Sie die Verbindungen zu Ihren Instanzen des Watson-Service. Sie können Verbindungen zu mehreren Watson-Serviceinstanzen herstellen, indem Sie sowohl für **Standort 1** als auch für **Standort 2** Verbindungen konfigurieren. Wenn Verbindungen zu mehreren Serviceinstanzen vorhanden sind, kann der Sprachagent bei einem Ausfall zu einer alternativen Serviceinstanz wechseln. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](/docs/services/voice-agent?topic=voice-agent-disaster-recovery#add_location).
+
+1. Konfigurieren Sie unter **Dialog** die Verbindung zu Ihrer {{site.data.keyword.conversationshort}}-Serviceinstanz, indem Sie auf **Standort 1** oder **Standort 2** klicken und den ausgewählten Standort aktivieren. Sie können {{site.data.keyword.conversationshort}}-Serviceinstanzen in {{site.data.keyword.Bluemix_notm}}-Konten verwenden, deren Eigner Sie sind oder deren Eigner ein anderer Benutzer ist. Sie können auch zu jeder dieser Optionen eine Verbindung über eine Service-Orchestrierungsengine herstellen.
 
    * Wenn Sie in der Region 'Dallas' oder 'Washington DC' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.conversationshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen.
-   * Alternativ können Sie Verbindungen zu anderen Quellen eines {{site.data.keyword.conversationshort}}-Dialogs oder zu einer SOE herstellen, indem Sie den [**Servicetyp**](managing_other.html#other_service) ändern.
-   * Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.conversationshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](managing_disaster_recovery.html#add_location).
+   * Alternativ können Sie Verbindungen zu anderen Quellen eines {{site.data.keyword.conversationshort}}-Dialogs oder zu einer SOE herstellen, indem Sie den [**Servicetyp**](/docs/services/voice-agent?topic=voice-agent-other_service#other_service) ändern.
+   * Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.conversationshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](/docs/services/voice-agent?topic=voice-agent-disaster-recovery#add_location).
 
 1. Überprüfen Sie unter **{{site.data.keyword.speechtotextshort}}** die Standardkonfiguration für die {{site.data.keyword.speechtotextshort}}-Serviceinstanz, indem Sie **Standort 1** oder **Standort 2** auswählen und diesen Standort aktivieren. Sie können Ihre Konfiguration wie folgt anpassen.
    * Wenn Sie eine Verbindung zwischen Ihrem Sprachagenten und einer vorhandenen Instanz als **Servicetyp** herstellen möchten, wählen Sie **Eigene Speech-to-Text-Instanz** aus. Wählen Sie anschließend bei **Modelltyp auswählen** die Option **Schmalband**, **Breitband** oder **Schmal- und Breitband** sowie das Sprachmodell aus.
    * Wenn Sie in der Region 'Dallas' oder 'Washington DC' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.speechtotextshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen.
-   * Wählen Sie als **Servicetyp** entweder eine [{{site.data.keyword.speechtotextshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}}-Arbeitsbereich](managing_other.html) oder einen [Speech-to-Text-Service eines anderen Anbieters](managing_third_party.html) aus, z. B. Google Cloud Speech-to-Text.
-   * Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.speechtotextshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](managing_disaster_recovery.html).
+   * Wählen Sie als **Servicetyp** entweder eine [a {{site.data.keyword.speechtotextshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}}-Workspace](/docs/services/voice-agent?topic=voice-agent-other_service) oder einen [Speech-to-Text-Service eines anderen Anbieters](/docs/services/voice-agent?topic=voice-agent-third-party#third-party) aus, wie z. B. Google Cloud Speech-to-Text.
+   * Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.speechtotextshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](/docs/services/voice-agent?topic=voice-agent-disaster-recovery).
 
 1. Überprüfen Sie unter **{{site.data.keyword.texttospeechshort}}** die Standardkonfiguration für die {{site.data.keyword.texttospeechshort}}-Serviceinstanz, indem Sie auf **Standort 1** oder **Standort 2** klicken und diesen Standort aktivieren. Sie können Ihre Konfiguration wie folgt anpassen.
    * Wenn Sie in der Region 'Dallas' oder 'Washington DC' einen Sprachagenten erstellen und nicht über eine {{site.data.keyword.texttospeechshort}}-Serviceinstanz verfügen, können Sie über das Menü **Serviceinstanz** eine Serviceinstanz erstellen.
-   * Wählen Sie als **Servicetyp** entweder eine [{{site.data.keyword.texttospeechshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}}-Arbeitsbereich](managing_other.html) oder einen [Text-to-Speech-Service eines anderen Anbieters](managing_third_party.html) aus, z. B. Google Cloud Text-to-Speech.
-   * Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.texttospeechshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](managing_disaster_recovery.html).
+   * Wählen Sie als **Servicetyp** entweder eine [{{site.data.keyword.texttospeechshort}}-Instanz in einem anderen {{site.data.keyword.Bluemix_notm}}-Arbeitsbereich](/docs/services/voice-agent?topic=voice-agent-other_service) oder einen [Text-to-Speech-Service eines anderen Anbieters](/docs/services/voice-agent?topic=voice-agent-third-party) aus, z. B. Google Cloud Text-to-Speech.
+   * Wenn Sie mehrere Servicestandorte konfigurieren möchten, klicken Sie auf die Option für den anderen Standort und wählen Sie **Standort aktivieren** aus, um die Verbindung zur anderen {{site.data.keyword.texttospeechshort}}-Instanz zu konfigurieren. Weitere Informationen finden Sie in [Mehrere Watson-Servicestandorte hinzufügen](/docs/services/voice-agent?topic=voice-agent-disaster-recovery).
 
-1. Sie können auch die Ereignisweiterleitung aktivieren, um Informationen zu den von Ihren Sprachagenten verarbeiteten Anrufen in {{site.data.keyword.cloudantfull}} zu erfassen. Informationen hierzu finden Sie in [Ereignisweiterleitung für Sprachagenten aktivieren](event-forwarding.html). Weitere Konfigurationsoptionen finden Sie in [Sprachagenten konfigurieren](managing.html#configure_va).
+1. Sie können auch die Ereignisweiterleitung aktivieren, um Informationen zu den von Ihren Sprachagenten verarbeiteten Anrufen in {{site.data.keyword.cloudantfull}} zu erfassen. Informationen hierzu finden Sie in [Ereignisweiterleitung für Sprachagenten aktivieren](/docs/services/voice-agent?topic=voice-agent-event_forwarding). Weitere Konfigurationsoptionen finden Sie in [Sprachagenten konfigurieren](/docs/services/voice-agent?topic=voice-agent-managing#configure_va).
 
 1. Klicken Sie auf **Sprachagenten erstellen**, um Ihren Sprachagenten und eventuell neue Services zu erstellen.
 
-Nach dem Erstellen des Sprachagenten testen Sie Ihren Sprachagenten, indem Sie eine Telefonnummer anrufen. Details zu Ihrem Telefonanruf können Sie über das Dashboard _Nutzung_ anzeigen.  
+Nach dem Erstellen des Sprachagenten testen Sie Ihren Sprachagenten, indem Sie eine Telefonnummer anrufen. Details zu Ihrem Telefonanruf können Sie über das Dashboard _Nutzung_ anzeigen. Weitere Informationen hierzu enthält der Abschnitt [Nutzung und Anrufprotokolle anzeigen](/docs/services/voice-agent?topic=voice-agent-logging).   

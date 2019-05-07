@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -31,7 +32,7 @@ lastupdated: "2018-11-11"
 
 1. 要向现有语音代理程序添加冗余服务，请导航到_管理_仪表板上的_语音代理程序_选项卡。针对要配置的语音代理程序，单击**编辑代理程序**。
 
-1. 针对要连接的 {{site.data.keyword.conversationshort}}、{{site.data.keyword.texttospeechshort}} 或 {{site.data.keyword.speechtotextshort}} 服务，选择**位置 1** 或**位置 2**，然后添加您的配置信息。您可以使用您的工作空间或其他工作空间中的第三方服务或 Watson 服务实例。请参阅[使用其他 {{site.data.keyword.Bluemix_notm}} 工作空间中的服务实例](managing_other.html)。
+1. 针对要连接的 {{site.data.keyword.conversationshort}}、{{site.data.keyword.texttospeechshort}} 或 {{site.data.keyword.speechtotextshort}} 服务，选择**位置 1** 或**位置 2**，然后添加您的配置信息。您可以使用您的工作空间或其他工作空间中的第三方服务或 Watson 服务实例。请参阅[使用其他 {{site.data.keyword.Bluemix_notm}} 工作空间中的服务实例](/docs/services/voice-agent?topic=voice-agent-other_service)。
 
 **请记住**：对于服务冗余，您必须在不同服务地区的不同位置使用 Watson 服务实例。
 

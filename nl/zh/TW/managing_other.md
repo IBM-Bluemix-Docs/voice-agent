@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-07"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,7 +22,7 @@ lastupdated: "2018-11-07"
 您可以將語音代理程式配置成使用 {{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}} 或 {{site.data.keyword.speechtotextshort}} 服務實例，而這些服務實例屬於其他 {{site.data.keyword.Bluemix_short}} 帳戶中的工作區。
 {: shortdesc}
 
-若要將語音代理程式連接至其他服務實例，您可以使用服務實例的使用者名稱及密碼認證或 API 金鑰。
+若要將語音代理程式連接至其他服務實例，您可以使用服務實例的使用者名稱及密碼認證或 API 金鑰。使用者名和密碼分別限制為 64 個字元和 256 個字元。API 金鑰限制為 64 個字元。
 
 1. 在_管理_ 儀表板上的_語音代理程式_ 標籤，選取**建立新的語音代理程式**或您要編輯的語音代理程式。
 
@@ -37,8 +38,8 @@ lastupdated: "2018-11-07"
 
 1. 輸入服務實例資訊。
 
-  * **{{site.data.keyword.conversationshort}}：**在**工作區 ID** 欄位中，輸入您要與語音代理程式搭配使用的工作區 ID。若要尋找工作區 ID，請啟動工具，並在您要整合的工作區上，按一下「動作」圖示 (**&vellip;**)，然後選取**檢視詳細資料**。
+  * **{{site.data.keyword.conversationshort}}：**在**工作區 ID** 欄位中，輸入您要與語音代理程式搭配使用的工作區 ID，最多 128 個字元。若要尋找工作區 ID，請啟動工具，並在您要整合的工作區上，按一下「動作」圖示 (**&vellip;**)，然後選取**檢視詳細資料**。
   * **{{site.data.keyword.speechtotextshort}}：**針對**選取模型類型**，選擇**窄頻**、**寬頻**或**窄頻與寬頻**，然後選取語言**模型**。
   * **{{site.data.keyword.texttospeechshort}}：**在**語音**欄位中，選取服務所使用的語言及語音。您必須指定服務的語音。
 
-**請記住：**為了讓您的語音代理程式運作，您必須配置相同語言的 {{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}} 及 {{site.data.keyword.texttospeechshort}}。請參閱[支援的語言](about.html#supported-languages)。
+**請記住：**為了讓您的語音代理程式運作，您必須配置相同語言的 {{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}} 及 {{site.data.keyword.texttospeechshort}}。請參閱[支援的語言](/docs/services/voice-agent?topic=voice-agent-about#supported-languages)。

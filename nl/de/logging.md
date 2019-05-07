@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-11-12"
+subcollection: "voice-agent"
 
 ---
 
@@ -24,11 +25,11 @@ Sie können die Nutzungsgeschichte und die Anrufprotokolle für Ihre Sprachagent
 
 Die Protokollierung ist für {{site.data.keyword.iva_full}} automatisch aktiviert. Sie können die Anrufprotokolle Ihres Sprachagenten im Dashboard _Nutzung_ einsehen.
 
-Das Dashboard _Nutzung_ zeigt Ihnen Schnellstatistiken zu Ihrer Servicenutzung für den laufenden Monat sowie die nach Ihrem Plan verbleibenden verfügbaren Ressourcen an. Diese Informationen umfassen die maximale Anzahl der Verbindungen, die im laufenden Monat gleichzeitig aufgetreten sind, sowie die maximale Anzahl an Verbindungen, die laut Ihrem Plan verfügbar sind, an. Sie können auch die Anzahl freier Minuten einsehen, die im Plan enthalten sind, sowie die Anzahl der bereits verbrauchten Minuten. Der Abschnitt _Anrufprotokolle_ folgt Ihren _Schnellstatistiken_.
+Das Dashboard _Nutzung_ zeigt Ihnen Schnellstatistiken zu Ihrer Servicenutzung sowie die nach Ihrem Plan verbleibenden verfügbaren Ressourcen an. Diese Informationen umfassen die maximale Anzahl der Verbindungen, die im laufenden Monat gleichzeitig aufgetreten sind, sowie die maximale Anzahl an Verbindungen, die laut Ihrem Plan verfügbar sind, an. Im Feld _Anrufe - Minuten_ können Sie die Anzahl freier Minuten einsehen, die im Plan enthalten sind, sowie die Anzahl der bereits verbrauchten Minuten. Der Abschnitt _Anrufprotokolle_ folgt Ihren _Schnellstatistiken_.
 
-Im Abschnitt _Anrufprotokolle_ können Sie die Anrufprotokolle nach Datum und Namen des Sprachagenten filtern, um die Anzahl der angezeigten Anrufe zu reduzieren und bestimmte Anrufprotokolle zu isolieren.
+Sie können _Anrufprotokolle_ und _Anrufe - Minuten_ nach Datum sowie entweder nach Name(n) oder nach Nummer(n) des Sprachagenten filtern, um die Anzahl der angezeigten Anrufe zu reduzieren und bestimmte Anrufprotokolle zu isolieren. Darüber hinaus können Sie _Anrufprotokolle_ so filtern, dass nur fehlgeschlagene Anrufen angezeigt werden.
 
-Weitere Informationen zur Erstellung und Bearbeitung von Sprachagenten finden Sie unter [Sprachagenten verwalten](managing.html).
+Weitere Informationen zur Erstellung und Bearbeitung von Sprachagenten finden Sie unter [Sprachagenten verwalten](/docs/services/voice-agent?topic=voice-agent-managing).
 
 ##  Anrufprotokolle anzeigen
 
@@ -36,9 +37,9 @@ Weitere Informationen zur Erstellung und Bearbeitung von Sprachagenten finden Si
 
       Für jeden Anruf können Sie den Namen und die Telefonnummer Ihres Sprachagenten, die Start- und Stoppzeiten und die Dauer des Anrufs anzeigen. Möglicherweise wird Ihnen neben dem Namen des Sprachagenten auch ein Warnsymbol angezeigt, das angibt, dass der Anruf fehlgeschlagen ist.
 
-1.  Sie können die Liste der Anrufe filtern, indem Sie Anrufe eines bestimmten Datums anzeigen oder die Anrufe nach Namen des Sprachagenten filtern.
+1.  Sie können die Liste der Anrufe filtern, indem Sie Anrufe eines bestimmten Datums anzeigen und die Anrufe nach Namen oder Nummern des Sprachagenten filtern. Es ist auch möglich, nur fehlgeschlagene Anrufe anzuzeigen.
 
-1. Für den Zugriff auf Anruffehlerprotokolle für einen einzelnen Anruf klicken Sie auf das Symbol **Fehlerprotokolle** in der Spalte **Protokolle** für diesen Anruf.
+1. Für den Zugriff auf Anruffehlerprotokolle für einen einzelnen Anruf klicken Sie auf die Punkte in der Spalte **Aktionen** für den betreffenden Anruf, um das Menü zu erweitern. Wähle Sie dann **Fehlerprotokolle** aus. Diese Option wird nur für fehlgeschlagene Anrufe angezeigt.
 
 1. Sie können die detaillierte Liste von Nachrichtenprotokollen in der neuen Ansicht mithilfe der folgenden Methoden prüfen:
   * Die Fehlerprotokolle durchsuchen

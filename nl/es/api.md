@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-01"
+subcollection: "voice-agent"
 
 ---
 
@@ -29,7 +30,7 @@ Las acciones y los estados se definen en una respuesta de nodo de diálogo en fo
 
 1. En el panel de control de {{site.data.keyword.Bluemix_short}}, seleccione la instancia de servicio de {{site.data.keyword.conversationshort}}.
 1. Inicie la herramienta {{site.data.keyword.conversationshort}}.
-1. Pulse el espacio de trabajo que contiene el diálogo que desea editar.
+1. Pulse la habilidad que contiene el diálogo que desea editar.
 1. Vaya al separador **Diálogo** y seleccione el nodo donde desea establecer una acción o estado.
 1. En la respuesta, pulse el icono ![Respuesta avanzada](../conversation/images/kabob.png) y seleccione **Abrir editor JSON**.
 
@@ -119,7 +120,7 @@ En el ejemplo siguiente, más complejo, las acciones definidas en la etiqueta `v
 ## Definición de estados
 {: #setting-states}
 
-Para indicar un cambio de estado que se mantiene entre turnos de conversación, el agente de voz intercambia variables de estado con el servicio {{site.data.keyword.conversationfull}} configurado. Estas variables de estado están definidas en un nodo de diálogo de {{site.data.keyword.conversationshort}} como [variables de contexto](../conversation/dialog-build.html#context) en formato JSON.
+Para indicar un cambio de estado que se mantiene entre turnos de conversación, el agente de voz intercambia variables de estado con el servicio {{site.data.keyword.conversationfull}} configurado. Estas variables de estado están definidas en un nodo de diálogo de {{site.data.keyword.conversationshort}} como [variables de contexto](/docs/services/assistant?topic=assistant-dialog-build#dialog-build) en formato JSON.
 
 Por ejemplo, puede definir la variable de estado siguiente para establecer el mensaje que se transmite al interlocutor si la conexión con el servicio {{site.data.keyword.conversationshort}} falla.
 

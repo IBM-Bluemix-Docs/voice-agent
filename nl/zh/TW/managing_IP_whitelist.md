@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-05"
+lastupdated: "2018-12-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -15,7 +16,7 @@ lastupdated: "2018-12-05"
 {:tip: .tip}
 
 # 將 IP 位址設為白名單
-{: #edit_IP}
+{: #whitelist_IP}
 
 您可以藉由將 IP 位址設為白名單，來配置與 {{site.data.keyword.iva_short}} 或其他提供者的對等作業。
 {: shortdesc}

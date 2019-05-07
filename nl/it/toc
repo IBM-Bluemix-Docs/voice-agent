@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent/getting-started.html" path="services/voice-agent"}
+{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#getting-started-tutorial" path="services/voice-agent"}
 IBM Voice Agent with Watson
 
     {: .navgroup id="learn"}
@@ -13,25 +13,25 @@ IBM Voice Agent with Watson
     {: .navgroup id="reference"}
     {: .topicgroup}
     Variabili di stato
-        [Le variabili di stato impostate dall'agent vocale](services/voice-agent/api_reference.html#state-variables-iva)
-        [Le variabili di stato impostate nel dialogo Watson Assistant](services/voice-agent/api_reference.html#state-variables-conv)
-
-    [Attributi e comandi di azione](services/voice-agent/api_reference.html#actions-and-attributes)
+		[Le variabili di stato impostate dal Voice Agent](/services/voice-agent/voice-agent-api-reference#state-variables-iva)
+        [Le variabili di stato impostate nel dialogo Watson Assistant](/services/voice-agent/voice-agent-api-reference#state-variables-conv)
+    [Attributi e comandi di azione](/services/voice-agent/voice-agent-api-reference#actions-and-attributes)
+	api_reference.md
     default-settings.md
     activity-tracker.md
     [IBM Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/welcome_voicegateway.html){: new_window}
 
     {: .topicgroup}
     Servizi Watson
-        [Watson Assistant](services/conversation/index.html){: new_window}
-        [Speech to Text](services/speech-to-text/index.html){: new_window}
-        [Text to Speech](services/text-to-speech/index.html){: new_window}
+        [Watson Assistant](/services/conversation/services/conversation-gettingstarted#gettingstarted){: new_window}
+        [Speech to Text](/services/speech-to-text/speech-to-text-gettingStarted#gettingStarted){: new_window}
+        [Text to Speech](/services/text-to-speech/text-to-speech-gettingStarted#gettingStarted){: new_window}
 
     {: .topicgroup}
     Informazioni sulla sicurezza e sulla privacy dei dati
-        [Informazioni sulla sicurezza e sulla privacy dei dati](services/voice-agent/infosec.html)
-        [Gestione delle informazioni e opzioni di configurazione](services/voice-agent/infosec.html#configure_infosec)
-        [Servizi correlati a IBM Voice Agent with Watson](services/voice-agent/infosec.html#related_services)
+        infosec.md
+        [Gestione delle informazioni e opzioni di configurazione](/services/voice-agent/voice-agent-infosec#configure_infosec)
+        [Servizi correlati a IBM Voice Agent with Watson](/services/voice-agent/voice-agent-infosec#related_services)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -39,15 +39,16 @@ IBM Voice Agent with Watson
     connect-SIP.md
     managing.md
     managing_create.md
+    managing_multiple_numbers.md
 
     {: .topicgroup}
-    Configurazione degli agent vocali
-        [Configurazione di più ubicazioni del servizio](services/voice-agent/managing_disaster_recovery.html)
-        [Connessione ai servizi di discorso e testo di terze parti](services/voice-agent/managing_third_party.html)
-        [Utilizzo dei servizi in altri spazi di lavoro IBM Cloud](services/voice-agent/managing_other.html)
-        [Configurazione di un motore di orchestrazione del servizio](services/voice-agent/managing_SOE.html)
-        [Abilitazione dell'inoltro dell'evento per gli agent vocali](services/voice-agent/event-forwarding.html)
-        [Configurazione delle opzioni avanzate](services/voice-agent/managing.html#config-advanced)
+    Configurazione di Voice Agent
+        managing_disaster_recovery.md
+        managing_third_party.md
+        managing_other.md
+        managing_SOE.md
+		event-forwarding.md
+        [Configuring advanced options](/services/voice-agent/voice-agent-managing#config-advanced)
 
     {: .topicgroup}
     Configura un'istanza del servizio
@@ -55,7 +56,7 @@ IBM Voice Agent with Watson
         managing_IP_whitelist.md
 
     {: .topicgroup}
-    Programmazione degli agent vocali
+    Programmazione dei Voice Agent
         api.md
         api_dynamic_config.md
         call-transfer.md
@@ -63,11 +64,12 @@ IBM Voice Agent with Watson
     logging.md
 
     {: .topicgroup}
-    Protezione del tuo agent vocale
-        [Protezione delle connessioni](services/voice-agent/secure-trunking.html)
+    Protezione del tuo Voice Agent
+        secure-trunking.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     troubleshooting.md
     limitations.md
+    release_notes.md
     {: .navgroup-end}

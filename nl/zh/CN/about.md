@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-06"
+subcollection: "voice-agent"
 
 ---
 
@@ -25,9 +26,9 @@ lastupdated: "2018-11-06"
 {{site.data.keyword.iva_short}} 是您环境的总体体系结构中的一个组件，其可包含以下元素：
 
 * 基于 [IBM Voice Gateway ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SS4U29/) 的语音代理程序，用于编排以下 Watson 服务：
-  * [{{site.data.keyword.speechtotextshort}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](../speech-to-text/index.html)：将呼叫者的音频转换为文本
-  * [{{site.data.keyword.conversationshort}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](../conversation/index.html)：分析文本，将其映射到意向，然后根据您创建的对话提供响应
-  * [{{site.data.keyword.texttospeechshort}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](../text-to-speech/index.html)：将响应转换为语音音频
+  * [{{site.data.keyword.speechtotextshort}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/speech-to-text?topic=speech-to-text-about)：将呼叫者的音频转换为文本
+  * [{{site.data.keyword.conversationshort}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/assistant?topic=assistant-index#index)：分析文本，将其映射到意向，然后根据您创建的对话提供响应
+  * [{{site.data.keyword.texttospeechshort}} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/services/text-to-speech?topic=text-to-speech-about)：将响应转换为语音音频
 * SIP 中继，用于将语音代理程序连接到电话网络
 * （可选）服务编排引擎 (SOE)，位于 {{site.data.keyword.conversationshort}} 服务与语音代理程序之间，您可以使用它来进一步定制自己的环境
 
@@ -74,7 +75,7 @@ lastupdated: "2018-11-06"
 
 要了解有关如何实施服务编排引擎的更多信息，请参阅 [GitHub 上的服务编排引擎样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}。
 
-**重要信息**：为了实现数据安全，请确保对 SOE 工作空间使用安全 URL（即，使用 `https:` 而不是 `http:`），并要求认证。请参阅[信息安全和数据隐私](infosec.html)以了解更多安全性注意事项。
+**重要信息**：为了实现数据安全，请确保对 SOE 工作空间使用安全 URL（即，使用 `https:` 而不是 `http:`），并要求认证。请参阅[信息安全和数据隐私](/docs/services/voice-agent?topic=voice-agent-infosec)以了解更多安全性注意事项。
 
 ## 功能
 {: #features}

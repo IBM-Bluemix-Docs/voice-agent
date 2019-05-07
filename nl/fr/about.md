@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-06"
+subcollection: "voice-agent"
 
 ---
 
@@ -25,9 +26,9 @@ lastupdated: "2018-11-06"
 {{site.data.keyword.iva_short}} est l'un des différents composants de l'architecture globale de votre environnement, à savoir :
 
 * Un agent vocal basé sur [IBM Voice Gateway ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/SS4U29/), qui orchestre les services Watson suivants :
-  * [{{site.data.keyword.speechtotextshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](../speech-to-text/index.html) : Convertit l'audio de l'appelant en texte
-  * [{{site.data.keyword.conversationshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](../conversation/index.html) : Analyse le texte, le mappe à des intentions et fournit une réponse en fonction d'un dialogue que vous créez
-  * [{{site.data.keyword.texttospeechshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](../text-to-speech/index.html) : Convertit la réponse en audio vocal
+  * [{{site.data.keyword.speechtotextshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/speech-to-text?topic=speech-to-text-about) : Convertit l'audio de l'appelant en texte
+  * [{{site.data.keyword.conversationshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/assistant?topic=assistant-index#index) : Analyse le texte, le mappe à des intentions et fournit une réponse en fonction d'un dialogue que vous créez
+  * [{{site.data.keyword.texttospeechshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/text-to-speech?topic=text-to-speech-about) : Convertit la réponse en audio vocal
 * Une liaison SIP, qui connecte votre agent vocal au réseau téléphonique
 * Un moteur d'orchestration de service facultatif, situé entre le service {{site.data.keyword.conversationshort}} et votre agent vocal vous permettant de personnaliser encore davantage votre environnement
 
@@ -74,7 +75,7 @@ Vous souhaiterez peut-être incorporer un moteur d'orchestration de service dans
 
 Pour plus d'informations sur l'implémentation d'un moteur d'orchestration de service, voir les [exemples de moteur d'orchestration de service sur GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}.
 
-**Important** : pour la sécurité des données, veillez à utiliser une URL sécurisée pour votre espace de travail de moteur d'orchestration de service, en utilisant `https:` au lieu de `http:`, et exigez une authentification. Voir [Sécurité des informations et confidentialité des données](infosec.html) pour en savoir plus sur les éléments à prendre en compte en matière de sécurité.
+**Important** : pour la sécurité des données, veillez à utiliser une URL sécurisée pour votre espace de travail de moteur d'orchestration de service, en utilisant `https:` au lieu de `http:`, et exigez une authentification. Voir [Sécurité des informations et confidentialité des données](/docs/services/voice-agent?topic=voice-agent-infosec) pour en savoir plus sur les éléments à prendre en compte en matière de sécurité.
 
 ## Fonctions
 {: #features}

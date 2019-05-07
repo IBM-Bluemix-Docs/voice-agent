@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-01"
+subcollection: "voice-agent"
 
 ---
 
@@ -29,7 +30,7 @@ lastupdated: "2018-11-01"
 
 1. {{site.data.keyword.Bluemix_short}} 대시보드에서 {{site.data.keyword.conversationshort}} 서비스 인스턴스를 선택하십시오.
 1. {{site.data.keyword.conversationshort}} 도구를 실행하십시오.
-1. 편집할 대화가 포함된 작업공간을 클릭하십시오.
+1. 편집할 대화를 포함하는 스킬을 클릭하십시오.
 1. **대화** 탭으로 이동하여 조치 또는 상태를 설정할 노드를 선택하십시오.
 1. 응답에서 ![고급 응답](../conversation/images/kabob.png) 아이콘을 클릭하고 **JSON 편집기 열기**를 선택하십시오.
 
@@ -119,7 +120,7 @@ lastupdated: "2018-11-01"
 ## 상태 설정
 {: #setting-states}
 
-대화 전환 사이에 유지되는 상태의 변경사항을 표시하기 위해 음성 에이전트가 {{site.data.keyword.conversationfull}} 서비스와 상태 변수를 교환합니다. 이러한 상태 변수는 {{site.data.keyword.conversationshort}} 대화 노드에서 JSON 형식의 [컨텍스트 변수](../conversation/dialog-build.html#context)로 정의됩니다.
+대화 전환 사이에 유지되는 상태의 변경사항을 표시하기 위해 음성 에이전트가 {{site.data.keyword.conversationfull}} 서비스와 상태 변수를 교환합니다. 이러한 상태 변수는 {{site.data.keyword.conversationshort}} 대화 노드에서 JSON 형식의 [컨텍스트 변수](/docs/services/assistant?topic=assistant-dialog-build#dialog-build)로 정의됩니다.
 
 예를 들어, {{site.data.keyword.conversationshort}} 서비스에 대한 연결이 실패하는 경우 호출자에게 스트리밍되는 메시지를 설정하기 위해 다음 상태 변수를 정의할 수 있습니다.
 

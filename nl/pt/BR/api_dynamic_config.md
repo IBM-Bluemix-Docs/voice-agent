@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-08"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,12 +22,12 @@ lastupdated: "2018-11-08"
 É possível conectar os serviços de fala e texto de terceiro configurando Fala para texto ou Texto para fala por meio de um nó de diálogo do {{site.data.keyword.conversationshort}}.
 {: shortdesc}
 
-Consulte [Programando os agentes de voz usando a API](api.html) para obter exemplos de códigos e informações sobre como configurar estados e iniciar sequências de ação.
+Consulte [Programando os agentes de voz usando a API](/docs/services/voice-agent?topic=voice-agent-api) para obter exemplos de códigos e informações sobre como configurar estados e iniciar sequências de ação.
 
 ## Conectando-se ao Google Speech-to-Text por meio de um nó de diálogo do {{site.data.keyword.conversationshort}}
 {: #stt_dialog}
 
-Em vez de configurar a conexão com o Google Speech-to-Text editando o agente de voz, é possível programar o {{site.data.keyword.conversationshort}} para definir as configurações STT com o comando `"vgwActSetSTTConfig"`. Consulte [Editando o JSON na resposta do diálogo](api.html#json-editor).
+Em vez de configurar a conexão com o Google Speech-to-Text editando o agente de voz, é possível programar o {{site.data.keyword.conversationshort}} para definir as configurações STT com o comando `"vgwActSetSTTConfig"`. Consulte [Editando o JSON na resposta do diálogo](/docs/services/voice-agent?topic=voice-agent-api#json-editor).
 
 1. No editor JSON para o diálogo do {{site.data.keyword.conversationshort}}, inclua o comando `"vgwActSetSTTConfig"` no nó de diálogo.
 
@@ -69,7 +70,7 @@ Em vez de configurar a conexão com o Google Speech-to-Text editando o agente de
 ## Conectando-se ao Google Text-to-Speech por meio de um nó de diálogo do {{site.data.keyword.conversationshort}}
 {: #tts_dialog}
 
-Em vez de configurar a conexão com o Google Text-to-Speech editando o agente de voz, é possível programar o {{site.data.keyword.conversationshort}} para definir as configurações TTS com o comando `"vgwActSetTTSConfig"`. Consulte [Editando o JSON na resposta do diálogo](api.html#json-editor).
+Em vez de configurar a conexão com o Google Text-to-Speech editando o agente de voz, é possível programar o {{site.data.keyword.conversationshort}} para definir as configurações TTS com o comando `"vgwActSetTTSConfig"`. Consulte [Editando o JSON na resposta do diálogo](/docs/services/voice-agent?topic=voice-agent-api#json-editor).
 
 1. No editor JSON para o diálogo do {{site.data.keyword.conversationshort}}, inclua o comando `"vgwActSetTTSConfig"` no nó de diálogo.
 

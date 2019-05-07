@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-03"
+subcollection: "voice-agent"
 
 
 ---
@@ -28,7 +29,7 @@ lastupdated: "2018-12-03"
 
 1. 在_编辑最大并发连接数_中，输入最大并发连接数，然后单击**保存**。
 
-可通过自助服务设置的最小并发连接数为 10，最大并发连接数为 50。如果语音代理程序需要 50 个以上的并发连接，请参阅[请求网络设置协助](connect-SIP.html#request-setup)。
+可通过自助服务设置的最小并发连接数为 10，最大并发连接数为 50。如果语音代理程序需要 50 个以上的并发连接，请参阅[请求网络设置协助](/docs/services/voice-agent?topic=voice-agent-connect#request-setup)。
 
 ## 并发连接定价信息
 {: #concurrent-charge}

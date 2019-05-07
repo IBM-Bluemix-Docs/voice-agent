@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-05"
+lastupdated: "2018-12-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -15,7 +16,7 @@ lastupdated: "2018-12-05"
 {:tip: .tip}
 
 # 将 IP 地址列入白名单
-{: #edit_IP}
+{: #whitelist_IP}
 
 您可以通过将 IP 地址列入白名单来配置对等的 {{site.data.keyword.iva_short}} 或其他提供者。
 {: shortdesc}

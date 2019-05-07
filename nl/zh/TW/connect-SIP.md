@@ -1,13 +1,14 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-05"
+  years: 2019
+lastupdated: "2019-02-15"
+subcollection: "voice-agent"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:new_window: target="_blank"_}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -20,11 +21,26 @@ lastupdated: "2018-12-05"
 您可以從下列清單中選擇用來與 {{site.data.keyword.iva_full}} 整合的 SIP 幹線提供者。
 {: #shortdesc}
 
+* [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
 * [AT&T 及其他提供者](#att-other)
 * [與 {{site.data.keyword.iva_short}} 的對等作業](#peering)
 * [要求輔助設定](#request-setup)
+
+## 建立 Nexmo 語音應用程式
+{: #nexmo-setup}
+
+  **附註：**建立 [Nexmo 帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://dashboard.nexmo.com/sign-up){: new_window} 需要信用卡，這會根據您所配置之 SIP 幹線使用而定期向您收取費用。如果您已有 Nexmo 帳戶，則可以使用現有帳戶。
+
+  1. 在 [Nexmo 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://dashboard.nexmo.com/sign-up){: new_window} 上建立 Nexmo 帳戶。
+
+  1. 遵循 Nexmo [GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/nexmo-community/watson-voice-agent){: new_window} 的 README 指示。GitHub 儲存庫包含開始使用的範例。
+
+  1. 佈建 Nexmo 電話號碼且您的應用程式在執行中之後，請用 Nexmo 電話號碼配置您的語音代理程式。
+
+  1. 撥打 Nexmo 電話號碼來測試您的配置。
+
 
 ## 建立 NetFoundry SIP 幹線及電話號碼
 {: #NetFoundry-setup}
@@ -43,7 +59,7 @@ lastupdated: "2018-12-05"
 
 1. 順利處理付款之後，您的 SIP 幹線電話號碼會顯示在帳戶中。
 
-您需要此電話號碼來設定語音代理程式，並配置通話轉接（包括國碼及區域碼）。請參閱[建立及連接語音代理程式](getting-started.html#step3)。
+您需要此電話號碼來設定語音代理程式，並配置通話轉接（包括國碼及區域碼）。請參閱[建立及連接語音代理程式](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)。
 
 
 ## 建立 Twilio SIP 幹線
@@ -69,12 +85,14 @@ lastupdated: "2018-12-05"
 
   在「號碼」頁面上，按一下**購買號碼**，或者，如果您已有號碼，則請按一下 **+** 圖示。即會顯示畫面，您可以在地區中的何處佈建新電話號碼。返回 SIP 幹線，然後按一下「號碼」圖示，以將號碼指派給您所建立的 SIP 幹線。
 
-  您需要此電話號碼來設定語音代理程式（包括國碼及區域碼）。請參閱[建立及連接語音代理程式](getting-started.html#step3)。
+  您需要此電話號碼來設定語音代理程式（包括國碼及區域碼）。請參閱[建立及連接語音代理程式](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)。
+
+  **附註**：如果您是使用精簡/試用 Twilio 帳戶來測試 {{site.data.keyword.iva_short}} 上的轉接，則務必要_驗證_ 轉接目標。請參閱 [Twilio 的官方網站](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-)上的相關指示。
 
 ## 與 {{site.data.keyword.iva_short}} 的對等作業
 {: #peering}
 
-{{site.data.keyword.iva_short}} 支援對等節點連線（例如 IPSec 通道）。若要與 {{site.data.keyword.iva_short}} 對等作業，您可以將伺服器的 IP 位址設為白名單。
+{{site.data.keyword.iva_short}} 支援與客戶 PBX（例如 Asterisk）的對等節點連線。若要與 {{site.data.keyword.iva_short}} 對等作業，您可以將伺服器的 IP 位址設為白名單。
 
 1. 移至_管理_ 儀表板，並選取_實例_ 標籤。
 
@@ -91,6 +109,8 @@ lastupdated: "2018-12-05"
 {: #request-setup}
 
 您可以要求設定輔助網路，以與 AT&T 或其他 SIP 幹線提供者連接、與 {{site.data.keyword.iva_short}} 對等，或使用下列處理程序來要求超過 50 個的並行連線。
+
+您可以在 {{site.data.keyword.iva_short}} 實例中，將例如 Asterisk 的 PBX 設為白名單。唯有在公用網際網路白名單不是可接受的解決方案時，才開立支援問題單。請參閱[將 IP 位址設為白名單](/docs/services/voice-agent?topic=voice-agent-whitelist_IP#whitelist_IP)。
 
 1. 開立新的 [{{site.data.keyword.Bluemix_notm}} 支援問題單](https://cloud.ibm.com/unifiedsupport/tickets/add)
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-14"
-
+subcollection: "voice-agent"
 ---
 
 {:shortdesc: .shortdesc}
@@ -28,12 +28,12 @@ agentes de voz. Se você estiver tendo problemas com o {{site.data.keyword.iva_s
 
 1. Quando uma chamada falhar, o turno final do {{site.data.keyword.conversationshort}} poderá explicar a falha.
 
-1. Logs de uso mostram quaisquer erros que possam ter ocorrido durante uma chamada específica. Consulte [Visualizando logs de uso e de chamada](logging.html).
+1. Logs de uso mostram quaisquer erros que possam ter ocorrido durante uma chamada específica. Consulte [Visualizando logs de uso e de chamada](/docs/services/voice-agent?topic=voice-agent-logging).
 
 1. Verifique os logs do provedor de serviços para erros de sinalização. Por exemplo, o Twilio fornece logs para cada tronco SIP
 que hospeda.
 
-1. Ao [ativar o encaminhamento de eventos para os agentes de voz](event-forwarding.html), é possível
+1. Ao [ativar o encaminhamento de eventos para os agentes de voz](/docs/services/voice-agent?topic=voice-agent-event_forwarding), é possível
 configurar o seu agente de voz para encaminhar os registros de detalhe de chamada (CDRs) para um banco de dados do
 Cloudant e então determinar por que uma chamada falhou. Outros eventos, como os eventos de turno do
 {{site.data.keyword.conversationshort}} podem fornecer detalhes sobre cada turno de conversa dentro de uma chamada.
@@ -68,17 +68,17 @@ seu provedor de entroncamento SIP, como NetFoundry ou Twilio.
 painel _Gerenciar_ do agente de voz. Por exemplo, `18884253968`.
 
 * Verifique se as credenciais de serviço do Watson, as URLs e o ID da área de trabalho do {{site.data.keyword.conversationshort}} são todas válidas.
-* Verifique se o diálogo em sua área de trabalho do {{site.data.keyword.conversationshort}} foi criado corretamente.
-  * É possível importar a [conversa de amostra ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) do GitHub para uma área de trabalho pré-construída. Consulte [Etapa 3 em *Tutorial de Introdução*](getting-started.html#step3) para obter detalhes sobre
-como salvar a conversa de amostra como um arquivo JSON e, em seguida, importar o arquivo como uma área de trabalho na ferramenta {{site.data.keyword.conversationshort}}.
+* Verifique se o diálogo em sua qualificação do {{site.data.keyword.conversationshort}} foi criado corretamente.
+  * É possível importar a [conversa de amostra ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) do GitHub para obter uma qualificação pré-construída. Consulte a [Etapa 3 no *Tutorial de introdução*](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3) para obter detalhes sobre como salvar a conversa de amostra como um arquivo JSON e, em seguida, importar o arquivo como uma qualificação na ferramenta {{site.data.keyword.conversationshort}}.
   * Se você criou o seu próprio diálogo {{site.data.keyword.conversationshort}}, verifique se o diálogo
-contém um nó com a condição `conversation_start` e um nó com uma resposta padrão. Para obter instruções detalhadas, consulte [Construindo um diálogo](../conversation/dialog-build.html) na documentação do {{site.data.keyword.conversationshort}}.
+contém um nó com a condição `conversation_start` e um nó com uma resposta padrão. Para obter instruções detalhadas, consulte [Construindo um diálogo](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog) na documentação do {{site.data.keyword.conversationshort}}.
 * Veja se seu telefonema está listado no painel _Uso_ do agente de voz. Se você vir um item para seu telefonema, então, seu agente de voz conectou ao serviço do Watson.
 
 ### Por que eu não posso especificar um número de telefone quando crio um agente de voz?
 
-Veja se o número do telefone especificado é usado por um agente de voz existente. É possível ter apenas um agente de voz para um número de telefone. É possível fornecer outro número de telefone do seu provedor de entroncamento SIP e usá-lo para criar outro agente de voz. Ou [exclua o agente de voz existente no painel _Gerenciar_](managing.html#delete_va) para liberar o
-número do telefone e, em seguida, criar um novo agente de voz.
+Veja se o número do telefone especificado é usado por um agente de voz existente. É possível ter apenas um agente de voz para um número de telefone. É possível fornecer outro número de telefone do seu provedor de entroncamento SIP e usá-lo para criar outro agente de voz. Ou [exclua o agente de voz existente
+no painel Gerenciar](/docs/services/voice-agent?topic=voice-agent-managing#delete_va) para liberar o número do telefone e, em seguida, criar um novo
+agente de voz.
 
 ### Por que meus telefonemas falhando frequentemente?
 

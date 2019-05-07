@@ -1,13 +1,14 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-05"
+  years: 2019
+lastupdated: "2019-02-15"
+subcollection: "voice-agent"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:new_window: target="_blank"_}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -20,11 +21,26 @@ lastupdated: "2018-12-05"
 以下のリストから、{{site.data.keyword.iva_full}} との統合に使用する SIP トランク・プロバイダーを選択できます。
 {: #shortdesc}
 
+* [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
 * [AT&T やその他のプロバイダー](#att-other)
 * [{{site.data.keyword.iva_short}} とのピアリング](#peering)
 * [要補助セットアップの要求](#request-setup)
+
+## Nexmo ボイス・アプリケーションの作成
+{: #nexmo-setup}
+
+  **注:** [Nexmo アカウント ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://dashboard.nexmo.com/sign-up){: new_window} を作成するにはクレジット・カードが必要です。構成する SIP トランクの使用量に応じてこのカードに定期的に課金されます。 すでに Nexmo アカウントを持っている場合は、既存のアカウントを使用することができます。
+
+  1. [Nexmo Web サイト ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://dashboard.nexmo.com/sign-up){: new_window} で Nexmo アカウントを作成します。
+
+  1. Nexmo [github リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/nexmo-community/watson-voice-agent){: new_window} にある README の指示に従います。 GitHub リポジトリーには、開始サンプルが含まれます。
+
+  1. Nexmo 電話番号をプロビジョニングしてアプリケーションを実行したら、Nexmo 電話番号を使用して Voice Agent を設定します。
+
+  1. Nexmo 電話番号にダイヤルして構成をテストします。
+
 
 ## NetFoundry SIP トランクと電話番号の作成
 {: #NetFoundry-setup}
@@ -43,7 +59,7 @@ lastupdated: "2018-12-05"
 
 1. 支払いが正常に処理されると、SIP トランク電話番号がアカウントに表示されます。
 
-この電話番号 (国コードと地域コードを含む) がボイス・エージェントのセットアップおよび通話中転送の構成に必要になります。 [ボイス・エージェントの作成と接続](getting-started.html#step3)を参照してください。
+この電話番号 (国コードと地域コードを含む) がボイス・エージェントのセットアップおよび通話中転送の構成に必要になります。 [ボイス・エージェントの作成と接続](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)を参照してください。
 
 
 ## Twilio SIP トランクの作成
@@ -57,8 +73,7 @@ lastupdated: "2018-12-05"
 
   1. Twilio Web サイトから、「弾力的な SIP トランクの接続 (Elastic SIP Trunking)」ダッシュボードに移動します。
 
-  1. ナビゲーション・バーから**「Trunks (トランク)」**を選択して、SIP トランクを作成します。 すでに SIP トランクがある場合は、**「+」**アイコンをクリックします。 それによって表示されるダイアログ・ボックスに
-SIP トランクの名前を入力し、**「Create (作成)」**をクリックします。
+  1. ナビゲーション・バーから**「Trunks (トランク)」**を選択して、SIP トランクを作成します。 すでに SIP トランクがある場合は、**「+」**アイコンをクリックします。 それによって表示されるダイアログ・ボックスに SIP トランクの名前を入力し、**「Create (作成)」**をクリックします。
 
   1. 「Elastic SIP Trunks (エラスティック SIP トランク)」ページから、使用する SIP トランクを選択します。
 
@@ -70,12 +85,14 @@ SIP トランクの名前を入力し、**「Create (作成)」**をクリック
 
   「Numbers (番号)」ページで、**「Buy a Number (番号の購入)」**をクリックするか、またはすでに番号を持っている場合は**「+」**アイコンをクリックします。 パネルが表示されるので、そのパネルで自分の地域内の新しい電話番号をプロビジョンすることができます。 SIP トランクに戻って「Number (番号)」アイコンをクリックし、作成した SIP トランクにその番号を割り当てます。
 
-  この電話番号は、国コードおよび地域コードとともに、ボイス・エージェントのセットアップに必要です。 [ボイス・エージェントの作成と接続](getting-started.html#step3)を参照してください。
+  この電話番号は、国コードおよび地域コードとともに、ボイス・エージェントのセットアップに必要です。 [ボイス・エージェントの作成と接続](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)を参照してください。
+
+  **注**: Lite/Trial Twilio アカウントを使用して {{site.data.keyword.iva_short}} での転送をテストしている場合は、転送先を_確認_ する必要があります。詳しくは、[Twilio の公式サイト](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-)を参照してください。
 
 ## {{site.data.keyword.iva_short}} とのピアリング
 {: #peering}
 
-{{site.data.keyword.iva_short}} では、IPSec トンネルなどのピア接続がサポートされています。 {{site.data.keyword.iva_short}} とのピアリングのために、サーバーの IP アドレスをホワイトリストに登録することができます。
+{{site.data.keyword.iva_short}} は、Asterisk などの顧客の PBX とのピア接続をサポートします。 {{site.data.keyword.iva_short}} とのピアリングのために、サーバーの IP アドレスをホワイトリストに登録することができます。
 
 1. _「管理」_ダッシュボードに移動して、_「インスタンス」_タブを選択します。
 
@@ -92,6 +109,8 @@ SIP トランクの名前を入力し、**「Create (作成)」**をクリック
 {: #request-setup}
 
 AT&T やその他の SIP トランキング・プロバイダーと接続したり、{{site.data.keyword.iva_short}} とピア接続したり、あるいは 50 より多くの同時接続を要求したりするには、以下の手順で要補助ネットワーク・セットアップを要求します。
+
+{{site.data.keyword.iva_short}} インスタンスで、Asterisk などの PBX をホワイトリストに登録できます。 公共インターネットを使用したホワイトリスト登録が適切なソリューションではない場合にのみ、サポート・チケットを開きます。 [IP アドレスのホワイトリスト登録](/docs/services/voice-agent?topic=voice-agent-whitelist_IP#whitelist_IP)を参照してください。
 
 1. 新しい [{{site.data.keyword.Bluemix_notm}} サポート・チケット](https://cloud.ibm.com/unifiedsupport/tickets/add)を開きます。
 

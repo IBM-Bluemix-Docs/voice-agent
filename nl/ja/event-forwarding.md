@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-08-24"
+  years: 2019
+lastupdated: "2019-01-30"
+subcollection: "voice-agent"
 ---
 
 {:shortdesc: .shortdesc}
@@ -23,9 +24,9 @@ lastupdated: "2018-08-24"
 
 これらのイベントのデータを分析することは、ダイアログの調整、意図の絞り込み、および全体的な発信者体験の改善に役立ちます。
 
-ボイス・エージェントを作成または編集するとき、イベント転送の有効化も選択することができます。 ボイス・エージェントの作成および編集の詳細については、[ボイス・エージェントの管理](managing.html)を参照してください。 イベント転送を有効化するには、{{site.data.keyword.cloudant_short_notm}} アカウント情報 (アカウント名とパスワードを含む) を提供する必要があります。
+ボイス・エージェントを作成または編集するとき、イベント転送の有効化も選択することができます。 ボイス・エージェントの作成および編集の詳細については、[ボイス・エージェントの管理](/docs/services/voice-agent?topic=voice-agent-managing)を参照してください。 イベント転送を有効化するには、{{site.data.keyword.cloudant_short_notm}} アカウント情報 (アカウント名とパスワードを含む) を提供する必要があります。
 
-**重要:** CDR イベント、転写イベント、およびターン・イベントにはユーザーからの情報が取り込まれますが、それには保護医療情報 (PHI)、個人情報 (PII)、または PCI データ・セキュリティー基準 (PCI DSS) のデータが含まれている可能性があります。 個人情報の漏えいを防ぐため、会話内および会話中にユーザーどうしがやりとりする機密情報が {{site.data.keyword.cloudant_short_notm}} インスタンスで適切に保護されるようにする必要があります。 [機密保護とデータ・プライバシー: イベント転送](infosec.html#event_forwarding)と、[{{site.data.keyword.cloudant_short_notm}}: セキュリティー](../Cloudant/offerings/security.html#security)を参照してください。
+**重要:** CDR イベント、転写イベント、およびターン・イベントにはユーザーからの情報が取り込まれますが、それには保護医療情報 (PHI)、個人情報 (PII)、または PCI データ・セキュリティー基準 (PCI DSS) のデータが含まれている可能性があります。 個人情報の漏えいを防ぐため、会話内および会話中にユーザーどうしがやりとりする機密情報が {{site.data.keyword.cloudant_short_notm}} インスタンスで適切に保護されるようにする必要があります。 [機密保護とデータ・プライバシー: イベント転送](/docs/services/voice-agent?topic=voice-agent-infosec#event_forwarding)と、[{{site.data.keyword.cloudant_short_notm}}: セキュリティー](/docs/services/Cloudant/offerings?topic=cloudant-security#security)を参照してください。
 
 
 ## イベント転送の有効化
@@ -37,7 +38,8 @@ lastupdated: "2018-08-24"
 
 1. **「マイ {{site.data.keyword.cloudant_short_notm}} サービス・インスタンス」**または**「その他の {{site.data.keyword.cloudant_short_notm}} サービス・インスタンス」**のいずれかを選択します。
   * **「マイ {{site.data.keyword.cloudant_short_notm}} サービス・インスタンス」**を使用する場合は、リストから **{{site.data.keyword.cloudant_short_notm}} アカウント**名とユーザー名を選択します。
-  * **「その他の {{site.data.keyword.cloudant_short_notm}} サービス・インスタンス」**を使用する場合は、アカウントの {{site.data.keyword.cloudant_short_notm}} ユーザー名とパスワード、または API キーを入力します。
+  * ダラスまたはワシントン DC の地域にボイス・エージェントを作成する場合は、{{site.data.keyword.cloudant_short_notm}} サービス・インスタンスがなければ、**「Cloudant アカウント (Cloudant account)」**メニューから作成できます。
+  * **「その他の {{site.data.keyword.cloudant_short_notm}} サービス・インスタンス」**を使用する場合は、アカウントの {{site.data.keyword.cloudant_short_notm}} ユーザー名とパスワード (それぞれ最大 128 文字、256 文字)、または API キー (最大 64 文字) を入力します。
 
 1. 転送する各イベント・タイプについて**「Enable (有効化)」**を選択してから、イベントを転送する宛先のデータベースを選択します。
   * 発着信詳細記録 (CDR) イベント
@@ -47,6 +49,7 @@ lastupdated: "2018-08-24"
 1. データベースを表示して、イベント・レポートが正しく転送されていることを確認します。
 
 ## 関連リンク
+{: #related-links-forwarding}
 * [IBM Voice Gateway: イベントのレポート作成](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}
-* [機密保護とデータ・プライバシー](infosec.html)
-* [{{site.data.keyword.cloudant_short_notm}}: セキュリティー](../Cloudant/offerings/security.html#security)
+* [機密保護とデータ・プライバシー](/docs/services/voice-agent?topic=voice-agent-infosec)
+* [{{site.data.keyword.cloudant_short_notm}}: セキュリティー](/docs/services/Cloudant/offerings?topic=cloudant-security#security)

@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-16"
+subcollection: "voice-agent"
 
 
 ---
@@ -21,7 +22,7 @@ lastupdated: "2018-11-16"
 Sie können beim Erstellen, Klonen oder Bearbeiten Ihres Sprachagenten im Dashboard _Verwalten_ eine Verbindung zu Sprach- und Textservices anderer Anbieter herstellen.
 {: shortdesc}
 
-Alternativ dazu können Sie zur Konfiguration Ihrer Sprach- und Textserviceverbindungen während des Betriebs die [dynamische Konfiguration mit {{site.data.keyword.conversationshort}}](api_dynamic_config.html) nutzen. Dies ermöglicht Ihnen die Änderung Ihrer Sprachagentenkonfiguration mit Aktionstags und Statusvariablen.
+Alternativ dazu können Sie zur Konfiguration Ihrer Sprach- und Textserviceverbindungen während des Betriebs die [dynamische Konfiguration mit {{site.data.keyword.conversationshort}}](/docs/services/voice-agent?topic=voice-agent-dynamic-donfig) nutzen. Dies ermöglicht Ihnen die Änderung Ihrer Sprachagentenkonfiguration mit Aktionstags und Statusvariablen.
 
 ## Verbindung zu Google Speech-to-Text über {{site.data.keyword.iva_short}} herstellen
 {: #stt_va}
@@ -34,7 +35,7 @@ Anstelle einer Verbindung zur {{site.data.keyword.speechtotextfull}}-Instanz kö
 
 1. Wählen Sie die **Sprache** für Ihre Serviceinstanz aus.
 
-1. Geben Sie Ihre Google Cloud Speech-to-Text-Serviceberechtigungsnachweise ein.
+1. Geben Sie Ihre Google Cloud Speech-to-Text-Serviceberechtigungsnachweise ein. Beachten Sie dabei die Begrenzung auf maximal 3072 Zeichen.
   * Sie können die Serviceberechtigungsnachweise auf der Google Cloud-Plattform als JSON-Schlüssel generieren, wenn Sie [ein Servicekonto einrichten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). Das folgende Codebeispiel enthält die Beispielberechtigungsnachweisfelder, die Sie auf der Google Cloud-Plattform generieren.
 
     ```json
@@ -77,7 +78,7 @@ Anstelle einer Verbindung zur {{site.data.keyword.texttospeechfull}}-Instanz kö
 
 1. Wählen Sie die Optionen für die Landessprache und für die Sprache für Ihre Serviceinstanz aus.
 
-1. Geben Sie Ihre Google Cloud Text-to-Speech-Serviceberechtigungsnachweise ein.
+1. Geben Sie Ihre Google Cloud Text-to-Speech-Serviceberechtigungsnachweise ein. Beachten Sie dabei die Begrenzung auf maximal 3072 Zeichen.
   * Sie können die Serviceberechtigungsnachweise auf der Google Cloud-Plattform als JSON-Schlüssel generieren, wenn Sie [ein Servicekonto einrichten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). Das folgende Codebeispiel enthält die Beispielberechtigungsnachweisfelder, die Sie auf der Google Cloud-Plattform generieren.
 
     ```json

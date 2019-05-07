@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-04"
+  years: 2018, 2019
+lastupdated: "2019-03-15"
+subcollection: "voice-agent"
 
 
 ---
@@ -18,20 +19,20 @@ lastupdated: "2018-12-04"
 # Configurazione del trasferimento di chiamata
 {: #call-transfer}
 
-Puoi configurare un trasferimento di chiamata in modo che se un chiamante richiede di parlare a un agent dal vivo durante una conversazione, l'agent vocale automaticamente trasferisce la chiamata.
+Puoi configurare un trasferimento di chiamata in modo che se un chiamante richiede di parlare a un agent dal vivo durante una conversazione, il Voice Agent automaticamente trasferisce la chiamata.
 {: shortdesc}
 
 ## Informazioni sul trasferimento di chiamata
 {: #about-ct}
 
-Abilitando il trasferimento di chiamata, se un chiamante richiede di parlare con un agent dal vivo durante la conversazione, l'agent vocale reindirizzerà la chiamata. {{site.data.keyword.iva_short}} utilizza un SIP REFER per indirizzare nuovamente la chiamata al tuo provider trunk SIP da gestire e non esegue l'ancoraggio delle chiamate telefoniche trasferite.
+Abilitando il trasferimento di chiamata, se un chiamante richiede di parlare con un agent dal vivo durante la conversazione, il Voice Agent reindirizzerà la chiamata. {{site.data.keyword.iva_short}} utilizza un SIP REFER per indirizzare nuovamente la chiamata al tuo provider trunk SIP da gestire e non esegue l'ancoraggio delle chiamate telefoniche trasferite.
 
-Puoi abilitare il trasferimento di chiamata configurando un URI di terminazione o un URI tel nella configurazione del tuo provider SIP. Successivamente definisci la destinazione del trasferimento in un'azione API in un nodo di dialogo della tua istanza {{site.data.keyword.conversationshort}}. La tua destinazione del trasferimento è un URI SIP che contiene l'URI di terminazione e il numero di telefono o un URI tel con il numero di telefono. Per ulteriori informazioni dettagliate sulle azioni supportate e sulla personalizzazione dei tuoi agent vocali, consulta [Programmazione degli agent vocali utilizzando l'API](api.html).
+Puoi abilitare il trasferimento di chiamata configurando un URI di terminazione o un URI tel nella configurazione del tuo provider SIP. Successivamente definisci la destinazione del trasferimento in un'azione API in un nodo di dialogo della tua istanza {{site.data.keyword.conversationshort}}. La tua destinazione del trasferimento è un URI SIP che contiene l'URI di terminazione e il numero di telefono o un URI tel con il numero di telefono. Per ulteriori informazioni dettagliate sulle azioni supportate e sulla personalizzazione dei tuoi Voice Agent, consulta [Programmazione dei Voice Agent utilizzando l'API](/docs/services/voice-agent?topic=voice-agent-api).
 
 ## Passo 1: configurazione dell'URI di terminazione
 {: #termination-setup}
 
-Se stai utilizzando un URI tel invece di un URI di terminazione per la tua configurazione URI SIP, puoi utilizzare l'URI tel, come ad esempio `tel:+18889990000`, per la tua `trasnferTarget`. Hai bisogno di un URI di terminazione per il tuo `transferTarget` se stai utilizzando un URI SIP.
+Se stai utilizzando un URI tel invece di un URI di terminazione per la tua configurazione URI SIP, puoi utilizzare l'URI tel, come ad esempio `tel:+18889990000`, per la tua `transferTarget`. Hai bisogno di un URI di terminazione per il tuo `transferTarget` se stai utilizzando un URI SIP.
 {: tip}
 
 ### Configurazione di un URI di terminazione in NetFoundry
@@ -55,7 +56,7 @@ Non hai bisogno di configurare manualmente l'URI di terminazione nel tuo account
 
 1. Scegli il trunk a cui desideri aggiungere il trasferimento di chiamata selezionando un trunk esistente oppure creandone uno nuovo facendo clic sull'icona **+**.
 
-  * Se crei un nuovo trunk, devi configurare il _SIP Trunk URI_ nel dashboard **Origination**.  Per ulteriori informazioni, vedi [Connessione a un trunk SIP](connect-SIP.html).
+  * Se crei un nuovo trunk, devi configurare il _SIP Trunk URI_ nel dashboard **Origination**.  Per ulteriori informazioni, vedi [Connessione a un trunk SIP](/docs/services/voice-agent?topic=voice-agent-connect).
 
 1. Seleziona **Termination** nella tua barra di navigazione e immetti un nome per il tuo URI di terminazione.
 
@@ -71,13 +72,13 @@ Non hai bisogno di configurare manualmente l'URI di terminazione nel tuo account
 ## Passo 2: Configurazione di {{site.data.keyword.conversationshort}} per il trasferimento di chiamata
 {: #conversation-setup}
 
-Per ulteriori informazioni sull'utilizzo del servizio {{site.data.keyword.conversationshort}}, vedi [Informazioni su {{site.data.keyword.conversationshort}}](../conversation/index.html#about).
+Per ulteriori informazioni sull'utilizzo del servizio {{site.data.keyword.conversationshort}}, vedi [Informazioni su {{site.data.keyword.conversationshort}}](/docs/services/assistant?topic=assistant-index#indext).
 
-1. Nel tuo dashboard {{site.data.keyword.Bluemix_notm}}, seleziona l'istanza {{site.data.keyword.conversationshort}} che il tuo agent vocale utilizza.
+1. Nel tuo dashboard {{site.data.keyword.Bluemix_notm}}, seleziona l'istanza {{site.data.keyword.conversationshort}} che il tuo Voice Agent utilizza.
 
 1. Dal dashboard _Getting started_, fai clic sul pulsante **Launch tool**.
 
-1. Fai clic su **Getting Started** nello spazio di lavoro che vuoi modificare.
+1. Fai clic su **Getting Started** nella competenza che vuoi modificare.
 
 1. Fai clic su **Add intent** e immetti un nome per l'intento, come ad esempio _Transfer_.
 
@@ -92,6 +93,8 @@ Per ulteriori informazioni sull'utilizzo del servizio {{site.data.keyword.conver
 1. Per la sezione _Then respond with:_, fai clic sull'icona **&vellip;** e seleziona **Open JSON editor**. Copia e incolla il seguente frammento di codice per sostituire il codice nel campo.
 
   * Se utilizzi un URI tel, sostituisci l'URI SIP nel `transferTarget` con il tuo URI tel. Ad esempio, `"transferTarget":"tel:+18889990000"`.
+
+  * **NOTA**: assicurati che l'URI `transferTarget` inizi con un `+`.
 
   ```json
   {
@@ -115,9 +118,11 @@ Per ulteriori informazioni sull'utilizzo del servizio {{site.data.keyword.conver
 
 **Ricorda**: l'URI SIP della destinazione del trasferimento include un numero di telefono e l'URI di terminazione che hai creato. Non utilizzare un numero di telefono personale nella tua destinazione di trasferimento. Ad esempio, se il numero di telefono è `18889990000` e il tuo URI di terminazione è `mysiptrunk.pstn.twilio.com`, l'URI SIP completo è `sip:+18889990000\\@mysiptrunk.pstn.twilio.com`. Se utilizzi NetFoundry, e hai un numero di telefono `18889990000`, l'URI SIP completo è `sip:+18889990000\\@dal.watson-va.netfoundry.net`.
 
-## Fasi successive
+**NOTA**: assicurati che l'URI `transferTarget` inizi con un `+` e possa includere fino a 256 caratteri.
+
+## Passi successivi
 {: #Next}
 
-Verifica il tuo agent vocale chiamando il suo numero di telefono associato e utilizza i termini chiave che hai identificato nel tuo intento. Se il tuo agent vocale ti reindirizza, allora ha funzionato!
+Verifica il tuo Voice Agent chiamando il suo numero di telefono associato e utilizza i termini chiave che hai identificato nel tuo intento. Se il tuo Voice Agent ti reindirizza, allora ha funzionato!
 
 Ora puoi rifinire e configurare il dialogo e l'intento **Transfer** per rispondere alle frasi e ai termini chiave di tua scelta.

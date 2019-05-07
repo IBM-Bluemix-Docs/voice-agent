@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-01"
+subcollection: "voice-agent"
 
 ---
 
@@ -29,9 +30,9 @@ Les actions et les états sont définis dans une réponse de noeud de dialogue a
 
 1. Dans le tableau de bord {{site.data.keyword.Bluemix_short}}, sélectionnez votre instance de service {{site.data.keyword.conversationshort}}.
 1. Lancez l'outil {{site.data.keyword.conversationshort}}.
-1. Cliquez sur l'espace de travail contenant le dialogue que vous souhaitez éditer.
+1. Cliquez sur la compétence contenant le dialogue que vous voulez éditer.
 1. Accédez à l'onglet **Dialog** et sélectionnez le noeud où vous souhaitez définir une action ou un état.
-1. Dans la réponse, cliquez sur l'icône de ![réponse avanceé](../conversation/images/kabob.png), puis sélectionnez **Open JSON editor**.
+1. Dans la réponse, cliquez sur l'icône de ![réponse avancée](../conversation/images/kabob.png), puis sélectionnez **Open JSON editor**.
 
 Dans l'éditeur JSON, vous pouvez définir des actions sur la propriété `output` et des états sur la propriété `context` comme décrit dans les sections suivantes.
 
@@ -119,7 +120,7 @@ Dans l'exemple suivant, plus complexe, les actions définies sur la balise `vgwA
 ## Définition d'états
 {: #setting-states}
 
-Pour indiquer un changement d'état qui reste entre les échanges de conversation, l'agent vocal échange les variables d'état avec le service {{site.data.keyword.conversationfull}} configuré. Ces variables d'état sont définies sur un noeud de dialogue {{site.data.keyword.conversationshort}} en tant que [variables contextuelles](../conversation/dialog-build.html#context) au format JSON.
+Pour indiquer un changement d'état qui reste entre les échanges de conversation, l'agent vocal échange les variables d'état avec le service {{site.data.keyword.conversationfull}} configuré. Ces variables d'état sont définies sur un noeud de dialogue {{site.data.keyword.conversationshort}} en tant que [variables contextuelles](/docs/services/assistant?topic=assistant-dialog-build#dialog-build) au format JSON.
 
 Par exemple, vous pouvez définir la variable d'état suivante pour définir le message qui est diffusé pour l'appelant si la connexion au service {{site.data.keyword.conversationshort}} échoue.
 

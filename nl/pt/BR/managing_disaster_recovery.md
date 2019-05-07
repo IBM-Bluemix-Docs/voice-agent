@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-11"
+subcollection: "voice-agent"
 
 
 ---
@@ -31,10 +32,9 @@ Se você usar um plano _Lite_ para a instância do agente de voz, será possíve
 
 1. Para incluir um serviço redundante em um agente de voz existente, navegue para a guia _Agentes de voz_ no painel _Gerenciar_. Clique em **Editar agente** para o agente de voz que deseja configurar.
 
-1. Escolha **Localização 1** ou **Localização 2** para o serviço do {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}} ou {{site.data.keyword.speechtotextshort}} que você deseja conectar e inclua as informações de configuração. É possível usar serviços de terceiro ou instâncias de serviço do Watson na sua área de trabalho ou em outras áreas de trabalho. Consulte [Usando instâncias de serviço em outras áreas de trabalho do {{site.data.keyword.Bluemix_notm}}](managing_other.html).
+1. Escolha **Localização 1** ou **Localização 2** para o serviço do {{site.data.keyword.conversationshort}}, {{site.data.keyword.texttospeechshort}} ou {{site.data.keyword.speechtotextshort}} que você deseja conectar e inclua as informações de configuração. É possível usar serviços de terceiro ou instâncias de serviço do Watson na sua área de trabalho ou em outras áreas de trabalho. Consulte [Usando instâncias de serviço em outras áreas de trabalho do {{site.data.keyword.Bluemix_notm}}](/docs/services/voice-agent?topic=voice-agent-other_service).
 
-**Lembre-se**: para redundância de serviço, deve-se usar as instâncias de serviço do Watson em
-diferentes regiões de serviço para diferentes locais.
+**Lembre-se**: para redundância de serviço, deve-se usar as instâncias de serviço do Watson em diferentes regiões de serviço para diferentes locais.
 
 É possível ativar ou desativar um local usando a caixa **Ativar local**. **Local 1** é
 ativado por padrão e **Local 2** é desativado por padrão. Pelo menos um local deve ser ativado para cada serviço

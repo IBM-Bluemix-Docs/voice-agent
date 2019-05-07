@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-01"
+subcollection: "voice-agent"
 
 ---
 
@@ -29,7 +30,7 @@ lastupdated: "2018-11-01"
 
 1. 在 {{site.data.keyword.Bluemix_short}}“仪表板”中，选择 {{site.data.keyword.conversationshort}} 服务实例。
 1. 启动 {{site.data.keyword.conversationshort}} 工具。
-1. 单击包含要编辑的对话的工作空间。
+1. 单击包含要编辑的对话的技能。
 1. 转至**对话**选项卡，然后选择要在其中设置操作或状态的节点。
 1. 在响应中，单击 ![高级响应](../conversation/images/kabob.png) 图标，然后选择**打开 JSON 编辑器**。
 
@@ -119,7 +120,7 @@ lastupdated: "2018-11-01"
 ## 设置状态
 {: #setting-states}
 
-为了指示在各轮对话间保持的状态的变化，语音代理程序会与配置的 {{site.data.keyword.conversationfull}} 服务交换状态变量。这些状态变量在 {{site.data.keyword.conversationshort}} 对话节点上以 JSON 格式的[上下文变量](../conversation/dialog-build.html#context)形式进行定义。
+为了指示在各轮对话间保持的状态的变化，语音代理程序会与配置的 {{site.data.keyword.conversationfull}} 服务交换状态变量。这些状态变量在 {{site.data.keyword.conversationshort}} 对话节点上以 JSON 格式的[上下文变量](/docs/services/assistant?topic=assistant-dialog-build#dialog-build)形式进行定义。
 
 例如，可以定义以下状态变量来设置与 {{site.data.keyword.conversationshort}} 服务连接失败时，向呼叫者传送的消息。
 

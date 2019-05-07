@@ -3,7 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-14"
-
+subcollection: "voice-agent"
 ---
 
 {:shortdesc: .shortdesc}
@@ -26,11 +26,11 @@ lastupdated: "2018-06-14"
 
 1. 在呼叫失败时，最后一个 {{site.data.keyword.conversationshort}} 轮次可能会对故障进行说明。
 
-1. 使用情况日志会显示在特定呼叫期间可能发生的任何错误。请参阅[查看使用情况和呼叫日志](logging.html)。
+1. 使用情况日志会显示在特定呼叫期间可能发生的任何错误。请参阅[查看使用情况和呼叫日志](/docs/services/voice-agent?topic=voice-agent-logging)。
 
 1. 有关信号错误，请查看服务提供者日志。例如，Twilio 为其托管的每个 SIP 中继都提供了日志。
 
-1. 通过[为语音代理程序启用事件转发](event-forwarding.html)，您可以配置语音代理程序以将呼叫详细记录 (CDR) 转发到 Cloudant 数据库，然后确定呼叫失败的原因。其他事件（例如，{{site.data.keyword.conversationshort}} 轮次事件）可提供有关呼叫中每轮对话的详细信息。
+1. 通过[为语音代理程序启用事件转发](/docs/services/voice-agent?topic=voice-agent-event_forwarding)，您可以配置语音代理程序以将呼叫详细记录 (CDR) 转发到 Cloudant 数据库，然后确定呼叫失败的原因。其他事件（例如，{{site.data.keyword.conversationshort}} 轮次事件）可提供有关呼叫中每轮对话的详细信息。
 
 **重要信息**：CDR、转录和轮次事件包含来自用户的信息，其中可能含有受保护的健康信息 (PHI)、个人可标识信息 (PII) 或 PCI 数据安全标准 (PCI DSS) 数据。为了防止泄露个人信息，您必须确保 {{site.data.keyword.cloudant_short_notm}} 实例能够妥善保护用户在对话中或对话期间共享的机密信息。
 
@@ -58,14 +58,14 @@ lastupdated: "2018-06-14"
    **注：**在语音代理程序的_管理_仪表板上指定电话号码时，必须加上国家和地区代码。例如，`18884253968`。
 
 * 验证 Watson 服务凭证、URL 和 {{site.data.keyword.conversationshort}} 工作空间标识是否都有效。
-* 验证 {{site.data.keyword.conversationshort}} 工作空间中的对话是否已正确创建。
-  * 可以从 GitHub 导入预构建工作空间的[样本对话 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)。有关将样本对话另存为 JSON 文件，然后将该文件作为工作空间导入 {{site.data.keyword.conversationshort}} 工具中的详细信息，请参阅[*入门教程*中的步骤 3](getting-started.html#step3)。
-  * 如果您创建了自己的 {{site.data.keyword.conversationshort}} 对话，请验证该对话是否包含具有 `conversation_start` 条件的节点和具有缺省响应的节点。有关详细的指示信息，请参阅 {{site.data.keyword.conversationshort}} 文档中的[构建对话](../conversation/dialog-build.html)。
+* 验证是否已正确创建 {{site.data.keyword.conversationshort}} 技能中的对话。
+  * 可以从 GitHub 导入预构建技能的[样本对话 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)。有关将样本对话另存为 JSON 文件，然后将该文件作为技能导入 {{site.data.keyword.conversationshort}} 工具中的详细信息，请参阅[*入门教程*中的步骤 3](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)。
+  * 如果您创建了自己的 {{site.data.keyword.conversationshort}} 对话，请验证该对话是否包含具有 `conversation_start` 条件的节点和具有缺省响应的节点。有关详细的指示信息，请参阅 {{site.data.keyword.conversationshort}} 文档中的[构建对话](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog)。
 * 查看您的电话呼叫是否在语音代理程序的_使用情况_仪表板上列出。如果存在您电话呼叫的条目，说明您的语音代理程序已连接到 Watson 服务。
 
 ### 我在创建语音代理程序时为什么无法指定电话号码？
 
-请查看一下是否有现有语音代理程序已使用您指定的电话号码。一个电话号码只能用于一个语音代理程序。您可以提供来自 SIP 中继提供者的其他电话号码，并使用该号码来创建其他语音代理程序。或者，[在_管理_仪表板上删除现有语音代理程序](managing.html#delete_va)以释放电话号码，然后创建新的语音代理程序。
+请查看一下是否有现有语音代理程序已使用您指定的电话号码。一个电话号码只能用于一个语音代理程序。您可以提供来自 SIP 中继提供者的其他电话号码，并使用该号码来创建其他语音代理程序。或者，[在_管理_仪表板上删除现有语音代理程序](/docs/services/voice-agent?topic=voice-agent-managing#delete_va)以释放电话号码，然后创建新的语音代理程序。
 
 ### 为什么我的呼叫总是频繁失败？
 
