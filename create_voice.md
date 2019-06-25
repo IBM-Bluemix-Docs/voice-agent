@@ -34,7 +34,6 @@ When you create a voice agent, {{site.data.keyword.iva_short}} automatically sea
 
 1. Optionally, use up to 256 characters to describe your voice agent.
 
-    
 1. You can add multiple numbers to one Voice Agent by clicking **Manage**, next to **Phone Number**. See [Configuring Multiple Phone Numbers in a Voice Agent Instance](/docs/services/voice-agent?topic=voice-agent-multi_num) for information about how to set up and associate multiple numbers. You may also edit the numbers and add descriptions for the individual numbers from the **Manage** dialog box.
     
 1. Alternatively, To edit the numbers, click the greyed out **Phone Number** field, or click **Manage**. For more information, see [Editing a Number and/or Description for Multiple Numbers](/docs/services/voice-agent?topic=voice-agent-multi_num#edit_num).
