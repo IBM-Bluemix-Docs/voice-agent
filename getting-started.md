@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-03"
+  years: 2017, 2018, 2019
+lastupdated: "2019-06-24"
 
 keywords: voice agent, creating a SIP trunk, creating and connecting your voice agent,
 
@@ -22,7 +22,7 @@ subcollection: "voice-agent"
 {{site.data.keyword.iva_full}} helps you integrate a set of orchestrated Watson services with the telephone network by using the Session Initiation Protocol (SIP). This tutorial describes how to set up a cognitive voice agent that you can call from any phone.
 {: shortdesc}
 
-A new SMS feature has been added to {{site.data.keyword.iva_full_notm}}. Not all of the procedures described on this page are necessary to to configure SMS functionality. See the [Voice Agent Getting started tutorial](/docs/services/voice-agent?topic=voice-agent-connect-sms) for instructions on how to connect SMS with {{site.data.keyword.iva_full_notm}
+A new SMS feature has been added to {{site.data.keyword.iva_full_notm}}. Not all of the procedures described on this page are necessary to to configure SMS functionality. See the [Voice Agent Getting started tutorial](/docs/services/voice-agent?topic=voice-agent-connect-sms) for instructions on how to connect SMS with {{site.data.keyword.iva_full_notm}}
 {: tip}
 
 Watch a demonstration of how to create your first voice agent in this [{{site.data.keyword.iva_full_notm}} tutorial ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/tv/building-voice-enabled-cognitive-applications-with-watson/).
