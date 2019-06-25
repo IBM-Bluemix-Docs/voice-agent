@@ -24,8 +24,9 @@ You can choose the SIP trunk provider that you use to integrate with {{site.data
 * [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
-* [AT&T and other providers](#att-other)
+* [Voximplant](#voximplant-setup)
 * [Peering with {{site.data.keyword.iva_short}}](#peering)
+* [AT&T and other providers](#att-other)
 * [Requesting assisted setup](#request-setup)
 
 ## Creating a Nexmo voice application
@@ -85,9 +86,37 @@ You need this phone number to set up your voice agent and configure call transfe
 
   On the Numbers page, click **Buy a Number** or, if you already have a number, click the **+** icon. A panel displays where you can provision a new phone number in your region. Assign the number to the SIP trunk you created by going back to the SIP trunk and clicking the Number icon.
 
-  You need this phone number to set up your voice agent, including the country and area codes. See [Creating and connecting your voice agent](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+  You need this phone number to set up your voice agent, including the country and area codes. See [Creating and connecting your voice agent](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
-  **NOTE**: If you are using a Lite/Trial Twilio account to test transfers on {{site.data.keyword.iva_short}}, then you will need to make sure to _verify_ the transfer target. See more instructions on [Twilio's official site](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
+  **NOTE**: If you use a Lite/Trial Twilio account to test transfers on {{site.data.keyword.iva_short}}, then you will need to make sure to _verify_ the transfer target. See more instructions on [Twilio's official site](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
+
+## Connecting with Voximplant
+{: #voximplant-setup}
+
+1. Create [a Voximplant developer account](https://voximplant.com/sign-up/).
+
+1. Go to [the Voximplant Control panel](https://manage.voximplant.com/numbers/my_numbers). On the menu, select **Numbers** and click **Buy new phone number**. You can check either **Real** or **Test numbers**, then select a number in the list, and click **Buy selected** to buy a phone number.
+
+1. Specify this number in your voice agent's settings.
+
+1. Go to [the Applications section](https://manage.voximplant.com/applications) of the _Voximplant Control Panel_ to create an application named **Watson**.
+
+1. Inside of this application, switch to the **Scenarios** tab and create a **watson-scenario** with the following code:
+    ```javascript
+      VoxEngine.addEventListener(AppEvents.CallAlerting, (e) => {
+        let call2 = VoxEngine.callSIP("sip:12025550186@us-south.voiceagent.cloud.ibm.com");
+        VoxEngine.easyProcess(e.call, call2);
+      })
+    ```
+    {: codeblock}
+
+    Pay attention at the **callSIP** function call:
+      * Substitute the Voximplant number that you bought in step 2 instead of `12025550186`. 
+      * Substitute your voice agent SIP endpoint instead of `us-south.voiceagent.cloud.ibm.com`. The endpoint is specified on the _Getting started_ page of the {{site.data.keyword.iva_full}} documentation. See the [*Getting started tutorial*](/docs/services/voice-agent?topic=voice-agent-getting-started#step1).
+    
+1. Go to the **Routing** tab to create a **watson-rule**. Specify the **watson-scenario** as an assigned scenario.
+
+1. Open the **Numbers** tab with the **Attached** (yet empty) and **Available** sections. Switch to **Available**, select your number, and click **Attach**. In the window opened, specify the **watson-rule**, then click **Attach**.
 
 ## Peering with {{site.data.keyword.iva_short}}
 {: #peering}

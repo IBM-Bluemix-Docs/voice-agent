@@ -33,7 +33,7 @@ Instead of using a {{site.data.keyword.speechtotextfull}} instance, you can choo
 
 1. In your _Speech to Text_ service configuration, choose **Google Speech to Text service instance**.
 
-1. Choose the **Language** for your service instance.
+1. Choose the **Language** for your service instance. If your preferred language is not listed in the dropdown menu, you can always choose **Other** and set it through [advanced configuration](/docs/services/voice-agent?topic=voice-agent-third-party#advanced).
 
 1. Enter your Google Cloud Speech-to-Text service credentials, with a limit up to 3072 characters.
   * You can generate your service credentials in the Google Cloud Platform as a JSON key when you [set up a service account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). The following code example contains the sample credential fields you generate on the Google Cloud Platform.
@@ -76,7 +76,7 @@ Instead of using a {{site.data.keyword.texttospeechfull}} instance, you can choo
 
 1. In your _Text to Speech_ service configuration, choose **Google Text to Speech service instance**.
 
-1. Choose the **Language** and **Voice** for your service instance.
+1. Choose the **Language** and **Voice** for your service instance. If your preferred language is not listed in the dropdown menu, you can always choose **Other** and set it through [advanced configuration](/docs/services/voice-agent?topic=voice-agent-third-party#advanced).
 
 1. Enter your Google Cloud Text-to-Speech service credentials, with a limit up to 3072 characters.
   * You can generate your service credentials in the Google Cloud Platform as a JSON key when you [set up a service account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). The following code example contains the sample credential fields you generate on the Google Cloud Platform.
@@ -97,6 +97,7 @@ Instead of using a {{site.data.keyword.texttospeechfull}} instance, you can choo
     ```
     {: codeblock}
 
+{: #advanced}
 1. **Optional** Select **Show Advanced** to enter special configuration settings defined by Google in a valid JSON format.
   The following example shows the Google configuration settings for a female voice speaking German.
 

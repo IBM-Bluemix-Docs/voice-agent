@@ -30,15 +30,15 @@ Because {{site.data.keyword.iva_full}} is based on IBM Voice Gateway, the API wo
 
 The following table lists the actions that you can specify in the {{site.data.keyword.conversationshort}} dialog and any attributes that you can define for each action.
 
-| Action command | Description | Attributes |
+| Action Command | Description | Attributes |
 | ----- | ----- | ----- |
-| `vgwActPlayText`| Plays an utterance that is converted to speech by the {{site.data.keyword.texttospeechshort}} service. | <ul><li>`text`: A list of utterances to play. Optional. <p>For example:<br/><code>"text": [<br/>&nbsp;&nbsp;&nbsp;"Hello. How can I help you today?"<br/>&nbsp;&nbsp;&nbsp;]</code><p> By default, the action plays a list of utterances that are configured in the `output.text` field. </li><li>`errAudioURL`: A URL to an audio file that is played if the voice agent cannot contact the {{site.data.keyword.texttospeechshort}} service to complete the action. The audio file must be in WAV format.</li></ul>|
-| `vgwActPlayUrl` | Plays an audio file as soon as the included text is played back, such as for playing music on hold (MOH) or common one-time utterances. If no text is included, the audio is played immediately. The file must be single channel (mono), PCM-encoded, and have a 8,000 Hz sampling rate with 16 bits per sample. | <ul><li>`url`: The URL to play. Required.</li><li> `playURLInLoop`: Optionally set to `Yes` or `No` to indicate whether to play the URL in a loop. The default value is `No`.</li></ul> |
+| `vgwActPlayText`| Plays an utterance that is converted to speech by the {{site.data.keyword.texttospeechshort}} service. | `text`: A list of utterances to play. Optional. <p>For example:<br><code>"text": [<br/>&nbsp;&nbsp;&nbsp;"Hello. How can I help you today?"<br/>&nbsp;&nbsp;&nbsp;]</code><p> By default, the action plays a list of utterances that are configured in the `output.text` field. <br><br>`errAudioURL`: A URL to an audio file that is played if the voice agent cannot contact the {{site.data.keyword.texttospeechshort}} service to complete the action. The audio file must be in WAV format.|
+| `vgwActPlayUrl` | Plays an audio file as soon as the included text is played back, such as for playing music on hold (MOH) or common one-time utterances. If no text is included, the audio is played immediately. The file must be single channel (mono), PCM-encoded, and have a 8,000 Hz sampling rate with 16 bits per sample. | `url`: The URL to play. Required.<br><br> `playURLInLoop`: Optionally set to `Yes` or `No` to indicate whether to play the URL in a loop. The default value is `No`.|
 | `vgwActHangup` | Hangs up the call. | No attributes. |
 | `vgwActSetSTTConfig` | Applies a set of parameters for the voice agent to pass to the Watson {{site.data.keyword.speechtotextshort}} service. The {{site.data.keyword.conversationshort}} service dynamically defines the parameters based on the call. | Attributes are transparently passed as JSON properties to the {{site.data.keyword.speechtotextshort}} service. |
 | `vgwActSetTTSConfig` | Applies a set of parameters for the voice agent to pass to the Watson {{site.data.keyword.texttospeechshort}} service. The {{site.data.keyword.conversationshort}} service dynamically defines the parameters based on the call. |  Attributes are transparently passed as JSON properties to the {{site.data.keyword.texttospeechshort}} service.  |
-| `vgwActSetConversationConfig` | Applies a set of parameters for the voice agent to define a {{site.data.keyword.conversationshort}} workspace. The {{site.data.keyword.conversationshort}} service dynamically defines the parameters based on the call. | <ul><li>`url`: The `url` credential for the {{site.data.keyword.conversationshort}} service API.</li><li>`workspaceID`: {{site.data.keyword.conversationshort}} workspace ID</li><li>`username`: The `username` credential for the {{site.data.keyword.conversationshort}} service, up to 64 characters.</li><li>`password`: The `password` credential for the {{site.data.keyword.conversationshort}} service, up to 256 characters.</li></ul> |
-| `vgwActCollectDtmf` | Instructs the voice agent to collect dual-tone multi-frequency signaling (DTMF) input. | One of the following attributes must be defined. <ul><li> `dtmfTermKey`: The DTMF termination key, which signals the end of DTMF input. For example, "`#`". </li><li> `dtmfCount`: The number of DTMF digits to collect.</li></ul> When either of these conditions is met, the voice agent stops collecting DTMF input. |
+| `vgwActSetConversationConfig` | Applies a set of parameters for the voice agent to define a {{site.data.keyword.conversationshort}} workspace. The {{site.data.keyword.conversationshort}} service dynamically defines the parameters based on the call. | `url`: The `url` credential for the {{site.data.keyword.conversationshort}} service API.<br><br>`workspaceID`: {{site.data.keyword.conversationshort}} workspace ID<br><br>`username`: The `username` credential for the {{site.data.keyword.conversationshort}} service, up to 64 characters.<br><br>`password`: The `password` credential for the {{site.data.keyword.conversationshort}} service, up to 256 characters. |
+| `vgwActCollectDtmf` | Instructs the voice agent to collect dual-tone multi-frequency signaling (DTMF) input. | One of the following attributes must be defined. <br> `dtmfTermKey`: The DTMF termination key, which signals the end of DTMF input. For example, "`#`". <br><br> `dtmfCount`: The number of DTMF digits to collect.<br><br> When either of these conditions is met, the voice agent stops collecting DTMF input. |
 | `vgwActPauseDTMF` | Disables DTMF input. All DTMF input is ignored until it is reenabled by the `vgwActUnPauseDTMF` action. | No attributes. |
 | `vgwActUnPauseDTMF` | Enables the DTMF input that was disabled by the `vgwActPauseDTMF` action. | No attributes. |
 | `vgwActExcludeFromTTSCache` | Instructs the voice agent to not cache the response from the {{site.data.keyword.texttospeechshort}} service. For example, responses that contain sensitive PHI, PII, and PCI DSS data or dynamic information such as customer names or birth dates should be excluded. <br/>This action tag must be set on the {{site.data.keyword.conversationshort}} dialog node for each utterance that you do not want to cache. | No attributes. |
@@ -56,7 +56,7 @@ The following table lists the actions that you can specify in the {{site.data.ke
 
 You can set the following state variables within the {{site.data.keyword.conversationshort}} dialog to modify your voice agent's behavior.
 
-| State variable name | Expected value | Description |
+| State Variable Name | Expected Value | Description |
 | -------------- | ------ | ----------- |
 | `vgwByeCustomHeader` | User defined | Defines a custom header in an outgoing SIP BYE message. The custom header value is defined by the `vgwByeCustomHeaderVal` state variables.  |
 | `vgwByeCustomHeaderVal` | User defined | Defines the value of a custom header in an outgoing SIP BYE message. The custom header is defined by the `vgwByeCustomHeader` state variables. |
@@ -69,7 +69,7 @@ You can set the following state variables within the {{site.data.keyword.convers
 ## State variables set by the voice agent
 {: #state-variables-iva}
 
-| State variable name | Expected value | Description |
+| State Variable Name | Expected Value | Description |
 | -------------- | ----- | ----------- |
 | `vgwSessionID`   | User defined <br/><br/> Default: `Call-ID` | A custom session ID header that is pulled from the SIP INVITE request. The value represents the global session ID that is used in all the voice agent audit logs related to the session. |
 | `vgwSIPCallID` | SIP `Call-ID` | The SIP call ID associated with the call. |

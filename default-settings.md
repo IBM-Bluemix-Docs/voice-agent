@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 
 {{site.data.keyword.iva_full}} uses the following default settings.
 
-| Setting name | Default |
+| Setting Name | Default |
 |------|---------------|
 | {{site.data.keyword.conversationshort}} token authentication| Enabled |
 | Service Orchestration Engine (SOE) token authentication| Disabled |
