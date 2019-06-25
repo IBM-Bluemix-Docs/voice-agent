@@ -54,7 +54,7 @@ The following steps outline the conversation flow.
 ### Architecture with a SIP trunk
 {: #arch-sip}
 
-You can use SIP trunks to quickly set up and test your environment from the public telephone network. When you connect to a voice agent through a SIP trunk, you must configure your SIP trunk to forward INVITE requests to the voice agent based on its IP address. You can find your {{site.data.keyword.iva_short}} server IP address on the _Getting started_ page.
+You can use SIP trunks to quickly set up and test your environment from the public telephone network. When you connect to a voice agent through a SIP trunk, you must configure your SIP trunk to forward INVITE requests to the voice agent based on its IP address. You can find your {{site.data.keyword.iva_short}} SIP URI endpoint on the _Getting started_ page.
 
 ![Calls flow through a SIP trunk to the voice agent, which communicates with Watson services though the API.](images/arch-sip.png)
 
@@ -76,6 +76,13 @@ You might want to incorporate a service orchestration engine in your {{site.data
 To learn more about how to implement a service orchestration engine, see the [service orchestration engine samples on GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}.
 
 **Important**: For data security, make sure that you use a secure URL for your SOE workspace, by using `https:` instead of `http:`, and require authentication. See [Information security and data privacy](/docs/services/voice-agent?topic=voice-agent-infosec) to learn more about security considerations.
+
+### Architecture with digital messages
+{: #arch-sms}
+
+You can set up a cognitive SMS agent that customers can interact with by exchanging SMS and MMS messages. Using a dialog from the IBM {{site.data.keyword.conversationshort}} service, the SMS agent can guide the customer through tasks, answer questions, and more. When you connect to an SMS agent, you must configure the SMS request URL, or webhook, in the SMS provider, which tells your SMS provider where to forward the messages. You can find your {{site.data.keyword.iva_short}} SMS URI endpoint on the _Getting started_ page.
+
+![Messages flow through an SMS Provider to the voice agent, which communicates with Watson services though the API.](images/arch-sms-mms.png)
 
 ## Features
 {: #features}

@@ -28,7 +28,7 @@ The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiat
 
 The following table lists the actions that generate an event.
 
-|Action| description |
+|Action| Description |
 | --- | ---- |
 | `create agent: POST /config/submitconfig` | Create a new voice agent |
 | `update agent: POST /config/submitconfig` | Update a voice agent |
