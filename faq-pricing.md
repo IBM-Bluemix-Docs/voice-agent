@@ -57,4 +57,4 @@ The maximum concurrent connection is the maximum number of connections that are 
 {: faq}
 
 Inbound messages are not billed until a response is sent to the user. A session is created when an outbound message is sent to the user through Voice Gateway or as a response to an inbound message. Both the outbound and the inbound messages that are responded to are billed, if applicable.
-Both the outbound and inbound messages are billed until the session times out. After the session times out, conversation context is discarded. The default session timeout is 3600 sec, and users can set up the duration of session timeout on the dashboard
+Both the outbound and inbound messages are billed until the session times out. After the session times out, conversation context is discarded. The default session timeout is 3600 sec, and users can set up the duration of session timeout on the dashboard.

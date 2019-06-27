@@ -24,7 +24,9 @@ After you have created your {{site.data.keyword.iva_full}} service, you can crea
 
 1. For **Agent Type**, select _SMS_.
 
-1. Follow steps 3 through 6 in [creating a voice agent](https://test.cloud.ibm.com/docs/services/voice-agent?topic=voice-agent-config_instance).
+1. For **Name**, specify a unique name for your voice agent. For example, `Customer Support - North America`. The name may include up to 64 characters.
+
+1. For Phone number, add the number from your SIP trunk, including the country and area codes. For example, for a United States 800 number, specify the phone number as 18883334444. The phone number can have a maximum of 30 characters, including spaces and + ( ) - characters. SMS supports only one number per users.
 
 1. Under **SMS Provider**, enter the user name, password and API URL for your SMS provider. For example, if using _Twilio_, the username is your **Account SID**, the password is your **Auth Token** and your SMS provider is `https://api.twilio.com`
 
@@ -33,6 +35,13 @@ After you have created your {{site.data.keyword.iva_full}} service, you can crea
    * If you are creating an SMS agent in either the Dallas or Washington DC region and do not have a {{site.data.keyword.conversationshort}} service instance, you can create one in the **Service instance** menu.
    * Alternatively, you can connect to other sources of a {{site.data.keyword.conversationshort}} dialog or to connect with a SOE by changing the [**Service type**](/docs/services/voice-agent?topic=voice-agent-other_service#other_service).
    * If you want to configure multiple service locations, click the other location option and select **Enable location** to configure the connection to your other {{site.data.keyword.conversationshort}} instance. For more information, see [Adding multiple Watson service locations](/docs/services/voice-agent?topic=voice-agent-disaster-recovery#add_location).
+
+1. Check the **Initiate conversation from inbound messages** box to allow users to begin an SMS session with your SMS agent.
+
+1. Check the **Notify on session timeout** box to have your SMS agent send an SMS message to the user, alerting them that the agent has not received a response in some time and will now time out. 
+
+    - See [Advanced Options](/docs/services/voice-agent?topic=voice-agent-sms_config_instance#sms_advanced) for more information on the **Advanced Options** available for your SMS agent, such as setting a custom time for the session to time out.
+    - Check the box only if you want to be notified when a session times out.
 
 1. You can also choose to enable event forwarding to collect information about calls that are handled by your voice agents in a {{site.data.keyword.cloudantfull}}. For more information, see [Enabling event forwarding for voice agents](/docs/services/voice-agent?topic=voice-agent-event_forwarding). For more configuration options, see [Configuring a voice agent](/docs/services/voice-agent?topic=voice-agent-managing#configure_va).
 
@@ -61,9 +70,9 @@ Click **Show Advanced** after the **Phone Number** field.
 
 1. Set an optional **Conversation read timeout** value. This is the time in seconds that the SMS Gateway waits for a response from Watson Assistant. If the time is exceeded, SMS Gateway reattempts to contact Watson Assistant. If the service still cannot be reached, the SMS/MMS message fails. Set to 30 seconds by default.
 
-2. Set an optional **Session Timeout**. This is the time in seconds after which the session expires if SMS Gateway does not receive a response from the user.
+1. Set an optional **Session Timeout**. This is the time in seconds after which the session expires if SMS Gateway does not receive a response from the user.
 
-3. Set a **Conversation failure reply message**. This is the default response message that is sent if Watson Assistant cannot be reached. By default, it is set to `We're sorry, but we can't respond to your message.`.
+1. Set a **Conversation failure reply message**. This is the default response message that is sent if Watson Assistant cannot be reached. By default, it is set to `We're sorry, but we can't respond to your message.`.
 
 ### Configuring the SMS Agent for Terminating the Session
 {: #sms_terminate}
@@ -74,21 +83,13 @@ You can also add a node to your {{site.data.keyword.conversationshort}} service 
 
 1. In your {{site.data.keyword.Bluemix_notm}} dashboard, select the {{site.data.keyword.conversationshort}} instance that your voice agent uses.
 
-1. From the _Getting started_ dashboard, click **Launch tool**.
+1. Create a **Terminate SMS intent** from the dashboard. Alternatively, you can modify an existing intent that you already use for the voice agent, such as _End the call_.
 
-1. Click **Getting Started** on the skill that you want to edit.
+1. Add a **Terminate SMS node** from the dashboard.
 
-1. Click **Add intent** and enter a name for the intent, such as _Terminate SMS_. Alternatively, you can modify an existing intent that you already use for the voice agent, such as _End the call_.
+1. In the _If the bot recognizes:_ section, add **Terminate SMS Text intent**.
 
-  You can enter more detailed information, or return later to edit and refine the intent.
-
-1. After you create your outbound messaging intent, select the _Dialog_ tab.
-
-1. Click **Add node** and enter a name for the node, such as _Terminate SMS Text_.
-
-1. In the _If the bot recognizes:_ section, type **Terminate SMS Text intent**, or the existing intent name you had, to find the intent you made.
-
-1. For the _Then respond with:_ section, click the **&vellip;** icon and select **Open JSON editor**. Copy and paste the following code snippet to replace the code in the field.
+1. Add the response to the node. Copy and paste the following code snippet to replace the code in the field.
 
     ```json
         {
@@ -106,8 +107,5 @@ You can also add a node to your {{site.data.keyword.conversationshort}} service 
         }
     ```
     {: codeblock}
-
-
-1. Change the `values` field in the preceding code snippet to be your customized termination message to the user. 
 
 After you create the voice agent, test your voice agent by calling or texting its phone number based on its type. You can view details about your interaction on the _Usage_ dashboard. See [Viewing Usage and Logs](/docs/services/voice-agent?topic=voice-agent-logging).
