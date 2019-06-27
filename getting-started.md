@@ -17,7 +17,7 @@ subcollection: "voice-agent"
 {:screen: .screen}
 {:tip: .tip}
 
-# Getting started tutorial
+# Getting started with Voice Agent with Watson
 {: #getting-started}
 {{site.data.keyword.iva_full}} helps you integrate a set of orchestrated Watson services with the telephone network by using the Session Initiation Protocol (SIP). This tutorial describes how to set up a cognitive voice agent that you can call from any phone.
 {: shortdesc}
