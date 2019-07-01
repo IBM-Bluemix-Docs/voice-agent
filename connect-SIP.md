@@ -60,7 +60,7 @@ You can choose the SIP trunk provider that you use to integrate with {{site.data
 
 1. Once the payment successfully processes, your SIP trunk phone number is displayed in your account.
 
-You need this phone number to set up your voice agent and configure call transfer, including the country and area codes. See [Creating and connecting your voice agent](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+You need this phone number to set up your voice agent and configure call transfer, including the country and area codes. See [Creating and connecting your voice agent](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
 
 ## Creating a Twilio SIP trunk
