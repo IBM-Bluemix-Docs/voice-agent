@@ -87,7 +87,7 @@ You can also add a node to your {{site.data.keyword.conversationshort}} service 
 
 1. Add a **Terminate SMS node** from the dashboard.
 
-1. In the _If the bot recognizes:_ section, add **Terminate SMS Text intent**.
+1. In the _If assistant recognizes:_ section, add the **Terminate SMS intent** attribute that you previously created.
 
 1. Add the response to the node. Copy and paste the following code snippet to replace the code in the field.
 

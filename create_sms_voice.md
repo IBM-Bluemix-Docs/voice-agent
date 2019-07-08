@@ -24,7 +24,7 @@ After you have created your {{site.data.keyword.iva_full}} service, you can crea
 
 1. For **Agent Type**, select _Voice + SMS_.
 
-1. Follow steps 1 through 15 in [creating a voice agent](/docs/services/voice-agent?topic=voice-agent-config_instance).
+1. Follow the instructions in [creating a voice agent](/docs/services/voice-agent?topic=voice-agent-config_instance).
 
 1. Check the **Initiate conversation from inbound messages** box to allow users to begin an SMS session with your SMS agent.
 
@@ -39,15 +39,13 @@ After you have created your {{site.data.keyword.iva_full}} service, you can crea
 ### Configuring Watson Assistant for Voice and SMS integration
 {: #sms_outbound}
 
-1. _**NOTE:**_ Configure Watson Assistant to the Voice Conversation.
-
 1. In your {{site.data.keyword.Bluemix_notm}} dashboard, select the {{site.data.keyword.conversationshort}} instance that your voice agent uses.
 
 1. Create an **outbound SMS intent** from the dashboard.
 
 1. Add an **outbound SMS node** from the dashboard.
 
-1. In the _If the bot recognizes:_ section, find **SMS Outbound Text intent**.
+1. In the _If assistant recognizes:_ section, select the **outbound SMS intent** attribute that you previously created.
 
 1. Add the response to the node. Copy and paste the following code snippet to replace the code in the field.
 

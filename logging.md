@@ -63,14 +63,15 @@ To learn more about creating and editing voice agents, see [Managing voice agent
 
       - **Billable messages** are the total number of inbound and outbound messages that the agent responded to.
 
-1.  You can filter the list of agent by viewing messages on a specific date and by filtering the messages by voice agent name or number. 
+1.  You can filter the list of agents by viewing messages on a specific date and by filtering the messages by voice agent name or number. 
 
-The date filer for SMS logs is based on **UTC time**, not user local time.
-{: tip}
+1. To access the SMS logs for an individual agent:
 
-3. To access the SMS logs for an individual agent, click the dots in the **Actions** column for that call to expand the menu. Then, click **SMS logs**. 
+  - In the **Actions** column for the desired call, click the dots to expand the menu.
+  
+  - Click **SMS logs**.
 
-4. Click the back arrow at the beginning of the page to return to the _Usage_ dashboard.
+1. Click the back arrow at the beginning of the page to return to the _Usage_ dashboard.
 
 ## Related links
 Read through more detailed information about logging in [Troubleshooting](https://www.ibm.com/support/knowledgecenter/SS4U29/troubleshooting.html){:new_window}, from the IBM Voice Gateway documentation.
