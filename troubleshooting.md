@@ -70,3 +70,12 @@ See whether the phone number you specified is used by an existing voice agent. Y
 ### Why are my calls failing frequently?
 
 Voice agents can have problems when calls fail because a Service Orchestration Engine (SOE) initiates a long transaction, and it does not respond to your voice agent in a timely manner. If a transaction exceeds the default {{site.data.keyword.conversationshort}} timeout, the call fails. To avoid call failures, the SOE can modify the default {{site.data.keyword.conversationshort}} timeout using the `vgwConversationResponseTimeout` state variable. See [Variables set in the {{site.data.keyword.conversationshort}} dialog](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html#variables-conv).
+
+
+### Various Limitations
+
+* You can create new Watson service instances directly from the _Create a voice agent_ dashboard for either the **Dallas** or **Washington DC** regions. To connect your voice agent to Watson services in other regions, create your Watson services before you create a voice agent on the _Manage_ dashboard.
+
+* Only connections to the public switched telephone network (PSTN) are supported.
+
+* All voice agent configurations must be specified in the {{site.data.keyword.conversationshort}} service that uses the API.
