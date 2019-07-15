@@ -96,7 +96,7 @@ After you create your groups, you can assign access to all entities within the g
 2. Select the group to which you want to assign access.
 3. From the **Access policies** tab, click **Assign access** to set up an access policy. Repeat as needed to assign more access.
 
-By organizing users in access groups, you can assign a group of users access to a single policy, which reduces the overall number of policies you need to manage.
+By organizing users into an access group, you can assign access to a single policy for the whole group, which reduces the overall number of access roles you need to manage.
 {: tip}
 
 
