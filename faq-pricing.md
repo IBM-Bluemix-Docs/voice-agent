@@ -35,7 +35,7 @@ The price is based on the amount (number of minutes) of audio that you send to t
 {: #faq-pricing-two}
 {: faq}
 
-'{{site.data.keyword.IBM_notm}} does not calculate the length of the audio for every API call that the service receives to the nearest minute. Instead, {{site.data.keyword.IBM_notm}} aggregates usage for the month and then calculates to the nearest minute at the end of the month. Duration of each call is rounded up to the next minute. For example, if you make the first call for 3.1 sec and the second call for 25.9 sec, {{site.data.keyword.IBM_notm}} calculates the first call for 4 sec and the second call for 26 sec. Then the duration of the total audio is calculated to one minute.'
+'{{site.data.keyword.IBM_notm}} does not calculate the length of the audio for every API call that the service receives to the nearest minute. Instead, {{site.data.keyword.IBM_notm}} aggregates usage for the month and then calculates to the nearest minute at the end of the month. The duration of each call is rounded up to the nearest second. For example, if you make the first call for 3.1 sec and the second call for 25.9 sec, {{site.data.keyword.IBM_notm}} calculates the first call for 4 sec and the second call for 26 sec. Then the duration of the total audio is calculated to one minute.'
 
 
 ## How is concurrent connection calculated and where is it applied?
