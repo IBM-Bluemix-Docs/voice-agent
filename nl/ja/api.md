@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 {{site.data.keyword.conversationfull}} サービスからアクション・タグと状態変数を定義することによって、ボイス・エージェントの動作を制御できます。 アクション・タグは、会話セッション中にボイス・エージェントが実行するアクションを開始します。状態変数は、ボイス・エージェントの特性を定義し、この定義は特に変更されない限り、その会話中維持されます。
 {: shortdesc}
 
-{{site.data.keyword.iva_full}} は IBM Voice Gateway に基づいているため、API は同じ仕方で機能します。 Voice Gateway を使い慣れている場合は、{{site.data.keyword.iva_short}} でも {{site.data.keyword.conversationshort}} ダイアログで同じアクションと状態変数を使用できます。 [Voice Gateway API のアクション・タグおよび状態変数](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html)を参照してください。
+{{site.data.keyword.iva_full}} は IBM Voice Gateway に基づいているため、API は同じ仕方で機能します。 Voice Gateway と SMS Gateway を使い慣れている場合は、{{site.data.keyword.iva_short}} でも {{site.data.keyword.conversationshort}} ダイアログで同じアクションと状態変数を使用できます。[Voice Gateway API のアクション・タグと状態変数](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html)、[SMS Gateway のAPI](https://www.ibm.com/support/knowledgecenter/SS4U29/sms_api.html) をそれぞれ参照してください。
 {: tip}
 
 ## ダイアログ応答での JSON の編集

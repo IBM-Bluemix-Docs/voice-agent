@@ -22,7 +22,7 @@ subcollection: "voice-agent"
 他の {{site.data.keyword.Bluemix_short}} アカウントのワークスペースに属する {{site.data.keyword.conversationshort}}、{{site.data.keyword.speechtotextshort}}、または {{site.data.keyword.speechtotextshort}} のサービス・インスタンスを使用するようにボイス・エージェントを構成できます。
 {: shortdesc}
 
-ボイス・エージェントを他のサービス・インスタンスに接続するには、サービス・インスタンスのユーザー名とパスワードの資格情報か、API キーを使用します。ユーザー名とパスワードは、それぞれ 64 文字、256 文字に制限されています。API キーは 64 文字に制限されます。
+ボイス・エージェントを他のサービス・インスタンスに接続するには、サービス・インスタンスのユーザー名とパスワードの資格情報か、API キーを使用します。 ユーザー名とパスワードは、それぞれ 64 文字と 256 文字に制限されています。 API キーは 64 文字に制限されます。
 
 1. _「管理」_ダッシュボードの_「音声エージェント」_タブで、**「ボイス・エージェントの新規作成 (Create a new voice agent)」**を選択するか、編集するボイス・エージェントを選択します。
 
@@ -39,7 +39,7 @@ subcollection: "voice-agent"
 
 1. サービス・インスタンス情報を入力します。
 
-  * **{{site.data.keyword.conversationshort}}:****「ワークスペース ID (Workspace ID)」**フィールドに、ボイス・エージェントで使用するワークスペースの ID を入力します。最大 128 文字まで入力できます。ワークスペース ID を見つけるには、ツールを起動し、統合するワークスペースで「アクション」アイコン (**&vellip;**) をクリックし、**「詳細を表示」**をクリックします。
+  * **{{site.data.keyword.conversationshort}}:****「ワークスペース ID (Workspace ID)」**フィールドに、ボイス・エージェントで使用するワークスペースの ID を入力します。最大 128 文字まで入力できます。 ワークスペース ID を見つけるには、ツールを起動し、統合するワークスペースで「アクション」アイコン (**&vellip;**) をクリックし、**「詳細を表示」**をクリックします。
   * **{{site.data.keyword.speechtotextshort}}:** **「モデル・タイプの選択 (Select model type)」**では、** 「狭帯域 (Narrowband)」**、**「ブロードバンド (Broadband)」**、または**「狭帯域とブロードバンドの両方 (Both narrowband and broadband)」**を選択してから、言語の**「モデル」**を選択します。
   * **{{site.data.keyword.texttospeechshort}}:****「音声」**フィールドで、サービスが使用する言語と音声を選択します。 サービスの音声を指定する必要があります。
 

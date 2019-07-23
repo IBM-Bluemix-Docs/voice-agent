@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-03"
+  years: 2017, 2018, 2019
+lastupdated: "2019-06-24"
 
 keywords: voice agent, creating a SIP trunk, creating and connecting your voice agent,
 
@@ -19,8 +19,11 @@ subcollection: "voice-agent"
 
 # Tutoriel d'initiation
 {: #getting-started}
-{{site.data.keyword.iva_full}} vous permet d'intégrer un ensemble de services Watson orchestrés avec le réseau téléphonique via le protocole SIP (Session Initiation Protocol). Ce tutoriel décrit comment configurer un agent vocal cognitif que vous appelez depuis n'importe quel téléphone.
+{{site.data.keyword.iva_full}} vous permet d'intégrer un ensemble de services Watson orchestrés avec le réseau téléphonique via le protocole SIP (Session Initiation Protocol). Ce tutoriel décrit comment configurer un agent vocal cognitif que vous pouvez appeler depuis n'importe quel téléphone.
 {: shortdesc}
+
+Une nouvelle fonction SMS a été ajoutée à {{site.data.keyword.iva_full_notm}}. Les procédures décrites sur cette page ne sont pas toutes nécessaires pour configurer la fonctionnalité SMS. Voir le [tutoriel de mise en route de l'agent vocal](/docs/services/voice-agent?topic=voice-agent-connect-sms) pour les instructions relatives à la connexion de SMS à {{site.data.keyword.iva_full_notm}}
+{: tip}
 
 Regardez une démonstration expliquant comment créer votre premier agent vocal dans ce [tutoriel {{site.data.keyword.iva_full_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/tv/building-voice-enabled-cognitive-applications-with-watson/).
 {: tip}
@@ -65,7 +68,7 @@ Une fois que vous avez créé le service, notez le noeud final d'agent vocal sur
   * Cliquez sur **Créer un agent vocal** pour créer en une seule étape tous les services et un agent vocal avec la configuration par défaut.
   * Ou, cliquez sur chacun des noms de service pour créer vous-même les services. Revenez ensuite à {{site.data.keyword.iva_short}} et créez un agent vocal séparément.
 
-   Si vous avez créé manuellement une instance de service {{site.data.keyword.conversationshort}}, ajoutez un dialogue afin de pouvoir tester votre agent vocal.  Pour démarrer rapidement, clonez l'[exemple de conversation ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) à partir de GitHub, puis [importez l'exemple](/docs/conversation?topic=services/conversation-configuring-a-watson-assistant-workspace#creating-workspaces) en tant que compétence :
+   Si vous avez créé manuellement une instance de service {{site.data.keyword.conversationshort}}, ajoutez un dialogue afin de pouvoir tester votre agent vocal.  Pour démarrer rapidement, clonez l'[exemple de conversation ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) à partir de GitHub, puis [importez l'exemple](/docs/services/assistant?topic=assistant-skill-dialog-add) en tant que compétence :
 
    1. Sur la page GitHub contenant l'exemple de conversation, cliquez sur le numéro de ligne `1` et sélectionnez **... > Copy line**. Collez le texte copié dans un fichier, puis enregistrez-le en tant que fichier JSON, par exemple, `voice-gateway-conversation-en.json`.
    2. Lancez l'outil {{site.data.keyword.conversationshort}}. Sur la page _Compétences_, cliquez sur l'icône ![Importer un espace de travail](../conversation/images/workspace_import.png) et importez le fichier JSON.

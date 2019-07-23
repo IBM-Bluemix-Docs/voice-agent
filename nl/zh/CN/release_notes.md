@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-22"
+lastupdated: "2019-06-24"
 subcollection: "voice-agent"
 ---
 
@@ -19,6 +19,14 @@ subcollection: "voice-agent"
 
 时刻关注为 {{site.data.keyword.iva_full}} 提供的新功能和更新。
 {: shortdesc}
+
+## 2019 年 6 月
+
+- **已添加：支持 SMS 消息传递** 最新更新日期：_2019-06-24_
+
+  - {{site.data.keyword.iva_full}} 现在支持 SMS 功能作为**语音 + SMS** 代理程序或独立 **SMS** 代理程序。用户可通过 SMS 消息传递与其代理程序进行交互。请参阅[创建支持 SMS 的语音代理程序](/docs/services/voice-agent?topic=voice-agent-sms_config_instance)以创建_语音 + SMS_ 代理程序，或者参阅[创建 SMS 代理程序](/docs/services/voice-agent?topic=voice-agent-config_sms_instance)以创建 _SMS_ 代理程序。
+
+- **已更新：Voice Gateway 驱动程序已更新到 1.0.1。**
 
 ## 2019 年 3 月
 

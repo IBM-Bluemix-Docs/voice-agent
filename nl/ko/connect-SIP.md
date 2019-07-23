@@ -24,8 +24,9 @@ subcollection: "voice-agent"
 * [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
-* [AT&T 및 기타 제공자](#att-other)
+* [Voximplant](#voximplant-setup)
 * [{{site.data.keyword.iva_short}}과의 피어링](#peering)
+* [AT&T 및 기타 제공자](#att-other)
 * [지원되는 설정 요청](#request-setup)
 
 ## Nexmo 음성 애플리케이션 작성
@@ -59,7 +60,7 @@ subcollection: "voice-agent"
 
 1. 일단 지불이 정상적으로 처리되면 SIP 트렁크 전화번호가 계정에 표시됩니다.
 
-국가 및 지역 코드를 포함하여 이 전화번호는 음성 에이전트를 설정하고 호출 전송을 구성하는 데 필요합니다. [음성 에이전트 작성 및 연결](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)을 참조하십시오.
+국가 및 지역 코드를 포함하여 이 전화번호는 음성 에이전트를 설정하고 호출 전송을 구성하는 데 필요합니다. [음성 에이전트 작성 및 연결](/docs/services/voice-agent?topic=voice-agent-getting-started#step3)을 참조하십시오.
 
 
 ## Twilio SIP 트렁크 작성
@@ -85,9 +86,37 @@ subcollection: "voice-agent"
 
   번호 페이지에서 **번호 구매**를 클릭하거나 이미 번호가 있는 경우 **+** 아이콘을 클릭하십시오. 사용자 지역의 새 전화번호를 프로비저닝할 수 있는 패널이 표시됩니다. SIP 트렁크로 되돌아가서 번호 아이콘을 클릭하여 작성한 SIP 트렁크에 번호를 지정하십시오.
 
-  국가 및 지역 코드를 포함하여 이 전화번호는 음성 에이전트를 설정하는 데 필요합니다. [음성 에이전트 작성 및 연결](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)을 참조하십시오.
+  국가 및 지역 코드를 포함하여 이 전화번호는 음성 에이전트를 설정하는 데 필요합니다. [음성 에이전트 작성 및 연결](/docs/services/voice-agent?topic=voice-agent-getting-started#step3)을 참조하십시오.
 
   **참고**: Lite/Trial Twilio 계정을 사용하여 {{site.data.keyword.iva_short}}에서 전송을 테스트하는 경우, 전송 대상을 _확인_해야 합니다. [Twilio의 공식 사이트](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-)에서 자세한 지시사항을 참조하십시오.
+
+## Voximplant와 연결
+{: #voximplant-setup}
+
+1. [Voximplant 개발자 계정](https://voximplant.com/sign-up/)을 작성하십시오.
+
+1. [Voximplant 제어판](https://manage.voximplant.com/numbers/my_numbers)으로 이동하십시오. 메뉴에서 **번호**를 선택하고 **새 전화번호 구매**를 클릭하십시오. **실제** 또는 **테스트 번호** 중 하나를 선택하여 목록에서 번호를 선택하여 전화번호를 구매하려면 **선택한 번호 구매**를 클릭하십시오.
+
+1. 음성 에이전트의 설정에서 이 번호를 지정하십시오. 
+
+1. _Voximplant 제어판_의 [애플리케이션 섹션](https://manage.voximplant.com/applications)으로 이동하여 **Watson** 애플리케이션을 작성하십시오.
+
+1. 이 애플리케이션 내에서 **시나리오** 탭으로 전환하고 다음 코드를 사용하여 **watson-scenario**를 작성하십시오.
+    ```javascript
+      VoxEngine.addEventListener(AppEvents.CallAlerting, (e) => {
+        let call2 = VoxEngine.callSIP("sip:12025550186@us-south.voiceagent.cloud.ibm.com");
+        VoxEngine.easyProcess(e.call, call2);
+      })
+    ```
+    {: codeblock}
+
+    **callSIP** 함수 호출에 주의하십시오. 
+      * `12025550186` 대신 2단계에서 구입한 Voximplant 번호를 대체하십시오. 
+      * `us-south.voiceagent.cloud.ibm.com` 대신 음성 에이전트 SIP 엔드포인트를 대체하십시오. 엔드포인트는 {{site.data.keyword.iva_full}} 문서의 _시작하기_ 페이지에서 지정됩니다. [*시작하기 튜토리얼*](/docs/services/voice-agent?topic=voice-agent-getting-started#step1)을 참조하십시오.
+    
+1. **watson-rule**을 작성하려면 **라우팅** 탭으로 이동하십시오. 지정된 시나리오대로 **watson-scenario**를 지정하십시오. 
+
+1. **연결됨**(아직 비어 있음) 및 **사용 가능** 섹션이 있는 **번호** 탭을 여십시오. **사용 가능**으로 전환하고 번호를 선택하고 **연결**을 클릭하십시오. 창이 열리면 **watson-rule**을 지정한 후 **연결**을 클릭하십시오.
 
 ## {{site.data.keyword.iva_short}}과의 피어링
 {: #peering}
@@ -126,7 +155,7 @@ subcollection: "voice-agent"
 
 1. **심각도**에 대해 **심각도 4 - 최소 영향**을 선택하십시오.
 
-1. **주제**에 대해 `{{site.data.keyword.iva_short}} 지원되는 네트워크 설정`을 입력하십시오.
+1. **주제**에 대해 `{{site.data.keyword.iva_short}} assisted network setup`을 입력하십시오.
 
 1. **간략한 설명** 섹션에서 {{site.data.keyword.iva_short}} 서비스에 연결하거나 음성 에이전트에 대한 50개가 넘는 동시 연결을 요청하는 방법을 설명하십시오. _표준_ 또는 _프리미엄_ 플랜을 보유한 사용자는 피어 연결을 사용할 수 있습니다. _표준_ 또는 _프리미엄_ 플랜에서 _Lite_ 플랜으로 인스턴스를 전환하거나 인스턴스를 삭제하는 경우에는 피어 연결이 사용 안함으로 설정됩니다.
 

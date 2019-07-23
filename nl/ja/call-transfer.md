@@ -32,7 +32,7 @@ subcollection: "voice-agent"
 ## ステップ 1: 終了 URI のセットアップ
 {: #termination-setup}
 
-SIP URI 構成で終了 URI ではなく電話 URI を使用する場合は、`transferTarget` に `tel:+18889990000` などの電話 URI を使用することができます。SIP URI を使用する場合は、`transferTarget` に終了 URI を使用する必要があります。
+SIP URI 構成で終了 URI ではなく電話 URI を使用する場合は、`transferTarget` に `tel:+18889990000` などの電話 URI を使用することができます。 SIP URI を使用する場合は、`transferTarget` に終了 URI を使用する必要があります。
 {: tip}
 
 ### NetFoundry での終了 URI のセットアップ

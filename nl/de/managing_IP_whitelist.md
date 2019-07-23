@@ -21,6 +21,9 @@ subcollection: "voice-agent"
 Sie können eine Peerverbindung zu {{site.data.keyword.iva_short}} oder anderen Providern konfigurieren, indem Sie IP-Adressen in eine Whitelist aufnehmen.
 {: shortdesc}
 
+Ihre {{site.data.keyword.iva_short}}-Instanz **muss** im Rahmen eines _Standard_- oder _Premium_-Plans genutzt werden, damit die Whitelist-Funktion verwendet werden kann.
+{: tip}
+
 ## IP-Adresse zu einer Whitelist hinzufügen
 {: #add_IP}
 

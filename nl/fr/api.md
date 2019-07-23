@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 Vous pouvez contrôler le comportement de votre agent vocal en définissant des balises d'action et des variables d'état depuis l'intérieur du service {{site.data.keyword.conversationfull}}. Les balises d'action initient des actions que votre agent vocal effectue durant une session de conversation, et les variables d'état définissent les caractéristiques d'agent vocal qui sont conservées durant toute la conversation, à moins qu'elles ne soient modifiées.
 {: shortdesc}
 
-{{site.data.keyword.iva_full}} étant basé sur IBM Voice Gateway, l'API fonctionne de la même façon. Si vous connaissez bien Voice Gateway, vous pouvez utiliser les mêmes actions et variables d'état dans vos dialogues {{site.data.keyword.conversationshort}} avec {{site.data.keyword.iva_short}}. Voir [Balises d'action et variables d'état dans l'API Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html).
+{{site.data.keyword.iva_full}} étant basé sur IBM Voice Gateway, l'API fonctionne de la même façon. Si vous connaissez bien Voice Gateway et SMS Gateway, vous pouvez utiliser les mêmes actions et variables d'état dans vos dialogues {{site.data.keyword.conversationshort}} avec {{site.data.keyword.iva_short}}. Voir [Balises d'action et variables d'état dans l'API Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html) et [API pour SMS Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/sms_api.html), respectivement.
 {: tip}
 
 ## Edition du code JSON dans la réponse de dialogue

@@ -24,8 +24,9 @@ subcollection: "voice-agent"
 * [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
-* [AT&T やその他のプロバイダー](#att-other)
+* [Voximplant](#voximplant-setup)
 * [{{site.data.keyword.iva_short}} とのピアリング](#peering)
+* [AT&T やその他のプロバイダー](#att-other)
 * [要補助セットアップの要求](#request-setup)
 
 ## Nexmo ボイス・アプリケーションの作成
@@ -59,7 +60,7 @@ subcollection: "voice-agent"
 
 1. 支払いが正常に処理されると、SIP トランク電話番号がアカウントに表示されます。
 
-この電話番号 (国コードと地域コードを含む) がボイス・エージェントのセットアップおよび通話中転送の構成に必要になります。 [ボイス・エージェントの作成と接続](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)を参照してください。
+この電話番号 (国コードと地域コードを含む) がボイス・エージェントのセットアップおよび通話中転送の構成に必要になります。 [ボイス・エージェントの作成と接続](/docs/services/voice-agent?topic=voice-agent-getting-started#step3)を参照してください。
 
 
 ## Twilio SIP トランクの作成
@@ -85,9 +86,37 @@ subcollection: "voice-agent"
 
   「Numbers (番号)」ページで、**「Buy a Number (番号の購入)」**をクリックするか、またはすでに番号を持っている場合は**「+」**アイコンをクリックします。 パネルが表示されるので、そのパネルで自分の地域内の新しい電話番号をプロビジョンすることができます。 SIP トランクに戻って「Number (番号)」アイコンをクリックし、作成した SIP トランクにその番号を割り当てます。
 
-  この電話番号は、国コードおよび地域コードとともに、ボイス・エージェントのセットアップに必要です。 [ボイス・エージェントの作成と接続](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)を参照してください。
+  この電話番号は、国コードおよび地域コードとともに、ボイス・エージェントのセットアップに必要です。 [ボイス・エージェントの作成と接続](/docs/services/voice-agent?topic=voice-agent-getting-started#step3)を参照してください。
 
-  **注**: Lite/Trial Twilio アカウントを使用して {{site.data.keyword.iva_short}} での転送をテストしている場合は、転送先を_確認_ する必要があります。詳しくは、[Twilio の公式サイト](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-)を参照してください。
+  **注**: Lite/Trial Twilio アカウントを使って {{site.data.keyword.iva_short}} での転送をテストする場合は、転送先を_検証_する必要があります。詳しくは、[Twilio の公式サイト](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-)を参照してください。
+
+## Voximplant との接続
+{: #voximplant-setup}
+
+1. [Voximplant 開発者アカウント](https://voximplant.com/sign-up/)を作成します。
+
+1. [Voximplant コントロール・パネル](https://manage.voximplant.com/numbers/my_numbers)に移動します。メニューの**「Numbers (番号)」**を選択して、**「Buy new phone number (新しい電話番号の購入)」**をクリックします。**「Real (実際)」**または**「Test numbers (テスト番号)」**のどちらかにチェック・マークを付け、リストから番号を 1 つ選んで**「Buy selected (選択項目を購入)」**をクリックして、電話番号を購入します。
+
+1. この番号をボイス・エージェントの設定で指定します。
+
+1. _Voximplant コントロール・パネル_の[アプリケーション・セクション](https://manage.voximplant.com/applications)に移動して、**Watson** という名前のアプリケーションを作成します。
+
+1. このアプリケーション内で**「Scenarios (シナリオ)」**タブに切り替えて、次のコードを使用して **watson-scenario** を作成します。
+    ```javascript
+      VoxEngine.addEventListener(AppEvents.CallAlerting, (e) => {
+        let call2 = VoxEngine.callSIP("sip:12025550186@us-south.voiceagent.cloud.ibm.com");
+        VoxEngine.easyProcess(e.call, call2);
+      })
+    ```
+    {: codeblock}
+
+    **callSIP** 関数呼び出しでは、次の点に注意してください。
+      * ステップ 2 の `12025550186` を、購入済みの Voximplant 番号に置き換えます。 
+      * `us-south.voiceagent.cloud.ibm.com` を、ボイス・エージェント SIP エンドポイントに置き換えます。エンドポイントは {{site.data.keyword.iva_full}} 資料の「_開始 (Getting started)_」ページで指定されています。[*入門チュートリアル*](/docs/services/voice-agent?topic=voice-agent-getting-started#step1)を参照してください。
+    
+1. **「Routing (ルーティング)」**タブに移動して、**watson-rule** を作成します。割り当てられるシナリオとして **watson-scenario** を指定します。
+
+1. **「Numbers (番号)」**タブに移動すると、**「Attached (接続済み)」**セクション (まだ空のまま) と**「Available (使用可能)」**セクションがこれに含まれています。**「Available (使用可能)」**に切り替えて番号を選択し、**「Attach (接続)」**をクリックします。ウィンドウが開いたら、**watson-rule** を指定して**「Attach (接続)」**をクリックします。
 
 ## {{site.data.keyword.iva_short}} とのピアリング
 {: #peering}

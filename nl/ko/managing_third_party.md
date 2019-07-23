@@ -33,7 +33,7 @@ _관리_ 대시보드에서 음성 에이전트를 작성, 복제 또는 편집�
 
 1. _Speech to Text_ 서비스 구성에서 **Google Speech to Text 서비스 인스턴스**를 선택하십시오.
 
-1. 서비스 인스턴스에 대한 **언어**를 선택하십시오.
+1. 서비스 인스턴스에 대한 **언어**를 선택하십시오. 원하는 언어가 드롭 다운 메뉴에 나열되어 있지 않은 경우, **기타**를 선택하고 [고급 구성](/docs/services/voice-agent?topic=voice-agent-third-party#advanced)을 통해 이를 설정할 수 있습니다.
 
 1. Google Cloud Speech-to-Text 서비스 인증 정보를 최대 3072자로 입력하십시오.
   * [서비스 계정을 설정할 때 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account) Google Cloud Platform에서 서비스 인증 정보를 JSON 키로 생성할 수 있습니다. 다음 코드 예제에는 Google Cloud Platform에서 생성하는 샘플 인증 정보 필드가 포함되어 있습니다.
@@ -76,7 +76,7 @@ _관리_ 대시보드에서 음성 에이전트를 작성, 복제 또는 편집�
 
 1. _Text to Speech_ 서비스 구성에서 **Google Text to Speech 서비스 인스턴스**를 선택하십시오.
 
-1. 서비스 인스턴스에 대한 **언어** 및 **음성**을 선택하십시오.
+1. 서비스 인스턴스에 대한 **언어** 및 **음성**을 선택하십시오. 원하는 언어가 드롭 다운 메뉴에 나열되어 있지 않은 경우, **기타**를 선택하고 [고급 구성](/docs/services/voice-agent?topic=voice-agent-third-party#advanced)을 통해 이를 설정할 수 있습니다.
 
 1. Google Cloud Text-to-Speech 서비스 인증 정보를 최대 3072자로 입력하십시오.
   * [서비스 계정을 설정할 때 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account) Google Cloud Platform에서 서비스 인증 정보를 JSON 키로 생성할 수 있습니다. 다음 코드 예제에는 Google Cloud Platform에서 생성하는 샘플 인증 정보 필드가 포함되어 있습니다.
@@ -97,6 +97,7 @@ _관리_ 대시보드에서 음성 에이전트를 작성, 복제 또는 편집�
     ```
     {: codeblock}
 
+{: #advanced}
 1. **선택사항** 올바른 JSON 형식으로 Google에서 정의된 특수 구성 설정을 입력하려면 **고급 표시**를 선택하십시오.
   다음 예는 독일어로 말하는 여성 음성에 대한 Google 구성 설정을 보여줍니다.
 

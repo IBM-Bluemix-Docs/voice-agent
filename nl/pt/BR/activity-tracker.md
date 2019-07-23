@@ -28,7 +28,7 @@ O serviço {{site.data.keyword.cloudaccesstrailfull_notm}} registra atividades i
 
 A tabela a seguir lista as ações que geram um evento.
 
-|Action| descrição |
+|Action| Descrição |
 | --- | ---- |
 | `create agent: POST /config/submitconfig` | Criar um novo agente de voz |
 | `update agent: POST /config/submitconfig` | Atualizar um agente de voz |

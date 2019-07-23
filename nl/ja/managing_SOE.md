@@ -32,7 +32,7 @@ subcollection: "voice-agent"
 
 1. **「サービス・タイプ」**の**「地域」**を選択します。
 
-1. **「URL」**フィールドに、SOE ワークスペースの完全な URL (`https://iva-soesample.myorg.net/SOE/myWorkspace` など)を入力します。URL には最大 256 文字まで入力できます。
+1. **「URL」**フィールドに、SOE ワークスペースの完全な URL (`https://iva-soesample.myorg.net/SOE/myWorkspace` など)を入力します。 URL には最大 256 文字まで入力できます。
 
   **重要**: データ・セキュリティーの場合、`http:` ではなく `https:` を使用して、SOE ワークスペースにセキュア URL を使用していることを確認してください。また、認証が必要です。 セキュリティーに関する考慮事項の詳細については、[機密保護とデータ・プライバシー](/docs/services/voice-agent?topic=voice-agent-infosec)を参照してください。
 

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#getting-started-tutorial" path="services/voice-agent"}
+{: .toc subcollection="voice-agent" category="app_services" audience="service" arm="2630926" href="/docs/services/voice-agent?topic=voice-agent-getting-started#getting-started-tutorial" path="services/voice-agent"}
 IBM Voice Agent with Watson
 
     {: .navgroup id="learn"}
@@ -15,6 +15,7 @@ IBM Voice Agent with Watson
     Statusvariablen
 		[Vom Sprachagenten festgelegte Statusvariablen](/services/voice-agent/voice-agent-api-reference#state-variables-iva)
         [Im Watson Assistant-Dialog festgelegte Statusvariablen](/services/voice-agent/voice-agent-api-reference#state-variables-conv)
+
     [Aktionsbefehle und Attribute](/services/voice-agent/voice-agent-api-reference#actions-and-attributes)
 	api_reference.md
     default-settings.md
@@ -23,9 +24,9 @@ IBM Voice Agent with Watson
 
     {: .topicgroup}
     Watson-Services
-        [Watson Assistant](/services/conversation/services/conversation-gettingstarted#gettingstarted){: new_window}
-        [Speech to Text](/services/speech-to-text/speech-to-text-gettingStarted#gettingStarted){: new_window}
-        [Text to Speech](/services/text-to-speech/text-to-speech-gettingStarted#gettingStarted){: new_window}
+        [Watson Assistant](/services/assistant/assistant-getting-started)
+        [Speech to Text](/services/speech-to-text/speech-to-text-gettingStarted#gettingStarted)
+        [Text to Speech](/services/text-to-speech/text-to-speech-gettingStarted#gettingStarted)
 
     {: .topicgroup}
     Informationssicherheit und Datenschutz
@@ -37,8 +38,13 @@ IBM Voice Agent with Watson
     {: .navgroup id="howto"}
     creating.md
     connect-SIP.md
+    connect-SMS.md
     managing.md
-    managing_create.md
+
+    create_voice.md
+    create_sms.md
+    create_sms_voice.md
+
     managing_multiple_numbers.md
 
     {: .topicgroup}
@@ -66,10 +72,12 @@ IBM Voice Agent with Watson
     {: .topicgroup}
     Sprachagenten schützen
         secure-trunking.md
+        iam_user_access.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     troubleshooting.md
-    limitations.md
+    known_issues.md
+    faq-pricing.md
     release_notes.md
     {: .navgroup-end}

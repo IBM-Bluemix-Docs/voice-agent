@@ -33,7 +33,7 @@ Anstelle einer Verbindung zur {{site.data.keyword.speechtotextfull}}-Instanz kö
 
 1. Wählen Sie in der _Speech to Text_-Servicekonfiguration die **Google Speech-to-Text-Serviceinstanz** aus.
 
-1. Wählen Sie die **Sprache** für Ihre Serviceinstanz aus.
+1. Wählen Sie die **Sprache** für Ihre Serviceinstanz aus. Falls Ihre bevorzugte Sprache im Dropdown-Menü nicht aufgeführt ist, können Sie die Option **Andere** auswählen und die Sprache über die [erweiterte Konfiguration](/docs/services/voice-agent?topic=voice-agent-third-party#advanced) festlegen.
 
 1. Geben Sie Ihre Google Cloud Speech-to-Text-Serviceberechtigungsnachweise ein. Beachten Sie dabei die Begrenzung auf maximal 3072 Zeichen.
   * Sie können die Serviceberechtigungsnachweise auf der Google Cloud-Plattform als JSON-Schlüssel generieren, wenn Sie [ein Servicekonto einrichten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). Das folgende Codebeispiel enthält die Beispielberechtigungsnachweisfelder, die Sie auf der Google Cloud-Plattform generieren.
@@ -76,7 +76,7 @@ Anstelle einer Verbindung zur {{site.data.keyword.texttospeechfull}}-Instanz kö
 
 1. Wählen Sie in der Servicekonfiguration _Text to Speech_ die Option **Google Text to Speech-Serviceinstanz** aus.
 
-1. Wählen Sie die Optionen für die Landessprache und für die Sprache für Ihre Serviceinstanz aus.
+1. Wählen Sie die Optionen für die Landessprache und für die Sprache für Ihre Serviceinstanz aus. Falls Ihre bevorzugte Sprache im Dropdown-Menü nicht aufgeführt ist, können Sie die Option **Andere** auswählen und die Sprache über die [erweiterte Konfiguration](/docs/services/voice-agent?topic=voice-agent-third-party#advanced) festlegen.
 
 1. Geben Sie Ihre Google Cloud Text-to-Speech-Serviceberechtigungsnachweise ein. Beachten Sie dabei die Begrenzung auf maximal 3072 Zeichen.
   * Sie können die Serviceberechtigungsnachweise auf der Google Cloud-Plattform als JSON-Schlüssel generieren, wenn Sie [ein Servicekonto einrichten ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). Das folgende Codebeispiel enthält die Beispielberechtigungsnachweisfelder, die Sie auf der Google Cloud-Plattform generieren.
@@ -97,6 +97,7 @@ Anstelle einer Verbindung zur {{site.data.keyword.texttospeechfull}}-Instanz kö
     ```
     {: codeblock}
 
+{: #advanced}
 1. **Optional** Wählen Sie **Erweiterte Optionen anzeigen** aus, um spezielle Konfigurationseinstellungen einzugeben, die von Google in einem gültigen JSON-Format definiert wurden.
   Das folgende Beispiel zeigt die Einstellungen für die Google-Konfiguration für eine weibliche Stimme, die Deutsch spricht.
 

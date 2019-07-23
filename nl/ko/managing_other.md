@@ -22,7 +22,7 @@ subcollection: "voice-agent"
 다른 {{site.data.keyword.Bluemix_short}} 계정의 작업공간에 속해 있는 {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}} 또는 {{site.data.keyword.speechtotextshort}} 서비스 인스턴스를 사용하도록 음성 에이전트를 구성할 수 있습니다.
 {: shortdesc}
 
-음성 에이전트를 기타 서비스 인스턴스에 연결하려면 서비스 인스턴스에 대한 API 키 또는 사용자 이름과 비밀번호 인증 정보를 사용할 수 있습니다. 사용자 이름 및 비밀번호는 각각 64자와 256자로 제한됩니다. API 키는 64자로 제한됩니다. 
+음성 에이전트를 기타 서비스 인스턴스에 연결하려면 서비스 인스턴스에 대한 API 키 또는 사용자 이름과 비밀번호 인증 정보를 사용할 수 있습니다. 사용자 이름 및 비밀번호는 각각 64자와 256자로 제한됩니다. API 키는 64자로 제한됩니다.
 
 1. _관리_ 대시보드의 _음성 에이전트_ 탭에서 **새 음성 에이전트 작성** 또는 편집할 음성 에이전트를 선택하십시오.
 

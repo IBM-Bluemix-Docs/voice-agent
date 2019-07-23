@@ -35,8 +35,7 @@ subcollection: "voice-agent"
 
 1. [Instale o {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
 
-2. Execute o [comando `ibmcloud`](/docs/cli/idt?topic=cloud-cli-idt-cli#idt-cli), que cria
-a instância de serviço do Voice Agent com o plano _Lite_:
+2. Execute o comando [`ibmcloud`](/docs/cli/idt?topic=cloud-cli-idt-cli#idt-cli) que cria a sua instância do serviço do Voice Agent com o plano _Lite_:
 
    ```
    ibmcloud service create VoiceAgent _Lite_ "My Voice Agent Service"

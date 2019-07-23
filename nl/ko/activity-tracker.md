@@ -28,7 +28,7 @@ subcollection: "voice-agent"
 
 다음 표에는 이벤트를 생성하는 조치가 나열되어 있습니다.
 
-| 조치| 설명 |
+| 조치|설명 |
 | --- | ---- |
 | `create agent: POST /config/submitconfig` | 새 음성 에이전트 작성 |
 | `update agent: POST /config/submitconfig` | 음성 에이전트 업데이트 |

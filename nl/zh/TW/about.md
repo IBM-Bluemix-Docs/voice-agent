@@ -54,7 +54,7 @@ subcollection: "voice-agent"
 ### 具有 SIP 幹線的架構
 {: #arch-sip}
 
-您可以使用 SIP 幹線，從公用電話網路快速設定及測試環境。當您透過 SIP 幹線連接至語音代理程式時，必須配置 SIP 幹線，根據其 IP 位址將 INVITE 要求轉遞至語音代理程式。您可以在_開始使用_ 頁面上找到 {{site.data.keyword.iva_short}} 伺服器 IP 位址。
+您可以使用 SIP 幹線，從公用電話網路快速設定及測試環境。當您透過 SIP 幹線連接至語音代理程式時，必須配置 SIP 幹線，根據其 IP 位址將 INVITE 要求轉遞至語音代理程式。您可以在_開始使用_ 頁面上找到 {{site.data.keyword.iva_short}} SIP URI 端點。
 
 ![通話透過 SIP 幹線流向語音代理程式，後者會透過 API 與 Watson 服務通訊。](images/arch-sip.png)
 
@@ -76,6 +76,13 @@ subcollection: "voice-agent"
 若要進一步瞭解如何實作服務編排引擎，請參閱 [GitHub 上的服務編排引擎範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}。
 
 **重要事項**：為了資料安全，請確定針對 SOE 工作區使用安全的 URL，方法是使用 `https:` 而不要使用 `http:`，並且要求鑑別。若要進一步瞭解安全考量，請參閱[資訊安全及資料隱私](/docs/services/voice-agent?topic=voice-agent-infosec)。
+
+### 具有數位訊息的架構
+{: #arch-sms}
+
+您可以設定認知 SMS 代理程式，客戶可以藉由交換 SMS 和 MMS 訊息來與之互動。利用 IBM {{site.data.keyword.conversationshort}} 服務中心對話，SMS 代理程式可以指導客戶完成作業、回答問題等等。連接至 SMS 代理程式時，您必須在 SMS 提供者中配置 SMS 要求 URL 或 Webhook，該 URL 或 Webhook 會告知 SMS 提供者轉遞訊息的位置。您可以在_開始使用_ 頁面上找到 {{site.data.keyword.iva_short}} SMS URI 端點。
+
+![訊息透過 SMS 提供者流向語音代理程式，後者會透過 API 與 Watson 服務通訊。](images/arch-sms-mms.png)
 
 ## 特性
 {: #features}

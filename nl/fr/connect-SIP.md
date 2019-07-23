@@ -24,8 +24,9 @@ Vous pouvez choisir dans la liste présentée ci-après le fournisseur de liaiso
 * [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
-* [AT&T et autres fournisseurs](#att-other)
+* [Voximplant](#voximplant-setup)
 * [Appairage avec {{site.data.keyword.iva_short}}](#peering)
+* [AT&T et autres fournisseurs](#att-other)
 * [Demande de configuration assistée](#request-setup)
 
 ## Création d'une application vocale Nexmo
@@ -59,7 +60,7 @@ Vous pouvez choisir dans la liste présentée ci-après le fournisseur de liaiso
 
 1. Une fois le traitement du paiement terminé, votre numéro de téléphone de liaison SIP apparaît dans votre compte.
 
-Vous avez besoin de ce numéro de téléphone pour installer et configurer votre agent vocal et pour configurer le transfert d'appel, y compris le code pays et l'indicatif régional. Voir [Création et connexion de votre agent vocal](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+Vous avez besoin de ce numéro de téléphone pour installer et configurer votre agent vocal et pour configurer le transfert d'appel, y compris le code pays et l'indicatif régional. Voir [Création et connexion de votre agent vocal](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
 
 ## Création d'une liaison SIP Twilio
@@ -85,9 +86,37 @@ Vous avez besoin de ce numéro de téléphone pour installer et configurer votre
 
   Sur la page Numbers, cliquez sur **Buy a Number** ou, si vous possédez déjà un numéro, cliquez sur l'icône **+**. Un panneau s'affiche, dans lequel vous pouvez fournir un nouveau numéro de téléphone pour votre région. Affectez le numéro à la liaison SIP que vous avez créée en revenant à la liaison SIP et en cliquant sur l'icône Number.
 
-  Vous avez besoin de ce numéro de téléphone pour configurer votre agent vocal, y compris le code pays et l'indicatif régional. Voir [Création et connexion de votre agent vocal](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+  Vous avez besoin de ce numéro de téléphone pour configurer votre agent vocal, y compris le code pays et l'indicatif régional. Voir [Création et connexion de votre agent vocal](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
-  **Remarque** : Si vous utilisez une version d'évaluation ou d'essai du compte Twilio pour tester les transferts sur {{site.data.keyword.iva_short}}, vous devrez _vérifier_ la cible du transfert. Pour en savoir plus à ce sujet, consultez le [site officiel de Twilio](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
+  **Remarque** : si vous utilisez une version d'évaluation ou d'essai du compte Twilio pour tester les transferts sur {{site.data.keyword.iva_short}}, vous devrez _vérifier_ la cible du transfert. Pour en savoir plus à ce sujet, consultez le [site officiel de Twilio](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
+
+## Connexion avec Voximplant
+{: #voximplant-setup}
+
+1. Créez un [compte développeur Voximplant](https://voximplant.com/sign-up/).
+
+1. Accédez au [panneau de configuration Voximplant](https://manage.voximplant.com/numbers/my_numbers). Dans le menu, sélectionnez **Numbers**, puis cliquez sur **Buy new phone number**. Vous pouvez cocher **Real** ou **Test numbers**, puis sélectionnez un numéro dans la liste et cliquez sur **Buy selected** pour acheter un numéro de téléphone.
+
+1. Indiquez ce numéro dans les paramètres de votre agent vocal.
+
+1. Accédez à la [section Applications](https://manage.voximplant.com/applications) du _panneau de configuration Voximplant_ pour créer une application nommée **Watson**.
+
+1. Dans cette application, passez dans l'onglet **Scenarios** et créez un **scénario watson** avec le code suivant :
+    ```javascript
+      VoxEngine.addEventListener(AppEvents.CallAlerting, (e) => {
+        let call2 = VoxEngine.callSIP("sip:12025550186@us-south.voiceagent.cloud.ibm.com");
+        VoxEngine.easyProcess(e.call, call2);
+      })
+    ```
+    {: codeblock}
+
+    Prêtez une attention particulière à l'appel de fonction **callSIP** :
+      * Indiquez le numéro Voximplant acheté à l'étape 2 à la place de `12025550186`. 
+      * Indiquez le point de terminaison SIP de votre agent vocal à la place de `us-south.voiceagent.cloud.ibm.com`. Le point de terminaison est spécifié sur la page _Mise en route_ de la documentation {{site.data.keyword.iva_full}}. Voir le [*Tutoriel d'initiation*](/docs/services/voice-agent?topic=voice-agent-getting-started#step1).
+    
+1. Accédez à l'onglet **Routing** pour créer une **règle watson**. Indiquez le **scénario watson** comme scénario affecté.
+
+1. Ouvrez l'onglet **Numbers** avec les sections **Attached** (encore vide) et **Available**. Passez dans **Available**, sélectionnez votre numéro, puis cliquez sur **Attach**. Dans la fenêtre ouverte, indiquez la **règle watson**, puis cliquez sur **Attach**.
 
 ## Appairage avec {{site.data.keyword.iva_short}}
 {: #peering}

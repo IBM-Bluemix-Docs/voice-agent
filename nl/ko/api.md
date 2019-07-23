@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 {{site.data.keyword.conversationfull}} 서비스 내에서 조치 태그 및 상태 변수를 정의하여 음성 에이전트의 동작을 제어할 수 있습니다. 조치 태그는 음성 에이전트가 대화 세션 중에 수행하는 조치를 시작하고 상태 변수는 별도로 변경되지 않는 한 대화 전체에서 지속되는 음성 에이전트 특성을 정의합니다.
 {: shortdesc}
 
-{{site.data.keyword.iva_full}}은 IBM Voice Gateway를 기반으로 하므로 API가 동일한 방식으로 작동합니다. Voice Gateway에 익숙한 경우 {{site.data.keyword.conversationshort}} 대화에서 {{site.data.keyword.iva_short}}과 동일한 조치 및 상태 변수를 사용할 수 있습니다. [Voice Gateway API의 조치 태그 및 상태 변수](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html)를 참조하십시오.
+{{site.data.keyword.iva_full}}은 IBM Voice Gateway를 기반으로 하므로 API가 동일한 방식으로 작동합니다. Voice Gateway 및 SMS Gateway에 익숙한 경우, {{site.data.keyword.conversationshort}} 대화에서 {{site.data.keyword.iva_short}}과 동일한 조치 및 상태 변수를 사용할 수 있습니다. [API의 조치 태그 및 상태 변수](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html) 및 [SMS Gateway의 API](https://www.ibm.com/support/knowledgecenter/SS4U29/sms_api.html)를 각각 참조하십시오.
 {: tip}
 
 ## 대화 응답에서 JSON 편집

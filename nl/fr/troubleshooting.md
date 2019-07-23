@@ -59,7 +59,7 @@ Votre appel ne s'est probablement pas connecté aux services. Ce problème se pr
 
 * Vérifiez que les données d'identification et les URL du service Watson, ainsi que l'ID d'espace de travail {{site.data.keyword.conversationshort}} sont tous valides.
 * Vérifiez que le dialogue dans votre compétence {{site.data.keyword.conversationshort}} a été correctement créé.
-  * Vous pouvez importer l'[exemple de conversation ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) à partir de GitHub pour une compétence préconfigurée. Pour plus d'informations sur l'enregistrement de l'exemple de conversation en tant que fichier JSON et l'importation de ce fichier en tant que compétence dans l'outil {{site.data.keyword.conversationshort}}, voir l'[étape 3 dans le *tutoriel d'initiation*](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+  * Vous pouvez importer l'[exemple de conversation ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) à partir de GitHub pour une compétence préconfigurée. Pour plus d'informations sur l'enregistrement de l'exemple de conversation en tant que fichier JSON et l'importation de ce fichier en tant que compétence dans l'outil {{site.data.keyword.conversationshort}}, voir l'[étape 3 dans le *tutoriel d'initiation*](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
   * Si vous avez créé votre propre dialogue {{site.data.keyword.conversationshort}}, vérifiez qu'il contient un noeud avec la condition `conversation_start` et un noeud avec une réponse par défaut. Pour obtenir des instructions détaillées, voir [Création d'un dialogue](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog) dans la documentation {{site.data.keyword.conversationshort}}.
 * Vérifiez si votre numéro de téléphone est répertorié sur le tableau de bord _Utilisation_ de l'agent vocal. Si un élément est visible pour votre appel téléphonique, cela signifie que votre agent vocal est connecté au service Watson.
 
@@ -70,3 +70,12 @@ Vérifiez si le numéro de téléphone que vous avez spécifié est utilisé par
 ### Pourquoi mes appels échouent-ils fréquemment ?
 
 Les agents vocaux peuvent avoir des problèmes lorsque les appels échouent car un moteur d'orchestration de service initie une longue transaction et il ne répond pas à votre agent vocal en temps voulu. Si une transaction dépasse le délai d'attente {{site.data.keyword.conversationshort}} défini par défaut, l'appel échoue. Pour éviter les échecs d'appel, le moteur d'orchestration de service peut modifier le délai d'attente {{site.data.keyword.conversationshort}} défini par défaut à l'aide de la variable d'état `vgwConversationResponseTimeout`. Voir [Variables définies dans le dialogue {{site.data.keyword.conversationshort}}](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html#variables-conv).
+
+
+### Limitations diverses
+
+* Vous pouvez créer de nouvelles instances de service Watson directement à partir du tableau de bord sous _Créer un agent vocal_ pour la région de **Dallas** ou de **Washington DC**. Pour connecter votre agent vocal à des services Watson dans d'autres régions, créez vos services Watson avant de créer un agent vocal sur le tableau de bord _Gestion_.
+
+* Seules les connexions au réseau téléphonique public commuté sont prises en charge.
+
+* Toutes les configurations d'agent vocal doivent être spécifiées dans le service {{site.data.keyword.conversationshort}} qui utilise l'API.

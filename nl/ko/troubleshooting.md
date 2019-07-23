@@ -59,7 +59,7 @@ subcollection: "voice-agent"
 
 * Watson 서비스 인증 정보, URL 및 {{site.data.keyword.conversationshort}} 작업공간 ID가 모두 유효한지 확인하십시오.
 * {{site.data.keyword.conversationshort}} 스킬의 대화가 올바르게 작성되었는지 확인하십시오.
-  * GitHub에서 [샘플 대화 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)를 사전 빌드된 스킬로서 가져올 수 있습니다. 샘플 대화를 JSON 파일로 저장한 후 {{site.data.keyword.conversationshort}} 도구에서 이 파일을 스킬로서 가져오는 데 대한 세부사항은 [*시작하기 튜토리얼*의 3단계](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3) 를 참조하십시오.
+  * GitHub에서 [샘플 대화 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)를 사전 빌드된 스킬로서 가져올 수 있습니다. 샘플 대화를 JSON 파일로 저장한 후 {{site.data.keyword.conversationshort}} 도구에서 이 파일을 스킬로서 가져오는 데 대한 세부사항은 [*시작하기 튜토리얼*의 3단계](/docs/services/voice-agent?topic=voice-agent-getting-started#step3)를 참조하십시오. 
   * 고유한 {{site.data.keyword.conversationshort}} 대화를 작성한 경우에는 `conversation_start` 조건이 있는 노드와 기본 응답이 있는 노드가 대화에 포함되는지 확인하십시오. 자세한 지시사항은 {{site.data.keyword.conversationshort}} 문서에서 [대화 빌드](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog)를 참조하십시오.
 * 전화 통화가 음성 에이전트 _사용_ 대시보드에 나열되어 있는지 여부를 확인하십시오. 전화 통화에 대한 항목이 표시되면 음성 에이전트가 Watson 서비스에 연결된 것입니다.
 
@@ -70,3 +70,12 @@ subcollection: "voice-agent"
 ### 자주 호출에 실패하는 이유는 무엇입니까?
 
 서비스 오케스트레이션 엔진(SOE)이 장기 트랜잭션을 시작하기 때문에 호출에 실패하는 경우 음성 에이전트에 문제점이 있을 수 있으며 적절한 때에 사용자 음성 에이전트에 응답하지 않습니다. 트랜잭션이 기본 {{site.data.keyword.conversationshort}} 제한시간을 초과하면 호출에 실패합니다. 호출 실패를 방지하기 위해 SOE는 `vgwConversationResponseTimeout` 상태 변수를 사용하여 기본 {{site.data.keyword.conversationshort}} 제한시간을 수정할 수 있습니다. [{{site.data.keyword.conversationshort}} 대화 상자에 설정된 변수](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html#variables-conv)를 참조하십시오.
+
+
+### 다양한 제한사항
+
+* **댈러스** 또는 **워싱턴 DC** 지역의 경우에는 _음성 에이전트 작성_ 대시보드에서 직접 새 Watson 서비스 인스턴스를 작성할 수 있습니다. 음성 에이전트를 기타 지역의 Watson 서비스에 연결하려면 _관리_ 대시보드에서 음성 에이전트를 작성하기 전에 Watson 서비스를 작성하십시오.
+
+* PSTN(Public Switched Telephone Network)에 대한 연결만 지원됩니다.
+
+* 모든 음성 에이전트 구성이 API를 사용하는 {{site.data.keyword.conversationshort}} 서비스에 지정되어 있어야 합니다.

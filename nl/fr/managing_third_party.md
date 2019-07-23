@@ -33,7 +33,7 @@ Au lieu d'utiliser une instance {{site.data.keyword.speechtotextfull}}, vous pou
 
 1. Dans votre configuration du service _Speech to Text_, choisissez **Instance de service Google Speech to Text**.
 
-1. Choisissez la **Langue** de votre instance de service.
+1. Choisissez la **Langue** de votre instance de service. Si votre langue préférée ne figure pas dans le menu déroulant, vous pouvez toujours choisir **Autre** et la définir par le biais de la [configuration avancée](/docs/services/voice-agent?topic=voice-agent-third-party#advanced).
 
 1. Entrez les données d'identification de votre service Google Cloud Speech-to-Text, sans dépasser 3072 caractères.
   * Vous pouvez générer les données d'identification de votre service dans la plateforme Google Cloud sous la forme d'une clé JSON lorsque vous [définissez un compte de service ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). L'exemple de code suivant contient des exemples de zones de données d'identification générées sur la plateforme Google Cloud.
@@ -76,7 +76,7 @@ Au lieu d'utiliser une instance {{site.data.keyword.texttospeechfull}}, vous pou
 
 1. Dans la configuration de votre service _Text to Speech_, choisissez **Instance de service Google Text to Speech**.
 
-1. Choisissez la **Langue** et la **Voix** de votre instance de service.
+1. Choisissez la **Langue** et la **Voix** de votre instance de service. Si votre langue préférée ne figure pas dans le menu déroulant, vous pouvez toujours choisir **Autre** et la définir par le biais de la [configuration avancée](/docs/services/voice-agent?topic=voice-agent-third-party#advanced).
 
 1. Entrez les données de votre service Google Cloud Text-to-Speech, sans dépasser 3072 caractères.
   * Vous pouvez générer les données d'identification de votre service dans la plateforme Google Cloud sous la forme d'une clé JSON lorsque vous [définissez un compte de service ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). L'exemple de code suivant contient des exemples de zones de données d'identification générées sur la plateforme Google Cloud.
@@ -97,6 +97,7 @@ Au lieu d'utiliser une instance {{site.data.keyword.texttospeechfull}}, vous pou
     ```
     {: codeblock}
 
+{: #advanced}
 1. **Facultatif :** Sélectionnez **Afficher les paramètres avancés** pour entrer les paramètres de configuration spéciaux définis par Google dans un format JSON valide.
   L'exemple suivant montre les paramètres de configuration Google d'une voix féminine parlant l'allemand.
 

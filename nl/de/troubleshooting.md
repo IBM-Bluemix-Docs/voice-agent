@@ -59,7 +59,7 @@ Ihr Anruf hat wahrscheinlich keine Verbindung zu den Services hergestellt. Diese
 
 * Überprüfen Sie, ob die Watson-Serviceberechtigungsnachweise, die URLs und die {{site.data.keyword.conversationshort}}-Arbeitsbereich-ID alle gültig sind.
 * Überprüfen Sie, ob der Dialog im {{site.data.keyword.conversationshort}}-Skill korrekt erstellt wurde.
-  * Sie können den [Beispieldialog![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) von GitHub für einen vorgefertigten Skill importieren. Details zum Speichern des Beispieldialogs als JSON-Datei und späteren Importieren der Datei als Skill im Tool {{site.data.keyword.conversationshort}} finden Sie in [Schritt 3 im *Lernprogramm "Einführung"*](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+  * Sie können den [Beispieldialog![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) von GitHub für einen vorgefertigten Skill importieren. Details zum Speichern des Beispieldialogs als JSON-Datei und späteren Importieren der Datei als Skill im Tool {{site.data.keyword.conversationshort}} finden Sie in [Schritt 3 im *Lernprogramm "Einführung"*](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
   * Wenn Sie Ihren eigenen {{site.data.keyword.conversationshort}}-Dialog erstellt haben, überprüfen Sie, ob der Dialog einen Knoten mit der Bedingung `conversation_start` und einen Knoten mit einer Standardantwort enthält. Ausführliche Anweisungen finden Sie unter [Dialog erstellen](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog) in der {{site.data.keyword.conversationshort}}-Dokumentation.
 * Sehen Sie im Dashboard _Nutzung_ des Sprachagenten nach, ob Ihr Telefonanruf dort aufgelistet ist. Wenn für Ihren Telefonanruf ein Eintrag vorhanden ist, hat Ihr Sprachagent eine Verbindung zum Watson-Service hergestellt.
 
@@ -70,3 +70,12 @@ Ihr Anruf hat wahrscheinlich keine Verbindung zu den Services hergestellt. Diese
 ### Warum treten bei meinen Anrufen häufig Fehler auf?
 
 Bei Sprachagenten können Probleme auftreten, wenn Anrufe fehlschlagen, da eine Serviceorchestrierungsengine (Service Orchestration Engine, SOE) eine Transaktion mit langer Laufzeit initiiert und keine zeitnahe Antwort an den Sprachagenten sendet. Wenn eine Transaktion das {{site.data.keyword.conversationshort}}-Standardzeitlimit überschreitet, schlägt der Anruf fehl. Um das Fehlschlagen von Anrufen zu vermeiden, kann die SOE den {{site.data.keyword.conversationshort}}-Standardzeitlimitwert mithilfe der Statusvariablen `vgwConversationResponseTimeout` ändern. Informationen hierzu finden Sie in [Im {{site.data.keyword.conversationshort}}-Dialog festgelegte Variablen](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html#variables-conv).
+
+
+### Verschiedene Einschränkungen
+
+* Für die Region **Dallas** oder die Region **Washington DC** ist die Erstellung neuer Watson-Serviceinstanzen direkt im Dashboard _Sprachagenten erstellen_ möglich. Zum Verbinden Ihres Sprachagenten mit Watson-Services in anderen Regionen müssen Sie die Watson-Services vor dem Erstellen des Sprachagenten im Dashboard _Verwalten_ erstellen.
+
+* Nur Verbindungen zum öffentlichen Telefonnetz werden unterstützt.
+
+* Alle Sprachagentenkonfigurationen müssen mittels der API im {{site.data.keyword.conversationshort}}-Service angegeben werden.

@@ -80,7 +80,7 @@ na **Descrição**.
 {: #delete_num}
 
 1. Clique em **Gerenciar** ao lado de **Número do telefone**
-na página _Criar um agente de voz_ ou _Editar agente de voz_. 
+na página _Criar um agente de voz_ ou _Editar agente de voz_.
 
 1. Marque a caixa branca ao lado de todos os números que você deseja excluir. Para selecionar _todos_ os números, basta marcar a caixa branca ao lado do cabeçalho **Número
 do telefone**.
@@ -112,7 +112,7 @@ de telefone** exclusivos, com um número por linha, juntamente com uma **Descri�
 incluir um número no Painel e devem ser exclusivos. Consulte [Formato numérico](/docs/services/voice-agent?topic=voice-agent-multi_num#format_num).
 
 1. Clique em **Gerenciar** ao lado de **Número do telefone**
-na página _Criar um agente de voz_ ou _Editar agente de voz_. 
+na página _Criar um agente de voz_ ou _Editar agente de voz_.
 
 1. Clique no ícone "Fazer upload do arquivo CSV" próximo à parte superior direita da caixa
 de diálogo **Gerenciar**.
@@ -136,7 +136,7 @@ você modifique os números e/ou as descrições que desejar e poderá fazer upl
 o agente. Consulte [Importando números](/docs/services/voice-agent?topic=voice-agent-multi_num#import_num).
 
 1. Clique em **Gerenciar** ao lado de **Número do telefone**
-na página _Criar um agente de voz_ ou _Editar agente de voz_. 
+na página _Criar um agente de voz_ ou _Editar agente de voz_.
 
 1. Clique no ícone "Fazer download do arquivo CSV" próximo à parte superior direita da caixa
 de diálogo **Gerenciar**.
@@ -155,7 +155,7 @@ propósito funcional. Por padrão, o primeiro número incluído no agente será 
 você desejar no agente de voz.
 
 1. Clique em **Gerenciar** ao lado de **Número do telefone**
-na página _Criar um agente de voz_ ou _Editar agente de voz_. 
+na página _Criar um agente de voz_ ou _Editar agente de voz_.
 
 1. Destaque a entrada de número que você deseja editar e clique na lista de opções, representada
 pelo ícone **três pontos**, que aparece no lado direito da lista.
@@ -193,7 +193,7 @@ Também é possível escolher quantidades variáveis de números mostrados por p
 Se você desejar fazer mudanças na lista de números no agente de voz, _deverá_ salvar as mudanças na caixa de diálogo **Gerenciar** e depois salvar as mudanças na página _Editar agente de voz_.
 
 1. Clique em **Gerenciar** ao lado de **Número do telefone**
-na página _Criar um agente de voz_ ou _Editar agente de voz_. 
+na página _Criar um agente de voz_ ou _Editar agente de voz_.
 
 1. Faça quaisquer mudanças nos números na lista, conforme desejar.
 
@@ -210,7 +210,7 @@ salvar suas mudanças, caso contrário, elas serão descartadas.
 É possível procurar números armazenados procurando o número ou a descrição.
 
 1. Clique em **Gerenciar** ao lado de **Número do telefone**
-na página _Criar um agente de voz_ ou _Editar agente de voz_. 
+na página _Criar um agente de voz_ ou _Editar agente de voz_.
 
 1. Na barra de _Procura_, é possível digitar um número ou uma descrição para
 procurar na lista. Conforme você digita, os resultados da pesquisa serão atualizados automaticamente.

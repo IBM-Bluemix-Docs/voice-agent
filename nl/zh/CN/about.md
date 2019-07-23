@@ -54,7 +54,7 @@ subcollection: "voice-agent"
 ### 具有 SIP 中继的体系结构
 {: #arch-sip}
 
-可以使用 SIP 中继通过公用电话网络来快速设置和测试您的环境。通过 SIP 中继连接到语音代理程序时，必须将 SIP 中继配置为根据 IP 地址将 INVITE 请求转发给语音代理程序。您可以在_开始使用_页面上找到 {{site.data.keyword.iva_short}} 服务器 IP 地址。
+可以使用 SIP 中继通过公用电话网络来快速设置和测试您的环境。通过 SIP 中继连接到语音代理程序时，必须将 SIP 中继配置为根据 IP 地址将 INVITE 请求转发给语音代理程序。您可以在_开始使用_页面上找到 {{site.data.keyword.iva_short}} SIP URI 端点。
 
 ![呼叫会通过 SIP 中继传入语音代理程序，而语音代理程序会通过 API 与 Watson 服务进行通信。](images/arch-sip.png)
 
@@ -76,6 +76,13 @@ subcollection: "voice-agent"
 要了解有关如何实施服务编排引擎的更多信息，请参阅 [GitHub 上的服务编排引擎样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}。
 
 **重要信息**：为了实现数据安全，请确保对 SOE 工作空间使用安全 URL（即，使用 `https:` 而不是 `http:`），并要求认证。请参阅[信息安全和数据隐私](/docs/services/voice-agent?topic=voice-agent-infosec)以了解更多安全性注意事项。
+
+### 使用数字信息的体系结构
+{: #arch-sms}
+
+您可以设置认知 SMS 代理程序，客户可通过交换 SMS 和 MMS 消息与其交互。使用 {{site.data.keyword.conversationshort}} 服务的对话功能，SMS 代理程序可以引导客户完成任务，回答问题等。连接到 SMS 代理程序时，您必须在 SMS 提供者中配置 SMS 请求 URL 或 Webhook，其可以告知 SMS 提供者消息转发的位置。您可以在_开始使用_页面上找到 {{site.data.keyword.iva_short}} SMS URI 端点。
+
+![通过 SMS 提供者到语音代理程序的消息流，而语音代理程序会通过 API 与 Watson 服务进行通信。](images/arch-sms-mms.png)
 
 ## 功能
 {: #features}

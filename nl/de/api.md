@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 Das Verhalten Ihres Sprachagenten kann durch Definieren von Aktionstags und Statusvariablen im {{site.data.keyword.conversationfull}}-Service gesteuert werden. Aktionstags initiieren Aktionen, die Ihr Sprachagent während einer Dialogsitzung unternimmt; Statusvariablen definieren Eigenschaften des Sprachagenten, die während des ganzen Dialogs bestehen bleiben, sofern sie nicht geändert werden.
 {: shortdesc}
 
-Da {{site.data.keyword.iva_full}} auf IBM Voice Gateway basiert, funktioniert die API auf gleiche Weise. Wenn Sie mit Voice Gateway vertraut sind, können Sie in Ihren {{site.data.keyword.conversationshort}}-Dialogen mit {{site.data.keyword.iva_short}} die gleichen Aktionen und Statusvariablen verwenden. In [Aktionstags und Statusvariablen in der Voice Gateway-API](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html) finden Sie weitere Informationen.
+Da {{site.data.keyword.iva_full}} auf IBM Voice Gateway basiert, funktioniert die API auf gleiche Weise. Wenn Sie mit Voice Gateway und SMS Gateway vertraut sind, können Sie in Ihren {{site.data.keyword.conversationshort}}-Dialogen mit {{site.data.keyword.iva_short}} die gleichen Aktionen und Statusvariablen verwenden. Unter [Aktionstags und Statusvariablen in der Voice Gateway-API](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html) bzw. [API für SMS Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/sms_api.html) finden Sie weitere Informationen.
 {: tip}
 
 ## JSON in der Dialogantwort bearbeiten

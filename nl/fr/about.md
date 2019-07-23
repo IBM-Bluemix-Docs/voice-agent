@@ -54,7 +54,7 @@ Les étapes suivantes décrivent le flux de conversion :
 ### Architecture avec une liaison SIP
 {: #arch-sip}
 
-Vous pouvez utiliser des liaisons SIP pour rapidement configurer et tester votre environnement depuis le réseau téléphonique public. Lors de la connexion à un agent vocal via une liaison SIP, vous devez configurer votre liaison SIP pour qu'elle réachemine les demandes INVITE vers l'agent vocal en fonction de son adresse IP. L'adresse IP de votre serveur {{site.data.keyword.iva_short}} figure sur la page _Initiation_.
+Vous pouvez utiliser des liaisons SIP pour rapidement configurer et tester votre environnement depuis le réseau téléphonique public. Lors de la connexion à un agent vocal via une liaison SIP, vous devez configurer votre liaison SIP pour qu'elle réachemine les demandes INVITE vers l'agent vocal en fonction de son adresse IP. Vous trouverez votre noeud final URI SIP {{site.data.keyword.iva_short}} sur la page _Mise en route_.
 
 ![Les appels transitent via une liaison SIP vers l'agent vocal, qui communique avec les services Watson via l'API.](images/arch-sip.png)
 
@@ -76,6 +76,13 @@ Vous souhaiterez peut-être incorporer un moteur d'orchestration de service dans
 Pour plus d'informations sur l'implémentation d'un moteur d'orchestration de service, voir les [exemples de moteur d'orchestration de service sur GitHub ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}.
 
 **Important** : pour la sécurité des données, veillez à utiliser une URL sécurisée pour votre espace de travail de moteur d'orchestration de service, en utilisant `https:` au lieu de `http:`, et exigez une authentification. Voir [Sécurité des informations et confidentialité des données](/docs/services/voice-agent?topic=voice-agent-infosec) pour en savoir plus sur les éléments à prendre en compte en matière de sécurité.
+
+### Architecture avec messages numériques
+{: #arch-sms}
+
+Vous pouvez configurer un agent SMS cognitif avec lequel les clients peuvent interagir en échangeant des messages SMS et MMS. Par l'intermédiaire d'une boîte de dialogue du service IBM {{site.data.keyword.conversationshort}}, l'agent SMS guide le client dans ses tâches, répond à des questions, et bien plus. Lorsque vous vous connectez à un agent SMS, vous devez configurer l'URL de la demande de SMS, ou webhook, dans le fournisseur SMS, qui indique à ce dernier où envoyer les messages. Vous trouverez votre noeud final URI SMS {{site.data.keyword.iva_short}} sur la page _Mise en route_.
+
+![Les messages transitent via un fournisseur SMS vers l'agent vocal, qui communique avec des services Watson via l'API.](images/arch-sms-mms.png)
 
 ## Fonctions
 {: #features}

@@ -21,6 +21,9 @@ subcollection: "voice-agent"
 您可以通过将 IP 地址列入白名单来配置对等的 {{site.data.keyword.iva_short}} 或其他提供者。
 {: shortdesc}
 
+{{site.data.keyword.iva_short}} 实例**必须**使用_标准_或_高端_套餐，才能使用列入白名单的功能。
+{: tip}
+
 ## 将 IP 地址添加到白名单
 {: #add_IP}
 

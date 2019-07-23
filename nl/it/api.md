@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 Puoi controllare il comportamento del tuo Voice Agent definendo le tag di azione e le variabili di stato dall'interno del servizio {{site.data.keyword.conversationfull}}. Le tag di azione avviano le azioni eseguite dal tuo Voice Agent durante una sessione di conversazione e le variabili di stato definiscono le caratteristiche del Voice Agent che perdurano durante la conversazione a meno che modificato diversamente.
 {: shortdesc}
 
-Poiché {{site.data.keyword.iva_full}} si basa su IBM Voice Gateway, l'API funziona nello stesso modo. Se hai familiarità con Voice Gateway, puoi utilizzare le stesse azioni e variabili di stato nei tuoi dialoghi {{site.data.keyword.conversationshort}} con {{site.data.keyword.iva_short}}. Consulta [Action tags and state variables in the Voice Gateway API](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html).
+Poiché {{site.data.keyword.iva_full}} si basa su IBM Voice Gateway, l'API funziona nello stesso modo. Se hai familiarità con Voice Gateway e SMS Gateway, puoi utilizzare le stesse azioni e variabili di stato nei tuoi dialoghi {{site.data.keyword.conversationshort}} con {{site.data.keyword.iva_short}}. Vedi rispettivamente [Action tags and state variables in the Voice Gateway API](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html) e [API for SMS Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/sms_api.html).
 {: tip}
 
 ## Modifica del JSON nella risposta del dialogo

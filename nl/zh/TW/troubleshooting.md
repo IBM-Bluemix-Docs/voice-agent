@@ -59,7 +59,7 @@ subcollection: "voice-agent"
 
 * 驗證 Watson 服務認證、URL 及 {{site.data.keyword.conversationshort}} 工作區 ID 都是有效的。
 * 驗證已正確建立 {{site.data.keyword.conversationshort}} 技能中的對話。
-  * 針對預先建置的技能，您可以從 GitHub 匯入[範例交談 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)。如需在 {{site.data.keyword.conversationshort}} 工具中將範例交談儲存為 JSON 檔案後將該檔案匯入為技能的詳細資料，請參閱[*入門指導教學* 中的步驟 3](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)。
+  * 針對預先建置的技能，您可以從 GitHub 匯入[範例交談 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)。如需在 {{site.data.keyword.conversationshort}} 工具中將範例交談儲存為 JSON 檔案後將該檔案匯入為技能的詳細資料，請參閱[*入門指導教學* 中的步驟 3](/docs/services/voice-agent?topic=voice-agent-getting-started#step3)。
   * 如果您已建立自己的 {{site.data.keyword.conversationshort}} 對話，則請驗證對話包含具有 `conversation_start` 條件的節點，以及具有預設回應的節點。如需詳細指示，請參閱 {{site.data.keyword.conversationshort}} 文件中的[建置對話](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog)。
 * 查看您的通話是否列在語音代理程式的_用量_ 儀表板上。如果您看到通話的項目，則表示您的語音代理程式已連接至 Watson 服務。
 
@@ -70,3 +70,12 @@ subcollection: "voice-agent"
 ### 為何我的通話經常失敗？
 
 當通話失敗，因為「服務編排引擎 (SOE)」起始一個長時間的交易，而未及時回應您的語音代理程式時，語音代理程式可能會發生問題。如果交易超過預設 {{site.data.keyword.conversationshort}} 逾時，通話便會失敗。若要避免通話失敗，SOE 可以使用 `vgwConversationResponseTimeout` 狀態變數，來修改預設 {{site.data.keyword.conversationshort}} 逾時。請參閱 [{{site.data.keyword.conversationshort}} 對話中的變數集](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html#variables-conv)。
+
+
+### 各種限制
+
+* 您可以針對**達拉斯**或**華盛頓特區**地區，直接從_建立語音代理程式_ 儀表板建立新的 Watson 服務實例。若要將語音代理程式連接至其他地區中的 Watson 服務，請先在_管理_ 儀表板上建立 Watson 服務，再建立語音代理程式。
+
+* 僅支援與公共交換電信網路 (PSTN) 的連線。
+
+* 必須在使用 API 的 {{site.data.keyword.conversationshort}} 服務中指定所有語音代理程式配置。

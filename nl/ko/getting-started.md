@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-03"
+  years: 2017, 2018, 2019
+lastupdated: "2019-06-24"
 
 keywords: voice agent, creating a SIP trunk, creating and connecting your voice agent,
 
@@ -19,8 +19,11 @@ subcollection: "voice-agent"
 
 # 시작하기 튜토리얼
 {: #getting-started}
-{{site.data.keyword.iva_full}}은 SIP(Session Initiation Protocol) 프로토콜을 사용하여 조정된 Watson 서비스 세트를 전화 네트워크와 통합하는 데 도움을 줍니다. 이 튜토리얼에서는 전화에서 호출하는 코그너티브 음성 에이전트를 설정하는 방법에 대해 설명합니다.
+{{site.data.keyword.iva_full}}은 SIP(Session Initiation Protocol) 프로토콜을 사용하여 조정된 Watson 서비스 세트를 전화 네트워크와 통합하는 데 도움을 줍니다. 이 튜토리얼에서는 전화에서 호출할 수 있는 코그너티브 음성 에이전트를 설정하는 방법에 대해 설명합니다.
 {: shortdesc}
+
+새 SMS 기능이 {{site.data.keyword.iva_full_notm}}에 추가되었습니다. 이 페이지에서 설명하는 일부 프로시저는 SMS 기능을 구성하는 데 필요합니다. SMS를 {{site.data.keyword.iva_full_notm}}에 연결하는 방법에 대한 지시사항은 [음성 에이전트 시작하기 튜토리얼](/docs/services/voice-agent?topic=voice-agent-connect-sms)을 참조하십시오.
+{: tip}
 
 이 [{{site.data.keyword.iva_full_notm}} 튜토리얼 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/tv/building-voice-enabled-cognitive-applications-with-watson/)에서 첫 번째 음성 에이전트를 작성하는 방법에 대한 데모를 보십시오.
 {: tip}
@@ -65,7 +68,7 @@ subcollection: "voice-agent"
   * **음성 에이전트 작성**을 클릭하여 하나의 단계로 기본 구성을 사용하여 모든 서비스 및 음성 에이전트를 작성하십시오.
   * 또는 각 서비스 이름을 클릭하여 서비스를 직접 작성하십시오. 그런 다음 {{site.data.keyword.iva_short}}으로 돌아가서 음성 에이전트를 별도로 작성하십시오.
 
-   수동으로 {{site.data.keyword.conversationshort}} 서비스 인스턴스를 작성한 경우 음성 에이전트를 테스트할 수 있도록 대화를 추가하십시오.  빠르게 시작하려면 GitHub에서 [샘플 대화 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)를 복제한 후 스킬로서 [이 샘플을 가져오십시오](/docs/conversation?topic=services/conversation-configuring-a-watson-assistant-workspace#creating-workspaces).
+   수동으로 {{site.data.keyword.conversationshort}} 서비스 인스턴스를 작성한 경우 음성 에이전트를 테스트할 수 있도록 대화를 추가하십시오.  빠르게 시작하려면 GitHub에서 [샘플 대화 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)를 복제한 후 스킬로서 [이 샘플을 가져오십시오](/docs/services/assistant?topic=assistant-skill-dialog-add).
 
    1. 동일한 대화 GitHub 페이지에서 행 번호 `1`을 클릭하고 **... > 행 복사**를 선택하십시오. 복사된 텍스트를 파일에 붙여넣고 JSON 파일(예: `voice-gateway-conversation-en.json`)로 저장하십시오.
    2. {{site.data.keyword.conversationshort}} 도구를 실행하십시오. _스킬_ 페이지에서 ![작업공간 가져오기](../conversation/images/workspace_import.png) 아이콘을 클릭하고 JSON 파일을 가져오십시오.

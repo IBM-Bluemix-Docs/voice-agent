@@ -21,6 +21,9 @@ subcollection: "voice-agent"
 您可以藉由將 IP 位址設為白名單，來配置與 {{site.data.keyword.iva_short}} 或其他提供者的對等作業。
 {: shortdesc}
 
+您的 {{site.data.keyword.iva_short}} 實例**必須**是_標準_ 或_超值_ 方案，才能使用白名單特性。
+{: tip}
+
 ## 將 IP 位址新增至白名單
 {: #add_IP}
 

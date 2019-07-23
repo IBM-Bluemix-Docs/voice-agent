@@ -30,15 +30,15 @@ subcollection: "voice-agent"
 
 下表列出了可以在 {{site.data.keyword.conversationshort}} 对话中指定的操作以及可以为每个操作定义的任何属性。
 
-|操作命令|描述|属性|
+| 操作命令 |描述|属性|
 | ----- | ----- | ----- |
-|`vgwActPlayText`|播放由 {{site.data.keyword.texttospeechshort}} 服务转换为语音的话语。| <ul><li>`text`：要播放的话语的列表。可选。<p>例如：<br/><code>"text": [<br/>&nbsp;&nbsp;&nbsp;"Hello. How can I help you today?"<br/>&nbsp;&nbsp;&nbsp;]</code><p> 缺省情况下，该操作会播放在 `output.text` 字段中配置的话语列表。</li><li>`errAudioURL`：语音代理程序无法联系 {{site.data.keyword.texttospeechshort}} 服务来完成操作时播放的音频文件的 URL。该音频文件必须为 WAV 格式。</li></ul>|
-|`vgwActPlayUrl`|在回放所包含的文本之后立即播放音频文件，例如播放等待音乐 (MOH) 或常用的一次性话语。如果未包含文本，那么将立即播放音频。音频文件必须是单声道 (mono)、PCM 编码，而且采样率为 8,000 Hz 且每个样本为 16 位。| <ul><li>`url`：要播放的 URL。必需。</li><li> `playURLInLoop`：（可选）设置为 `Yes` 或 `No`，以指示是否循环播放该 URL。缺省值为 `No`。</li></ul> |
+|`vgwActPlayText`|播放由 {{site.data.keyword.texttospeechshort}} 服务转换为语音的话语。|`text`：要播放的话语的列表。可选。<p>例如：<br><code>"text": [<br/>&nbsp;&nbsp;&nbsp;"Hello. How can I help you today?"<br/>&nbsp;&nbsp;&nbsp;]</code><p> 缺省情况下，该操作会播放在 `output.text` 字段中配置的话语列表。<br><br>`errAudioURL`：语音代理程序无法联系 {{site.data.keyword.texttospeechshort}} 服务来完成操作时播放的音频文件的 URL。该音频文件必须为 WAV 格式。|
+|`vgwActPlayUrl`|在回放所包含的文本之后立即播放音频文件，例如播放等待音乐 (MOH) 或常用的一次性话语。如果未包含文本，那么将立即播放音频。音频文件必须是单声道 (mono)、PCM 编码，而且采样率为 8,000 Hz 且每个样本为 16 位。|`url`：要播放的 URL。必需。<br><br> `playURLInLoop`：（可选）设置为 `Yes` 或 `No`，以指示是否循环播放该 URL。缺省值为 `No`。|
 |`vgwActHangup`|挂断呼叫。|无属性。|
 |`vgwActSetSTTConfig`|应用一组参数，供语音代理程序传递到 Watson {{site.data.keyword.speechtotextshort}} 服务。{{site.data.keyword.conversationshort}} 服务会根据呼叫来动态定义参数。|参数属性将作为 JSON 属性以透明方式传递到 {{site.data.keyword.speechtotextshort}} 服务。|
 |`vgwActSetTTSConfig`|应用一组参数，供语音代理程序传递到 Watson {{site.data.keyword.texttospeechshort}} 服务。{{site.data.keyword.conversationshort}} 服务会根据呼叫来动态定义参数。|参数属性将作为 JSON 属性以透明方式传递到 {{site.data.keyword.texttospeechshort}} 服务。|
-|`vgwActSetConversationConfig` |应用一组参数，供语音代理程序用于定义 {{site.data.keyword.conversationshort}} 工作空间。{{site.data.keyword.conversationshort}} 服务会根据呼叫来动态定义参数。| <ul><li>`url`：{{site.data.keyword.conversationshort}} 服务 API 的 `url` 凭证。</li><li>`workspaceID`：{{site.data.keyword.conversationshort}} 工作空间标识</li><li>`username`：{{site.data.keyword.conversationshort}} 服务的 `username` 凭证，最多 64 个字符。</li><li>`password`：{{site.data.keyword.conversationshort}} 服务的 `password` 凭证，最多 256 个字符。</li></ul> |
-|`vgwActCollectDtmf`|指示语音代理程序收集双音多频信号 (DTMF) 输入。|必须定义以下其中一个属性。<ul><li> `dtmfTermKey`：DTMF 终止键，用于指示 DTMF 输入结束。例如，“`#`”。</li><li> `dtmfCount`：要收集的 DTMF 数字数。</li></ul> 满足上述任一条件时，语音代理程序会停止收集 DTMF 输入。|
+|`vgwActSetConversationConfig` |应用一组参数，供语音代理程序用于定义 {{site.data.keyword.conversationshort}} 工作空间。{{site.data.keyword.conversationshort}} 服务会根据呼叫来动态定义参数。|`url`：{{site.data.keyword.conversationshort}} 服务 API 的 `url` 凭证。<br><br>`workspaceID`：{{site.data.keyword.conversationshort}} 工作空间标识<br><br>`username`：{{site.data.keyword.conversationshort}} 服务的 `username` 凭证，最多 64 个字符。<br><br>`password`：{{site.data.keyword.conversationshort}} 服务的 `password` 凭证，最多 256 个字符。|
+|`vgwActCollectDtmf`|指示语音代理程序收集双音多频信号 (DTMF) 输入。|必须定义以下其中一个属性。<br> `dtmfTermKey`：DTMF 终止键，用于指示 DTMF 输入结束。例如，“`#`”。<br><br> `dtmfCount`：要收集的 DTMF 数字数。<br><br> 满足上述任一条件时，语音代理程序会停止收集 DTMF 输入。|
 |`vgwActPauseDTMF`|禁用 DTMF 输入。在 `vgwActUnPauseDTMF` 操作重新启用 DTMF 输入之前，将忽略所有 DTMF 输入。|无属性。|
 |`vgwActUnPauseDTMF`|启用由 `vgwActPauseDTMF` 操作禁用的 DTMF 输入。|无属性。|
 |`vgwActExcludeFromTTSCache`|指示语音代理程序不对来自 {{site.data.keyword.texttospeechshort}} 服务的响应进行高速缓存。例如，应排除包含敏感 PHI、PII 和 PCI DSS 数据或动态信息（例如，客户姓名或生日）的响应。<br/>必须在 {{site.data.keyword.conversationshort}} 对话节点上为您不想高速缓存的每个话语设置此操作标记。|无属性。|
@@ -56,7 +56,7 @@ subcollection: "voice-agent"
 
 可以在 {{site.data.keyword.conversationshort}} 对话中设置以下状态变量来修改语音代理程序的行为。
 
-|状态变量名称|期望值|描述|
+| 状态变量名称 | 期望值 |描述|
 | -------------- | ------ | ----------- |
 |`vgwByeCustomHeader`|用户定义|在传出 SIP BYE 消息中定义定制头。定制头值由 `vgwByeCustomHeaderVal` 状态变量定义。|
 |`vgwByeCustomHeaderVal`|用户定义|在传出 SIP BYE 消息中定义定制头的值。定制头由 `vgwByeCustomHeader` 状态变量定义。|
@@ -69,9 +69,9 @@ subcollection: "voice-agent"
 ## 语音代理程序设置的状态变量
 {: #state-variables-iva}
 
-|状态变量名称|期望值|描述|
+| 状态变量名称 | 期望值 |描述|
 | -------------- | ----- | ----------- |
-|`vgwSessionID`| 用户定义 <br/><br/>缺省值：`Call-ID` |从 SIP INVITE 请求中提取的定制会话标识头。该值表示与会话相关的所有语音代理程序审计日志中使用的全局会话标识。|
+|`vgwSessionID`|用户定义<br/><br/> 缺省值：`Call-ID` |从 SIP INVITE 请求中提取的定制会话标识头。该值表示与会话相关的所有语音代理程序审计日志中使用的全局会话标识。|
 |`vgwSIPCallID`|SIP `Call-ID`|与呼叫相关联的 SIP 呼叫标识。|
 |`vgwSIPRequestURI`|SIP `Request-URI`|启动呼叫的 SIP 请求 URI。|
 |`vgwSIPToURI` |SIP `To` URI|与呼叫相关联的 SIP `To` URI。|

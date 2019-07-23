@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-03"
+  years: 2017, 2018, 2019
+lastupdated: "2019-06-24"
 
 keywords: voice agent, creating a SIP trunk, creating and connecting your voice agent,
 
@@ -19,8 +19,11 @@ subcollection: "voice-agent"
 
 # Tutorial de introdução
 {: #getting-started}
-{{site.data.keyword.iva_full}} ajuda a integrar um conjunto de serviços do Watson orquestrados com a rede telefônica usando o Protocolo de Inicialização de Sessão (SIP). Este tutorial descreve como configurar um agente cognitivo de voz que pode ser chamado em qualquer telefone.
+{{site.data.keyword.iva_full}} ajuda a integrar um conjunto de serviços do Watson orquestrados com a rede telefônica usando o Protocolo de Inicialização de Sessão (SIP). Este tutorial descreve como configurar um agente cognitivo de voz que pode ser chamado de qualquer telefone.
 {: shortdesc}
+
+Um novo recurso do SMS foi incluído no {{site.data.keyword.iva_full_notm}}. Nem todos os procedimentos descritos nesta página são necessários para configurar a funcionalidade do SMS. Consulte o [Tutorial de introdução do Voice Agent](/docs/services/voice-agent?topic=voice-agent-connect-sms) para obter instruções sobre como conectar o SMS com o {{site.data.keyword.iva_full_notm}}
+{: tip}
 
 Assista a uma demonstração de como criar seu primeiro agente de voz neste tutorial do [{{site.data.keyword.iva_full_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/tv/building-voice-enabled-cognitive-applications-with-watson/).
 {: tip}
@@ -69,7 +72,7 @@ os códigos de país e de área. Por exemplo, para um número 800 dos Estados Un
 o {{site.data.keyword.iva_short}} e crie um agente de voz separadamente.
 
    Se você criou manualmente uma instância de serviço {{site.data.keyword.conversationshort}}, inclua um diálogo para que seja possível testar seu agente de voz.  Para começar a usar rapidamente, clone a [conversa de amostra
-![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) do GitHub e, em seguida, [importe a amostra](/docs/conversation?topic=services/conversation-configuring-a-watson-assistant-workspace#creating-workspaces) como
+![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) do GitHub e, em seguida, [importe a amostra](/docs/services/assistant?topic=assistant-skill-dialog-add) como
 uma qualificação:
 
    1. Na página GitHub de conversa de amostra, clique no número da linha `1` e selecione **... > Copiar linha**. Cole o texto copiado em um arquivo e salve-o como um arquivo JSON, como `voice-gateway-conversation-en.json`.

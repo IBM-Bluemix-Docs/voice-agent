@@ -39,7 +39,6 @@ Sie können auf das Dialogfenster **Verwalten** zugreifen, indem Sie auf der Sei
 
   * _**HINWEIS:**_ Pro Sprachagentenkonfiguration gilt ein Grenzwert von maximal 1000 eindeutigen Nummern.
 
-
 1. Im Feld **Beschreibung** können Sie wahlweise eine Beschreibung für Ihre Telefonnummer eingeben, die maximal 64 Zeichen lang sein darf.
 
 1. Klicken Sie auf das "Häkchen"-Symbol, um die Nummer in der Liste zu speichern, oder klicken Sie auf das Symbol "X", um die Hinzufügung abzubrechen.
@@ -70,11 +69,11 @@ Sie können auf das Dialogfenster **Verwalten** zugreifen, indem Sie auf der Sei
 ## Nummern löschen
 {: #delete_num}
 
-1. Klicken Sie auf der Seite _Sprachagenten erstellen_ oder der Seite _Sprachagenten bearbeiten_ neben **Telefonnummer** auf **Verwalten**. 
+1. Klicken Sie auf der Seite _Sprachagenten erstellen_ oder der Seite _Sprachagenten bearbeiten_ neben **Telefonnummer** auf **Verwalten**.
 
 1. Wählen Sie neben allen Nummern, die Sie löschen möchten, das zugehörige weiße Kästchen aus. Um _alle_ Nummern auszuwählen, wählen Sie einfach das weiße Kästchen neben dem Header **Telefonnummer** aus.
 
-1. Klicken Sie im Dialogfenster **Verwalten** nahe der rechten oberen Ecke auf das Symbol für "Element löschen". 
+1. Klicken Sie im Dialogfenster **Verwalten** nahe der rechten oberen Ecke auf das Symbol für "Element löschen".
 
 1. Ganz oben wird eine Meldung vom Typ "Erfolg!" angezeigt und die ausgewählten Einträge werden aus der Liste entfernt. Andernfalls wird eine Fehlermeldung mit einer Beschreibung angezeigt.
 
@@ -95,9 +94,9 @@ Es ist möglich, eine Liste von Nummern auf einmal auf den Agenten hochzuladen. 
 
   * Die Nummern in der CSV-Datei _müssen_ dem gleichen Format entsprechen wie beim Hinzufügen einer Nummer über das Dashboard und müssen außerdem eindeutig sein. Weitere Informationen enthält [Format von Nummern](/docs/services/voice-agent?topic=voice-agent-multi_num#format_num).
 
-1. Klicken Sie auf der Seite _Sprachagenten erstellen_ oder der Seite _Sprachagenten bearbeiten_ neben **Telefonnummer** auf **Verwalten**. 
+1. Klicken Sie auf der Seite _Sprachagenten erstellen_ oder der Seite _Sprachagenten bearbeiten_ neben **Telefonnummer** auf **Verwalten**.
 
-1. Klicken Sie im Dialogfenster **Verwalten** nahe der rechten oberen Ecke auf das Symbol für "CSV-Datei hochladen". 
+1. Klicken Sie im Dialogfenster **Verwalten** nahe der rechten oberen Ecke auf das Symbol für "CSV-Datei hochladen".
 
 1. Es wird ein Fenster angezeigt, in dem Sie bestätigen können, dass alle vorhandenen Nummern in der Liste durch die Nummern aus der CSV-Datei ersetzt werden. Klicken Sie auf **OK**, um den Vorgang zu bestätigen und fortzufahren.
 
@@ -114,9 +113,9 @@ Es ist möglich, eine Liste von Nummern auf einmal auf den Agenten hochzuladen. 
 
 Es ist möglich, eine Liste von Nummern und ihre Beschreibungen vom Agenten in eine **CSV**-Datei zu exportieren und auf Ihren Computer herunterzuladen. Auf diese Weise können Sie die Nummern und/oder Beschreibungen nach Bedarf oder Wunsch ändern und wieder in den Agenten hochladen. Weitere Informationen finden Sie in [Nummern importieren](/docs/services/voice-agent?topic=voice-agent-multi_num#import_num).
 
-1. Klicken Sie auf der Seite _Sprachagenten erstellen_ oder der Seite _Sprachagenten bearbeiten_ neben **Telefonnummer** auf **Verwalten**. 
+1. Klicken Sie auf der Seite _Sprachagenten erstellen_ oder der Seite _Sprachagenten bearbeiten_ neben **Telefonnummer** auf **Verwalten**.
 
-1. Klicken Sie im Dialogfenster **Verwalten** nahe der rechten oberen Ecke auf das Symbol für "CSV-Datei herunterladen". 
+1. Klicken Sie im Dialogfenster **Verwalten** nahe der rechten oberen Ecke auf das Symbol für "CSV-Datei herunterladen".
 
 1. Es wird eine CSV-Datei mit allen im Agenten gespeicherten Nummern auf Ihren Computer heruntergeladen.
 
@@ -129,7 +128,7 @@ Die _primäre Nummer_ dient nur der Anzeige und hat keine Funktion. Standardmä�
 
 Sie können die Bezeichnung **Primäre Nummer** in Voice Agent in jede gewünschte Nummer ändern.
 
-1. Klicken Sie auf der Seite _Sprachagenten erstellen_ oder der Seite _Sprachagenten bearbeiten_ neben **Telefonnummer** auf **Verwalten**. 
+1. Klicken Sie auf der Seite _Sprachagenten erstellen_ oder der Seite _Sprachagenten bearbeiten_ neben **Telefonnummer** auf **Verwalten**.
 
 1. Heben Sie den Telefonnummereintrag, den Sie bearbeiten möchten, hervor und klicken Sie auf die Optionsliste, die auf der rechten Seite der Liste durch **drei Punkte** dargestellt wird.
 
@@ -163,7 +162,7 @@ Sie können auch die Anzahl der angezeigten Nummern pro Seite aus mehreren Optio
 
 Wenn Sie in Voice Agent Änderungen an der Nummernliste vornehmen möchten, _müssen_ Sie die Änderungen im Dialogfeld **Verwalten** speichern und die Änderungen anschließend auf der Seite _Voice Agent bearbeiten_ speichern.
 
-1. Klicken Sie auf der Seite _Sprachagenten erstellen_ oder der Seite _Sprachagenten bearbeiten_ neben **Telefonnummer** auf **Verwalten**. 
+1. Klicken Sie auf der Seite _Sprachagenten erstellen_ oder der Seite _Sprachagenten bearbeiten_ neben **Telefonnummer** auf **Verwalten**.
 
 1. Führen Sie nach Bedarf Änderungen an den Nummern in der Liste durch.
 
@@ -178,7 +177,7 @@ Wenn Sie in Voice Agent Änderungen an der Nummernliste vornehmen möchten, _mü
 
 Sie können nach gespeicherten Nummern suchen, indem Sie nach der Nummer oder der Beschreibung suchen.
 
-1. Klicken Sie auf der Seite _Sprachagenten erstellen_ oder der Seite _Sprachagenten bearbeiten_ neben **Telefonnummer** auf **Verwalten**. 
+1. Klicken Sie auf der Seite _Sprachagenten erstellen_ oder der Seite _Sprachagenten bearbeiten_ neben **Telefonnummer** auf **Verwalten**.
 
 1. Geben Sie in der Suchleiste (_Suchen_) eine Nummer oder eine Beschreibung ein, nach der in der Liste gesucht werden soll. Die Suchergebnisse werden während der Eingabe automatisch aktualisiert.
 

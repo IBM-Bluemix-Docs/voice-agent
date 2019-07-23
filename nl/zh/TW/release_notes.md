@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-22"
+lastupdated: "2019-06-24"
 subcollection: "voice-agent"
 ---
 
@@ -19,6 +19,14 @@ subcollection: "voice-agent"
 
 隨時瞭解 {{site.data.keyword.iva_full}} 可用的新增特性和更新項目。
 {: shortdesc}
+
+## 2019 年 6 月
+
+- **已新增：支援 SMS 傳訊** 新增日期：_2019-06-24_
+
+  - {{site.data.keyword.iva_full}} 現在支援 SMS 功能作為**語音 + SMS** 代理程式，或獨立式 **SMS** 代理程式。使用者可以透過 SMS 傳訊與其代理程式互動。請參閱[建立已啟用 SMS 的語音代理程式](/docs/services/voice-agent?topic=voice-agent-sms_config_instance)來建立_語音 + SMS_ 代理程式，或參閱[建立 SMS 代理程式](/docs/services/voice-agent?topic=voice-agent-config_sms_instance)來建立 _SMS_ 代理程式。
+
+- **已更新：Voice Gateway 驅動程式已更新至 1.0.1。**
 
 ## 2019 年 3 月
 

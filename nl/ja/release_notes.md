@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-22"
+lastupdated: "2019-06-24"
 subcollection: "voice-agent"
 ---
 
@@ -20,11 +20,19 @@ subcollection: "voice-agent"
 {{site.data.keyword.iva_full}} で使用可能な新規フィーチャーと更新に関する最新情報を確認してください。
 {: shortdesc}
 
+## 2019 年 6 月
+
+- **追加: SMS メッセージングのサポート** _2019 年 6 月 24 日_現在の新機能
+
+  - {{site.data.keyword.iva_full}} では、**ボイス + SMS** エージェントまたはスタンドアロンの **SMS** エージェントとして SMS 機能がサポートされるようになりました。ユーザーは SMS メッセージングを介してエージェントと対話できます。_ボイス + SMS_ エージェントの作成については [SMS 機能が可能なボイス・エージェントの作成](/docs/services/voice-agent?topic=voice-agent-sms_config_instance)を、_SMS_ エージェントの作成については [SMS エージェントの作成](/docs/services/voice-agent?topic=voice-agent-config_sms_instance)をそれぞれ参照してください。
+
+- **更新: Voice Gateway ドライバーが 1.0.1 に更新されました。**
+
 ## 2019 年 3 月
 
-- **追加: 単一のエージェント内の複数の電話番号のサポート。**適用開始日: _2019-03-19_
+- **追加: 単一のエージェント内の複数の電話番号のサポート。** 適用開始日: _2019-03-19_
 
-  - {{site.data.keyword.iva_full}} で、単一のボイス・エージェント内で複数の電話番号を構成できるようになりました。これにより、複数の電話番号を同じダイアログに簡単にマップできます。[複数の番号の管理](/docs/services/voice-agent?topic=voice-agent-multi_num#multi_num)を参照してください。
+  - {{site.data.keyword.iva_full}} で、単一のボイス・エージェント内で複数の電話番号を構成できるようになりました。 これにより、複数の電話番号を同じダイアログに簡単にマップできます。 [複数の番号の管理](/docs/services/voice-agent?topic=voice-agent-multi_num#multi_num)を参照してください。
 
 - **更新: Voice Gateway ドライバーが 1.0.0.8d に更新されました。**
 
@@ -32,6 +40,6 @@ subcollection: "voice-agent"
 
 - **追加: 非標準の電話番号のサポート。** 適用開始日: _2019-01-31_
 
-  - {{site.data.keyword.iva_full}} で、従来の電話番号とボイス・エージェント用の固有の数値 ID の両方がサポートされるようになりました。[ボイス・エージェントの作成のステップ 3](/docs/services/voice-agent?topic=voice-agent-config_instance#create_instance) を参照してください。
+  - {{site.data.keyword.iva_full}} で、従来の電話番号とボイス・エージェント用の固有の数値 ID の両方がサポートされるようになりました。 [ボイス・エージェントの作成のステップ 3](/docs/services/voice-agent?topic=voice-agent-config_instance#create_instance) を参照してください。
 
 - **更新:  Voice Gateway ドライバーが 1.0.0.8b に更新されました。**

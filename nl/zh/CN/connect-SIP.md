@@ -24,8 +24,9 @@ subcollection: "voice-agent"
 * [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
-* [AT&T 以及其他提供者](#att-other)
+* [Voximplant](#voximplant-setup)
 * [与 {{site.data.keyword.iva_short}}](#peering) 对等 
+* [AT&T 以及其他提供者](#att-other)
 * [请求设置协助](#request-setup)
 
 ## 创建 Nexmo 语音应用程序
@@ -59,7 +60,7 @@ subcollection: "voice-agent"
 
 1. 成功付款后，您的帐户中将显示 SIP 中继电话号码。
 
-您需要使用此电话号码来设置语音代理程序和配置呼叫转移，包括国家和地区代码。请参阅[创建和连接语音代理程序](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)。
+您需要使用此电话号码来设置语音代理程序和配置呼叫转移，包括国家和地区代码。请参阅[创建和连接语音代理程序](/docs/services/voice-agent?topic=voice-agent-getting-started#step3)。
 
 
 ## 创建 Twilio SIP 中继
@@ -85,9 +86,37 @@ subcollection: "voice-agent"
 
   在“号码”页面上，单击**购买号码**。如果您有号码，请单击 **+** 图标。在显示的面板上，可以提供您所在区域的新电话号码。返回到所创建的 SIP 中继，然后单击“号码”图标，将该号码分配给该 SIP 中继。
 
-  您需要使用此电话号码设置语音代理程序，包括国家和地区代码。请参阅[创建和连接语音代理程序](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)。
+  您需要使用此电话号码设置语音代理程序，包括国家和地区代码。请参阅[创建和连接语音代理程序](/docs/services/voice-agent?topic=voice-agent-getting-started#step3)。
 
-  **注释**：如果您使用 Lite/Trial Twilio 帐户在 {{site.data.keyword.iva_short}} 上测试转移，那么您将需要确保对转移目标进行_验证_。请参阅 [Twilio 官方网站](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-)上的更多指示信息。
+  **注**：如果您使用轻量/试用 Twilio 帐户在 {{site.data.keyword.iva_short}} 上测试转移，那么您将需要确保对转移目标进行_验证_。请参阅 [Twilio 官方网站](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-)上的更多指示信息。
+
+## 使用 Voximplant 连接
+{: #voximplant-setup}
+
+1. 创建 [Voximplant 开发者帐户](https://voximplant.com/sign-up/)。
+
+1. 转至 [Voximplant Control Panel](https://manage.voximplant.com/numbers/my_numbers)。在菜单上，选择**号码**，并单击**购买新电话号码**。您可以勾选**真实**或**测试号码**，在列表中选择号码，然后单击**购买所选号码**来购买电话号码。
+
+1. 在语音代理程序的设置中指定此号码。
+
+1. 转至 _Voximplant Control Panel_ 的[应用程序](https://manage.voximplant.com/applications)部分，以创建名为 **Watson** 的应用程序。
+
+1. 在此应用程序内，切换到**方案**选项卡，并使用以下代码创建 **watson-scenario**：
+    ```javascript
+      VoxEngine.addEventListener(AppEvents.CallAlerting, (e) => {
+        let call2 = VoxEngine.callSIP("sip:12025550186@us-south.voiceagent.cloud.ibm.com");
+        VoxEngine.easyProcess(e.call, call2);
+      })
+    ```
+    {: codeblock}
+
+    请注意 **callSIP** 功能调用：
+      * 将 `12025550186` 替换为您在步骤 2 中购买的 Voximplant 号码。 
+      * 将 `us-south.voiceagent.cloud.ibm.com` 替换为语音代理程序 SIP 端点。该端点在 {{site.data.keyword.iva_full}} 文档的_开始使用_页面上指定。请参阅[*入门教程*](/docs/services/voice-agent?topic=voice-agent-getting-started#step1)。
+    
+1. 转至**路由**选项卡来创建 **watson-rule**。将 **watson-scenario** 指定为分配的方案。
+
+1. 打开**号码**选项卡的**附加**（尚为空白）和**可用**部分。切换到**可用**，选择号码，然后单击**附加**。在打开的窗口中，指定 **watson-rule**，然后单击**附加**。
 
 ## 与 {{site.data.keyword.iva_short}} 对等
 {: #peering}

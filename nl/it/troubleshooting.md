@@ -59,7 +59,7 @@ La tua chiamata probabilmente non è stata collegata ai servizi. Questo problema
 
 * Verifica che le credenziali del servizio Watson, gli URL e l'ID dello spazio di lavoro {{site.data.keyword.conversationshort}} siano tutti validi.
 * Verifica che il dialogo nella tua competenza {{site.data.keyword.conversationshort}} sia stato creato correttamente.
-  * Puoi importare la [conversazione di esempio ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) da GitHub per una competenza precostruita. Vedi il [Passo 3 nell'*Esercitazione introduttiva*](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3) per i dettagli su come salvare la conversazione di esempio come file JSON e quindi importare il file come competenza nello strumento {{site.data.keyword.conversationshort}}.
+  * Puoi importare la [conversazione di esempio ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) da GitHub per una competenza precostruita. Vedi il [Passo 3 nell'*Esercitazione introduttiva*](/docs/services/voice-agent?topic=voice-agent-getting-started#step3) per i dettagli su come salvare la conversazione di esempio come file JSON e quindi importare il file come competenza nello strumento {{site.data.keyword.conversationshort}}.
   * Se hai creato il tuo dialogo {{site.data.keyword.conversationshort}}, verifica che contenga un nodo con la condizione `conversation_start` e un nodo con una risposta predefinita. Per istruzioni dettagliate, vedi [Creazione di un dialogo](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog) nella documentazione {{site.data.keyword.conversationshort}}.
 * Vedi se la tua chiamata telefonica è elencata nel dashboard _Usage_ del Voice Agent. Se vedi un elemento per la tua chiamata telefonica, il tuo Voice Agent è collegato al servizio Watson.
 
@@ -70,3 +70,12 @@ Controlla se il numero di telefono che hai specificato viene utilizzato da un Vo
 ### Perché le mie chiamate hanno spesso esito negativo?
 
 I Voice Agent possono avere problemi quando le chiamate hanno esito negativo perché un motore di orchestrazione del servizio (SOE) avvia una lunga transazione e non risponde al tuo Voice Agent in modo tempestivo. Se una transazione supera il timeout {{site.data.keyword.conversationshort}} predefinito, la chiamata ha esito negativo. Per evitare errori di chiamata, SOE può modificare il timeout {{site.data.keyword.conversationshort}} predefinito utilizzando la variabile di stato `vgwConversationResponseTimeout`. Consulta [Variables set in the {{site.data.keyword.conversationshort}} dialog](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html#variables-conv).
+
+
+### Limitazioni varie 
+
+* Puoi creare nuove istanze del servizio Watson direttamente dal dashboard _Create a voice agent_ per le regioni **Dallas** o **Washington DC**. Per collegare il tuo Voice Agent ai servizi Watson in altre regioni, crea i tuoi servizi Watson prima di creare il tuo Voice Agent nel dashboard _Manage_.
+
+* Sono supportate solo le connessioni a PSTN (public switched telephone network).
+
+* Devono essere specificate tutte le configurazioni dell'agent nel servizio {{site.data.keyword.conversationshort}} che utilizza l'API.

@@ -28,7 +28,7 @@ El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra las activid
 
 En la tabla siguiente se muestran las acciones que generan un suceso.
 
-|Acción| descripción |
+|Acción| Descripción |
 | --- | ---- |
 | `crear agente: POST /config/submitconfig` | Crear un nuevo agente de voz |
 | `actualizar agente: POST /config/submitconfig` | Actualizar un agente de voz |

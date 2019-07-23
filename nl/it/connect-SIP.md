@@ -24,8 +24,9 @@ Puoi scegliere il provider del trunk SIP che utilizzi per l'integrazione con {{s
 * [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
-* [AT&T e altri provider](#att-other)
+* [Voximplant](#voximplant-setup)
 * [Peering con {{site.data.keyword.iva_short}}](#peering)
+* [AT&T e altri provider](#att-other)
 * [Richiesta di configurazione assistita](#request-setup)
 
 ## Creazione di un'applicazione vocale Nexmo
@@ -59,7 +60,7 @@ Puoi scegliere il provider del trunk SIP che utilizzi per l'integrazione con {{s
 
 1. Una volta che il pagamento è stato elaborato correttamente, il tuo numero di telefono trunk SIP viene visualizzato nel tuo account.
 
-Hai bisogno di questo numero di telefono per configurare il tuo Voice Agent e il trasferimento di chiamata, inclusi il prefisso internazionale e quello nazionale. Consulta [Creazione e collegamento del tuo Voice Agent](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+Hai bisogno di questo numero di telefono per configurare il tuo Voice Agent e il trasferimento di chiamata, inclusi il prefisso internazionale e quello nazionale. Consulta [Creazione e collegamento del tuo Voice Agent](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
 
 ## Creazione di un trunk SIP Twilio
@@ -85,9 +86,37 @@ Hai bisogno di questo numero di telefono per configurare il tuo Voice Agent e il
 
   Nella pagina Numbers, fai clic su **Buy a Number** o, se hai già un numero, sull'icona **+**. Viene visualizzato un pannello in cui puoi fornire un nuovo numero di telefono nella tua regione. Assegna il numero al trunk SIP che hai creato ritornando al trunk SIP e facendo clic sull'icona Number.
 
-  Hai bisogno di questo numero di telefono per configurare il tuo Voice Agent, inclusi il prefisso internazionale e quello nazionale. Consulta [Creazione e collegamento del tuo Voice Agent](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+  Hai bisogno di questo numero di telefono per configurare il tuo Voice Agent, inclusi il prefisso internazionale e quello nazionale. Consulta [Creazione e collegamento del tuo Voice Agent](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
-  **NOTA**: se stai utilizzando un account Twilio Lite/Trial per testare i trasferimenti su {{site.data.keyword.iva_short}}, dovrai assicurati di _verificare_ la destinazione del trasferimento. Vedi ulteriori informazioni sul [sito ufficiale di Twilio](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
+  **NOTA**: se utilizzi un account Twilio Lite/Trial per testare i trasferimenti su {{site.data.keyword.iva_short}}, dovrai assicurati di _verificare_ la destinazione del trasferimento. Vedi ulteriori informazioni sul [sito ufficiale di Twilio](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
+
+## Connessione con Voximplant
+{: #voximplant-setup}
+
+1. Crea [un account sviluppatore Voximplant](https://voximplant.com/sign-up/).
+
+1. Vai al [pannello di controllo Voximplant](https://manage.voximplant.com/numbers/my_numbers). Nel menu, seleziona **Numbers** e fai clic su **Buy new phone number**. Puoi selezionare **Real** o **Test numbers**, poi seleziona un numero nell'elenco e fai clic su **Buy selected** per comprare un numero telefonico.
+
+1. Specifica questo numero nelle impostazioni del tuo Voice Agent.
+
+1. Vai alla [sezione Applications](https://manage.voximplant.com/applications) del _pannello di controllo Voximplant_ per creare un'applicazione denominata **Watson**.
+
+1. In questa applicazione, passa alla scheda **Scenarios** e crea uno scenario Watson (**watson-scenario**) con il seguente codice:
+    ```javascript
+      VoxEngine.addEventListener(AppEvents.CallAlerting, (e) => {
+        let call2 = VoxEngine.callSIP("sip:12025550186@us-south.voiceagent.cloud.ibm.com");
+        VoxEngine.easyProcess(e.call, call2);
+      })
+    ```
+    {: codeblock}
+
+    Presta attenzione al richiamo della funzione **callSIP**:
+      * Sostituisci il numero Voximplant che hai acquistato nel passo 2 al posto di `12025550186`. 
+      * Sostituisci il tuo endpoint SIP del Voice Agent al posto di `us-south.voiceagent.cloud.ibm.com`. L'endpoint è specificato nella pagina _Getting started_ della documentazione {{site.data.keyword.iva_full}}. Vedi l'[*Esercitazione introduttiva*](/docs/services/voice-agent?topic=voice-agent-getting-started#step1).
+    
+1. Vai alla scheda **Routing** per creare una regola Watson (**watson-rule**). Specifica **watson-scenario** come scenario assegnato.
+
+1. Apri la scheda **Numbers** con le sezioni **Attached** (ancora vuota) e **Available**. Passa a **Available**, seleziona il tuo numero e fai clic su **Attach**. Nella finestra aperta, specifica **watson-rule** e fai clic su **Attach**.
 
 ## Peering con {{site.data.keyword.iva_short}}
 {: #peering}

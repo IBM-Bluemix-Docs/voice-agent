@@ -33,7 +33,7 @@ Invece di utilizzare un'istanza {{site.data.keyword.speechtotextfull}}, puoi sce
 
 1. Nella tua configurazione del servizio _Speech to Text_, scegli **Google Speech to Text service instance**.
 
-1. Scegli la lingua (**Language**) della tua istanza del servizio.
+1. Scegli la lingua (**Language**) della tua istanza del servizio. Se la tua lingua preferita non viene elencata nel menu a discesa, puoi sempre scegliere **Other** e configurarla tramite la [configurazione avanzata](/docs/services/voice-agent?topic=voice-agent-third-party#advanced).
 
 1. Immetti le tue credenziali del servizio Google Cloud Speech-to-Text, con un limite fino a 3072 caratteri.
   * Puoi generare le tue credenziali del servizio nella Google Cloud Platform come una chiave JSON quando [configuri un account del servizio ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). Il seguente esempio di codice contiene i campi delle credenziali di esempio generati su Google Cloud Platform.
@@ -76,7 +76,7 @@ Invece di utilizzare un'istanza {{site.data.keyword.texttospeechfull}}, puoi sce
 
 1. Nella tua configurazione del servizio _Text to Speech_, scegli **Google Text to Speech service instance**.
 
-1. Scegli la lingua (**Language**) e la voce (**Voice**) della tua istanza del servizio.
+1. Scegli la lingua (**Language**) e la voce (**Voice**) della tua istanza del servizio. Se la tua lingua preferita non viene elencata nel menu a discesa, puoi sempre scegliere **Other** e configurarla tramite la [configurazione avanzata](/docs/services/voice-agent?topic=voice-agent-third-party#advanced).
 
 1. Immetti le tue credenziali del servizio Google Cloud Text-to-Speech, con un limite fino a 3072 caratteri.
   * Puoi generare le tue credenziali del servizio nella Google Cloud Platform come una chiave JSON quando [configuri un account del servizio ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). Il seguente esempio di codice contiene i campi delle credenziali di esempio generati su Google Cloud Platform.
@@ -97,6 +97,7 @@ Invece di utilizzare un'istanza {{site.data.keyword.texttospeechfull}}, puoi sce
     ```
     {: codeblock}
 
+{: #advanced}
 1. **Facoltativo** seleziona **Show Advanced** per immettere le impostazioni di configurazione speciali definite da Google in un formato JSON valido.
   Il seguente esempio mostra le impostazioni di configurazione Google per una voce femminile in tedesco.
 
