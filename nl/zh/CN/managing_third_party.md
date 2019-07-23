@@ -33,7 +33,7 @@ subcollection: "voice-agent"
 
 1. 在_语音转文字_服务配置中，请选择 **Google 语音转文字服务实例**。
 
-1. 为您的服务实例选择**语言**。
+1. 为您的服务实例选择**语言**。如果首选语言未在下拉菜单中列出，您可以始终选择**其他**，并将通过[高级配置](/docs/services/voice-agent?topic=voice-agent-third-party#advanced)进行设置。
 
 1. 输入 Google Cloud Speech-to-Text 服务凭证，限制为最多 3072 个字符。
   * [设置服务帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 时，您可以在 Google Cloud Platform 中生成服务凭证作为 JSON 密钥](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account)。以下代码示例包含您在 Google Cloud Platform 上生成的样本凭证字段。
@@ -75,7 +75,7 @@ subcollection: "voice-agent"
 
 1. 在您的_文字转语音_服务配置中，选择 **Google Text to Speech 服务实例**。
 
-1. 为您的服务实例选择**语言**和**语音**。
+1. 为您的服务实例选择**语言**和**语音**。如果首选语言未在下拉菜单中列出，您可以始终选择**其他**，并将通过[高级配置](/docs/services/voice-agent?topic=voice-agent-third-party#advanced)进行设置。
 
 1. 输入 Google Cloud Text-to-Speech 服务凭证，限制为最多 3072 个字符。
   * [设置服务帐户 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 时，您可以在 Google Cloud Platform 中生成服务凭证作为 JSON 密钥](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account)。以下代码示例包含您在 Google Cloud Platform 上生成的样本凭证字段。
@@ -96,6 +96,7 @@ subcollection: "voice-agent"
     ```
     {: codeblock}
 
+{: #advanced}
 1. **可选** 选择**显示高级**，以有效的 JSON 格式输入 Google 定义的特殊配置设置。以下示例显示了德语女声语音的 Google 配置设置。
 
   如果您在服务配置中选择的语言不同于您在 `languageCode` 中定义的语言，那么 {{site.data.keyword.iva_short}} 会使用 `languageCode` JSON 配置定义的语言来覆盖您的选择。

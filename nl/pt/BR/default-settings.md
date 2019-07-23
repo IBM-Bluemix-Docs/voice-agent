@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 
 {{site.data.keyword.iva_full}} usa as configurações padrão a seguir.
 
-| Configurando o nome | Padrão |
+| Nome da Definição | Padrão |
 |------|---------------|
 | {{site.data.keyword.conversationshort}} token de autenticação| Ativado |
 | Mecanismo de orquestração de serviço (SOE) token de autenticação| Desativado |

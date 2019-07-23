@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-22"
+lastupdated: "2019-06-24"
 subcollection: "voice-agent"
 ---
 
@@ -19,6 +19,14 @@ subcollection: "voice-agent"
 
 Tenez-vous au courant des dernières nouveautés et mises à jour d'{{site.data.keyword.iva_full}}.
 {: shortdesc}
+
+## Juin 2019
+
+- **Ajout :  Prise en charge de la messagerie SMS** Date de l'ajout :  _24-06-2019_
+
+  - {{site.data.keyword.iva_full}} prend désormais en charge la fonctionnalité SMS en tant qu'agent **Voix + SMS** ou d'agent **SMS** autonome. Les utilisateurs peuvent interagir avec leur agent via la messagerie SMS. Voir [Création d'un agent vocal activé pour SMS](/docs/services/voice-agent?topic=voice-agent-sms_config_instance) pour créer un agent _Voix + SMS_ ou [Création d'un agent SMS](/docs/services/voice-agent?topic=voice-agent-config_sms_instance) pour créer un agent _SMS_.
+
+- **Mise à jour : Mise à jour du pilote Voice Gateway vers la version 1.0.1.**
 
 ## Mars 2019
 

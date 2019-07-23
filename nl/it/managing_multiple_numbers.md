@@ -69,7 +69,7 @@ Puoi accedere alla finestra di dialogo **Manage** facendo clic su **Manage** acc
 ## Eliminazione di numeri
 {: #delete_num}
 
-1. Fai clic su **Manage** accanto a **Phone Number** dalla pagina _Create a Voice Agent_ o _Edit Voice Agent_. 
+1. Fai clic su **Manage** accanto a **Phone Number** dalla pagina _Create a Voice Agent_ o _Edit Voice Agent_.
 
 1. Seleziona la casella bianca accanto a tutti i numeri che desideri eliminare. Per selezionare _tutti_ i numeri, seleziona semplicemente la casella bianca accanto all'intestazione **Phone Number**.
 
@@ -104,7 +104,7 @@ Un elenco di numeri può essere caricato nell'agent in una singola operazione. L
 
 1. Nella parte superiore verrà visualizzato un messaggio "Success!" e tutti i nuovi numeri verranno aggiunti all'elenco. Altrimenti, verrà visualizzato un messaggio di errore con una descrizione, insieme ai messaggi di errore accanto a ciascun numero che presenta un problema.
 
-1. I singoli numeri importati avranno un segno di spunta **verde** sotto la colonna _Status_ nell'elenco che indica che il numero non presenta errori.Altrimenti, nella colonna _Status_ verrà visualizzato uno specifico errore.
+1. I singoli numeri importati avranno un segno di spunta **verde** sotto la colonna _Status_ nell'elenco che indica che il numero non presenta errori. Altrimenti, nella colonna _Status_ verrà visualizzato uno specifico errore.
 
 1. Fai clic su **Done** per salvare e confermare l'aggiunta del numero o dei numeri dall'agent.
 

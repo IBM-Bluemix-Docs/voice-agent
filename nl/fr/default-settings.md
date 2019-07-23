@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 
 {{site.data.keyword.iva_full}} utilise les paramètres par défaut présentés ci-après.
 
-| Nom de paramètre | Valeur par défaut |
+| Nom du paramètre | Valeur par défaut |
 |------|---------------|
 | {{site.data.keyword.conversationshort}} token authentication| Activé |
 | Service Orchestration Engine (SOE) token authentication| Désactivé |

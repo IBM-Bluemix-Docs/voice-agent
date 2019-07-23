@@ -24,8 +24,9 @@ Sie können den SIP-Trunk-Provider, den Sie für die Integration mit {{site.data
 * [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
-* [AT&T und andere Provider](#att-other)
+* [Voximplant](#voximplant-setup)
 * [Peering mit {{site.data.keyword.iva_short}}](#peering)
+* [AT&T und andere Provider](#att-other)
 * [Unterstützung für Konfiguration anfordern](#request-setup)
 
 ## Nexmo-Sprachanwendung erstellen
@@ -59,7 +60,7 @@ Sie können den SIP-Trunk-Provider, den Sie für die Integration mit {{site.data
 
 1. Nach der erfolgreichen Verarbeitung der Zahlung wird Ihre SIP-Trunk-Telefonnummer in Ihrem Konto angezeigt.
 
-Sie benötigen diese Telefonnummer, einschließlich der Landes- und Ortsnetzkennzahl, zum Einrichten des Sprachagenten und zum Konfigurieren der Anrufübergabe. Informationen hierzu finden Sie in [Sprachagenten erstellen und Verbindung herstellen](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+Sie benötigen diese Telefonnummer, einschließlich der Landes- und Ortsnetzkennzahl, zum Einrichten des Sprachagenten und zum Konfigurieren der Anrufübergabe. Informationen hierzu finden Sie in [Sprachagenten erstellen und Verbindung herstellen](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
 
 ## Twilio-SIP-Trunk erstellen
@@ -85,9 +86,37 @@ Sie benötigen diese Telefonnummer, einschließlich der Landes- und Ortsnetzkenn
 
   Klicken Sie auf der Seite 'Nummern' auf **Nummer kaufen** oder, wenn Sie bereits über eine Nummer verfügen, klicken Sie auf das Pluszeichen (**+**). In dem angezeigten Fensterbereich können Sie eine neue Telefonnummer in Ihrer Region angeben. Weisen Sie die Nummer dem SIP-Trunk zu, den Sie erstellt haben, indem Sie zum SIP-Trunk zurückkehren und auf das Symbol für 'Nummer' klicken.
 
-  Sie benötigen diese Telefonnummer, einschließlich der Landes- und Ortsnetzkennzahl, zum Einrichten des Sprachagenten. Informationen hierzu finden Sie in [Sprachagenten erstellen und Verbindung herstellen](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+  Sie benötigen diese Telefonnummer, einschließlich der Landes- und Ortsnetzkennzahl, zum Einrichten des Sprachagenten. Informationen hierzu finden Sie in [Sprachagenten erstellen und Verbindung herstellen](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
   **HINWEIS**: Wenn Sie die Lite- oder Testversion eines Twilio-Kontos verwenden, um Übergaben auf {{site.data.keyword.iva_short}} zu testen, müssen Sie unbedingt das Übergabeziel _überprüfen_. Weitere Anweisungen finden Sie auf der [offiziellen Website von Twilio](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
+
+## Verbindung mit Voximplant herstellen
+{: #voximplant-setup}
+
+1. Erstellen Sie ein [Voximplant-Entwicklerkonto](https://voximplant.com/sign-up/).
+
+1. Wechseln Sie zur [Voximplant-Steuerkonsole](https://manage.voximplant.com/numbers/my_numbers). Wählen Sie im Menü die Option **Numbers** aus und klicken Sie auf **Buy new phone number**. Sie können entweder **Real** oder **Test numbers** auswählen und dann in der Liste eine Nummer auswählen. Anschließend klicken Sie auf **Buy selected**, um eine Telefonnummer zu kaufen.
+
+1. Geben Sie diese Nummer in den Einstellungen Ihres Sprachagenten an.
+
+1. Rufen Sie den [Abschnitt 'Applications'](https://manage.voximplant.com/applications) der _Voximplant-Steuerkonsole_ auf, um eine Anwendung namens **Watson** zu erstellen.
+
+1. Wechseln Sie in dieser Anwendung zur Registerkarte **Scenarios** und erstellen Sie ein Szenario namens **watson-scenario** mit dem folgenden Code:
+    ```javascript
+      VoxEngine.addEventListener(AppEvents.CallAlerting, (e) => {
+        let call2 = VoxEngine.callSIP("sip:12025550186@us-south.voiceagent.cloud.ibm.com");
+        VoxEngine.easyProcess(e.call, call2);
+      })
+    ```
+    {: codeblock}
+
+    Achten Sie auf den Funktionsaufruf **callSIP**:
+      * Ersetzen Sie die Angabe `12025550186` durch die Voximplant-Nummer, die Sie in Schritt 2 gekauft haben. 
+      * Ersetzen Sie `us-south.voiceagent.cloud.ibm.com` durch den SIP-Endpunkt Ihres Sprachagenten. Der Endpunkt ist auf der Seite _Einführung_ der Dokumentation von {{site.data.keyword.iva_full}} angegeben. Weitere Informationen erhalten Sie im [*Lernprogramm 'Einführung'*](/docs/services/voice-agent?topic=voice-agent-getting-started#step1).
+    
+1. Wechseln Sie auf die Registerkarte **Routing**, um eine Regel namens **watson-rule** zu erstellen. Geben Sie **watson-scenario** als zugeordnetes Szenario an.
+
+1. Öffnen Sie die Registerkarte **Numbers** mit den Abschnitten **Attached** (noch leer) und **Available**. Wechseln Sie zum Abschnitt **Available**, wählen Sie Ihre Nummer aus und klicken Sie auf **Attach**. Geben Sie im daraufhin geöffneten Fenster die Regel **watson-rule** an und klicken Sie danach auf **Attach**.
 
 ## Peering mit {{site.data.keyword.iva_short}}
 {: #peering}

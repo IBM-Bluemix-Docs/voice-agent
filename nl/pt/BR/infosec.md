@@ -24,7 +24,7 @@ A IBM está comprometida em fornecer aos nossos clientes e parceiros soluções 
 ## Manipulação de informações e opções de configuração
 {: #configure_infosec}
 
-O {{site.data.keyword.iva_short}} não armazena, coleta nem processa dados recebidos dos clientes. Em vez disso, os dados são roteados para diferentes serviços para processamento. Durante a conversa, os usuários podem compartilhar informações que contêm Informação protegida de saúde (PHI), Informações pessoalmente identificáveis (PII) ou dados do Padrão de Segurança de Dados do Setor de Cartão de Pagamento (PCI DSS). Consulte [Arquitetura](/docs/services/voice-agent?topic=voice-agent-about#architecture){: new_window} para saber mais sobre o fluxo de conversa e a arquitetura do {{site.data.keyword.iva_short}}.
+Para operar o serviço e otimizar a experiência do usuário, o {{site.data.keyword.iva_short}} coletará e armazenará um conjunto mínimo de Informações Pessoais (PI) que é manipulado de acordo com o nosso [Data Processing Addendum (DPA)](https://www.ibm.com/support/customer/csol/terms/){: new_window} e o [DPA Exhibit](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=00C4CE004FA711E7AA10752A2F494A7C){: new_window}. O {{site.data.keyword.iva_short}} não armazena, coleta ou processa dados que fazem parte de qualquer conversa de voz ou de SMS. Em vez disso, os dados são roteados para diferentes serviços para processamento. Durante a conversa, os usuários podem compartilhar informações que contêm Informação protegida de saúde (PHI), Informações pessoalmente identificáveis (PII) ou dados do Padrão de Segurança de Dados do Setor de Cartão de Pagamento (PCI DSS). Consulte [Arquitetura](/docs/services/voice-agent?topic=voice-agent-about#architecture){: new_window} para saber mais sobre o fluxo de conversa e a arquitetura do {{site.data.keyword.iva_short}}.
 
 Considere os recursos a seguir ao configurar sua instância de agente de voz para suportar privacidade de dados e manipulação segura.
 
@@ -38,7 +38,7 @@ Consulte [Configurando transferência de chamada](/docs/services/voice-agent?top
 ### Encaminhamento de Eventos
 {: #infosec_event_forwarding}
 
-É possível configurar seu agente de voz para encaminhar eventos de relatório a uma instância de banco de dados do {{site.data.keyword.cloudantfull}}. Esses eventos de relatório podem incluir dados de PII, PHI e PCI DSS sobre seus responsáveis pela chamada na forma de transcrições, eventos de turno de conversa e eventos de registro de detalhe de chamada (CDR). Os dados de chamada e os eventos de relatório não são armazenados, processados nem coletados no {{site.data.keyword.iva_short}} e os usuários devem configurar seus serviços externos do {{site.data.keyword.cloudant_short_notm}} apropriadamente. **Por padrão, o encaminhamento de eventos é desativado.**
+É possível configurar seu agente de voz para encaminhar eventos de relatório a uma instância de banco de dados do {{site.data.keyword.cloudantfull}}. Esses eventos de relatório podem incluir dados de PII, PHI e PCI DSS sobre seus responsáveis pela chamada na forma de transcrições, eventos de turno de conversa e eventos de registro de detalhe de chamada (CDR). Os dados de chamada, os dados do SMS e os eventos de relatório não são armazenados, processados ou coletados dentro do {{site.data.keyword.iva_short}} e os usuários devem configurar os seus serviços externos do {{site.data.keyword.cloudant_short_notm}} apropriadamente. **Por padrão, o encaminhamento de eventos é desativado.**
 
 Consulte [Ativando o encaminhamento de eventos](/docs/services/voice-agent?topic=voice-agent-event_forwarding) para configurar seus agentes de voz para encaminhar eventos de relatórios.
 
@@ -50,10 +50,14 @@ Consulte [**{{site.data.keyword.cloudant_short_notm}}: segurança**](/docs/servi
 Para conversar com clientes, o {{site.data.keyword.conversationshort}} produz respostas como texto, que são passadas para o serviço {{site.data.keyword.texttospeechshort}} e faladas em voz alta no {{site.data.keyword.iva_short}}. As respostas que o {{site.data.keyword.conversationshort}}
 cria podem conter informações confidenciais. Para impedir o {{site.data.keyword.iva_short}} de armazenar em cache respostas recebidas do serviço {{site.data.keyword.texttospeechshort}} que contenham dados pessoais, é possível permitir que o comando de ação `vgwActExcludeFromTTSCache` impeça elocuções que contenham certos tipos de informações de serem armazenadas em cache. Consulte [Programando os agentes de voz usando a API](/docs/services/voice-agent?topic=voice-agent-api#action-sequences).
 
+Depois que a instância do seu Voice Agent for excluída, o cache do TTS será limpo em 24 horas. Isso é referido como o `TTS cache timeout value`.
+
 ### Conexões Seguras
 {: #secure_trunking}
 
 O {{site.data.keyword.iva_short}} é baseado no {{site.data.keyword.Bluemix_notm}} e integra-se aos Troncos SIP que os usuários configuram. Como os Troncos SIP são externos e se conectam ao {{site.data.keyword.iva_short}}, é possível ativar conexões seguras entre seus Troncos SIP e o {{site.data.keyword.iva_short}} usando o Protocolo de Transporte em Tempo Real Seguro (SRTP) e criptografia usando SIP seguro (SIPS), que conta com a Segurança da Camada de Transporte (TLS). Consulte [Protegendo Conexões](/docs/services/voice-agent?topic=voice-agent-securing).
+
+Por padrão, os dados do SMS são criptografados com o TLS. Consulte [Voice Gateway: Data Processing](https://www.ibm.com/support/knowledgecenter/en/SS4U29/gdpr_considerations.html#GDPR_dataProcessing){: new_window} para obter mais informações.
 
 ### Configuração do mecanismo de orquestração de serviço (SOE)
 {: #SOE_config}
@@ -61,6 +65,23 @@ O {{site.data.keyword.iva_short}} é baseado no {{site.data.keyword.Bluemix_notm
 É possível usar um mecanismo de orquestração de serviço (SOE) para processar informações que passam entre o {{site.data.keyword.iva_short}} e o {{site.data.keyword.conversationshort}} para customizar conversas com os responsáveis pela chamada. Para manter conexões seguras, assegure-se de configurar seu SOE usando uma URL segura (`https`) e a autenticação de usuário.
 
 Consulte [Configurando o {{site.data.keyword.conversationshort}} para seu agente de voz](/docs/services/voice-agent?topic=voice-agent-conversation_va#conversation_va) e [Arquitetura com um mecanismo de orquestração de serviço](/docs/services/voice-agent?topic=voice-agent-about#arch-soe).
+
+## Suporte do SMS/MMS
+{: #SMS_MMS}
+
+### Manipulação de dados
+{: #data_handling}
+
+O {{site.data.keyword.iva_short}} não armazena, coleta ou processa dados do SMS. As imagens do MMS são armazenadas fora de nosso serviço e são manipuladas pelo provedor de serviços. Os clientes devem se referir ao acordo de segurança/privacidade de seu provedor do SMS. O {{site.data.keyword.iva_short}} manipula somente links textuais para as imagens que são integradas nas mensagens do SMS.
+
+Quando um Service Orchestration Engine ou {{site.data.keyword.conversationshort}} envia uma mensagem MMS para o usuário (com ou sem uma mensagem de texto SMS), uma ou mais URLs de mídia publicamente acessíveis são enviadas para o Twilio. O Twilio não suporta URLs não públicas. Os usuários devem evitar enviar informações sigilosas ou pessoais por meio do MMS.
+
+O {{site.data.keyword.iva_short}} mascara os identificadores de chamadas nos logs de mensagem para evitar a coleta desse tipo de informações pessoalmente identificáveis.
+
+### Autorização
+{: #authentication}
+
+As mensagens do SMS de entrada são protegidas com o provedor de serviços por meio do uso de [autenticação do IAM](/docs/services/voice-agent?topic=voice-agent-iam#sms_access){: new_window}.
 
 ## Serviços relacionados ao {{site.data.keyword.iva_short}}
 {: #related_services}

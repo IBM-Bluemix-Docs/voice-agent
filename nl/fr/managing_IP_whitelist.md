@@ -21,6 +21,9 @@ subcollection: "voice-agent"
 Vous pouvez configurer l'appairage avec {{site.data.keyword.iva_short}} ou d'autres fournisseurs en plaçant des adresses IP en liste blanche.
 {: shortdesc}
 
+Votre instance {{site.data.keyword.iva_short}} **doit** être sur un plan _Standard_ ou _Premium_ pour pouvoir utiliser la fonction de mise en liste blanche.
+{: tip}
+
 ## Ajout d'une adresse IP en liste blanche
 {: #add_IP}
 

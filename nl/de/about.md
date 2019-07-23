@@ -54,7 +54,7 @@ Die folgenden Schritte veranschaulichen den Ablauf eines Dialogs.
 ### Architektur mit einem SIP-Trunk
 {: #arch-sip}
 
-Mit SIP-Trunks können Sie Ihre Umgebung über das öffentliche Telefonnetz umgehend einrichten und testen. Wenn Sie über einen SIP-Trunk eine Verbindung zu einem Sprachagenten herstellen, müssen Sie Ihren SIP-Trunk so konfigurieren, dass INVITE-Anforderungen an den Sprachagenten auf Basis seiner IP-Adresse weitergeleitet werden. Die IP-Adresse Ihres {{site.data.keyword.iva_short}}-Servers finden Sie auf der Seite _Einführung_.
+Mit SIP-Trunks können Sie Ihre Umgebung über das öffentliche Telefonnetz umgehend einrichten und testen. Wenn Sie über einen SIP-Trunk eine Verbindung zu einem Sprachagenten herstellen, müssen Sie Ihren SIP-Trunk so konfigurieren, dass INVITE-Anforderungen an den Sprachagenten auf Basis seiner IP-Adresse weitergeleitet werden. Die IP-Adresse Ihres {{site.data.keyword.iva_short}}-SIP-URI-Endpunktes finden Sie auf der Seite _Einführung_.
 
 ![Die Anrufe fließen über einen SIP-Trunk an den Sprachagenten, der über die API mit Watson-Services kommuniziert.](images/arch-sip.png)
 
@@ -76,6 +76,13 @@ Folgende Gründe können für die Einbindung einer Service-Orchestrierungsengine
 Weitere Informationen zur Vorgehensweise beim Implementieren einer Service-Orchestrierungsengine finden Sie unter [Beispiele für Service-Orchestrierungsengine auf GitHub ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}.
 
 **Wichtig**: Aus Gründen der Datensicherheit müssen Sie sicherstellen, dass Sie für Ihren SOE-Arbeitsbereich eine sichere URL verwenden. Verwenden Sie `https:` anstelle von `http:` sowie obligatorische Authentifizierung. Weitere Informationen zu Sicherheitsaspekten finden Sie unter [Informationssicherheit und Datenschutz](/docs/services/voice-agent?topic=voice-agent-infosec).
+
+### Architektur mit digitalen Nachrichten
+{: #arch-sms}
+
+Sie können einen kognitiven SMS-Agenten einrichten, mit dem Kunden durch den Austausch von SMS- und MMS-Nachrichten interagieren können. Der SMS-Agent kann die Kunden mithilfe eines Dialogs aus dem IBM {{site.data.keyword.conversationshort}}-Service durch Tasks führen, Fragen beantworten und mehr. Wenn Sie eine Verbindung zu einem SMS-Agenten herstellen, müssen Sie die URL für die SMS-Anforderung (oder den Webhook) im SMS-Provider konfigurieren; dies teilt dem SMS-Provider mit, wohin die Nachricht weitergeleitet werden soll. Die IP-Adresse Ihres {{site.data.keyword.iva_short}}-SMS-URI-Endpunktes finden Sie auf der Seite _Einführung_.
+
+![Die Nachrichten fließen durch einen SMS-Provider an den Sprachagenten, der mit Watson-Services über die API kommuniziert.](images/arch-sms-mms.png)
 
 ## Features
 {: #features}

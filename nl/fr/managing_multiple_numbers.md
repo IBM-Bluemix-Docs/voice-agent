@@ -69,7 +69,7 @@ Vous pouvez accéder à la boîte de dialogue **Gestion** en cliquant sur **Gér
 ## Suppression de numéros
 {: #delete_num}
 
-1. Cliquez sur **Gérer** en regard de **Numéro de téléphone** dans la page _Créer un agent vocal_ ou _Editer un agent vocal_. 
+1. Cliquez sur **Gérer** en regard de **Numéro de téléphone** dans la page _Créer un agent vocal_ ou _Editer un agent vocal_.
 
 1. Cochez la case en regard de chaque numéro à supprimer. Si vous voulez _tous_ les supprimer, cochez la case en regard de l'en-tête **Numéro de téléphone**.
 
@@ -94,9 +94,9 @@ Vous pouvez télécharger une liste de numéros dans l'agent, en une seule fois.
 
   * Les numéros du fichier .CSV _doivent_ utiliser le même format que celui utilisé lors de l'ajout d'un numéro via le tableau de bord, et doit être unique. Voir [Number Format](/docs/services/voice-agent?topic=voice-agent-multi_num#format_num).
 
-1. Cliquez sur **Gérer** en regard de **Numéro de téléphone** dans la page _Créer un agent vocal_ ou _Editer un agent vocal_. 
+1. Cliquez sur **Gérer** en regard de **Numéro de téléphone** dans la page _Créer un agent vocal_ ou _Editer un agent vocal_.
 
-1. Cliquez sur l'icône "Transférer un fichier CSV" en haut à droite de la boîte de dialogue **Gestion**. 
+1. Cliquez sur l'icône "Transférer un fichier CSV" en haut à droite de la boîte de dialogue **Gestion**.
 
 1. Une fenêtre s'affiche vous demandant de confirmer le remplacement de tous les numéros de la liste par les numéros du fichier .CSV. Cliquez sur **OK** pour confirmer et poursuivre.
 
@@ -113,7 +113,7 @@ Vous pouvez télécharger une liste de numéros dans l'agent, en une seule fois.
 
 Vous pouvez exporter une liste de numéros et leurs descriptions à partir de l'agent vers un fichier **.CSV** et télécharger ce dernier vers votre ordinateur. Vous pourrez ainsi modifier les numéros et/ou les descriptions comme vous le souhaitez, puis télécharger de nouveau le fichier dans l'agent. Voir [Importation de numéros](/docs/services/voice-agent?topic=voice-agent-multi_num#import_num).
 
-1. Cliquez sur **Gérer** en regard de **Numéro de téléphone** dans la page _Créer un agent vocal_ ou _Editer un agent vocal_. 
+1. Cliquez sur **Gérer** en regard de **Numéro de téléphone** dans la page _Créer un agent vocal_ ou _Editer un agent vocal_.
 
 1. Cliquez sur l'icône "Télécharger un fichier CSV" en haut à droite de la boîte de dialogue **Gestion**.
 
@@ -128,7 +128,7 @@ Le _Numéro principal_ est utilisé uniquement à des fins d'affichage et n'a au
 
 Vous pouvez remplacer le libellé **Numéro principal** par n'importe quel numéro de votre choix dans l'agent vocal.
 
-1. Cliquez sur **Gérer** en regard de **Numéro de téléphone** dans la page _Créer un agent vocal_ ou _Editer un agent vocal_. 
+1. Cliquez sur **Gérer** en regard de **Numéro de téléphone** dans la page _Créer un agent vocal_ ou _Editer un agent vocal_.
 
 1. Mettez en évidence l'entrée du numéro que vous voulez éditer et cliquez sur la liste d'options, représentée par l'icône **trois points**, qui apparaît sur le côté droit de la liste.
 
@@ -162,7 +162,7 @@ Vous pouvez également choisir un nombre différent de numéros à afficher par 
 
 Si vous souhaitez apporter des modifications à la liste de numéros dans l'agent vocal, vous _devez_ sauvegarder les modifications dans la page **Gestion**, ainsi que celles apportées dans la page _Editer un agent vocal_.
 
-1. Cliquez sur **Gérer** en regard de **Numéro de téléphone** dans la page _Créer un agent vocal_ ou _Editer un agent vocal_. 
+1. Cliquez sur **Gérer** en regard de **Numéro de téléphone** dans la page _Créer un agent vocal_ ou _Editer un agent vocal_.
 
 1. Apportez les modifications aux numéros de la liste selon vos besoins.
 
@@ -177,7 +177,7 @@ Si vous souhaitez apporter des modifications à la liste de numéros dans l'agen
 
 Vous pouvez retrouver un numéro à l'aide d'une recherche sur un numéro ou une description.
 
-1. Cliquez sur **Gérer** en regard de **Numéro de téléphone** dans la page _Créer un agent vocal_ ou _Editer un agent vocal_. 
+1. Cliquez sur **Gérer** en regard de **Numéro de téléphone** dans la page _Créer un agent vocal_ ou _Editer un agent vocal_.
 
 1. Dans la barre de _recherche_, entrez un numéro ou une description à rechercher dans la liste. Lorsque vous tapez, les résultats de la recherche sont mis à jour automatiquement.
 

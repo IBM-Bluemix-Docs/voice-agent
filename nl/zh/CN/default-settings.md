@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 
 {{site.data.keyword.iva_full}} 使用以下缺省设置。
 
-|设置名称|缺省值|
+| 设置名称 |缺省值|
 |------|---------------|
 | {{site.data.keyword.conversationshort}} 令牌认证 | 已启用 |
 | 服务编排引擎 (SOE) 令牌认证 | 已禁用 |

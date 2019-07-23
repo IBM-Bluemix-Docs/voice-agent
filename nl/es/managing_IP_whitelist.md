@@ -21,6 +21,9 @@ subcollection: "voice-agent"
 Puede configurar la interconexión con {{site.data.keyword.iva_short}} o con otros proveedores añadiendo direcciones IP a la lista blanca.
 {: shortdesc}
 
+La instancia de {{site.data.keyword.iva_short}} **debe** estar en un plan _Estándar_ o _Premium_ para poder utilizar la característica de lista blanca. 
+{: tip}
+
 ## Adición de una dirección IP a la lista blanca
 {: #add_IP}
 

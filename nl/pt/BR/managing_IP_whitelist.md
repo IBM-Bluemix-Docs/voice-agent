@@ -21,6 +21,9 @@ subcollection: "voice-agent"
 É possível configurar o mesmo nível para o {{site.data.keyword.iva_short}} ou outros provedores inserindo os endereços IP na lista de desbloqueio.
 {: shortdesc}
 
+A sua instância do {{site.data.keyword.iva_short}} **deve** estar em um plano _Padrão_ ou _Premium_ para ser capaz de usar o recurso de lista de aplicativos confiáveis.
+{: tip}
+
 ## Incluindo um endereço IP na lista de desbloqueio
 {: #add_IP}
 

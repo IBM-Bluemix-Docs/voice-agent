@@ -59,7 +59,7 @@ Seguramente, su llamada no se ha conectado a los servicios. Este problema se pro
 
 * Verifique que las credenciales de servicio de Watson, los URL y el ID de espacio de trabajo de {{site.data.keyword.conversationshort}} son válidos.
 * Verifique que el diálogo de la habilidad de {{site.data.keyword.conversationshort}} se ha creado correctamente.
-  * Puede importar la [conversación de ejemplo ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) desde GitHub para una habilidad preconfigurada. Consulte el [Paso 3 de la *Guía de aprendizaje de iniciación*](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3) para obtener detalles sobre cómo guardar la conversación de ejemplo como un archivo JSON y luego importar el archivo como una habilidad en la herramienta {{site.data.keyword.conversationshort}}.
+  * Puede importar la [conversación de ejemplo ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) desde GitHub para una habilidad preconfigurada. Consulte el [Paso 3 de la *Guía de aprendizaje de iniciación*](/docs/services/voice-agent?topic=voice-agent-getting-started#step3) para obtener detalles sobre cómo guardar la conversación de ejemplo como un archivo JSON y luego importar el archivo como una habilidad en la herramienta {{site.data.keyword.conversationshort}}.
   * Si ha creado su propio diálogo de {{site.data.keyword.conversationshort}}, verifique que el diálogo contiene un nodo con la condición `conversation_start` y un nodo con una respuesta predeterminada. Para obtener instrucciones detalladas, consulte [Creación de un diálogo](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog) en la documentación de {{site.data.keyword.conversationshort}}.
 * Consulte si la llamada telefónica aparece en el panel de control _Uso_ del agente de voz. Si ve un elemento para su llamada telefónica, entonces el agente de voz se ha conectado al servicio de Watson.
 
@@ -70,3 +70,12 @@ Consulte si el número de teléfono especificado está siendo utilizado por un a
 ### ¿Por qué las llamadas fallan con frecuencia?
 
 Los agentes de voz pueden tener problemas cuando las llamadas fallan, porque un motor de orquestación de servicio (SOE) inicia una transacción larga, y no responde a su agente de voz de forma oportuna. Si una transacción supera el tiempo de espera predeterminado de {{site.data.keyword.conversationshort}}, la llamada falla. Para evitar fallos en llamadas, el SOE puede modificar el tiempo de espera predeterminado de {{site.data.keyword.conversationshort}} utilizando la variable de estado `vgwConversationResponseTimeout`. Consulte [Variables de estado definidas en el diálogo de {{site.data.keyword.conversationshort}}](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html#variables-conv).
+
+
+### Limitaciones varias
+
+* Puede crear nuevas instancias de servicio de Watson directamente desde el panel de control de _Crear un agente de voz_ para las regiones **Dallas** o **Washington DC**. Para conectar su agente de voz a los servicios de Watson en otras regiones, cree los servicios de Watson antes de crear el agente de voz en el panel de control _Gestionar_.
+
+* Solo se admiten las conexiones con la red telefónica pública conmutada (PSTN).
+
+* Se deben especificar todas las configuraciones de agente de voz en el servicio {{site.data.keyword.conversationshort}} que utiliza la API.

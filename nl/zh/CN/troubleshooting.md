@@ -59,7 +59,7 @@ subcollection: "voice-agent"
 
 * 验证 Watson 服务凭证、URL 和 {{site.data.keyword.conversationshort}} 工作空间标识是否都有效。
 * 验证是否已正确创建 {{site.data.keyword.conversationshort}} 技能中的对话。
-  * 可以从 GitHub 导入预构建技能的[样本对话 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)。有关将样本对话另存为 JSON 文件，然后将该文件作为技能导入 {{site.data.keyword.conversationshort}} 工具中的详细信息，请参阅[*入门教程*中的步骤 3](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)。
+  * 可以从 GitHub 导入预构建技能的[样本对话 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)。有关将样本对话另存为 JSON 文件，然后将该文件作为技能导入 {{site.data.keyword.conversationshort}} 工具中的详细信息，请参阅[*入门教程*中的步骤 3](/docs/services/voice-agent?topic=voice-agent-getting-started#step3)。
   * 如果您创建了自己的 {{site.data.keyword.conversationshort}} 对话，请验证该对话是否包含具有 `conversation_start` 条件的节点和具有缺省响应的节点。有关详细的指示信息，请参阅 {{site.data.keyword.conversationshort}} 文档中的[构建对话](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog)。
 * 查看您的电话呼叫是否在语音代理程序的_使用情况_仪表板上列出。如果存在您电话呼叫的条目，说明您的语音代理程序已连接到 Watson 服务。
 
@@ -70,3 +70,12 @@ subcollection: "voice-agent"
 ### 为什么我的呼叫总是频繁失败？
 
 如果呼叫失败，那么语音代理程序可能发生问题，因为服务编排引擎 (SOE) 会启动一个长时间运行的事务，它不会及时响应语音代理程序。如果事务超过缺省 {{site.data.keyword.conversationshort}} 超时值，那么呼叫会失败。为了避免呼叫失败，SOE 可通过 `vgwConversationResponseTimeout` 状态变量修改缺省 {{site.data.keyword.conversationshort}} 超时值。请参阅[在 {{site.data.keyword.conversationshort}} 对话中设置的状态变量](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html#variables-conv)。
+
+
+### 各种限制
+
+* 对于**达拉斯**或**华盛顿**区域，可以直接从_创建语音代理程序_仪表板创建新的 Watson 服务实例。要将语音代理程序连接到其他地区的 Watson 服务，需要在_管理_仪表板上创建语音代理程序之前，先创建 Watson 服务。
+
+* 仅支持连接公用交换电话网 (PSTN)。
+
+* 所有语音代理程序配置都必须在使用 API 的 {{site.data.keyword.conversationshort}} 服务中指定。

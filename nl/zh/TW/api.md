@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 您可以藉由從 {{site.data.keyword.conversationfull}} 服務內定義動作標籤及狀態變數，來控制語音代理程式的行為。動作標籤會起始您的語音代理程式在交談階段作業期間所採取的動作，而且除非另有變更，否則狀態變數會定義在整個交談都會持續保存的語音代理程式特徵。
 {: shortdesc}
 
-因為 {{site.data.keyword.iva_full}} 是以 IBM Voice Gateway 為基礎，所以 API 的運作方式會相同。如果您熟悉 Voice Gateway，則可以在 {{site.data.keyword.conversationshort}} 對話中使用與 {{site.data.keyword.iva_short}} 相同的動作及狀態變數。請參閱 [Voice Gateway API 中的動作標籤及狀態變數](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html)。
+因為 {{site.data.keyword.iva_full}} 是以 IBM Voice Gateway 為基礎，所以 API 的運作方式會相同。如果您熟悉 Voice Gateway 和 SMS Gateway，則可以在 {{site.data.keyword.conversationshort}} 對話中使用與 {{site.data.keyword.iva_short}} 相同的動作和狀態變數。請分別參閱 [Voice Gateway API 中的動作標籤和狀態變數](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html)及 [API for SMS Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/sms_api.html)。
 {: tip}
 
 ## 編輯對話回應中的 JSON

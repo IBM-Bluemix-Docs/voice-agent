@@ -24,8 +24,9 @@ subcollection: "voice-agent"
 * [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
-* [AT & T e outros provedores](#att-other)
+* [Voximplant](#voximplant-setup)
 * [Peering com {{site.data.keyword.iva_short}}](#peering)
+* [AT & T e outros provedores](#att-other)
 * [Solicitando Configuração](#request-setup)
 
 ## Criando um aplicativo de voz Nexmo
@@ -60,7 +61,7 @@ subcollection: "voice-agent"
 
 1. Assim que o pagamento for processado com êxito, o número de telefone do seu tronco SIP será exibido em sua conta.
 
-Esse número de telefone é necessário para configurar o seu agente de voz e a transferência de chamada, incluindo os códigos de país e de área. Consulte [Criando e conectando o seu agente de voz](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+Esse número de telefone é necessário para configurar o seu agente de voz e a transferência de chamada, incluindo os códigos de país e de área. Consulte [Criando e conectando o seu agente de voz](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
 
 ## Criando um tronco SIP Twilio
@@ -86,9 +87,37 @@ Esse número de telefone é necessário para configurar o seu agente de voz e a 
 
   Na página Números, clique em **Comprar um número** ou, se já tiver um número, clique no ícone **+**. Um painel exibe onde você pode fornecer um novo número de telefone em sua região. Designe o número ao tronco SIP que você criou ao voltar para o tronco SIP e clicar no ícone Número.
 
-  Esse número de telefone é necessário para configurar o seu agente de voz, incluindo os códigos de país e de área. Consulte [Criando e conectando o seu agente de voz](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+  Esse número de telefone é necessário para configurar o seu agente de voz, incluindo os códigos de país e de área. Consulte [Criando e conectando o seu agente de voz](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
-  **NOTA**: se você estiver usando uma conta Lite/Trial do Twilio para testar as transferências no {{site.data.keyword.iva_short}}, será necessário certificar-se de _verificar_ o destino da transferência. Veja mais instruções no [site oficial do Twilio](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
+  **NOTA**: se você usar uma conta Lite/Trial Twilio para testar as transferências no {{site.data.keyword.iva_short}}, então, será necessário certificar-se de _verificar_ o destino da transferência. Veja mais instruções no [site oficial do Twilio](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
+
+## Conectando-se ao Voximplant
+{: #voximplant-setup}
+
+1. Crie [uma conta de desenvolvedor do Voximplant](https://voximplant.com/sign-up/).
+
+1. Acesse [o painel de Controle do Voximplant](https://manage.voximplant.com/numbers/my_numbers). No menu, selecione **Números** e clique em **Comprar novo número de telefone**. É possível verificar **números reais** ou **de teste** e, em seguida, selecionar um número na lista e clicar em **Comprar selecionado** para comprar um número de telefone.
+
+1. Especifique esse número nas configurações do seu agente de voz.
+
+1. Acesse [a seção Aplicativos](https://manage.voximplant.com/applications) do _Painel de Controle do Voximplant_ para criar um aplicativo denominado **Watson**.
+
+1. Dentro desse aplicativo, alterne para a guia **Cenários** e crie um **cenário do watson** com o código a seguir:
+    ```javascript
+      VoxEngine.addEventListener(AppEvents.CallAlerting, (e) => {
+        let call2 = VoxEngine.callSIP("sip:12025550186@us-south.voiceagent.cloud.ibm.com");
+        VoxEngine.easyProcess(e.call, call2);
+      })
+    ```
+    {: codeblock}
+
+    Preste atenção na chamada de função **callSIP**:
+      * Substitua o número do Voximplant que você comprou na etapa 2 em vez de `12025550186`. 
+      * Substitua o terminal do SIP de seu agente de voz em vez de `us-south.voiceagent.cloud.ibm.com`. O terminal é especificado na página _Introdução_ da documentação do {{site.data.keyword.iva_full}}. Consulte o [*Tutorial de introdução*](/docs/services/voice-agent?topic=voice-agent-getting-started#step1).
+    
+1. Acesse a guia **Roteamento** para criar uma **regra do watson**. Especifique o **cenário do watson** como um cenário designado.
+
+1. Abra a guia **Números** com as seções **Anexado** (ainda vazia) e **Disponível**. Alterne para **Disponível**, selecione o seu número e clique em **Anexar**. Na janela aberta, especifique a **regra do watson** e, em seguida, clique em **Anexar**.
 
 ## Peering com {{site.data.keyword.iva_short}}
 {: #peering}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-22"
+lastupdated: "2019-06-24"
 subcollection: "voice-agent"
 ---
 
@@ -20,7 +20,15 @@ subcollection: "voice-agent"
 {{site.data.keyword.iva_full}}에 사용할 수 있는 새 기능 및 업데이트로 최신 상태를 유지하십시오.
 {: shortdesc}
 
-## 2019년 3월 
+## 2019년 6월
+
+- **추가됨: SMS 메시징에 대한 지원** 신규 기준일: _2019-06-24_
+
+  - {{site.data.keyword.iva_full}}의 경우 이제 **Voice + SMS** 에이전트 또는 독립형 **SMS** 에이전트로서 SMS 기능을 지원합니다. 사용자는 SMS 메시징을 통해 해당 에이전트와 상호작용할 수 있습니다. _Voice + SMS_ 에이전트 작성의 경우 [SMS 사용 음성 에이전트 작성](/docs/services/voice-agent?topic=voice-agent-sms_config_instance)을 참조하고 _SMS_ 에이전트 작성의 경우 [SMS 에이전트 작성](/docs/services/voice-agent?topic=voice-agent-config_sms_instance)을 참조하십시오. 
+
+- **업데이트됨: 음성 게이트웨이 드라이버가 1.0.1로 업데이트됨.**
+
+## 2019년 3월
 
 - **추가됨: 단일 에이전트 내의 여러 개의 전화번호 지원.** 신규 기준일:  _2019년 3월 19일_
 

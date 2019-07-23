@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="voice-agent" audience="service" arm="2630926" href="/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#getting-started-tutorial" path="services/voice-agent"}
+{: .toc subcollection="voice-agent" category="app_services" audience="service" arm="2630926" href="/docs/services/voice-agent?topic=voice-agent-getting-started#getting-started-tutorial" path="services/voice-agent"}
 IBM Voice Agent with Watson
 
     {: .navgroup id="learn"}
@@ -12,20 +12,21 @@ IBM Voice Agent with Watson
 
     {: .navgroup id="reference"}
     {: .topicgroup}
-    狀態變數
-		[語音代理程式所設定的狀態變數](/services/voice-agent/voice-agent-api-reference#state-variables-iva)
+狀態變數
+        [語音代理程式所設定的狀態變數](/services/voice-agent/voice-agent-api-reference#state-variables-iva)
         [Watson Assistant 對話中設定的狀態變數](/services/voice-agent/voice-agent-api-reference#state-variables-conv)
-    [動作指令及屬性](/services/voice-agent/voice-agent-api-reference#actions-and-attributes)
+
+    [動作指令和屬性](/services/voice-agent/voice-agent-api-reference#actions-and-attributes)
 	api_reference.md
     default-settings.md
     activity-tracker.md
     [IBM Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/welcome_voicegateway.html){: new_window}
 
     {: .topicgroup}
-    Watson 服務
-		[Watson Assistant](/services/conversation/services/conversation-gettingstarted#gettingstarted){: new_window}
-        [Speech to Text](/services/speech-to-text/speech-to-text-gettingStarted#gettingStarted){: new_window}
-        [Text to Speech](/services/text-to-speech/text-to-speech-gettingStarted#gettingStarted){: new_window}
+Watson 服務
+		[Watson Assistant](/services/assistant/assistant-getting-started)
+        [Speech to Text](/services/speech-to-text/speech-to-text-gettingStarted#gettingStarted)
+        [Text to Speech](/services/text-to-speech/text-to-speech-gettingStarted#gettingStarted)
 
     {: .topicgroup}
     資訊安全及資料隱私
@@ -37,8 +38,13 @@ IBM Voice Agent with Watson
     {: .navgroup id="howto"}
     creating.md
     connect-SIP.md
+    connect-SMS.md
     managing.md
-    managing_create.md
+
+    create_voice.md
+    create_sms.md
+    create_sms_voice.md
+
     managing_multiple_numbers.md
 
     {: .topicgroup}
@@ -66,10 +72,12 @@ IBM Voice Agent with Watson
     {: .topicgroup}
     保護語音代理程式
         secure-trunking.md
+        iam_user_access.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     troubleshooting.md
-    limitations.md
+    known_issues.md
+    faq-pricing.md
     release_notes.md
     {: .navgroup-end}

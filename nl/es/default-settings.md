@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 
 {{site.data.keyword.iva_full}} utiliza los siguientes valores predeterminados.
 
-| Nombre de valor | Valor predeterminado |
+| Nombre del valor | Valor predeterminado |
 |------|---------------|
 | {{site.data.keyword.conversationshort}} token authentication| Habilitado |
 | Service Orchestration Engine (SOE) token authentication| Inhabilitado |

@@ -21,6 +21,9 @@ subcollection: "voice-agent"
 Puoi configurare il peering a {{site.data.keyword.iva_short}} o altri provider inserendo in whitelist gli indirizzi IP.
 {: shortdesc}
 
+La tua istanza {{site.data.keyword.iva_short}} **deve** essere su un piano _Standard_ o _Premium_ per poter utilizzare la funzione di inserimento in whitelist.
+{: tip}
+
 ## Aggiunta di un indirizzo IP alla whitelist
 {: #add_IP}
 

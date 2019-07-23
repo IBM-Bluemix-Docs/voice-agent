@@ -24,8 +24,9 @@ Puede elegir de la siguiente lista el proveedor de la conexión troncal SIP que 
 * [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
-* [AT&T y otros proveedores](#att-other)
+* [Voximplant](#voximplant-setup)
 * [Interconexión con {{site.data.keyword.iva_short}}](#peering)
+* [AT&T y otros proveedores](#att-other)
 * [Solicitud de configuración asistida](#request-setup)
 
 ## Creación de una aplicación de voz Nexmo
@@ -35,7 +36,7 @@ Puede elegir de la siguiente lista el proveedor de la conexión troncal SIP que 
 
   1. Cree una cuenta de Nexmo en el [sitio web de Nexmo ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://dashboard.nexmo.com/sign-up){: new_window}.
 
-  1. Siga las instrucciones del README en el repositorio github de Nexmo [![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/nexmo-community/watson-voice-agent){: new_window}. El repositorio github contiene una muestra de iniciación.
+  1. Siga las instrucciones del README en el repositorio github de Nexmo [ ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/nexmo-community/watson-voice-agent){: new_window}. El repositorio github contiene una muestra de iniciación.
 
   1. Una vez que su número de teléfono Nexmo esté aprovisionado y su aplicación se esté ejecutando, configure su Agente de Voz con el número de teléfono Nexmo.
 
@@ -59,7 +60,7 @@ Puede elegir de la siguiente lista el proveedor de la conexión troncal SIP que 
 
 1. Una vez que el pago se haya procesado correctamente, su número de teléfono de conexión troncal SIP se muestra en la cuenta.
 
-Necesita este número de teléfono para configurar el agente de voz y la transferencia de llamada, incluidos los códigos de área y país. Consulte [Creación y conexión del agente de voz](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+Necesita este número de teléfono para configurar el agente de voz y la transferencia de llamada, incluidos los códigos de área y país. Consulte [Creación y conexión del agente de voz](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
 
 ## Creación de una conexión troncal SIP de Twilio
@@ -85,10 +86,38 @@ Necesita este número de teléfono para configurar el agente de voz y la transfe
 
   En la página Números, pulse **Comprar un número** o, si ya tiene uno, pulse el icono **+**. Un panel muestra dónde puede suministrar un número de teléfono nuevo en su región. Asigne el número a la conexión troncal SIP que ha creado yendo a la conexión troncal SIP y pulsando el icono de número.
 
-  Necesita este número de teléfono para configurar el agente de voz, incluidos los códigos de área y país. Consulte [Creación y conexión del agente de voz](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3).
+  Necesita este número de teléfono para configurar el agente de voz, incluidos los códigos de área y país. Consulte [Creación y conexión del agente de voz](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
   **NOTA**: Si utiliza una cuenta Lite/Trial Twilio para probar las transferencias en {{site.data.keyword.iva_short}},
-deberá asegurarse de _verificar_ el destino de transferencia. En el [sitio oficial de Twilio](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-) hallará más información.
+deberá asegurarse de _verificar_ el destino de la transferencia. En el [sitio oficial de Twilio](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-) hallará más información.
+
+## Conexión con Voximplant
+{: #voximplant-setup}
+
+1. Cree [una cuenta de desarrollador de Voximplant](https://voximplant.com/sign-up/).
+
+1. Vaya al [panel de control de Voximplant](https://manage.voximplant.com/numbers/my_numbers). En el menú, seleccione **Números** y pulse **Comprar nuevo número de teléfono**. Puede marcar **Real** o **Números de prueba** y, a continuación, seleccionar un número en la lista y pulsar **Comprar seleccionado** para comprar un número de teléfono.
+
+1. Especifique este número en los valores del agente de voz.
+
+1. Vaya a [la sección Aplicaciones](https://manage.voximplant.com/applications) del _panel de control de Voximplant_ para crear una aplicación llamada **Watson**.
+
+1. Dentro de la aplicación, vaya al separador **Escenarios** y cree un **watson-scenario** con el siguiente código:
+    ```javascript
+      VoxEngine.addEventListener(AppEvents.CallAlerting, (e) => {
+        let call2 = VoxEngine.callSIP("sip:12025550186@us-south.voiceagent.cloud.ibm.com");
+        VoxEngine.easyProcess(e.call, call2);
+      })
+    ```
+    {: codeblock}
+
+    Preste atención a la llamada de función **callSIP**:
+      * Sustituya `12025550186` por el número de Voximplant que ha comprado en el paso 2. 
+      * Sustituya `us-south.voiceagent.cloud.ibm.com` por el punto final de SIP del agente de voz. El punto final se especifica en la página _Iniciación_ de la documentación de {{site.data.keyword.iva_full}}. Consulte la [*guía de aprendizaje de iniciación*](/docs/services/voice-agent?topic=voice-agent-getting-started#step1).
+    
+1. Vaya al separador **Direccionamiento** para crear una **watson-rule**. Especifique **watson-scenario** como un escenario asignado.
+
+1. Abra el separador **Números** con las secciones **Conectado** (ya vacío) y **Disponible**. Vaya a **Seleccionado**, seleccione su número y pulse **Conectar**. En la ventana que se abre, especifique **watson-rule** y luego pulse **Conectar**.
 
 ## Interconexión con {{site.data.keyword.iva_short}}
 {: #peering}

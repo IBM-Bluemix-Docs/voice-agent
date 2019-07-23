@@ -118,7 +118,7 @@ dal.watson-va.netfoundry.net
 
 **중요**: 전송 대상의 SIP URI에는 전화번호와 사용자가 작성한 종료 URI가 포함됩니다. 전송 대상에 개인 전화번호를 사용하지 마십시오. 예를 들어 전화번호가 `18889990000`이고 종료 URI가 `mysiptrunk.pstn.twilio.com`인 경우 전체 SIP URI는 `sip:+18889990000\\@mysiptrunk.pstn.twilio.com`입니다. Netfoundry를 사용하고 전화번호가 `18889990000`인 경우 전체 SIP URI는 `sip:+18889990000\\@dal.watson-va.netfoundry.net`입니다.
 
-**참고**: `transferTarget` URI가 `+`로 시작하며 256자까지 포함할 수 있는지 확인하십시오. 
+**참고**: `transferTarget` URI가 `+`로 시작하며 256자까지 포함할 수 있는지 확인하십시오.
 
 ## 다음 단계
 {: #Next}

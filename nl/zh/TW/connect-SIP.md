@@ -24,8 +24,9 @@ subcollection: "voice-agent"
 * [Nexmo](#nexmo-setup)
 * [NetFoundry](#NetFoundry-setup)
 * [Twilio](#twilio-setup)
-* [AT&T 及其他提供者](#att-other)
+* [Voximplant](#voximplant-setup)
 * [與 {{site.data.keyword.iva_short}} 的對等作業](#peering)
+* [AT&T 及其他提供者](#att-other)
 * [要求輔助設定](#request-setup)
 
 ## 建立 Nexmo 語音應用程式
@@ -59,7 +60,7 @@ subcollection: "voice-agent"
 
 1. 順利處理付款之後，您的 SIP 幹線電話號碼會顯示在帳戶中。
 
-您需要此電話號碼來設定語音代理程式，並配置通話轉接（包括國碼及區域碼）。請參閱[建立及連接語音代理程式](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)。
+您需要此電話號碼來設定語音代理程式，並配置通話轉接（包括國碼及區域碼）。請參閱[建立及連接語音代理程式](/docs/services/voice-agent?topic=voice-agent-getting-started#step3)。
 
 
 ## 建立 Twilio SIP 幹線
@@ -85,9 +86,37 @@ subcollection: "voice-agent"
 
   在「號碼」頁面上，按一下**購買號碼**，或者，如果您已有號碼，則請按一下 **+** 圖示。即會顯示畫面，您可以在地區中的何處佈建新電話號碼。返回 SIP 幹線，然後按一下「號碼」圖示，以將號碼指派給您所建立的 SIP 幹線。
 
-  您需要此電話號碼來設定語音代理程式（包括國碼及區域碼）。請參閱[建立及連接語音代理程式](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3)。
+  您需要此電話號碼來設定語音代理程式（包括國碼及區域碼）。請參閱[建立及連接語音代理程式](/docs/services/voice-agent?topic=voice-agent-getting-started#step3)。
 
   **附註**：如果您是使用精簡/試用 Twilio 帳戶來測試 {{site.data.keyword.iva_short}} 上的轉接，則務必要_驗證_ 轉接目標。請參閱 [Twilio 的官方網站](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-)上的相關指示。
+
+## 使用 Voximplant 進行連接
+{: #voximplant-setup}
+
+1. 建立 [Voximplant 開發人員帳戶](https://voximplant.com/sign-up/)。
+
+1. 移至 [Voximplant 控制面板](https://manage.voximplant.com/numbers/my_numbers)。在功能表上，選取**號碼**，然後按一下**購買新的電話號碼**。您可以檢查**實際**或**測試號碼**，然後在清單中選取一個號碼，接著按一下**購買選取項目**來購買一個電話號碼。
+
+1. 在語音代理程式設定中指定此號碼。
+
+1. 移至 _Voximplant 控制面板_ 的[應用程式區段](https://manage.voximplant.com/applications)，建立一個名為 **Watson** 的應用程式。
+
+1. 在此應用程式中，切換至**情境**標籤，並建立含有下列程式碼的 **watson 情境**：
+    ```javascript
+      VoxEngine.addEventListener(AppEvents.CallAlerting, (e) => {
+        let call2 = VoxEngine.callSIP("sip:12025550186@us-south.voiceagent.cloud.ibm.com");
+        VoxEngine.easyProcess(e.call, call2);
+      })
+    ```
+    {: codeblock}
+
+    請注意 **callSIP** 函數呼叫：
+      * 替換為您在步驟 2 中所購買的 Voximplant 號碼，而不是使用 `12025550186`。 
+      * 替換為您的語音代理程式 SIP 端點，而不是使用 `us-south.voiceagent.cloud.ibm.com`。{{site.data.keyword.iva_full}} 文件的_開始使用_ 頁面上會指定此端點。請參閱[*入門指導教學*](/docs/services/voice-agent?topic=voice-agent-getting-started#step1)。
+    
+1. 移至**遞送**標籤，以建立 **watson 規則**。指定 **watson 情境**作為指派的情境。
+
+1. 開啟**號碼**標籤的**附加項目**（但是空的）和**可用項目**區段。切換至**可用項目**，選取您的號碼，然後按一下**附加**。在開啟的視窗中，指定 **watson 規則**，然後按一下**附加**。
 
 ## 與 {{site.data.keyword.iva_short}} 的對等作業
 {: #peering}

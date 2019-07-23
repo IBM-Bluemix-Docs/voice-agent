@@ -21,6 +21,9 @@ subcollection: "voice-agent"
 {{site.data.keyword.iva_short}} または他のプロバイダーへのピアリングは、IP アドレスをホワイトリストに登録することによって構成します。
 {: shortdesc}
 
+ホワイトリスティング機能を使用するには、{{site.data.keyword.iva_short}} インスタンスが_標準_プランまたは_プレミアム_・プランである**必要があります**。
+{: tip}
+
 ## ホワイトリストへの IP アドレスの追加
 {: #add_IP}
 
@@ -28,7 +31,7 @@ subcollection: "voice-agent"
 
 1. **「新規 IP の追加 (Add a new IP)」**アイコンをクリックして、新しい IP アドレスをホワイトリストに登録します。
 
-1. **IP ニックネーム**と**IP アドレス**を追加します。
+1. **IP ニックネーム**と **IP アドレス**を追加します。
 
 ## IP アドレスの編集
 {: #edit_IP}

@@ -22,7 +22,7 @@ subcollection: "voice-agent"
 _「管理」_ダッシュボードでボイス・エージェントを作成、複製、または編集して、サード・パーティーの音声テキスト変換サービスを接続できます。
 {: shortdesc}
 
-別の方法として、処理中に音声テキスト変換サービスの接続を構成するために、[{{site.data.keyword.conversationshort}} の動的構成を使用](/docs/services/voice-agent?topic=voice-agent-dynamic-donfig)できます。この方法では、アクション・タグと状態変数を使用してボイス・エージェントの構成を変更できます。
+別の方法として、処理中に音声テキスト変換サービスの接続を構成するために、[{{site.data.keyword.conversationshort}} の動的構成を使用](/docs/services/voice-agent?topic=voice-agent-dynamic-donfig)できます。 この方法では、アクション・タグと状態変数を使用してボイス・エージェントの構成を変更できます。
 
 ## {{site.data.keyword.iva_short}} から Google Speech-to-Text に接続する
 {: #stt_va}
@@ -33,7 +33,7 @@ _「管理」_ダッシュボードでボイス・エージェントを作成、
 
 1. _「音声認識テキスト」_サービス構成で、**「Google Speech to Text サービス・インスタンス」**を選択します。
 
-1. サービス・インスタンスの**「言語」**を選択します。
+1. サービス・インスタンスの**「言語」**を選択します。お好みの言語がドロップダウン・メニューのリストに含まれない場合、**「その他」**を選択して、[拡張構成](/docs/services/voice-agent?topic=voice-agent-third-party#advanced)でいつでも言語を設定できます。
 
 1. Google Cloud Speech-to-Text サービス資格情報を入力します。最大 3072 文字の制限があります。
   * [サービス・アカウントを設定 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account) するときに、Google Cloud Platform でサービス資格情報を JSON キーとして生成できます。 以下のサンプル・コードには、Google Cloud Platform で生成する資格情報フィールドの例が含まれています。
@@ -76,7 +76,7 @@ _「管理」_ダッシュボードでボイス・エージェントを作成、
 
 1. _Text to Speech_ サービス構成で、**「Google Text to Speech サービス・インスタンス (Google Text to Speech service instance)」**を選択します。
 
-1. サービス・インスタンスの**「言語」**と**「音声」**を選択します。
+1. サービス・インスタンスの**「言語」**と**「音声」**を選択します。お好みの言語がドロップダウン・メニューのリストに含まれない場合、**「その他」**を選択して、[拡張構成](/docs/services/voice-agent?topic=voice-agent-third-party#advanced)でいつでも言語を設定できます。
 
 1. Google Cloud Text-to-Speech サービス資格情報を入力します。最大 3072 文字の制限があります。
   * [サービス・アカウントを設定 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account) するときに、Google Cloud Platform でサービス資格情報を JSON キーとして生成できます。 以下のサンプル・コードには、Google Cloud Platform で生成する資格情報フィールドの例が含まれています。
@@ -97,6 +97,7 @@ _「管理」_ダッシュボードでボイス・エージェントを作成、
     ```
     {: codeblock}
 
+{: #advanced}
 1. **オプション** **「拡張を表示」**を選択して、Google によって定義された特殊な構成設定を、有効な JSON 形式で入力します。
   以下の例は、ドイツ語の女性音声に関する Google 構成設定を示しています。
 

@@ -21,6 +21,9 @@ subcollection: "voice-agent"
 IP 주소에 대한 화이트리스트를 작성하면 {{site.data.keyword.iva_short}} 또는 기타 제공자에 대한 피어링을 구성할 수 있습니다.
 {: shortdesc}
 
+화이트리스트 기능을 사용할 수 있도록 하려면 {{site.data.keyword.iva_short}} 인스턴스가 _표준_ 또는 _프리미엄_ 플랜에 **있어야** 합니다.
+{: tip}
+
 ## 화이트리스트에 IP 주소 추가
 {: #add_IP}
 

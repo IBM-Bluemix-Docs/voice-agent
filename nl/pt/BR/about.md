@@ -54,7 +54,7 @@ As etapas a seguir descrevem o fluxo da conversa.
 ### Arquitetura com um tronco SIP
 {: #arch-sip}
 
-É possível usar troncos SIP para rapidamente configurar e testar seu ambiente da rede telefônica pública. Ao se conectar a um agente de voz por meio de um tronco SIP, é necessário configurar o tronco SIP para redirecionar as solicitações INVITE para o agente de voz com base em seu endereço IP. É possível localizar seu endereço IP do servidor {{site.data.keyword.iva_short}} na página _Introdução_.
+É possível usar troncos SIP para rapidamente configurar e testar seu ambiente da rede telefônica pública. Ao se conectar a um agente de voz por meio de um tronco SIP, é necessário configurar o tronco SIP para redirecionar as solicitações INVITE para o agente de voz com base em seu endereço IP. É possível localizar o seu terminal de URI do SIP do {{site.data.keyword.iva_short}} na página _Introdução_.
 
 ![As chamadas fluem por meio de um tronco SIP para o agente de voz, que se comunica com os serviços do Watson por meio da API.](images/arch-sip.png)
 
@@ -79,6 +79,13 @@ para o serviço {{site.data.keyword.conversationshort}}
 Para saber mais sobre como implementar um mecanismo de orquestração de serviço, consulte as [amostras do mecanismo de orquestração de serviço em GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window}.
 
 **Importante**: para segurança de dados, assegure-se de usar uma URL segura para sua área de trabalho SOE usando `https:` em vez de `http:` e de requerer autenticação. Consulte [Segurança de informações e privacidade de dados](/docs/services/voice-agent?topic=voice-agent-infosec) para saber mais sobre considerações de segurança.
+
+### Arquitetura com mensagens digitais
+{: #arch-sms}
+
+É possível configurar um agente do SMS cognitivo com o qual os clientes podem interagir, trocando mensagens de SMS e de MMS. Usando um diálogo do serviço do IBM {{site.data.keyword.conversationshort}}, o agente do SMS pode guiar o cliente por meio de tarefas, responder perguntas e mais. Quando você se conectar a um agente do SMS, deverá configurar a URL de solicitação do SMS ou webhook, no provedor do SMS, que informa ao seu provedor do SMS para que local encaminhar as mensagens. É possível localizar o seu terminal de URI do SMS do {{site.data.keyword.iva_short}} na página _Introdução_.
+
+![As mensagens fluem por meio de um Provedor do SMS para o agente de voz, que se comunica com os serviços do Watson por meio da API.](images/arch-sms-mms.png)
 
 ## Recursos
 {: #features}

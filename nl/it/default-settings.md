@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 
 {{site.data.keyword.iva_full}} utilizza le seguenti impostazioni predefinite.
 
-| Nome impostazione | Valore predefinito |
+|Nome impostazione| Valore predefinito |
 |------|---------------|
 | Autenticazione token {{site.data.keyword.conversationshort}}| Abilitato |
 | Autenticazione token motore di orchestrazione del servizio (SOE)| Disabilitato |

@@ -33,7 +33,7 @@ subcollection: "voice-agent"
 
 1. 在您的 _Speech to Text_ 服務配置中，選擇 **Google Speech to Text 服務實例**。
 
-1. 為服務實例選擇**語言**。
+1. 為服務實例選擇**語言**。如果您偏好的語言未列在下拉功能表中，請一律選擇**其他**，透過[進階配置](/docs/services/voice-agent?topic=voice-agent-third-party#advanced)來進行設定。
 
 1. 輸入您的 Google Cloud Speech-to-Text 服務認證，最多限制為 3072 個字元。
   * 當您[設定服務帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account)，您可以在 Google Cloud Platform 中產生服務認證作為 JSON 金鑰。下列程式碼範例包含您在 Google Cloud Platform 上產生的範例認證欄位。
@@ -75,7 +75,7 @@ subcollection: "voice-agent"
 
 1. 在 _Text to Speech_ 服務配置中，選擇 **Google Text to Speech 服務實例**。
 
-1. 為服務實例選擇**語言**及**語音**。
+1. 為服務實例選擇**語言**及**語音**。如果您偏好的語言未列在下拉功能表中，請一律選擇**其他**，透過[進階配置](/docs/services/voice-agent?topic=voice-agent-third-party#advanced)來進行設定。
 
 1. 輸入您的 Google Cloud Text-to-Speech 服務認證，最多限制為 3072 個字元。
   * 當您[設定服務帳戶 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account)，您可以在 Google Cloud Platform 中產生服務認證作為 JSON 金鑰。下列程式碼範例包含您在 Google Cloud Platform 上產生的範例認證欄位。
@@ -96,6 +96,7 @@ subcollection: "voice-agent"
     ```
     {: codeblock}
 
+{: #advanced}
 1. **選用**：選取**顯示進階**，以有效的 JSON 格式輸出 Google 所定義的特殊配置設定。下列範例顯示針對女聲講德文的 Google 配置設定。
 
   如果您在服務配置中選取的語言與 `languageCode` 中定義的語言不同，{{site.data.keyword.iva_short}} 會將您的選項改寫為 `languageCode` JSON 配置所定義的語言。

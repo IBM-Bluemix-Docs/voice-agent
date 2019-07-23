@@ -40,7 +40,7 @@ Wenn Sie bereits über einen vorhandenen Sprachagenten verfügen, können Sie ei
 
 Der Sprachagent kann zwar mehrere Nummern enthalten, doch in der Zusammenfassung für den Agenten ist nur die **Primärnummer** für die Anzeige ausgewählt. Standardmäßig handelt es sich dabei um die erste Nummer, die zum Sprachagenten hinzugefügt wurde, und dient nur der Anzeige, ohne eine Funktion zu erfüllen. Wenn eine andere Nummer des Sprachagenten angezeigt werden soll, lesen Sie die Informationen in [Mehrere Nummern verwalten](/docs/services/voice-agent?topic=voice-agent-multi_num#primary_num).
 
-In der Zusammenfassung für den Sprachagenten können Sie alle Nummern anzeigen lassen. Erweitern Sie dazu die Zusammenfassung der Konfiguration und klicken Sie dann auf die Schaltfläche **Nummern anzeigen**. In einem neuen Dialogfeld namens **Verwalten** wird eine Liste aller Nummern angezeigt. Weitere Informationen zum Arbeiten mit dem Dialogfenster **Verwalten** finden Sie auf der Seite [Mehrere Nummern verwalten](/docs/services/voice-agent?topic=voice-agent-multi_num). 
+In der Zusammenfassung für den Sprachagenten können Sie alle Nummern anzeigen lassen. Erweitern Sie dazu die Zusammenfassung der Konfiguration und klicken Sie dann auf die Schaltfläche **Nummern anzeigen**. In einem neuen Dialogfeld namens **Verwalten** wird eine Liste aller Nummern angezeigt. Weitere Informationen zum Arbeiten mit dem Dialogfenster **Verwalten** finden Sie auf der Seite [Mehrere Nummern verwalten](/docs/services/voice-agent?topic=voice-agent-multi_num).
 
 ## Maximale Anzahl gleichzeitiger Verbindungen für Ihre Serviceinstanz bearbeiten
 {: #edit_service}

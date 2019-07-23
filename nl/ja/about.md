@@ -54,7 +54,7 @@ subcollection: "voice-agent"
 ### SIP トランクを使用するアーキテクチャー
 {: #arch-sip}
 
-SIP トランクを使用して、公衆電話網から環境を素早くセットアップし、テストすることができます。 SIP トランクを介してボイス・エージェントに接続するときは、INVITE 要求をボイス・エージェントに、その IP アドレスに基づいて転送するように SIP トランクを構成する必要があります。 {{site.data.keyword.iva_short}} サーバーの IP アドレスは、_「開始 (Getting started)」_ページに記載されています。
+SIP トランクを使用して、公衆電話網から環境を素早くセットアップし、テストすることができます。 SIP トランクを介してボイス・エージェントに接続するときは、INVITE 要求をボイス・エージェントに、その IP アドレスに基づいて転送するように SIP トランクを構成する必要があります。 {{site.data.keyword.iva_short}} SIP URI エンドポイントは_「開始 (Getting started)」_ページに記載されています。
 
 ![通話は SIP トランクを通ってボイス・エージェントに流れ、ボイス・エージェントは API を介して Watson サービスと通信します。](images/arch-sip.png)
 
@@ -76,6 +76,13 @@ SIP トランクを使用して、公衆電話網から環境を素早くセッ�
 サービス・オーケストレーション・エンジンを実装する方法について詳しくは、[GitHub のサービス・オーケストレーション・エンジンのサンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/WASdev/sample.voice.gateway/tree/master/soe){: new_window} を参照してください。
 
 **重要**: データ・セキュリティーの場合、`http:` ではなく `https:` を使用して、SOE ワークスペースにセキュア URL を使用していることを確認してください。また、認証が必要です。 セキュリティーに関する考慮事項の詳細については、[機密保護とデータ・プライバシー](/docs/services/voice-agent?topic=voice-agent-infosec)を参照してください。
+
+### デジタル・メッセージを使用するアーキテクチャー
+{: #arch-sms}
+
+SMS および MMS メッセージを交換することで顧客と対話できるコグニティブ SMS エージェントをセットアップすることができます。IBM {{site.data.keyword.conversationshort}} サービスのダイアログを使用して、SMS エージェントはタスクの実行手順について顧客を導いたり、質問に回答したり、その他の処理を行うことができます。SMS エージェントに接続するとき、SMS 要求 URL または Webhook を SMS プロバイダーで構成することにより、メッセージの転送先を SMS プロバイダーに指示する必要があります。{{site.data.keyword.iva_short}} SMS URI エンドポイントは_「開始 (Getting started)」_ページに記載されています。
+
+![メッセージが SMS プロバイダーを通ってボイス・エージェントに達し、ボイス・エージェントは API を介して Watson サービスと通信します。](images/arch-sms-mms.png)
 
 ## 機能
 {: #features}

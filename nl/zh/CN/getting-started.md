@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-03"
+  years: 2017, 2018, 2019
+lastupdated: "2019-06-24"
 
 keywords: voice agent, creating a SIP trunk, creating and connecting your voice agent,
 
@@ -22,11 +22,13 @@ subcollection: "voice-agent"
 {{site.data.keyword.iva_full}} 使用会话启动协议 (SIP)，帮助您将一组精心编排的 Watson 服务与电话网络进行集成。本教程介绍了如何设置可从任何电话进行呼叫的认知语音代理程序。
 {: shortdesc}
 
+新的 SMS 功能已添加到 {{site.data.keyword.iva_full_notm}}。配置 SMS 功能并不需要本页面上描述的所有过程。请参阅[语音代理程序入门教程](/docs/services/voice-agent?topic=voice-agent-connect-sms)，以获取有关如何将 SMS 与 {{site.data.keyword.iva_full_notm}} 连接的指示信息
+{: tip}
+
 观看本 [{{site.data.keyword.iva_full_notm}} 教程 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/tv/building-voice-enabled-cognitive-applications-with-watson/) 中有关如何创建第一个语音代理程序的演示。
 {: tip}
 
 如果您需要任何协助，请通过 Slack `#ibmvoicegateway` 通道下的 [IBM Cloud 技术 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://slack-invite-ibm-cloud-tech.mybluemix.net/) 团队联络我们。
-
 {: tip}
 
 ## 开始之前
@@ -66,7 +68,7 @@ subcollection: "voice-agent"
   * 单击**创建语音代理程序**，以使用缺省配置一步创建语音代理程序和所有服务。
   * 或者，分别单击每个服务名称来自行创建服务。然后，返回到 {{site.data.keyword.iva_short}} 并单独创建语音代理程序。
 
-   如果手动创建了 {{site.data.keyword.conversationshort}} 服务实例，请添加对话来测试语音代理程序。要快速开始测试，请从 GitHub 克隆[样本对话 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)，然后将该[样本作为技能导入](/docs/conversation?topic=services/conversation-configuring-a-watson-assistant-workspace#creating-workspaces)：
+   如果手动创建了 {{site.data.keyword.conversationshort}} 服务实例，请添加对话来测试语音代理程序。要快速开始测试，请从 GitHub 克隆[样本对话 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)，然后将该[样本作为技能导入](/docs/services/assistant?topic=assistant-skill-dialog-add)：
 
    1. 在样本对话 GitHub 页面上，单击行号 `1`，然后选择 **... > 复制行**。将复制的文本粘贴到一个文件中，然后将其另存为 JSON 文件，例如 `voice-gateway-conversation-en.json`。
    2. 启动 {{site.data.keyword.conversationshort}} 工具。在_技能_页面上，单击 ![导入工作空间](../conversation/images/workspace_import.png) 图标，并导入 JSON 文件。

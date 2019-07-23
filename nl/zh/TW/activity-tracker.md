@@ -28,7 +28,7 @@ subcollection: "voice-agent"
 
 下表列出產生事件的動作清單。
 
-|動作|說明|
+|動作|說明        |
 | --- | ---- |
 | `create agent: POST /config/submitconfig` |建立新的語音代理程式|
 | `update agent: POST /config/submitconfig` |更新語音代理程式|

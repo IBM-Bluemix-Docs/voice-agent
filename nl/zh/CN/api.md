@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 可以通过在 {{site.data.keyword.conversationfull}} 服务中定义操作标记和状态变量来控制语音代理程序的行为。操作标记用于启动语音代理程序在对话会话期间执行的操作。状态变量用于定义语音代理程序在整个对话期间持续保持的特征（除非另有更改）。
 {: shortdesc}
 
-{{site.data.keyword.iva_full}} 基于 IBM Voice Gateway，因此 API 的工作方式与之相同。如果您熟悉 Voice Gateway，那么可以在 {{site.data.keyword.conversationshort}} 对话中使用与 {{site.data.keyword.iva_short}} 相同的操作和状态变量。请参阅 [Voice Gateway API 中的操作标记和状态变量](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html)。
+{{site.data.keyword.iva_full}} 基于 IBM Voice Gateway，因此 API 的工作方式与之相同。如果您熟悉 Voice Gateway 和 SMS Gateway，那么可以在 {{site.data.keyword.conversationshort}} 对话中使用与 {{site.data.keyword.iva_short}} 相同的操作和状态变量。请分别参阅 [Voice Gateway API 中的操作标记和状态变量](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html)和 [SMS Gateway 的 API](https://www.ibm.com/support/knowledgecenter/SS4U29/sms_api.html)。
 {: tip}
 
 ## 在对话响应中编辑 JSON

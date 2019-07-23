@@ -59,9 +59,9 @@ subcollection: "voice-agent"
 
 * Watson サービス資格情報、URL、および {{site.data.keyword.conversationshort}} ワークスペース ID がすべて有効であること。
 * {{site.data.keyword.conversationshort}} スキルのダイアログが正しく作成されていること。
-  * 事前ビルドされたスキルとして、GitHub にある [会話サンプル ![外部リンクのアイコン](../../icons/launch-glyph.svg "外部リンクのアイコン")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)をインポートすることができます。 会話サンプルを JSON ファイルとして保存し、そのファイルを {{site.data.keyword.conversationshort}} ツールでスキルとしてインポートする方法について詳しくは、[*入門チュートリアル*のステップ 3](/docs/services/voice-agent?topic=voice-agent-getting-started-tutorial#step3) を参照してください。
+  * 事前ビルドされたスキルとして、GitHub にある [会話サンプル ![外部リンクのアイコン](../../icons/launch-glyph.svg "外部リンクのアイコン")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json)をインポートすることができます。 会話サンプルを JSON ファイルとして保存し、そのファイルを {{site.data.keyword.conversationshort}} ツールでスキルとしてインポートする方法について詳しくは、[*入門チュートリアル*のステップ 3](/docs/services/voice-agent?topic=voice-agent-getting-started#step3) を参照してください。
   * 独自の {{site.data.keyword.conversationshort}} ダイアログを作成した場合、`conversation_start` 条件を含むノードと、デフォルトの応答を含むノードがダイアログに含まれていることを確認してください。 詳しくは、{{site.data.keyword.conversationshort}} 資料の[ダイアログの作成](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog)を参照してください。
-* ボイス・エージェントの_「使用 (Usage)」_ダッシュボードに電話通話がリストされているかどうか確認してください。 電話通話の項目があれば、ボイス・エージェントは Watson サービスに接続されていることになります。
+* ボイス・エージェントの_使用状況_ダッシュボードに電話通話がリストされているかどうか確認してください。電話通話の項目があれば、ボイス・エージェントは Watson サービスに接続されていることになります。
 
 ### ボイス・エージェントの作成時に電話番号を指定できません。なぜでしょうか
 
@@ -70,3 +70,12 @@ subcollection: "voice-agent"
 ### 通話が頻繁に失敗する理由
 
 サービス・オーケストレーション・エンジン (SOE) が、長時間実行されるトランザクションを開始したためにタイミング良くボイス・エージェントに応答せず、通話が失敗した場合、ボイス・エージェントに問題が発生する可能性があります。 トランザクションがデフォルトの {{site.data.keyword.conversationshort}} タイムアウトを超過すると、通話は失敗します。 通話失敗を回避するために、SOE では、`vgwConversationResponseTimeout` 状態変数を使用してデフォルトの {{site.data.keyword.conversationshort}} タイムアウトを変更できます。 [{{site.data.keyword.conversationshort}} ダイアログで設定される変数](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html#variables-conv)を参照してください。
+
+
+### さまざまな制限事項
+
+* _「音声エージェントの作成」_ダッシュボードから直接的に新規作成できる Watson サービス・インスタンスは、**ダラス**または**ワシントン DC** 地域のサービス・インスタンスです。 ボイス・エージェントを他の地域の Watson サービスに接続する場合は、_「管理」_ ダッシュボードでボイス・エージェントを作成する前に Watson サービスを作成してください。
+
+* 公衆交換電話網 (PSTN) への接続のみがサポートされます。
+
+* この API を使用する {{site.data.keyword.conversationshort}} サービスですべてのボイス・エージェント構成を指定する必要があります。

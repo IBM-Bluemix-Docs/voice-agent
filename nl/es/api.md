@@ -20,7 +20,7 @@ subcollection: "voice-agent"
 Puede controlar el comportamiento del agente de voz definiendo etiquetas de acción y variables de estado desde el servicio {{site.data.keyword.conversationfull}}. Las etiquetas de acción inician acciones que el agente de voz realiza durante una sesión de conversación y las variables de estado definen características del agente de voz que se mantienen durante la conversación a no ser que se modifiquen.
 {: shortdesc}
 
-Puesto que {{site.data.keyword.iva_full}} se basa en IBM Voice Gateway, la API funciona del mismo modo. Si está familiarizado con Voice Gateway, puede utilizar las mismas acciones y variables de estado en los diálogos de {{site.data.keyword.conversationshort}} con {{site.data.keyword.iva_short}}. Consulte [Etiquetas de acción y variables de estado en la API de Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html).
+Puesto que {{site.data.keyword.iva_full}} se basa en IBM Voice Gateway, la API funciona del mismo modo. Si está familiarizado con Voice Gateway y SMS Gateway, puede utilizar las mismas acciones y variables de estado en los diálogos de {{site.data.keyword.conversationshort}} con {{site.data.keyword.iva_short}}. Consulte [Etiquetas de acción y variables de estado en la API de Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html) y [API para SMS Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/sms_api.html), respectivamente.
 {: tip}
 
 ## Edición de JSON en la respuesta del diálogo
