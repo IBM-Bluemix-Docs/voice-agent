@@ -20,11 +20,19 @@ subcollection: "voice-agent"
 Stay up-to-date with new features and updates that are available for {{site.data.keyword.iva_full}}.
 {: shortdesc}
 
+## July 2019
+
+- **Updated:  User interface updated for SMS-enabled voice agents**
+  
+  - **Voice + SMS** agents now support standalone **SMS** functionality under the same phone number that is used for integrated **Voice + SMS** service. For more information, see [Creating an SMS-enabled voice agent with SMS-only capabilities](/docs/services/voice-agent?topic=voice-agent-sms_voice_config_instance#sms_voice_inbound)
+
+- **Updated:  Voice Gateway driver updated to 1.0.2.1**
+
 ## June 2019
 
 - **Added:  Support for SMS Messaging** New as of:  _2019-06-24_
 
-  - {{site.data.keyword.iva_full}} now supports SMS functionality as a **Voice + SMS** agent, or a standalone **SMS** agent. Users can interact with their agent through SMS messaging. See [Creating an SMS-enabled voice agent](/docs/services/voice-agent?topic=voice-agent-sms_config_instance) for creating a _Voice + SMS_ agent, or [Creating an SMS agent](/docs/services/voice-agent?topic=voice-agent-config_sms_instance) for creating an _SMS_ agent.
+  - {{site.data.keyword.iva_full}} now supports SMS functionality as a **Voice + SMS** agent, or a standalone **SMS** agent. Users can interact with their agent through SMS messaging. See [Creating an SMS-enabled voice agent](/docs/services/voice-agent?topic=voice-agent-sms_config_instance) for creating a _Voice + SMS_  agent, or [Creating an SMS agent](/docs/services/voice-agent?topic=voice-agent-config_sms_instance) for creating an _SMS_ agent.
 
 - **Updated:  Voice Gateway driver updated to 1.0.1.**
 

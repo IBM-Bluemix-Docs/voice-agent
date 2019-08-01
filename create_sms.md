@@ -36,7 +36,7 @@ After you have created your {{site.data.keyword.iva_full}} service, you can crea
    * Alternatively, you can connect to other sources of a {{site.data.keyword.conversationshort}} dialog or to connect with a SOE by changing the [**Service type**](/docs/services/voice-agent?topic=voice-agent-other_service#other_service).
    * If you want to configure multiple service locations, click the other location option and select **Enable location** to configure the connection to your other {{site.data.keyword.conversationshort}} instance. For more information, see [Adding multiple Watson service locations](/docs/services/voice-agent?topic=voice-agent-disaster-recovery#add_location).
 
-1. Check the **Initiate conversation from inbound messages** box to allow users to begin an SMS session with your SMS agent.
+1. Check the **Initiate conversation from inbound messages** box if you want to allow users to begin an SMS session with your SMS agent.
 
 1. Check the **Notify on session timeout** box to have your SMS agent send an SMS message to the user, alerting them that the agent has not received a response in some time and will now time out. 
 

@@ -16,7 +16,7 @@ subcollection: "voice-agent"
 # Creating an SMS-enabled voice agent
 {: #sms_voice_config_instance}
 
-After you have created your {{site.data.keyword.iva_full}} service, you can create individual voice agents with SMS functionality, or voice agents with only SMS capabilities, from the _Manage_ dashboard. You can configure your {{site.data.keyword.iva_full}} to receive inbound voice calls and respond with SMS outbound messages, depending on the voice command received by the user. To configure, add a node and intent in your {{site.data.keyword.conversationshort}} service.
+After you have created your {{site.data.keyword.iva_full}} service, you can create individual voice agents with SMS functionality from the _Manage_ dashboard. You can configure your {{site.data.keyword.iva_full}} to receive inbound voice calls and respond with SMS outbound messages, depending on what type of response the user requests. To configure, add a node and intent in your {{site.data.keyword.conversationshort}} service.
 {: shortdesc}
 
 
@@ -24,17 +24,11 @@ After you have created your {{site.data.keyword.iva_full}} service, you can crea
 
 1. For **Agent Type**, select _Voice + SMS_.
 
-1. Follow the instructions in [creating a voice agent](/docs/services/voice-agent?topic=voice-agent-config_instance).
+1. Follow the instructions in [Creating a voice agent](/docs/services/voice-agent?topic=voice-agent-config_instance).
 
-1. Check the **Initiate conversation from inbound messages** box to allow users to begin an SMS session with your SMS agent.
+1. Complete the **SMS Provider** section.
 
-1. Check **Notify on session timeout** to have your SMS agent send an SMS message to the user, alerting them that the agent has not received a response in some time and will now timeout. 
-
-   - See [Advanced Options](/docs/services/voice-agent?topic=voice-agent-sms_config_instance#sms_advanced) for more information on the **Advanced Options** available for your SMS agent, such as setting a custom time for the session to time out.
-
-1. Follow instructions in [creating an SMS agent](/docs/services/voice-agent?topic=voice-agent-sms_config_instance) to create an SMS agent.
-
-1. _**NOTE:**_ For an agent to have both Voice and SMS integration, such as receiving Voice input and sending back an SMS outbound message for a reply, you **must** use a one of your **voice** numbers for the **SMS** agent.
+1. _**NOTE:**_ The Advanced SMS features section is not required to enable basic Voice and SMS integration, such as the capability to reply to an inbound voice message with an outbound SMS message. This section provides additional SMS functionality. For more information, see [Creating an SMS-enabled voice agent with SMS-only capabilities](/docs/services/voice-agent?topic=voice-agent-sms_voice_config_instance#sms_voice_inbound).
 
 ### Configuring Watson Assistant for Voice and SMS integration
 {: #sms_outbound}
@@ -47,7 +41,7 @@ After you have created your {{site.data.keyword.iva_full}} service, you can crea
 
 1. In the _If assistant recognizes:_ section, select the **outbound SMS intent** attribute that you previously created.
 
-1. Add the response to the node. Copy and paste the following code snippet to replace the code in the field.
+1. Find the outbound SMS intent that was created in the previous step. Add the response to the node. Copy and paste the following code snippet to replace the code in the field.
 
     ```json
         {
@@ -74,7 +68,17 @@ After you have created your {{site.data.keyword.iva_full}} service, you can crea
     ```
     {: codeblock}
 
-
 1. Call your agent and trigger the node to receive a text message on the phone that you are calling from. 
 
 To learn more about working in the {{site.data.keyword.conversationshort}} service, see [About {{site.data.keyword.conversationshort}}](/docs/services/assistant?topic=assistant-index#indext).
+
+## Creating an SMS-enabled voice agent with SMS-only capabilities
+{: #sms_voice_inbound}
+
+These settings enable standalone SMS-only sessions, which are not initiated through a voice call, under the same number that is used for integrated Voice+SMS service. This section allows for a separate {{site.data.keyword.conversationshort}} and {{site.data.keyword.cloudant_short_notm}} to be used for SMS-only sessions. NOTE: These settings do not apply to SMS sessions initiated through voice calls.
+
+1. Enable **Allow SMS only conversation**.
+
+1. Enable **Initiate conversation from inbound messages** if you wish sessions to be initiated from inbound messages. If this option is not enabled, these settings only apply when a session is initiated by using the REST API.
+
+1. Follow instructions in [Creating an SMS agent](/docs/services/voice-agent?topic=voice-agent-sms_config_instance) to create an SMS agent.
