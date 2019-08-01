@@ -71,6 +71,9 @@ See whether the phone number you specified is used by an existing voice agent. Y
 
 Voice agents can have problems when calls fail because a Service Orchestration Engine (SOE) initiates a long transaction, and it does not respond to your voice agent in a timely manner. If a transaction exceeds the default {{site.data.keyword.conversationshort}} timeout, the call fails. To avoid call failures, the SOE can modify the default {{site.data.keyword.conversationshort}} timeout using the `vgwConversationResponseTimeout` state variable. See [Variables set in the {{site.data.keyword.conversationshort}} dialog](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html#variables-conv).
 
+### Why do I receive `vgwNetworkWarningMessage` messages in the Watson Assistant dialog?
+
+The  `vgwNetworkWarningMessage` message indicates that a network error condition occurred. For more information, see [Monitoring RTP audio streams by using RTCP](https://www.ibm.com/support/knowledgecenter/SS4U29/rtcpnetworkmonitor.html). To discontinue conversational turns when a network error condition occurs,  disable the `Notify Watson Assistant on network events` option on the Edit Voice Agent page. Under the `Description` field, click `Show Advanced` and uncheck the `Notify Watson Assistant on network events` option.
 
 ### Various Limitations
 
