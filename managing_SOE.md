@@ -3,6 +3,8 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-12"
+
+keywords: SOE, service orchestration engine, SOE workspace
 subcollection: "voice-agent"
 
 
@@ -26,13 +28,13 @@ You can connect to a {{site.data.keyword.conversationshort}} workspace through a
 ## Configuring a connection to an SOE
 {: #how-to-SEO}
 
-1. In the _Voice agent_ tab on the _Manage_ page for your voice agent, navigate to the {{site.data.keyword.conversationshort}} configuration section.
+1. In the _Voice agent_ tab on the _Manage_ page for your voice agent, go to the {{site.data.keyword.conversationshort}} configuration section.
 
 1. Choose **Service orchestration engine** as your **Service type**.
 
 1. Select the **Region** for your **Service type**.
 
-1. In the **URL** field, enter the full URL to your SOE workspace, such as `https://iva-soesample.myorg.net/SOE/myWorkspace`. Up to 256 characters may be entered for the URL.
+1. In the **URL** field, enter the full URL to your SOE workspace, such as `https://iva-soesample.myorg.net/SOE/myWorkspace`. Up to 256 characters can be entered for the URL.
 
   **Important**: For data security, make sure that you use a secure URL for your SOE workspace, by using `https:` instead of `http:`, and require authentication. See [Information security and data privacy](/docs/services/voice-agent?topic=voice-agent-infosec) to learn more about security considerations.
 

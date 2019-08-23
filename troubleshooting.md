@@ -3,6 +3,9 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-14"
+
+keywords: troubleshooting, support, faq, help
+
 subcollection: "voice-agent"
 ---
 
@@ -26,7 +29,7 @@ To troubleshoot issues with your voice agents, you can use logging, usage, and e
 
 1. When a call fails, the final {{site.data.keyword.conversationshort}} turn might explain the failure.
 
-1. Usage logs show you any errors that might have occurred during a particular call. See [Viewing usage and call logs](/docs/services/voice-agent?topic=voice-agent-logging).
+1. Usage logs show you any errors that occurred during a particular call. See [Viewing usage and call logs](/docs/services/voice-agent?topic=voice-agent-logging).
 
 1. Check your service provider logs for signaling errors. For example, Twilio provides logs for each SIP trunk it hosts.
 
@@ -44,7 +47,7 @@ If you need help, join our developer community by posting your questions or comm
 * Post on [StackOverflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/tagged/voice-agent){: new_window} with the `voice-agent` tag
 * Find us on Slack in the [IBM Cloud Technology ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://slack-invite-ibm-cloud-tech.mybluemix.net/) team under the `#ibmvoicegateway` channel
 
-**Remember**: Before you post any logs or records of calls, remove all personal information that your callers and users might have shared during conversation.
+**Remember**: Before you post any logs or records of calls, remove all personal information that your callers and users shared during conversation.
 
 ## Troubleshooting tips
 {: #troubleshooting-tips}
@@ -69,11 +72,11 @@ See whether the phone number you specified is used by an existing voice agent. Y
 
 ### Why are my calls failing frequently?
 
-Voice agents can have problems when calls fail because a Service Orchestration Engine (SOE) initiates a long transaction, and it does not respond to your voice agent in a timely manner. If a transaction exceeds the default {{site.data.keyword.conversationshort}} timeout, the call fails. To avoid call failures, the SOE can modify the default {{site.data.keyword.conversationshort}} timeout using the `vgwConversationResponseTimeout` state variable. See [Variables set in the {{site.data.keyword.conversationshort}} dialog](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html#variables-conv).
+Voice agents can have problems when calls fail because a Service Orchestration Engine (SOE) initiates a long transaction, and it does not respond to your voice agent in a timely manner. If a transaction exceeds the default {{site.data.keyword.conversationshort}} timeout, the call fails. To avoid call failures, the SOE can modify the default {{site.data.keyword.conversationshort}} timeout by using the `vgwConversationResponseTimeout` state variable. See [Variables set in the {{site.data.keyword.conversationshort}} dialog](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html#variables-conv).
 
 ### Why do I receive `vgwNetworkWarningMessage` messages in the Watson Assistant dialog?
 
-The  `vgwNetworkWarningMessage` message indicates that a network error condition occurred. For more information, see [Monitoring RTP audio streams by using RTCP](https://www.ibm.com/support/knowledgecenter/SS4U29/rtcpnetworkmonitor.html). To discontinue conversational turns when a network error condition occurs,  disable the `Notify Watson Assistant on network events` option on the Edit Voice Agent page. Under the `Description` field, click `Show Advanced` and uncheck the `Notify Watson Assistant on network events` option.
+The  `vgwNetworkWarningMessage` message indicates that a network error condition occurred. For more information, see [Monitoring RTP audio streams by using RTCP](https://www.ibm.com/support/knowledgecenter/SS4U29/rtcpnetworkmonitor.html). To discontinue conversational turns when a network error condition occurs, disable the `Notify Watson Assistant on network events` option on the Edit Voice Agent page. Under the `Description` field, click `Show Advanced` and clear the `Notify Watson Assistant on network events` option.
 
 ### Various Limitations
 

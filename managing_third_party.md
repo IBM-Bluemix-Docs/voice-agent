@@ -3,6 +3,9 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-16"
+
+keywords: thrid party, google cloud platform, text service
+
 subcollection: "voice-agent"
 
 
@@ -19,24 +22,24 @@ subcollection: "voice-agent"
 # Connecting with third-party speech and text services
 {: #third-party}
 
-You can connect third-party speech and text services when creating, cloning, or editing your voice agent on the _Manage_ dashboard.
+You can connect third-party speech and text services when you are creating, cloning, or editing your voice agent on the _Manage_ dashboard.
 {: shortdesc}
 
-Alternatively, to configure your speech and text service connections on the fly, you can [use dynamic configuration with {{site.data.keyword.conversationshort}}](/docs/services/voice-agent?topic=voice-agent-dynamic-donfig). This allows you to change your voice agent configuration with action tags and state variables.
+Alternatively, to configure your speech and text service connections as needed, you can [use dynamic configuration with {{site.data.keyword.conversationshort}}](/docs/services/voice-agent?topic=voice-agent-dynamic-donfig). This  configuration allows you to change your voice agent configuration with action tags and state variables.
 
 ## Connecting to Google Speech-to-Text from {{site.data.keyword.iva_short}}
 {: #stt_va}
 
 Instead of using a {{site.data.keyword.speechtotextfull}} instance, you can choose to connect your voice agent to a third-party speech to text service, such as [Google Cloud Speech-to-Text ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/speech-to-text/).
 
-1. Navigate to the _Voice agents_ tab on your _Manage_ dashboard, and select either **Edit** an existing voice agent or **Create new voice agent**.
+1. Go to the _Voice agents_ tab on your _Manage_ dashboard, and select either **Edit** an existing voice agent or **Create new voice agent**.
 
 1. In your _Speech to Text_ service configuration, choose **Google Speech to Text service instance**.
 
 1. Choose the **Language** for your service instance. If your preferred language is not listed in the dropdown menu, you can always choose **Other** and set it through [advanced configuration](/docs/services/voice-agent?topic=voice-agent-third-party#advanced).
 
 1. Enter your Google Cloud Speech-to-Text service credentials, with a limit up to 3072 characters.
-  * You can generate your service credentials in the Google Cloud Platform as a JSON key when you [set up a service account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). The following code example contains the sample credential fields you generate on the Google Cloud Platform.
+  * You can generate your service credentials in the Google Cloud Platform as a JSON key when you [set up a service account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). The following code example contains the sample credential fields that you generate on the Google Cloud Platform.
 
     ```json
     {
@@ -64,7 +67,7 @@ Instead of using a {{site.data.keyword.speechtotextfull}} instance, you can choo
   ```
   {: codeblock}
 
-  If you select a language in the service configuration that is different from the language you define in `languageCode`, {{site.data.keyword.iva_short}} overwrites your selection with the language defined by the `languageCode` JSON configuration.
+  If you select a language in the service configuration that is different from the language you define in `languageCode`, {{site.data.keyword.iva_short}} overwrites your selection with the language that is defined by the `languageCode` JSON configuration.
   {: tip}
 
 ## Connecting to Google Text-to-Speech from {{site.data.keyword.iva_short}}
@@ -72,14 +75,14 @@ Instead of using a {{site.data.keyword.speechtotextfull}} instance, you can choo
 
 Instead of using a {{site.data.keyword.texttospeechfull}} instance, you can choose to connect your voice agent to a third-party speech to text service, such as [Google Cloud Text-to-Speech ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/text-to-speech/).
 
-1. Navigate to the _Voice agents_ tab on your _Manage_ dashboard, and select either **Edit** an existing voice agent or **Create new voice agent**.
+1. Go to the _Voice agents_ tab on your _Manage_ dashboard, and select either **Edit** an existing voice agent or **Create new voice agent**.
 
-1. In your _Text to Speech_ service configuration, choose **Google Text to Speech service instance**.
+1. In your _Text to Speech Service configuration, choose **Google Text to Speech Service instance**.
 
 1. Choose the **Language** and **Voice** for your service instance. If your preferred language is not listed in the dropdown menu, you can always choose **Other** and set it through [advanced configuration](/docs/services/voice-agent?topic=voice-agent-third-party#advanced).
 
-1. Enter your Google Cloud Text-to-Speech service credentials, with a limit up to 3072 characters.
-  * You can generate your service credentials in the Google Cloud Platform as a JSON key when you [set up a service account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). The following code example contains the sample credential fields you generate on the Google Cloud Platform.
+1. Enter your Google Cloud Text to Speech Service credentials, with a limit up to 3072 characters.
+  * You can generate your service credentials in the Google Cloud Platform as a JSON key when you [set up a service account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). The following code example contains the sample credential fields that you generate on the Google Cloud Platform.
 
     ```json
     {
@@ -99,9 +102,9 @@ Instead of using a {{site.data.keyword.texttospeechfull}} instance, you can choo
 
 {: #advanced}
 1. **Optional** Select **Show Advanced** to enter special configuration settings defined by Google in a valid JSON format.
-  The following example shows the Google configuration settings for a female voice speaking German.
+  The following example shows the Google configuration settings for a female voice that is speaking German.
 
-  If you select a language in the service configuration that is different from the language you define in `languageCode`, {{site.data.keyword.iva_short}} overwrites your selection with the language defined by the `languageCode` JSON configuration.
+  If you select a language in the service configuration that is different from the language you define in `languageCode`, {{site.data.keyword.iva_short}} overwrites your selection with the language that is defined by the `languageCode` JSON configuration.
   {: tip}
 
   ```json

@@ -3,6 +3,9 @@
 copyright:
   years: 2019
 lastupdated: "2019-02-15"
+
+keywords: SIP trunk, SIP trunking provider, 
+
 subcollection: "voice-agent"
 
 ---
@@ -36,9 +39,9 @@ You can choose the SIP trunk provider that you use to integrate with {{site.data
 
   1. Create a Nexmo account on the [Nexmo website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://dashboard.nexmo.com/sign-up){: new_window}.
 
-  1. Follow the README instructions at the Nexmo [github repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/nexmo-community/watson-voice-agent){: new_window}. The github repository contains a getting started sample.
+  1. Follow the readme file instructions at the Nexmo [GitHub repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/nexmo-community/watson-voice-agent){: new_window}. The GitHub repository contains a getting started sample.
 
-  1. Once your Nexmo phone number is provisioned and your application is running, configure your Voice Agent with the Nexmo phone number.
+  1. After your Nexmo phone number is provisioned and your application is running, configure your Voice Agent with the Nexmo phone number.
 
   1. Test your configuration by calling your Nexmo phone number.
 
@@ -54,11 +57,11 @@ You can choose the SIP trunk provider that you use to integrate with {{site.data
 
 1. Select a region that you want the number to be from.
 
-  **Note:** Check Netfoundry website for available regions. New regions are added continuously.
+  **Note:** Check Net foundry website for available regions. New regions are added continuously.
 
 1. Click **Purchase** and follow the on-screen instructions to complete the purchase.
 
-1. Once the payment successfully processes, your SIP trunk phone number is displayed in your account.
+1. After the payment successfully processes, your SIP trunk phone number is displayed in your account.
 
 You need this phone number to set up your voice agent and configure call transfer, including the country and area codes. See [Creating and connecting your voice agent](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
@@ -78,17 +81,17 @@ You need this phone number to set up your voice agent and configure call transfe
 
   1. From the Elastic SIP Trunks page, select your SIP trunk.
 
-  1. Select **Origination** from the navigation bar for your SIP trunk and configure the origination SIP URI. You can include multiple host names to prevent service failures by selecting the **+** icon.
+  1. Select **Origination** from the navigation bar for your SIP trunk and configure the origination SIP URI. You can include multiple hostnames to prevent service failures by selecting the **+** icon.
 
-  The IP address or the host name is the value that you noted on the _Getting Started_ dashboard of your {{site.data.keyword.iva_short}} service instance. When you configure the origination URI, it must be in SIP URI format, such as `sip:us-south.voiceagent.cloud.ibm.com/`. By including multiple host names or IP addresses, if the first host endpoint fails or is out of service, your SIP trunk provider directs calls to the next listed host name.
+  The IP address or the hostname is the value that you noted on the _Getting Started_ dashboard of your {{site.data.keyword.iva_short}} service instance. When you configure the origination URI, it must be in SIP URI format, such as `sip:us-south.voiceagent.cloud.ibm.com/`. By including multiple hostnames or IP addresses, if the first host endpoint fails or is out of service, your SIP trunk provider directs calls to the next listed hostname.
 
   1. Select **Numbers** from the navigation bar for your SIP trunk. Then, create a phone number and assign it to your SIP trunk.
 
-  On the Numbers page, click **Buy a Number** or, if you already have a number, click the **+** icon. A panel displays where you can provision a new phone number in your region. Assign the number to the SIP trunk you created by going back to the SIP trunk and clicking the Number icon.
+  On the Numbers page, click **Buy a Number** or, if you already have a number, click the **+** icon. A window displays where you can provision a new phone number in your region. Assign the number to the SIP trunk you created by going back to the SIP trunk and clicking the Number icon.
 
   You need this phone number to set up your voice agent, including the country and area codes. See [Creating and connecting your voice agent](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
-  **NOTE**: If you use a Lite/Trial Twilio account to test transfers on {{site.data.keyword.iva_short}}, then you will need to make sure to _verify_ the transfer target. See more instructions on [Twilio's official site](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
+  **NOTE**: If you use a Lite or Trial Twilio account to test transfers on {{site.data.keyword.iva_short}}, then make sure to _verify_ the transfer target. See more instructions on [Twilio's official site](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
 
 ## Connecting with Voximplant
 {: #voximplant-setup}
@@ -125,7 +128,7 @@ You need this phone number to set up your voice agent and configure call transfe
 
 1. Go to the _Manage_ dashboard and select the _Instance_ tab.
 
-1. Click **Add a new IP** icon to whitelist a new IP address .
+1. Click **Add a new IP** icon to whitelist a new IP address.
 
 1. Add an **IP Nickname** and the **IP Address**.
 
@@ -166,4 +169,4 @@ You can whitelist a PBX such as Asterisk in your {{site.data.keyword.iva_short}}
   * {{site.data.keyword.Bluemix_notm}} account ID
   * Your {{site.data.keyword.iva_short}} service dashboard URL
   * Use Case
-  * Network diagram with IP address or SIP trunk provider info
+  * Network diagram with IP address or SIP trunk provider information

@@ -3,6 +3,9 @@
 copyright:
   years: 2019
 lastupdated: "2019-06-17"
+
+keywords: pricing, cost, faq, inbound message, minutes, call
+
 subcollection: "voice-agent"
 
 
@@ -35,14 +38,14 @@ The price is based on the amount (number of minutes) of audio that you send to t
 {: #faq-pricing-two}
 {: faq}
 
-'{{site.data.keyword.IBM_notm}} does not calculate the length of the audio for every API call that the service receives to the nearest minute. Instead, {{site.data.keyword.IBM_notm}} aggregates usage for the month and then calculates to the nearest minute at the end of the month. The duration of each call is rounded up to the nearest second. For example, if you make the first call for 3.1 sec and the second call for 25.9 sec, {{site.data.keyword.IBM_notm}} calculates the first call for 4 sec and the second call for 26 sec. Then the duration of the total audio is calculated to one minute.'
+'{{site.data.keyword.IBM_notm}} does not calculate the length of the audio for every API call that the service receives to the nearest minute. Instead, {{site.data.keyword.IBM_notm}} aggregates usage for the month and then calculates to the nearest minute at the end of the month. The duration of each call is rounded up to the nearest second. For example, if you make the first call for 3.1 sec and the second call for 25.9 sec, {{site.data.keyword.IBM_notm}} calculates the first call for 4 sec and the second call for 26 sec. Then, the duration of the total audio is calculated to one minute.'
 
 
 ## How is concurrent connection calculated and where is it applied?
 {: #faq-pricing-three}
 {: faq}
 
-The concurrent connection is applicable to voice call only(Not SMS). Concurrent connection is calculated as the number of connections to any phone numbers defined in the service instance simultaneously. Actual daily maximum number of concurrent connections used are billed, prorated based on the monthly charge.
+The concurrent connection is applicable to voice call only(Not SMS). Concurrent connection is calculated as the number of connections to any phone numbers defined in the service instance simultaneously. Actual daily maximum number of concurrent connections that are used is billed, prorated based on the monthly charge.
 
 ## What's the definition of maximum concurrent connection and how to change it?
 

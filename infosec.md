@@ -3,6 +3,9 @@
 copyright:
   years: 2018
 lastupdated: "2018-11-16"
+
+keywords: security, privacy, data, governance, secure connections, information security
+
 subcollection: "voice-agent"
 
 ---
@@ -18,20 +21,20 @@ subcollection: "voice-agent"
 # Information security and data privacy
 {: #infosec}
 
-IBM is committed to providing our clients and partners with innovative data privacy, security and governance solutions.
+IBM is committed to providing our clients and partners with innovative data privacy, security, and governance solutions.
 {: shortdesc}
 
 ## Information handling and configuration options
 {: #configure_infosec}
 
-To operate the service and optimize the user experience, {{site.data.keyword.iva_short}} will collect and store a minimal set of Personal Information (PI) which is handled in accordance with our [Data Processing Addendum (DPA)](https://www.ibm.com/support/customer/csol/terms/){: new_window} and [DPA Exhibit](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=00C4CE004FA711E7AA10752A2F494A7C){: new_window}. {{site.data.keyword.iva_short}} does not store, collect, or process data that is part of any voice or SMS conversations. Instead, the data is routed to different services for processing. During conversation, users might share information that contains Protected Health Information (PHI), personally identifiable information (PII), or PCI Data Security Standard (PCI DSS) data. See [Architecture](/docs/services/voice-agent?topic=voice-agent-about#architecture){: new_window} to learn more about the conversation flow and architecture of {{site.data.keyword.iva_short}}.
+To operate the service and optimize the user experience, {{site.data.keyword.iva_short}} collects and stores a minimal set of Personal Information (PI) which is handled in accordance with our [Data Processing Addendum (DPA)](https://www.ibm.com/support/customer/csol/terms/){: new_window} and [DPA Exhibit](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=00C4CE004FA711E7AA10752A2F494A7C){: new_window}. {{site.data.keyword.iva_short}} does not store, collect, or process data that is part of any voice or SMS conversations. Instead, the data is routed to different services for processing. During conversation, users might share information that contains Protected Health Information (PHI), personally identifiable information (PII), or PCI Data Security Standard (PCI DSS) data. See [Architecture](/docs/services/voice-agent?topic=voice-agent-about#architecture){: new_window} to learn more about the conversation flow and architecture of {{site.data.keyword.iva_short}}.
 
 Consider the following features when you configure your voice agent instance to support data privacy and secure handling.
 
 ### Call transfer
 {:  #calltransfer_infosec}
 
-When adding call transfer capabilities to your voice agent, you provide a phone number when you configure the transfer target SIP URI. Users should not provide a personal phone number for this transfer target.
+When you add call transfer capabilities to your voice agent, you provide a phone number when you configure the transfer target SIP URI. Users should not provide a personal phone number for this transfer target.
 
 See [Setting up call transfer](/docs/services/voice-agent?topic=voice-agent-call-transfer) to learn about configuring your SIP Trunk and SIP URI for call transfer.
 
@@ -47,9 +50,9 @@ See [**{{site.data.keyword.cloudant_short_notm}}: Security**](/docs/services/Clo
 ### Text to Speech caching
 {: #tts_caching}
 
-To converse with customers, {{site.data.keyword.conversationshort}} crafts responses as text, which are passed to the {{site.data.keyword.texttospeechshort}} service and spoken aloud in {{site.data.keyword.iva_short}}. The responses that {{site.data.keyword.conversationshort}} creates might contain sensitive information. To prevent the {{site.data.keyword.iva_short}} from caching responses received from the {{site.data.keyword.texttospeechshort}} service that contain personal data, you can enable the `vgwActExcludeFromTTSCache` action command to exclude utterances that contain certain types of information from being cached. See [Programming voice agents using the API](/docs/services/voice-agent?topic=voice-agent-api#action-sequences).
+To converse with customers, {{site.data.keyword.conversationshort}} crafts text responses, which are passed to the {{site.data.keyword.texttospeechshort}} service and spoken aloud in {{site.data.keyword.iva_short}}. The responses that {{site.data.keyword.conversationshort}} creates might contain sensitive information. To prevent the {{site.data.keyword.iva_short}} from caching responses received from the {{site.data.keyword.texttospeechshort}} service that contain personal data, you can enable the `vgwActExcludeFromTTSCache` action command to exclude utterances that contain certain types of information from being cached. See [Programming voice agents by using the API](/docs/services/voice-agent?topic=voice-agent-api#action-sequences).
 
-Once your Voice Agent instance is deleted, the TTS cache will be cleared in 24 hours. This is referred to as the `TTS cache timeout value`.
+After your Voice Agent instance is deleted, the TTS cache is cleared in 24 hours. This value is referred to as the `TTS cache timeout value`.
 
 ### Secure connections
 {: #secure_trunking}
@@ -61,7 +64,7 @@ By default, SMS data is encrypted with TLS. See [Voice Gateway: Data Processing]
 ### Service orchestration engine (SOE) configuration
 {: #SOE_config}
 
-You can use a Service Orchestration Engine (SOE) to process information passing between {{site.data.keyword.iva_short}} and {{site.data.keyword.conversationshort}} to customize conversation with callers. To maintain secure connections, ensure that you configure your SOE by using a secure URL, `https`, and user authentication.
+You can use a Service Orchestration Engine (SOE) to process information that is passing between {{site.data.keyword.iva_short}} and {{site.data.keyword.conversationshort}} to customize conversation with callers. To maintain secure connections, ensure that you configure your SOE by using a secure URL, `https`, and user authentication.
 
 See [Configuring {{site.data.keyword.conversationshort}} for your voice agent](/docs/services/voice-agent?topic=voice-agent-conversation_va#conversation_va) and [Architecture with a service orchestration engine](/docs/services/voice-agent?topic=voice-agent-about#arch-soe).
 
@@ -71,7 +74,7 @@ See [Configuring {{site.data.keyword.conversationshort}} for your voice agent](/
 ### Data handling
 {: #data_handling}
 
-{{site.data.keyword.iva_short}} does not store, collect, or process SMS data. MMS images are stored outside of our service and are handled by the service provider. Customers must refer to the security/privacy agreement of their SMS provider. {{site.data.keyword.iva_short}} only handles textual links to the images that are embedded in the SMS messages.
+{{site.data.keyword.iva_short}} does not store, collect, or process SMS data. MMS images are stored outside of our service and are handled by the service provider. Customers must refer to the security and privacy agreement of their SMS provider. {{site.data.keyword.iva_short}}  handles only textual links to the images that are embedded in the SMS messages.
 
 When a service orchestration engine or {{site.data.keyword.conversationshort}} sends an MMS message to the user (with or without an SMS text message), one or more publicly accessible media URLs are sent to Twilio. Twilio does not support non-public URLs. Users should avoid sending sensitive or personal information through MMS.
 
@@ -80,12 +83,12 @@ When a service orchestration engine or {{site.data.keyword.conversationshort}} s
 ### Authentication
 {: #authentication}
 
-Inbound SMS messages are secured with the service provider through the use of [IAM authentication](/docs/services/voice-agent?topic=voice-agent-iam#sms_access){: new_window}.
+Inbound SMS messages are secured with the service provider by using [IAM authentication](/docs/services/voice-agent?topic=voice-agent-iam#sms_access){: new_window}.
 
 ## Services related to {{site.data.keyword.iva_short}}
 {: #related_services}
 
-{{site.data.keyword.iva_short}} orchestrates different {{site.data.keyword.Bluemix_notm}} services to coordinate communication between end users and cloud based cognitive services. {{site.data.keyword.iva_short}} itself does not store, collect or process data in a manner that violates end user rights. However, depending on how you configure the related services, these integrated services might collect Protected Health Information (PHI), personally identifiable information (PII), or PCI Data Security Standard (PCI DSS) data that users share during conversation. To learn about {{site.data.keyword.iva_short}} architecture and conversation flow, see [Architecture](/docs/services/voice-agent?topic=voice-agent-about#architecture){: new_window}.
+{{site.data.keyword.iva_short}} orchestrates different {{site.data.keyword.Bluemix_notm}} services to coordinate communication between users and cloud based cognitive services. {{site.data.keyword.iva_short}} itself does not store, collect, or process data in a manner that violates user rights. However, depending on how you configure the related services, these integrated services might collect Protected Health Information (PHI), personally identifiable information (PII), or PCI Data Security Standard (PCI DSS) data that users share during conversation. To learn about {{site.data.keyword.iva_short}} architecture and conversation flow, see [Architecture](/docs/services/voice-agent?topic=voice-agent-about#architecture){: new_window}.
 
 See the following resources to find considerations for each service and {{site.data.keyword.Bluemix_notm}}.
 

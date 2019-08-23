@@ -3,6 +3,9 @@
 copyright:
   years: 2018
 lastupdated: "2018-06-14"
+
+keywords: Secure Real Time Transport Protocol, SRTP, trunking, SIP trunk, SIP messages
+
 subcollection: "voice-agent"
 
 ---
@@ -42,7 +45,7 @@ If you want to encrypt only SIP messages in {{site.data.keyword.iva_short}} with
 
 1. Choose the trunk that you want to add call transfer to by either selecting an existing trunk or creating a new one by clicking the **+** icon.
 
-1. Select **Origination** from the menu and enter the following secure origination URIs, one at a time. By including multiple host names or IP addresses, if the first host endpoint fails or is out of service, your SIP trunk provider directs calls to the next listed host name.
+1. Select **Origination** from the menu and enter the following secure origination URIs, one at a time. By including multiple hostnames or IP addresses, if the first host endpoint fails or is out of service, your SIP trunk provider directs calls to the next listed hostname.
 
 ```
 sip:us-south.voiceagent.cloud.ibm.com;transport=tls

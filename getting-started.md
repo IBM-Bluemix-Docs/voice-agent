@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2018, 2019
 lastupdated: "2019-06-24"
 
-keywords: voice agent, creating a SIP trunk, creating and connecting your voice agent,
+keywords: getting started, voice agent, creating a SIP trunk, creating and connecting your voice agent, voice agent with watson, tutorial, phone number, IBM Cloud
 
 subcollection: "voice-agent"
 
@@ -17,12 +17,12 @@ subcollection: "voice-agent"
 {:screen: .screen}
 {:tip: .tip}
 
-# Getting started tutorial
+# Getting started with Voice Agent with Watson
 {: #getting-started}
 {{site.data.keyword.iva_full}} helps you integrate a set of orchestrated Watson services with the telephone network by using the Session Initiation Protocol (SIP). This tutorial describes how to set up a cognitive voice agent that you can call from any phone.
 {: shortdesc}
 
-A new SMS feature has been added to {{site.data.keyword.iva_full_notm}}. Not all of the procedures described on this page are necessary to to configure SMS functionality. See the [Voice Agent Getting started tutorial](/docs/services/voice-agent?topic=voice-agent-connect-sms) for instructions on how to connect SMS with {{site.data.keyword.iva_full_notm}}
+A new SMS feature is available for {{site.data.keyword.iva_full_notm}}. Not all of the procedures that are described on this page are necessary to configure SMS functionality. See the [Voice Agent Getting started tutorial](/docs/services/voice-agent?topic=voice-agent-connect-sms) for instructions on how to connect SMS with {{site.data.keyword.iva_full_notm}}
 {: tip}
 
 Watch a demonstration of how to create your first voice agent in this [{{site.data.keyword.iva_full_notm}} tutorial ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/tv/building-voice-enabled-cognitive-applications-with-watson/).
@@ -34,7 +34,7 @@ If you require any assistance, find us on Slack in the [IBM Cloud Technology ![E
 ## Before you begin
 {: #prereqs}
 
-Create a new account or log in to your existing account on [{{site.data.keyword.Bluemix_short}}](https://cloud.ibm.com/).
+Create an account or log in to your existing account on [{{site.data.keyword.Bluemix_short}}](https://cloud.ibm.com/).
 
 ## Step 1: Creating a {{site.data.keyword.iva_short}} service instance on {{site.data.keyword.Bluemix_notm}}
 {: #step1}
@@ -68,7 +68,7 @@ After you create the service, make note of the voice agent endpoint on the _Gett
   * Click **Create a voice agent** to create all of the services and a voice agent with the default configuration in a single step.
   * Or, click each of the service names to create the services yourself. Then, return to {{site.data.keyword.iva_short}} and create a voice agent separately.
 
-   If you manually created a {{site.data.keyword.conversationshort}} service instance, add a dialog so that you can test your voice agent.  To quickly get started, clone the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub and then [import the sample](/docs/services/assistant?topic=assistant-skill-dialog-add) as a skill:
+   If you manually created a {{site.data.keyword.conversationshort}} service instance, add a dialogue so that you can test your voice agent.  To quickly get started, clone the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub and then [import the sample](/docs/services/assistant?topic=assistant-skill-dialog-add) as a skill:
 
    1. On the sample conversation GitHub page, click the `1` line number and select **... > Copy line**. Paste the copied text into a file, and save it as a JSON file such as `voice-gateway-conversation-en.json`.
    2. Launch the {{site.data.keyword.conversationshort}} tool. On the _Skills_ page, click the ![Import workspace](../conversation/images/workspace_import.png) icon and import the JSON file.

@@ -3,6 +3,9 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-03"
+
+keywords: service instance, creating, Lite plan
+
 subcollection: "voice-agent"
 
 ---
@@ -33,7 +36,7 @@ You can create an {{site.data.keyword.iva_full}} service instance by using the {
 ## Creating the service from the command line
 {: #command_create}
 
-1. [Install the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli#overview).
+1. [Install the {{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cloud-cli-install-ibmcloud-cli).
 
 2. Run the [`ibmcloud` command](/docs/cli/idt?topic=cloud-cli-idt-cli#idt-cli) that creates your Voice Agent service instance with the _Lite_ plan:
 

@@ -3,6 +3,9 @@
 copyright:
   years: 2018
 lastupdated: "2018-11-12"
+
+keywords: log, logging, call logs, SMS logs, calls, SMS, agent name, usage dashboard, usage
+
 subcollection: "voice-agent"
 
 ---
@@ -33,7 +36,7 @@ To learn more about creating and editing voice agents, see [Managing voice agent
 
 ##  Viewing call logs
 
-1. From your {{site.data.keyword.iva_short}} dashboard, navigate to the _Usage_ dashboard to view the _Quick stats_ and *Call logs*. Each row in the _Call logs_ table corresponds to one call.
+1. From your {{site.data.keyword.iva_short}} dashboard, go to the _Usage_ dashboard to view the _Quick stats_ and *Call logs*. Each row in the _Call logs_ table corresponds to one call.
 
       For each call, you can see the name and phone number of your voice agent, the start and stop times, and the call duration. You might also see a warning symbol next to the voice agent name, which indicates that the call failed.
 
@@ -45,7 +48,7 @@ To learn more about creating and editing voice agents, see [Managing voice agent
   * Search the failure logs
   * Filter messages based on the log type, either **Error** or **Warn**
   * Download your data set
-  * Sort the failure logs by ascending or descending timestamp
+  * Sort the failure logs by ascending or descending time stamp
 
 1. To view any failure log message in detail, click the arrow at the beginning of the row you are interested in to expand the view. You can view more detailed information about log messages in [Voice Gateway system messages](https://www.ibm.com/support/knowledgecenter/SS4U29/messages.html){:new_window}.
 
@@ -67,7 +70,7 @@ To learn more about creating and editing voice agents, see [Managing voice agent
 
 1. To access the SMS logs for an individual agent:
 
-  - In the **Actions** column for the desired call, click the dots to expand the menu.
+  - In the **Actions** column for the wanted call, click the dots to expand the menu.
   
   - Click **SMS logs**.
 
