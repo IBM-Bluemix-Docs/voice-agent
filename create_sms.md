@@ -3,6 +3,9 @@
 copyright:
   years: 2019
 lastupdated: "2019-06-24"
+
+keywords: SMS agent, SMS provider
+
 subcollection: "voice-agent"
 ---
 
@@ -17,18 +20,18 @@ subcollection: "voice-agent"
 # Creating an SMS agent
 {: #sms_config_instance}
 
-After you have created your {{site.data.keyword.iva_full}} service, you can create individual sms agents from the _Manage_ dashboard.
+After you create your {{site.data.keyword.iva_full}} service, you can create individual SMS agents from the _Manage_ dashboard.
 {: shortdesc}
 
 1. Go to the _Voice agents_ tab on the _Manage_ dashboard, and click **Create a Voice Agent**.
 
 1. For **Agent Type**, select _SMS_.
 
-1. For **Name**, specify a unique name for your voice agent. For example, `Customer Support - North America`. The name may include up to 64 characters.
+1. For **Name**, specify a unique name for your voice agent. For example, `Customer Support - North America`. The name can include up to 64 characters.
 
 1. For Phone number, add the number from your SIP trunk, including the country and area codes. For example, for a United States 800 number, specify the phone number as 18883334444. The phone number can have a maximum of 30 characters, including spaces and + ( ) - characters. SMS supports only one number per users.
 
-1. Under **SMS Provider**, enter the user name, password and API URL for your SMS provider. For example, if using _Twilio_, the username is your **Account SID**, the password is your **Auth Token** and your SMS provider is `https://api.twilio.com`
+1. Under **SMS Provider**, enter the user name, password, and API URL for your SMS provider. For example, if you are using _Twilio_, the user name is your **Account SID**, the password is your **Auth Token** and your SMS provider is `https://api.twilio.com`
 
 1. Under **Conversation**, configure the connection to your {{site.data.keyword.conversationshort}} service instance. You can use {{site.data.keyword.conversationshort}} service instances in {{site.data.keyword.Bluemix_notm}} accounts that you or someone else owns. You can also connect to any of these options through a service orchestration engine (SOE).
 
@@ -38,7 +41,7 @@ After you have created your {{site.data.keyword.iva_full}} service, you can crea
 
 1. Check the **Initiate conversation from inbound messages** box if you want to allow users to begin an SMS session with your SMS agent.
 
-1. Check the **Notify on session timeout** box to have your SMS agent send an SMS message to the user, alerting them that the agent has not received a response in some time and will now time out. 
+1. Check the **Notify on session timeout** box to have your SMS agent send an SMS message to the user. The message alerts them that the agent has not received a response in some time and will now time out. 
 
     - See [Advanced Options](/docs/services/voice-agent?topic=voice-agent-sms_config_instance#sms_advanced) for more information on the **Advanced Options** available for your SMS agent, such as setting a custom time for the session to time out.
     - Check the box only if you want to be notified when a session times out.
@@ -54,11 +57,11 @@ After you create the SMS agent, test your SMS agent by texting its phone number.
 To enable SMS messaging between customers and a voice agent during a voice call, the SMS number must match the voice number.
 {: tip}
 
-Before you create an SMS agent or add SMS functionality to your voice agent, you **must** have the proper credentials set up and generate an API key to program to your SMS number. For more information, see [Generating API Key and Setting Credentials](/docs/services/voice-agent?topic=voice-agent-connect-sms#sms_access).
+Before you create an SMS agent or add SMS functions to your voice agent, you **must** have the proper credentials set up and generate an API key to program to your SMS number. For more information, see [Generating API Key and Setting Credentials](/docs/services/voice-agent?topic=voice-agent-connect-sms#sms_access).
 
-You **must** also configure your SIP trunk for SMS functionality. See your provider's instructions, for example, Twilio. If you do not have a Twilio phone number, see [Creating a Twilio SIP trunk](/docs/services/voice-agent?topic=voice-agent-connect#twilio-setup).
+You **must** also configure your SIP trunk for SMS functions. See your provider's instructions, for example, Twilio. If you do not have a Twilio phone number, see [Creating a Twilio SIP trunk](/docs/services/voice-agent?topic=voice-agent-connect#twilio-setup).
 
-Once you have a Twilio number, you will need to configure it for SMS functionality. For more information, see [Configuring Twilio for SMS](/docs/services/voice-agent?topic=voice-agent-connect-sms#twilio-setup).
+After you have a Twilio number, configure it for SMS functions. For more information, see [Configuring Twilio for SMS](/docs/services/voice-agent?topic=voice-agent-connect-sms#twilio-setup).
 
 If you have trouble creating credentials, contact your service instance administrator to grant you *Manager* or *Writer* access.
 {: tip}
@@ -68,9 +71,9 @@ If you have trouble creating credentials, contact your service instance administ
 
 Click **Show Advanced** after the **Phone Number** field.
 
-1. Set an optional **Conversation read timeout** value. This is the time in seconds that the SMS Gateway waits for a response from Watson Assistant. If the time is exceeded, SMS Gateway reattempts to contact Watson Assistant. If the service still cannot be reached, the SMS/MMS message fails. Set to 30 seconds by default.
+1. Set an optional **Conversation read timeout** value. This value is the time in seconds that the SMS Gateway waits for a response from Watson Assistant. If the time is exceeded, SMS Gateway reattempts to contact Watson Assistant. If the service still cannot be reached, the SMS/MMS message fails. Set to 30 seconds by default.
 
-1. Set an optional **Session Timeout**. This is the time in seconds after which the session expires if SMS Gateway does not receive a response from the user.
+1. Set an optional **Session Timeout**. This value is the time in seconds after which the session expires if SMS Gateway does not receive a response from the user.
 
 1. Set a **Conversation failure reply message**. This is the default response message that is sent if Watson Assistant cannot be reached. By default, it is set to `We're sorry, but we can't respond to your message.`.
 

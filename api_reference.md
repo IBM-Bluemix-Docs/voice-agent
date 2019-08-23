@@ -3,6 +3,9 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-08"
+
+keywords: state variables, action tags, api reference, DTMF
+
 subcollection: "voice-agent"
 
 ---
@@ -17,7 +20,7 @@ subcollection: "voice-agent"
 # Action tags and state variables in the API
 {: #api-reference}
 
-Use the reference materials to find action tags that initiate actions that your voice agent takes during a conversation session, or state variables, which define voice agent characteristics that persist throughout the conversation unless otherwise changed.
+Use the reference materials to find action tags or state variables. Action tags initiate actions that your voice agent takes during a conversation session. State variables define voice agent characteristics that persist throughout the conversation unless otherwise changed.
 {: shortdesc}
 
 See [Programming voice agents using the API](/docs/services/voice-agent?topic=voice-agent-api) for code examples and examples of how to set states and initiate action sequences.

@@ -3,6 +3,9 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-01"
+
+keywords: Programming voice agents, api, editing JSON
+
 subcollection: "voice-agent"
 
 ---
@@ -14,7 +17,7 @@ subcollection: "voice-agent"
 {:screen: .screen}
 {:tip: .tip}
 
-# Programming voice agents using the API
+# Programming voice agents by using the API
 {: #api}
 
 You can control the behavior of your voice agent by defining action tags and state variables from within the {{site.data.keyword.conversationfull}} service. Action tags initiate actions that your voice agent takes during a conversation session, and state variables define voice agent characteristics that persist throughout the conversation unless otherwise changed.
@@ -84,7 +87,7 @@ The following action tells the voice agent to collect dual-tone multi-frequency 
 
 To perform one or more actions on a single conversation turn, you can define a sequence of actions within the `vgwActionSequence` tag as a JSON list. The actions are performed in the order that you define them.
 
-Unlike single actions, for the voice agent to play an utterance when using the `vgwActionSequence` tag, the list of actions must contain the `vgwActPlayText` action. In contrast to the `vgwAction` tag, an utterance in the `output.text` field is not automatically played.
+Unlike single actions, for the voice agent to play an utterance when it is using the `vgwActionSequence` tag, the list of actions must contain the `vgwActPlayText` action. In contrast to the `vgwAction` tag, an utterance in the `output.text` field is not automatically played.
 {: tip}
 
 In the following more complex example, the defined actions on the `vgwActionSequence` tag tell the voice agent to disable speech-to-text processing and collect DTMF input as it plays an utterance.
@@ -122,7 +125,7 @@ In the following more complex example, the defined actions on the `vgwActionSequ
 
 To indicate a change of state that remains between conversation turns, the voice agent exchanges state variables with the configured {{site.data.keyword.conversationfull}} service. These state variables are defined on a {{site.data.keyword.conversationshort}} dialog node as [context variables](/docs/services/assistant?topic=assistant-dialog-build#dialog-build) in JSON format.
 
-For example, you can define following state variable to set the message that is streamed to the caller if the connection to the  {{site.data.keyword.conversationshort}} service fails.
+For example, you can define following state variable to set the message that is streamed to the caller if the connection to the {{site.data.keyword.conversationshort}} service fails.
 
 ```json
 {

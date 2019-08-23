@@ -3,6 +3,9 @@
 copyright:
   years: 2018, 2019
 lastupdated: "2019-03-15"
+
+keywords: call transfer, termination URI, SIP URI
+
 subcollection: "voice-agent"
 
 
@@ -25,9 +28,9 @@ You can set up call transfer so that if a caller requests to speak to a live age
 ## About call transfer
 {: #about-ct}
 
-By enabling call transfer, if a caller requests to speak with a live agent during conversation, the voice agent will redirect the call. {{site.data.keyword.iva_short}} uses a SIP REFER to direct the call back to your SIP trunk provider to handle, and does not anchor transferred phone calls.
+By enabling call transfer, if a caller requests to speak with a live agent during conversation, the voice agent will redirect the call. {{site.data.keyword.iva_short}} uses a SIP REFER to direct the callback to your SIP trunk provider to handle, and does not anchor transferred phone calls.
 
-You can enable call transfer by setting a termination URI or tel URI in your SIP provider configuration. Then, you define the transfer target on an API action in a dialog node of your {{site.data.keyword.conversationshort}} instance. Your transfer target is a SIP URI that contains the termination URI and phone number or a tel URI with phone number. For more information about supported actions and customizing your voice agents, see [Programming voice agents using the API](/docs/services/voice-agent?topic=voice-agent-api).
+You can enable call transfer by setting a termination URI or tel URI in your SIP provider configuration. Then, you define the transfer target on an API action in a dialog node of your {{site.data.keyword.conversationshort}} instance. Your transfer target is a SIP URI that contains the termination URI and phone number or a tel URI with phone number. For more information about supported actions and customizing your voice agents, see [Programming voice agents by using the API](/docs/services/voice-agent?topic=voice-agent-api).
 
 ## Step 1: Setting up the termination URI
 {: #termination-setup}
@@ -52,15 +55,15 @@ You do not need to manually configure the termination URI in your NetFoundry acc
 ### Setting up a termination URI in Twilio
 {: #termination-Twilio}
 
-1. In your Twilio account, navigate to the _Elastic SIP Trunking_ dashboard and select **Trunks**.
+1. In your Twilio account, go to the _Elastic SIP Trunking_ dashboard and select **Trunks**.
 
 1. Choose the trunk that you want to add call transfer to by either selecting an existing trunk or creating a new one by clicking the **+** icon.
 
-  * If you create a new trunk, you need to configure the _SIP Trunk URI_ in the **Origination** dashboard.  For more information, see [Connecting a SIP trunk](/docs/services/voice-agent?topic=voice-agent-connect).
+  * If you create a new trunk, you need to configure the _SIP Trunk URI_ in the **Origination** dashboard. For more information, see [Connecting a SIP trunk](/docs/services/voice-agent?topic=voice-agent-connect).
 
 1. Select **Termination** on your navigation bar and enter a name for your termination URI.
 
-  * Termination URI names must be unique. Twilio automatically checks the name that you choose for availability. See [SIP Trunk termination settings ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.twilio.com/docs/api/sip-trunking/getting-started#termination){: new_window} for more detail about the Twilio services.
+  * Termination URI names must be unique. Twilio automatically checks the name that you choose for availability. See [SIP Trunk termination settings ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.twilio.com/docs/sip-trunking#termination){: new_window} for more detail about the Twilio services.
 
 1. Select **General** on your navigation bar to view the _General settings_. Under the **Call Transfer (SIP REFER)** heading, toggle the setting to **Enabled** and select **Allow Call Transfers to the PSTN via your Trunk.**
 
@@ -116,12 +119,12 @@ To learn more about working in the {{site.data.keyword.conversationshort}} servi
 
 1. Check that the phone number in your `transferTarget` termination URI or tel URI correctly matches the phone number in your SIP trunk.
 
-**Remember**: The SIP URI of the transfer target includes a telephone number and the termination URI that you created. Do not use a personal telephone number in your transfer target. For example, if the telephone number is `18889990000` and your termination URI is `mysiptrunk.pstn.twilio.com`, the full SIP URI is `sip:+18889990000\\@mysiptrunk.pstn.twilio.com`. If you use Netfoundry, and have a telephone number of `18889990000`, the full SIP URI is `sip:+18889990000\\@dal.watson-va.netfoundry.net`.
+**Remember**: The SIP URI of the transfer target includes a telephone number and the termination URI that you created. Do not use a personal telephone number in your transfer target. For example, if the telephone number is `18889990000` and your termination URI is `mysiptrunk.pstn.twilio.com`, the full SIP URI is `sip:+18889990000\\@mysiptrunk.pstn.twilio.com`. If you use Net foundry, and have a telephone number of `18889990000`, the full SIP URI is `sip:+18889990000\\@dal.watson-va.netfoundry.net`.
 
-**NOTE**: Make sure the `transferTarget` URI starts with a `+` and may include up to 256 characters.
+**NOTE**: Make sure the `transferTarget` URI starts with a `+` and includes no more than 256 characters.
 
 ## Next steps
-{: #Next}
+{: #upnext}
 
 Test your voice agent by calling its associated phone number, and use the key terms that you identified in your intent. If your voice agent redirects you, then it worked!
 

@@ -80,7 +80,7 @@ Instead of configuring your connection to Google Text-to-Speech by editing your 
   * Use `\\` to escape special characters, such as `@` in your `client_email`.
   {: tip}
 
-  The following example shows sample credentials and an TTS configuration that {{site.data.keyword.conversationshort}} sends to {{site.data.keyword.iva_short}}.
+  The following example shows sample credentials and a TTS configuration that {{site.data.keyword.conversationshort}} sends to {{site.data.keyword.iva_short}}.
 
   ```json
       {

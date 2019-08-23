@@ -3,6 +3,9 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-11-07"
+
+keywords: service instance, workspaces, user name, API key
+
 subcollection: "voice-agent"
 
 
@@ -28,11 +31,11 @@ To connect your voice agent to other service instances, you can use either the u
 
 1. In  {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, or {{site.data.keyword.speechtotextshort}} Select **Other service instance** for your **Service type** and then select the **Region**.
 
-1. Choose either **User name and password** or **API key**, and enter your service credentials.
+1. Choose either **user name and password** or **API key**, and enter your service credentials.
   To find these values, go to the service instance that you want to configure, and select **Service credentials** and then **View credentials**.
 
-  * **User name and password**: In the **URL**, **User name**, and **Password** fields, configure the credentials for your {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}},  or {{site.data.keyword.texttospeechshort}} service instances.
-  * **API key**: In the **URL** and **API key** fields, configure the credentials for your {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}},  or {{site.data.keyword.texttospeechshort}} service instances.
+  * **User name and password**: In the **URL**, **user name**, and **Password** fields, configure the credentials for your {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, or {{site.data.keyword.texttospeechshort}} service instances.
+  * **API key**: In the **URL** and **API key** fields, configure the credentials for your {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, or {{site.data.keyword.texttospeechshort}} service instances.
 
   The credentials are not your {{site.data.keyword.Bluemix_notm}} user name and password, but rather encrypted credentials for the specific service instance.
   {:tip}

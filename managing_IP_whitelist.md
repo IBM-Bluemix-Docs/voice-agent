@@ -3,6 +3,9 @@
 copyright:
   years: 2018
 lastupdated: "2018-12-11"
+
+keywords: Whitelist, IP Address, whitelisting, IP Nickname
+
 subcollection: "voice-agent"
 
 
@@ -29,15 +32,15 @@ Your {{site.data.keyword.iva_short}} instance **must** be on a _Standard_ or _Pr
 
 1. Go to the _Manage_ dashboard and select the _Instance_ tab.
 
-1. Click **Add a new IP** icon to whitelist a new IP address .
+1. Click **Add a new IP** icon to whitelist a new IP address.
 
-1. Add an **IP Nickname** and the **IP Address**.
+1. Add an **IP Nickname** and the **IP address**.
 
 ## Editing IP addresses
 {: #edit_IP}
 
 1. Go to the _Manage_ dashboard and select the _Instance_ tab.
 
-1. Click on the IP address entry that you want to edit.
+1. Click the IP address entry that you want to edit.
 
 1. Make your changes, and then click **Save**.

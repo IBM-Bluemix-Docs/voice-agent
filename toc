@@ -33,6 +33,8 @@ IBM Voice Agent with Watson
         infosec.md
         [Information handling and configuration options](/services/voice-agent/voice-agent-infosec#configure_infosec)
         [Services related to IBM Voice Agent with Watson](/services/voice-agent/voice-agent-infosec#related_services)
+
+    plus_plan.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -73,6 +75,7 @@ IBM Voice Agent with Watson
     Securing your voice agent
         secure-trunking.md
         iam_user_access.md
+
     {: .navgroup-end}
 
     {: .navgroup id="help"}

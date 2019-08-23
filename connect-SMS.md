@@ -3,6 +3,9 @@
 copyright:
   years: 2019
 lastupdated: "2019-06-21"
+
+keywords: SMS, SMS provider, SMS agent
+
 subcollection: "voice-agent"
 
 ---
@@ -29,8 +32,8 @@ You can choose the SMS provider that you use to integrate with {{site.data.keywo
 You can create credentials only for roles that are already active in your account. For SMS and Voice + SMS agents, you must have either the *Writer* or *Manager* role assigned. See [Step 9 of Invite users and assign initial access](/docs/services/voice-agent?topic=voice-agent-iam#step1).
 
 1. On the *Dashboard* of your {{site.data.keyword.iva_short}} instance, click **New Credential (+)**. 
-2. In the new dialog box that pops up, enter a **Name**, and under the **Role** dropdown menu, select *Writer* or *Manager*. 
-    - **NOTE:** For any SMS-related functionality, you **_must_** select either the *Writer* or *Manager* role. 
+2. In the new dialog box that pops up, enter a **Name**, and under the **Role** menu, select *Writer* or *Manager*. 
+    - **NOTE:** For any SMS-related functions, you **_must_** select either the *Writer* or *Manager* role. 
 3. Click **Add**.
 4. Next to your newly created credentials, click **View credentials**. Make note of the value for `APIKEY` in the JSON script for use in [Configuring Twilio for SMS](/docs/services/voice-agent?topic=voice-agent-connect-sms#twilio-setup).
 

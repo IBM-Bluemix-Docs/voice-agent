@@ -15,7 +15,7 @@ subcollection: "voice-agent"
 {:tip: .tip}
 
 
-# Default {{site.data.keyword.iva_short}} settings
+# Default settings
 {: #default-settings}
 
 {{site.data.keyword.iva_full}} uses the following default settings.
