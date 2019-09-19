@@ -25,7 +25,8 @@ subcollection: "voice-agent"
 
 You can add multiple phone numbers to a single Agent, so that configuring the Agent affects all the numbers that are associated with it. The _Manage Service Instance_ dashboard page shows the **Primary Number that is associated with the Agent. See [Setting a Primary Number](/docs/services/voice-agent?topic=voice-agent-multi_num#primary_num).
 
-You can access the **Manage** dialog box by clicking **Manage** next to **Phone Number** from the _Create a Voice Agent_ or _Edit Voice Agent_ page.
+
+You can access the **Manage** dialog box by clicking **Manage** next to **Phone Number** from the _Create an Agent_ or _Edit Agent_ page.
 
   * _**NOTE:**_ There is a limit of 1000 unique numbers per Agent configuration.
 {: shortdesc}
@@ -34,13 +35,13 @@ You can access the **Manage** dialog box by clicking **Manage** next to **Phone 
 ## Adding a New Number
 {: #add_num}
 
-1. Click **Manage** next to **Phone Number** from the _Create a Voice Agent_ or _Edit Voice Agent_ page to open the **Manage** dialog box.
+1. Click **Manage** next to **Phone Number** from the _Create an Agent_ or _Edit Agent_ page to open the **Manage** dialog box.
 
 1. Click the "Add Number" icon near the upper right of the **Manage** dialog box. A new empty entry is created in the list.
 
 1. {: #format_num} For **Phone Number**, add the number from your SIP trunk, including the country and area codes. For example, for a United States 800 number, specify the phone number as 18883334444. The phone number can have spaces and + ( ) - characters, and a maximum of 30 characters.  
 
-  * _**NOTE:**_ There is a limit of 1000 unique numbers per voice agent configuration.
+  * _**NOTE:**_ There is a limit of 1000 unique numbers per agent configuration.
 
 1. You can optionally provide a description for your phone number in the **Description** field, up to a maximum of 64 characters.
 
@@ -55,7 +56,7 @@ You can access the **Manage** dialog box by clicking **Manage** next to **Phone 
 ## Editing a Number or Description
 {: #edit_num}
 
-1. Click **Manage** next to **Phone Number** from the _Create a Voice Agent_ or _Edit Voice Agent_ page. Alternatively, if you already have multiple numbers in the Voice Agent, click the grayed out **Phone Number** field to open the **Manage** dialog box.
+1. Click **Manage** next to **Phone Number** from the _Create an Agent_ or _Edit Agent_ page. Alternatively, if you already have multiple numbers in the Agent, click the grayed out **Phone Number** field to open the **Manage** dialog box.
 
 1. Highlight the number entry that you want to edit, and click the options list, represented by **three dots** icon, that appears on the right side of the list.
 
@@ -72,7 +73,7 @@ You can access the **Manage** dialog box by clicking **Manage** next to **Phone 
 ## Deleting Numbers
 {: #delete_num}
 
-1. Click **Manage** next to **Phone Number** from the _Create a Voice Agent_ or _Edit Voice Agent_ page.
+1. Click **Manage** next to **Phone Number** from the _Create an Agent_ or _Edit Agent_ page.
 
 1. Check the white box next to all the numbers that you want to delete. To select _all_ the numbers, check the white box next to the **Phone Number** header.
 
@@ -97,7 +98,7 @@ A list of numbers can be uploaded into the Agent all at once. The list _must_ be
 
   * Numbers in the .CSV file _must_ conform to the same format as adding a number through the Dashboard, and must be unique. See [Number Format](/docs/services/voice-agent?topic=voice-agent-multi_num#format_num).
 
-1. Click **Manage** next to **Phone Number** from the _Create a Voice Agent_ or _Edit Voice Agent_ page.
+1. Click **Manage** next to **Phone Number** from the _Create an Agent_ or _Edit Agent_ page.
 
 1. Click the "Upload CSV File" icon near the upper right of the **Manage** dialog box.
 
@@ -116,7 +117,7 @@ A list of numbers can be uploaded into the Agent all at once. The list _must_ be
 
 A list of numbers and their descriptions can be exported from the Agent into a **.CSV** file and downloaded to your computer. This lets you modify the numbers and descriptions as you want, and you can upload them again to the Agent. See [Importing Numbers](/docs/services/voice-agent?topic=voice-agent-multi_num#import_num).
 
-1. Click **Manage** next to **Phone Number** from the _Create a Voice Agent_ or _Edit Voice Agent_ page.
+1. Click **Manage** next to **Phone Number** from the _Create an Agent_ or _Edit Agent_ page.
 
 1. Click the "Download CSV File" icon near the upper right of the **Manage** dialog box.
 
@@ -129,9 +130,9 @@ A list of numbers and their descriptions can be exported from the Agent into a *
 
 The _Primary Number_ is for display purposes only and does not serve any functional purpose. By default, the first number that is added to the Agent is labeled as the **Primary Number**, which is the number that is displayed on the _Manage Service Instance_ dashboard page. At least one **Primary Number** must exist in a Voice Agent.
 
-You can change the **Primary Number** label to any number you want in the Voice Agent.
+You can change the **Primary Number** label to any number you want in the Agent.
 
-1. Click **Manage** next to **Phone Number** from the _Create a Voice Agent_ or _Edit Voice Agent_ page.
+1. Click **Manage** next to **Phone Number** from the _Create an Agent_ or _Edit Agent_ page.
 
 1. Highlight the number entry that you wish to edit, and click the options list, represented by **three dots** icon, that appears on the right side of the list.
 
@@ -163,24 +164,24 @@ You can also choose varying amounts of numbers that are shown per page in the li
 ## Saving Changes
 {: #save_changes}
 
-If you want to make changes to the numbers list in the Voice Agent, you _must_ save the changes on the **Manage** dialog box, followed by saving the changes on the _Edit Voice Agent_ page.
+If you want to make changes to the numbers list in the Agent, you _must_ save the changes on the **Manage** dialog box, followed by saving the changes on the _Edit Agent_ page.
 
-1. Click **Manage** next to **Phone Number** from the _Create a Voice Agent_ or _Edit Voice Agent_ page.
+1. Click **Manage** next to **Phone Number** from the _Create an Agent_ or _Edit Agent_ page.
 
 1. Make any changes to the numbers in the list as you want.
 
 1. Click **Done** to save changes to the Agent.
 
-1. You are taken back to the _Edit Voice Agent_ page, click **Save Changes** in the top right to apply all your changes.
+1. You are taken back to the _Edit Agent_ page, click **Save Changes** in the top right to apply all your changes.
 
-* _**NOTE:**_ You _must_ click both **Done** on the **Manage** dialog box _and_ **Save Changes** on the _Edit Voice Agent_ page to save your changes, otherwise they are discarded.
+* _**NOTE:**_ You _must_ click both **Done** on the **Manage** dialog box _and_ **Save Changes** on the _Edit Agent_ page to save your changes, otherwise they are discarded.
 
 ## Searching For Numbers or Description
 {: #search_num}
 
 You can search for numbers that are stored by searching for the number or description.
 
-1. Click **Manage** next to **Phone Number** from the _Create a Voice Agent_ or _Edit Voice Agent_ page.
+1. Click **Manage** next to **Phone Number** from the _Create an Agent_ or _Edit Agent_ page.
 
 1. In the _Search_ bar, you can type a number or description to search for in the list. As you type, the search results are updated automatically.
 

@@ -13,7 +13,7 @@ IBM Voice Agent with Watson
     {: .navgroup id="reference"}
     {: .topicgroup}
     State variables
-		[State variables set by the voice agent](/services/voice-agent/voice-agent-api-reference#state-variables-iva)
+		[State variables set by the agent](/services/voice-agent/voice-agent-api-reference#state-variables-iva)
         [State variables set in the Watson Assistant dialog](/services/voice-agent/voice-agent-api-reference#state-variables-conv)
 
     [Action commands and attributes](/services/voice-agent/voice-agent-api-reference#actions-and-attributes)
@@ -50,7 +50,7 @@ IBM Voice Agent with Watson
     managing_multiple_numbers.md
 
     {: .topicgroup}
-    Configuring voice agents
+    Configuring agents
         managing_disaster_recovery.md
         managing_third_party.md
         managing_other.md
@@ -64,7 +64,7 @@ IBM Voice Agent with Watson
         managing_IP_whitelist.md
 
     {: .topicgroup}
-    Programming voice agents
+    Programming agents
         api.md
         api_dynamic_config.md
         call-transfer.md
@@ -72,7 +72,7 @@ IBM Voice Agent with Watson
     logging.md
 
     {: .topicgroup}
-    Securing your voice agent
+    Securing your agent
         secure-trunking.md
         iam_user_access.md
 

@@ -28,7 +28,7 @@ You can connect to a {{site.data.keyword.conversationshort}} workspace through a
 ## Configuring a connection to an SOE
 {: #how-to-SEO}
 
-1. In the _Voice agent_ tab on the _Manage_ page for your voice agent, go to the {{site.data.keyword.conversationshort}} configuration section.
+1. In the _Agent_ tab on the _Manage_ page for your agent, go to the {{site.data.keyword.conversationshort}} configuration section.
 
 1. Choose **Service orchestration engine** as your **Service type**.
 

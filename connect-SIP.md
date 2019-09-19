@@ -63,7 +63,7 @@ You can choose the SIP trunk provider that you use to integrate with {{site.data
 
 1. After the payment successfully processes, your SIP trunk phone number is displayed in your account.
 
-You need this phone number to set up your voice agent and configure call transfer, including the country and area codes. See [Creating and connecting your voice agent](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
+You need this phone number to set up your agent and configure call transfer, including the country and area codes. See [Creating and connecting your agent](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
 
 
 ## Creating a Twilio SIP trunk
@@ -100,7 +100,7 @@ You need this phone number to set up your voice agent and configure call transfe
 
 1. Go to [the Voximplant Control panel](https://manage.voximplant.com/numbers/my_numbers). On the menu, select **Numbers** and click **Buy new phone number**. You can check either **Real** or **Test numbers**, then select a number in the list, and click **Buy selected** to buy a phone number.
 
-1. Specify this number in your voice agent's settings.
+1. Specify this number in your agent's settings.
 
 1. Go to [the Applications section](https://manage.voximplant.com/applications) of the _Voximplant Control Panel_ to create an application named **Watson**.
 

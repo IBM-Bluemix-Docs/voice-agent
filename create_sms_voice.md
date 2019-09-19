@@ -23,7 +23,7 @@ After you create your {{site.data.keyword.iva_full}} service, you can create ind
 {: shortdesc}
 
 
-1. Go to the _Voice agents_ tab on the _Manage_ dashboard, and click **Create a Voice Agent**.
+1. Go to the _Agents_ tab on the _Manage_ dashboard, and click **Create an Agent**.
 
 1. For **Agent Type**, select _Voice + SMS_.
 
@@ -36,7 +36,7 @@ After you create your {{site.data.keyword.iva_full}} service, you can create ind
 ### Configuring Watson Assistant for Voice and SMS integration
 {: #sms_outbound}
 
-1. In your {{site.data.keyword.Bluemix_notm}} dashboard, select the {{site.data.keyword.conversationshort}} instance that your voice agent uses.
+1. In your {{site.data.keyword.Bluemix_notm}} dashboard, select the {{site.data.keyword.conversationshort}} instance that your agent uses.
 
 1. Create an **outbound SMS intent** from the dashboard.
 

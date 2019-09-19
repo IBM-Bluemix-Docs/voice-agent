@@ -16,17 +16,17 @@ subcollection: "voice-agent"
 {:tip: .tip}
 
 
-# Enabling event forwarding for voice agents
+# Enabling event forwarding for agents
 {: #event_forwarding}
 
 You can enable event forwarding to collect information about calls that are handled by your voice agents in {{site.data.keyword.iva_full}} by using a {{site.data.keyword.cloudantfull}} database service.
 {: shortdesc}
 
-You might want to collect and analyze call data from {{site.data.keyword.iva_short}} to improve how natural the conversation feels to the caller. Each voice agent that you create can forward event reports to a specified {{site.data.keyword.cloudant_short_notm}} that you manage. Reported events include the call detail record (CDR) events, transcription events, and turn events reports. You can learn more about the types of events that you can forward in [Reporting events](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}.
+You might want to collect and analyze call data from {{site.data.keyword.iva_short}} to improve how natural the conversation feels to the caller. Each agent that you create can forward event reports to a specified {{site.data.keyword.cloudant_short_notm}} that you manage. Reported events include the call detail record (CDR) events, transcription events, and turn events reports. You can learn more about the types of events that you can forward in [Reporting events](https://www.ibm.com/support/knowledgecenter/SS4U29/reporting.html){:new_window}.
 
 Analyzing data from these events can help you adjust dialogs, refine intents, and improve overall caller experience.
 
-When you create or edit voice agents, you can also choose to enable event forwarding. For more detail about creating and editing voice agents, see [Managing voice agents](/docs/services/voice-agent?topic=voice-agent-managing). You need to provide {{site.data.keyword.cloudant_short_notm}} account information, including the account name and password, to enable event forwarding.
+When you create or edit agents, you can also choose to enable event forwarding. For more detail about creating and editing voice agents, see [Managing agents](/docs/services/voice-agent?topic=voice-agent-managing). You need to provide {{site.data.keyword.cloudant_short_notm}} account information, including the account name and password, to enable event forwarding.
 
 **Important:** The CDR, transcription, and turn events include information from your users that might potentially contain Protected Health Information (PHI), personally identifiable information (PII), or PCI Data Security Standard (PCI DSS) data. To prevent exposure of personal information, you must ensure that your {{site.data.keyword.cloudant_short_notm}} instance properly protects the confidential information that your users share in or during conversation. See [Information security and data privacy: Event forwarding](/docs/services/voice-agent?topic=voice-agent-infosec#event_forwarding) and [{{site.data.keyword.cloudant_short_notm}}: Security](/docs/services/Cloudant/offerings?topic=cloudant-security#security).
 
@@ -34,7 +34,7 @@ When you create or edit voice agents, you can also choose to enable event forwar
 ## Enabling event forwarding
 {: #enable-event-forwarding}
 
-You can enable event forwarding when you are creating or editing your voice agents in the _Manage_ dashboard on {{site.data.keyword.Bluemix_short}}.
+You can enable event forwarding when you are creating or editing your agents in the _Manage_ dashboard on {{site.data.keyword.Bluemix_short}}.
 
 1. In the **Event forwarding** section, after the configuration section for {{site.data.keyword.texttospeechshort}}, select **Enable event forwarding**.
 

@@ -22,17 +22,17 @@ subcollection: "voice-agent"
 # Connecting with third-party speech and text services
 {: #third-party}
 
-You can connect third-party speech and text services when you are creating, cloning, or editing your voice agent on the _Manage_ dashboard.
+You can connect third-party speech and text services when you are creating, cloning, or editing your agent on the _Manage_ dashboard.
 {: shortdesc}
 
-Alternatively, to configure your speech and text service connections as needed, you can [use dynamic configuration with {{site.data.keyword.conversationshort}}](/docs/services/voice-agent?topic=voice-agent-dynamic-donfig). This  configuration allows you to change your voice agent configuration with action tags and state variables.
+Alternatively, to configure your speech and text service connections as needed, you can [use dynamic configuration with {{site.data.keyword.conversationshort}}](/docs/services/voice-agent?topic=voice-agent-dynamic-donfig). This  configuration allows you to change your agent configuration with action tags and state variables.
 
 ## Connecting to Google Speech-to-Text from {{site.data.keyword.iva_short}}
 {: #stt_va}
 
-Instead of using a {{site.data.keyword.speechtotextfull}} instance, you can choose to connect your voice agent to a third-party speech to text service, such as [Google Cloud Speech-to-Text ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/speech-to-text/).
+Instead of using a {{site.data.keyword.speechtotextfull}} instance, you can choose to connect your agent to a third-party speech to text service, such as [Google Cloud Speech-to-Text ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/speech-to-text/).
 
-1. Go to the _Voice agents_ tab on your _Manage_ dashboard, and select either **Edit** an existing voice agent or **Create new voice agent**.
+1. Go to the _Agents_ tab on your _Manage_ dashboard, and select either **Edit** an existing agent or **Create new agent**.
 
 1. In your _Speech to Text_ service configuration, choose **Google Speech to Text service instance**.
 
@@ -73,9 +73,9 @@ Instead of using a {{site.data.keyword.speechtotextfull}} instance, you can choo
 ## Connecting to Google Text-to-Speech from {{site.data.keyword.iva_short}}
 {: #tts_va}
 
-Instead of using a {{site.data.keyword.texttospeechfull}} instance, you can choose to connect your voice agent to a third-party speech to text service, such as [Google Cloud Text-to-Speech ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/text-to-speech/).
+Instead of using a {{site.data.keyword.texttospeechfull}} instance, you can choose to connect your agent to a third-party speech to text service, such as [Google Cloud Text-to-Speech ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/text-to-speech/).
 
-1. Go to the _Voice agents_ tab on your _Manage_ dashboard, and select either **Edit** an existing voice agent or **Create new voice agent**.
+1. Go to the _Agents_ tab on your _Manage_ dashboard, and select either **Edit** an existing agent or **Create new agent**.
 
 1. In your _Text to Speech Service configuration, choose **Google Text to Speech Service instance**.
 

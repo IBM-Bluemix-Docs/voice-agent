@@ -17,10 +17,10 @@ subcollection: "voice-agent"
 {:screen: .screen}
 {:tip: .tip}
 
-# Programming voice agents by using the API
+# Programming agents by using the API
 {: #api}
 
-You can control the behavior of your voice agent by defining action tags and state variables from within the {{site.data.keyword.conversationfull}} service. Action tags initiate actions that your voice agent takes during a conversation session, and state variables define voice agent characteristics that persist throughout the conversation unless otherwise changed.
+You can control the behavior of your agent by defining action tags and state variables from within the {{site.data.keyword.conversationfull}} service. Action tags initiate actions that your agent takes during a conversation session, and state variables define agent characteristics that persist throughout the conversation unless otherwise changed.
 {: shortdesc}
 
 Because {{site.data.keyword.iva_full}} is based on IBM Voice Gateway, the API works the same way. If you're familiar with Voice Gateway and SMS Gateway, you can use the same actions and state variables in your {{site.data.keyword.conversationshort}} dialogs with {{site.data.keyword.iva_short}}. See [Action tags and state variables in the Voice Gateway API](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html) and [API for SMS Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/sms_api.html), respectively.
@@ -42,14 +42,14 @@ Within the JSON editor, you can define actions on the `output` property and stat
 ## Initiating actions
 {: #defining-actions}
 
-To initiate actions in the voice agent during a call, you can define action tags on a {{site.data.keyword.conversationshort}} dialog node in JSON format on the `output` property. You can define either a single action on the `vgwAction` tag or a sequence of actions on the `vgwActionSequence` tag. Each action consists of a `command` property, followed by an optional `parameter` property to define attributes for commands that require them.
+To initiate actions in the agent during a call, you can define action tags on a {{site.data.keyword.conversationshort}} dialog node in JSON format on the `output` property. You can define either a single action on the `vgwAction` tag or a sequence of actions on the `vgwActionSequence` tag. Each action consists of a `command` property, followed by an optional `parameter` property to define attributes for commands that require them.
 
 ### Single actions
 {: #single-actions}
 
-To perform a single action, define the action in the `vgwAction` tag with any necessary parameter attributes. In the `text` block in the `output` property, you can optionally include an utterance that the voice agent plays after the action is performed.
+To perform a single action, define the action in the `vgwAction` tag with any necessary parameter attributes. In the `text` block in the `output` property, you can optionally include an utterance that the agent plays after the action is performed.
 
-The following single action on the `vgwAction` tag tells the voice agent to hang up the call when the node response is triggered. Because the `vgwActHangup` command has no parameters, none are defined.
+The following single action on the `vgwAction` tag tells the agent to hang up the call when the node response is triggered. Because the `vgwActHangup` command has no parameters, none are defined.
 ```json
 {
   "output": {
@@ -61,7 +61,7 @@ The following single action on the `vgwAction` tag tells the voice agent to hang
 ```
 {: codeblock}
 
-The following action tells the voice agent to collect dual-tone multi-frequency signaling (DTMF) input and to play the defined text to the caller.
+The following action tells the agent to collect dual-tone multi-frequency signaling (DTMF) input and to play the defined text to the caller.
 
 ```json
 {
@@ -87,10 +87,10 @@ The following action tells the voice agent to collect dual-tone multi-frequency 
 
 To perform one or more actions on a single conversation turn, you can define a sequence of actions within the `vgwActionSequence` tag as a JSON list. The actions are performed in the order that you define them.
 
-Unlike single actions, for the voice agent to play an utterance when it is using the `vgwActionSequence` tag, the list of actions must contain the `vgwActPlayText` action. In contrast to the `vgwAction` tag, an utterance in the `output.text` field is not automatically played.
+Unlike single actions, for the agent to play an utterance when it is using the `vgwActionSequence` tag, the list of actions must contain the `vgwActPlayText` action. In contrast to the `vgwAction` tag, an utterance in the `output.text` field is not automatically played.
 {: tip}
 
-In the following more complex example, the defined actions on the `vgwActionSequence` tag tell the voice agent to disable speech-to-text processing and collect DTMF input as it plays an utterance.
+In the following more complex example, the defined actions on the `vgwActionSequence` tag tell the agent to disable speech-to-text processing and collect DTMF input as it plays an utterance.
 
 ```json
 {
@@ -123,7 +123,7 @@ In the following more complex example, the defined actions on the `vgwActionSequ
 ## Setting states
 {: #setting-states}
 
-To indicate a change of state that remains between conversation turns, the voice agent exchanges state variables with the configured {{site.data.keyword.conversationfull}} service. These state variables are defined on a {{site.data.keyword.conversationshort}} dialog node as [context variables](/docs/services/assistant?topic=assistant-dialog-build#dialog-build) in JSON format.
+To indicate a change of state that remains between conversation turns, the agent exchanges state variables with the configured {{site.data.keyword.conversationfull}} service. These state variables are defined on a {{site.data.keyword.conversationshort}} dialog node as [context variables](/docs/services/assistant?topic=assistant-dialog-build#dialog-build) in JSON format.
 
 For example, you can define following state variable to set the message that is streamed to the caller if the connection to the {{site.data.keyword.conversationshort}} service fails.
 
@@ -136,4 +136,9 @@ For example, you can define following state variable to set the message that is 
 ```
 {: codeblock}
 
-The voice agent assumes that the {{site.data.keyword.conversationshort}} service is stateless and that all state is maintained at the voice agent between exchanges with the {{site.data.keyword.conversationshort}} service. For each conversation turn within a call, the state is passed to the {{site.data.keyword.conversationshort}} service and received back from the service in the `context` section of the REST messages.
+The agent assumes that the {{site.data.keyword.conversationshort}} service is stateless and that all state is maintained at the agent between exchanges with the {{site.data.keyword.conversationshort}} service. For each conversation turn within a call, the state is passed to the {{site.data.keyword.conversationshort}} service and received back from the service in the `context` section of the REST messages.
+
+## Configure STT Customization
+{: #stt-customization}
+
+You can configure and customize the Assitant in your {{site.data.keyword.conversationshort}} service to dynamically set the Speech-to-Text interactions during a call. Set up this configuration by using the Voice Gateway actions. See [Dynamically configuring Watson services](https://www.ibm.com/support/knowledgecenter/SS4U29/dynamicspeech.html) for more information. 

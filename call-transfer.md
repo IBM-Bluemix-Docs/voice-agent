@@ -30,7 +30,7 @@ You can set up call transfer so that if a caller requests to speak to a live age
 
 By enabling call transfer, if a caller requests to speak with a live agent during conversation, the voice agent will redirect the call. {{site.data.keyword.iva_short}} uses a SIP REFER to direct the callback to your SIP trunk provider to handle, and does not anchor transferred phone calls.
 
-You can enable call transfer by setting a termination URI or tel URI in your SIP provider configuration. Then, you define the transfer target on an API action in a dialog node of your {{site.data.keyword.conversationshort}} instance. Your transfer target is a SIP URI that contains the termination URI and phone number or a tel URI with phone number. For more information about supported actions and customizing your voice agents, see [Programming voice agents by using the API](/docs/services/voice-agent?topic=voice-agent-api).
+You can enable call transfer by setting a termination URI or tel URI in your SIP provider configuration. Then, you define the transfer target on an API action in a dialog node of your {{site.data.keyword.conversationshort}} instance. Your transfer target is a SIP URI that contains the termination URI and phone number or a tel URI with phone number. For more information about supported actions and customizing your agents, see [Programming agents by using the API](/docs/services/voice-agent?topic=voice-agent-api).
 
 ## Step 1: Setting up the termination URI
 {: #termination-setup}

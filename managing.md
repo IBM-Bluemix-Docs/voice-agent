@@ -18,31 +18,31 @@ subcollection: "voice-agent"
 {:tip: .tip}
 
 
-# Managing service instances and voice agents
+# Managing service instances and agents
 {: #managing}
 
-You can use the _Manage_ dashboard to change your service instance configurations and create, edit, clone, configure, or remove individual voice agents. You can have multiple voice agents in your service instance, and each voice agent can have up to 1000 unique numbers and descriptions. However, each voice agent must have a unique name and at least one phone number.
+You can use the _Manage_ dashboard to change your service instance configurations and create, edit, clone, configure, or remove individual agents. You can have multiple agents in your service instance, and each agent can have up to 1000 unique numbers and descriptions. However, each agent must have a unique name and at least one phone number.
 
-* **NOTE**: A single {{site.data.keyword.iva_full}} service instance can have up to 150 voice agents.
+* **NOTE**: A single {{site.data.keyword.iva_full}} service instance can have up to 150 agents.
 {: shortdesc}
 
-## Navigating to your Voice Agent service dashboard
+## Navigating to your Agent service dashboard
 {: #navigate_manage}
 
 You can find the _Manage_ dashboard from your {{site.data.keyword.iva_short}} service dashboard.
 
 1. Go to your [{{site.data.keyword.Bluemix_notm}} account resource list](https://cloud.ibm.com/resources).
 
-1. From the list of **Services**, select your **Voice Agent** service instance to open the service dashboard on the _Manage_ tab.
+1. From the list of **Services**, select your **Agent** service instance to open the service dashboard on the _Manage_ tab.
 
-## Voice Agent Summary
+## Agent Summary
 {: #agent_summary}
 
-If you already have an existing voice agent, you can see a summary of all the numbers, descriptions, and configuration settings for the agent. To see the summary, click the dropdown arrow to the left of the voice agent **Name**. The summary then expands.
+If you already have an existing agent, you can see a summary of all the numbers, descriptions, and configuration settings for the agent. To see the summary, click the dropdown arrow to the left of the agent **Name**. The summary then expands.
 
-While the voice agent can contain multiple numbers, on the agent summary only the **Primary Number** is selected to be shown. By default, it is the first number added to the voice agent, and is only for display, and has no functional purpose. If you want to display a different number from the voice agent, see [Managing Multiple Numbers](/docs/services/voice-agent?topic=voice-agent-multi_num#primary_num).
+While the agent can contain multiple numbers, on the agent summary only the **Primary Number** is selected to be shown. By default, it is the first number added to the agent, and is only for display, and has no functional purpose. If you want to display a different number from the agent, see [Managing Multiple Numbers](/docs/services/voice-agent?topic=voice-agent-multi_num#primary_num).
 
-You can view all the numbers in the voice agent from the agent summary. After the summary of the configuration is expanded, click the **View Numbers** button, and a list of all the numbers will appear in a new **Manage** dialog box. See the [Managing Multiple Numbers](/docs/services/voice-agent?topic=voice-agent-multi_num) page for more information on working with the **Manage** dialog box.
+You can view all the numbers in the agent from the agent summary. After the summary of the configuration is expanded, click the **View Numbers** button, and a list of all the numbers will appear in a new **Manage** dialog box. See the [Managing Multiple Numbers](/docs/services/voice-agent?topic=voice-agent-multi_num) page for more information on working with the **Manage** dialog box.
 
 ## Editing the maximum concurrent connections for your service instance
 {: #edit_service}
@@ -52,50 +52,50 @@ In all plans, you receive 2 concurrent connections at no charge. If you use the 
 ## Creating a voice agent
 {: #create_va}
 
-[Create a new voice agent](/docs/services/voice-agent?topic=voice-agent-config_instance) from the _Voice agents_ tab on the _Manage_ dashboard.
+[Create a new voice agent](/docs/services/voice-agent?topic=voice-agent-config_instance) from the _Agents_ tab on the _Manage_ dashboard.
 
-## Editing a voice agent
+## Editing an agent
 {: #edit_va}
 
-You can change existing voice agents by editing them in the _Voice agents_ tab on the _Manage_ dashboard. To edit a voice agent, click **Edit Agent** from the list of options for the voice agent. Change the configuration, and save the changes.
+You can change existing agents by editing them in the  _Agents_ tab on the _Manage_ dashboard. To edit an agent, click **Edit Agent** from the list of options for the agent. Change the configuration, and save the changes.
 
-## Cloning a voice agent
+## Cloning an agent
 {: #clone_va}
 
-When you clone a voice agent, all of the configurations for the Watson services are copied to a new agent. To clone a voice agent, click **Clone Agent** from the list of options for the voice agent. Give your voice agent a unique name and phone number, change any configuration options as needed, and save the changes.
+When you clone an agent, all of the configurations for the Watson services are copied to a new agent. To clone an agent, click **Clone Agent** from the list of options for the agent. Give your agent a unique name and phone number, change any configuration options as needed, and save the changes.
 
-## Deleting a voice agent
+## Deleting an agent
 {: #delete_va}
 
-You might want to delete a voice agent to free up the phone number. You can have only one voice agent per phone number. To use a phone number for a different voice agent, you first must delete any voice agent that is using the phone number.
+You might want to delete an agent to free up the phone number. You can have only one agent per phone number. To use a phone number for a different agent, you first must delete any agent that is using the phone number.
 
-To delete a voice agent, go to the _Voice agents_ tab, click **Delete Agent** from the list of options for the voice agent, and save the changes. The voice agent is removed from the list of voice agents.
+To delete an agent, go to the _Agents_ tab, click **Delete Agent** from the list of options for the agent, and save the changes. The agent is removed from the list of agents.
 
-## Searching a voice agent by Number or Description
+## Searching an agent by Number or Description
 {: #search}
 
-You can search for voice agents based on the numbers or descriptions that are saved in the agent.
+You can search for agents based on the numbers or descriptions that are saved in the agent.
 
 In the _Search_ bar, you can type a number or description. As you type, the search results are updated automatically.  
 
-## Configuring a voice agent
+## Configuring an agent
 {: #configure_va}
 
-When you create, clone, or edit a voice agent, you can make changes to the configuration settings for your voice agent and connections to related services.
+When you create, clone, or edit an agent, you can make changes to the configuration settings for your agent and connections to related services.
 
-* **[Configuring multiple phone numbers](/docs/services/voice-agent?topic=voice-agent-multi_num):** You can configure your Voice Agent to include multiple phone numbers.
+* **[Configuring multiple phone numbers](/docs/services/voice-agent?topic=voice-agent-multi_num):** You can configure your Agent to include multiple phone numbers.
 * **[Configuring multiple service locations](/docs/services/voice-agent?topic=voice-agent-disaster-recovery):** Include multiple service locations for your connected services to support service redundancy.
-* **[Connecting with third-party speech and text services](/docs/services/voice-agent?topic=voice-agent-third-party):** Instead of using {{site.data.keyword.texttospeechshort}} or {{site.data.keyword.speechtotextshort}}, you can connect your voice agent to third-party APIs, like Google Cloud Speech-to-Text.
-* **[Using services in other {{site.data.keyword.Bluemix_notm}} workspaces](/docs/services/voice-agent?topic=voice-agent-other_service):** You can configure your voice agent to use {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, or {{site.data.keyword.speechtotextshort}} service instances that belong to workspaces in other {{site.data.keyword.Bluemix_short}} accounts.
+* **[Connecting with third-party speech and text services](/docs/services/voice-agent?topic=voice-agent-third-party):** Instead of using {{site.data.keyword.texttospeechshort}} or {{site.data.keyword.speechtotextshort}}, you can connect your agent to third-party APIs, like Google Cloud Speech-to-Text.
+* **[Using services in other {{site.data.keyword.Bluemix_notm}} workspaces](/docs/services/voice-agent?topic=voice-agent-other_service):** You can configure your agent to use {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, or {{site.data.keyword.speechtotextshort}} service instances that belong to workspaces in other {{site.data.keyword.Bluemix_short}} accounts.
 * **[Configuring Watson Assistant with a Service Orchestration Engine](/docs/services/voice-agent?topic=voice-agent-conversation_va):** You can connect to a {{site.data.keyword.conversationshort}} skill through a service orchestration engine (SOE). An SOE intercepts messages to and from the service so that you can modify them by using third-party APIs.
-* **[Enabling event forwarding for voice agents](/docs/services/voice-agent?topic=voice-agent-event_forwarding):** You might want to collect and analyze call data from {{site.data.keyword.iva_short}} to improve how natural the conversation feels to the caller. Each voice agent that you create can forward event reports to a specified {{site.data.keyword.cloudant_short_notm}} that you manage.
+* **[Enabling event forwarding for agents](/docs/services/voice-agent?topic=voice-agent-event_forwarding):** You might want to collect and analyze call data from {{site.data.keyword.iva_short}} to improve how natural the conversation feels to the caller. Each agent that you create can forward event reports to a specified {{site.data.keyword.cloudant_short_notm}} that you manage.
 
-## Configuring advanced voice agent options
+## Configuring advanced agent options
 {: #config-advanced}
 
-When you create or clone a voice agent, you can click **Show advanced** to view the following advanced configuration options.
+When you create or clone an agent, you can click **Show advanced** to view the following advanced configuration options.
 
-* **Conversation read timeout (optional)**: This option sets the time, in seconds, that the Voice Agent waits for a response from Watson Assistant. If the time is exceeded, the Voice Agent reattempts to contact Watson Assistant. If the service still cannot be reached, the call fails. Set to 5 seconds by default.
+* **Conversation read timeout (optional)**: This option sets the time, in seconds, that the Agent waits for a response from Watson Assistant. If the time is exceeded, the Agent reattempts to contact Watson Assistant. If the service still cannot be reached, the call fails. Set to 5 seconds by default.
 * **{{site.data.keyword.conversationshort}} failure reply message (optional)**: The default response message that is sent to the message receiver if the call cannot connect to {{site.data.keyword.conversationshort}}. You can enter up to 1024 characters.
 * **Transfer failure reply message (optional)**: The default response message that is streamed to the caller if the call transfer fails. You can enter up to 1024 characters.
 * **Custom SIP INVITE Header (optional)**: Specifies custom SIP header to extract from incoming SIP INVITE requests. You can enter up to 1024 characters.

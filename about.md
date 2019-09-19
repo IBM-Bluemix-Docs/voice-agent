@@ -17,7 +17,7 @@ subcollection: "voice-agent"
 # About Voice Agent with Watson
 {: #about}
 
-{{site.data.keyword.iva_full}} enables direct, automated voice interactions over the telephone between a cognitive voice agent and your customers. With Watson artificial intelligence at its backbone, your voice agent can communicate in a more conversational manner, and it can handle complex interactions that are difficult for traditional interactive voice response (IVR) systems.
+{{site.data.keyword.iva_full}} enables direct, automated voice interactions over the telephone between a cognitive agent and your customers. With Watson artificial intelligence at its backbone, your agent can communicate in a more conversational manner, and it can handle complex interactions that are difficult for traditional interactive voice response (IVR) systems.
 {: shortdesc}
 
 ## Architecture
@@ -25,17 +25,17 @@ subcollection: "voice-agent"
 
 {{site.data.keyword.iva_short}} is one of several components in the overall architecture of your environment, which can include the following elements:
 
-* A voice agent based on [IBM Voice Gateway ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS4U29/welcome_voicegateway.html), which orchestrates the following Watson services:
+* An agent based on [IBM Voice Gateway ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS4U29/welcome_voicegateway.html), which orchestrates the following Watson services:
   * [{{site.data.keyword.speechtotextshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/speech-to-text?topic=speech-to-text-about): Converts the caller's audio into text
   * [{{site.data.keyword.conversationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/assistant?topic=assistant-index#index): Analyzes the text, maps it to intents, and provides a response according to a dialog that you create
   * [{{site.data.keyword.texttospeechshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/text-to-speech?topic=text-to-speech-about): Converts the response into voice audio
-* A SIP trunk, which connects your voice agent to the telephone network
-* An optional service orchestration engine (SOE), which sits between the {{site.data.keyword.conversationshort}} service and your voice agent so that you can further customize your environment
+* A SIP trunk, which connects your agent to the telephone network
+* An optional service orchestration engine (SOE), which sits between the {{site.data.keyword.conversationshort}} service and your agent so that you can further customize your environment
 
 ### Watson service orchestration
 {: #watson}
 
-The following diagram shows how {{site.data.keyword.iva_short}} orchestrates the various Watson services to create a voice agent. Within seconds, utterances flow between the services to result in a natural-sounding conversation with the caller.
+The following diagram shows how {{site.data.keyword.iva_short}} orchestrates the various Watson services to create an agent. Within seconds, utterances flow between the services to result in a natural-sounding conversation with the caller.
 
 <div style="float: right; padding-left: 1em; padding-bottom: 1em">
 <img src="images/conversation-flow.png" alt="{{site.data.keyword.iva_short}} acts as a hub through which the caller and each Watson service communicate."/></div>
@@ -54,9 +54,9 @@ The following steps outline the conversation flow.
 ### Architecture with a SIP trunk
 {: #arch-sip}
 
-You can use SIP trunks to quickly set up and test your environment from the public telephone network. When you connect to a voice agent through a SIP trunk, you must configure your SIP trunk to forward INVITE requests to the voice agent based on its IP address. You can find your {{site.data.keyword.iva_short}} SIP URI endpoint on the _Getting started_ page.
+You can use SIP trunks to quickly set up and test your environment from the public telephone network. When you connect to a agent through a SIP trunk, you must configure your SIP trunk to forward INVITE requests to the agent based on its IP address. You can find your {{site.data.keyword.iva_short}} SIP URI endpoint on the _Getting started_ page.
 
-![Calls flow through a SIP trunk to the voice agent, which communicates with Watson services though the API.](images/arch-sip.png)
+![Calls flow through a SIP trunk to the agent, which communicates with Watson services though the API.](images/arch-sip.png)
 
 ### Architecture with a service orchestration engine
 {: #arch-soe}
@@ -82,21 +82,21 @@ To learn more about how to implement a service orchestration engine, see the [se
 
 You can set up a cognitive SMS agent that customers can interact with by exchanging SMS and MMS messages. Using a dialog from the IBM {{site.data.keyword.conversationshort}} service, the SMS agent can guide the customer through tasks, answer questions, and more. When you connect to an SMS agent, you must configure the SMS request URL, or webhook, in the SMS provider, which tells your SMS provider where to forward the messages. You can find your {{site.data.keyword.iva_short}} SMS URI endpoint on the _Getting started_ page.
 
-![Messages flow through an SMS Provider to the voice agent, which communicates with Watson services though the API.](images/arch-sms-mms.png)
+![Messages flow through an SMS Provider to the agent, which communicates with Watson services though the API.](images/arch-sms-mms.png)
 
 ## Features
 {: #features}
 
 * **Barge-in:** Callers can interrupt Watson if the utterance Watson is sending to the caller is not relevant to the context of the conversation.
-* **Call hang-up:** The voice agent can be signaled to end a call from the {{site.data.keyword.conversationshort}} service by setting an action tag.
-* **Music on hold:** The voice agent can play an audio file that is specified by the {{site.data.keyword.conversationshort}} for some period or until processing in the {{site.data.keyword.conversationshort}} completes.
+* **Call hang-up:** The agent can be signaled to end a call from the {{site.data.keyword.conversationshort}} service by setting an action tag.
+* **Music on hold:** The agent can play an audio file that is specified by the {{site.data.keyword.conversationshort}} for some period or until processing in the {{site.data.keyword.conversationshort}} completes.
 * **SSML tagging:** Speech Synthesis Markup Language (SSML) tags are used to control how {{site.data.keyword.texttospeechshort}} synthesizes utterances into audio. {{site.data.keyword.iva_short}} supports passing these tags through to {{site.data.keyword.texttospeechshort}} when received from the {{site.data.keyword.conversationshort}} service.
 * **DTMF support:** {{site.data.keyword.iva_short}} supports [RFC 4733 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://tools.ietf.org/html/rfc4733), RTP Payload for DTMF Digits, Telephony Tones, and Telephony Signals. Dual-tone multi-frequency (DTMF) signals are converted into single digit text utterances that are sent to the Watson services.
 
 ## Supported languages
 {: #supported-languages}
 
-For a language to be supported, it must be supported by all Watson services that you configure in your voice agent. Using the {{site.data.keyword.speechtotextshort}}, {{site.data.keyword.texttospeechshort}}, and {{site.data.keyword.conversationshort}} services, the following languages are supported:
+For a language to be supported, it must be supported by all Watson services that you configure in your agent. Using the {{site.data.keyword.speechtotextshort}}, {{site.data.keyword.texttospeechshort}}, and {{site.data.keyword.conversationshort}} services, the following languages are supported:
 
 * Brazilian Portuguese
 * French ({{site.data.keyword.speechtotextshort}} broadband only)
@@ -109,6 +109,6 @@ For a language to be supported, it must be supported by all Watson services that
 ## Supported protocols
 {: #supported-protocols}
 
-* **SIP:** The voice agent supports connecting to Watson as if it were a SIP endpoint via a SIP trunk, from an enterprise session border controller (SBC), or from a multipoint control unit (MCU).
+* **SIP:** The agent supports connecting to Watson as if it were a SIP endpoint via a SIP trunk, from an enterprise session border controller (SBC), or from a multipoint control unit (MCU).
 * **RTP:** The Real-time Transport Protocol (RTP) is supported for audio media streams.
-* **G.711:** The voice agent supports U-law and A-law G.711 audio. Other audio protocols, such as G.723 or G.729, are not currently supported.
+* **G.711:** The agent supports U-law and A-law G.711 audio. Other audio protocols, such as G.723 or G.729, are not currently supported.

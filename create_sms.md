@@ -23,11 +23,11 @@ subcollection: "voice-agent"
 After you create your {{site.data.keyword.iva_full}} service, you can create individual SMS agents from the _Manage_ dashboard.
 {: shortdesc}
 
-1. Go to the _Voice agents_ tab on the _Manage_ dashboard, and click **Create a Voice Agent**.
+1. Go to the _Agents_ tab on the _Manage_ dashboard, and click **Create an Agent**.
 
 1. For **Agent Type**, select _SMS_.
 
-1. For **Name**, specify a unique name for your voice agent. For example, `Customer Support - North America`. The name can include up to 64 characters.
+1. For **Name**, specify a unique name for your agent. For example, `Customer Support - North America`. The name can include up to 64 characters.
 
 1. For Phone number, add the number from your SIP trunk, including the country and area codes. For example, for a United States 800 number, specify the phone number as 18883334444. The phone number can have a maximum of 30 characters, including spaces and + ( ) - characters. SMS supports only one number per users.
 
@@ -46,18 +46,18 @@ After you create your {{site.data.keyword.iva_full}} service, you can create ind
     - See [Advanced Options](/docs/services/voice-agent?topic=voice-agent-sms_config_instance#sms_advanced) for more information on the **Advanced Options** available for your SMS agent, such as setting a custom time for the session to time out.
     - Check the box only if you want to be notified when a session times out.
 
-1. You can also choose to enable event forwarding to collect information about calls that are handled by your voice agents in a {{site.data.keyword.cloudantfull}}. For more information, see [Enabling event forwarding for voice agents](/docs/services/voice-agent?topic=voice-agent-event_forwarding). For more configuration options, see [Configuring a voice agent](/docs/services/voice-agent?topic=voice-agent-managing#configure_va).
+1. You can also choose to enable event forwarding to collect information about calls that are handled by your agents in a {{site.data.keyword.cloudantfull}}. For more information, see [Enabling event forwarding for agents](/docs/services/voice-agent?topic=voice-agent-event_forwarding). For more configuration options, see [Configuring an agent](/docs/services/voice-agent?topic=voice-agent-managing#configure_va).
 
-1.  Click **Create voice agent** to create your SMS agent and any new services.
+1.  Click **Create an agent** to create your SMS agent and any new services.
 
 1. Follow [the instructions](/docs/services/voice-agent?topic=voice-agent-connect-sms) to connect to an SMS provider.
 
 After you create the SMS agent, test your SMS agent by texting its phone number. You can view details about your interaction on the _Usage_ dashboard. See [Viewing Usage and Logs](/docs/services/voice-agent?topic=voice-agent-logging).
 
-To enable SMS messaging between customers and a voice agent during a voice call, the SMS number must match the voice number.
+To enable SMS messaging between customers and an agent during a voice call, the SMS number must match the voice number.
 {: tip}
 
-Before you create an SMS agent or add SMS functions to your voice agent, you **must** have the proper credentials set up and generate an API key to program to your SMS number. For more information, see [Generating API Key and Setting Credentials](/docs/services/voice-agent?topic=voice-agent-connect-sms#sms_access).
+Before you create an SMS agent or add SMS functions to your agent, you **must** have the proper credentials set up and generate an API key to program to your SMS number. For more information, see [Generating API Key and Setting Credentials](/docs/services/voice-agent?topic=voice-agent-connect-sms#sms_access).
 
 You **must** also configure your SIP trunk for SMS functions. See your provider's instructions, for example, Twilio. If you do not have a Twilio phone number, see [Creating a Twilio SIP trunk](/docs/services/voice-agent?topic=voice-agent-connect#twilio-setup).
 
@@ -111,4 +111,4 @@ You can also add a node to your {{site.data.keyword.conversationshort}} service 
     ```
     {: codeblock}
 
-After you create the voice agent, test your voice agent by calling or texting its phone number based on its type. You can view details about your interaction on the _Usage_ dashboard. See [Viewing Usage and Logs](/docs/services/voice-agent?topic=voice-agent-logging).
+After you create the agent, test your agent by calling or texting its phone number based on its type. You can view details about your interaction on the _Usage_ dashboard. See [Viewing Usage and Logs](/docs/services/voice-agent?topic=voice-agent-logging).

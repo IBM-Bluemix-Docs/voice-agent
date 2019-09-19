@@ -29,21 +29,21 @@ IBM is committed to providing our clients and partners with innovative data priv
 
 To operate the service and optimize the user experience, {{site.data.keyword.iva_short}} collects and stores a minimal set of Personal Information (PI) which is handled in accordance with our [Data Processing Addendum (DPA)](https://www.ibm.com/support/customer/csol/terms/){: new_window} and [DPA Exhibit](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=00C4CE004FA711E7AA10752A2F494A7C){: new_window}. {{site.data.keyword.iva_short}} does not store, collect, or process data that is part of any voice or SMS conversations. Instead, the data is routed to different services for processing. During conversation, users might share information that contains Protected Health Information (PHI), personally identifiable information (PII), or PCI Data Security Standard (PCI DSS) data. See [Architecture](/docs/services/voice-agent?topic=voice-agent-about#architecture){: new_window} to learn more about the conversation flow and architecture of {{site.data.keyword.iva_short}}.
 
-Consider the following features when you configure your voice agent instance to support data privacy and secure handling.
+Consider the following features when you configure your agent instance to support data privacy and secure handling.
 
 ### Call transfer
 {:  #calltransfer_infosec}
 
-When you add call transfer capabilities to your voice agent, you provide a phone number when you configure the transfer target SIP URI. Users should not provide a personal phone number for this transfer target.
+When you add call transfer capabilities to your agent, you provide a phone number when you configure the transfer target SIP URI. Users should not provide a personal phone number for this transfer target.
 
 See [Setting up call transfer](/docs/services/voice-agent?topic=voice-agent-call-transfer) to learn about configuring your SIP Trunk and SIP URI for call transfer.
 
 ### Event forwarding
 {: #infosec_event_forwarding}
 
-You can configure your voice agent to forward reporting events to a {{site.data.keyword.cloudantfull}} database instance. These reporting events can include PII, PHI, and PCI DSS data about your callers in the form of transcriptions, conversation turn events, and call detail records (CDR) events. Call data, SMS data, and reporting events are not stored, processed, or collected within {{site.data.keyword.iva_short}}, and users should configure their external {{site.data.keyword.cloudant_short_notm}} services appropriately. **By default, event forwarding is disabled.**
+You can configure your agent to forward reporting events to a {{site.data.keyword.cloudantfull}} database instance. These reporting events can include PII, PHI, and PCI DSS data about your callers in the form of transcriptions, conversation turn events, and call detail records (CDR) events. Call data, SMS data, and reporting events are not stored, processed, or collected within {{site.data.keyword.iva_short}}, and users should configure their external {{site.data.keyword.cloudant_short_notm}} services appropriately. **By default, event forwarding is disabled.**
 
-See [Enabling event forwarding](/docs/services/voice-agent?topic=voice-agent-event_forwarding) to configure your voice agents to forward reporting events.
+See [Enabling event forwarding](/docs/services/voice-agent?topic=voice-agent-event_forwarding) to configure your agents to forward reporting events.
 
 See [**{{site.data.keyword.cloudant_short_notm}}: Security**](/docs/services/Cloudant/offerings?topic=cloudant-security#security){: new_window} for more information about data privacy and information security for {{site.data.keyword.cloudant_short_notm}}.
 
@@ -52,7 +52,7 @@ See [**{{site.data.keyword.cloudant_short_notm}}: Security**](/docs/services/Clo
 
 To converse with customers, {{site.data.keyword.conversationshort}} crafts text responses, which are passed to the {{site.data.keyword.texttospeechshort}} service and spoken aloud in {{site.data.keyword.iva_short}}. The responses that {{site.data.keyword.conversationshort}} creates might contain sensitive information. To prevent the {{site.data.keyword.iva_short}} from caching responses received from the {{site.data.keyword.texttospeechshort}} service that contain personal data, you can enable the `vgwActExcludeFromTTSCache` action command to exclude utterances that contain certain types of information from being cached. See [Programming voice agents by using the API](/docs/services/voice-agent?topic=voice-agent-api#action-sequences).
 
-After your Voice Agent instance is deleted, the TTS cache is cleared in 24 hours. This value is referred to as the `TTS cache timeout value`.
+After your Agent instance is deleted, the TTS cache is cleared in 24 hours. This value is referred to as the `TTS cache timeout value`.
 
 ### Secure connections
 {: #secure_trunking}
@@ -66,7 +66,7 @@ By default, SMS data is encrypted with TLS. See [Voice Gateway: Data Processing]
 
 You can use a Service Orchestration Engine (SOE) to process information that is passing between {{site.data.keyword.iva_short}} and {{site.data.keyword.conversationshort}} to customize conversation with callers. To maintain secure connections, ensure that you configure your SOE by using a secure URL, `https`, and user authentication.
 
-See [Configuring {{site.data.keyword.conversationshort}} for your voice agent](/docs/services/voice-agent?topic=voice-agent-conversation_va#conversation_va) and [Architecture with a service orchestration engine](/docs/services/voice-agent?topic=voice-agent-about#arch-soe).
+See [Configuring {{site.data.keyword.conversationshort}} for your agent](/docs/services/voice-agent?topic=voice-agent-conversation_va#conversation_va) and [Architecture with a service orchestration engine](/docs/services/voice-agent?topic=voice-agent-about#arch-soe).
 
 ## SMS/MMS Support
 {: #SMS_MMS}
