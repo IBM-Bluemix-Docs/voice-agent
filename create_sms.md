@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-24"
+lastupdated: "2019-10-31"
 
 keywords: SMS agent, SMS provider
 
@@ -80,7 +80,7 @@ Click **Show Advanced** after the **Phone Number** field.
 ### Configuring the SMS Agent for Terminating the Session
 {: #sms_terminate}
 
-The {{site.data.keyword.iva_full}} SMS agent terminates a session based on the value for the session timeout, which is configurable and set to 30 seconds by default. 
+The {{site.data.keyword.iva_full}} SMS agent terminates a session based on the value for the session timeout, which is configurable and set to 3600 seconds by default.
 
 You can also add a node to your {{site.data.keyword.conversationshort}} service to respond to an end session command from the user. 
 

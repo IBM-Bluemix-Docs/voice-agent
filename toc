@@ -20,6 +20,7 @@ IBM Voice Agent with Watson
 	api_reference.md
     default-settings.md
     activity-tracker.md
+    log-analysis.md
     [IBM Voice Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/welcome_voicegateway.html){: new_window}
 
     {: .topicgroup}
@@ -56,12 +57,14 @@ IBM Voice Agent with Watson
         managing_other.md
         managing_SOE.md
 		event-forwarding.md
+        managing_sip_authentication.md
         [Configuring advanced options](/services/voice-agent/voice-agent-managing#config-advanced)
 
     {: .topicgroup}
     Configure a service instance
         managing_concurrency.md
         managing_IP_whitelist.md
+        outbound_calling.md
 
     {: .topicgroup}
     Programming agents
@@ -81,5 +84,6 @@ IBM Voice Agent with Watson
     {: .navgroup id="help"}
     troubleshooting.md
     faq-pricing.md
+    networking-info.md
     release_notes.md
     {: .navgroup-end}

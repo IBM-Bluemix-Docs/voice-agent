@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-09-19"
+lastupdated: "2019-10-31"
 subcollection: "voice-agent"
 ---
 
@@ -19,6 +19,18 @@ subcollection: "voice-agent"
 
 Stay up-to-date with new features and updates that are available for {{site.data.keyword.iva_full}}.
 {: shortdesc}
+
+## November 2019
+
+- **Added:  Support for SIP Authentication** New as of:  _2019-11-26_
+
+  - {{site.data.keyword.iva_full}} now supports the ability to enable SIP Authentication. For more information, see [SIP Authentication](/docs/services/voice-agent?topic=voice-agent-sip_auth)
+
+- **Added:  Support for outbound calls** New as of:  _2019-11-26_
+
+  - {{site.data.keyword.iva_full}} now supports the ability to make outbound calls using REST API. For more information, see [Initiating an outbound call](/docs/services/voice-agent?topic=voice-agent-outbound-calling)
+
+- **Updated:  Voice Gateway driver is updated to version 1.0.3**
 
 ## September 2019
 

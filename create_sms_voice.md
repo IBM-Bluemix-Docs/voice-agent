@@ -15,6 +15,7 @@ subcollection: "voice-agent"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
 
 # Creating an SMS-enabled voice agent
 {: #sms_voice_config_instance}
@@ -85,3 +86,8 @@ These settings enable stand-alone SMS-only sessions, which are not initiated thr
 1. Enable **Initiate conversation from inbound messages** if you want sessions to be initiated from inbound messages. If this option is not enabled, these settings apply only when a session is initiated by using the REST API.
 
 1. Follow instructions in [Creating an SMS agent](/docs/services/voice-agent?topic=voice-agent-sms_config_instance) to create an SMS agent.
+
+
+If an outbound text message is triggered from a node within Watson Assistant, the SMS Gateway endpoint region must be the same region as the Voice Agent endpoint region (SIP URI). The regions must be the same because of the pipe between Voice Gateway and SMS Gateway.
+{: note}
+
