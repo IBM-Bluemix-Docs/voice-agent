@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-16"
+  years: 2018, 2019
+lastupdated: "2019-10-30"
 
 keywords: security, privacy, data, governance, secure connections, information security
 
@@ -67,6 +67,13 @@ By default, SMS data is encrypted with TLS. See [Voice Gateway: Data Processing]
 You can use a Service Orchestration Engine (SOE) to process information that is passing between {{site.data.keyword.iva_short}} and {{site.data.keyword.conversationshort}} to customize conversation with callers. To maintain secure connections, ensure that you configure your SOE by using a secure URL, `https`, and user authentication.
 
 See [Configuring {{site.data.keyword.conversationshort}} for your agent](/docs/services/voice-agent?topic=voice-agent-conversation_va#conversation_va) and [Architecture with a service orchestration engine](/docs/services/voice-agent?topic=voice-agent-about#arch-soe).
+
+### SIP Authentication
+{: #info_sip_auth}
+
+When connecting SIP endpoints to a voice agent, you can add an additional level of protection by enabling SIP authentication. This feature ensures that only SIP endpoints that have the authorized service credential can initiate a call with a password-protected voice agent.
+
+SIP digest authentication is supported for both inbound and outbound calls. For more information about how to configure your voice agent, see [SIP Authentication](/docs/services/voice-agent?topic=voice-agent-sip_auth).
 
 ## SMS/MMS Support
 {: #SMS_MMS}

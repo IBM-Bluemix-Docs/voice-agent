@@ -7,7 +7,7 @@ subcollection: "voice-agent"
 
 ---
 
-:new_window: target="_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
@@ -33,6 +33,7 @@ For more information, see:
 {: #at_actions}
 
 The following table lists the actions that generate an event.
+
 | Action             | Description      | 
 |:-------------------|:-----------------|
 | voiceagent.agent.create | Create an agent |
@@ -40,6 +41,7 @@ The following table lists the actions that generate an event.
 | voiceagent.agent.delete | Delete an agent |
 | voiceagent.ip_addresses.update | Change the whitelisted IP addresses |
 | voiceagent.max_concurrency.update | Change the maximum concurrency |
+
 {: caption="Table 1. Actions that generate events" caption-side="top"}
 
 ## Viewing events
