@@ -124,6 +124,6 @@ curl -X POST -u 'apikey:<your_apikey>' --header 'Content-Type: application/json'
 
 ## More information
 
-For the API documentation for outbound calling, see [IBM Voice Agent API Documentation](https://test.cloud.ibm.com/apidocs/voice-agent/outbound-api).
+For the API documentation for outbound calling, see [IBM Voice Agent API Documentation](https://cloud.ibm.com/apidocs/voice-agent/outbound-api).
 
 For more information, visit [IBM Voice Gateway Outbound Calling ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SS4U29/apioutboundcalls.html).
