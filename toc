@@ -64,13 +64,14 @@ IBM Voice Agent with Watson
     Configure a service instance
         managing_concurrency.md
         managing_IP_whitelist.md
-        outbound_calling.md
+        managing_outbound_calling.md
 
     {: .topicgroup}
     Programming agents
         api.md
         api_dynamic_config.md
         call-transfer.md
+        outbound_calling.md
 
     logging.md
 
@@ -78,6 +79,7 @@ IBM Voice Agent with Watson
     Securing your agent
         secure-trunking.md
         iam_user_access.md
+        sip_authentication.md
 
     {: .navgroup-end}
 
