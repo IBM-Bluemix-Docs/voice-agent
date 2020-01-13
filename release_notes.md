@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2019
+  years: 2019, 2020
 lastupdated: "2019-12-09"
 subcollection: "voice-agent"
 ---
@@ -32,7 +32,7 @@ Stay up-to-date with new features and updates that are available for {{site.data
 
 - **Added:  Support for outbound calls** New as of:  _2019-11-26_
 
-  - {{site.data.keyword.iva_full}} now supports the ability to make outbound calls using REST API. For more information, see [Initiating an outbound call](/docs/services/voice-agent?topic=voice-agent-outbound-calling)
+  - {{site.data.keyword.iva_full}} now supports the ability to make outbound calls using REST API. For more information, see [Enabling outbound calling](/docs/services/voice-agent?topic=voice-agent-enable-outbound-calling) and [Initiating an outbound call](/docs/services/voice-agent?topic=voice-agent-init-outbound)
 
 - **Updated:  Voice Gateway driver is updated to version 1.0.3**
 
