@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2019-12-09"
+lastupdated: "2020-03-04"
 subcollection: "voice-agent"
 ---
 
@@ -19,6 +19,10 @@ subcollection: "voice-agent"
 
 Stay up-to-date with new features and updates that are available for {{site.data.keyword.iva_full}}.
 {: shortdesc}
+
+## March 2020
+
+- **Updated:  Voice Gateway driver is updated to version 1.0.5**
 
 ## December 2019
 
@@ -41,10 +45,6 @@ Stay up-to-date with new features and updates that are available for {{site.data
 - **Added:  Speech To Text advanced configuration options** New as of:  _2019-09-19_
 
   - You can now configure custom language models and custom acoustic models for {{site.data.keyword.iva_full}} by using the Speech To Text advanced configuration options. For more information, see [Step 12 of Creating an Agent](/docs/services/voice-agent?topic=voice-agent-config_instance#config_instance).
-
-- **Updated:  Inactive services reclamation**
-
-  - **Lite plan services are deleted after 30 days of inactivity** will now be enforced.
 
 - **Updated:  Voice Gateway driver is updated to version 1.0.2.4**
 
