@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-01"
+  years: 2017, 2020
+lastupdated: "2020-03-13"
 
 keywords: Programming voice agents, api, editing JSON
 
@@ -25,6 +25,10 @@ You can control the behavior of your agent by defining action tags and state var
 
 Because {{site.data.keyword.iva_full}} is based on IBM Voice Gateway, the API works the same way. If you're familiar with Voice Gateway and SMS Gateway, you can use the same actions and state variables in your {{site.data.keyword.conversationshort}} dialogs with {{site.data.keyword.iva_short}}. See [Action tags and state variables in the Voice Gateway API](https://www.ibm.com/support/knowledgecenter/SS4U29/api.html) and [API for SMS Gateway](https://www.ibm.com/support/knowledgecenter/SS4U29/sms_api.html), respectively.
 {: tip}
+
+**Note:** By default, Watson Assistant service instances that are not part of Premium plans log requests and their results to improve the service for future users. To prevent IBM usage of data in this way, see [Data collection](https://cloud.ibm.com/apidocs/assistant/assistant-v2#data-collection) in the Watson Assistant API reference.
+
+**Note:** Services which process data outside of {{site.data.keyword.vgw_short}} require the ability to remove a customer's data from that service. For more information on labeling and deleting data in {{site.data.keyword.conversation}}, see: [Labeling and deleting data in the {{site.data.keyword.conversationshort}} service](https://cloud.ibm.com/docs/assistant?topic=assistant-information-security#information-security-gdpr-wa){: new_window}
 
 ## Editing JSON in the dialog response
 {: #json-editor}
