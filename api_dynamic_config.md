@@ -24,6 +24,10 @@ You can connect third-party speech and text services by setting the Speech to Te
 
 See [Programming agents using the API](/docs/services/voice-agent?topic=voice-agent-api) for code examples and information about how to set states and initiate action sequences.
 
+**Note:** By default, Watson Speech to Text and Text to Speech instances that are not part of Premium plans log requests and their results to improve the service for future users. To prevent IBM usage of data in this way, see the [Watson Speech to Text](https://cloud.ibm.com/apidocs/speech-to-text/speech-to-text#data-collection) and [Watson Text to Speech](https://cloud.ibm.com/apidocs/text-to-speech/text-to-speech#data-collection) API references.
+
+**Note:** Services which process data outside of {{site.data.keyword.vgw_short}} require the ability to remove a customer's data from that service. For more information on labeling and deleting data in Watson Speech to Text and Text to Speech, see: [Labeling and deleting data in the Speech to Text service](https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-information-security#gdpr-speech-to-text){: new_window} and [Labeling and deleting data in the Text to Speech service](https://cloud.ibm.com/docs/text-to-speech?topic=text-to-speech-information-security){: new_window}.
+
 ## Connecting to Google Speech-to-Text from a {{site.data.keyword.conversationshort}} dialog node
 {: #stt_dialog}
 
