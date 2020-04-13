@@ -74,7 +74,7 @@ After you create your {{site.data.keyword.iva_full}} service, you can create ind
 
 1. Call your agent and trigger the node to receive a text message on the phone that you are calling from. 
 
-To learn more about working in the {{site.data.keyword.conversationshort}} service, see [About {{site.data.keyword.conversationshort}}](/docs/assistant?topic=assistant-index#indext).
+To learn more about working in the {{site.data.keyword.conversationshort}} service, see [About {{site.data.keyword.conversationshort}}](/docs/assistant?topic=assistant-index).
 
 ## Creating an SMS-enabled voice agent with SMS-only capabilities
 {: #sms_voice_inbound}
