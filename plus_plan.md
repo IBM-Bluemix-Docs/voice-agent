@@ -30,7 +30,7 @@ The {{site.data.keyword.iva_full}} Plus plan cannot be provisioned through {{sit
 
 ## Watson services
 {: #plus_watson_services}
-The {{site.data.keyword.iva_full}} Plus plan simplifies pricing by bundling {{site.data.keyword.iva_short}} with the Watson services it depends on under a single price. For more information, see [Creating a voice agent](/docs/services/voice-agent?topic=voice-agent-config_instance).
+The {{site.data.keyword.iva_full}} Plus plan simplifies pricing by bundling {{site.data.keyword.iva_short}} with the Watson services it depends on under a single price. For more information, see [Creating a voice agent](/docs/voice-agent?topic=voice-agent-config_instance).
 
 To avoid extra charges, select a {{site.data.keyword.conversationshort}} Plus or Premium plan for use with your {{site.data.keyword.iva_short}} Plus plan. If you do not use a {{site.data.keyword.conversationshort}} Plus or Premium plan, you incur extra charges based on the number of API calls.
 
@@ -81,7 +81,7 @@ To use an SOE as part of the Plus plan, the SOE must pass the `user_id` attribut
 
 ## SMS interaction
 {: #plus_sms}
-SMS messages are bundled as part of the Plus plan. SMS messages can be sent and received as part of a voice call at no additional cost. For more information on SMS integration, see [Creating an SMS-enabled voice agent](/docs/services/voice-agent?topic=voice-agent-sms_voice_config_instanc).
+SMS messages are bundled as part of the Plus plan. SMS messages can be sent and received as part of a voice call at no additional cost. For more information on SMS integration, see [Creating an SMS-enabled voice agent](/docs/voice-agent?topic=voice-agent-sms_voice_config_instanc).
 
 Currently, SMS functionality is limited under the Plus plan:
 - **SMS** type agents are not available.

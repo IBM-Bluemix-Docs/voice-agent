@@ -127,7 +127,7 @@ In the following more complex example, the defined actions on the `vgwActionSequ
 ## Setting states
 {: #setting-states}
 
-To indicate a change of state that remains between conversation turns, the agent exchanges state variables with the configured {{site.data.keyword.conversationfull}} service. These state variables are defined on a {{site.data.keyword.conversationshort}} dialog node as [context variables](/docs/services/assistant?topic=assistant-dialog-build#dialog-build) in JSON format.
+To indicate a change of state that remains between conversation turns, the agent exchanges state variables with the configured {{site.data.keyword.conversationfull}} service. These state variables are defined on a {{site.data.keyword.conversationshort}} dialog node as [context variables](/docs/assistant?topic=assistant-dialog-build#dialog-build) in JSON format.
 
 For example, you can define following state variable to set the message that is streamed to the caller if the connection to the {{site.data.keyword.conversationshort}} service fails.
 

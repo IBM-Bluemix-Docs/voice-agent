@@ -32,7 +32,7 @@ The _Usage_ dashboard shows you quick stats about your service use and remaining
 
 You can filter _Call logs_ and _Call minutes_ by date, and by either agent names or numbers to reduce the number of displayed calls and isolate specific call logs. You can filter _SMS logs_ by date, and by either agent names or numbers. In addition, you can filter _Call logs_ to display only failed calls.
 
-To learn more about creating and editing agents, see [Managing Agents](/docs/services/voice-agent?topic=voice-agent-managing).
+To learn more about creating and editing agents, see [Managing Agents](/docs/voice-agent?topic=voice-agent-managing).
 
 ##  Viewing call logs
 

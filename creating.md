@@ -27,11 +27,11 @@ You can create an {{site.data.keyword.iva_full}} service instance by using the {
 ## Creating the service from the catalog
 {: #catalog_create}
 
-1. Go to the [{{site.data.keyword.iva_short}} catalog page](https://cloud.ibm.com/catalog/services/voice-agent-with-watson).
+1. Go to the [{{site.data.keyword.iva_short}} catalog page](https://cloud.ibm.com/catalog/voice-agent-with-watson).
 
    The catalog page has information about the service and its pricing plans. You can change the **Service name** value.
 
-2. Click **Create** to [create an agent from the _Manage_ dashboard](/docs/services/voice-agent?topic=voice-agent-config_instance#config_instance).
+2. Click **Create** to [create an agent from the _Manage_ dashboard](/docs/voice-agent?topic=voice-agent-config_instance#config_instance).
 
 ## Creating the service from the command line
 {: #command_create}

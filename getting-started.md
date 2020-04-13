@@ -22,7 +22,7 @@ subcollection: "voice-agent"
 {{site.data.keyword.iva_full}} helps you integrate a set of orchestrated Watson services with the telephone network by using the Session Initiation Protocol (SIP). This tutorial describes how to set up a cognitive agent that you can call from any phone.
 {: shortdesc}
 
-A new SMS feature is available for {{site.data.keyword.iva_full_notm}}. Not all of the procedures that are described on this page are necessary to configure SMS functionality. See the [Voice Agent Getting started tutorial](/docs/services/voice-agent?topic=voice-agent-connect-sms) for instructions on how to connect SMS with {{site.data.keyword.iva_full_notm}}
+A new SMS feature is available for {{site.data.keyword.iva_full_notm}}. Not all of the procedures that are described on this page are necessary to configure SMS functionality. See the [Voice Agent Getting started tutorial](/docs/voice-agent?topic=voice-agent-connect-sms) for instructions on how to connect SMS with {{site.data.keyword.iva_full_notm}}
 {: tip}
 
 Watch a demonstration of how to create your first agent in this [{{site.data.keyword.iva_full_notm}} tutorial ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/tv/building-voice-enabled-cognitive-applications-with-watson/).
@@ -39,7 +39,7 @@ Create an account or log in to your existing account on [{{site.data.keyword.Blu
 ## Step 1: Creating a {{site.data.keyword.iva_short}} service instance on {{site.data.keyword.Bluemix_notm}}
 {: #step1}
 
-From the [{{site.data.keyword.iva_short}} catalog page](https://cloud.ibm.com/catalog/services/voice-agent-with-watson), review the service information, and then click **Create**.
+From the [{{site.data.keyword.iva_short}} catalog page](https://cloud.ibm.com/catalog/voice-agent-with-watson), review the service information, and then click **Create**.
 
 After you create the service, make note of the agent endpoint on the _Getting started_ dashboard. You need the endpoint SIP URI to configure your SIP trunk.
 
@@ -48,10 +48,10 @@ After you create the service, make note of the agent endpoint on the _Getting st
 
 1. Create a SIP trunk from any of the following supported providers. Then, associate a phone number with your SIP trunk.
 
-  * [NetFoundry](/docs/services/voice-agent?topic=voice-agent-connect#NetFoundry-setup)
-  * [Twilio](/docs/services/voice-agent?topic=voice-agent-connect#twilio-setup)
-  * [AT&T and other SIP Trunking providers](/docs/services/voice-agent?topic=voice-agent-connect#att-other)
-  * [Peering with {{site.data.keyword.iva_short}}](/docs/services/voice-agent?topic=voice-agent-connect#peering)
+  * [NetFoundry](/docs/voice-agent?topic=voice-agent-connect#NetFoundry-setup)
+  * [Twilio](/docs/voice-agent?topic=voice-agent-connect#twilio-setup)
+  * [AT&T and other SIP Trunking providers](/docs/voice-agent?topic=voice-agent-connect#att-other)
+  * [Peering with {{site.data.keyword.iva_short}}](/docs/voice-agent?topic=voice-agent-connect#peering)
 
 ## Step 3: Creating and connecting your agent
 {: #step3}
@@ -68,12 +68,12 @@ After you create the service, make note of the agent endpoint on the _Getting st
   * Click **Create an agent** to create all of the services and an agent with the default configuration in a single step.
   * Or, click each of the service names to create the services yourself. Then, return to {{site.data.keyword.iva_short}} and create an agent separately.
 
-   If you manually created a {{site.data.keyword.conversationshort}} service instance, add a dialogue so that you can test your agent.  To quickly get started, clone the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub and then [import the sample](/docs/services/assistant?topic=assistant-skill-dialog-add) as a skill:
+   If you manually created a {{site.data.keyword.conversationshort}} service instance, add a dialogue so that you can test your agent.  To quickly get started, clone the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub and then [import the sample](/docs/assistant?topic=assistant-skill-dialog-add) as a skill:
 
    1. On the sample conversation GitHub page, click the `1` line number and select **... > Copy line**. Paste the copied text into a file, and save it as a JSON file such as `voice-gateway-conversation-en.json`.
    2. Launch the {{site.data.keyword.conversationshort}} tool. On the _Skills_ page, click the ![Import workspace](../conversation/images/workspace_import.png) icon and import the JSON file.
 
-  Alternatively, you can [build your own dialog](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and a node with a default response.
+  Alternatively, you can [build your own dialog](/docs/assistant?topic=assistant-getting-started#getting-started-build-dialog) to simulate your production environment. At minimum, your dialog must contain a node with the `conversation_start` condition and a node with a default response.
 
 
 ## Next steps
@@ -81,8 +81,8 @@ After you create the service, make note of the agent endpoint on the _Getting st
 
 Test your agent by calling its associated phone number. If you hear a response, your agent is active!
 
-If you do not hear a response, you can examine your call logs and agent usage on the _Usage_ dashboard. See [Viewing usage and call logs](/docs/services/voice-agent?topic=voice-agent-logging).
+If you do not hear a response, you can examine your call logs and agent usage on the _Usage_ dashboard. See [Viewing usage and call logs](/docs/voice-agent?topic=voice-agent-logging).
 
-You can edit the settings for your agent, create or remove agents, and add multiple Watson service locations to your agent from the _Manage_ dashboard. For more information, see [Managing agents](/docs/services/voice-agent?topic=voice-agent-managing).
+You can edit the settings for your agent, create or remove agents, and add multiple Watson service locations to your agent from the _Manage_ dashboard. For more information, see [Managing agents](/docs/voice-agent?topic=voice-agent-managing).
 
-You can also configure advanced settings, such as securing your SIP connection from your Twilio account. See [Securing connections](/docs/services/voice-agent?topic=voice-agent-securing).
+You can also configure advanced settings, such as securing your SIP connection from your Twilio account. See [Securing connections](/docs/voice-agent?topic=voice-agent-securing).

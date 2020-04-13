@@ -80,7 +80,7 @@ For example, in Twilio this would correspond to a credential defined in the _Aut
   
   - Choose the trunk that you want to configure and go to the **Termination** dashboard. In the _Authentication_ section you can configure a credential in the **Credentials List**.
 
-  - If you do not specify a credential, then **you must** add an IP address to the **IP ACCESS CONTROL LISTS**. In other words, you must configure one of the _Authentication_ types. The IP address to use here would be the Voice agent outbound calling interface IP address. See [Networking Information](/docs/services/voice-agent?topic=voice-agent-networking_info).
+  - If you do not specify a credential, then **you must** add an IP address to the **IP ACCESS CONTROL LISTS**. In other words, you must configure one of the _Authentication_ types. The IP address to use here would be the Voice agent outbound calling interface IP address. See [Networking Information](/docs/voice-agent?topic=voice-agent-networking_info).
   
 
 An example cURL command would be:

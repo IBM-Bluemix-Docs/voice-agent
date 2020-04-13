@@ -63,7 +63,7 @@ You can choose the SIP trunk provider that you use to integrate with {{site.data
 
 1. After the payment successfully processes, your SIP trunk phone number is displayed in your account.
 
-You need this phone number to set up your agent and configure call transfer, including the country and area codes. See [Creating and connecting your agent](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
+You need this phone number to set up your agent and configure call transfer, including the country and area codes. See [Creating and connecting your agent](/docs/voice-agent?topic=voice-agent-getting-started#step3).
 
 
 ## Creating a Twilio SIP trunk
@@ -89,7 +89,7 @@ You need this phone number to set up your agent and configure call transfer, inc
 
   On the Numbers page, click **Buy a Number** or, if you already have a number, click the **+** icon. A window displays where you can provision a new phone number in your region. Assign the number to the SIP trunk you created by going back to the SIP trunk and clicking the Number icon.
 
-  You need this phone number to set up your voice agent, including the country and area codes. See [Creating and connecting your voice agent](/docs/services/voice-agent?topic=voice-agent-getting-started#step3).
+  You need this phone number to set up your voice agent, including the country and area codes. See [Creating and connecting your voice agent](/docs/voice-agent?topic=voice-agent-getting-started#step3).
 
   **NOTE**: If you use a Lite or Trial Twilio account to test transfers on {{site.data.keyword.iva_short}}, then make sure to _verify_ the transfer target. See more instructions on [Twilio's official site](https://support.twilio.com/hc/en-us/articles/223136107-How-does-Twilio-s-Free-Trial-work-).
 
@@ -115,7 +115,7 @@ You need this phone number to set up your agent and configure call transfer, inc
 
     Pay attention at the **callSIP** function call:
       * Substitute the Voximplant number that you bought in step 2 instead of `12025550186`. 
-      * Substitute your voice agent SIP endpoint instead of `us-south.voiceagent.cloud.ibm.com`. The endpoint is specified on the _Getting started_ page of the {{site.data.keyword.iva_full}} documentation. See the [*Getting started tutorial*](/docs/services/voice-agent?topic=voice-agent-getting-started#step1).
+      * Substitute your voice agent SIP endpoint instead of `us-south.voiceagent.cloud.ibm.com`. The endpoint is specified on the _Getting started_ page of the {{site.data.keyword.iva_full}} documentation. See the [*Getting started tutorial*](/docs/voice-agent?topic=voice-agent-getting-started#step1).
     
 1. Go to the **Routing** tab to create a **watson-rule**. Specify the **watson-scenario** as an assigned scenario.
 
@@ -142,7 +142,7 @@ You need this phone number to set up your agent and configure call transfer, inc
 
 You can request assisted network setup to connect with AT&T or other SIP trunking providers, peer with {{site.data.keyword.iva_short}}, or to request more than 50 concurrent connections by using the following process.
 
-You can whitelist a PBX such as Asterisk in your {{site.data.keyword.iva_short}} instance. Open a support ticket only if public internet whitelisting is not an acceptable solution. See [Whitelisting IP addresses](/docs/services/voice-agent?topic=voice-agent-whitelist_IP#whitelist_IP).
+You can whitelist a PBX such as Asterisk in your {{site.data.keyword.iva_short}} instance. Open a support ticket only if public internet whitelisting is not an acceptable solution. See [Whitelisting IP addresses](/docs/voice-agent?topic=voice-agent-whitelist_IP#whitelist_IP).
 
 1. Open a new [{{site.data.keyword.Bluemix_notm}} support ticket](https://cloud.ibm.com/unifiedsupport/tickets/add)
 

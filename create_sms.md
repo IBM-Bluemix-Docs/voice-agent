@@ -36,32 +36,32 @@ After you create your {{site.data.keyword.iva_full}} service, you can create ind
 1. Under **Conversation**, configure the connection to your {{site.data.keyword.conversationshort}} service instance. You can use {{site.data.keyword.conversationshort}} service instances in {{site.data.keyword.Bluemix_notm}} accounts that you or someone else owns. You can also connect to any of these options through a service orchestration engine (SOE).
 
    * If you are creating an SMS agent in either the Dallas or Washington DC region and do not have a {{site.data.keyword.conversationshort}} service instance, you can create one in the **Service instance** menu.
-   * Alternatively, you can connect to other sources of a {{site.data.keyword.conversationshort}} dialog or to connect with a SOE by changing the [**Service type**](/docs/services/voice-agent?topic=voice-agent-other_service#other_service).
-   * If you want to configure multiple service locations, click the other location option and select **Enable location** to configure the connection to your other {{site.data.keyword.conversationshort}} instance. For more information, see [Adding multiple Watson service locations](/docs/services/voice-agent?topic=voice-agent-disaster-recovery#add_location).
+   * Alternatively, you can connect to other sources of a {{site.data.keyword.conversationshort}} dialog or to connect with a SOE by changing the [**Service type**](/docs/voice-agent?topic=voice-agent-other_service#other_service).
+   * If you want to configure multiple service locations, click the other location option and select **Enable location** to configure the connection to your other {{site.data.keyword.conversationshort}} instance. For more information, see [Adding multiple Watson service locations](/docs/voice-agent?topic=voice-agent-disaster-recovery#add_location).
 
 1. Check the **Initiate conversation from inbound messages** box if you want to allow users to begin an SMS session with your SMS agent.
 
 1. Check the **Notify on session timeout** box to have your SMS agent send an SMS message to the user. The message alerts them that the agent has not received a response in some time and will now time out. 
 
-    - See [Advanced Options](/docs/services/voice-agent?topic=voice-agent-sms_config_instance#sms_advanced) for more information on the **Advanced Options** available for your SMS agent, such as setting a custom time for the session to time out.
+    - See [Advanced Options](/docs/voice-agent?topic=voice-agent-sms_config_instance#sms_advanced) for more information on the **Advanced Options** available for your SMS agent, such as setting a custom time for the session to time out.
     - Check the box only if you want to be notified when a session times out.
 
-1. You can also choose to enable event forwarding to collect information about calls that are handled by your agents in a {{site.data.keyword.cloudantfull}}. For more information, see [Enabling event forwarding for agents](/docs/services/voice-agent?topic=voice-agent-event_forwarding). For more configuration options, see [Configuring an agent](/docs/services/voice-agent?topic=voice-agent-managing#configure_va).
+1. You can also choose to enable event forwarding to collect information about calls that are handled by your agents in a {{site.data.keyword.cloudantfull}}. For more information, see [Enabling event forwarding for agents](/docs/voice-agent?topic=voice-agent-event_forwarding). For more configuration options, see [Configuring an agent](/docs/voice-agent?topic=voice-agent-managing#configure_va).
 
 1.  Click **Create an agent** to create your SMS agent and any new services.
 
-1. Follow [the instructions](/docs/services/voice-agent?topic=voice-agent-connect-sms) to connect to an SMS provider.
+1. Follow [the instructions](/docs/voice-agent?topic=voice-agent-connect-sms) to connect to an SMS provider.
 
-After you create the SMS agent, test your SMS agent by texting its phone number. You can view details about your interaction on the _Usage_ dashboard. See [Viewing Usage and Logs](/docs/services/voice-agent?topic=voice-agent-logging).
+After you create the SMS agent, test your SMS agent by texting its phone number. You can view details about your interaction on the _Usage_ dashboard. See [Viewing Usage and Logs](/docs/voice-agent?topic=voice-agent-logging).
 
 To enable SMS messaging between customers and an agent during a voice call, the SMS number must match the voice number.
 {: tip}
 
-Before you create an SMS agent or add SMS functions to your agent, you **must** have the proper credentials set up and generate an API key to program to your SMS number. For more information, see [Generating API Key and Setting Credentials](/docs/services/voice-agent?topic=voice-agent-connect-sms#sms_access).
+Before you create an SMS agent or add SMS functions to your agent, you **must** have the proper credentials set up and generate an API key to program to your SMS number. For more information, see [Generating API Key and Setting Credentials](/docs/voice-agent?topic=voice-agent-connect-sms#sms_access).
 
-You **must** also configure your SIP trunk for SMS functions. See your provider's instructions, for example, Twilio. If you do not have a Twilio phone number, see [Creating a Twilio SIP trunk](/docs/services/voice-agent?topic=voice-agent-connect#twilio-setup).
+You **must** also configure your SIP trunk for SMS functions. See your provider's instructions, for example, Twilio. If you do not have a Twilio phone number, see [Creating a Twilio SIP trunk](/docs/voice-agent?topic=voice-agent-connect#twilio-setup).
 
-After you have a Twilio number, configure it for SMS functions. For more information, see [Configuring Twilio for SMS](/docs/services/voice-agent?topic=voice-agent-connect-sms#twilio-setup).
+After you have a Twilio number, configure it for SMS functions. For more information, see [Configuring Twilio for SMS](/docs/voice-agent?topic=voice-agent-connect-sms#twilio-setup).
 
 If you have trouble creating credentials, contact your service instance administrator to grant you *Manager* or *Writer* access.
 {: tip}
@@ -111,4 +111,4 @@ You can also add a node to your {{site.data.keyword.conversationshort}} service 
     ```
     {: codeblock}
 
-After you create the agent, test your agent by calling or texting its phone number based on its type. You can view details about your interaction on the _Usage_ dashboard. See [Viewing Usage and Logs](/docs/services/voice-agent?topic=voice-agent-logging).
+After you create the agent, test your agent by calling or texting its phone number based on its type. You can view details about your interaction on the _Usage_ dashboard. See [Viewing Usage and Logs](/docs/voice-agent?topic=voice-agent-logging).
