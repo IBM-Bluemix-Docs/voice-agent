@@ -29,11 +29,11 @@ To troubleshoot issues with your agents, you can use logging, usage, and event-f
 
 1. When a call fails, the final {{site.data.keyword.conversationshort}} turn might explain the failure.
 
-1. Usage logs show you any errors that occurred during a particular call. See [Viewing usage and call logs](/docs/services/voice-agent?topic=voice-agent-logging).
+1. Usage logs show you any errors that occurred during a particular call. See [Viewing usage and call logs](/docs/voice-agent?topic=voice-agent-logging).
 
 1. Check your service provider logs for signaling errors. For example, Twilio provides logs for each SIP trunk it hosts.
 
-1. By [enabling event forwarding for agents](/docs/services/voice-agent?topic=voice-agent-event_forwarding), you can configure your agent to forward Call Detail Records (CDRs) to a Cloudant database and then determine why a call failed. Other events, such as {{site.data.keyword.conversationshort}} Turn Events can provide details about every conversation turn within a call.
+1. By [enabling event forwarding for agents](/docs/voice-agent?topic=voice-agent-event_forwarding), you can configure your agent to forward Call Detail Records (CDRs) to a Cloudant database and then determine why a call failed. Other events, such as {{site.data.keyword.conversationshort}} Turn Events can provide details about every conversation turn within a call.
 
 **Important:** The CDR, transcription, and turn events include information from your users that might potentially contain Protected Health Information (PHI), personally identifiable information (PII), or PCI Data Security Standard (PCI DSS) data. To prevent exposure of personal information, you must ensure that your {{site.data.keyword.cloudant_short_notm}} instance properly protects the confidential information that your users share in or during conversation.
 
@@ -62,13 +62,13 @@ Your call likely didn't connect to the services. This problem occurs when the {{
 
 * Verify that the Watson service credentials, URLs, and the {{site.data.keyword.conversationshort}} workspace ID are all valid.
 * Verify that the dialog in your {{site.data.keyword.conversationshort}} skill was created correctly.
-  * You can import the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub for a pre-built skill. See [Step 3 in *Getting started tutorial*](/docs/services/voice-agent?topic=voice-agent-getting-started#step3) for details about saving the sample conversation as a JSON file and then importing the file as a skill in the {{site.data.keyword.conversationshort}} tool.
-  * If you created your own {{site.data.keyword.conversationshort}} dialog, verify that the dialog contains a node with the `conversation_start` condition and a node with a default response. For detailed instructions, see [Building a dialog](/docs/services/assistant?topic=assistant-getting-started#getting-started-build-dialog) in the {{site.data.keyword.conversationshort}} documentation.
+  * You can import the [sample conversation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/WASdev/sample.voice.gateway/blob/master/conversation/voice-gateway-conversation-en.json) from GitHub for a pre-built skill. See [Step 3 in *Getting started tutorial*](/docs/voice-agent?topic=voice-agent-getting-started#step3) for details about saving the sample conversation as a JSON file and then importing the file as a skill in the {{site.data.keyword.conversationshort}} tool.
+  * If you created your own {{site.data.keyword.conversationshort}} dialog, verify that the dialog contains a node with the `conversation_start` condition and a node with a default response. For detailed instructions, see [Building a dialog](/docs/assistant?topic=assistant-getting-started#getting-started-build-dialog) in the {{site.data.keyword.conversationshort}} documentation.
 * See whether your phone call is listed on the agent _Usage_ dashboard. If you see an item for your phone call, then your agent connected to the Watson service.
 
 ### Why can't I specify a phone number when I create an agent?
 
-See whether the phone number you specified is used by an existing agent. You can have only one agent for a phone number. You can provision another phone number from your SIP trunking provider and use it to create another agent. Or [delete the existing agent on the _Manage_ dashboard](/docs/services/voice-agent?topic=voice-agent-managing#delete_va) to free up the phone number and then create a new agent.
+See whether the phone number you specified is used by an existing agent. You can have only one agent for a phone number. You can provision another phone number from your SIP trunking provider and use it to create another agent. Or [delete the existing agent on the _Manage_ dashboard](/docs/voice-agent?topic=voice-agent-managing#delete_va) to free up the phone number and then create a new agent.
 
 ### Why are my calls failing frequently?
 

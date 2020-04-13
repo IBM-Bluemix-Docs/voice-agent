@@ -25,7 +25,7 @@ subcollection: "voice-agent"
 You can connect third-party speech and text services when you are creating, cloning, or editing your agent on the _Manage_ dashboard.
 {: shortdesc}
 
-Alternatively, to configure your speech and text service connections as needed, you can [use dynamic configuration with {{site.data.keyword.conversationshort}}](/docs/services/voice-agent?topic=voice-agent-dynamic-donfig). This  configuration allows you to change your agent configuration with action tags and state variables.
+Alternatively, to configure your speech and text service connections as needed, you can [use dynamic configuration with {{site.data.keyword.conversationshort}}](/docs/voice-agent?topic=voice-agent-dynamic-donfig). This  configuration allows you to change your agent configuration with action tags and state variables.
 
 ## Connecting to Google Speech-to-Text from {{site.data.keyword.iva_short}}
 {: #stt_va}
@@ -36,7 +36,7 @@ Instead of using a {{site.data.keyword.speechtotextfull}} instance, you can choo
 
 1. In your _Speech to Text_ service configuration, choose **Google Speech to Text service instance**.
 
-1. Choose the **Language** for your service instance. If your preferred language is not listed in the dropdown menu, you can always choose **Other** and set it through [advanced configuration](/docs/services/voice-agent?topic=voice-agent-third-party#advanced).
+1. Choose the **Language** for your service instance. If your preferred language is not listed in the dropdown menu, you can always choose **Other** and set it through [advanced configuration](/docs/voice-agent?topic=voice-agent-third-party#advanced).
 
 1. Enter your Google Cloud Speech-to-Text service credentials, with a limit up to 3072 characters.
   * You can generate your service credentials in the Google Cloud Platform as a JSON key when you [set up a service account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). The following code example contains the sample credential fields that you generate on the Google Cloud Platform.
@@ -79,7 +79,7 @@ Instead of using a {{site.data.keyword.texttospeechfull}} instance, you can choo
 
 1. In your _Text to Speech Service configuration, choose **Google Text to Speech Service instance**.
 
-1. Choose the **Language** and **Voice** for your service instance. If your preferred language is not listed in the dropdown menu, you can always choose **Other** and set it through [advanced configuration](/docs/services/voice-agent?topic=voice-agent-third-party#advanced).
+1. Choose the **Language** and **Voice** for your service instance. If your preferred language is not listed in the dropdown menu, you can always choose **Other** and set it through [advanced configuration](/docs/voice-agent?topic=voice-agent-third-party#advanced).
 
 1. Enter your Google Cloud Text to Speech Service credentials, with a limit up to 3072 characters.
   * You can generate your service credentials in the Google Cloud Platform as a JSON key when you [set up a service account ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.google.com/video-intelligence/docs/common/auth#set_up_a_service_account). The following code example contains the sample credential fields that you generate on the Google Cloud Platform.

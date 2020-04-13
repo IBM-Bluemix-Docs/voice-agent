@@ -52,4 +52,4 @@ To enable or disable outbound calling:
 
    For example, in Twilio, if you do not specify a credential, then you must add an IP address to the IP `ACCESS CONTROL LISTS`.
 
-   - Configure one of the _Authentication types_. The IP address to use here would be the voice agent outbound calling interface IP address. See [Networking Information](/docs/services/voice-agent?topic=voice-agent-networking_info).
+   - Configure one of the _Authentication types_. The IP address to use here would be the voice agent outbound calling interface IP address. See [Networking Information](/docs/voice-agent?topic=voice-agent-networking_info).

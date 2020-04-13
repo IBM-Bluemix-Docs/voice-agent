@@ -23,7 +23,7 @@ subcollection: "voice-agent"
 
 [comment]: # (After you create your {{site.data.keyword.iva_full}} service instance, )
 
-You can add multiple phone numbers to a single Agent, so that configuring the Agent affects all the numbers that are associated with it. The _Manage Service Instance_ dashboard page shows the **Primary Number that is associated with the Agent. See [Setting a Primary Number](/docs/services/voice-agent?topic=voice-agent-multi_num#primary_num).
+You can add multiple phone numbers to a single Agent, so that configuring the Agent affects all the numbers that are associated with it. The _Manage Service Instance_ dashboard page shows the **Primary Number that is associated with the Agent. See [Setting a Primary Number](/docs/voice-agent?topic=voice-agent-multi_num#primary_num).
 
 
 You can access the **Manage** dialog box by clicking **Manage** next to **Phone Number** from the _Create an Agent_ or _Edit Agent_ page.
@@ -96,7 +96,7 @@ A list of numbers can be uploaded into the Agent all at once. The list _must_ be
 
   * _**NOTE:**_ Uploading numbers from a .CSV file replaces _ALL_ current numbers in the Agent. The number list will _not_ be appended with the numbers from the .CSV file.
 
-  * Numbers in the .CSV file _must_ conform to the same format as adding a number through the Dashboard, and must be unique. See [Number Format](/docs/services/voice-agent?topic=voice-agent-multi_num#format_num).
+  * Numbers in the .CSV file _must_ conform to the same format as adding a number through the Dashboard, and must be unique. See [Number Format](/docs/voice-agent?topic=voice-agent-multi_num#format_num).
 
 1. Click **Manage** next to **Phone Number** from the _Create an Agent_ or _Edit Agent_ page.
 
@@ -115,7 +115,7 @@ A list of numbers can be uploaded into the Agent all at once. The list _must_ be
 ## Exporting Numbers
 {: #export_num}
 
-A list of numbers and their descriptions can be exported from the Agent into a **.CSV** file and downloaded to your computer. This lets you modify the numbers and descriptions as you want, and you can upload them again to the Agent. See [Importing Numbers](/docs/services/voice-agent?topic=voice-agent-multi_num#import_num).
+A list of numbers and their descriptions can be exported from the Agent into a **.CSV** file and downloaded to your computer. This lets you modify the numbers and descriptions as you want, and you can upload them again to the Agent. See [Importing Numbers](/docs/voice-agent?topic=voice-agent-multi_num#import_num).
 
 1. Click **Manage** next to **Phone Number** from the _Create an Agent_ or _Edit Agent_ page.
 

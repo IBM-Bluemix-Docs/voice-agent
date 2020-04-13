@@ -25,7 +25,7 @@ subcollection: "voice-agent"
 # Log Analysis integration
 {: #log-analysis-integration}
 
-{{site.data.keyword.iva_full}} is integrated with [{{site.data.keyword.la_full}}](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-about){: new_window}{: external}, so you can view database logs.
+{{site.data.keyword.iva_full}} is integrated with [{{site.data.keyword.la_full}}](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-about){: new_window}{: external}, so you can view database logs.
 
 Currently, {{site.data.keyword.la_full_notm}} integration is available for {{site.data.keyword.iva_full}} deployments according to the following table:
 
@@ -38,12 +38,12 @@ Deployment Region | LogDNA Region
 ## Provisioning {{site.data.keyword.la_full_notm}}
 {: #provisioning-logdna}
 
-Log information from your {{site.data.keyword.iva_full}} instances are automatically forwarded to {{site.data.keyword.la_full_notm}}, but to access it you must [provision a Log Analysis service](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-provision){: new_window}{: external} in your {{site.data.keyword.cloud_notm}} account and [configure the service to receive {{site.data.keyword.cloud_notm}} service logs](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-config_svc_logs){: new_window}{: external}.
+Log information from your {{site.data.keyword.iva_full}} instances are automatically forwarded to {{site.data.keyword.la_full_notm}}, but to access it you must [provision a Log Analysis service](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-provision){: new_window}{: external} in your {{site.data.keyword.cloud_notm}} account and [configure the service to receive {{site.data.keyword.cloud_notm}} service logs](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-config_svc_logs){: new_window}{: external}.
 
-This setting enables logs from **all** {{site.data.keyword.cloud_notm}} services on your account that have {{site.data.keyword.la_full_notm}} integration to send logs to your {{site.data.keyword.la_full_notm}} service. [A list of the integrated services is available](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-cloud_services#cloud_services){: new_window}{: external}.
+This setting enables logs from **all** {{site.data.keyword.cloud_notm}} services on your account that have {{site.data.keyword.la_full_notm}} integration to send logs to your {{site.data.keyword.la_full_notm}} service. [A list of the integrated services is available](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-cloud_services#cloud_services){: new_window}{: external}.
 {: .tip}
 
-{{site.data.keyword.la_full_notm}} has a lite plan that is free to use, but it offers only streaming events. To take advantage of the tagging, export, retention, and other features, you need to use one of the [paid plans](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-about#overview_pricing_plans){: new_window}{: external}.
+{{site.data.keyword.la_full_notm}} has a lite plan that is free to use, but it offers only streaming events. To take advantage of the tagging, export, retention, and other features, you need to use one of the [paid plans](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-about#overview_pricing_plans){: new_window}{: external}.
 
 ### HIPAA 
 {: #hipaa_logdna}
@@ -66,4 +66,4 @@ Line identifiers | Description
 `App` | The CRN of your database deployment that is sending the logs. 
 {: caption="Table 2. Line identifiers" caption-side="top"}
 
-{{site.data.keyword.la_full_notm}} offers [searching](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-view_logs#view_logs_step6){: new_window}{: external} and [filtering](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-view_logs#view_logs_step5){: new_window}{: external} capabilities to help you navigate your logs. [Export](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-export#export){: new_window}{: external} and [archive](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-archiving#archiving){: new_window}{: external} capabilities are available so you can customize retention and cost for your use case.
+{{site.data.keyword.la_full_notm}} offers [searching](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-view_logs#view_logs_step6){: new_window}{: external} and [filtering](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-view_logs#view_logs_step5){: new_window}{: external} capabilities to help you navigate your logs. [Export](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-export#export){: new_window}{: external} and [archive](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-archiving#archiving){: new_window}{: external} capabilities are available so you can customize retention and cost for your use case.

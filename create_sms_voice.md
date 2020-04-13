@@ -28,11 +28,11 @@ After you create your {{site.data.keyword.iva_full}} service, you can create ind
 
 1. For **Agent Type**, select _Voice + SMS_.
 
-1. Follow the instructions in [Creating a voice agent](/docs/services/voice-agent?topic=voice-agent-config_instance).
+1. Follow the instructions in [Creating a voice agent](/docs/voice-agent?topic=voice-agent-config_instance).
 
 1. Complete the **SMS Provider** section.
 
-1. _**NOTE:**_ The Advanced SMS features section is not required to enable basic Voice and SMS integration, such as the capability to reply to an inbound voice message with an outbound SMS message. This section provides extra SMS functions. For more information, see [Creating an SMS-enabled voice agent with SMS-only capabilities](/docs/services/voice-agent?topic=voice-agent-sms_voice_config_instance#sms_voice_inbound).
+1. _**NOTE:**_ The Advanced SMS features section is not required to enable basic Voice and SMS integration, such as the capability to reply to an inbound voice message with an outbound SMS message. This section provides extra SMS functions. For more information, see [Creating an SMS-enabled voice agent with SMS-only capabilities](/docs/voice-agent?topic=voice-agent-sms_voice_config_instance#sms_voice_inbound).
 
 ### Configuring Watson Assistant for Voice and SMS integration
 {: #sms_outbound}
@@ -74,7 +74,7 @@ After you create your {{site.data.keyword.iva_full}} service, you can create ind
 
 1. Call your agent and trigger the node to receive a text message on the phone that you are calling from. 
 
-To learn more about working in the {{site.data.keyword.conversationshort}} service, see [About {{site.data.keyword.conversationshort}}](/docs/services/assistant?topic=assistant-index#indext).
+To learn more about working in the {{site.data.keyword.conversationshort}} service, see [About {{site.data.keyword.conversationshort}}](/docs/assistant?topic=assistant-index#indext).
 
 ## Creating an SMS-enabled voice agent with SMS-only capabilities
 {: #sms_voice_inbound}
@@ -85,7 +85,7 @@ These settings enable stand-alone SMS-only sessions, which are not initiated thr
 
 1. Enable **Initiate conversation from inbound messages** if you want sessions to be initiated from inbound messages. If this option is not enabled, these settings apply only when a session is initiated by using the REST API.
 
-1. Follow instructions in [Creating an SMS agent](/docs/services/voice-agent?topic=voice-agent-sms_config_instance) to create an SMS agent.
+1. Follow instructions in [Creating an SMS agent](/docs/voice-agent?topic=voice-agent-sms_config_instance) to create an SMS agent.
 
 
 If an outbound text message is triggered from a node within Watson Assistant, the SMS Gateway endpoint region must be the same region as the Voice Agent endpoint region (SIP URI). The regions must be the same because of the pipe between Voice Gateway and SMS Gateway.

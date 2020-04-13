@@ -46,4 +46,4 @@ To connect your agent to other service instances, you can use either the user na
   * **{{site.data.keyword.speechtotextshort}}:** For **Select model type**, choose **Narrowband**, **Broadband**, or **Both narrowband and broadband**, then select the language **Model**.
   * **{{site.data.keyword.texttospeechshort}}:** In the **Voice** field, select the language and voice that your service uses. You must specify a voice for your service.
 
-**Remember:** For your agent to work, you must configure your {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, and {{site.data.keyword.texttospeechshort}} for the same language. See [Supported languages](/docs/services/voice-agent?topic=voice-agent-about#supported-languages).
+**Remember:** For your agent to work, you must configure your {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, and {{site.data.keyword.texttospeechshort}} for the same language. See [Supported languages](/docs/voice-agent?topic=voice-agent-about#supported-languages).
