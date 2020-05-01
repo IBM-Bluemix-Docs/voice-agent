@@ -72,6 +72,7 @@ IBM Voice Agent with Watson
         api_dynamic_config.md
         call-transfer.md
         outbound_calling.md
+        api_sms.md
 
     logging.md
 
