@@ -42,7 +42,7 @@ To enable or disable outbound calling:
 
    If you enable secure trunking, the equivalent setting must be configured in your SIP provider.
 
-   For example, in Twilio go to the Elastic SIP Trunking dashboard. Select your Trunk and under General Settings, you would enable **Secure Trunking**.
+   For example, in Twilio, go to the Elastic SIP Trunking dashboard. Select your Trunk and under General Settings, you would enable **Secure Trunking**.
 
 1. Specify a _Peer IP address_. A peer IP address is the IP address of the SIP termination endpoint.
 
