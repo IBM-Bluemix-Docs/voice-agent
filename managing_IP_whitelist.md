@@ -24,7 +24,7 @@ subcollection: "voice-agent"
 You can configure peering to {{site.data.keyword.iva_short}} or other providers by whitelisting IP addresses.
 {: shortdesc}
 
-Your {{site.data.keyword.iva_short}} instance **must** be on a _Standard_, _Plus_ or _Premium_ plan to be able to use the whitelisting feature. 
+Your {{site.data.keyword.iva_short}} instance **must** be on a Standard, Plus or Premium plan to be able to use the whitelisting feature. 
 {: tip}
 
 ## Adding an IP address to the whitelist

@@ -126,7 +126,7 @@ You need this phone number to set up your agent and configure call transfer, inc
 
 {{site.data.keyword.iva_short}} supports peer connections with customer's PBXs, such as Asterisk. To peer with {{site.data.keyword.iva_short}}, you can whitelist the IP addresses of your servers.
 
-Your {{site.data.keyword.iva_short}} instance **must** be on a _Standard_, _Plus_ or _Premium_ plan to be able to use the whitelisting feature. 
+Your {{site.data.keyword.iva_short}} instance **must** be on a Standard, Plus or Premium plan to be able to use the whitelisting feature. 
 {: tip}
 
 1. Go to the _Manage_ dashboard and select the _Instance_ tab.
