@@ -147,7 +147,7 @@ If the agent that you are assigning access to is an **SMS** or **Voice + SMS** a
 ### Creating a New Credential
 {: #new_cred}
 
-You can create credentials only for roles that are already active in your account. For SMS and Voice + SMS agents, you must have the *Writer* or *Manager* role assigned. See [Step 9 of Invite users and assign initial access](/docs/services/voice-agent?topic=voice-agent-iam#step1).
+You can create credentials only for roles that are already active in your account. For SMS and Voice + SMS agents, you must have the *Writer* or *Manager* role assigned. See [Step 9 of Invite users and assign initial access](/docs/voice-agent?topic=voice-agent-iam#step1).
 
 1. On the *Dashboard* of your {{site.data.keyword.iva_short}} instance, click **New Credential (+)**. 
 2. In the new dialog box that pops up, enter a **Name**, and under the **Role** dropdown menu, select *Writer* or *Manager*. 
@@ -160,7 +160,7 @@ You can create credentials only for roles that are already active in your accoun
 If you see an error message on the **Service Credentials** page when you try to create a *New Credential* that says:
 > You do not have the required permission to assign role ‘Writer’. Contact the account owner to update your access.
 
-Then, you must follow the instructions to assign *Writer* or *Manager* access to yourself, which is **required** for SMS-related functions. See [Step 9 of Assigning Access](/docs/services/voice-agent?topic=voice-agent-iam#step1) and then continue with [Creating a New Credential](/docs/services/voice-agent?topic=voice-agent-iam#new_cred).
+Then, you must follow the instructions to assign *Writer* or *Manager* access to yourself, which is **required** for SMS-related functions. See [Step 9 of Assigning Access](/docs/voice-agent?topic=voice-agent-iam#step1) and then continue with [Creating a New Credential](/docs/voice-agent?topic=voice-agent-iam#new_cred).
 
 ## Next steps
 {: #next}

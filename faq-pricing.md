@@ -25,7 +25,7 @@ subcollection: "voice-agent"
 {: #faq-pricing-zero}
 {: faq}
 
- For more information, see the [pricing page](https://cloud.ibm.com/catalog/services/voice-agent-with-watson){: external}.
+ For more information, see the [pricing page](https://cloud.ibm.com/catalog/voice-agent-with-watson){: external}.
 
 ## What does "pricing per minute" mean?
 {: #faq-pricing-one}
@@ -52,7 +52,7 @@ The concurrent connection is applicable to voice call only(Not SMS). Concurrent 
 {: #faq-pricing-four}
 {: faq}
 
-The maximum concurrent connection is the maximum number of connections that are allowed at any time, and it is the maximum number of connections that are billed. Maximum concurrent connections can be defined and changed in the [dashboard](https://cloud.ibm.com/docs/services/voice-agent?topic=voice-agent-edit_concurrency). The max concurrent capacity on a standard plan is 50 connections, and if you need more you can open a support ticket.
+The maximum concurrent connection is the maximum number of connections that are allowed at any time, and it is the maximum number of connections that are billed. Maximum concurrent connections can be defined and changed in the [dashboard](https://cloud.ibm.com/docs/voice-agent?topic=voice-agent-edit_concurrency). The max concurrent capacity on a standard plan is 50 connections, and if you need more you can open a support ticket.
 
 ## How are inbound and outbound SMS/MMS messages billed?
 

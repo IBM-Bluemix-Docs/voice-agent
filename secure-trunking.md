@@ -32,7 +32,7 @@ You can enable Secure Real Time Transport Protocol (SRTP) and encryption by usin
 
 1. Choose the trunk that you want to secure with SRTP by either selecting an existing trunk or creating a new one by clicking the **+** icon.
 
-  * If you create a new trunk, you need to configure the _SIP Trunk URI_ in the **Origination** dashboard.  For more information, see [Connecting a SIP trunk](/docs/services/voice-agent?topic=voice-agent-connect).
+  * If you create a new trunk, you need to configure the _SIP Trunk URI_ in the **Origination** dashboard.  For more information, see [Connecting a SIP trunk](/docs/voice-agent?topic=voice-agent-connect).
 
 1. On the _General_ dashboard, find the _Secure Trunking_ section. Click **Disabled** to change the secure trunking setting to **Enabled**, and save your changes.
 

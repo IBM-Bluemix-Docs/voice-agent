@@ -21,4 +21,4 @@ subcollection: "voice-agent"
 # SIP Authentication
 {: #sip_authentication}
 
-To secure your agent using **SIP authentication**, see [SIP Authentication](/docs/services/voice-agent?topic=voice-agent-sip_auth).
+To secure your agent using **SIP authentication**, see [SIP Authentication](/docs/voice-agent?topic=voice-agent-sip_auth).

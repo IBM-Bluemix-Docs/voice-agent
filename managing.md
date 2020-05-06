@@ -40,19 +40,19 @@ You can find the _Manage_ dashboard from your {{site.data.keyword.iva_short}} se
 
 If you already have an existing agent, you can see a summary of all the numbers, descriptions, and configuration settings for the agent. To see the summary, click the dropdown arrow to the left of the agent **Name**. The summary then expands.
 
-While the agent can contain multiple numbers, on the agent summary only the **Primary Number** is selected to be shown. By default, it is the first number added to the agent, and is only for display, and has no functional purpose. If you want to display a different number from the agent, see [Managing Multiple Numbers](/docs/services/voice-agent?topic=voice-agent-multi_num#primary_num).
+While the agent can contain multiple numbers, on the agent summary only the **Primary Number** is selected to be shown. By default, it is the first number added to the agent, and is only for display, and has no functional purpose. If you want to display a different number from the agent, see [Managing Multiple Numbers](/docs/voice-agent?topic=voice-agent-multi_num#primary_num).
 
-You can view all the numbers in the agent from the agent summary. After the summary of the configuration is expanded, click the **View Numbers** button, and a list of all the numbers will appear in a new **Manage** dialog box. See the [Managing Multiple Numbers](/docs/services/voice-agent?topic=voice-agent-multi_num) page for more information on working with the **Manage** dialog box.
+You can view all the numbers in the agent from the agent summary. After the summary of the configuration is expanded, click the **View Numbers** button, and a list of all the numbers will appear in a new **Manage** dialog box. See the [Managing Multiple Numbers](/docs/voice-agent?topic=voice-agent-multi_num) page for more information on working with the **Manage** dialog box.
 
 ## Editing the maximum concurrent connections for your service instance
 {: #edit_service}
 
-In all plans, you receive 2 concurrent connections at no charge. If you use the _Standard_ or _Premium_ plans, you can [change the maximum number of concurrent connections](/docs/services/voice-agent?topic=voice-agent-edit_concurrency) from the default settings from the _Instances_ tab.
+In all plans, you receive 2 concurrent connections at no charge. If you use the _Standard_ or _Premium_ plans, you can [change the maximum number of concurrent connections](/docs/voice-agent?topic=voice-agent-edit_concurrency) from the default settings from the _Instances_ tab.
 
 ## Creating a voice agent
 {: #create_va}
 
-[Create a new voice agent](/docs/services/voice-agent?topic=voice-agent-config_instance) from the _Agents_ tab on the _Manage_ dashboard.
+[Create a new voice agent](/docs/voice-agent?topic=voice-agent-config_instance) from the _Agents_ tab on the _Manage_ dashboard.
 
 ## Editing an agent
 {: #edit_va}
@@ -83,12 +83,12 @@ In the _Search_ bar, you can type a number or description. As you type, the sear
 
 When you create, clone, or edit an agent, you can make changes to the configuration settings for your agent and connections to related services.
 
-* **[Configuring multiple phone numbers](/docs/services/voice-agent?topic=voice-agent-multi_num):** You can configure your Agent to include multiple phone numbers.
-* **[Configuring multiple service locations](/docs/services/voice-agent?topic=voice-agent-disaster-recovery):** Include multiple service locations for your connected services to support service redundancy.
-* **[Connecting with third-party speech and text services](/docs/services/voice-agent?topic=voice-agent-third-party):** Instead of using {{site.data.keyword.texttospeechshort}} or {{site.data.keyword.speechtotextshort}}, you can connect your agent to third-party APIs, like Google Cloud Speech-to-Text.
-* **[Using services in other {{site.data.keyword.Bluemix_notm}} workspaces](/docs/services/voice-agent?topic=voice-agent-other_service):** You can configure your agent to use {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, or {{site.data.keyword.speechtotextshort}} service instances that belong to workspaces in other {{site.data.keyword.Bluemix_short}} accounts.
-* **[Configuring Watson Assistant with a Service Orchestration Engine](/docs/services/voice-agent?topic=voice-agent-conversation_va):** You can connect to a {{site.data.keyword.conversationshort}} skill through a service orchestration engine (SOE). An SOE intercepts messages to and from the service so that you can modify them by using third-party APIs.
-* **[Enabling event forwarding for agents](/docs/services/voice-agent?topic=voice-agent-event_forwarding):** You might want to collect and analyze call data from {{site.data.keyword.iva_short}} to improve how natural the conversation feels to the caller. Each agent that you create can forward event reports to a specified {{site.data.keyword.cloudant_short_notm}} that you manage.
+* **[Configuring multiple phone numbers](/docs/voice-agent?topic=voice-agent-multi_num):** You can configure your Agent to include multiple phone numbers.
+* **[Configuring multiple service locations](/docs/voice-agent?topic=voice-agent-disaster-recovery):** Include multiple service locations for your connected services to support service redundancy.
+* **[Connecting with third-party speech and text services](/docs/voice-agent?topic=voice-agent-third-party):** Instead of using {{site.data.keyword.texttospeechshort}} or {{site.data.keyword.speechtotextshort}}, you can connect your agent to third-party APIs, like Google Cloud Speech-to-Text.
+* **[Using services in other {{site.data.keyword.Bluemix_notm}} workspaces](/docs/voice-agent?topic=voice-agent-other_service):** You can configure your agent to use {{site.data.keyword.conversationshort}}, {{site.data.keyword.speechtotextshort}}, or {{site.data.keyword.speechtotextshort}} service instances that belong to workspaces in other {{site.data.keyword.Bluemix_short}} accounts.
+* **[Configuring Watson Assistant with a Service Orchestration Engine](/docs/voice-agent?topic=voice-agent-conversation_va):** You can connect to a {{site.data.keyword.conversationshort}} skill through a service orchestration engine (SOE). An SOE intercepts messages to and from the service so that you can modify them by using third-party APIs.
+* **[Enabling event forwarding for agents](/docs/voice-agent?topic=voice-agent-event_forwarding):** You might want to collect and analyze call data from {{site.data.keyword.iva_short}} to improve how natural the conversation feels to the caller. Each agent that you create can forward event reports to a specified {{site.data.keyword.cloudant_short_notm}} that you manage.
 
 ## Configuring advanced agent options
 {: #config-advanced}
