@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-04"
+lastupdated: "2020-04-23"
 
 keywords: event forwarding, cloudant, call detail record, CDR
 subcollection: "voice-agent"
@@ -46,6 +46,8 @@ You can enable event forwarding when you are creating or editing your agents in 
   * Call detail record (CDR) events
   * Transcription events
   * Turn events
+
+**Important:** The database where you forward the events to must be a **Non-partitioned** database. For more information on Data Partitioning, refer to [{{site.data.keyword.cloudant_short_notm}}: Data Partitioning](/docs/Cloudant?topic=cloudant-database-partitioning).
 
 1. View your database to ensure that event reports forward correctly.
 

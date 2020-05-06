@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-08"
+lastupdated: "2020-04-30"
 
 keywords: initiate, outbound calling
 
@@ -30,7 +30,7 @@ To make a new outbound call, make an HTTP POST request to the following endpoint
 https://apikey:<your_apikey>@{gateway}:443/vgw/outboundCalls/<<your-agent-number>>/startOutboundCall`
 ```
 
-where `{gateway}` is either `gateway.voiceagent.cloud.ibm.com` (US South) or `gateway-wdc.voiceagent.cloud.ibm.com` (US East).
+where `{gateway}` is either `gateway.voiceagent.cloud.ibm.com` (US South), `gateway-wdc.voiceagent.cloud.ibm.com` (US East), `gateway-fra04.voiceagent.cloud.ibm.com` or `gateway-fra05.voiceagent.cloud.ibm.com` (Frankfurt).
 
 ## Initiating an outbound call via cURL commands
 {: #init-outbound-curl}
@@ -58,6 +58,14 @@ Provide data in JSON format:
 | statusWebhookUsername |	Optional. A username to be used for authentication when sending notifications to a webhook. |
 | statusWebhookPassword |	Optional. A password to be used for authentication when sending notifications to a webhook. |
 {: caption="Table 1. Actions that generate events" caption-side="top"}
+
+An example cURL command would be:
+
+```
+curl -X POST -u 'apikey:<your_apikey>' --header 'Content-Type: application/json' --header 'Accept: application/json' \
+   -d '{ "from": "sip:+<<your-agent-number>>@myTwilio.pstn.twilio.com",
+         "to": "sip:+<<your-cell-number>>@myTwilio.pstn.twilio.com"}'  'https://gateway.voiceagent.cloud.ibm.com:443/vgw/outboundCalls/<<your-agent-number>>/startOutboundCall'
+```
 
 ## SIP Authentication for outbound calling
 {: #outbound-sip-auth}
