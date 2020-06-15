@@ -128,7 +128,7 @@ If SMS integration is not enabled, the `image` response type is ignored in the {
 {: #wa_response_type_suggestion}
 
 
-The `suggestion` response type is used by the disambiguation feature to suggest possible matches when it isn�t clear what the user wants to do. 
+The `suggestion` response type is used by the disambiguation feature to suggest possible matches when it isn't clear what the user wants to do. 
 When disambiguation is enabled, your assistant asks the user for help when more than one dialog node can respond to the user's input. Instead of guessing which node to process, your assistant lists the top node options, and asks the user to pick the right one. (For more details about the disambiguation feature, see the Watson Assistant [documentation](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-runtime#dialog-runtime-disambiguation).)
 
 Possible matching dialog nodes are listed using a `suggestion` response:
