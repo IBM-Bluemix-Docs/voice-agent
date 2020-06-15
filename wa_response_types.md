@@ -24,10 +24,10 @@ subcollection: "voice-agent"
 {{site.data.keyword.conversationfull}} supports various [response types](https://cloud.ibm.com/docs/assistant?topic=assistant-api-dialog-responses).
 
 The {{site.data.keyword.iva_full}} supports the following response types:
- * text
- * image
- * option
- * suggestion
+ * `text`
+ * `image`
+ * `option`
+ * `suggestion`
 
 Each response type is specified using a different set of JSON properties. The properties included for each response will vary depending upon a response type.
 
@@ -56,7 +56,7 @@ The `text` response type is used for ordinary text responses.
 ## Response type `image`
 {: #wa_response_type_image}
 
-The `image` response type instructs to display an image.
+The `image` response type instructs the client to display an image.
 
 ```json
 {
@@ -75,7 +75,7 @@ The `image` response type instructs to display an image.
 
 The `image` response type can be used when SMS integration is enabled.
 
-In the following example, the text message will be sent to the user over the voice channel, while the image will be sent over the SMS channel.
+In the following example, the text message is sent to the user over the voice channel, while the image is sent over the SMS channel:
 
 ```json
 {
@@ -95,7 +95,7 @@ In the following example, the text message will be sent to the user over the voi
 ```
 {:codeblock}
 
-This’s equivalent to the following action sequence.
+This is equivalent to the following action sequence:
 
 ```json
 {
@@ -121,17 +121,17 @@ This’s equivalent to the following action sequence.
 ```
 {:codeblock}
 
-The `image` response type is ignored in the {{site.data.keyword.iva_short}} if SMS integration is not enabled.
+If SMS integration is not enabled, the `image` response type is ignored in the {{site.data.keyword.iva_short}}.
 
 
 ## Response type `suggestion`
 {: #wa_response_type_suggestion}
 
 
-The `suggestion` response type is used by the disambiguation feature to suggest possible matches when it isn’t clear what the user wants to do. 
-Disambiguation instructs your assistant to ask the customer for help when more than one dialog node can respond to a customer's input. Instead of guessing which node to process, your assistant shares a list of the top node options with the user, and asks the user to pick the right one.
+The `suggestion` response type is used by the disambiguation feature to suggest possible matches when it isnï¿½t clear what the user wants to do. 
+When disambiguation is enabled, your assistant asks the user for help when more than one dialog node can respond to the user's input. Instead of guessing which node to process, your assistant lists the top node options, and asks the user to pick the right one. (For more details about the disambiguation feature, see the Watson Assistant [documentation](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-runtime#dialog-runtime-disambiguation).)
 
-More details are [here](https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-runtime#dialog-runtime-disambiguation).
+Possible matching dialog nodes are listed using a `suggestion` response:
 
 ```json
 {
@@ -221,8 +221,11 @@ More details are [here](https://cloud.ibm.com/docs/assistant?topic=assistant-dia
 ```
 {:codeblock}
 
-Each suggestion includes a label that can be played to the user and a value specifying the input that should be sent back to the assistant if the user chooses the corresponding suggestion. By default, {{site.data.keyword.iva_short}} adds a number to the text specified in a `label`. Options are numbered sequentially and played to the user in the order they appear in the list. The user can use DTMFs or say the respective number to choose one of the available options.
-You can configure the text that will be prepended to each label using the `vgwActSetDisambiguationConfig` action. The `prefixText` attribute should contain %s that will be replaced with a number.
+Each suggestion includes a label that can be played to the user and a value specifying the input that should be sent back to the assistant if the user chooses the corresponding suggestion. By default, {{site.data.keyword.iva_short}} adds a number to the text specified in a `label`. Options are numbered sequentially and played to the user in the order in which they appear in the list. The user can use DTMFs or say the respective number to choose one of the available options. The list of options is introduced using the text specified by the `title` attribute of the `suggestion` response.
+
+You can configure the text that will be prepended to each label using the `vgwActSetDisambiguationConfig` action. In the `prefixText` attribute, use `%s` to represent the number corresponding to the option; this is replaced with the actual number at run time.
+
+**Note:** If a configuration is specified using the `vgwActSetDisambiguationConfig` action, the same settings are used each time disambiguation is triggered. It is recommended to specify this action in a root node.
 
 ```json
 {
@@ -245,24 +248,20 @@ For example, if label is configured as follows:
 ```
 "label": "I'd like to order a drink."
 ```
-By default, the {{site.data.keyword.iva_short}} will play to the user
+By default, the {{site.data.keyword.iva_short}} will play to the user:
 
 ```
 1. I'd like to order a drink.
 ```
-If `prefixText` is set to "Press or say %s for.", {{site.data.keyword.iva_short}} will play to the user
+If `prefixText` is set to `Press or say %s for`, {{site.data.keyword.iva_short}} will play to the user:
 
 ```
-Press or say 1 for. I'd like to order a drink.
+Press or say 1 for "I'd like to order a drink."
 ```
 
-First the value specified in the `title` attribute will be played to the user, thereafter the text specified in the `label` attributes.
-The `matchWord` attribute is used to match STT utterances to one of the options in the list.  For instance, by default Voice Agent will attempt to match the english words that correspond to the stated number. In other languages it will be necessary for the user to specify on the first conversation turn which match words to use in the preferred language. One matching word can be configured per option. For instance, if there are three options in the list and the `matchWord` attribute is set to `["one","two", "three"]`, the word `one` will match the first option in the list, the word `two` will match the second option in the list and so on.
+Voice Agent uses STT to match user utterances to the options in the list. By default, Voice Agent attempts to match the English words that correspond to the options (for example, `two` matches the second option). In other languages, the user must specify on the first conversation turn which match words to use in the preferred language. You can configure the match words to use using the `matchWord` attribute of the `vgwActSetDisambiguationConfig` action, specifying one match word per option. For example, if there are three options in the list, and the `matchWord` attribute is set to `["first", "middle", and "last"]`, the word "first" will match the first option in the list, the word "middle" will match the second option in the list, and so on.
 
-Both voice and DTMF are allowed to find a match. The `disableSpeech` attribute can be used to disable voice and allow only DTMF for choosing one of the options in the list.
-
-When the `vgwActSetDisambiguationConfig` is specified, the same settings are used each time disambiguation is triggered. It's recommended to specify this action in a root node. 
-
+By default, either voice or DTMF can be used to choose an option. You can use the `disableSpeech` attribute to disable voice and accept only DTMF for choosing one of the options in the list.
 
 ## Response type `option`
 {: #wa_response_type_option}
@@ -305,7 +304,7 @@ The `option` response type allows the user to select from a list of options, and
 
 The {{site.data.keyword.iva_short}} uses the same numbering approach as for a `suggestion` response. As in a `suggestion` response, you can change the default text that will be prepended to each `label` using the `vgwActSetOptionsConfig` action.
 
-First the value specified in the `title` attribute will be played to the user, thereafter the text specified in the `label` attributes.
+As with the `suggestion` response, the text specified by the `title` attribute is played first, followed by the text specified by the `label` attributes.
 
 ```json
 {
@@ -323,4 +322,4 @@ First the value specified in the `title` attribute will be played to the user, t
 ```
 {:codeblock}
 
-When the `vgwActSetOptionsConfig` is specified, the same settings are used for all `option` response type.
+When the `vgwActSetOptionsConfig` is specified, the same settings are used for all `option` responses.
