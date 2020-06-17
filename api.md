@@ -28,7 +28,7 @@ Because {{site.data.keyword.iva_full}} is based on IBM Voice Gateway, the API wo
 
 **Note:** By default, Watson Assistant service instances that are not part of Premium plans log requests and their results to improve the service for future users. To prevent IBM usage of data in this way, see [Data collection](https://cloud.ibm.com/apidocs/assistant/assistant-v2#data-collection) in the Watson Assistant API reference.
 
-**Note:** Services which process data outside of {{site.data.keyword.vgw_short}} require the ability to remove a customer's data from that service. For more information on labeling and deleting data in {{site.data.keyword.conversation}}, see: [Labeling and deleting data in the {{site.data.keyword.conversationshort}} service](https://cloud.ibm.com/docs/assistant?topic=assistant-information-security#information-security-gdpr-wa){: new_window}
+**Note:** Services which process data outside of IBM Voice Gateway require the ability to remove a customer's data from that service. For more information on labeling and deleting data in {{site.data.keyword.conversationshort}}, see: [Labeling and deleting data in the {{site.data.keyword.conversationshort}} service](https://cloud.ibm.com/docs/assistant?topic=assistant-information-security#information-security-gdpr-wa){: new_window}
 
 ## Editing JSON in the dialog response
 {: #json-editor}

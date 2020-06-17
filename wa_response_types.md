@@ -31,7 +31,7 @@ The {{site.data.keyword.iva_full}} supports the following response types:
 
 Each response type is specified using a different set of JSON properties. The properties included for each response will vary depending upon a response type.
 
-`image`, `option`, and `suggestion` response types are available in {{site.data.keyword.vgw_short}} 1.0.6 and later.
+`image`, `option`, and `suggestion` response types are available in IBM Voice Gateway 1.0.6 and later.
 
 
 ## Response type `text`
