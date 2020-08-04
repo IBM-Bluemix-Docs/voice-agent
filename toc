@@ -73,6 +73,7 @@ IBM Voice Agent with Watson
         call-transfer.md
         outbound_calling.md
         api_sms.md
+        wa_response_types.md
 
     logging.md
 

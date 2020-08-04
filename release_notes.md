@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-04"
+lastupdated: "2020-07-28"
 subcollection: "voice-agent"
 ---
 
@@ -19,6 +19,10 @@ subcollection: "voice-agent"
 
 Stay up-to-date with new features and updates that are available for {{site.data.keyword.iva_full}}.
 {: shortdesc}
+
+## July 2020
+
+- **Updated:  Voice Gateway driver is updated to version 1.0.6**
 
 ## March 2020
 
