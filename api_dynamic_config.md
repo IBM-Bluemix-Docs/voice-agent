@@ -48,7 +48,8 @@ Instead of configuring your connection to Google Speech-to-Text by editing your 
           "command": "vgwActSetSTTConfig",
           "parameters": {
             "config": {
-              "languageCode": "en-US"
+              "languageCode": "en-US",
+              "speechContexts": [{"phrases": ["Yes", "No"]}]
             },
             "credentials": {
               "url": "https://stt-adapter"
