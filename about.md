@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-06"
+  years: 2017, 2020
+lastupdated: "2020-07-13"
 subcollection: "voice-agent"
 
 ---
@@ -13,9 +13,14 @@ subcollection: "voice-agent"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:deprecated: .deprecated}
+{:external: target="_blank" .external}
 
 # About Voice Agent with Watson
 {: #about}
+
+{{site.data.keyword.iva_full_notm}} is deprecated. As of 1 March 2021, you can't create new instances, and access to free instances will be removed. Existing paid instances are supported until 31 December 2021. Any instance that still exists on that date will be deactivated. For more information, see the deprecation announcement [blog post](https://community.ibm.com/community/user/watsonapps/blogs/mitch-mason1/2021/02/08/announcing-voice-agent-with-watson-deprecation){: external}. You can use {{site.data.keyword.conversationfull}} integrations to enable voice and SMS interaction with your cognitive assistant. See the migration instructions for the {{site.data.keyword.conversationshort}} [phone integration](/docs/assistant?topic=assistant-deploy-phone#deploy-phone-migrate-from-va){: external} and [SMS with Twilio integration](/docs/assistant?topic=assistant-deploy-sms#deploy-sms-migrate-from-va){: external}.
+{: deprecated}
 
 {{site.data.keyword.iva_full}} enables direct, automated voice interactions over the telephone between a cognitive agent and your customers. With Watson artificial intelligence at its backbone, your agent can communicate in a more conversational manner, and it can handle complex interactions that are difficult for traditional interactive voice response (IVR) systems.
 {: shortdesc}
@@ -98,17 +103,23 @@ You can set up a cognitive SMS agent that customers can interact with by exchang
 
 For a language to be supported, it must be supported by all Watson services that you configure in your agent. Using the {{site.data.keyword.speechtotextshort}}, {{site.data.keyword.texttospeechshort}}, and {{site.data.keyword.conversationshort}} services, the following languages are supported:
 
+* Arabic (Modern Standard)
 * Brazilian Portuguese
-* French ({{site.data.keyword.speechtotextshort}} broadband only)
-* German ({{site.data.keyword.speechtotextshort}} broadband only)
+* Chinese (Mandarin)
+* Dutch
+* English (United Kingdom and United States)
+* French
+* German
+* Italian
 * Japanese
-* Spanish
-* UK English
-* US English
+* Korean
+* Spanish (Argentinian, Castilian, Chilean, Colombian, Mexican, and Peruvian)
 
 ## Supported protocols
 {: #supported-protocols}
 
 * **SIP:** The agent supports connecting to Watson as if it were a SIP endpoint via a SIP trunk, from an enterprise session border controller (SBC), or from a multipoint control unit (MCU).
 * **RTP:** The Real-time Transport Protocol (RTP) is supported for audio media streams.
-* **G.711:** The agent supports U-law and A-law G.711 audio. Other audio protocols, such as G.723 or G.729, are not currently supported.
+* **G.711:** The agent supports U-law and A-law G.711 audio.
+* **G.722:** The agent supports G.722 audio.
+* **G.729:** The agent supports G.729 audio (Annex A and Annex B).

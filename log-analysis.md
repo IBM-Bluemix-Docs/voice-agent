@@ -25,6 +25,9 @@ subcollection: "voice-agent"
 # Log Analysis integration
 {: #log-analysis-integration}
 
+{{site.data.keyword.iva_full_notm}} is deprecated. As of 1 March 2021, you can't create new instances, and access to free instances will be removed. Existing paid instances are supported until 31 December 2021. Any instance that still exists on that date will be deactivated. For more information, see the deprecation announcement [blog post](https://community.ibm.com/community/user/watsonapps/blogs/mitch-mason1/2021/02/08/announcing-voice-agent-with-watson-deprecation){: external}. You can use {{site.data.keyword.conversationfull}} integrations to enable voice and SMS interaction with your cognitive assistant. See the migration instructions for the {{site.data.keyword.conversationshort}} [phone integration](/docs/assistant?topic=assistant-deploy-phone#deploy-phone-migrate-from-va){: external} and [SMS with Twilio integration](/docs/assistant?topic=assistant-deploy-sms#deploy-sms-migrate-from-va){: external}.
+{: deprecated}
+
 {{site.data.keyword.iva_full}} is integrated with [{{site.data.keyword.la_full}}](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-about){: new_window}{: external}, so you can view database logs.
 
 Currently, {{site.data.keyword.la_full_notm}} integration is available for {{site.data.keyword.iva_full}} deployments according to the following table:
