@@ -67,3 +67,11 @@ subcollection: "voice-agent"
     | Subnet                  | Subnet                  |
     | ----------------------- | ----------------------- |
     | 161.156.121.112/29      | 149.81.78.104/29        |
+
+## Port Ranges (all regions)
+{: #port-ranges}
+
+    | --- | --- | --- |
+    | Signaling | SIP | UDP 5060 |
+    | Signaling | SIPS (SIP over TLS) | TCP 5061 |
+    | Media | RTP | UDP 1024-65148 |
