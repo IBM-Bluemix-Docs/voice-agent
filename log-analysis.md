@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-09-25"
+  years: 2019, 2021
+lastupdated: "2021-03-31"
 
-keywords: log analysis, integration, logdna
+keywords: log analysis, integration
 
 subcollection: "voice-agent"
 
@@ -32,7 +32,7 @@ subcollection: "voice-agent"
 
 Currently, {{site.data.keyword.la_full_notm}} integration is available for {{site.data.keyword.iva_full}} deployments according to the following table:
 
-Deployment Region | LogDNA Region
+Deployment Region | Logging Region
 ----------|-----------
 `Dallas` | `Dallas`
 `Washington DC` | `Dallas`
@@ -48,13 +48,6 @@ This setting enables logs from **all** {{site.data.keyword.cloud_notm}} services
 
 {{site.data.keyword.la_full_notm}} has a lite plan that is free to use, but it offers only streaming events. To take advantage of the tagging, export, retention, and other features, you need to use one of the [paid plans](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-about#overview_pricing_plans){: new_window}{: external}.
 
-### HIPAA 
-{: #hipaa_logdna}
-
-{{site.data.keyword.la_full_notm}} does not currently offer a HIPAA-compliant plan for the service. 
-
-Use caution when you configure the platform service logs, since this setting can impact other services that require HIPAA compliance.
-{: important}
 
 ## Using {{site.data.keyword.la_full_notm}}
 {: #using-logdna}
