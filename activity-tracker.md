@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-30"
+lastupdated: "2021-04-01"
 subcollection: "voice-agent"
 
 ---
@@ -32,7 +32,6 @@ There are currently two Activity Tracker services that are available in the {{si
 
 For more information, see:
 * [{{site.data.keyword.at_full}}](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started)
-* [{{site.data.keyword.cloudaccesstrailfull}}](/docs/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started) (deprecated)
 
 ## List of events
 {: #at_actions}
